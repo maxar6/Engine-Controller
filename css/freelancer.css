@@ -479,27 +479,38 @@ footer .footer-below {
 	background-color:#ffffff;
 
 	border:1px solid #000000;
-	border-width:1px 1px 1px 1px;
+	border-width:0px 1px 1px 0px;
 	text-align:center;
 	padding:7px;
 	color:#000000;
 }.WorkDamnIt tr:last-child td{
-	border-width:1px 1px 1px 1px;
+	border-width:0px 1px 0px 0px;
 }.WorkDamnIt tr td:last-child{
-	border-width:1px 1px 1px 1px;
+	border-width:0px 0px 1px 0px;
 }.WorkDamnIt tr:last-child td:last-child{
-	border-width:1px 1px 1px 1px;
+	border-width:0px 0px 0px 0px;
 }
 .WorkDamnIt tr:first-child td{
 
 	background-color:#ffffff;
 	border:1px solid #000000;
 	text-align:center;
-	border-width:1px 1px 1px 1px;
+	border-width:0px 0px 0px 0px;
 }
 .WorkDamnIt tr:first-child td:first-child{
-	border-width:1px 1px 1px 1px;
+	border-width:0px 1px 0px 0px;
 }
 .WorkDamnIt tr:first-child td:last-child{
-	border-width:1px 1px 1px 1px;
+	border-width:0px 0px 0px 0px;
+}
+.WorkDamnIt th{
+	vertical-align:middle;
+	
+	background-color:#ffffff;
+
+	border:0px solid #000000;
+	border-width:0px 0px 0px 0px;
+	text-align:center;
+	padding:31px;
+	color:#000000;
 }

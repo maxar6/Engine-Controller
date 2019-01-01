@@ -1234,6 +1234,26 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>DeltaMAP_FiltConst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>ConstantWork.DeltaMAP_FiltConst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>DeltaTPS_FiltConst</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -19626,6 +19646,109 @@
       <help>Transient fuel multiplier based on ECT.  Only engaged during transient fueling</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling|ECT Transient Fueling</group>
       <struct>VolatileWork_BSS.ECTTransFuelMult</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP17IdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>ConstantWork.DeltaMAP17IdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>17</len>
+      <input>DeltaMAP17In</input>
+      <index>DeltaMAP17Idx</index>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP17Idx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>VolatileWork_BSS.DeltaMAP17Idx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP17In</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>VolatileWork_BSS.DeltaMAP17In</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP_MultMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>const Constant_T</ctype>
+      <help>Transient Fueling Multiplier for adjustment based on delta MAP</help>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>ConstantWork.DeltaMAP_MultMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <output>DeltaMAP_Mult</output>
+      <col_prelookup>DeltaMAP17IdxArr</col_prelookup>
+      <col_len>17</col_len>
+      <row_prelookup>MAF09IdxArr</row_prelookup>
+      <row_len>9</row_len>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP_Mult</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Transient Fueling Multiplier for adjustment based on delta MAP</help>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>VolatileWork_BSS.DeltaMAP_Mult</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>

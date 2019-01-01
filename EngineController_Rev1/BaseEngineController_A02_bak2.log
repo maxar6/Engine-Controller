@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        01-Jan-2019 09:47:29           ###
+###        01-Jan-2019 10:28:37           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_A02_bak2_119.srz
-MotoTune DLL:    BaseEngin_119.dll
+DEV Executable:  BaseEngineController_A02_bak2_120.srz
+MotoTune DLL:    BaseEngin_120.dll
  
 Project GUID:    dd15f277-b579-4753-b1-bd-58-84-9e-04-3b
-Build GUID:      e86da9fa-956b-4b55-ab-e1-34-ad-ca-85-7d
+Build GUID:      3611f5cf-b4cf-456b-82-6e-05-c9-1a-79-16
  
 ### Starting build procedure for model: BaseEngineController_A02_bak2
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build
@@ -28,7 +28,7 @@ Build GUID:      e86da9fa-956b-4b55-ab-e1-34-ad-ca-85-7d
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.........................................
+............................................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -64,28 +64,29 @@ Build GUID:      e86da9fa-956b-4b55-ab-e1-34-ad-ca-85-7d
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.............................................................
+...............................................................................
+...............
 ### Writing source file BaseEngineController_A02_bak2.c
-.
 ### Writing header file BaseEngineController_A02_bak2_private.h
+.
 ### Writing header file BaseEngineController_A02_bak2.h
-.
 ### Writing header file BaseEngineController_A02_bak2_types.h
+.
 ### Writing source file BaseEngineController_A02_bak2_IdleStateMachine.c
-.
 ### Writing source file Foreground.c
+.
 ### Writing header file Foreground.h
-.
 ### Writing header file rtwtypes.h
+.
 ### Writing header file rt_zcfcn.h
-.
 ### Writing source file rt_zcfcn.c
+.
 ### Writing header file rt_nonfinite.h
-.
 ### Writing source file rt_nonfinite.c
-### Writing header file BaseEngineController_A02_bak2_IdleStateMachine.h
 .
+### Writing header file BaseEngineController_A02_bak2_IdleStateMachine.h
 ### Writing source file BaseEngineController_A02_bak2_data.c
+.
 ### TLC code generation complete.
 ...............................................................................
 ...............................................................................
@@ -97,9 +98,9 @@ Build GUID:      e86da9fa-956b-4b55-ab-e1-34-ad-ca-85-7d
 ...............................................................................
 ...............................................................................
 ...............................................................................
-..
+......
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
-### Creating BaseEngineController_A02_bak2.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### BaseEngineController_A02_bak2.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BaseEngineController_A02_bak2: .\BaseEngineController_A02_bak2.bat
 ### Created Code and Build Scripts.  Ready to Build ### 
 ### Successful completion of build procedure for model: BaseEngineController_A02_bak2
@@ -186,36 +187,36 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 14.5 seconds. 
+Total time: 17.6 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x0004A89F 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0004AA07 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003FC1AC], ROM[0x00052E64], Length[0x0000077C] 
+    Adding RAM[0x003FC1C4], ROM[0x0005300C], Length[0x0000077C] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F9800], ROM[0x00053610], Length[0x00000019] 
+    Adding RAM[0x003F9800], ROM[0x000537B8], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Adding RAM[0x003FA8E0], ROM[0x0005362C], Length[0x000008CC] 
+    Adding RAM[0x003FA8E0], ROM[0x000537D4], Length[0x000008CC] 
 Complete. 
 Writing file sr://BaseEngineController_A02_bak2.sr... 
-Encrypting 'sr://BaseEngineController_A02_bak2.sr' into 'srz://.\Target\BaseEngineController_A02_bak2_119.srz' ... 
+Encrypting 'sr://BaseEngineController_A02_bak2.sr' into 'srz://.\Target\BaseEngineController_A02_bak2_120.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                                     306135 bytes   85% of 360184
+	FLASH:                                     306555 bytes   85% of 360184
 	    BaseEngineController_A02_bak2_M:            4 bytes    0% of 360184
 	    NonVolatileDefault:                      1916 bytes    1% of 360184
-	    BaseEngineController_A02_bak2_Foreground:52196 bytes   14% of 360184
-	INTERNAL_RAM:                               20131 bytes   76% of  26544
-	    BaseEngineController_A02_bak2_B:         1216 bytes    5% of  26544
-	    BaseEngineController_A02_bak2_DWork:      924 bytes    3% of  26544
+	    BaseEngineController_A02_bak2_Foreground:52524 bytes   15% of 360184
+	INTERNAL_RAM:                               20155 bytes   76% of  26544
+	    BaseEngineController_A02_bak2_B:         1224 bytes    5% of  26544
+	    BaseEngineController_A02_bak2_DWork:      932 bytes    4% of  26544
 	    BaseEngineController_A02_bak2_M_:           8 bytes    0% of  26544
 	    VolatileWork:                              36 bytes    0% of  26544
 	    NonVolatileWork:                         1916 bytes    7% of  26544
@@ -223,13 +224,13 @@ Memory Summary:
 	    BgndStack:                               2048 bytes    8% of  26544
 	    IdleStack:                               1024 bytes    4% of  26544
 	    InterruptStack:                          1536 bytes    6% of  26544
-	CAL_SPACE:                                  16912 bytes   26% of  65536
-	    ConstantWork:                           16756 bytes   26% of  65536
+	CAL_SPACE:                                  17600 bytes   27% of  65536
+	    ConstantWork:                           17444 bytes   27% of  65536
 	EEPROM_SPACE:                                1919 bytes   23% of   8192
 
-### Copy BaseEngin_119.dll and BaseEngineController_A02_bak2_119.srz 
+### Copy BaseEngin_120.dll and BaseEngineController_A02_bak2_120.srz 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 3 minutes, 13.9 seconds  (193.9 seconds)
+Elapsed Build Time: 3 minutes, 25.4 seconds  (205.4 seconds)
 {Warning: Block diagram 'BaseEngineController_A02_bak2' contains disabled library
 links.  Use Model Advisor to find the disabled links in non-library models.  The
 diagram has been saved but may not contain what you intended.} 
@@ -237,8 +238,8 @@ diagram has been saved but may not contain what you intended.}
 #############################################################################
 ###
 ### Target Module: ECU555-80
-### Created Development Executable: BaseEngineController_A02_bak2_119.srz
-### Created MotoTune DLL: BaseEngin_119.dll
+### Created Development Executable: BaseEngineController_A02_bak2_120.srz
+### Created MotoTune DLL: BaseEngin_120.dll
 ###
 ### Successful MotoHawk Build for model: BaseEngineController_A02_bak2
 ###

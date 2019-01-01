@@ -8,11 +8,11 @@
 #include "BaseEngineController_A02_bak2.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BaseEngin_119"
-#define SRZ_NAME                       "BaseEngineController_A02_bak2_119"
+#define DLL_NAME                       "BaseEngin_120"
+#define SRZ_NAME                       "BaseEngineController_A02_bak2_120"
 #define MODEL_NAME                     "BaseEngineController_A02_bak2"
 #define MODEL_GUID                     "dd15f277-b579-4753-b1-bd-58-84-9e-04-3b"
-#define BUILD_GUID                     "e86da9fa-956b-4b55-ab-e1-34-ad-ca-85-7d"
+#define BUILD_GUID                     "3611f5cf-b4cf-456b-82-6e-05-c9-1a-79-16"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -673,7 +673,7 @@ void OpenApplication(E_OpenEventType open_type)
     }
   }
 
-  /* S-Function Block: <S435>/motohawk_encoder_def */
+  /* S-Function Block: <S437>/motohawk_encoder_def */
   {
     extern void EncoderStateCallback(E_EncoderStatus, NativePtrSizedInt_U);
     extern void EncoderDiagnosticsCallback(E_EncoderError, NativePtrSizedInt_U);

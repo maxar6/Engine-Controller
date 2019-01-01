@@ -16,7 +16,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s607_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s609_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -36,7 +36,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s444_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s446_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | CruiseSETM</group>
    </VarDec>
@@ -56,7 +56,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s491_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s493_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | CruiseON</group>
    </VarDec>
@@ -76,7 +76,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s354_MultiportSwitch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s356_MultiportSwitch</struct>
       <help>Air mass flow rate at the intake manifold - Used by the fueling algorithm</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -96,7 +96,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s744_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s746_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|FAN Control | FAN1</group>
    </VarDec>
@@ -116,7 +116,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s647_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s649_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -153,7 +153,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s228_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s230_Switch1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
    <VarDec>
@@ -191,7 +191,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s213_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s215_MinMax1</struct>
       <help>Error in fuel flow at the current operating point, as compared to O2 sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|O2 Fuel Adapt</group>
    </VarDec>
@@ -249,7 +249,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s668_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s670_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -269,7 +269,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s546_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s548_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -289,7 +289,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s573_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s575_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -309,7 +309,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s496_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s498_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | CruiseRSM_SETP</group>
    </VarDec>
@@ -329,7 +329,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s745_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s747_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|FAN Control | FAN2</group>
    </VarDec>
@@ -349,7 +349,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s718_Sum</struct>
+      <struct>BaseEngineController_A02_bak2_B.s720_Sum</struct>
       <help>StartAngle for coils to establish dwell.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -369,7 +369,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s638_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s640_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -389,7 +389,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s637_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s639_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -523,7 +523,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s678_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s680_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -543,7 +543,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain14</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain14</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -563,7 +563,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain2</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -583,7 +583,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s448_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s450_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | Scramble</group>
    </VarDec>
@@ -602,7 +602,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s461_Out</struct>
+      <struct>BaseEngineController_A02_bak2_B.s463_Out</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -621,7 +621,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s397_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s399_Switch1</struct>
       <help>APP used in controller (after power curve and CutThrottle limiting</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed</group>
    </VarDec>
@@ -641,7 +641,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s794_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s796_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|WASTEGATE-Control | WASTEGATE</group>
    </VarDec>
@@ -661,7 +661,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s712_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s714_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|AC Control | AC</group>
    </VarDec>
@@ -717,7 +717,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s264_Product2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s266_Product2</struct>
       <help>Air min governor P term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -737,7 +737,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s259_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s261_Sum1</struct>
       <help>PID Error Term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PD (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -780,6 +780,24 @@
       <struct>BaseEngineController_A02_bak2_B.s193_ApplyMultipliersforO2KnockControlandEnrichment1</struct>
       <help>Desired fuel per cylinder after application of individual cylinder offsets and multipliers.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Fuel Calculation</group>
+   </VarDec>
+   <VarDec>
+      <name>TransFuel_MAPFilt</name>
+      <class>var</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>100000000000000000.000000</max>
+      <min>-100000000000000000.000000</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
+      <struct>BaseEngineController_A02_bak2_B.s206_Sum1</struct>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
    </VarDec>
    <VarDec>
       <name>ETC_Setpoint</name>
@@ -855,7 +873,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s505_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s507_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | ESTOP</group>
    </VarDec>
@@ -874,7 +892,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s434_motohawk_ain2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain2</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -893,7 +911,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s425_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s427_Switch</struct>
       <help>Indicates time since entering Stall State - saturates and disables at 2000 seconds</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Time Since Stall</group>
    </VarDec>
@@ -912,7 +930,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s368_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s370_Merge</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -931,7 +949,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s354_ModelAirMassFlowRate</struct>
+      <struct>BaseEngineController_A02_bak2_B.s356_ModelAirMassFlowRate</struct>
       <help>Air Mass Flow Rate - Port Total</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -950,7 +968,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s361_Product1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s363_Product1</struct>
       <help>Error in Volumetric Efficiency at the current operating point, as compared to MAF sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive|Adapt Volumetric Efficiency</group>
    </VarDec>
@@ -1060,7 +1078,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s238_DontallowsetpointtoeverdropbelowtheTargetRPM</struct>
+      <struct>BaseEngineController_A02_bak2_B.s240_DontallowsetpointtoeverdropbelowtheTargetRPM</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Ramp RPM</group>
    </VarDec>
    <VarDec>
@@ -1078,7 +1096,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s236_RelationalOperator1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s238_RelationalOperator1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|MotoringDetection</group>
    </VarDec>
    <VarDec>
@@ -1232,7 +1250,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s437_motohawk_ain3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s439_motohawk_ain3</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors | O2_PostCat</group>
    </VarDec>
@@ -1252,7 +1270,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s599_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s601_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1272,7 +1290,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain4</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain4</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -1292,7 +1310,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s450_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s452_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | ACSw</group>
    </VarDec>
@@ -1312,7 +1330,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s417_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s419_Sum1</struct>
       <help>Acceleration rate of engine</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Engine Accel</group>
    </VarDec>
@@ -1367,7 +1385,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s226_Sum2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s228_Sum2</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
    <VarDec>
@@ -1386,7 +1404,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s278_Product2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s280_Product2</struct>
       <help>Closed-loop O2 control P-Term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller</group>
    </VarDec>
@@ -1463,7 +1481,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s545_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s547_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1483,7 +1501,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s516_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s518_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -1502,7 +1520,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s367_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s369_Merge</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -1520,7 +1538,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s394_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s396_Merge</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
    </VarDec>
    <VarDec>
@@ -1557,7 +1575,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s259_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s261_Product</struct>
       <help>PID Proportional Term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PD (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -1652,7 +1670,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s544_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s546_Merge</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -1672,7 +1690,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s766_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s768_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|IAC-Control | IAC_S</group>
    </VarDec>
@@ -1692,7 +1710,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s620_motohawk_ain1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s622_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -1748,7 +1766,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s256_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s258_Switch</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|MotoringDetection</group>
    </VarDec>
    <VarDec>
@@ -1767,7 +1785,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s271_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s273_Switch</struct>
       <help>Current target equivalence ratio for closed-loop O2 control.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller</group>
    </VarDec>
@@ -1806,7 +1824,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain9</struct>
+      <struct>BaseEngineController_A02_bak2_B.s440_motohawk_ain9</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
@@ -1826,7 +1844,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s581_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s583_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -1845,7 +1863,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s435_RPMInst</struct>
+      <struct>BaseEngineController_A02_bak2_B.s437_RPMInst</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -1863,7 +1881,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s441_DataTypeConversion3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s443_DataTypeConversion3</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -1881,7 +1899,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s418_State</struct>
+      <struct>BaseEngineController_A02_bak2_B.s420_State</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|EngineState</group>
    </VarDec>
    <VarDec>
@@ -1900,7 +1918,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s379_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s381_Switch1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs|Load, Torque, Power, Work - Using APC|Calculate Power and Work</group>
    </VarDec>
    <VarDec>
@@ -1937,7 +1955,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s752_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s754_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|FuelPump | FUELP</group>
    </VarDec>
@@ -1957,7 +1975,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s655_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s657_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -1977,7 +1995,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s413_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s415_Product</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Capture IAT At Startup</group>
    </VarDec>
    <VarDec>
@@ -2032,7 +2050,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s226_Product2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s228_Product2</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
    <VarDec>
@@ -2050,7 +2068,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s265_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s267_Product</struct>
       <help>Air min governor D term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -2069,7 +2087,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s276_Switch4</struct>
+      <struct>BaseEngineController_A02_bak2_B.s278_Switch4</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Equivalence Ratio Perturbation</group>
    </VarDec>
    <VarDec>
@@ -2108,7 +2126,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain6</struct>
+      <struct>BaseEngineController_A02_bak2_B.s440_motohawk_ain6</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
@@ -2128,7 +2146,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s440_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -2148,7 +2166,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s547_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s549_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -2168,7 +2186,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain_read1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain_read1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -2188,7 +2206,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s541_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s543_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -2208,7 +2226,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s434_motohawk_din1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_din1</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | GearState</group>
    </VarDec>
@@ -2228,7 +2246,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s440_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s442_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | Brake</group>
    </VarDec>
@@ -2247,7 +2265,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s401_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s403_Sum1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag</group>
    </VarDec>
    <VarDec>
@@ -2266,7 +2284,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s384_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s386_MinMax1</struct>
       <help>Normalized effective combustion chamber temperature</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs|Normalized Effective Combustion Chamber Temperature</group>
    </VarDec>
@@ -2286,7 +2304,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s762_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s764_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|IAC-Control | IAC_P</group>
    </VarDec>
@@ -2305,7 +2323,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s410_Sum2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s412_Sum2</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
    </VarDec>
    <VarDec>
@@ -2341,7 +2359,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s293_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s295_MinMax1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Spark Manager</group>
    </VarDec>
    <VarDec>
@@ -2359,7 +2377,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s218_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s220_Switch</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor</group>
    </VarDec>
    <VarDec>
@@ -2395,7 +2413,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s814_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s816_Switch</struct>
       <group>System | Main Power Relay</group>
    </VarDec>
    <VarDec>
@@ -2433,7 +2451,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s440_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -2453,7 +2471,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s526_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s528_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | TwoStep</group>
    </VarDec>
@@ -2473,7 +2491,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s501_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s503_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | CruiseSETM</group>
    </VarDec>
@@ -2492,7 +2510,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s441_DataTypeConversion4</struct>
+      <struct>BaseEngineController_A02_bak2_B.s443_DataTypeConversion4</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -2511,7 +2529,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s453_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s455_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | Brake</group>
    </VarDec>
@@ -2530,7 +2548,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s723_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s725_Switch1</struct>
       <help>Number of TDC events counted after stall.  This will reset once in Crank and Run.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
    </VarDec>
@@ -2549,7 +2567,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s537_Sum</struct>
+      <struct>BaseEngineController_A02_bak2_B.s539_Sum</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
    </VarDec>
    <VarDec>
@@ -2586,7 +2604,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s279_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s281_Product</struct>
       <help>Closed-loop O2 control D-Term, for bank</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller</group>
    </VarDec>
@@ -2722,7 +2740,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s626_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s628_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors | O2_PostCat</group>
    </VarDec>
@@ -2742,7 +2760,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_frequency_in</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_frequency_in</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -2762,7 +2780,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s560_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s562_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -2782,7 +2800,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s539_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s541_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -2802,7 +2820,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s442_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s444_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | CruiseON</group>
    </VarDec>
@@ -2821,7 +2839,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s399_Crank</struct>
+      <struct>BaseEngineController_A02_bak2_B.s401_Crank</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|EngineState</group>
    </VarDec>
    <VarDec>
@@ -2839,7 +2857,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s373_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s375_Sum1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -2894,7 +2912,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s260_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s262_Product</struct>
       <help>PID Derivative Term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PD (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -2913,8 +2931,26 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s251_RelOp</struct>
+      <struct>BaseEngineController_A02_bak2_B.s253_RelOp</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Idle State Determination</group>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP</name>
+      <class>var</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>100000000000000000.000000</max>
+      <min>-100000000000000000.000000</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
+      <struct>BaseEngineController_A02_bak2_B.s199_Sum1</struct>
+      <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
    </VarDec>
    <VarDec>
       <name>ETC_ShutDownTimer</name>
@@ -3007,7 +3043,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s538_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s540_Sum1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -3026,7 +3062,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s434_motohawk_din2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_din2</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | TwoStep</group>
    </VarDec>
@@ -3046,7 +3082,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s521_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s523_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | Scramble</group>
    </VarDec>
@@ -3066,7 +3102,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s439_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s441_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | ACSw</group>
    </VarDec>
@@ -3086,7 +3122,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s376_TorquetoPower</struct>
+      <struct>BaseEngineController_A02_bak2_B.s378_TorquetoPower</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs|Load, Torque, Power, Work - Using APC|Calculate Power and Work</group>
    </VarDec>
    <VarDec>
@@ -3105,7 +3141,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s354_PressureRatio</struct>
+      <struct>BaseEngineController_A02_bak2_B.s356_PressureRatio</struct>
       <help>Pressure ratio - MAP over BARO</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -3125,7 +3161,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s620_motohawk_ain2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s622_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -3182,7 +3218,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s287_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s289_Product</struct>
       <help>Total Spark Offset based on ECT, IAT2, engine speed and load</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Spark Manager|Ethanol Spark Offset</group>
    </VarDec>
@@ -3201,7 +3237,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s214_Sum</struct>
+      <struct>BaseEngineController_A02_bak2_B.s216_Sum</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|I-Term Preload</group>
    </VarDec>
    <VarDec>
@@ -3237,7 +3273,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s248_MinMax1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s250_MinMax1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor</group>
    </VarDec>
    <VarDec>
@@ -3255,7 +3291,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s276_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s278_Switch1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Equivalence Ratio Perturbation</group>
    </VarDec>
    <VarDec>
@@ -3312,7 +3348,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s625_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s627_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors | O2_PostCat</group>
    </VarDec>
@@ -3332,7 +3368,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain3</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -3352,7 +3388,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s542_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s544_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -3372,7 +3408,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s434_motohawk_din</struct>
+      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_din</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | ESTOP</group>
    </VarDec>
@@ -3391,7 +3427,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s401_Sum3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s403_Sum3</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag</group>
    </VarDec>
    <VarDec>
@@ -3410,7 +3446,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s708_motohawk_pwm1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s710_motohawk_pwm1</struct>
       <help>Current output of ETC duty cycle.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|HBridge</group>
    </VarDec>
@@ -3430,7 +3466,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s656_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s658_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -3450,7 +3486,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s620_motohawk_ain</struct>
+      <struct>BaseEngineController_A02_bak2_B.s622_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -3506,7 +3542,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s227_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s229_Product</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
    <VarDec>
@@ -3524,7 +3560,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s266_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s268_Switch1</struct>
       <help>Air min governor I term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -3543,7 +3579,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s204_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s205_Sum1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
    </VarDec>
    <VarDec>
@@ -3600,7 +3636,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s700_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s702_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
@@ -3620,7 +3656,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s688_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s690_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
@@ -3639,7 +3675,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s441_DataTypeConversion1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s443_DataTypeConversion1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -3658,7 +3694,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s355_Sum</struct>
+      <struct>BaseEngineController_A02_bak2_B.s357_Sum</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs</group>
    </VarDec>
    <VarDec>
@@ -3677,7 +3713,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s290_Add</struct>
+      <struct>BaseEngineController_A02_bak2_B.s292_Add</struct>
       <help>Total Spark Offset based on ECT, IAT2, engine speed and load</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Spark Manager|Temp Comp Offset</group>
    </VarDec>
@@ -3697,7 +3733,7 @@
       <format>5.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s241_DontallowsetpointtoeverdropbelowtheTargetRPM</struct>
+      <struct>BaseEngineController_A02_bak2_B.s243_DontallowsetpointtoeverdropbelowtheTargetRPM</struct>
       <help>Base air request position, includes ramp into idle manager.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|AiflowOffset</group>
    </VarDec>
@@ -3777,7 +3813,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s698_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s700_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
@@ -3797,7 +3833,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s690_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s692_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
@@ -3817,7 +3853,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s680_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s682_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -3837,7 +3873,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s543_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s545_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -3857,7 +3893,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s589_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s591_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -3877,7 +3913,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s515_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s517_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -3897,7 +3933,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s508_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s510_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | GearState</group>
    </VarDec>
@@ -3916,7 +3952,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s421_Sum</struct>
+      <struct>BaseEngineController_A02_bak2_B.s423_Sum</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Time Since Key On</group>
    </VarDec>
    <VarDec>
@@ -3935,7 +3971,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s400_Sum3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s402_Sum3</struct>
       <help>Fuel pressure across injector (rail - manifold)</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Fuel Delta Pressure Calculation</group>
    </VarDec>
@@ -3955,7 +3991,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s375_MultiplyandDivideavoidingdivdebyzero1.s205_chargemass</struct>
+      <struct>BaseEngineController_A02_bak2_B.s377_MultiplyandDivideavoidingdivdebyzero1.s207_chargemass</struct>
       <help>Air per cylinder per cycle.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs|Load, Torque, Power, Work - Using APC</group>
    </VarDec>
@@ -3995,7 +4031,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s708_ETC</struct>
+      <struct>BaseEngineController_A02_bak2_B.s710_ETC</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|HBridge</group>
    </VarDec>
@@ -4014,7 +4050,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s419_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s421_Switch</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|EngineState|TDC_Counter</group>
    </VarDec>
    <VarDec>
@@ -4033,7 +4069,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s216_DontallowsetpointtoevergoabovetheTargetRPM</struct>
+      <struct>BaseEngineController_A02_bak2_B.s218_DontallowsetpointtoevergoabovetheTargetRPM</struct>
       <help>RPMSetpoint of Max Gov controller.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|Ramp RPM</group>
    </VarDec>
@@ -4072,7 +4108,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s276_Switch3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s278_Switch3</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Equivalence Ratio Perturbation</group>
    </VarDec>
    <VarDec>
@@ -4091,7 +4127,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s280_Switch1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s282_Switch1</struct>
       <help>Closed-loop O2 control I-Term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller</group>
    </VarDec>
@@ -4147,7 +4183,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s670_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_A02_bak2_B.s672_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -4167,7 +4203,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s443_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s445_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | CruiseRSM_SETP</group>
    </VarDec>
@@ -4186,7 +4222,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s441_DataTypeConversion2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s443_DataTypeConversion2</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -4204,7 +4240,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s423_Switch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s425_Switch</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Time Since Run</group>
    </VarDec>
    <VarDec>
@@ -4223,7 +4259,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s354_NominalAirFlowRate</struct>
+      <struct>BaseEngineController_A02_bak2_B.s356_NominalAirFlowRate</struct>
       <help>Air Mass Flow Rate - ideal</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -4243,7 +4279,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s646_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s648_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -4281,7 +4317,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s278_Sum2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s280_Sum2</struct>
       <help>Closed-loop O2 control error-term, for bank</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 PID Controller|Closed-Loop O2 PID Controller</group>
    </VarDec>
@@ -4359,7 +4395,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s615_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s617_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -4379,7 +4415,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s436_motohawk_ain1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s438_motohawk_ain1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -4399,7 +4435,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s540_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s542_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -4419,7 +4455,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s552_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s554_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -4439,7 +4475,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s434_Gain</struct>
+      <struct>BaseEngineController_A02_bak2_B.s436_Gain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -4458,7 +4494,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s441_DataTypeConversion5</struct>
+      <struct>BaseEngineController_A02_bak2_B.s443_DataTypeConversion5</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|Digital|Cruise Control</group>
    </VarDec>
    <VarDec>
@@ -4476,7 +4512,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s370_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s372_Sum1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -4495,7 +4531,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s357_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s359_Sum1</struct>
       <help>Air Mass Flow Rate error, as compared to MAF sensor</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive|Adapt Volumetric Efficiency</group>
    </VarDec>
@@ -4515,7 +4551,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s352_Timer</struct>
+      <struct>BaseEngineController_A02_bak2_B.s354_Timer</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs</group>
    </VarDec>
    <VarDec>
@@ -4552,7 +4588,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s719_Sum</struct>
+      <struct>BaseEngineController_A02_bak2_B.s721_Sum</struct>
       <help>Stop angle for coils to establish dwell.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -4572,7 +4608,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s412_Product</struct>
+      <struct>BaseEngineController_A02_bak2_B.s414_Product</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed</group>
    </VarDec>
    <VarDec>
@@ -4590,7 +4626,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s302_UnitDelay</struct>
+      <struct>BaseEngineController_A02_bak2_B.s304_UnitDelay</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Stall|Fuel Pump at Startup</group>
    </VarDec>
    <VarDec>
@@ -4684,7 +4720,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s264_Sum2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s266_Sum2</struct>
       <help>Air min governor P term</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Universal PID (Tunable &amp; Scheduled)</group>
    </VarDec>
@@ -4758,7 +4794,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s307_Defaultifnoflow</struct>
+      <struct>BaseEngineController_A02_bak2_B.s309_Defaultifnoflow</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Diagnostics|Fuel Economy</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -4779,7 +4815,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s776_Merge</struct>
+      <struct>BaseEngineController_A02_bak2_B.s778_Merge</struct>
       <help>Enable state for injectors.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
@@ -4800,7 +4836,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s705_SparkSequence_o3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s707_SparkSequence_o3</struct>
       <help>ADC counts of measured voltage feedback for diagnosing the ESTs during stall state.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -4844,7 +4880,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s705_LogicalOperator1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s707_LogicalOperator1</struct>
       <help>Enable sate for coils.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control</group>
       <col_len>8</col_len>
@@ -4866,7 +4902,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s705_SparkSequence_o4</struct>
+      <struct>BaseEngineController_A02_bak2_B.s707_SparkSequence_o4</struct>
       <help>Dwell time used to diagnose ESTs during run-state.</help>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -4887,7 +4923,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s323_Sum1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s325_Sum1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Diagnostics|Fuel Economy</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -4927,7 +4963,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s710_InjectorSequence_o1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s712_InjectorSequence_o1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -5327,7 +5363,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s211_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s213_LogicalOperator</struct>
       <help>Indicates whether FuelFlowComp map adapting is enabled due to WarmUp</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|Fuel System Manager|O2 Fuel Adapt|WarmUp Disable</group>
       <enum name="VarDecEnum_9">
@@ -6838,7 +6874,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s721_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s723_DataTypeConversion</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -6861,7 +6897,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s364_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s366_LogicalOperator</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -7332,7 +7368,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s435_motohawk_encoder_fault</struct>
+      <struct>BaseEngineController_A02_bak2_B.s437_motohawk_encoder_fault</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
       <enum name="VarDecEnum_34">
          <item name="No Fault" value="0"/>
@@ -7359,7 +7395,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s364_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s366_LogicalOperator</struct>
       <help>Steady-State Engine Operation</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs|Engine Steady-State Flag</group>
       <enum name="VarDecEnum_31">
@@ -7408,7 +7444,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s394_RelationalOperator3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s396_RelationalOperator3</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
       <enum name="VarDecEnum_23">
          <item name="Decreasing" value="0"/>
@@ -7952,7 +7988,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s249_RelationalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s251_RelationalOperator</struct>
       <help>Indicates whether the RPM is falling</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Idle State Determination|Determine if RPM is Falling</group>
       <enum name="VarDecEnum_12">
@@ -7976,7 +8012,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s269_LogicalOperator3</struct>
+      <struct>BaseEngineController_A02_bak2_B.s271_LogicalOperator3</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -8559,7 +8595,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s435_motohawk_encoder_state</struct>
+      <struct>BaseEngineController_A02_bak2_B.s437_motohawk_encoder_state</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Inputs|EngineSpeed</group>
       <enum name="VarDecEnum_35">
          <item name="zero" value="0"/>
@@ -8585,7 +8621,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s250_IdleState</struct>
+      <struct>BaseEngineController_A02_bak2_B.s252_IdleState</struct>
       <help>The idle governor may be one of: Flaring, OnIdle, OffIdle</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Idle State Determination</group>
       <enum name="VarDecEnum_11">
@@ -9395,7 +9431,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s357_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s359_LogicalOperator</struct>
       <help>Indicates whether the volumetric efficiency map is currently being adjusted</help>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive|Adapt Volumetric Efficiency</group>
       <enum name="VarDecEnum_30">
@@ -9643,7 +9679,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s269_LogicalOperator2</struct>
+      <struct>BaseEngineController_A02_bak2_B.s271_LogicalOperator2</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_10">
          <item name="Open-Loop" value="0"/>
@@ -10450,7 +10486,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s269_LogicalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s271_LogicalOperator</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -11145,7 +11181,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s721_RelationalOperator1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s723_RelationalOperator1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -11168,7 +11204,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s215_DataTypeConversion</struct>
+      <struct>BaseEngineController_A02_bak2_B.s217_DataTypeConversion</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|MaxGovState</group>
       <enum name="VarDecEnum_16">
          <item name="Reset Off" value="0"/>
@@ -11527,7 +11563,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s215_MultiportSwitch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s217_MultiportSwitch</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|MaxGovState</group>
       <enum name="VarDecEnum_14">
          <item name="ETC Req Mode" value="0"/>
@@ -12472,7 +12508,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s232_LogicalOperator1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s234_LogicalOperator1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MinGovernor|Base Airflow Table Adapt</group>
       <enum name="VarDecEnum_9">
          <item name="Not Enabled" value="0"/>
@@ -13055,7 +13091,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s368_RelationalOperator4</struct>
+      <struct>BaseEngineController_A02_bak2_B.s370_RelationalOperator4</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
       <enum name="VarDecEnum_23">
          <item name="Decreasing" value="0"/>
@@ -14105,7 +14141,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s269_RelationalOperator5</struct>
+      <struct>BaseEngineController_A02_bak2_B.s271_RelationalOperator5</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -14464,7 +14500,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s367_RelationalOperator4</struct>
+      <struct>BaseEngineController_A02_bak2_B.s369_RelationalOperator4</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
       <enum name="VarDecEnum_23">
          <item name="Decreasing" value="0"/>
@@ -14487,7 +14523,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s215_MultiportSwitch</struct>
+      <struct>BaseEngineController_A02_bak2_B.s217_MultiportSwitch</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|MaxGovState</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>
@@ -14510,7 +14546,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s215_DataTypeConversion1</struct>
+      <struct>BaseEngineController_A02_bak2_B.s217_DataTypeConversion1</struct>
       <group>BaseEngineController_A02_bak2|Foreground|Control|Controller|Run|MaxGovernor|MaxGovState</group>
       <enum name="VarDecEnum_15">
          <item name="Hold Off" value="0"/>
@@ -14807,7 +14843,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_A02_bak2</ctype>
-      <struct>BaseEngineController_A02_bak2_B.s798_RelationalOperator</struct>
+      <struct>BaseEngineController_A02_bak2_B.s800_RelationalOperator</struct>
       <group>System | Main Power Relay</group>
       <enum name="VarDecEnum_3">
          <item name="Disabled" value="0"/>

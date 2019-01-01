@@ -1,0 +1,246 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2011a_sp0.184      ###
+###    MATLAB version: 7.12.0.635 (R2011a)###
+###        01-Jan-2019 09:47:29           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECU555-80 (DEV)
+DEV Executable:  BaseEngineController_A02_bak2_119.srz
+MotoTune DLL:    BaseEngin_119.dll
+ 
+Project GUID:    dd15f277-b579-4753-b1-bd-58-84-9e-04-3b
+Build GUID:      e86da9fa-956b-4b55-ab-e1-34-ad-ca-85-7d
+ 
+### Starting build procedure for model: BaseEngineController_A02_bak2
+### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build
+### Invoking Target Language Compiler on BaseEngineController_A02_bak2.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
+### Loading TLC function libraries
+.....................
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.........................................
+### Caching model source code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.............................................................
+### Writing source file BaseEngineController_A02_bak2.c
+.
+### Writing header file BaseEngineController_A02_bak2_private.h
+### Writing header file BaseEngineController_A02_bak2.h
+.
+### Writing header file BaseEngineController_A02_bak2_types.h
+### Writing source file BaseEngineController_A02_bak2_IdleStateMachine.c
+.
+### Writing source file Foreground.c
+### Writing header file Foreground.h
+.
+### Writing header file rtwtypes.h
+### Writing header file rt_zcfcn.h
+.
+### Writing source file rt_zcfcn.c
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing header file BaseEngineController_A02_bak2_IdleStateMachine.h
+.
+### Writing source file BaseEngineController_A02_bak2_data.c
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+..
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### Creating BaseEngineController_A02_bak2.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### Building BaseEngineController_A02_bak2: .\BaseEngineController_A02_bak2.bat
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of build procedure for model: BaseEngineController_A02_bak2
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.12.4 ###
+Module: ClassicModule-MPC555
+Module File: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/Modules/ClassicModule-MPC555.xml
+Module Family: ClassicControlCore
+Module Family Directory: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/ModuleFamilies/ClassicControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Generating MotoTune DLL 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\TDB/ParsedVardecs.xml 
+### Completed MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/maxar/Documents/GitHub/Fischers-Bullshit/EngineController_Rev1/BaseEngineController_A02_bak2_Build/BaseEngineController_A02_bak2.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Build'. 
+   [delete] Deleting directory 'C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Archive'. 
+ 
+all: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Archive'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\BaseEngineController_A02_bak2.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\BaseEngineController_A02_bak2_data.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\BaseEngineController_A02_bak2_IdleStateMachine.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\EncoderCallback.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Foreground.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\InjectorSequenceCallback_43.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\IOCallbacks.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\rt_zcfcn.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_BGND_BASE_PERIODIC_9866p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_Encoder_Fault_33.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_5XRTI_PERIODIC_1236p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_5XRTI_PERIODIC_1237p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_5XRTI_PERIODIC_4926p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_5XRTI_PERIODIC_8535p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_5XRTI_PERIODIC_9590p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_MID_TDC_EVENT_8346p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_RTI_PERIODIC_9872p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_TDC1_EVENT_984p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_TDC_EVENT_7146p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_FGND_TDC_EVENT_9072p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\Trigger_STARTUP_EVENT_8345p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev1\BaseEngineController_A02_bak2_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking BaseEngineController_A02_bak2.elf 
+ 
+s-records: 
+ 
+[gcc-objcopy] Generating BaseEngineController_A02_bak2.run from BaseEngineController_A02_bak2.elf 
+ 
+BUILD SUCCEEDED 
+ 
+Total time: 14.5 seconds. 
+ 
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0004A89F 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003FC1AC], ROM[0x00052E64], Length[0x0000077C] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F9800], ROM[0x00053610], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Adding RAM[0x003FA8E0], ROM[0x0005362C], Length[0x000008CC] 
+Complete. 
+Writing file sr://BaseEngineController_A02_bak2.sr... 
+Encrypting 'sr://BaseEngineController_A02_bak2.sr' into 'srz://.\Target\BaseEngineController_A02_bak2_119.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:                                     306135 bytes   85% of 360184
+	    BaseEngineController_A02_bak2_M:            4 bytes    0% of 360184
+	    NonVolatileDefault:                      1916 bytes    1% of 360184
+	    BaseEngineController_A02_bak2_Foreground:52196 bytes   14% of 360184
+	INTERNAL_RAM:                               20131 bytes   76% of  26544
+	    BaseEngineController_A02_bak2_B:         1216 bytes    5% of  26544
+	    BaseEngineController_A02_bak2_DWork:      924 bytes    3% of  26544
+	    BaseEngineController_A02_bak2_M_:           8 bytes    0% of  26544
+	    VolatileWork:                              36 bytes    0% of  26544
+	    NonVolatileWork:                         1916 bytes    7% of  26544
+	    FgndTimeStack:                           3072 bytes   12% of  26544
+	    BgndStack:                               2048 bytes    8% of  26544
+	    IdleStack:                               1024 bytes    4% of  26544
+	    InterruptStack:                          1536 bytes    6% of  26544
+	CAL_SPACE:                                  16912 bytes   26% of  65536
+	    ConstantWork:                           16756 bytes   26% of  65536
+	EEPROM_SPACE:                                1919 bytes   23% of   8192
+
+### Copy BaseEngin_119.dll and BaseEngineController_A02_bak2_119.srz 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 3 minutes, 13.9 seconds  (193.9 seconds)
+{Warning: Block diagram 'BaseEngineController_A02_bak2' contains disabled library
+links.  Use Model Advisor to find the disabled links in non-library models.  The
+diagram has been saved but may not contain what you intended.} 
+ 
+#############################################################################
+###
+### Target Module: ECU555-80
+### Created Development Executable: BaseEngineController_A02_bak2_119.srz
+### Created MotoTune DLL: BaseEngin_119.dll
+###
+### Successful MotoHawk Build for model: BaseEngineController_A02_bak2
+###
+#############################################################################
+ 

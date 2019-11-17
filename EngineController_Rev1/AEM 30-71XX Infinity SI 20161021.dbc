@@ -1,0 +1,509 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: AEMInfinity
+VAL_TABLE_ ThrottleTrackingErrorEnum 1 "Not Tracking" 0 "OK" ;
+VAL_TABLE_ ThrottleHighCurrentEnum 1 "Over Current" 0 "OK" ;
+VAL_TABLE_ ShutDownEnum 1 "Shutdown" 0 "OK" ;
+VAL_TABLE_ ThrottleStuckEnum 1 "Stuck Throttle" 0 "OK" ;
+VAL_TABLE_ ThrottlePosErrorEnum 1 "Sensor Disagree" 0 "OK" ;
+VAL_TABLE_ Logging 1 "Logging" 0 "OFF" ;
+VAL_TABLE_ IGNMap 3 "IGN Map 4" 2 "IGN Map 3" 1 "IGN Map 2" 0 "IGN Map 1" ;
+VAL_TABLE_ AFRMode 3 "A/F Map 4" 2 "A/F Map 3" 1 "A/F Map 2" 0 "A/F Map 1" ;
+VAL_TABLE_ PedalMapMode 1 "Pedal Map 2" 0 "Pedal Map 1" ;
+VAL_TABLE_ AFRControlState 1 "Closed Loop" 0 "Open Loop" ;
+VAL_TABLE_ Off_On 1 "On" 0 "Off" ;
+VAL_TABLE_ Ok_Limp 1 "Limp Mode" 0 "OK" ;
+VAL_TABLE_ Armed 1 "Armed" 0 "Disarmed" ;
+VAL_TABLE_ SyncState 1 "Synced" 0 "Not Synced" ;
+VAL_TABLE_ ModeSelect 7 "Mode 8" 6 "Mode 7" 5 "Mode 6" 4 "Mode 5" 3 "Mode 4" 2 "Mode 3" 1 "Mode 2" 0 "Mode 1" ;
+VAL_TABLE_ OkDisabled 1 "Description for the value '0x1'" 0 "Ok" ;
+VAL_TABLE_ ErrorStateBoolean 1 "Out of Range" 0 "OK" ;
+VAL_TABLE_ ButtonState 1 "Pressed" 0 "Not Pressed" ;
+VAL_TABLE_ ActiveNotActive 1 "Active" 0 "Not Active" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ EngineLoad : 0|16@0+ (0.0015259,0) [0|99.998] "fraction:%" Vector__XXX
+
+BO_ 2180030473 Infinity8: 8 AEMInfinity
+ SG_ AntilagBoostTarget : 39|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Vector__XXX
+ SG_ SteeringAngle : 23|16@0+ (0.1,-3276.8) [0|0] "angle:deg" Vector__XXX
+ SG_ BrakePress : 7|16@0+ (0.006895,0) [0|451.863825] "pressure_gauge:bar(g)" Vector__XXX
+
+BO_ 2180030497 InfinityKnock2: 8 AEMInfinity
+ SG_ KnockCyl10IgnOffset : 15|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl9gnOffset : 7|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+
+BO_ 2180030496 InfinityKnock1: 8 AEMInfinity
+ SG_ KnockCyl8IgnOffset : 63|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl7IgnOffset : 55|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl6IgnOffset : 47|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl5IgnOffset : 39|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl4IgnOffset : 31|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl3IgnOffset : 23|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl2IgnOffset : 15|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+ SG_ KnockCyl1IgnOffset : 7|8@0+ (-0.1,0) [-25.5|0] "angle:deg" Vector__XXX
+
+BO_ 2180030482 InfinityTC3: 7 AEMInfinity
+ SG_ TracControlSlipTargetOffset : 55|8@0+ (1.609,-80.45) [-80.45|329.845] "speed:km/h" Vector__XXX
+ SG_ TracControlTorqueReduceRequest : 39|16@0+ (0.25,0) [0|16383.75] "unitless:" Vector__XXX
+ SG_ TracControlSlipMeasured : 23|16@0+ (0.02,0) [0|1310.7] "speed:km/h" Vector__XXX
+ SG_ TracControlSlipTarget : 7|16@0+ (0.02,0) [0|1310.7] "speed:km/h" Vector__XXX
+
+BO_ 2180030481 InfinityTC2: 8 AEMInfinity
+ SG_ WheelSpeedRightNonDriven : 55|16@0+ (0.02,0) [0|1310.7] "speed:km/h" Vector__XXX
+ SG_ WheelSpeedLeftNonDriven : 39|16@0+ (0.02,0) [0|1310.7] "speed:km/h" Vector__XXX
+ SG_ WheelSpeedRightDriven : 23|16@0+ (0.02,0) [0|1310.7] "speed:km/h" Vector__XXX
+ SG_ WheelSpeedLeftDriven : 7|16@0+ (0.02,0) [0|1310.7] "speed:km/h" Vector__XXX
+
+BO_ 2180030480 InfinityTC1: 8 AEMInfinity
+ SG_ LaunchSlipSwitchState : 58|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ LaunchSlipIgnCutArmedState : 57|1@0+ (1,0) [0|1] "angular_speed:rpm" Vector__XXX
+ SG_ LaunchSlipFuelCutArmedState : 56|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ LaunchSlipEngineSpeedIgnLimit : 55|8@0+ (100,0) [0|25500] "angular_speed:rpm" Vector__XXX
+ SG_ LaunchSlipEngineSpeedFuelLimit : 47|8@0+ (100,0) [0|25500] "angular_speed:rpm" Vector__XXX
+ SG_ TracControlModeSwitchState : 39|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+ SG_ TracControlThrottleReduceRequest : 31|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ TracControlIgnOffsetRequest : 23|8@0+ (0.25,0) [0|63.75] "angle:deg" Vector__XXX
+ SG_ TracControlIgnCutRequest : 15|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ TracControlFuelCutRequest : 7|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+
+BO_ 2180030477 InfinityDBW: 8 AEMInfinity
+ SG_ ThrottleDBW2TrackingErrorState : 59|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW2PosBErrorState : 58|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW2PosAErrorState : 57|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW2PosErrorState : 61|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW2ShutdownState : 56|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW2HighAmpErrorState : 60|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW1TrackingErrorState : 51|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW1PosBErrorState : 50|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW1PosAErrorState : 49|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW1PosErrorState : 53|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW1ShutdownState : 48|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW1HighAmpErrorState : 52|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleStuckProtectionState : 43|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottlePedalPos2ErrorState : 42|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottlePedalPos1ErrorState : 41|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottlePedalPosErrorState : 40|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBW2PosA : 31|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ ThrottleDBW1PosA : 23|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ ThrottleDBWTarget : 15|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ ThrottlePedalPos1 : 7|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+
+BO_ 2180030471 Infinity6: 8 AEMInfinity
+ SG_ VTECOutputState : 63|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottleDBWPedalMapMode : 62|1@0+ (1,1) [1|2] "unitless:" Vector__XXX
+ SG_ AFRModeStatus : 61|2@0+ (1,1) [1|4] "unitless:" Vector__XXX
+ SG_ IgnitionModeStatus : 59|2@0+ (1,1) [1|4] "unitless:" Vector__XXX
+ SG_ ECULoggingState : 57|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ LaunchTimerArmedState : 56|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ OilTemp : 55|8@0+ (1,-50) [-50|205] "temperature:C" Vector__XXX
+ SG_ AmbientAirTemp : 47|8@0+ (1,-50) [-50|205] "temperature:C" Vector__XXX
+ SG_ FuelEthanolContent : 39|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ BaroPress : 31|8@0+ (0.25,50) [50|113.75] "pressure:kPa" Vector__XXX
+ SG_ AFRControlKnockTrim : 23|8@0+ (0.001,0) [0|0.255] "afr:LA" Vector__XXX
+ SG_ IgnitionEventProbability : 15|8@0+ (0.392157,0) [0|100] "angular_speed:rpm" Vector__XXX
+ SG_ FuelInjEventProbability : 7|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+
+BO_ 2180030470 Infinity5: 8 AEMInfinity
+ SG_ EngineTorqueEstimated : 55|16@0+ (0.1,-3276.8) [-3276.8|3276.7] "torque:N.m" Vector__XXX
+ SG_ EngineCrankcasePress : 47|8@0+ (1,0) [0|255] "pressure_gauge:kPa" Vector__XXX
+ SG_ CoolantPress : 39|8@0+ (0.04,0) [0|10.2] "pressure_gauge:bar(g)" Vector__XXX
+ SG_ EngineModeSwitchStatus : 31|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+ SG_ FuelInjDutyPrimary : 23|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ AFR1ControlTrim : 15|8@0+ (0.5,-64) [-64|63.5] "fraction:%" Vector__XXX
+ SG_ FuelInj1Pulsewidth : 7|8@0+ (0.1,0) [0|25.5] "time:ms" Vector__XXX
+
+BO_ 2180030469 Infinity4: 8 AEMInfinity
+ SG_ ClutchPress : 55|8@0+ (0.344738,0) [0|87.91] "pressure_gauge:bar(g)" Vector__XXX
+ SG_ FuelInjStagedSwitchState : 59|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ GearShiftSwitchState : 58|1@0+ (1,1) [1|2] "unitless:" Vector__XXX
+ SG_ ClutchSwitchState : 57|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ BrakeSwitchState : 56|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ MassAirflowRev : 39|16@0+ (0.0005,0) [0|32.7675] "unitless:" Vector__XXX
+ SG_ MassAirflow : 23|16@0+ (0.05,0) [0|3276.75] "mass_flow:g/s" Vector__XXX
+ SG_ LaunchRampTime : 7|16@0+ (10,0) [0|655350] "time:ms" Vector__XXX
+
+BO_ 2180030468 Infinity3: 8 AEMInfinity
+ SG_ CoolantTempProtectionState : 62|1@0+ (1,0) [0|0] "unitless:" Vector__XXX
+ SG_ EngineLimitBoostCutState : 61|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AirConOutputState : 60|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ EngineSyncState : 59|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AntilagEngineSpeedIgnState : 58|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AntilagEngineSpeedFuelState : 57|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ OilPressProtectionState : 56|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AFRControlProtectionState : 55|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ MILState : 54|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ EngineProtectionState : 53|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AFRControlState : 52|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ NitrousOutputState : 51|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ CoolantFan2State : 50|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ CoolantFan1State : 49|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ FuelPumpState : 48|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AFRTarget : 47|8@0+ (0.00390625,0.5) [0.5|1.49609375] "afr:LA" Vector__XXX
+ SG_ OilPress : 39|8@0+ (0.04,0) [0|10.2] "pressure_gauge:bar(g)" Vector__XXX
+ SG_ FuelPress : 31|8@0+ (0.04,0) [0|10.2] "pressure_gauge:bar(g)" Vector__XXX
+ SG_ EngineVolumetricEfficency : 23|8@0+ (1,0) [0|255] "fraction:%" Vector__XXX
+ SG_ IntakeManifoldAirPress : 7|16@0+ (0.1,0) [0|6553.5] "pressure_gauge:bar(g)" Vector__XXX
+
+BO_ 2180030467 Infinity2: 8 AEMInfinity
+ SG_ ECUBatteryVoltage : 55|16@0+ (0.0002455,0) [0|16.089] "voltage:V" Vector__XXX
+ SG_ IgnitionTiming : 47|8@0+ (0.35156,-17) [-17|72.65] "angle:deg" Vector__XXX
+ SG_ GearPosCalculated : 39|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+ SG_ VehicleSpeed : 23|16@0+ (0.0062865,0) [0|411.986] "speed:km/h" Vector__XXX
+ SG_ AFR2 : 15|8@0+ (0.00390625,0.5) [0.5|1.49609375] "afr:LA" Vector__XXX
+ SG_ AFR1 : 7|8@0+ (0.00390625,0.5) [0.5|1.49609375] "afr:LA" Vector__XXX
+
+BO_ 2180030464 Infinity1: 8 AEMInfinity
+ SG_ CoolantTemp : 63|8@0- (1,0) [-128|127] "temperature:C" Vector__XXX
+ SG_ IntakeManifoldAirTemp : 55|8@0- (1,0) [-128|127] "temperature:C" Vector__XXX
+ SG_ ThrottlePos : 39|16@0+ (0.0015259,0) [0|99.998] "fraction:%" Vector__XXX
+ SG_ EngineSpeed : 7|16@0+ (0.39063,0) [0|25599.94] "angular_speed:rpm" Vector__XXX
+
+BO_ 2180030472 Infinity7: 8 AEMInfinity
+ SG_ BaroPressErrorState : 63|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ IntakeManifoldAirTempErrorState : 62|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ IntakeManifoldAirPressErrorState : 61|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ExhaustPressErrorState : 60|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ OilPressErrorState : 59|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ FuelPresErrorState : 58|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ CoolantTempErrorState : 57|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ ThrottlePosErrorState : 56|1@0+ (1,0) [0|1] "unitless:" Vector__XXX
+ SG_ AntilagEngineSpeedIgnTarget : 55|8@0+ (100,0) [0|25500] "angular_speed:rpm" Vector__XXX
+ SG_ AntilagEngineSpeedFuelTarget : 47|8@0+ (100,0) [0|25500] "angular_speed:rpm" Vector__XXX
+ SG_ EngineSpeedFuelCutThreshold : 31|16@0+ (0.39063,0) [0|25599.94] "angular_speed:rpm" Vector__XXX
+ SG_ EngineSpeedIgnCutThreshold : 15|16@0+ (0.39063,0) [0|25599.94] "angular_speed:rpm" Vector__XXX
+ SG_ GearboxTemp : 7|8@0+ (1,-50) [-50|205] "temperature:C" Vector__XXX
+
+BO_ 2180030474 InfinityVVC: 8 AEMInfinity
+ SG_ CamExhaustPosTarget : 47|8@0+ (0.5,-50) [-50|77.5] "angle:deg" Vector__XXX
+ SG_ CamIntakePosTarget : 39|8@0+ (0.5,-50) [-50|77.5] "angle:deg" Vector__XXX
+ SG_ CamExhaustBank2Pos : 31|8@0+ (0.5,-50) [-50|77.5] "angle:deg" Vector__XXX
+ SG_ CamIntakeBank2Pos : 23|8@0+ (0.5,-50) [-50|77.5] "ange:deg" Vector__XXX
+ SG_ CamExhaustBank1Pos : 15|8@0+ (0.5,-50) [-50|77.5] "angle:deg" Vector__XXX
+ SG_ CamIntakeBank1Pos : 7|8@0+ (0.5,-50) [-50|77.5] "angle:deg" Vector__XXX
+
+BO_ 2180030475 InfinityBoost: 8 AEMInfinity
+ SG_ TurboSpeed : 63|8@0+ (500,0) [0|127500] "angular_speed:rpm" Vector__XXX
+ SG_ TurboOutletTemp : 55|8@0+ (1,-50) [-50|205] "temperature:C" Vector__XXX
+ SG_ BoostControlPIDOffset : 47|8@0+ (0.392157,0) [0|100] "fraction:%" Vector__XXX
+ SG_ BoostControlOutput : 39|8@0+ (0.392157,0) [0|100.000035] "fraction:%" Vector__XXX
+ SG_ TurboOutletPress : 23|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Vector__XXX
+ SG_ BoostControlTarget : 7|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 2180030473 BrakePress "Brake Pressure";
+CM_ SG_ 2180030497 KnockCyl10IgnOffset "Measured Knock Value ";
+CM_ SG_ 2180030481 WheelSpeedRightNonDriven "The speed of the wheel";
+CM_ SG_ 2180030481 WheelSpeedLeftNonDriven "The Speed of the wheel ";
+CM_ SG_ 2180030480 LaunchSlipSwitchState "Boolean State of the Switch
+
+0 = Not Pressed
+1 = Pressed";
+CM_ SG_ 2180030480 LaunchSlipFuelCutArmedState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030480 LaunchSlipEngineSpeedIgnLimit "RPM Target of the three step system
+";
+CM_ SG_ 2180030480 TracControlModeSwitchState "TC Mode Select Switch";
+CM_ SG_ 2180030480 TracControlFuelCutRequest "Percentage of Fuel cut
+";
+CM_ SG_ 2180030477 ThrottleDBW2TrackingErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW2PosBErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW2PosAErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW2PosErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW2ShutdownState "Bolean Error State
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW2HighAmpErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW1TrackingErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW1PosBErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW1PosAErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW1PosErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleDBW1ShutdownState "Boolean State 
+0 = Ok
+1 = Disabled";
+CM_ SG_ 2180030477 ThrottleDBW1HighAmpErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottleStuckProtectionState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottlePedalPos2ErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottlePedalPos1ErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottlePedalPosErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030477 ThrottlePedalPos1 "the Pos of the accerator pedal
+";
+CM_ SG_ 2180030471 VTECOutputState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030471 ThrottleDBWPedalMapMode "Mode of the Drive by Wire System";
+CM_ SG_ 2180030471 AFRModeStatus "Mode of the AFR System";
+CM_ SG_ 2180030471 IgnitionModeStatus "Mode of the Ignition System
+";
+CM_ SG_ 2180030471 ECULoggingState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030471 LaunchTimerArmedState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030471 BaroPress "Barometric Pressure";
+CM_ SG_ 2180030470 EngineCrankcasePress "Pressure of the crankcase
+";
+CM_ SG_ 2180030470 EngineModeSwitchStatus "Mode Selection Switch";
+CM_ SG_ 2180030469 ClutchPress "Pressure of the clutch system";
+CM_ SG_ 2180030469 ClutchSwitchState "Boolean Button State 
+0 = Not Pressed
+1 = Pressed";
+CM_ SG_ 2180030469 BrakeSwitchState "Boolean Button State 
+0 = Not Pressed
+1 = Pressed";
+CM_ SG_ 2180030469 MassAirflowRev "Mass air flow of the inlet air in grams a revolution, Unit is unitless";
+CM_ SG_ 2180030469 MassAirflow "Mass Flow Rate of the inlet air in grams / second";
+CM_ SG_ 2180030468 EngineLimitBoostCutState "Boolean State 
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 AirConOutputState "Boolean State 
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 EngineSyncState "Boolean Sync State
+0 = Not Synced
+1 = Synced";
+CM_ SG_ 2180030468 AntilagEngineSpeedIgnState "Boolean State of the 2 Step Spark Active
+
+0 = Not Active
+1 = Active
+";
+CM_ SG_ 2180030468 OilPressProtectionState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 AFRControlProtectionState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 MILState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 EngineProtectionState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 AFRControlState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 NitrousOutputState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 CoolantFan2State "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 CoolantFan1State "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 FuelPumpState "Boolean State
+0 = Not Active
+1 = Active";
+CM_ SG_ 2180030468 OilPress "pressure of the oiling system
+";
+CM_ SG_ 2180030468 FuelPress "Pressure of the fuel system";
+CM_ SG_ 2180030468 IntakeManifoldAirPress "Pressure of the inlet manifold
+";
+CM_ SG_ 2180030467 IgnitionTiming "Requested Ignition timing value. ";
+CM_ SG_ 2180030467 GearPosCalculated "Gear Pos number";
+CM_ SG_ 2180030464 EngineSpeed "The Angular Speed in Revolutions per Minute of the Engine Crank Shaft";
+CM_ SG_ 2180030472 BaroPressErrorState "Boolean Error
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 IntakeManifoldAirTempErrorState "Boolean Error
+
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 IntakeManifoldAirPressErrorState "Boolean Error State
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 ExhaustPressErrorState "Boolean Error State 
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 OilPressErrorState "Boolean Error State
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 FuelPresErrorState "Boolean Error State
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 CoolantTempErrorState "Boolean Error
+0 = InRange
+1 = InError
+";
+CM_ SG_ 2180030472 ThrottlePosErrorState "Boolean Error State
+0 = InRange
+1 = InError";
+CM_ SG_ 2180030472 EngineSpeedFuelCutThreshold "The rpm limit that the fuel with start to cut at";
+CM_ SG_ 2180030474 CamExhaustPosTarget "Exhaust Cam Target Pos";
+CM_ SG_ 2180030474 CamIntakePosTarget "Inlet Cam Target Pos
+";
+CM_ SG_ 2180030474 CamExhaustBank2Pos "Measured Cam Pos";
+CM_ SG_ 2180030474 CamIntakeBank2Pos "Measured Cam Pos";
+CM_ SG_ 2180030474 CamExhaustBank1Pos "Measured Cam Pos";
+CM_ SG_ 2180030474 CamIntakeBank1Pos "Measured Cam Pos";
+CM_ SG_ 2180030475 BoostControlPIDOffset "The PID feedback of the boost control
+";
+CM_ SG_ 2180030475 BoostControlOutput "The duty cycle of the boost control system
+";
+CM_ SG_ 2180030475 BoostControlTarget "Desired Boost Pressure";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 255;
+BA_DEF_  "VersionYear" INT 2016 3000;
+BA_DEF_  "VersionMonth" INT 1 12;
+BA_DEF_  "VersionDay" INT 1 31;
+BA_DEF_  "VersionNumber" INT 0 10000;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "BusType" ENUM  "Can";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 1 2000;
+BA_DEF_ BO_  "DBC_Author_Contact" STRING ;
+BA_DEF_DEF_  "DBC_Author_Contact" "CANbusInfo@AEMelectronics.com";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "TpNodeBaseAddress" 0;
+BA_DEF_DEF_  "VersionYear" 2016;
+BA_DEF_DEF_  "VersionMonth" 1;
+BA_DEF_DEF_  "VersionDay" 1;
+BA_DEF_DEF_  "VersionNumber" 0;
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "BusType" "Can";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 10;
+BA_ "ProtocolType" "AEMNet";
+BA_ "VersionNumber" 4;
+BA_ "VersionDay" 21;
+BA_ "VersionMonth" 10;
+BA_ "TpNodeBaseAddress" BU_ AEMInfinity 1;
+BA_ "GenMsgCycleTime" BO_ 2180030473 40;
+BA_ "GenMsgCycleTime" BO_ 2180030497 20;
+BA_ "GenMsgCycleTime" BO_ 2180030496 20;
+BA_ "GenMsgCycleTime" BO_ 2180030482 20;
+BA_ "GenMsgCycleTime" BO_ 2180030481 20;
+BA_ "GenMsgCycleTime" BO_ 2180030480 20;
+BA_ "GenMsgCycleTime" BO_ 2180030477 40;
+BA_ "GenMsgCycleTime" BO_ 2180030471 40;
+BA_ "GenMsgCycleTime" BO_ 2180030470 40;
+BA_ "GenMsgCycleTime" BO_ 2180030469 20;
+BA_ "GenMsgCycleTime" BO_ 2180030468 20;
+BA_ "GenMsgCycleTime" BO_ 2180030467 20;
+BA_ "GenMsgCycleTime" BO_ 2180030464 20;
+BA_ "GenMsgCycleTime" BO_ 2180030472 200;
+BA_ "GenMsgCycleTime" BO_ 2180030474 40;
+BA_ "GenMsgCycleTime" BO_ 2180030475 40;
+VAL_ 2180030480 LaunchSlipSwitchState 1 "On" 0 "Off" ;
+VAL_ 2180030480 LaunchSlipIgnCutArmedState 1 "Armed" 0 "Disarmed" ;
+VAL_ 2180030480 LaunchSlipFuelCutArmedState 1 "Armed" 0 "Disarmed" ;
+VAL_ 2180030477 ThrottleDBW2TrackingErrorState 1 "Not Tracking" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW2PosBErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW2PosAErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW2PosErrorState 1 "Sensor Disagree" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW2ShutdownState 1 "Shutdown" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW2HighAmpErrorState 1 "Over Current" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW1TrackingErrorState 1 "Not Tracking" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW1PosBErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW1PosAErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW1PosErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW1ShutdownState 1 "Shutdown" 0 "OK" ;
+VAL_ 2180030477 ThrottleDBW1HighAmpErrorState 1 "Over Current" 0 "OK" ;
+VAL_ 2180030477 ThrottleStuckProtectionState 1 "Stuck Throttle" 0 "OK" ;
+VAL_ 2180030477 ThrottlePedalPos2ErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottlePedalPos1ErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030477 ThrottlePedalPosErrorState 1 "Sensor Disagree" 0 "OK" ;
+VAL_ 2180030471 VTECOutputState 1 "On" 0 "Off" ;
+VAL_ 2180030471 ThrottleDBWPedalMapMode 1 "Pedal Map 2" 0 "Pedal Map 1" ;
+VAL_ 2180030471 AFRModeStatus 3 "A/F Map 4" 2 "A/F Map 3" 1 "A/F Map 2" 0 "A/F Map 1" ;
+VAL_ 2180030471 IgnitionModeStatus 3 "IGN Map 4" 2 "IGN Map 3" 1 "IGN Map 2" 0 "IGN Map 1" ;
+VAL_ 2180030471 ECULoggingState 1 "Logging" 0 "OFF" ;
+VAL_ 2180030471 LaunchTimerArmedState 1 "Armed" 0 "Disarmed" ;
+VAL_ 2180030469 FuelInjStagedSwitchState 1 "On" 0 "Off" ;
+VAL_ 2180030469 GearShiftSwitchState 1 "On" 0 "Off" ;
+VAL_ 2180030469 ClutchSwitchState 1 "On" 0 "Off" ;
+VAL_ 2180030469 BrakeSwitchState 1 "On" 0 "Off" ;
+VAL_ 2180030468 CoolantTempProtectionState 1 "Limp Mode" 0 "OK" ;
+VAL_ 2180030468 EngineLimitBoostCutState 1 "Limp Mode" 0 "OK" ;
+VAL_ 2180030468 AirConOutputState 1 "On" 0 "Off" ;
+VAL_ 2180030468 EngineSyncState 1 "Synced" 0 "Not Synced" ;
+VAL_ 2180030468 AntilagEngineSpeedIgnState 1 "Armed" 0 "Disarmed" ;
+VAL_ 2180030468 AntilagEngineSpeedFuelState 1 "Armed" 0 "Disarmed" ;
+VAL_ 2180030468 OilPressProtectionState 1 "Limp Mode" 0 "OK" ;
+VAL_ 2180030468 AFRControlProtectionState 1 "Limp Mode" 0 "OK" ;
+VAL_ 2180030468 MILState 1 "On" 0 "Off" ;
+VAL_ 2180030468 EngineProtectionState 1 "Limp Mode" 0 "OK" ;
+VAL_ 2180030468 AFRControlState 1 "Closed Loop" 0 "Open Loop" ;
+VAL_ 2180030468 NitrousOutputState 1 "On" 0 "Off" ;
+VAL_ 2180030468 CoolantFan2State 1 "On" 0 "Off" ;
+VAL_ 2180030468 CoolantFan1State 1 "On" 0 "Off" ;
+VAL_ 2180030468 FuelPumpState 1 "On" 0 "Off" ;
+VAL_ 2180030472 BaroPressErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 IntakeManifoldAirTempErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 IntakeManifoldAirPressErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 ExhaustPressErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 OilPressErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 FuelPresErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 CoolantTempErrorState 1 "Out of Range" 0 "OK" ;
+VAL_ 2180030472 ThrottlePosErrorState 1 "Out of Range" 0 "OK" ;
+

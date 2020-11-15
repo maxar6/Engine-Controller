@@ -10,16 +10,16 @@
    Struct:ApplicationMonitorEnable EnumDec:E_ApplicationMonitorEnable Gain:1 Min:0 Max:1 Format:3.0 UpdateID:REMOTE
    Group:"System | Debug | Application Monitor Config" Help:"Enables runtime checking of stack, heap, CPU, and OS errors.  Stops the application on error." */
 Calconst E_ApplicationMonitorEnable ApplicationMonitorEnable
-  __SECTION_CALS_RODATA__ = APP_MONITOR_DISABLED;
+  __SECTION_CALS_RODATA__ = (E_ApplicationMonitorEnable) 1;
 
 /* Name: ApplicationPausePoint ClassID:ENUMVAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT1 CType:E_ApplicationInitStatus
    Struct:ApplicationPausePoint EnumDec:E_ApplicationInitStatus Gain:1 Min:0 Max:3 Format:3.0 UpdateID:REMOTE
    Group:"System | Debug | Application Monitor Config" Help:"Selects the startup pause point, for debugging.  Can be moved forward to step through the initialization" */
 Calconst E_ApplicationInitStatus ApplicationPausePoint __SECTION_CALS_RODATA__ =
-  APP_INIT_RUN;
+  (E_ApplicationInitStatus) 3;
 
 /* Name: FgndTimeStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:3072.0 Format:5.0 UpdateID:REMOTE Struct:FgndTimeStackMargin
+   Min:0 Max:4096.0 Format:5.0 UpdateID:REMOTE Struct:FgndTimeStackMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
 Calconst uint2 FgndTimeStackMargin __SECTION_CALS_RODATA__ = 512;
 
@@ -39,14 +39,14 @@ Calconst uint2 IdleStackMargin __SECTION_CALS_RODATA__ = 256;
 Calconst uint2 InterruptStackMargin __SECTION_CALS_RODATA__ = 128;
 
 /* Name: HeapMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:8192.0 Format:5.0 UpdateID:REMOTE Struct:HeapMargin
+   Min:0 Max:4096.0 Format:5.0 UpdateID:REMOTE Struct:HeapMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available heap drops below this threshold, the application performs a safety stop" */
 Calconst uint2 HeapMargin __SECTION_CALS_RODATA__ = 256;
 
 /* Name: CPUMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:0.0015259 Offset:0.0
    Min:0 Max:100 Format:3.0 UpdateID:REMOTE Struct:CPUMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available CPU idle time drops below this threshold, the application performs a safety stop" */
-Calconst uint2 CPUMargin __SECTION_CALS_RODATA__ = 6553.5;
+Calconst uint2 CPUMargin __SECTION_CALS_RODATA__ = (6553.5);
 
 #include <Pragma_Section_End_rodata.h>
 
@@ -81,29 +81,21 @@ int32_T FGND_TDC_EVENT_RunCnt = -1;
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute STARTUP_EVENT before pausing.  -1 means run forever" */
 int32_T STARTUP_EVENT_RunCnt = -1;
 
-/* Name: FGND_MID_TDC_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_MID_TDC_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
-   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_MID_TDC_EVENT before pausing.  -1 means run forever" */
-int32_T FGND_MID_TDC_EVENT_RunCnt = -1;
-
 /* Name: FGND_TDC1_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_TDC1_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_TDC1_EVENT before pausing.  -1 means run forever" */
 int32_T FGND_TDC1_EVENT_RunCnt = -1;
-
-/* Name: FGND_5XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_5XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
-   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_5XRTI_PERIODIC before pausing.  -1 means run forever" */
-int32_T FGND_5XRTI_PERIODIC_RunCnt = -1;
 
 /* Name: FGND_RTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_RTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_RTI_PERIODIC before pausing.  -1 means run forever" */
 int32_T FGND_RTI_PERIODIC_RunCnt = -1;
 
-/* Name: FGND_2XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_2XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
-   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_2XRTI_PERIODIC before pausing.  -1 means run forever" */
-int32_T FGND_2XRTI_PERIODIC_RunCnt = -1;
+/* Name: FGND_5XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_5XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_5XRTI_PERIODIC before pausing.  -1 means run forever" */
+int32_T FGND_5XRTI_PERIODIC_RunCnt = -1;
 
-/* Name: FGND_10XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_10XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
-   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_10XRTI_PERIODIC before pausing.  -1 means run forever" */
-int32_T FGND_10XRTI_PERIODIC_RunCnt = -1;
+/* Name: FGND_MID_TDC_EVENT_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_MID_TDC_EVENT_RunCnt Gain:1 Min:-1 Max:2147483646
+   Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_MID_TDC_EVENT before pausing.  -1 means run forever" */
+int32_T FGND_MID_TDC_EVENT_RunCnt = -1;
 
 /* Name: FGND_20XRTI_PERIODIC_RunCnt ClassID:VAR StorageID:RAM Access:RW4+RW3+NA2+NA1 TypeID:SINT4 CType:int32_T Struct:FGND_20XRTI_PERIODIC_RunCnt Gain:1 Min:-1 Max:2147483646
    Format:5.0 UpdateID:BACKGND Group:"System | Debug | Event Pause Counters" Help:"The number of times to execute FGND_20XRTI_PERIODIC before pausing.  -1 means run forever" */
@@ -223,7 +215,7 @@ void CheckApplicationStatus(void)
         stopApplication = 1;
         ApplicationStopReason = (AppAssertBase_ + 6);
         ApplicationStopReasonBlock = (AppAssertBase_ + 6);
-      } else if (g_u4PeakHeapBytesUsed > (8192 - HeapMargin)) {
+      } else if (g_u4PeakHeapBytesUsed > (4096 - HeapMargin)) {
         stopApplication = 1;
         ApplicationStopReason = (AppAssertBase_ + 4);
         ApplicationStopReasonBlock = (AppAssertBase_ + 4);
@@ -249,7 +241,7 @@ void CheckApplicationStatus(void)
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
 
-    /* S-Function Block: <S403>/motohawk_encoder_pseudo */
+    /* S-Function Block: <S444>/motohawk_encoder_pseudo */
     {
       /* Turn off Pseudo-Encoder on Stop */
       S_EncoderResourceAttributes EncoderAttribsObj;
@@ -270,21 +262,21 @@ void CheckApplicationStatus(void)
               index), 1, SEQ_DISABLED);
           }
 
-          (&BaseEngineController_LS_DWork.s704_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s803_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 1) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_LS_DWork.s704_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s803_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 2) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_LS_DWork.s704_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s803_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         }
       }
@@ -312,6 +304,18 @@ void CheckApplicationStatus(void)
                         SEQ_DISABLED);
         }
       }
+    }
+
+    {
+      /* Turn off PWM output */
+      extern void FAN1Pin_PWM_PWMOutput_PWMOutput_Stop(void);
+      FAN1Pin_PWM_PWMOutput_PWMOutput_Stop();
+    }
+
+    {
+      /* Turn off PWM output */
+      extern void FAN2Pin_PWM_PWMOutput_PWMOutput_Stop(void);
+      FAN2Pin_PWM_PWMOutput_PWMOutput_Stop();
     }
 
     {
@@ -351,29 +355,21 @@ void CheckApplicationStatus(void)
       zeroSeen = 1;
     if (STARTUP_EVENT_RunCnt > 0)
       countingSeen = 1;
-    if (FGND_MID_TDC_EVENT_RunCnt == 0)
-      zeroSeen = 1;
-    if (FGND_MID_TDC_EVENT_RunCnt > 0)
-      countingSeen = 1;
     if (FGND_TDC1_EVENT_RunCnt == 0)
       zeroSeen = 1;
     if (FGND_TDC1_EVENT_RunCnt > 0)
-      countingSeen = 1;
-    if (FGND_5XRTI_PERIODIC_RunCnt == 0)
-      zeroSeen = 1;
-    if (FGND_5XRTI_PERIODIC_RunCnt > 0)
       countingSeen = 1;
     if (FGND_RTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
     if (FGND_RTI_PERIODIC_RunCnt > 0)
       countingSeen = 1;
-    if (FGND_2XRTI_PERIODIC_RunCnt == 0)
+    if (FGND_5XRTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;
-    if (FGND_2XRTI_PERIODIC_RunCnt > 0)
+    if (FGND_5XRTI_PERIODIC_RunCnt > 0)
       countingSeen = 1;
-    if (FGND_10XRTI_PERIODIC_RunCnt == 0)
+    if (FGND_MID_TDC_EVENT_RunCnt == 0)
       zeroSeen = 1;
-    if (FGND_10XRTI_PERIODIC_RunCnt > 0)
+    if (FGND_MID_TDC_EVENT_RunCnt > 0)
       countingSeen = 1;
     if (FGND_20XRTI_PERIODIC_RunCnt == 0)
       zeroSeen = 1;

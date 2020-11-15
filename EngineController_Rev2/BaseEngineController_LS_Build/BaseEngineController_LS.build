@@ -31,7 +31,7 @@
       <include name="libc.a" asis="true"/>
       <include name="libm.a" asis="true"/>
       <include name="${path::combine(archive.dir, 'PCM.a' )}" asis="true"/>
-      <include name="${path::combine(archive.dir, 'TPU_N_12.a' )}" asis="true"/>
+      <include name="${path::combine(archive.dir, 'TPU_GM24XeOnCnk.a' )}" asis="true"/>
       <include name="${path::combine(archive.dir, 'MPC5xxKeySuite_K10E15M6C255CK2BB1.a' )}"
                asis="true"/>
       <include name="${path::combine(archive.dir, 'MotoTronSpecific.a' )}" asis="true"/>
@@ -47,37 +47,39 @@
       <include name="FaultManager.c"/>
       <include name="Foreground.c"/>
       <include name="IOCallbacks.c"/>
-      <include name="InjectorSequenceCallback_40.c"/>
+      <include name="InjectorSequenceCallback_41.c"/>
       <include name="MotoHawk_CAN.c"/>
       <include name="MotoHawk_DataStores.c"/>
       <include name="MotoHawk_IO.c"/>
       <include name="TableLookupFunctions.c"/>
-      <include name="Trigger_BGND_BASE_PERIODIC_8709p0001.c"/>
-      <include name="Trigger_BGND_BASE_PERIODIC_9947p0001.c"/>
-      <include name="Trigger_BGND_BASEx10_PERIODIC_9949p0001.c"/>
-      <include name="Trigger_BGND_BASEx2_PERIODIC_9948p0001.c"/>
+      <include name="Trigger_BGND_BASE_PERIODIC_11727p0004.c"/>
+      <include name="Trigger_BGND_BASE_PERIODIC_9826p0004.c"/>
+      <include name="Trigger_BGND_BASEx10_PERIODIC_11729p0004.c"/>
+      <include name="Trigger_BGND_BASEx2_PERIODIC_11728p0004.c"/>
       <include name="Trigger_CAN_RX_BusCAN_1_Buf1.c"/>
       <include name="Trigger_CAN_RX_BusCAN_1_Buf14.c"/>
-      <include name="Trigger_Encoder_Fault_30.c"/>
-      <include name="Trigger_FGND_10XRTI_PERIODIC_9945p0001.c"/>
-      <include name="Trigger_FGND_20XRTI_PERIODIC_9946p0001.c"/>
-      <include name="Trigger_FGND_2XRTI_PERIODIC_9943p0001.c"/>
-      <include name="Trigger_FGND_5XRTI_PERIODIC_1089p0004.c"/>
-      <include name="Trigger_FGND_5XRTI_PERIODIC_1090p0004.c"/>
-      <include name="Trigger_FGND_5XRTI_PERIODIC_4409p0005.c"/>
-      <include name="Trigger_FGND_5XRTI_PERIODIC_7437p0006.c"/>
-      <include name="Trigger_FGND_5XRTI_PERIODIC_8449p0001.c"/>
-      <include name="Trigger_FGND_MID_TDC_EVENT_7170p0004.c"/>
-      <include name="Trigger_FGND_RTI_PERIODIC_8715p0001.c"/>
-      <include name="Trigger_FGND_RTI_PERIODIC_9944p0001.c"/>
-      <include name="Trigger_FGND_TDC1_EVENT_865p0001.c"/>
-      <include name="Trigger_FGND_TDC_EVENT_6410p0001.c"/>
-      <include name="Trigger_FGND_TDC_EVENT_7962p0001.c"/>
-      <include name="Trigger_IDLE_EVENT_9816p0001.c"/>
-      <include name="Trigger_IDLE_EVENT_9869p0001.c"/>
-      <include name="Trigger_ONE_SECOND_EVENT_9950p0001.c"/>
-      <include name="Trigger_STARTUP_EVENT_7169p0004.c"/>
-      <include name="Trigger_STARTUP_EVENT_9844p0001.c"/>
+      <include name="Trigger_Encoder_Fault_31.c"/>
+      <include name="Trigger_FGND_20XRTI_PERIODIC_11726p0004.c"/>
+      <include name="Trigger_FGND_20XRTI_PERIODIC_8446p0002.c"/>
+      <include name="Trigger_FGND_20XRTI_PERIODIC_8576p0002.c"/>
+      <include name="Trigger_FGND_5XRTI_PERIODIC_11723p0004.c"/>
+      <include name="Trigger_FGND_5XRTI_PERIODIC_1411p0001.c"/>
+      <include name="Trigger_FGND_5XRTI_PERIODIC_1412p0001.c"/>
+      <include name="Trigger_FGND_5XRTI_PERIODIC_4914p0005.c"/>
+      <include name="Trigger_FGND_5XRTI_PERIODIC_8316p0005.c"/>
+      <include name="Trigger_FGND_5XRTI_PERIODIC_9564p0004.c"/>
+      <include name="Trigger_FGND_MID_TDC_EVENT_11725p0004.c"/>
+      <include name="Trigger_FGND_MID_TDC_EVENT_8045p0005.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_11724p0004.c"/>
+      <include name="Trigger_FGND_RTI_PERIODIC_9834p0004.c"/>
+      <include name="Trigger_FGND_TDC1_EVENT_1084p0001.c"/>
+      <include name="Trigger_FGND_TDC_EVENT_7122p0001.c"/>
+      <include name="Trigger_FGND_TDC_EVENT_9056p0002.c"/>
+      <include name="Trigger_IDLE_EVENT_11649p0004.c"/>
+      <include name="Trigger_IDLE_EVENT_9p001.c"/>
+      <include name="Trigger_ONE_SECOND_EVENT_11730p0004.c"/>
+      <include name="Trigger_STARTUP_EVENT_11624p0004.c"/>
+      <include name="Trigger_STARTUP_EVENT_8044p0005.c"/>
       <include name="VarDecs.c"/>
       <include name="mh_ccp_protocol.c"/>
       <include name="mh_ccp_protocol_CCP1.c"/>
@@ -108,7 +110,7 @@
          <fileset>
             <include name="C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\ControlCoreClassic\Framework\MultiTask\Archives\gcc-powerpc-eabi\4_4_0\PCM.a"
                      asis="true"/>
-            <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0\TPU_N_12.a"
+            <include name="C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\ControlCoreClassic\Framework\MultiTask\Source\TPU\Generic\Archives\gcc-powerpc-eabi\4_4_0\TPU_GM24XeOnCnk.a"
                      asis="true"/>
             <include name="c:\program files (x86)\woodward\mcs\motohawk\2011a_sp0.184\ControlCoreClassic\MotoTronProtocol\MultiTarget\Archives\gcc-powerpc-eabi\4_4_0\MPC5xxKeySuite_K10E15M6C255CK2BB1.a"
                      asis="true"/>

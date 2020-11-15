@@ -139,20 +139,20 @@
 		<sample_rate>5</sample_rate>
 	</raster>
 	<raster number="1">
-		<channel_name>FGND_2XRTI_PERIODIC</channel_name>
-		<short_channel_name>FGND_2XRTI_PERIODIC</short_channel_name>
+		<channel_name>FGND_5XRTI_PERIODIC</channel_name>
+		<short_channel_name>FGND_5XRTI_PERIODIC</short_channel_name>
 		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
 		<cse>3</cse>
 		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
-		<sample_rate>10</sample_rate>
+		<sample_rate>25</sample_rate>
 	</raster>
 	<raster number="2">
-		<channel_name>FGND_10XRTI_PERIODIC</channel_name>
-		<short_channel_name>FGND_10XRTI_PERIODIC</short_channel_name>
+		<channel_name>FGND_MID_TDC_EVENT</channel_name>
+		<short_channel_name>FGND_MID_TDC_EVENT</short_channel_name>
 		<!-- Period definition :  basic scaling unit in CSE as defined in ASAP1b -->
-		<cse>3</cse>
+		<cse>103</cse>
 		<!-- ECU sample rate of the event channel, period definition based on the basic scaling unit -->
-		<sample_rate>50</sample_rate>
+		<sample_rate>1</sample_rate>
 	</raster>
 	<raster number="3">
 		<channel_name>FGND_20XRTI_PERIODIC</channel_name>

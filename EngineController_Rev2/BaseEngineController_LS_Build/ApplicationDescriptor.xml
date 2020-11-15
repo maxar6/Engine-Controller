@@ -3,8 +3,8 @@
 	<GUID>12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9</GUID>
 	<Name>BaseEngineController_LS</Name>
 	<Author>maxar</Author>
-	<Copyright>2019 Woodward.</Copyright>
-	<CreateDate>17-Nov-2019</CreateDate>
+	<Copyright>2020 Woodward.</Copyright>
+	<CreateDate>04-Oct-2020</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_000</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_LS_000</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_LS_000_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_016</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_LS_016</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_LS_016_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_000.dll and BaseEngineController_LS_000.srz</Description>
+			<Description>Copy BaseEngin_016.dll and BaseEngineController_LS_016.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist C:\ECUFiles\TDBDLL\\*.* copy /Y .\TDB\BaseEngin_000.dll C:\ECUFiles\TDBDLL\ &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\*.* copy /Y .\Target\BaseEngineController_LS_000.srz C:\ECUFiles\Programs &gt; NUL</Execute>
+			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_016.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_016.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -67,37 +67,39 @@
 			<File>FaultManager.c</File>
 			<File>Foreground.c</File>
 			<File>IOCallbacks.c</File>
-			<File>InjectorSequenceCallback_40.c</File>
+			<File>InjectorSequenceCallback_41.c</File>
 			<File>MotoHawk_CAN.c</File>
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_8709p0001.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_9947p0001.c</File>
-			<File>Trigger_BGND_BASEx10_PERIODIC_9949p0001.c</File>
-			<File>Trigger_BGND_BASEx2_PERIODIC_9948p0001.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_11727p0004.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_9826p0004.c</File>
+			<File>Trigger_BGND_BASEx10_PERIODIC_11729p0004.c</File>
+			<File>Trigger_BGND_BASEx2_PERIODIC_11728p0004.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf1.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf14.c</File>
-			<File>Trigger_Encoder_Fault_30.c</File>
-			<File>Trigger_FGND_10XRTI_PERIODIC_9945p0001.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_9946p0001.c</File>
-			<File>Trigger_FGND_2XRTI_PERIODIC_9943p0001.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_1089p0004.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_1090p0004.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_4409p0005.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_7437p0006.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_8449p0001.c</File>
-			<File>Trigger_FGND_MID_TDC_EVENT_7170p0004.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_8715p0001.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_9944p0001.c</File>
-			<File>Trigger_FGND_TDC1_EVENT_865p0001.c</File>
-			<File>Trigger_FGND_TDC_EVENT_6410p0001.c</File>
-			<File>Trigger_FGND_TDC_EVENT_7962p0001.c</File>
-			<File>Trigger_IDLE_EVENT_9816p0001.c</File>
-			<File>Trigger_IDLE_EVENT_9869p0001.c</File>
-			<File>Trigger_ONE_SECOND_EVENT_9950p0001.c</File>
-			<File>Trigger_STARTUP_EVENT_7169p0004.c</File>
-			<File>Trigger_STARTUP_EVENT_9844p0001.c</File>
+			<File>Trigger_Encoder_Fault_31.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_11726p0004.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_8446p0002.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_8576p0002.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_11723p0004.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_1411p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_1412p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_4914p0005.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_8316p0005.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_9564p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_11725p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_8045p0005.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_11724p0004.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_9834p0004.c</File>
+			<File>Trigger_FGND_TDC1_EVENT_1084p0001.c</File>
+			<File>Trigger_FGND_TDC_EVENT_7122p0001.c</File>
+			<File>Trigger_FGND_TDC_EVENT_9056p0002.c</File>
+			<File>Trigger_IDLE_EVENT_11649p0004.c</File>
+			<File>Trigger_IDLE_EVENT_9p001.c</File>
+			<File>Trigger_ONE_SECOND_EVENT_11730p0004.c</File>
+			<File>Trigger_STARTUP_EVENT_11624p0004.c</File>
+			<File>Trigger_STARTUP_EVENT_8044p0005.c</File>
 			<File>VarDecs.c</File>
 			<File>mh_ccp_protocol.c</File>
 			<File>mh_ccp_protocol_CCP1.c</File>
@@ -123,7 +125,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_000.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_016.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -157,5 +159,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>31cfdc5d-3e82-4d37-b6-b9-17-22-26-6a-d8</Signature>
+	<Signature>243aa792-efc5-45cd-b7-cd-07-ed-2f-91-6f</Signature>
 </Application>

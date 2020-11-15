@@ -4,23 +4,23 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        17-Nov-2019 02:35:31           ###
+###        04-Oct-2020 18:29:20           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_LS_000.srz
-MotoTune DLL:    BaseEngin_000.dll
+DEV Executable:  BaseEngineController_LS_016.srz
+MotoTune DLL:    BaseEngin_016.dll
  
 Project GUID:    12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9
-Build GUID:      7d32d825-3401-4269-82-eb-a2-2e-87-f0-54
+Build GUID:      2519c5a6-2a80-4e65-9d-0a-d0-d8-7c-0c-80
  
 ### Starting build procedure for model: BaseEngineController_LS
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build
 ### Invoking Target Language Compiler on BaseEngineController_LS.rtw
 ### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
 ### Loading TLC function libraries
-....................
+.......................
 ### Initial pass through model to cache user defined code
 ...............................................................................
 ...............................................................................
@@ -28,7 +28,8 @@ Build GUID:      7d32d825-3401-4269-82-eb-a2-2e-87-f0-54
 ...............................................................................
 ...............................................................................
 ...............................................................................
-...................................
+...............................................................................
+.....................................................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -64,7 +65,18 @@ Build GUID:      7d32d825-3401-4269-82-eb-a2-2e-87-f0-54
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...........................................
 ### Writing source file BaseEngineController_LS.c
 ### Writing header file BaseEngineController_LS_private.h
 .
@@ -97,7 +109,9 @@ Build GUID:      7d32d825-3401-4269-82-eb-a2-2e-87-f0-54
 ...............................................................................
 ...............................................................................
 ...............................................................................
-................
+...............................................................................
+...............................................................................
+....................................
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
 ### BaseEngineController_LS.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BaseEngineController_LS: .\BaseEngineController_LS.bat
@@ -151,7 +165,7 @@ compile:
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\EncoderCallback.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\FaultManager.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Foreground.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\InjectorSequenceCallback_40.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\InjectorSequenceCallback_41.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\IOCallbacks.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\mh_ccp_protocol.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\mh_ccp_protocol_CCP1.c 
@@ -163,57 +177,106 @@ compile:
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\rt_nonfinite.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\rt_zcfcn.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TableLookupFunctions.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASEx10_PERIODIC_9949p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASEx2_PERIODIC_9948p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASE_PERIODIC_8709p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASE_PERIODIC_9947p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASEx10_PERIODIC_11729p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASEx2_PERIODIC_11728p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASE_PERIODIC_11727p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_BGND_BASE_PERIODIC_9826p0004.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_CAN_RX_BusCAN_1_Buf1.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_CAN_RX_BusCAN_1_Buf14.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_Encoder_Fault_30.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_10XRTI_PERIODIC_9945p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_20XRTI_PERIODIC_9946p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_2XRTI_PERIODIC_9943p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_1089p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_1090p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_4409p0005.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_7437p0006.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_8449p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_MID_TDC_EVENT_7170p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_RTI_PERIODIC_8715p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_RTI_PERIODIC_9944p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_TDC1_EVENT_865p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_TDC_EVENT_6410p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_TDC_EVENT_7962p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_IDLE_EVENT_9816p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_IDLE_EVENT_9869p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_ONE_SECOND_EVENT_9950p0001.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_STARTUP_EVENT_7169p0004.c 
-  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_STARTUP_EVENT_9844p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_Encoder_Fault_31.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_20XRTI_PERIODIC_11726p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_20XRTI_PERIODIC_8446p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_20XRTI_PERIODIC_8576p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_11723p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_1411p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_1412p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_4914p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_8316p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_5XRTI_PERIODIC_9564p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_MID_TDC_EVENT_11725p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_MID_TDC_EVENT_8045p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_RTI_PERIODIC_11724p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_RTI_PERIODIC_9834p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_TDC1_EVENT_1084p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_TDC_EVENT_7122p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_FGND_TDC_EVENT_9056p0002.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_IDLE_EVENT_11649p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_IDLE_EVENT_9p001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_ONE_SECOND_EVENT_11730p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_STARTUP_EVENT_11624p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Trigger_STARTUP_EVENT_8044p0005.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\VarDecs.c 
   [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\TableDB.c 
  
 link: 
  
    [gcc-ld] Linking BaseEngineController_LS.elf 
-   [gcc-ld] c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabi/4_4_0/bin/../lib/gcc/powerpc-eabi/4.4.0/../../../../powerpc-eabi/bin/ld.exe: address 0x401b20 of C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Target\BaseEngineController_LS.elf section .heap is not within region INTERNAL_RAM 
-   [gcc-ld] c:/program files (x86)/woodward/developmenttools/toolchains/gcc/powerpc-eabi/4_4_0/bin/../lib/gcc/powerpc-eabi/4.4.0/../../../../powerpc-eabi/bin/ld.exe: address 0x401b20 of C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\Target\BaseEngineController_LS.elf section .heap is not within region INTERNAL_RAM 
-   [gcc-ld] collect2: ld returned 1 exit status 
  
-BUILD FAILED - 0 non-fatal error(s), 3 warning(s) 
+s-records: 
  
-C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\BaseEngineController_LS.build(166,8): 
-External Program Failed: C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabi\4_4_0\bin\gcc.exe (return code was 1) 
+[gcc-objcopy] Generating BaseEngineController_LS.run from BaseEngineController_LS.elf 
  
-Total time: 13.8 seconds. 
+BUILD SUCCEEDED 
  
-Error using ==> motocoder_codegen at 84
-Error executing build.bat
+Total time: 15.7 seconds. 
  
-######################################
-###                                ###
-###   Error Occurred During Build  ###
-###                                ###
-######################################
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x00053053 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003FC5B4], ROM[0x0005C0B0], Length[0x00000798] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F9800], ROM[0x0005C878], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Adding RAM[0x003FA8E0], ROM[0x0005C894], Length[0x000008DC] 
+Complete. 
+Writing file sr://BaseEngineController_LS.sr... 
+Encrypting 'sr://BaseEngineController_LS.sr' into 'srz://.\Target\BaseEngineController_LS_016.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:                               343139 bytes   95% of 360184
+	    BaseEngineController_LS_M:            4 bytes    0% of 360184
+	    NonVolatileDefault:                1944 bytes    1% of 360184
+	    BaseEngineController_LS_Foreground:65976 bytes   18% of 360184
+	INTERNAL_RAM:                         21951 bytes   83% of  26544
+	    BaseEngineController_LS_B:         1404 bytes    5% of  26544
+	    BaseEngineController_LS_DWork:     1056 bytes    4% of  26544
+	    BaseEngineController_LS_M_:          16 bytes    0% of  26544
+	    VolatileWork:                        39 bytes    0% of  26544
+	    NonVolatileWork:                   1944 bytes    7% of  26544
+	    FgndTimeStack:                     4096 bytes   15% of  26544
+	    BgndStack:                         2048 bytes    8% of  26544
+	    IdleStack:                         1024 bytes    4% of  26544
+	    InterruptStack:                    1280 bytes    5% of  26544
+	CAL_SPACE:                            29340 bytes   45% of  65536
+	    ConstantWork:                     29184 bytes   45% of  65536
+	EEPROM_SPACE:                          1947 bytes   24% of   8192
+
+### Copy BaseEngin_016.dll and BaseEngineController_LS_016.srz 
+### Dumping DLL to XML 
+### Generating ASAP2 file 
+### Installing ASAP2 file in c:\ecufiles\tdbdll 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 2 minutes, 55.0 seconds  (175.0 seconds)
+{Warning: Block diagram 'BaseEngineController_LS' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.  The diagram has been
+saved but may not contain what you intended.} 
+{Warning: Block diagram 'BaseEngineController_LS' contains one or more parameterized library links.  To find the parameterized links use the Model Advisor.  The diagram has
+been saved but may not behave as you intended.} 
  
-Error using ==> motohawk_make_rtw at 355
-MotoCoder Build Failed
+#############################################################################
+###
+### Target Module: ECU555-80
+### Created Development Executable: BaseEngineController_LS_016.srz
+### Created MotoTune DLL: BaseEngin_016.dll
+###
+### Successful MotoHawk Build for model: BaseEngineController_LS
+###
+#############################################################################
+ 

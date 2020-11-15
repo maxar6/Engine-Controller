@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.1767
+ * Model version                  : 1.1987
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Nov 17 02:36:28 2019
+ * C/C++ source code generated on : Sun Oct 04 18:30:28 2020
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -26,6 +26,26 @@
 
 #ifndef rtmIsFirstInitCond
 # define rtmIsFirstInitCond(rtm)       ((rtm)->Timing.firstInitCondFlag)
+#endif
+
+#ifndef UCHAR_MAX
+#include <limits.h>
+#endif
+
+#if ( UCHAR_MAX != (0xFFU) ) || ( SCHAR_MAX != (0x7F) )
+#error "Code was generated for compiler with different sized uchar/char. Consider adjusting Emulation Hardware word size settings on the Hardware Implementation pane to match your compiler word sizes as defined in the compiler's limits.h header file. Alternatively, you can select 'None' for Emulation Hardware and select the 'Enable portable word sizes' option for ERT based targets, which will disable the preprocessor word size checks."
+#endif
+
+#if ( USHRT_MAX != (0xFFFFU) ) || ( SHRT_MAX != (0x7FFF) )
+#error "Code was generated for compiler with different sized ushort/short. Consider adjusting Emulation Hardware word size settings on the Hardware Implementation pane to match your compiler word sizes as defined in the compilers limits.h header file. Alternatively, you can select 'None' for Emulation Hardware and select the 'Enable portable word sizes' option for ERT based targets, this will disable the preprocessor word size checks."
+#endif
+
+#if ( UINT_MAX != (0xFFFFFFFFU) ) || ( INT_MAX != (0x7FFFFFFF) )
+#error "Code was generated for compiler with different sized uint/int. Consider adjusting Emulation Hardware word size settings on the Hardware Implementation pane to match your compiler word sizes as defined in the compilers limits.h header file. Alternatively, you can select 'None' for Emulation Hardware and select the 'Enable portable word sizes' option for ERT based targets, this will disable the preprocessor word size checks."
+#endif
+
+#if ( ULONG_MAX != (0xFFFFFFFFU) ) || ( LONG_MAX != (0x7FFFFFFF) )
+#error "Code was generated for compiler with different sized ulong/long. Consider adjusting Emulation Hardware word size settings on the Hardware Implementation pane to match your compiler word sizes as defined in the compilers limits.h header file. Alternatively, you can select 'None' for Emulation Hardware and select the 'Enable portable word sizes' option for ERT based targets, this will disable the preprocessor word size checks."
 #endif
 
 #ifndef __RTWTYPES_H__
@@ -59,6 +79,10 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -89,15 +113,6 @@ extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -105,10 +120,6 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -128,6 +139,27 @@ extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -140,16 +172,48 @@ extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T GetFaultActionStatus(uint32_T action);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);

@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.1767
+ * Model version                  : 1.1987
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Nov 17 02:36:28 2019
+ * C/C++ source code generated on : Sun Oct 04 18:30:28 2020
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,16 +31,26 @@
 /* Child system includes */
 #include "BaseEngineController_LS_IdleStateMachine.h"
 
-/* Block signals for system '<S336>/Collect Average' */
+/* Block signals for system '<S372>/Collect Average' */
 typedef struct {
-  real_T s339_Product;                 /* '<S339>/Product' */
+  real_T s376_Product;                 /* '<S376>/Product' */
 } rtB_CollectAverage_BaseEngineController_LS;
 
-/* Block states (auto storage) for system '<S336>/Collect Average' */
+/* Block states (auto storage) for system '<S372>/Collect Average' */
 typedef struct {
-  real_T s339_UnitDelay1_DSTATE;       /* '<S339>/Unit Delay1' */
-  boolean_T s336_CollectAverage_MODE;  /* '<S336>/Collect Average' */
+  real_T s376_UnitDelay1_DSTATE;       /* '<S376>/Unit Delay1' */
+  boolean_T s372_CollectAverage_MODE;  /* '<S372>/Collect Average' */
 } rtDW_CollectAverage_BaseEngineController_LS;
+
+/* Block signals for system '<S696>/Function-Call Subsystem' */
+typedef struct {
+  boolean_T s714_InitialConditionisTrue;/* '<S714>/Initial Condition is True' */
+} rtB_FunctionCallSubsystem_BaseEngineController_LS;
+
+/* Block states (auto storage) for system '<S696>/Function-Call Subsystem' */
+typedef struct {
+  boolean_T s714_InitialConditionisTrue_DSTATE;/* '<S714>/Initial Condition is True' */
+} rtDW_FunctionCallSubsystem_BaseEngineController_LS;
 
 extern void BaseEngineController_LS_CollectAverage_Init
   (rtDW_CollectAverage_BaseEngineController_LS *localDW);
@@ -56,6 +66,11 @@ extern void BaseEngineController_LS_PassThrough1(boolean_T rtu_0, real_T rtu_1,
   real_T *rty_Out1);
 extern void BaseEngineController_LS_IfActionSubsystem(real_T rtu_0, real_T
   *rty_Out);
+extern void BaseEngineController_LS_FunctionCallSubsystem_Init
+  (rtDW_FunctionCallSubsystem_BaseEngineController_LS *localDW);
+extern void BaseEngineController_LS_FunctionCallSubsystem
+  (rtB_FunctionCallSubsystem_BaseEngineController_LS *localB,
+   rtDW_FunctionCallSubsystem_BaseEngineController_LS *localDW);
 extern void BaseEngineController_LS_Foreground_Init(void);
 extern void BaseEngineController_LS_Foreground_Enable(void);
 extern void BaseEngineController_LS_Foreground_Start(void);

@@ -10,6 +10,7 @@ OBJECTS = \
 	"BaseEngineController_LS_sfun_registry.obj"\
 	"c1_BaseEngineController_LS.obj"\
 	"c2_BaseEngineController_LS.obj"\
+	"c3_BaseEngineController_LS.obj"\
 	"c7_BaseEngineController_LS.obj"\
 	"c8_BaseEngineController_LS.obj"\
 	"c9_BaseEngineController_LS.obj"\
@@ -41,6 +42,8 @@ c1_BaseEngineController_LS.obj :	"c1_BaseEngineController_LS.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_BaseEngineController_LS.c"
 c2_BaseEngineController_LS.obj :	"c2_BaseEngineController_LS.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_BaseEngineController_LS.c"
+c3_BaseEngineController_LS.obj :	"c3_BaseEngineController_LS.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_BaseEngineController_LS.c"
 c7_BaseEngineController_LS.obj :	"c7_BaseEngineController_LS.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_BaseEngineController_LS.c"
 c8_BaseEngineController_LS.obj :	"c8_BaseEngineController_LS.c"

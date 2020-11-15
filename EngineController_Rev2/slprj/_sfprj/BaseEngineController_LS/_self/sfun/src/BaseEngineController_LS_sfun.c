@@ -3,6 +3,7 @@
 #include "BaseEngineController_LS_sfun.h"
 #include "c1_BaseEngineController_LS.h"
 #include "c2_BaseEngineController_LS.h"
+#include "c3_BaseEngineController_LS.h"
 #include "c7_BaseEngineController_LS.h"
 #include "c8_BaseEngineController_LS.h"
 #include "c9_BaseEngineController_LS.h"
@@ -43,6 +44,11 @@ unsigned int sf_BaseEngineController_LS_method_dispatcher(SimStruct
 
   if (chartFileNumber==2) {
     c2_BaseEngineController_LS_method_dispatcher(simstructPtr, method, data);
+    return 1;
+  }
+
+  if (chartFileNumber==3) {
+    c3_BaseEngineController_LS_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
@@ -109,10 +115,10 @@ unsigned int sf_BaseEngineController_LS_process_check_sum_call( int nlhs,
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2962974489U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1408593810U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1206816151U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1991586221U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3090578895U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2368636319U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(674888380U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(54628353U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
@@ -128,6 +134,13 @@ unsigned int sf_BaseEngineController_LS_process_check_sum_call( int nlhs,
         {
           extern void sf_c2_BaseEngineController_LS_get_check_sum(mxArray *plhs[]);
           sf_c2_BaseEngineController_LS_get_check_sum(plhs);
+          break;
+        }
+
+       case 3:
+        {
+          extern void sf_c3_BaseEngineController_LS_get_check_sum(mxArray *plhs[]);
+          sf_c3_BaseEngineController_LS_get_check_sum(plhs);
           break;
         }
 
@@ -191,10 +204,10 @@ unsigned int sf_BaseEngineController_LS_process_check_sum_call( int nlhs,
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1551360121U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1143857273U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3914125898U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1104154621U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3504993308U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(356830974U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(698084745U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(802608111U);
   }
 
   return 1;
@@ -240,6 +253,14 @@ unsigned int sf_BaseEngineController_LS_autoinheritance_info( int nlhs, mxArray 
         extern mxArray *sf_c2_BaseEngineController_LS_get_autoinheritance_info
           (void);
         plhs[0] = sf_c2_BaseEngineController_LS_get_autoinheritance_info();
+        break;
+      }
+
+     case 3:
+      {
+        extern mxArray *sf_c3_BaseEngineController_LS_get_autoinheritance_info
+          (void);
+        plhs[0] = sf_c3_BaseEngineController_LS_get_autoinheritance_info();
         break;
       }
 
@@ -348,6 +369,17 @@ unsigned int sf_BaseEngineController_LS_get_eml_resolved_functions_info( int
         break;
       }
 
+     case 3:
+      {
+        extern const mxArray
+          *sf_c3_BaseEngineController_LS_get_eml_resolved_functions_info(void);
+        mxArray *persistentMxArray = (mxArray *)
+          sf_c3_BaseEngineController_LS_get_eml_resolved_functions_info();
+        plhs[0] = mxDuplicateArray(persistentMxArray);
+        mxDestroyArray(persistentMxArray);
+        break;
+      }
+
      case 7:
       {
         extern const mxArray
@@ -432,7 +464,7 @@ unsigned int sf_BaseEngineController_LS_get_eml_resolved_functions_info( int
 void BaseEngineController_LS_debug_initialize(void)
 {
   _BaseEngineController_LSMachineNumber_ = sf_debug_initialize_machine(
-    "BaseEngineController_LS","sfun",0,8,0,0,0);
+    "BaseEngineController_LS","sfun",0,9,0,0,0);
   sf_debug_set_machine_event_thresholds(_BaseEngineController_LSMachineNumber_,0,
     0);
   sf_debug_set_machine_data_thresholds(_BaseEngineController_LSMachineNumber_,0);

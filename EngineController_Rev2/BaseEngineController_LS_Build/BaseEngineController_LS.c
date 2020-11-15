@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.1767
+ * Model version                  : 1.1987
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Nov 17 02:36:28 2019
+ * C/C++ source code generated on : Sun Oct 04 18:30:28 2020
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -17,7 +17,7 @@
 #include "BaseEngineController_LS.h"
 #include "BaseEngineController_LS_private.h"
 
-/* Named constants for Stateflow: '<S791>/ECUP Latch' */
+/* Named constants for Stateflow: '<S913>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -66,63 +66,77 @@ void BaseEngineController_LS_CCPDaqProcessing(int_T controlPortIdx)
 void BaseEngineController_LS_step(void)
 {
   /* S-Function (motohawk_sfun_trigger): '<S1>/motohawk_trigger1' */
-  /* Enable for Trigger_IDLE_EVENT_9816p0001 */
+  /* Enable for Trigger_IDLE_EVENT_9p001 */
   if (BaseEngineController_LS_DWork.s1_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s1_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger1' */
-  /* Enable for Trigger_FGND_RTI_PERIODIC_9944p0001 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_11724p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger1_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger' */
-  /* Enable for Trigger_FGND_2XRTI_PERIODIC_9943p0001 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_11723p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger2' */
-  /* Enable for Trigger_FGND_10XRTI_PERIODIC_9945p0001 */
+  /* Enable for Trigger_FGND_MID_TDC_EVENT_11725p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger2_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger2_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger3' */
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_9946p0001 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_11726p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger3_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger3_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger4' */
-  /* Enable for Trigger_BGND_BASE_PERIODIC_9947p0001 */
+  /* Enable for Trigger_BGND_BASE_PERIODIC_11727p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger4_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger4_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger5' */
-  /* Enable for Trigger_BGND_BASEx2_PERIODIC_9948p0001 */
+  /* Enable for Trigger_BGND_BASEx2_PERIODIC_11728p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger5_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger5_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger6' */
-  /* Enable for Trigger_BGND_BASEx10_PERIODIC_9949p0001 */
+  /* Enable for Trigger_BGND_BASEx10_PERIODIC_11729p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger6_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger6_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger7' */
-  /* Enable for Trigger_ONE_SECOND_EVENT_9950p0001 */
+  /* Enable for Trigger_ONE_SECOND_EVENT_11730p0004 */
   if (BaseEngineController_LS_DWork.s5_motohawk_trigger7_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s5_motohawk_trigger7_DWORK1 = 1;
   }
 
   /* S-Function (motohawk_sfun_trigger): '<S4>/motohawk_trigger1' */
-  /* Enable for Trigger_IDLE_EVENT_9869p0001 */
+  /* Enable for Trigger_IDLE_EVENT_11649p0004 */
   if (BaseEngineController_LS_DWork.s4_motohawk_trigger1_DWORK1 == 0) {
     BaseEngineController_LS_DWork.s4_motohawk_trigger1_DWORK1 = 1;
+  }
+
+  /* Update absolute time for base rate */
+  /* The "clockTick0" counts the number of times the code of this task has
+   * been executed. The resolution of this integer timer is 1.0E-6, which is the step size
+   * of the task. Size of "clockTick0" ensures timer will not overflow during the
+   * application lifespan selected.
+   * Timer of this task consists of two 32 bit unsigned integers.
+   * The two integers represent the low bits Timing.clockTick0 and the high bits
+   * Timing.clockTickH0. When the low bit overflows to 0, the high bits increment.
+   */
+  BaseEngineController_LS_M->Timing.clockTick0++;
+  if (!BaseEngineController_LS_M->Timing.clockTick0) {
+    BaseEngineController_LS_M->Timing.clockTickH0++;
   }
 }
 
@@ -148,11 +162,11 @@ void BaseEngineController_LS_initialize(boolean_T firstTime)
   {
     int_T i;
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s118_FPC[i] = 0.0;
+      BaseEngineController_LS_B.s135_FPC[i] = 0.0;
     }
 
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s70_Sum[i] = 0.0;
+      BaseEngineController_LS_B.s72_Sum[i] = 0.0;
     }
 
     for (i = 0; i < 8; i++) {
@@ -160,423 +174,474 @@ void BaseEngineController_LS_initialize(boolean_T firstTime)
     }
 
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s291_Defaultifnoflow[i] = 0.0;
+      BaseEngineController_LS_B.s21_Gain[i] = 0.0;
     }
 
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s307_Sum1[i] = 0.0;
+      BaseEngineController_LS_B.s325_Defaultifnoflow[i] = 0.0;
     }
 
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s306_chargemass[i] = 0.0;
+      BaseEngineController_LS_B.s342_Sum1[i] = 0.0;
     }
 
-    BaseEngineController_LS_B.s403_RPMInst = 0.0;
-    BaseEngineController_LS_B.s407_DataTypeConversion = 0.0;
-    BaseEngineController_LS_B.s460_Sum1 = 0.0;
-    BaseEngineController_LS_B.s473_Merge = 0.0;
-    BaseEngineController_LS_B.s459_Sum1 = 0.0;
-    BaseEngineController_LS_B.s664_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s674_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s662_Merge = 0.0;
-    BaseEngineController_LS_B.s672_Merge = 0.0;
-    BaseEngineController_LS_B.s684_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s694_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s682_Merge = 0.0;
-    BaseEngineController_LS_B.s692_Merge = 0.0;
-    BaseEngineController_LS_B.s374_Switch2 = 0.0;
-    BaseEngineController_LS_B.s461_Sum1 = 0.0;
-    BaseEngineController_LS_B.s481_Merge = 0.0;
-    BaseEngineController_LS_B.s368_Switch1 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o2 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o3 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o4 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o5 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o6 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o7 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o8 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o9 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage1_o10 = 0.0;
-    BaseEngineController_LS_B.s540_MathFunction1 = 0.0;
-    BaseEngineController_LS_B.s543_Sum1 = 0.0;
-    BaseEngineController_LS_B.s574_Merge = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o2 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o3 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o4 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o5 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o6 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o7 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o8 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o9 = 0.0;
-    BaseEngineController_LS_B.s540_ReadCANMessage_o10 = 0.0;
-    BaseEngineController_LS_B.s540_MathFunction = 0.0;
-    BaseEngineController_LS_B.s542_Sum1 = 0.0;
-    BaseEngineController_LS_B.s566_Merge = 0.0;
-    BaseEngineController_LS_B.s540_Gain = 0.0;
-    BaseEngineController_LS_B.s372_Sum1 = 0.0;
-    BaseEngineController_LS_B.s394_Switch = 0.0;
-    BaseEngineController_LS_B.s468_Sum1 = 0.0;
-    BaseEngineController_LS_B.s536_Merge = 0.0;
-    BaseEngineController_LS_B.s465_Merge = 0.0;
-    BaseEngineController_LS_B.s463_Sum1 = 0.0;
-    BaseEngineController_LS_B.s502_Merge = 0.0;
-    BaseEngineController_LS_B.s402_Gain1 = 0.0;
-    BaseEngineController_LS_B.s437_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s436_Merge = 0.0;
-    BaseEngineController_LS_B.s330_motohawk_delta_time = 0.0;
-    BaseEngineController_LS_B.s464_Sum1 = 0.0;
-    BaseEngineController_LS_B.s338_Sum = 0.0;
-    BaseEngineController_LS_B.s337_NominalAirFlowRate = 0.0;
-    BaseEngineController_LS_B.s337_ModelAirMassFlowRate = 0.0;
-    BaseEngineController_LS_B.s402_Gain = 0.0;
-    BaseEngineController_LS_B.s428_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s427_Merge = 0.0;
-    BaseEngineController_LS_B.s337_MultiportSwitch = 0.0;
-    BaseEngineController_LS_B.s347_Merge = 0.0;
-    BaseEngineController_LS_B.s350_Sum1 = 0.0;
-    BaseEngineController_LS_B.s348_Merge = 0.0;
-    BaseEngineController_LS_B.s353_Sum1 = 0.0;
-    BaseEngineController_LS_B.s388_Sum1 = 0.0;
-    BaseEngineController_LS_B.s408_DataTypeConversion = 0.0;
-    BaseEngineController_LS_B.s412_DataTypeConversion = 0.0;
-    BaseEngineController_LS_B.s510_Merge = 0.0;
-    BaseEngineController_LS_B.s118_SparkEnergy = 0.0;
-    BaseEngineController_LS_B.s118_SparkAdv = 0.0;
-    BaseEngineController_LS_B.s396_Switch = 0.0;
-    BaseEngineController_LS_B.s118_Throttle = 0.0;
-    BaseEngineController_LS_B.s702_ETC = 0.0;
-    BaseEngineController_LS_B.s118_IACP = 0.0;
-    BaseEngineController_LS_B.s756_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s118_IACS = 0.0;
-    BaseEngineController_LS_B.s760_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s118_SOI = 0.0;
-    BaseEngineController_LS_B.s462_Sum1 = 0.0;
-    BaseEngineController_LS_B.s494_Merge = 0.0;
-    BaseEngineController_LS_B.s62_constreftoatm = 0.0;
-    BaseEngineController_LS_B.s118_FuelMult = 0.0;
+    for (i = 0; i < 8; i++) {
+      BaseEngineController_LS_B.s341_chargemass[i] = 0.0;
+    }
+
+    BaseEngineController_LS_B.s721_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s700_Switch = 0.0;
+    BaseEngineController_LS_B.s744_MinMax = 0.0;
+    BaseEngineController_LS_B.s744_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s748_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s719_Merge = 0.0;
+    BaseEngineController_LS_B.s758_Merge = 0.0;
+    BaseEngineController_LS_B.s709_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s699_Switch = 0.0;
+    BaseEngineController_LS_B.s727_MinMax = 0.0;
+    BaseEngineController_LS_B.s727_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s731_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s707_Merge = 0.0;
+    BaseEngineController_LS_B.s741_Merge = 0.0;
+    BaseEngineController_LS_B.s408_Switch1 = 0.0;
+    BaseEngineController_LS_B.s433_Sum = 0.0;
+    BaseEngineController_LS_B.s444_RPMInst = 0.0;
+    BaseEngineController_LS_B.s448_DataTypeConversion = 0.0;
+    BaseEngineController_LS_B.s443_Gain1 = 0.0;
+    BaseEngineController_LS_B.s478_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s501_Sum1 = 0.0;
+    BaseEngineController_LS_B.s477_Merge = 0.0;
+    BaseEngineController_LS_B.s514_Merge = 0.0;
+    BaseEngineController_LS_B.s500_Sum1 = 0.0;
+    BaseEngineController_LS_B.s701_Switch = 0.0;
+    BaseEngineController_LS_B.s761_MinMax = 0.0;
+    BaseEngineController_LS_B.s761_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s765_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s702_Switch = 0.0;
+    BaseEngineController_LS_B.s778_MinMax = 0.0;
+    BaseEngineController_LS_B.s778_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s782_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s775_Merge = 0.0;
+    BaseEngineController_LS_B.s792_Merge = 0.0;
+    BaseEngineController_LS_B.s415_Switch2 = 0.0;
+    BaseEngineController_LS_B.s502_Sum1 = 0.0;
+    BaseEngineController_LS_B.s522_Merge = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o2 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o3 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o4 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o5 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o6 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o7 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o8 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o9 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage1_o10 = 0.0;
+    BaseEngineController_LS_B.s581_MathFunction1 = 0.0;
+    BaseEngineController_LS_B.s584_Sum1 = 0.0;
+    BaseEngineController_LS_B.s615_Merge = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o2 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o3 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o4 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o5 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o6 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o7 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o8 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o9 = 0.0;
+    BaseEngineController_LS_B.s581_ReadCANMessage_o10 = 0.0;
+    BaseEngineController_LS_B.s581_MathFunction = 0.0;
+    BaseEngineController_LS_B.s583_Sum1 = 0.0;
+    BaseEngineController_LS_B.s607_Merge = 0.0;
+    BaseEngineController_LS_B.s581_Gain = 0.0;
+    BaseEngineController_LS_B.s413_Sum1 = 0.0;
+    BaseEngineController_LS_B.s435_Switch = 0.0;
+    BaseEngineController_LS_B.s509_Sum1 = 0.0;
+    BaseEngineController_LS_B.s577_Merge = 0.0;
+    BaseEngineController_LS_B.s506_Merge = 0.0;
+    BaseEngineController_LS_B.s504_Sum1 = 0.0;
+    BaseEngineController_LS_B.s543_Merge = 0.0;
+    BaseEngineController_LS_B.s366_motohawk_delta_time = 0.0;
+    BaseEngineController_LS_B.s505_Sum1 = 0.0;
+    BaseEngineController_LS_B.s375_Sum = 0.0;
+    BaseEngineController_LS_B.s374_motohawk_interpolation_2d2 = 0.0;
+    BaseEngineController_LS_B.s374_Sum = 0.0;
+    BaseEngineController_LS_B.s374_NominalAirFlowRate = 0.0;
+    BaseEngineController_LS_B.s374_ModelAirMassFlowRate = 0.0;
+    BaseEngineController_LS_B.s443_Gain = 0.0;
+    BaseEngineController_LS_B.s469_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s468_Merge = 0.0;
+    BaseEngineController_LS_B.s374_MultiportSwitch = 0.0;
+    BaseEngineController_LS_B.s386_Merge = 0.0;
+    BaseEngineController_LS_B.s389_Sum1 = 0.0;
+    BaseEngineController_LS_B.s387_Merge = 0.0;
+    BaseEngineController_LS_B.s392_Sum1 = 0.0;
+    BaseEngineController_LS_B.s429_Sum1 = 0.0;
+    BaseEngineController_LS_B.s449_DataTypeConversion = 0.0;
+    BaseEngineController_LS_B.s453_DataTypeConversion = 0.0;
+    BaseEngineController_LS_B.s551_Merge = 0.0;
+    BaseEngineController_LS_B.s412_MultiportSwitch = 0.0;
+    BaseEngineController_LS_B.s135_SparkAdv = 0.0;
+    BaseEngineController_LS_B.s503_Sum1 = 0.0;
+    BaseEngineController_LS_B.s507_Sum1 = 0.0;
+    BaseEngineController_LS_B.s535_Merge = 0.0;
+    BaseEngineController_LS_B.s561_Merge = 0.0;
+    BaseEngineController_LS_B.s135_SparkEnergy = 0.0;
+    BaseEngineController_LS_B.s860_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s864_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s437_Switch = 0.0;
+    BaseEngineController_LS_B.s135_Throttle = 0.0;
+    BaseEngineController_LS_B.s801_ETC = 0.0;
+    BaseEngineController_LS_B.s135_IACP = 0.0;
+    BaseEngineController_LS_B.s878_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s135_IACS = 0.0;
+    BaseEngineController_LS_B.s882_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s135_SOI = 0.0;
+    BaseEngineController_LS_B.s64_constreftoatm = 0.0;
+    BaseEngineController_LS_B.s135_FuelMult = 0.0;
     BaseEngineController_LS_B.s21_Sum2 = 0.0;
     BaseEngineController_LS_B.s21_Sum1 = 0.0;
-    BaseEngineController_LS_B.s118_MakeUpEOI = 0.0;
-    BaseEngineController_LS_B.s118_WASTEGATE = 0.0;
-    BaseEngineController_LS_B.s787_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s392_Sum = 0.0;
-    BaseEngineController_LS_B.s372_Sum3 = 0.0;
-    BaseEngineController_LS_B.s371_Sum3 = 0.0;
-    BaseEngineController_LS_B.s466_Sum1 = 0.0;
-    BaseEngineController_LS_B.s467_Sum1 = 0.0;
-    BaseEngineController_LS_B.s520_Merge = 0.0;
-    BaseEngineController_LS_B.s528_Merge = 0.0;
-    BaseEngineController_LS_B.s712_Sum = 0.0;
-    BaseEngineController_LS_B.s713_Sum = 0.0;
-    BaseEngineController_LS_B.s715_CrankCounter = 0.0;
-    BaseEngineController_LS_B.s623_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s614_Merge = 0.0;
-    BaseEngineController_LS_B.s622_Merge = 0.0;
-    BaseEngineController_LS_B.s650_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s617_Merge = 0.0;
-    BaseEngineController_LS_B.s649_Merge = 0.0;
-    BaseEngineController_LS_B.s632_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s631_Merge = 0.0;
-    BaseEngineController_LS_B.s641_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s640_Merge = 0.0;
-    BaseEngineController_LS_B.s365_Merge = 0.0;
-    BaseEngineController_LS_B.s381_Sum2 = 0.0;
-    BaseEngineController_LS_B.s335_Timer = 0.0;
-    BaseEngineController_LS_B.s287_UnitDelay = 0.0;
-    BaseEngineController_LS_B.s128_MultiportSwitch = 0.0;
-    BaseEngineController_LS_B.s165_Switch1 = 0.0;
-    BaseEngineController_LS_B.s130_Switch1 = 0.0;
-    BaseEngineController_LS_B.s163_Sum2 = 0.0;
-    BaseEngineController_LS_B.s163_Product2 = 0.0;
-    BaseEngineController_LS_B.s164_Product = 0.0;
-    BaseEngineController_LS_B.s154_Switch = 0.0;
-    BaseEngineController_LS_B.s130_Sum3 = 0.0;
-    BaseEngineController_LS_B.s132_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s132_MinMax = 0.0;
-    BaseEngineController_LS_B.s275_Add = 0.0;
+    BaseEngineController_LS_B.s135_MakeUpEOI = 0.0;
+    BaseEngineController_LS_B.s135_WASTEGATE = 0.0;
+    BaseEngineController_LS_B.s909_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s413_Sum3 = 0.0;
+    BaseEngineController_LS_B.s411_Sum3 = 0.0;
+    BaseEngineController_LS_B.s508_Sum1 = 0.0;
+    BaseEngineController_LS_B.s569_Merge = 0.0;
+    BaseEngineController_LS_B.s824_Sum = 0.0;
+    BaseEngineController_LS_B.s825_Sum = 0.0;
+    BaseEngineController_LS_B.s827_CrankCounter = 0.0;
+    BaseEngineController_LS_B.s673_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s656_Merge = 0.0;
+    BaseEngineController_LS_B.s672_Merge = 0.0;
+    BaseEngineController_LS_B.s691_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s658_Merge = 0.0;
+    BaseEngineController_LS_B.s690_Merge = 0.0;
+    BaseEngineController_LS_B.s682_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s681_Merge = 0.0;
+    BaseEngineController_LS_B.s664_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s663_Merge = 0.0;
+    BaseEngineController_LS_B.s405_Merge = 0.0;
+    BaseEngineController_LS_B.s422_Sum2 = 0.0;
+    BaseEngineController_LS_B.s371_Timer = 0.0;
+    BaseEngineController_LS_B.s319_UnitDelay = 0.0;
+    BaseEngineController_LS_B.s309_Product1 = 0.0;
+    BaseEngineController_LS_B.s309_Switch = 0.0;
+    BaseEngineController_LS_B.s320_etc = 0.0;
+    BaseEngineController_LS_B.s145_MultiportSwitch = 0.0;
+    BaseEngineController_LS_B.s186_Switch1 = 0.0;
+    BaseEngineController_LS_B.s147_Switch1 = 0.0;
+    BaseEngineController_LS_B.s184_Sum2 = 0.0;
+    BaseEngineController_LS_B.s184_Product2 = 0.0;
+    BaseEngineController_LS_B.s185_Product = 0.0;
+    BaseEngineController_LS_B.s175_Switch = 0.0;
+    BaseEngineController_LS_B.s147_motohawk_interpolation_2d = 0.0;
+    BaseEngineController_LS_B.s147_Sum3 = 0.0;
+    BaseEngineController_LS_B.s149_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s149_MinMax = 0.0;
+    BaseEngineController_LS_B.s303_Add = 0.0;
+    BaseEngineController_LS_B.s300_Product = 0.0;
+    BaseEngineController_LS_B.s299_Product = 0.0;
+    BaseEngineController_LS_B.s155_ApplyOffsetstoBaseSparkAdvance1 = 0.0;
+    BaseEngineController_LS_B.s306_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s301_Switch = 0.0;
+    BaseEngineController_LS_B.s155_motohawk_interpolation_2d1 = 0.0;
+    BaseEngineController_LS_B.s152_Sum = 0.0;
+    BaseEngineController_LS_B.s230_DontallowsetpointtoevergoabovetheTargetRPM =
+      0.0;
+    BaseEngineController_LS_B.s239_Sum2 = 0.0;
+    BaseEngineController_LS_B.s239_Product2 = 0.0;
+    BaseEngineController_LS_B.s240_Product = 0.0;
+    BaseEngineController_LS_B.s241_Switch1 = 0.0;
+    BaseEngineController_LS_B.s232_Switch = 0.0;
+    BaseEngineController_LS_B.s228_Sum = 0.0;
+    BaseEngineController_LS_B.s261_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s251_DontallowsetpointtoeverdropbelowtheTargetRPM =
+      0.0;
+    BaseEngineController_LS_B.s277_Sum2 = 0.0;
+    BaseEngineController_LS_B.s277_Product2 = 0.0;
+    BaseEngineController_LS_B.s278_Product = 0.0;
+    BaseEngineController_LS_B.s279_Switch1 = 0.0;
+    BaseEngineController_LS_B.s153_MinGovAirPID = 0.0;
+    BaseEngineController_LS_B.s272_Sum1 = 0.0;
     BaseEngineController_LS_B.s272_Product = 0.0;
-    BaseEngineController_LS_B.s138_ApplyOffsetstoBaseSparkAdvance1 = 0.0;
-    BaseEngineController_LS_B.s278_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s273_Switch = 0.0;
-    BaseEngineController_LS_B.s138_motohawk_interpolation_2d1 = 0.0;
-    BaseEngineController_LS_B.s135_Sum = 0.0;
-    BaseEngineController_LS_B.s203_DontallowsetpointtoevergoabovetheTargetRPM =
+    BaseEngineController_LS_B.s273_Product = 0.0;
+    BaseEngineController_LS_B.s153_IdleSpk = 0.0;
+    BaseEngineController_LS_B.s269_Switch = 0.0;
+    BaseEngineController_LS_B.s254_DontallowsetpointtoeverdropbelowtheTargetRPM =
       0.0;
-    BaseEngineController_LS_B.s212_Sum2 = 0.0;
-    BaseEngineController_LS_B.s212_Product2 = 0.0;
-    BaseEngineController_LS_B.s213_Product = 0.0;
-    BaseEngineController_LS_B.s214_Switch1 = 0.0;
-    BaseEngineController_LS_B.s205_Switch = 0.0;
-    BaseEngineController_LS_B.s201_Sum = 0.0;
-    BaseEngineController_LS_B.s234_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s224_DontallowsetpointtoeverdropbelowtheTargetRPM =
-      0.0;
-    BaseEngineController_LS_B.s250_Sum2 = 0.0;
-    BaseEngineController_LS_B.s250_Product2 = 0.0;
-    BaseEngineController_LS_B.s251_Product = 0.0;
-    BaseEngineController_LS_B.s252_Switch1 = 0.0;
-    BaseEngineController_LS_B.s136_MinGovAirPID = 0.0;
-    BaseEngineController_LS_B.s245_Sum1 = 0.0;
-    BaseEngineController_LS_B.s245_Product = 0.0;
-    BaseEngineController_LS_B.s246_Product = 0.0;
-    BaseEngineController_LS_B.s136_IdleSpk = 0.0;
-    BaseEngineController_LS_B.s242_Switch = 0.0;
-    BaseEngineController_LS_B.s227_DontallowsetpointtoeverdropbelowtheTargetRPM =
-      0.0;
-    BaseEngineController_LS_B.s137_O2FuelMult = 0.0;
-    BaseEngineController_LS_B.s257_Switch = 0.0;
-    BaseEngineController_LS_B.s263_Sum2 = 0.0;
-    BaseEngineController_LS_B.s263_Product2 = 0.0;
-    BaseEngineController_LS_B.s265_Switch1 = 0.0;
-    BaseEngineController_LS_B.s264_Product = 0.0;
-    BaseEngineController_LS_B.s261_Switch3 = 0.0;
-    BaseEngineController_LS_B.s261_Switch1 = 0.0;
-    BaseEngineController_LS_B.s261_Switch4 = 0.0;
-    BaseEngineController_LS_B.s184_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s182_FuelFlowMassAirflowEquivalenceRatioAirtofuelRatio
+    BaseEngineController_LS_B.s154_O2FuelMult = 0.0;
+    BaseEngineController_LS_B.s284_Switch = 0.0;
+    BaseEngineController_LS_B.s290_Sum2 = 0.0;
+    BaseEngineController_LS_B.s290_Product2 = 0.0;
+    BaseEngineController_LS_B.s292_Switch1 = 0.0;
+    BaseEngineController_LS_B.s291_Product = 0.0;
+    BaseEngineController_LS_B.s288_Switch3 = 0.0;
+    BaseEngineController_LS_B.s288_Switch1 = 0.0;
+    BaseEngineController_LS_B.s288_Switch4 = 0.0;
+    BaseEngineController_LS_B.s210_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s208_FuelFlowMassAirflowEquivalenceRatioAirtofuelRatio
       = 0.0;
-    BaseEngineController_LS_B.s179_PerCylinderMassFlowRate = 0.0;
-    BaseEngineController_LS_B.s179_ApplyMultipliersforO2KnockControlandEnrichment1
+    BaseEngineController_LS_B.s205_PerCylinderMassFlowRate = 0.0;
+    BaseEngineController_LS_B.s205_ApplyMultipliersforO2KnockControlandEnrichment1
       = 0.0;
-    BaseEngineController_LS_B.s200_MinMax1 = 0.0;
-    BaseEngineController_LS_B.s193_chargemass = 0.0;
-    BaseEngineController_LS_B.s192_Sum1 = 0.0;
-    BaseEngineController_LS_B.s185_Sum1 = 0.0;
-    BaseEngineController_LS_B.s191_Sum1 = 0.0;
-    BaseEngineController_LS_B.s185_Sum = 0.0;
-    BaseEngineController_LS_B.s185_Product1 = 0.0;
-    BaseEngineController_LS_B.s188_motohawk_interpolation_1d = 0.0;
-    BaseEngineController_LS_B.s170_EquivOut = 0.0;
-    BaseEngineController_LS_B.s170_SparkOut = 0.0;
-    BaseEngineController_LS_B.s129_DesEquivRatio = 0.0;
-    BaseEngineController_LS_B.s113_Sum = 0.0;
+    BaseEngineController_LS_B.s227_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s220_chargemass = 0.0;
+    BaseEngineController_LS_B.s219_Sum1 = 0.0;
+    BaseEngineController_LS_B.s211_Sum1 = 0.0;
+    BaseEngineController_LS_B.s218_Sum1 = 0.0;
+    BaseEngineController_LS_B.s211_Sum = 0.0;
+    BaseEngineController_LS_B.s211_Product1 = 0.0;
+    BaseEngineController_LS_B.s217_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s214_motohawk_interpolation_1d = 0.0;
+    BaseEngineController_LS_B.s191_EquivOut = 0.0;
+    BaseEngineController_LS_B.s191_SparkOut = 0.0;
+    BaseEngineController_LS_B.s146_DesEquivRatio = 0.0;
+    BaseEngineController_LS_B.s130_Sum = 0.0;
     BaseEngineController_LS_B.s23_Sum = 0.0;
-    BaseEngineController_LS_B.s98_UnitDelay2 = 0.0;
-    BaseEngineController_LS_B.s108_Switch1 = 0.0;
-    BaseEngineController_LS_B.s61_Switch = 0.0;
-    BaseEngineController_LS_B.s30_MultiportSwitch = 0.0;
-    BaseEngineController_LS_B.s40_Product = 0.0;
-    BaseEngineController_LS_B.s39_Switch2 = 0.0;
-    BaseEngineController_LS_B.s44_Product = 0.0;
-    BaseEngineController_LS_B.s36_Sum2 = 0.0;
-    BaseEngineController_LS_B.s45_Product = 0.0;
-    BaseEngineController_LS_B.s36_Product2 = 0.0;
-    BaseEngineController_LS_B.s46_Switch1 = 0.0;
-    BaseEngineController_LS_B.s49_MinMax1 = 0.0;
+    BaseEngineController_LS_B.s102_UnitDelay2 = 0.0;
+    BaseEngineController_LS_B.s121_Switch1 = 0.0;
+    BaseEngineController_LS_B.s63_Switch = 0.0;
+    BaseEngineController_LS_B.s31_MultiportSwitch = 0.0;
+    BaseEngineController_LS_B.s42_Product = 0.0;
+    BaseEngineController_LS_B.s41_Switch2 = 0.0;
+    BaseEngineController_LS_B.s46_Product = 0.0;
+    BaseEngineController_LS_B.s38_Sum2 = 0.0;
+    BaseEngineController_LS_B.s47_Product = 0.0;
+    BaseEngineController_LS_B.s38_Product2 = 0.0;
+    BaseEngineController_LS_B.s48_Switch1 = 0.0;
+    BaseEngineController_LS_B.s51_MinMax1 = 0.0;
     BaseEngineController_LS_B.s20_Switch = 0.0;
-    BaseEngineController_LS_B.s50_In1 = 0.0;
-    BaseEngineController_LS_B.s26_TestTime = 0.0;
-    BaseEngineController_LS_B.s807_Switch = 0.0;
-    BaseEngineController_LS_B.s367_CollectAverage.s339_Product = 0.0;
-    BaseEngineController_LS_B.s366_CollectAverage.s339_Product = 0.0;
-    BaseEngineController_LS_B.s336_CollectAverage.s339_Product = 0.0;
+    BaseEngineController_LS_B.s52_In1 = 0.0;
+    BaseEngineController_LS_B.s27_TestTime = 0.0;
+    BaseEngineController_LS_B.s929_Switch = 0.0;
+    BaseEngineController_LS_B.s407_CollectAverage.s376_Product = 0.0;
+    BaseEngineController_LS_B.s406_CollectAverage.s376_Product = 0.0;
+    BaseEngineController_LS_B.s372_CollectAverage.s376_Product = 0.0;
   }
 
   /* states (dwork) */
   (void) memset((void *)&BaseEngineController_LS_DWork, 0,
                 sizeof(D_Work_BaseEngineController_LS));
-  BaseEngineController_LS_DWork.s460_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s474_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s459_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s654_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s665_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s655_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s675_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s656_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s685_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s657_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s697_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s722_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s754_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s747_UnitDelay1_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s695_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s486_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s461_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s485_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s483_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s483_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s483_UnitDelay2_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s372_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s543_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s575_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s542_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s567_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s468_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s537_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s463_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s503_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s411_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s438_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s464_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s338_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s410_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s710_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s737_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s730_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s452_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s479_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s501_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s515_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s500_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s771_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s764_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s788_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s781_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s527_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s502_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s526_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s524_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s524_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s524_UnitDelay2_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s413_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s584_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s616_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s583_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s608_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s509_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s578_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s504_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s544_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s505_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s375_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s451_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s470_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s386_UnitDelay2_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s389_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s387_UnitDelay2_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s392_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s427_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s429_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s347_UnitDelay2_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s350_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s348_UnitDelay2_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s353_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s386_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s388_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s511_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s72_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s552_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s503_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s536_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s507_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s562_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s74_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s73_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s71_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s70_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s69_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s68_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s67_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s66_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s65_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s64_UnitDelay_DSTATE = 0.0;
 
   {
     int_T i;
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_DWork.s70_UnitDelay_DSTATE[i] = 0.0;
+      BaseEngineController_LS_DWork.s72_UnitDelay_DSTATE[i] = 0.0;
     }
   }
 
-  BaseEngineController_LS_DWork.s462_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s495_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s372_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s466_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s521_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s467_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s529_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s347_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s347_UnitDelay3_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s347_UnitDelay4_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s348_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s348_UnitDelay3_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s348_UnitDelay4_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s712_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s713_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s715_CrankCounter_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s614_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s624_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s617_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s651_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s615_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s633_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s616_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s642_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s413_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s508_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s570_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s386_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s386_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s386_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s387_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s387_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s387_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s734_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s734_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s734_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s734_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s751_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s751_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s751_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s751_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s768_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s768_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s768_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s768_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s785_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s785_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s785_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s785_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s824_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s825_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s827_CrankCounter_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s656_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s674_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s658_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s692_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s657_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s683_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s655_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s665_UnitDelay_DSTATE = 0.0;
 
   {
     int_T i;
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_DWork.s307_UnitDelay_DSTATE[i] = 0.0;
+      BaseEngineController_LS_DWork.s342_UnitDelay_DSTATE[i] = 0.0;
     }
   }
 
-  BaseEngineController_LS_DWork.s365_UnitDelay2_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s378_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s381_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s365_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s365_UnitDelay3_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s365_UnitDelay4_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s287_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s130_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s165_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s155_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s164_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s273_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s203_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s213_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s214_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s239_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s405_UnitDelay2_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s419_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s422_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s405_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s405_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s405_UnitDelay4_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s319_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s147_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s186_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s176_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s185_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s301_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s230_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s240_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s241_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s136_UnitDelay3_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s136_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s220_state_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s136_UnitDelay2_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s224_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s266_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s268_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s153_UnitDelay3_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s153_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s247_state_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s153_UnitDelay2_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s251_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s252_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s246_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s227_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s265_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s264_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s261_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s261_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s261_UnitDelay2_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s192_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s191_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s113_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s98_UnitDelay2_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s278_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s279_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s273_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s254_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s292_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s291_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s288_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s288_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s288_UnitDelay2_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s219_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s218_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s130_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s102_UnitDelay2_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s20_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s53_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s44_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s40_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s42_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s45_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s55_UnitDelay_DSTATE = 0.0;
   BaseEngineController_LS_DWork.s46_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s797_UnitDelay_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s797_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s335_TOld = 0.0;
-  BaseEngineController_LS_DWork.s170_count = 0.0;
-  BaseEngineController_LS_DWork.s170_EquivStart = 0.0;
-  BaseEngineController_LS_DWork.s26_TimerOld = 0.0;
-  BaseEngineController_LS_DWork.s367_CollectAverage.s339_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s366_CollectAverage.s339_UnitDelay1_DSTATE = 0.0;
-  BaseEngineController_LS_DWork.s336_CollectAverage.s339_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s42_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s44_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s47_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s48_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s919_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s919_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s371_TOld = 0.0;
+  BaseEngineController_LS_DWork.s191_count = 0.0;
+  BaseEngineController_LS_DWork.s191_EquivStart = 0.0;
+  BaseEngineController_LS_DWork.s27_TimerOld = 0.0;
+  BaseEngineController_LS_DWork.s407_CollectAverage.s376_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s406_CollectAverage.s376_UnitDelay1_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s372_CollectAverage.s376_UnitDelay1_DSTATE = 0.0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<Root>/motohawk_trigger' */
   BaseEngineController_LS_Foreground_Start();
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S1>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_9816p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_9p001 */
   BaseEngineController_LS_DWork.s1_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_9944p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_RTI_PERIODIC_11724p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_2XRTI_PERIODIC_9943p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_11723p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger2' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_10XRTI_PERIODIC_9945p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_MID_TDC_EVENT_11725p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger2_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger3' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_9946p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_11726p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger3_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger4' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASE_PERIODIC_9947p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASE_PERIODIC_11727p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger4_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger5' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx2_PERIODIC_9948p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx2_PERIODIC_11728p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger5_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger6' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx10_PERIODIC_9949p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_BGND_BASEx10_PERIODIC_11729p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger6_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S5>/motohawk_trigger7' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_ONE_SECOND_EVENT_9950p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_ONE_SECOND_EVENT_11730p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger7_DWORK1 = 0;
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S4>/motohawk_trigger1' */
 
-  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_9869p0001 */
+  /* Clear enable/disable state for embedded trigger Trigger_IDLE_EVENT_11649p0004 */
   BaseEngineController_LS_DWork.s4_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for function-call system: '<S3>/Main Power Relay' */
 
-  /* Start for Triggered SubSystem: '<S793>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S801>/Function-Call Generator'
-   *  Start for SubSystem: '<S791>/motohawk_restore_nvmem'
+  /* Start for Triggered SubSystem: '<S915>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S923>/Function-Call Generator'
+   *  Start for SubSystem: '<S913>/motohawk_restore_nvmem'
    */
 
-  /* Start for Triggered SubSystem: '<S794>/Clear' incorporates:
-   *  Start for S-Function (fcncallgen): '<S802>/Function-Call Generator'
-   *  Start for SubSystem: '<S791>/motohawk_store_nvmem'
+  /* Start for Triggered SubSystem: '<S916>/Clear' incorporates:
+   *  Start for S-Function (fcncallgen): '<S924>/Function-Call Generator'
+   *  Start for SubSystem: '<S913>/motohawk_store_nvmem'
    */
   BaseEngineController_LS_PrevZCSigState.HitCrossing1_Input_ZCE =
     UNINITIALIZED_ZCSIG;
@@ -606,7 +671,7 @@ void BaseEngineController_LS_initialize(boolean_T firstTime)
 
   /* Initial conditions for function-call system: '<S3>/Main Power Relay' */
 
-  /* S-Function Block: <S807>/motohawk_delta_time */
+  /* S-Function Block: <S929>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -614,19 +679,19 @@ void BaseEngineController_LS_initialize(boolean_T firstTime)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s807_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s929_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* InitializeConditions for Stateflow: '<S791>/ECUP Latch' */
+  /* InitializeConditions for Stateflow: '<S913>/ECUP Latch' */
 
   /* Entry: Main Power Relay/Main Power Relay/ECUP Latch */
-  /* Transition: '<S795>:3' */
-  BaseEngineController_LS_DWork.s795_is_c8_BaseEngineController_LS =
+  /* Transition: '<S917>:3' */
+  BaseEngineController_LS_DWork.s917_is_c8_BaseEngineController_LS =
     BaseEngineController_LS_IN_PowerDown;
 
-  /* Entry 'PowerDown': '<S795>:1' */
-  BaseEngineController_LS_B.s795_MPRDState = FALSE;
+  /* Entry 'PowerDown': '<S917>:1' */
+  BaseEngineController_LS_B.s917_MPRDState = FALSE;
 
   /* set "at time zero" to false */
   if (rtmIsFirstInitCond(BaseEngineController_LS_M)) {
@@ -635,52 +700,52 @@ void BaseEngineController_LS_initialize(boolean_T firstTime)
 
   /* Level2 S-Function Block: '<S1>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_IDLE_EVENT_9816p0001 */
+  /* Enable for Trigger_IDLE_EVENT_9p001 */
   BaseEngineController_LS_DWork.s1_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_RTI_PERIODIC_9944p0001 */
+  /* Enable for Trigger_FGND_RTI_PERIODIC_11724p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_2XRTI_PERIODIC_9943p0001 */
+  /* Enable for Trigger_FGND_5XRTI_PERIODIC_11723p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger2' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_10XRTI_PERIODIC_9945p0001 */
+  /* Enable for Trigger_FGND_MID_TDC_EVENT_11725p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger2_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger3' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_FGND_20XRTI_PERIODIC_9946p0001 */
+  /* Enable for Trigger_FGND_20XRTI_PERIODIC_11726p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger3_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger4' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASE_PERIODIC_9947p0001 */
+  /* Enable for Trigger_BGND_BASE_PERIODIC_11727p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger4_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger5' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASEx2_PERIODIC_9948p0001 */
+  /* Enable for Trigger_BGND_BASEx2_PERIODIC_11728p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger5_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger6' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_BGND_BASEx10_PERIODIC_9949p0001 */
+  /* Enable for Trigger_BGND_BASEx10_PERIODIC_11729p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger6_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S5>/motohawk_trigger7' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_ONE_SECOND_EVENT_9950p0001 */
+  /* Enable for Trigger_ONE_SECOND_EVENT_11730p0004 */
   BaseEngineController_LS_DWork.s5_motohawk_trigger7_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S4>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
-  /* Enable for Trigger_IDLE_EVENT_9869p0001 */
+  /* Enable for Trigger_IDLE_EVENT_11649p0004 */
   BaseEngineController_LS_DWork.s4_motohawk_trigger1_DWORK1 = 1;
 }
 

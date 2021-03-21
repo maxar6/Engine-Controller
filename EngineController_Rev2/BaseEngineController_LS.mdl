@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1989"
+    ComputedModelVersion    "1.1999"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,33 +26,33 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildGUID;MotoHawkBuildInfo;RegisteredStructs"
-  MotoHawkBuildVersion	  "017"
+  MotoHawkBuildVersion	  "019"
   MotoHawkBuildStats	  "struct('TotalFLASH',{373552},'TotalEEPROM',{1254},'TotalRAM',{26040},'AppFLASH',{154160},'AppE"
-  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{30},'BuildErrorCount',{70},'OSRAM',{4962},'Stack"
+  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{32},'BuildErrorCount',{70},'OSRAM',{4962},'Stack"
   "RAM',{9216},'FgndTimeStackSize',{4096},'FgndAngleStackSize',{1024},'BgndStackSize',{2048},'IdleStackSize',{1024},'In"
   "terruptStackSize',{1024},'RTWBlockIOSize',{2192},'RTWDWorkSize',{1776},'RTWPrevZCSize',{0},'VolatileSize',{1668},'No"
   "nVolatileSize',{1080},'ConstantSize',{18616},'NonVolatileFormatID',{32179})"
   MotoHawkModelSavedName  "BaseEngineController_LS"
   MotoHawkModelGUID	  "12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9"
-  MotoHawkModelOpenTime	  "2020 10 1 19 36 6.593 "
-  MotoHawkModelElapsedTime "-3937352000.976"
-  MotoHawkBuildGUID	  "2519c5a6-2a80-4e65-9d-0a-d0-d8-7c-0c-80"
+  MotoHawkModelOpenTime	  "2021 3 17 13 13 45.156 "
+  MotoHawkModelElapsedTime "-3936329007.179"
+  MotoHawkBuildGUID	  "55c15614-0a27-41ba-a6-1a-66-6b-95-0f-55"
   MotoHawkBuildInfo	  "struct('model_name',{'BaseEngineController_LS'},'motohawk_version',{'2011a_sp0.184'},'motohawk_"
-  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'016'},'module_type',{'ECU555-80'},'layout"
+  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'018'},'module_type',{'ECU555-80'},'layout"
   "_type',{'DEV'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolc"
   "hain_version',{'4.4.0'},'component',{0},'archive_file',{'PCM.a'},'enable_build',{1},'fptype',{0},'flash_size',{36864"
   "0},'ee_size',{8192},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_8KEE_Dev'},'eri_t"
   "able0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5}"
   ",'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Fischers-Bullshit\\EngineControl"
   "ler_Rev2'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Fischers-Bullshit\\EngineController_Rev2\\BaseEngineCo"
-  "ntroller_LS_Build'},'dll_name',{'BaseEngin_016'},'srz_name',{'BaseEngineController_LS_016'},'fgnd_stack_size',{4096}"
+  "ntroller_LS_Build'},'dll_name',{'BaseEngin_018'},'srz_name',{'BaseEngineController_LS_018'},'fgnd_stack_size',{4096}"
   ",'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1280},'heap_size',{"
   "4096},'heap_margin',{409},'install_dll_dir',{'c:\\ecufiles\\tdbdll'},'install_srz_dir',{'C:\\ECUFiles\\Programs\\'},"
   "'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\G"
   "CC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\"
   "Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'E:\\MATLAB"
-  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'2519c5a6-2a80-4e65-9d-0a-d0-d8-7c-"
-  "0c-80'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'55c15614-0a27-41ba-a6-1a-66-6b-95-"
+  "0f-55'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
   RegisteredStructs	  "struct('Name',{'FreezeFrame','FreezeFrames'},'Data',{struct('Name',{int32(0)},'Code',{int32(0)}"
   ",'Var1',{int32(0)},'Var2',{int32(0)},'Var3',{int32(0)},'Var4',{int32(0)},'Var5',{int32(0)},'Var6',{int32(0)},'Var7',"
   "{int32(0)},'Var8',{int32(0)},'Var9',{int32(0)},'Var10',{int32(0)}),struct('Name',{int32(0)},'Code',{int32(0)},'Var1'"
@@ -84,9 +84,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Oct 06 21:47:28 2020"
-  RTWModifiedTimeStamp	  523735635
-  ModelVersionFormat	  "1.%<AutoIncrement:1989>"
+  LastModifiedDate	  "Sat Mar 20 17:51:40 2021"
+  RTWModifiedTimeStamp	  537894618
+  ModelVersionFormat	  "1.%<AutoIncrement:1999>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2133,7 +2133,7 @@ Model {
   }
   System {
     Name		    "BaseEngineController_LS"
-    Location		    [-1576, 75, 60, 1019]
+    Location		    [344, 75, 1980, 1019]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    342
@@ -2147,7 +2147,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "90"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1458"
+    SIDHighWatermark	    "1460"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -2505,7 +2505,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "144"
-	    SIDHighWatermark	    "6046"
+	    SIDHighWatermark	    "6058"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Sensors"
@@ -5038,8 +5038,8 @@ Model {
 		    Frame		    "on"
 		    DisplayStringWithTags   "Model Info:\nAuthor: Suhre, Poorman\n%<Created>\n%<ModifiedDate>\nVersion: %<ModelVersi"
 		    "on>\nMotoTron Confidential\nand Propietary\n"
-		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nSun Oct 04 18:31:55 202"
-		    "0\\nVersion: 1.1988\\nMotoTron Confidential\\nand Propietary\\n"
+		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nSat Mar 20 17:46:12 202"
+		    "1\\nVersion: 1.1998\\nMotoTron Confidential\\nand Propietary\\n"
 		    HorizontalTextAlignment "Center"
 		    LeftAlignmentValue	    "0.5"
 		    SourceBlockDiagram	    "BaseEngineController_LS"
@@ -23309,7 +23309,7 @@ Model {
 		  MaskIconUnits		  "autoscale"
 		  System {
 		    Name		    "Crank"
-		    Location		    [202, 75, 1901, 1019]
+		    Location		    [344, 83, 1963, 1027]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -23321,7 +23321,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "67"
+		    ZoomFactor		    "103"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inputs"
@@ -24463,25 +24463,25 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Constant
+		    Name		    "Mult1"
+		    SID			    "914:6054"
+		    Position		    [465, 1175, 495, 1205]
+		    Value		    "0"
+		    OutDataTypeStr	    "double"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Mult2"
+		    SID			    "914:6055"
+		    Position		    [465, 1255, 495, 1285]
+		    Value		    "0"
+		    OutDataTypeStr	    "double"
+		    }
+		    Block {
+		    BlockType		    Constant
 		    Name		    "OFF"
 		    SID			    "914:2848"
 		    Position		    [465, 1095, 495, 1125]
-		    Value		    "0"
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "OFF1"
-		    SID			    "914:3057"
-		    Position		    [465, 1175, 495, 1205]
-		    Value		    "0"
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "OFF2"
-		    SID			    "914:3059"
-		    Position		    [465, 1255, 495, 1285]
 		    Value		    "0"
 		    OutDataTypeStr	    "boolean"
 		    }
@@ -24545,7 +24545,7 @@ Model {
 		    Block {
 		    BlockType		    ZeroOrderHold
 		    Name		    "Zero-Order\nHold12"
-		    SID			    "914:3058"
+		    SID			    "914:6052"
 		    Position		    [840, 1171, 875, 1209]
 		    ShowName		    off
 		    SampleTime		    "-1"
@@ -24559,7 +24559,7 @@ Model {
 		    Block {
 		    BlockType		    ZeroOrderHold
 		    Name		    "Zero-Order\nHold13"
-		    SID			    "914:3060"
+		    SID			    "914:6053"
 		    Position		    [840, 1251, 875, 1289]
 		    ShowName		    off
 		    SampleTime		    "-1"
@@ -25391,7 +25391,7 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "OFF1"
+		    SrcBlock		    "Mult1"
 		    SrcPort		    1
 		    DstBlock		    "Zero-Order\nHold12"
 		    DstPort		    1
@@ -25405,7 +25405,7 @@ Model {
 		    DstPort		    12
 		    }
 		    Line {
-		    SrcBlock		    "OFF2"
+		    SrcBlock		    "Mult2"
 		    SrcPort		    1
 		    DstBlock		    "Zero-Order\nHold13"
 		    DstPort		    1
@@ -25508,7 +25508,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "106"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Stall"
@@ -37374,36 +37374,6 @@ Model {
 		    }
 		    }
 		    Block {
-		    BlockType		    DataTypeConversion
-		    Name		    "Data Type Conversion"
-		    SID			    "914:3462"
-		    Position		    [1220, 1088, 1265, 1122]
-		    OutDataTypeStr	    "boolean"
-		    RndMeth		    "Floor"
-		    SaturateOnIntegerOverflow off
-		    Port {
-		    PortNumber		    1
-		    Name		    "FAN-2"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    DataTypeConversion
-		    Name		    "Data Type Conversion1"
-		    SID			    "914:3463"
-		    Position		    [1220, 1013, 1265, 1047]
-		    OutDataTypeStr	    "boolean"
-		    RndMeth		    "Floor"
-		    SaturateOnIntegerOverflow off
-		    Port {
-		    PortNumber		    1
-		    Name		    "FAN-1"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
 		    BlockType		    Demux
 		    Name		    "Demux"
 		    SID			    "914:4108"
@@ -39796,7 +39766,7 @@ Model {
 		    System {
 		    Name		    "Fuel Calculation"
 		    Location		    [202, 83, 1918, 1027]
-		    Open		    off
+		    Open		    on
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
 		    ScreenColor		    "white"
@@ -40552,7 +40522,7 @@ Model {
 		    BlockType		    Constant
 		    Name		    "Constant1"
 		    SID			    "914:4174"
-		    Position		    [440, 595, 470, 625]
+		    Position		    [475, 595, 505, 625]
 		    ShowName		    off
 		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
 		    }
@@ -40648,10 +40618,35 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "CompareTo1"
+		    SID			    "914:6058"
+		    Ports		    [1, 1]
+		    Position		    [895, 210, 955, 230]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    ShowName		    off
+		    LibraryVersion	    "1.490"
+		    SourceBlock		    "motohawk_control_primitives_lib/CompareTo"
+		    SourceType		    "Equals"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    op			    "~="
+		    val			    "1"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "CompareTo2"
 		    SID			    "914:4180"
 		    Ports		    [1, 1]
-		    Position		    [865, 280, 925, 300]
+		    Position		    [820, 210, 880, 230]
 		    BlockRotation	    270
 		    BlockMirror		    on
 		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
@@ -40827,7 +40822,7 @@ Model {
 		    Name		    "Logical\nOperator"
 		    SID			    "914:6034"
 		    Ports		    [2, 1]
-		    Position		    [877, 220, 908, 250]
+		    Position		    [877, 275, 908, 305]
 		    BlockRotation	    270
 		    BlockMirror		    on
 		    NamePlacement	    "alternate"
@@ -41369,30 +41364,17 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "CompareTo2"
-		    SrcPort		    1
-		    Points		    [0, 15]
-		    Branch {
-		    DstBlock		    "ECT Transient Fueling"
-		    DstPort		    enable
-		    }
-		    Branch {
-		    Points		    [-65, 0]
-		    DstBlock		    "OXY Transient Fueling"
-		    DstPort		    enable
-		    }
-		    }
-		    Line {
 		    SrcBlock		    "motohawk_interpolation_2d2"
 		    SrcPort		    1
-		    Points		    [180, 0]
+		    Points		    [205, 0]
 		    Branch {
 		    DstBlock		    "Product1"
 		    DstPort		    1
 		    }
 		    Branch {
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    2
+		    Points		    [0, 5]
+		    DstBlock		    "CompareTo1"
+		    DstPort		    1
 		    }
 		    }
 		    Line {
@@ -41452,8 +41434,8 @@ Model {
 		    DstPort		    3
 		    }
 		    Branch {
-		    Points		    [0, -315; 70, 0]
-		    DstBlock		    "Logical\nOperator"
+		    Points		    [0, -320]
+		    DstBlock		    "CompareTo2"
 		    DstPort		    1
 		    }
 		    }
@@ -41472,7 +41454,29 @@ Model {
 		    Line {
 		    SrcBlock		    "Logical\nOperator"
 		    SrcPort		    1
-		    DstBlock		    "CompareTo2"
+		    Points		    [0, 4]
+		    Branch {
+		    DstBlock		    "ECT Transient Fueling"
+		    DstPort		    enable
+		    }
+		    Branch {
+		    Points		    [-65, 0]
+		    DstBlock		    "OXY Transient Fueling"
+		    DstPort		    enable
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "CompareTo1"
+		    SrcPort		    1
+		    Points		    [0, 15; -25, 0]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "CompareTo2"
+		    SrcPort		    1
+		    Points		    [0, 15; 35, 0]
+		    DstBlock		    "Logical\nOperator"
 		    DstPort		    1
 		    }
 		    }
@@ -41729,13 +41733,6 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "Constant1"
-		    SrcPort		    1
-		    Points		    [0, 0]
-		    DstBlock		    "Mass Flow to Charge Mass Transform"
-		    DstPort		    3
-		    }
-		    Line {
 		    Name		    "<TPS>"
 		    Labels		    [0, 0]
 		    SrcBlock		    "Bus\nSelector4"
@@ -41815,6 +41812,12 @@ Model {
 		    SrcPort		    5
 		    DstBlock		    "Delta TPS Transient Fueling"
 		    DstPort		    5
+		    }
+		    Line {
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    DstBlock		    "Mass Flow to Charge Mass Transform"
+		    DstPort		    3
 		    }
 		    }
 		    }
@@ -50175,7 +50178,7 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "Determine if RPM is Falling"
-		    Location		    [202, 75, 1918, 1019]
+		    Location		    [202, 83, 1918, 1027]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -62050,13 +62053,13 @@ Model {
 		    Block {
 		    BlockType		    ZeroOrderHold
 		    Name		    "Zero-Order\nHold6"
-		    SID			    "914:3066"
-		    Position		    [1140, 1086, 1175, 1124]
+		    SID			    "914:6050"
+		    Position		    [1135, 1011, 1170, 1049]
 		    ShowName		    off
 		    SampleTime		    "-1"
 		    Port {
 		    PortNumber		    1
-		    Name		    "FAN-2"
+		    Name		    "FAN-1"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -62064,13 +62067,13 @@ Model {
 		    Block {
 		    BlockType		    ZeroOrderHold
 		    Name		    "Zero-Order\nHold7"
-		    SID			    "914:3067"
-		    Position		    [1140, 1011, 1175, 1049]
+		    SID			    "914:6051"
+		    Position		    [1135, 1086, 1170, 1124]
 		    ShowName		    off
 		    SampleTime		    "-1"
 		    Port {
 		    PortNumber		    1
-		    Name		    "FAN-1"
+		    Name		    "FAN-2"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -62432,19 +62435,11 @@ Model {
 		    }
 		    Line {
 		    Name		    "FAN-2"
-		    Labels		    [0, 0]
-		    SrcBlock		    "Zero-Order\nHold6"
-		    SrcPort		    1
-		    DstBlock		    "Data Type Conversion"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "FAN-1"
-		    Labels		    [0, 0]
+		    Labels		    [0, 0; 1, 0]
 		    SrcBlock		    "Zero-Order\nHold7"
 		    SrcPort		    1
-		    DstBlock		    "Data Type Conversion1"
-		    DstPort		    1
+		    DstBlock		    "Bus\nCreator2"
+		    DstPort		    13
 		    }
 		    Line {
 		    Name		    "AC"
@@ -62457,13 +62452,13 @@ Model {
 		    Line {
 		    SrcBlock		    "FAN Control"
 		    SrcPort		    1
-		    DstBlock		    "Zero-Order\nHold7"
+		    DstBlock		    "Zero-Order\nHold6"
 		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "FAN Control"
 		    SrcPort		    2
-		    DstBlock		    "Zero-Order\nHold6"
+		    DstBlock		    "Zero-Order\nHold7"
 		    DstPort		    1
 		    }
 		    Line {
@@ -62481,17 +62476,9 @@ Model {
 		    }
 		    }
 		    Line {
-		    Name		    "FAN-2"
-		    Labels		    [0, 0]
-		    SrcBlock		    "Data Type Conversion"
-		    SrcPort		    1
-		    DstBlock		    "Bus\nCreator2"
-		    DstPort		    13
-		    }
-		    Line {
 		    Name		    "FAN-1"
 		    Labels		    [0, 0]
-		    SrcBlock		    "Data Type Conversion1"
+		    SrcBlock		    "Zero-Order\nHold6"
 		    SrcPort		    1
 		    DstBlock		    "Bus\nCreator2"
 		    DstPort		    12
@@ -62624,7 +62611,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "76"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inputs"
@@ -62692,36 +62679,6 @@ Model {
 		    Port {
 		    PortNumber		    1
 		    Name		    "IAC-P"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    DataTypeConversion
-		    Name		    "Data Type Conversion3"
-		    SID			    "914:3465"
-		    Position		    [570, 1113, 615, 1147]
-		    OutDataTypeStr	    "boolean"
-		    RndMeth		    "Floor"
-		    SaturateOnIntegerOverflow off
-		    Port {
-		    PortNumber		    1
-		    Name		    "FAN-2"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    }
-		    Block {
-		    BlockType		    DataTypeConversion
-		    Name		    "Data Type Conversion4"
-		    SID			    "914:3466"
-		    Position		    [570, 1048, 615, 1082]
-		    OutDataTypeStr	    "boolean"
-		    RndMeth		    "Floor"
-		    SaturateOnIntegerOverflow off
-		    Port {
-		    PortNumber		    1
-		    Name		    "FAN-1"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -66311,7 +66268,7 @@ Model {
 		    Block {
 		    BlockType		    ZeroOrderHold
 		    Name		    "Zero-Order\nHold12"
-		    SID			    "914:3063"
+		    SID			    "914:6048"
 		    Position		    [460, 1046, 495, 1084]
 		    ShowName		    off
 		    SampleTime		    "-1"
@@ -66325,7 +66282,7 @@ Model {
 		    Block {
 		    BlockType		    ZeroOrderHold
 		    Name		    "Zero-Order\nHold13"
-		    SID			    "914:3064"
+		    SID			    "914:6049"
 		    Position		    [460, 1111, 495, 1149]
 		    ShowName		    off
 		    SampleTime		    "-1"
@@ -66667,22 +66624,6 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    Name		    "FAN-1"
-		    Labels		    [0, 0]
-		    SrcBlock		    "Zero-Order\nHold12"
-		    SrcPort		    1
-		    DstBlock		    "Data Type Conversion4"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "FAN-2"
-		    Labels		    [0, 0]
-		    SrcBlock		    "Zero-Order\nHold13"
-		    SrcPort		    1
-		    DstBlock		    "Data Type Conversion3"
-		    DstPort		    1
-		    }
-		    Line {
 		    Name		    "AC"
 		    Labels		    [0, 0]
 		    SrcBlock		    "Zero-Order\nHold14"
@@ -66747,20 +66688,20 @@ Model {
 		    DstPort		    9
 		    }
 		    Line {
-		    Name		    "FAN-2"
-		    Labels		    [0, 0]
-		    SrcBlock		    "Data Type Conversion3"
-		    SrcPort		    1
-		    DstBlock		    "Bus\nCreator2"
-		    DstPort		    13
-		    }
-		    Line {
 		    Name		    "FAN-1"
-		    Labels		    [0, 0]
-		    SrcBlock		    "Data Type Conversion4"
+		    Labels		    [0, 0; 1, 0]
+		    SrcBlock		    "Zero-Order\nHold12"
 		    SrcPort		    1
 		    DstBlock		    "Bus\nCreator2"
 		    DstPort		    12
+		    }
+		    Line {
+		    Name		    "FAN-2"
+		    Labels		    [0, 0; 1, 0]
+		    SrcBlock		    "Zero-Order\nHold13"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nCreator2"
+		    DstPort		    13
 		    }
 		  }
 		}
@@ -86211,7 +86152,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_TDC_EVENT"
-		    function_name	    "Trigger_FGND_TDC_EVENT_7122p0001"
+		    function_name	    "Trigger_FGND_TDC_EVENT_7131p0001"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -87907,7 +87848,7 @@ Model {
 		    }
 		    System {
 		    Name		    "O2 De-lag"
-		    Location		    [202, 83, 1918, 1027]
+		    Location		    [344, 83, 1918, 1027]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -96286,7 +96227,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "STARTUP_EVENT"
-		    function_name	    "Trigger_STARTUP_EVENT_8044p0005"
+		    function_name	    "Trigger_STARTUP_EVENT_8053p0001"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -96308,7 +96249,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_MID_TDC_EVENT"
-		    function_name	    "Trigger_FGND_MID_TDC_EVENT_8045p0005"
+		    function_name	    "Trigger_FGND_MID_TDC_EVENT_8054p0001"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -100214,7 +100155,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		  SourceType		  "MotoHawk Function Trigger"
 		  trigger		  "FGND_5XRTI_PERIODIC"
-		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_8316p0005"
+		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_8325p0005"
 		  priority_order	  "1"
 		  inherited		  on
 		  run_disabled		  off
@@ -101846,7 +101787,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_20XRTI_PERIODIC"
-		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_8446p0002"
+		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_8455p0002"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -103426,7 +103367,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_20XRTI_PERIODIC"
-		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_8576p0002"
+		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_8585p0002"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -107802,9 +107743,9 @@ Model {
 	      System {
 		Name			"Coil Control"
 		Location		[202, 75, 1918, 1019]
-		Open			on
+		Open			off
 		ModelBrowserVisibility	on
-		ModelBrowserWidth	200
+		ModelBrowserWidth	342
 		ScreenColor		"white"
 		PaperOrientation	"landscape"
 		PaperPositionMode	"auto"
@@ -108574,7 +108515,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_TDC_EVENT"
-		    function_name	    "Trigger_FGND_TDC_EVENT_9056p0002"
+		    function_name	    "Trigger_FGND_TDC_EVENT_9065p0001"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -111337,7 +111278,7 @@ Model {
 	      MaskHideContents	      off
 	      System {
 		Name			"FAN Control"
-		Location		[270, 363, 1093, 879]
+		Location		[89, 171, 1725, 1115]
 		Open			off
 		ModelBrowserVisibility	on
 		ModelBrowserWidth	200
@@ -111366,11 +111307,29 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion"
+		  SID			  "1459"
+		  Position		  [300, 93, 375, 127]
+		  OutDataTypeStr	  "boolean"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion1"
+		  SID			  "1460"
+		  Position		  [300, 178, 375, 212]
+		  OutDataTypeStr	  "boolean"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
 		  BlockType		  Reference
 		  Name			  "Discrete Actuator - FAN1"
 		  SID			  "1064"
 		  Ports			  [1, 1]
-		  Position		  [260, 86, 535, 134]
+		  Position		  [430, 86, 705, 134]
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.622"
 		  FontName		  "Arial"
@@ -111396,7 +111355,7 @@ Model {
 		  Name			  "Discrete Actuator - FAN2"
 		  SID			  "1065"
 		  Ports			  [1, 1]
-		  Position		  [260, 171, 535, 219]
+		  Position		  [430, 171, 705, 219]
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.622"
 		  FontName		  "Arial"
@@ -111472,7 +111431,7 @@ Model {
 		  Name			  "motohawk_dout"
 		  SID			  "1066"
 		  Ports			  [1]
-		  Position		  [610, 73, 815, 147]
+		  Position		  [780, 73, 985, 147]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  UserDataPersistent	  on
@@ -111493,7 +111452,7 @@ Model {
 		  Name			  "motohawk_dout1"
 		  SID			  "1067"
 		  Ports			  [1]
-		  Position		  [610, 158, 815, 232]
+		  Position		  [780, 158, 985, 232]
 		  ShowName		  off
 		  LibraryVersion	  "MotoHawk 0.2.3"
 		  UserDataPersistent	  on
@@ -111586,12 +111545,12 @@ Model {
 		  SrcPort		  1
 		  Points		  [85, 0]
 		  Branch {
-		    DstBlock		    "Discrete Actuator - FAN1"
+		    Points		    [0, 230]
+		    DstBlock		    "IAC-P-CONTROL"
 		    DstPort		    1
 		  }
 		  Branch {
-		    Points		    [0, 230]
-		    DstBlock		    "IAC-P-CONTROL"
+		    DstBlock		    "Data Type Conversion"
 		    DstPort		    1
 		  }
 		}
@@ -111606,14 +111565,14 @@ Model {
 		  SrcPort		  1
 		  Points		  [65, 0]
 		  Branch {
-		    DstBlock		    "Discrete Actuator - FAN2"
-		    DstPort		    1
-		  }
-		  Branch {
 		    Points		    [0, 355]
 		    DstBlock		    "IAC-P-CONTROL1"
 		    DstPort		    1
 		  }
+		  Branch {
+		    DstBlock		    "Data Type Conversion1"
+		    DstPort		    1
+		  }
 		}
 		Line {
 		  SrcBlock		  "IAC-P-CONTROL"
@@ -111638,6 +111597,18 @@ Model {
 		  SrcPort		  2
 		  DstBlock		  "motohawk_pwm1"
 		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion"
+		  SrcPort		  1
+		  DstBlock		  "Discrete Actuator - FAN1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Discrete Actuator - FAN2"
+		  DstPort		  1
 		}
 	      }
 	    }
@@ -115605,7 +115576,7 @@ Model {
 	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	      SourceType	      "MotoHawk Function Trigger"
 	      trigger		      "FGND_5XRTI_PERIODIC"
-	      function_name	      "Trigger_FGND_5XRTI_PERIODIC_9564p0004"
+	      function_name	      "Trigger_FGND_5XRTI_PERIODIC_9589p0004"
 	      priority_order	      "1"
 	      inherited		      on
 	      run_disabled	      off
@@ -118294,7 +118265,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_9826p0004"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_9851p0001"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -118440,7 +118411,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_9834p0004"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_9859p0001"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -119771,8 +119742,6 @@ Stateflow {
     firstTransition	    38
     viewObj		    34
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    16
     decomposition	    CLUSTER_CHART
     firstData		    42
@@ -119857,8 +119826,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    34
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    5
   }
@@ -119882,8 +119849,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    34
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    14
   }
@@ -119907,8 +119872,6 @@ Stateflow {
     stampAngle		    NaN
     subviewer		    34
     drawStyle		    SMART
-    slide {
-    }
     executionOrder	    1
     ssIdNumber		    16
   }
@@ -120441,14 +120404,13 @@ Stateflow {
   chart {
     id			    72
     name		    "Foreground/Control/ActuatorCharacterization/Electronic Throttle Controller/ETC Test  Manager"
-    windowPosition	    [-1102.5 166.5 1024.5 488.25]
+    windowPosition	    [18.75 166.5 1024.5 488.25]
     viewLimits		    [0 1218.402 36.488 598.183]
     zoomFactor		    1.242
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 74 0 0]
     firstTransition	    79
     viewObj		    72
-    visible		    1
     machine		    1
     subviewS {
       y1		      36.488
@@ -121252,13 +121214,15 @@ Stateflow {
   chart {
     id			    114
     name		    "Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine"
-    windowPosition	    [117.924 76.5 765 443.25]
+    windowPosition	    [1587.75 117.75 765 443.25]
     viewLimits		    [0 721.5 0 407.25]
-    screen		    [1 1 1366 768 1.333333333333333]
+    screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 116 0 0]
     firstTransition	    118
     viewObj		    114
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    16
     decomposition	    CLUSTER_CHART
     firstData		    123
@@ -121332,7 +121296,7 @@ Stateflow {
     midPoint		    [93.5 46.0871]
     chart		    114
     linkNode		    [114 0 119]
-    dataLimits		    [93.5 93.5 34.5 56.875]
+    dataLimits		    [91.1 95.9 34.5 64.875]
     subviewer		    114
     drawStyle		    SMART
     executionOrder	    1
@@ -121354,7 +121318,7 @@ Stateflow {
     midPoint		    [409.2128 121.8735]
     chart		    114
     linkNode		    [114 118 121]
-    dataLimits		    [180.5 526.857 101.004 228.25]
+    dataLimits		    [180.5 529.257 101.004 236.25]
     subviewer		    114
     drawStyle		    SMART
     slide {
@@ -121380,7 +121344,7 @@ Stateflow {
     midPoint		    [308.902 254.2483]
     chart		    114
     linkNode		    [114 121 122]
-    dataLimits		    [183.75 445.25 254.248 254.248]
+    dataLimits		    [175.75 445.25 251.848 256.648]
     subviewer		    114
     drawStyle		    SMART
     executionOrder	    1
@@ -121402,7 +121366,7 @@ Stateflow {
     midPoint		    [91.497 176.2284]
     chart		    114
     linkNode		    [114 119 120]
-    dataLimits		    [91.492 91.497 119.25 228.625]
+    dataLimits		    [89.092 93.892 119.25 236.625]
     subviewer		    114
     drawStyle		    SMART
     executionOrder	    2
@@ -121424,7 +121388,7 @@ Stateflow {
     midPoint		    [312.098 278.7404]
     chart		    114
     linkNode		    [114 120 0]
-    dataLimits		    [175.75 437.25 278.74 278.74]
+    dataLimits		    [175.75 445.25 276.34 281.14]
     subviewer		    114
     drawStyle		    SMART
     executionOrder	    1

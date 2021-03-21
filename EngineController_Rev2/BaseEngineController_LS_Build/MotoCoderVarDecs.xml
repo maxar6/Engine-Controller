@@ -126,10 +126,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>System | Main Power Relay | MPRD Override</group>
-      <struct>VolatileWork_BSS.MPRD_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MPRD_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -174,11 +174,11 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>boolean</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Directly Override Main Power Relay</help>
       <group>System | Main Power Relay | MPRD Override</group>
-      <struct>VolatileWork_BSS.MPRD_new</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MPRD_new</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -471,10 +471,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|Setpoint Manager|Tuning | ETCReq Override</group>
-      <struct>VolatileWork_BSS.ETCReq_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ETCReq_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -495,12 +495,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override the electronic throttle position</help>
       <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|Electronic Throttle Controller|Setpoint Manager|Tuning | ETCReq Override</group>
-      <struct>VolatileWork_BSS.ETCReq_new</struct>
+      <struct>ConstantWork.ETCReq_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -5413,10 +5413,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Base Equiv Ratio | EquivRatio Override</group>
-      <struct>VolatileWork_BSS.EquivRatio_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.EquivRatio_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -5436,11 +5436,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Base Equiv Ratio | EquivRatio Override</group>
-      <struct>VolatileWork_BSS.EquivRatio_new</struct>
+      <struct>ConstantWork.EquivRatio_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -8070,53 +8070,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>FAN_Mode</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.FAN_Mode</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="PWM" value="0"/>
-         <item name="OnOff" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Fan2ECT</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Fan Enabler</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.Fan2ECT</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>IATFanOn</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -8155,30 +8108,6 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>Fan2IAT</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Fan Enabler</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.Fan2IAT</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
-         <default>Unknown</default>
-      </enum>
    </VarDec>
    <VarDec>
       <name>ACPresFanOn</name>
@@ -8221,7 +8150,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>Fan2ACPres</name>
+      <name>FAN_Mode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -8231,40 +8160,15 @@
       <format>3.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Fan Enabler</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.Fan2ACPres</struct>
+      <struct>ConstantWork.FAN_Mode</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
       <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>Fan2ACSw</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Fan Enabler</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.Fan2ACSw</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
+         <item name="PWM" value="0"/>
+         <item name="OnOff" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -8354,6 +8258,102 @@
       <help>Fan Enabler</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
       <struct>ConstantWork.Fan1ACSw</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Fan2ECT</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Fan Enabler</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+      <struct>ConstantWork.Fan2ECT</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Fan2IAT</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Fan Enabler</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+      <struct>ConstantWork.Fan2IAT</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Fan2ACPres</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Fan Enabler</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+      <struct>ConstantWork.Fan2ACPres</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>Fan2ACSw</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Fan Enabler</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+      <struct>ConstantWork.Fan2ACSw</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -9662,10 +9662,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT | ECT Override</group>
-      <struct>VolatileWork_BSS.ECT_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ECT_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -9726,12 +9726,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>C</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT | ECT Override</group>
-      <struct>VolatileWork_BSS.ECT_new</struct>
+      <struct>ConstantWork.ECT_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -9785,10 +9785,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT | IAT Override</group>
-      <struct>VolatileWork_BSS.IAT_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.IAT_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -9849,12 +9849,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>C</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT | IAT Override</group>
-      <struct>VolatileWork_BSS.IAT_new</struct>
+      <struct>ConstantWork.IAT_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -9908,10 +9908,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP | EVAP Override</group>
-      <struct>VolatileWork_BSS.EVAP_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.EVAP_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -9972,12 +9972,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>C</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP | EVAP Override</group>
-      <struct>VolatileWork_BSS.EVAP_new</struct>
+      <struct>ConstantWork.EVAP_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -10031,10 +10031,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT | CAT Override</group>
-      <struct>VolatileWork_BSS.CAT_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.CAT_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -10095,12 +10095,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>C</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT | CAT Override</group>
-      <struct>VolatileWork_BSS.CAT_new</struct>
+      <struct>ConstantWork.CAT_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -10727,10 +10727,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|AC Control | AC | AC Override</group>
-      <struct>VolatileWork_BSS.AC_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.AC_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -10751,12 +10751,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|AC Control | AC | AC Override</group>
-      <struct>VolatileWork_BSS.AC_new</struct>
+      <struct>ConstantWork.AC_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -10793,10 +10793,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2 | APP2 Override</group>
-      <struct>VolatileWork_BSS.APP2_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.APP2_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -10877,12 +10877,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2 | APP2 Override</group>
-      <struct>VolatileWork_BSS.APP2_new</struct>
+      <struct>ConstantWork.APP2_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -10896,10 +10896,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt | APP2_Adapt Override</group>
-      <struct>VolatileWork_BSS.APP2_Adapt_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.APP2_Adapt_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -10920,12 +10920,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt | APP2_Adapt Override</group>
-      <struct>VolatileWork_BSS.APP2_Adapt_new</struct>
+      <struct>ConstantWork.APP2_Adapt_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -11059,10 +11059,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1 | APP1 Override</group>
-      <struct>VolatileWork_BSS.APP1_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.APP1_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11143,12 +11143,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1 | APP1 Override</group>
-      <struct>VolatileWork_BSS.APP1_new</struct>
+      <struct>ConstantWork.APP1_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -11162,10 +11162,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt | APP1_Adapt Override</group>
-      <struct>VolatileWork_BSS.APP1_Adapt_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.APP1_Adapt_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11186,12 +11186,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt | APP1_Adapt Override</group>
-      <struct>VolatileWork_BSS.APP1_Adapt_new</struct>
+      <struct>ConstantWork.APP1_Adapt_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -11405,10 +11405,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ACSw | ACSw Override</group>
-      <struct>VolatileWork_BSS.ACSw_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ACSw_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11469,12 +11469,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>Boolean</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ACSw | ACSw Override</group>
-      <struct>VolatileWork_BSS.ACSw_new</struct>
+      <struct>ConstantWork.ACSw_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -11488,10 +11488,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Override</group>
-      <struct>VolatileWork_BSS.VSPD_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.VSPD_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11552,12 +11552,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>MPH</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Override</group>
-      <struct>VolatileWork_BSS.VSPD_new</struct>
+      <struct>ConstantWork.VSPD_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -11571,10 +11571,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres | ACPres Override</group>
-      <struct>VolatileWork_BSS.ACPres_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ACPres_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11675,12 +11675,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>kPa Gauge</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres | ACPres Override</group>
-      <struct>VolatileWork_BSS.ACPres_new</struct>
+      <struct>ConstantWork.ACPres_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -11714,10 +11714,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1 | TPS1 Override</group>
-      <struct>VolatileWork_BSS.TPS1_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.TPS1_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11738,12 +11738,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1 | TPS1 Override</group>
-      <struct>VolatileWork_BSS.TPS1_new</struct>
+      <struct>ConstantWork.TPS1_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -11877,10 +11877,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2 | TPS2 Override</group>
-      <struct>VolatileWork_BSS.TPS2_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.TPS2_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -11901,12 +11901,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2 | TPS2 Override</group>
-      <struct>VolatileWork_BSS.TPS2_new</struct>
+      <struct>ConstantWork.TPS2_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12040,10 +12040,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens | FuelSens Override</group>
-      <struct>VolatileWork_BSS.FuelSens_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.FuelSens_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12205,12 +12205,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens | FuelSens Override</group>
-      <struct>VolatileWork_BSS.FuelSens_new</struct>
+      <struct>ConstantWork.FuelSens_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12267,10 +12267,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Override</group>
-      <struct>VolatileWork_BSS.Bank2_EquivRatio_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_EquivRatio_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12310,10 +12310,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_Lambda_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_Lambda_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_Lambda_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12333,11 +12333,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_Lambda_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_Lambda_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_Lambda_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12412,12 +12412,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>EquivRatio</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Override</group>
-      <struct>VolatileWork_BSS.Bank2_EquivRatio_new</struct>
+      <struct>ConstantWork.Bank2_EquivRatio_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12431,10 +12431,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_EquivRatio | Bank1_EquivRatio Override</group>
-      <struct>VolatileWork_BSS.Bank1_EquivRatio_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_EquivRatio_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12474,10 +12474,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_Lambda_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_Lambda_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_Lambda_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12497,11 +12497,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_Lambda_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_Lambda_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_Lambda_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12576,12 +12576,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>EquivRatio</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_EquivRatio | Bank1_EquivRatio Override</group>
-      <struct>VolatileWork_BSS.Bank1_EquivRatio_new</struct>
+      <struct>ConstantWork.Bank1_EquivRatio_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12595,10 +12595,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt | SysVolt Override</group>
-      <struct>VolatileWork_BSS.SysVolt_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.SysVolt_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12699,12 +12699,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>Volts</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt | SysVolt Override</group>
-      <struct>VolatileWork_BSS.SysVolt_new</struct>
+      <struct>ConstantWork.SysVolt_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -12718,10 +12718,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP | MAP Override</group>
-      <struct>VolatileWork_BSS.MAP_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MAP_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -12822,12 +12822,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP | MAP Override</group>
-      <struct>VolatileWork_BSS.MAP_new</struct>
+      <struct>ConstantWork.MAP_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -13047,10 +13047,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF | MAF Override</group>
-      <struct>VolatileWork_BSS.MAF_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MAF_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13111,12 +13111,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>g/s</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF | MAF Override</group>
-      <struct>VolatileWork_BSS.MAF_new</struct>
+      <struct>ConstantWork.MAF_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -13189,10 +13189,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ClutchSw | ClutchSw Override</group>
-      <struct>VolatileWork_BSS.ClutchSw_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ClutchSw_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13253,12 +13253,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>Boolean</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ClutchSw | ClutchSw Override</group>
-      <struct>VolatileWork_BSS.ClutchSw_new</struct>
+      <struct>ConstantWork.ClutchSw_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -13272,10 +13272,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | Scramble | Scramble Override</group>
-      <struct>VolatileWork_BSS.Scramble_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Scramble_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13356,12 +13356,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>Boolean</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | Scramble | Scramble Override</group>
-      <struct>VolatileWork_BSS.Scramble_new</struct>
+      <struct>ConstantWork.Scramble_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -13375,10 +13375,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | TwoStep | TwoStep Override</group>
-      <struct>VolatileWork_BSS.TwoStep_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.TwoStep_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13439,12 +13439,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>Boolean</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | TwoStep | TwoStep Override</group>
-      <struct>VolatileWork_BSS.TwoStep_new</struct>
+      <struct>ConstantWork.TwoStep_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -13458,10 +13458,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime | MAPTime Override</group>
-      <struct>VolatileWork_BSS.MAPTime_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MAPTime_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13502,12 +13502,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime | MAPTime Override</group>
-      <struct>VolatileWork_BSS.MAPTime_new</struct>
+      <struct>ConstantWork.MAPTime_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -13546,10 +13546,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres | FuelPres Override</group>
-      <struct>VolatileWork_BSS.FuelPres_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.FuelPres_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13650,12 +13650,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>kPa Gauge</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres | FuelPres Override</group>
-      <struct>VolatileWork_BSS.FuelPres_new</struct>
+      <struct>ConstantWork.FuelPres_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -13669,10 +13669,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres | OilPres Override</group>
-      <struct>VolatileWork_BSS.OilPres_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.OilPres_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13773,12 +13773,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>psi</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres | OilPres Override</group>
-      <struct>VolatileWork_BSS.OilPres_new</struct>
+      <struct>ConstantWork.OilPres_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -13812,10 +13812,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1 | FAN1 Override</group>
-      <struct>VolatileWork_BSS.FAN1_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.FAN1_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -13836,55 +13836,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1 | FAN1 Override</group>
-      <struct>VolatileWork_BSS.FAN1_new</struct>
+      <struct>ConstantWork.FAN1_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>FAN1_PWM_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
-      <struct>VolatileWork_BSS.FAN1_PWM_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>FAN1_PWM_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
-      <struct>VolatileWork_BSS.FAN1_PWM_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -13903,6 +13860,49 @@
       <help>Scaling from engineering units to PWM duty cycle</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Config</group>
       <struct>ConstantWork.FAN1_PWMGain</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>FAN1_PWM_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
+      <struct>ConstantWork.FAN1_PWM_ovr</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>FAN1_PWM_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
+      <struct>ConstantWork.FAN1_PWM_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -14018,10 +14018,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2 | FAN2 Override</group>
-      <struct>VolatileWork_BSS.FAN2_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.FAN2_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14042,55 +14042,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2 | FAN2 Override</group>
-      <struct>VolatileWork_BSS.FAN2_new</struct>
+      <struct>ConstantWork.FAN2_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-   </VarDec>
-   <VarDec>
-      <name>FAN2_PWM_ovr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
-      <struct>VolatileWork_BSS.FAN2_PWM_ovr</struct>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>FAN2_PWM_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
-      <struct>VolatileWork_BSS.FAN2_PWM_new</struct>
-      <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -14109,6 +14066,49 @@
       <help>Scaling from engineering units to PWM duty cycle</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Config</group>
       <struct>ConstantWork.FAN2_PWMGain</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>FAN2_PWM_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
+      <struct>ConstantWork.FAN2_PWM_ovr</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>FAN2_PWM_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
+      <struct>ConstantWork.FAN2_PWM_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -14224,10 +14224,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|FuelPump | FUELP | FUELP Override</group>
-      <struct>VolatileWork_BSS.FUELP_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.FUELP_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14247,10 +14247,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ESTOP | ESTOP Override</group>
-      <struct>VolatileWork_BSS.ESTOP_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ESTOP_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14291,12 +14291,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>Boolean</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ESTOP | ESTOP Override</group>
-      <struct>VolatileWork_BSS.ESTOP_new</struct>
+      <struct>ConstantWork.ESTOP_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -14311,12 +14311,12 @@
       <format>1.0</format>
       <mask>0x000000FF</mask>
       <units>bool</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override actuator, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FuelPump | FUELP | FUELP Override</group>
-      <struct>VolatileWork_BSS.FUELP_new</struct>
+      <struct>ConstantWork.FUELP_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -14390,10 +14390,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge | ETC Override</group>
-      <struct>VolatileWork_BSS.ETC_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ETC_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14413,12 +14413,12 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge | ETC Override</group>
-      <struct>VolatileWork_BSS.ETC_new</struct>
+      <struct>ConstantWork.ETC_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -14512,10 +14512,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_P | IAC_P Override</group>
-      <struct>VolatileWork_BSS.IAC_P_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.IAC_P_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14536,12 +14536,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_P | IAC_P Override</group>
-      <struct>VolatileWork_BSS.IAC_P_new</struct>
+      <struct>ConstantWork.IAC_P_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -14655,10 +14655,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_S | IAC_S Override</group>
-      <struct>VolatileWork_BSS.IAC_S_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.IAC_S_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14679,12 +14679,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_S | IAC_S Override</group>
-      <struct>VolatileWork_BSS.IAC_S_new</struct>
+      <struct>ConstantWork.IAC_S_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -14778,10 +14778,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | SOI Override</group>
-      <struct>VolatileWork_BSS.SOI_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.SOI_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -14801,11 +14801,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | SOI Override</group>
-      <struct>VolatileWork_BSS.SOI_new</struct>
+      <struct>ConstantWork.SOI_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -14819,10 +14819,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | Mech_PW Override</group>
-      <struct>VolatileWork_BSS.Mech_PW_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Mech_PW_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15287,11 +15287,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | Mech_PW Override</group>
-      <struct>VolatileWork_BSS.Mech_PW_new</struct>
+      <struct>ConstantWork.Mech_PW_new</struct>
       <class>array</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
       <col_len>8</col_len>
@@ -15327,10 +15327,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | Elec_PW Override</group>
-      <struct>VolatileWork_BSS.Elec_PW_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Elec_PW_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15350,11 +15350,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | Elec_PW Override</group>
-      <struct>VolatileWork_BSS.Elec_PW_new</struct>
+      <struct>ConstantWork.Elec_PW_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15368,10 +15368,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | MakeUp_EOI Override</group>
-      <struct>VolatileWork_BSS.MakeUp_EOI_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.MakeUp_EOI_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15391,11 +15391,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | MakeUp_EOI Override</group>
-      <struct>VolatileWork_BSS.MakeUp_EOI_new</struct>
+      <struct>ConstantWork.MakeUp_EOI_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15449,10 +15449,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | InjEnable Override</group>
-      <struct>VolatileWork_BSS.InjEnable_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.InjEnable_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15472,10 +15472,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | ESTOP_FuelInj_Ovr Override</group>
-      <struct>VolatileWork_BSS.ESTOP_FuelInj_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.ESTOP_FuelInj_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15495,11 +15495,11 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | ESTOP_FuelInj_Ovr Override</group>
-      <struct>VolatileWork_BSS.ESTOP_FuelInj_Ovr_new</struct>
+      <struct>ConstantWork.ESTOP_FuelInj_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
    </VarDec>
@@ -15513,11 +15513,11 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control | InjEnable Override</group>
-      <struct>VolatileWork.InjEnable_new</struct>
+      <struct>ConstantWork.InjEnable_new</struct>
       <class>array</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <col_len>8</col_len>
@@ -15553,10 +15553,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Outputs|WASTEGATE-Control | WASTEGATE | WASTEGATE Override</group>
-      <struct>VolatileWork_BSS.WASTEGATE_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.WASTEGATE_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15577,12 +15577,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>%</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|WASTEGATE-Control | WASTEGATE | WASTEGATE Override</group>
-      <struct>VolatileWork_BSS.WASTEGATE_new</struct>
+      <struct>ConstantWork.WASTEGATE_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15696,10 +15696,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt | SensVolt Override</group>
-      <struct>VolatileWork_BSS.SensVolt_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.SensVolt_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15800,12 +15800,12 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <units>Volts</units>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <help>Override result of linear sensor characterization, in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt | SensVolt Override</group>
-      <struct>VolatileWork_BSS.SensVolt_new</struct>
+      <struct>ConstantWork.SensVolt_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15819,10 +15819,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_OxygenConcentration_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_OxygenConcentration_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_OxygenConcentration_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15842,11 +15842,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_OxygenConcentration_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_OxygenConcentration_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_OxygenConcentration_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15860,10 +15860,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_OxygenConcentration_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_OxygenConcentration_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_OxygenConcentration_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15883,11 +15883,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_OxygenConcentration_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_OxygenConcentration_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_OxygenConcentration_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15901,10 +15901,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SystemVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SystemVolts_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_SystemVolts_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15924,11 +15924,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SystemVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SystemVolts_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_SystemVolts_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15942,10 +15942,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_HeaterVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_HeaterVolts_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_HeaterVolts_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -15965,11 +15965,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_HeaterVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_HeaterVolts_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_HeaterVolts_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -15983,10 +15983,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SensorDetectedStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SensorDetectedStatus_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_SensorDetectedStatus_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16006,11 +16006,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SensorDetectedStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SensorDetectedStatus_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_SensorDetectedStatus_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16024,10 +16024,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_UsingFreeAreCalState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_UsingFreeAreCalState_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_UsingFreeAreCalState_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16047,11 +16047,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_UsingFreeAreCalState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_UsingFreeAreCalState_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_UsingFreeAreCalState_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16065,10 +16065,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_DataValidState_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_DataValidState_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16088,11 +16088,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_DataValidState_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_DataValidState_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16106,10 +16106,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SensorStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SensorStatus_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_SensorStatus_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16129,11 +16129,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SensorStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SensorStatus_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_SensorStatus_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16147,10 +16147,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SensorFaultState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SensorFaultState_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank2_SensorFaultState_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16170,11 +16170,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank2_SensorFaultState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank2_SensorFaultState_Ovr_new</struct>
+      <struct>ConstantWork.Bank2_SensorFaultState_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16188,10 +16188,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SystemVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SystemVolts_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_SystemVolts_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16211,11 +16211,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SystemVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SystemVolts_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_SystemVolts_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16229,10 +16229,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_HeaterVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_HeaterVolts_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_HeaterVolts_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16252,11 +16252,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_HeaterVolts_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_HeaterVolts_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_HeaterVolts_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16270,10 +16270,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SensorDetectedStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SensorDetectedStatus_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_SensorDetectedStatus_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16293,11 +16293,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SensorDetectedStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SensorDetectedStatus_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_SensorDetectedStatus_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16311,10 +16311,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_UsingFreeAreCalState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_UsingFreeAreCalState_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_UsingFreeAreCalState_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16334,11 +16334,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_UsingFreeAreCalState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_UsingFreeAreCalState_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_UsingFreeAreCalState_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16352,10 +16352,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_DataValidState_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_DataValidState_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16375,11 +16375,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_DataValidState_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_DataValidState_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16393,10 +16393,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SensorStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SensorStatus_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_SensorStatus_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16416,11 +16416,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SensorStatus_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SensorStatus_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_SensorStatus_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -16434,10 +16434,10 @@
       <min>0</min>
       <format>1.0</format>
       <mask>0x000000FF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SensorFaultState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SensorFaultState_Ovr_ovr</struct>
-      <storage>RAM</storage>
+      <struct>ConstantWork.Bank1_SensorFaultState_Ovr_ovr</struct>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
       <class>enum</class>
@@ -16457,11 +16457,11 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
+      <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|AEM X Lambda | Bank1_SensorFaultState_Ovr Override</group>
-      <struct>VolatileWork_BSS.Bank1_SensorFaultState_Ovr_new</struct>
+      <struct>ConstantWork.Bank1_SensorFaultState_Ovr_new</struct>
       <class>var</class>
-      <storage>RAM</storage>
+      <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
    </VarDec>
@@ -29824,7 +29824,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut8666p0002</help>
+      <help>Digital output pin selection for DOut8675p0002</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACPin</struct>
       <storage>FLASH</storage>
@@ -31073,7 +31073,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9248p0004</help>
+      <help>Digital output pin selection for DOut9277p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN1Pin</struct>
       <storage>FLASH</storage>
@@ -31177,7 +31177,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9249p0004</help>
+      <help>Digital output pin selection for DOut9278p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN2Pin</struct>
       <storage>FLASH</storage>
@@ -31281,7 +31281,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9267p0004</help>
+      <help>Digital output pin selection for DOut9296p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>

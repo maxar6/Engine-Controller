@@ -50,7 +50,7 @@
                <Default>0.0</Default>
                <Name>ForcedShutdown</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>MPRD_ovr</Name>
@@ -60,7 +60,7 @@
                <Default>0</Default>
                <Name>ProcessorReboot</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>MPRD_new</Name>
@@ -130,12 +130,12 @@
                <Default>0</Default>
                <Name>ETCTuneEnable</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ETCReq_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>ETCReq_new</Name>
@@ -1535,7 +1535,7 @@
                <Default>1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 </Default>
                <Name>ChargeAirTempEnrichmentMap</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>EquivRatio_ovr</Name>
@@ -1550,7 +1550,7 @@
                <Default>1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 </Default>
                <Name>DesEquivRatioMap</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>EquivRatio_new</Name>
@@ -3316,16 +3316,6 @@
                <Name>ECTFanOff</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>0U</Default>
-               <Name>FAN_Mode</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>1U</Default>
-               <Name>Fan2ECT</Name>
-             </DataStore>
-            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>90.0</Default>
                <Name>IATFanOn</Name>
@@ -3334,11 +3324,6 @@
                <DataType>real32</DataType>
                <Default>80.0</Default>
                <Name>IATFanOff</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>0U</Default>
-               <Name>Fan2IAT</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -3353,12 +3338,7 @@
             <DataStore ref="Constant">
                <DataType>uint8</DataType>
                <Default>0U</Default>
-               <Name>Fan2ACPres</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>0U</Default>
-               <Name>Fan2ACSw</Name>
+               <Name>FAN_Mode</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>uint8</DataType>
@@ -3379,6 +3359,26 @@
                <DataType>uint8</DataType>
                <Default>0U</Default>
                <Name>Fan1ACSw</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>1U</Default>
+               <Name>Fan2ECT</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>Fan2IAT</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>Fan2ACPres</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>Fan2ACSw</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -3865,7 +3865,7 @@
                <Default>0.5</Default>
                <Name>FinalGain</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ECT_ovr</Name>
@@ -3895,7 +3895,7 @@
                <Default>0.0</Default>
                <Name>ECTDefault</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>ECT_new</Name>
@@ -3910,7 +3910,7 @@
                <Default>10.0</Default>
                <Name>ECTMin</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>IAT_ovr</Name>
@@ -3940,7 +3940,7 @@
                <Default>0.0</Default>
                <Name>IATDefault</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>IAT_new</Name>
@@ -3955,7 +3955,7 @@
                <Default>10.0</Default>
                <Name>IATMin</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>EVAP_ovr</Name>
@@ -3985,7 +3985,7 @@
                <Default>0.0</Default>
                <Name>EVAPDefault</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>EVAP_new</Name>
@@ -4000,7 +4000,7 @@
                <Default>10.0</Default>
                <Name>EVAPMin</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>CAT_ovr</Name>
@@ -4030,7 +4030,7 @@
                <Default>0.0</Default>
                <Name>CATDefault</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>CAT_new</Name>
@@ -4210,12 +4210,12 @@
                <Default>0</Default>
                <Name>AC_Polarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>AC_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>AC_new</Name>
@@ -4225,7 +4225,7 @@
                <Default>0U</Default>
                <Name>APP_AdaptMode</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>APP2_ovr</Name>
@@ -4260,17 +4260,17 @@
                <Default>0.005</Default>
                <Name>APP2FiltConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>APP2_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>APP2_Adapt_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>APP2_Adapt_new</Name>
@@ -4305,7 +4305,7 @@
                <Default>10.0</Default>
                <Name>APP2_AdaptDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>APP1_ovr</Name>
@@ -4340,17 +4340,17 @@
                <Default>0.005</Default>
                <Name>APP1FiltConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>APP1_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>APP1_Adapt_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>APP1_Adapt_new</Name>
@@ -4405,7 +4405,7 @@
                <Default>4U</Default>
                <Name>RunLatchTDCs</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ACSw_ovr</Name>
@@ -4420,12 +4420,12 @@
                <Default>0</Default>
                <Name>ACSwPolarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>ACSw_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>VSPD_ovr</Name>
@@ -4455,12 +4455,12 @@
                <Default>0.0</Default>
                <Name>VSPDDefault</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>VSPD_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ACPres_ovr</Name>
@@ -4485,7 +4485,7 @@
                <Default>1.0</Default>
                <Name>ACPresDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>ACPres_new</Name>
@@ -4495,12 +4495,12 @@
                <Default>0.005</Default>
                <Name>RPMFiltConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>TPS1_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>TPS1_new</Name>
@@ -4535,12 +4535,12 @@
                <Default>10.0</Default>
                <Name>TPS1DfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>TPS2_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>TPS2_new</Name>
@@ -4575,7 +4575,7 @@
                <Default>10.0</Default>
                <Name>TPS2DfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>FuelSens_ovr</Name>
@@ -4615,7 +4615,7 @@
                <Default>0.005</Default>
                <Name>FuelSensFilterConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>FuelSens_new</Name>
@@ -4660,7 +4660,7 @@
                <Default>1U</Default>
                <Name>Bank2_Enable</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_EquivRatio_ovr</Name>
@@ -4670,12 +4670,12 @@
                <Default>0.005</Default>
                <Name>Bank2_EquivRatioFilterConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_Lambda_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_Lambda_Ovr_new</Name>
@@ -4695,12 +4695,12 @@
                <Default>1.0</Default>
                <Name>Bank2_EquivRatioDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_EquivRatio_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_EquivRatio_ovr</Name>
@@ -4710,12 +4710,12 @@
                <Default>0.005</Default>
                <Name>Bank1_EquivRatioFilterConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_Lambda_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_Lambda_Ovr_new</Name>
@@ -4735,7 +4735,7 @@
                <Default>1.0</Default>
                <Name>Bank1_EquivRatioDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_EquivRatio_new</Name>
@@ -4815,7 +4815,7 @@
                <Default>0U</Default>
                <Name>IAT05Idx</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>SysVolt_ovr</Name>
@@ -4840,7 +4840,7 @@
                <Default>1.0</Default>
                <Name>SysVoltDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>SysVolt_new</Name>
@@ -4860,7 +4860,7 @@
                <Default>0U</Default>
                <Name>SysVolt09Idx</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>MAP_ovr</Name>
@@ -4885,7 +4885,7 @@
                <Default>1.0</Default>
                <Name>MAPDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>MAP_new</Name>
@@ -5110,7 +5110,7 @@
                <Default>1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 ;1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 </Default>
                <Name>VETempCorrMap</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>MAF_ovr</Name>
@@ -5140,7 +5140,7 @@
                <Default>0.0</Default>
                <Name>MAFDefault</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>MAF_new</Name>
@@ -5235,7 +5235,7 @@
                <Default>0U</Default>
                <Name>IAT_KeyUp09Idx</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ClutchSw_ovr</Name>
@@ -5250,12 +5250,12 @@
                <Default>0</Default>
                <Name>ClutchSwPolarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>ClutchSw_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Scramble_ovr</Name>
@@ -5275,12 +5275,12 @@
                <Default>0.08</Default>
                <Name>ScrambleDebounceDelay</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>Scramble_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>TwoStep_ovr</Name>
@@ -5295,12 +5295,12 @@
                <Default>0.08</Default>
                <Name>TwoStepDebounceDelay</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>TwoStep_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>MAPTime_ovr</Name>
@@ -5310,7 +5310,7 @@
                <Default>0.005</Default>
                <Name>MAPTimeFilterConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>MAPTime_new</Name>
@@ -5320,7 +5320,7 @@
                <Default>0</Default>
                <Name>RevLimitType</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>FuelPres_ovr</Name>
@@ -5345,12 +5345,12 @@
                <Default>1.0</Default>
                <Name>FuelPresDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>FuelPres_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>OilPres_ovr</Name>
@@ -5375,7 +5375,7 @@
                <Default>1.0</Default>
                <Name>OilPresDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>OilPres_new</Name>
@@ -5385,30 +5385,30 @@
                <Default>0</Default>
                <Name>FAN1_Polarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>FAN1_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>FAN1_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>FAN1_PWM_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0.0</Default>
-               <Name>FAN1_PWM_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>1.0</Default>
                <Name>FAN1_PWMGain</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>FAN1_PWM_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>FAN1_PWM_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -5435,30 +5435,30 @@
                <Default>0</Default>
                <Name>FAN2_Polarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>FAN2_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>FAN2_new</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>FAN2_PWM_ovr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>boolean</DataType>
-               <Default>0.0</Default>
-               <Name>FAN2_PWM_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>1.0</Default>
                <Name>FAN2_PWMGain</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>FAN2_PWM_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>FAN2_PWM_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -5485,12 +5485,12 @@
                <Default>0</Default>
                <Name>FUELP_Polarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>FUELP_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ESTOP_ovr</Name>
@@ -5500,12 +5500,12 @@
                <Default>0</Default>
                <Name>ESTOPPolarity</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>ESTOP_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>FUELP_new</Name>
@@ -5525,12 +5525,12 @@
                <Default>20.0</Default>
                <Name>ETC_CutPower_ETC</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ETC_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>ETC_new</Name>
@@ -5560,12 +5560,12 @@
                <Default>1.0</Default>
                <Name>IAC_PGain</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>IAC_P_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>IAC_P_new</Name>
@@ -5595,12 +5595,12 @@
                <Default>1.0</Default>
                <Name>IAC_SGain</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>IAC_S_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>IAC_S_new</Name>
@@ -5625,17 +5625,17 @@
                <Default>100.0</Default>
                <Name>IAC_SFrequency</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>SOI_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>SOI_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Mech_PW_ovr</Name>
@@ -5785,7 +5785,7 @@
                <Default>1.495 1.293 1.155 1.05 0.968 0.898 0.865 0.823 0.743 </Default>
                <Name>InjTurnOnTbl</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 </Default>
                <Name>Mech_PW_new</Name>
@@ -5795,22 +5795,22 @@
                <Default>50.0</Default>
                <Name>InjectorMaxDuration</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Elec_PW_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Elec_PW_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>MakeUp_EOI_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>MakeUp_EOI_new</Name>
@@ -5825,22 +5825,22 @@
                <Default>1.0</Default>
                <Name>InjectiorMinDuration</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>InjEnable_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>ESTOP_FuelInj_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>ESTOP_FuelInj_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0.0 0U 0U 0U 0U 0U 0U 0U </Default>
                <Name>InjEnable_new</Name>
@@ -5850,12 +5850,12 @@
                <Default>1.0</Default>
                <Name>WASTEGATEGain</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>WASTEGATE_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>WASTEGATE_new</Name>
@@ -5930,7 +5930,7 @@
                <Default>0.05</Default>
                <Name>PostO2DelagFiltConst</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>SensVolt_ovr</Name>
@@ -5955,167 +5955,167 @@
                <Default>1.0</Default>
                <Name>SensVoltDfltValue</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>SensVolt_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_OxygenConcentration_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_OxygenConcentration_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_OxygenConcentration_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_OxygenConcentration_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_SystemVolts_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_SystemVolts_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_HeaterVolts_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_HeaterVolts_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_SensorDetectedStatus_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_SensorDetectedStatus_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_UsingFreeAreCalState_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_UsingFreeAreCalState_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_DataValidState_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_DataValidState_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_SensorStatus_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_SensorStatus_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank2_SensorFaultState_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank2_SensorFaultState_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_SystemVolts_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_SystemVolts_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_HeaterVolts_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_HeaterVolts_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_SensorDetectedStatus_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_SensorDetectedStatus_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_UsingFreeAreCalState_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_UsingFreeAreCalState_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_DataValidState_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_DataValidState_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_SensorStatus_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_SensorStatus_Ovr_new</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
                <Name>Bank1_SensorFaultState_Ovr_ovr</Name>
              </DataStore>
-            <DataStore ref="Volatile">
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_SensorFaultState_Ovr_new</Name>
@@ -6713,7 +6713,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9794p0004</Name>
+               <Name>init_resource_DOut9819p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -6798,7 +6798,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8666p0002</Name>
+               <Name>init_resource_DOut8675p0002</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -7073,7 +7073,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9248p0004</Name>
+               <Name>init_resource_DOut9277p0001</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -7093,7 +7093,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9249p0004</Name>
+               <Name>init_resource_DOut9278p0001</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -7113,7 +7113,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9267p0004</Name>
+               <Name>init_resource_DOut9296p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -12071,7 +12071,7 @@
         		                <min>0.000000</min>
         		                <name>MPRD_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -12105,7 +12105,7 @@
         		                <min>0.000000</min>
         		                <name>MPRD_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>boolean</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -12336,7 +12336,7 @@
         		                <min>0.000000</min>
         		                <name>ETCReq_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -12352,7 +12352,7 @@
         		                <min>0.000000</min>
         		                <name>ETCReq_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -15844,7 +15844,7 @@
         		                <min>0.000000</min>
         		                <name>EquivRatio_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -15859,7 +15859,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>EquivRatio_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -18049,39 +18049,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FAN_Mode">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_21</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>3.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FAN_Mode</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Fan2ECT">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>3.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-        		                <help>Fan Enabler</help>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Fan2ECT</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="IATFanOn">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -18113,23 +18080,6 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>degC</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Fan2IAT">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>3.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-        		                <help>Fan Enabler</help>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Fan2IAT</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -18167,35 +18117,17 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Fan2ACPres">
+			    <DataStoreVarDec ref="FAN_Mode">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <enum_name>VarDecEnum_21</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
         		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-        		                <help>Fan Enabler</help>
         		                <max>255.000000</max>
         		                <min>0.000000</min>
-        		                <name>Fan2ACPres</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Fan2ACSw">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>3.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-        		                <help>Fan Enabler</help>
-        		                <max>255.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Fan2ACSw</name>
+        		                <name>FAN_Mode</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -18264,6 +18196,74 @@
         		                <max>255.000000</max>
         		                <min>0.000000</min>
         		                <name>Fan1ACSw</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fan2ECT">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+        		                <help>Fan Enabler</help>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Fan2ECT</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fan2IAT">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+        		                <help>Fan Enabler</help>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Fan2IAT</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fan2ACPres">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+        		                <help>Fan Enabler</help>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Fan2ACPres</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Fan2ACSw">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_4</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
+        		                <help>Fan Enabler</help>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Fan2ACSw</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -19371,7 +19371,7 @@
         		                <min>0.000000</min>
         		                <name>ECT_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -19421,7 +19421,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>ECT_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>C</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -19472,7 +19472,7 @@
         		                <min>0.000000</min>
         		                <name>IAT_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -19522,7 +19522,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>IAT_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>C</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -19573,7 +19573,7 @@
         		                <min>0.000000</min>
         		                <name>EVAP_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -19623,7 +19623,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>EVAP_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>C</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -19674,7 +19674,7 @@
         		                <min>0.000000</min>
         		                <name>CAT_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -19724,7 +19724,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>CAT_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>C</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20201,7 +20201,7 @@
         		                <min>0.000000</min>
         		                <name>AC_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20217,7 +20217,7 @@
         		                <min>0.000000</min>
         		                <name>AC_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>bool</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20250,7 +20250,7 @@
         		                <min>0.000000</min>
         		                <name>APP2_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20317,7 +20317,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>APP2_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20334,7 +20334,7 @@
         		                <min>0.000000</min>
         		                <name>APP2_Adapt_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20350,7 +20350,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>APP2_Adapt_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20469,7 +20469,7 @@
         		                <min>0.000000</min>
         		                <name>APP1_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20536,7 +20536,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>APP1_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20553,7 +20553,7 @@
         		                <min>0.000000</min>
         		                <name>APP1_Adapt_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20569,7 +20569,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>APP1_Adapt_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20756,7 +20756,7 @@
         		                <min>0.000000</min>
         		                <name>ACSw_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20806,7 +20806,7 @@
         		                <min>0.000000</min>
         		                <name>ACSw_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Boolean</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20823,7 +20823,7 @@
         		                <min>0.000000</min>
         		                <name>VSPD_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20873,7 +20873,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>VSPD_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>MPH</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -20890,7 +20890,7 @@
         		                <min>0.000000</min>
         		                <name>ACPres_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -20974,7 +20974,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>ACPres_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>kPa Gauge</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21008,7 +21008,7 @@
         		                <min>0.000000</min>
         		                <name>TPS1_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21024,7 +21024,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>TPS1_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21143,7 +21143,7 @@
         		                <min>0.000000</min>
         		                <name>TPS2_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21159,7 +21159,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>TPS2_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21278,7 +21278,7 @@
         		                <min>0.000000</min>
         		                <name>FuelSens_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21409,7 +21409,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>FuelSens_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21459,7 +21459,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_EquivRatio_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21492,7 +21492,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_Lambda_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21507,7 +21507,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_Lambda_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21574,7 +21574,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_EquivRatio_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>EquivRatio</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21591,7 +21591,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_EquivRatio_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21624,7 +21624,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_Lambda_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21639,7 +21639,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_Lambda_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21706,7 +21706,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_EquivRatio_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>EquivRatio</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21723,7 +21723,7 @@
         		                <min>0.000000</min>
         		                <name>SysVolt_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21807,7 +21807,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>SysVolt_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Volts</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -21824,7 +21824,7 @@
         		                <min>0.000000</min>
         		                <name>MAP_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -21908,7 +21908,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>MAP_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>kPa</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22093,7 +22093,7 @@
         		                <min>0.000000</min>
         		                <name>MAF_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22143,7 +22143,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>MAF_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>g/s</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22210,7 +22210,7 @@
         		                <min>0.000000</min>
         		                <name>ClutchSw_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22260,7 +22260,7 @@
         		                <min>0.000000</min>
         		                <name>ClutchSw_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Boolean</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22277,7 +22277,7 @@
         		                <min>0.000000</min>
         		                <name>Scramble_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22344,7 +22344,7 @@
         		                <min>0.000000</min>
         		                <name>Scramble_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Boolean</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22361,7 +22361,7 @@
         		                <min>0.000000</min>
         		                <name>TwoStep_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22411,7 +22411,7 @@
         		                <min>0.000000</min>
         		                <name>TwoStep_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Boolean</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22428,7 +22428,7 @@
         		                <min>0.000000</min>
         		                <name>MAPTime_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22461,7 +22461,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>MAPTime_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>kPa</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22495,7 +22495,7 @@
         		                <min>0.000000</min>
         		                <name>FuelPres_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22579,7 +22579,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>FuelPres_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>kPa Gauge</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22596,7 +22596,7 @@
         		                <min>0.000000</min>
         		                <name>OilPres_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22680,7 +22680,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>OilPres_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>psi</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -22714,7 +22714,7 @@
         		                <min>0.000000</min>
         		                <name>FAN1_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22730,41 +22730,8 @@
         		                <min>0.000000</min>
         		                <name>FAN1_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>bool</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FAN1_PWM_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FAN1_PWM_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FAN1_PWM_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
-        		                <help>Override result of linear sensor characterization, in engineering units</help>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FAN1_PWM_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22782,6 +22749,39 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>%/%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FAN1_PWM_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>FAN1_PWM_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FAN1_PWM_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM | FAN1_PWM Override</group>
+        		                <help>Override result of linear sensor characterization, in engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>FAN1_PWM_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22882,7 +22882,7 @@
         		                <min>0.000000</min>
         		                <name>FAN2_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22898,41 +22898,8 @@
         		                <min>0.000000</min>
         		                <name>FAN2_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>bool</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FAN2_PWM_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FAN2_PWM_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FAN2_PWM_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
-        		                <help>Override result of linear sensor characterization, in engineering units</help>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FAN2_PWM_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22950,6 +22917,39 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>%/%</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FAN2_PWM_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>FAN2_PWM_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FAN2_PWM_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM | FAN2_PWM Override</group>
+        		                <help>Override result of linear sensor characterization, in engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>FAN2_PWM_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23050,7 +23050,7 @@
         		                <min>0.000000</min>
         		                <name>FUELP_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23066,7 +23066,7 @@
         		                <min>0.000000</min>
         		                <name>ESTOP_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23099,7 +23099,7 @@
         		                <min>0.000000</min>
         		                <name>ESTOP_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Boolean</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -23116,7 +23116,7 @@
         		                <min>0.000000</min>
         		                <name>FUELP_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>bool</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -23184,7 +23184,7 @@
         		                <min>0.000000</min>
         		                <name>ETC_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23200,7 +23200,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>ETC_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23284,7 +23284,7 @@
         		                <min>0.000000</min>
         		                <name>IAC_P_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23300,7 +23300,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>IAC_P_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -23402,7 +23402,7 @@
         		                <min>0.000000</min>
         		                <name>IAC_S_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23418,7 +23418,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>IAC_S_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -23503,7 +23503,7 @@
         		                <min>0.000000</min>
         		                <name>SOI_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23518,7 +23518,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>SOI_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23534,7 +23534,7 @@
         		                <min>0.000000</min>
         		                <name>Mech_PW_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23898,7 +23898,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Mech_PW_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23931,7 +23931,7 @@
         		                <min>0.000000</min>
         		                <name>Elec_PW_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23946,7 +23946,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Elec_PW_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23962,7 +23962,7 @@
         		                <min>0.000000</min>
         		                <name>MakeUp_EOI_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -23977,7 +23977,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>MakeUp_EOI_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24027,7 +24027,7 @@
         		                <min>0.000000</min>
         		                <name>InjEnable_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24043,7 +24043,7 @@
         		                <min>0.000000</min>
         		                <name>ESTOP_FuelInj_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24058,7 +24058,7 @@
         		                <min>0.000000</min>
         		                <name>ESTOP_FuelInj_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24073,7 +24073,7 @@
         		                <min>0.000000</min>
         		                <name>InjEnable_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24106,7 +24106,7 @@
         		                <min>0.000000</min>
         		                <name>WASTEGATE_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24122,7 +24122,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>WASTEGATE_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -24224,7 +24224,7 @@
         		                <min>0.000000</min>
         		                <name>SensVolt_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24308,7 +24308,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>SensVolt_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <units>Volts</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
@@ -24325,7 +24325,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_OxygenConcentration_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24340,7 +24340,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_OxygenConcentration_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24356,7 +24356,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_OxygenConcentration_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24371,7 +24371,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_OxygenConcentration_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24387,7 +24387,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_SystemVolts_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24402,7 +24402,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_SystemVolts_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24418,7 +24418,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_HeaterVolts_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24433,7 +24433,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_HeaterVolts_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24449,7 +24449,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_SensorDetectedStatus_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24464,7 +24464,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_SensorDetectedStatus_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24480,7 +24480,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_UsingFreeAreCalState_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24495,7 +24495,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_UsingFreeAreCalState_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24511,7 +24511,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_DataValidState_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24526,7 +24526,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_DataValidState_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24542,7 +24542,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_SensorStatus_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24557,7 +24557,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_SensorStatus_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24573,7 +24573,7 @@
         		                <min>0.000000</min>
         		                <name>Bank2_SensorFaultState_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24588,7 +24588,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank2_SensorFaultState_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24604,7 +24604,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_SystemVolts_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24619,7 +24619,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_SystemVolts_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24635,7 +24635,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_HeaterVolts_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24650,7 +24650,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_HeaterVolts_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24666,7 +24666,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_SensorDetectedStatus_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24681,7 +24681,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_SensorDetectedStatus_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24697,7 +24697,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_UsingFreeAreCalState_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24712,7 +24712,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_UsingFreeAreCalState_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24728,7 +24728,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_DataValidState_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24743,7 +24743,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_DataValidState_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24759,7 +24759,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_SensorStatus_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24774,7 +24774,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_SensorStatus_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24790,7 +24790,7 @@
         		                <min>0.000000</min>
         		                <name>Bank1_SensorFaultState_Ovr_ovr</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -24805,7 +24805,7 @@
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_SensorFaultState_Ovr_new</name>
         		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -33942,7 +33942,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut8666p0002</help>
+        		                <help>Digital output pin selection for DOut8675p0002</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACPin</name>
@@ -34605,7 +34605,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9248p0004</help>
+        		                <help>Digital output pin selection for DOut9277p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FAN1Pin</name>
@@ -34639,7 +34639,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9249p0004</help>
+        		                <help>Digital output pin selection for DOut9278p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FAN2Pin</name>
@@ -34673,7 +34673,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9267p0004</help>
+        		                <help>Digital output pin selection for DOut9296p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -34932,17 +34932,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_016.dll" > "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_016.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_018.dll" > "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_018.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_016.xml" -o  "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_016.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_018.xml" -o  "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_018.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in c:\ecufiles\tdbdll</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_016.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Fischers-Bullshit\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_018.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
                 </Command>
         </Add>
     

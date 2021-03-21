@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.1987
+ * Model version                  : 1.1996
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sun Oct 04 18:30:28 2020
+ * C/C++ source code generated on : Thu Mar 18 14:59:10 2021
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -138,6 +138,8 @@ typedef struct {
   real_T s135_SparkAdv;                /* '<S135>/Merge4' */
   real_T s503_Sum1;                    /* '<S503>/Sum1' */
   real_T s507_Sum1;                    /* '<S507>/Sum1' */
+  real_T s135_FAN1;                    /* '<S135>/Merge12' */
+  real_T s135_FAN2;                    /* '<S135>/Merge13' */
   real_T s535_Merge;                   /* '<S535>/Merge' */
   real_T s561_Merge;                   /* '<S561>/Merge' */
   real_T s135_SparkEnergy;             /* '<S135>/Merge5' */
@@ -198,8 +200,8 @@ typedef struct {
   real_T s175_Switch;                  /* '<S175>/Switch' */
   real_T s147_motohawk_interpolation_2d;/* '<S147>/motohawk_interpolation_2d' */
   real_T s147_Sum3;                    /* '<S147>/Sum3' */
-  real_T s149_MinMax1;                 /* '<S149>/MinMax1' */
   real_T s149_MinMax;                  /* '<S149>/MinMax' */
+  real_T s149_MinMax1;                 /* '<S149>/MinMax1' */
   real_T s303_Add;                     /* '<S303>/Add' */
   real_T s300_Product;                 /* '<S300>/Product' */
   real_T s299_Product;                 /* '<S299>/Product' */
@@ -340,8 +342,6 @@ typedef struct {
   boolean_T s805_LogicalOperator;      /* '<S805>/Logical Operator' */
   boolean_T s135_FUELP;                /* '<S135>/Merge7' */
   boolean_T s22_LogicalOperator2[8];   /* '<S22>/Logical Operator2' */
-  boolean_T s135_FAN1;                 /* '<S135>/Merge12' */
-  boolean_T s135_FAN2;                 /* '<S135>/Merge13' */
   boolean_T s850_LogicalOperator;      /* '<S850>/Logical Operator' */
   boolean_T s851_LogicalOperator;      /* '<S851>/Logical Operator' */
   boolean_T s443_motohawk_din;         /* '<S443>/motohawk_din' */

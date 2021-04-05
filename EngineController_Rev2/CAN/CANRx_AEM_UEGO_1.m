@@ -109,7 +109,7 @@ function msg = CANRx_AEM_UEGO_1()
   msg.module                  = 'UEGO';
   msg.channel                 = 1;
 
-  msg.idext                   = 'STANDARD';
+  msg.idext                   = 'EXTENDED';
   msg.id                      = hex2dec('180');
   msg.idmask                  = hex2dec('ffffffff');
   msg.idinherit               =  0;
@@ -160,8 +160,8 @@ function msg = CANRx_AEM_UEGO_1()
   
   msg.fields{5}.name          = 'SensorDetectedStatus';
   msg.fields{5}.units         = 'enum';
-  msg.fields{5}.start_bit     = 8;
-  msg.fields{5}.bit_length    = 4;
+  msg.fields{5}.start_bit     = 9;
+  msg.fields{5}.bit_length    = 1;
   msg.fields{5}.byte_order    = 'BIG_ENDIAN';
   msg.fields{5}.data_type     = 'UNSIGNED';
   msg.fields{5}.scale         = 1;

@@ -115,10 +115,10 @@ unsigned int sf_BaseEngineController_LS_process_check_sum_call( int nlhs,
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3090578895U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2368636319U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(674888380U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(54628353U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2552579020U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2993789274U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(4069993421U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(1946094726U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);

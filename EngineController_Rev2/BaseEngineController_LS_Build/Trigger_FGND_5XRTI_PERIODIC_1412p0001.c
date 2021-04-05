@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.1996
+ * Model version              : 1.2001
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Thu Mar 18 14:59:10 2021
+ * C source code generated on : Mon Apr 05 00:03:01 2021
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_5XRTI_PERIODIC_1412p0001(void)
 {
-  /* Named constants for Stateflow: '<S913>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S914>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -56,7 +56,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1412p0001(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_motohawk_interpolation_2d1 = TableInterpolation2D_real_T
-          (rtb_SpkEnergy09Idx, BaseEngineController_LS_B.s401_motohawk_prelookup,
+          (rtb_SpkEnergy09Idx, BaseEngineController_LS_B.s402_motohawk_prelookup,
            (real_T *) ((CoilDwellMap_DataStore())), 9, 9);
         (CoilDwell_DataStore()) = rtb_motohawk_interpolation_2d1;
       }

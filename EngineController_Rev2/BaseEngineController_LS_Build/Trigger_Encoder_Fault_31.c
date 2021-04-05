@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.1996
+ * Model version              : 1.2001
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Thu Mar 18 14:59:10 2021
+ * C source code generated on : Mon Apr 05 00:03:01 2021
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -28,16 +28,16 @@ void Trigger_Encoder_Fault_31(void)
     BaseEngineController_LS_M->Timing.clockTickH0 = upper32Bits;
   }
 
-  /* Output and update for function-call system: '<S492>/motohawk_model_probe_eval_f' */
+  /* Output and update for function-call system: '<S493>/motohawk_model_probe_eval_f' */
 
-  /* Sum: '<S499>/Sum' incorporates:
-   *  Constant: '<S499>/Constant'
-   *  UnitDelay: '<S499>/Unit Delay'
+  /* Sum: '<S500>/Sum' incorporates:
+   *  Constant: '<S500>/Constant'
+   *  UnitDelay: '<S500>/Unit Delay'
    */
-  BaseEngineController_LS_B.s499_Sum = 1U +
-    BaseEngineController_LS_DWork.s499_UnitDelay_DSTATE;
+  BaseEngineController_LS_B.s500_Sum = 1U +
+    BaseEngineController_LS_DWork.s500_UnitDelay_DSTATE;
 
-  /* Update for UnitDelay: '<S499>/Unit Delay' */
-  BaseEngineController_LS_DWork.s499_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s499_Sum;
+  /* Update for UnitDelay: '<S500>/Unit Delay' */
+  BaseEngineController_LS_DWork.s500_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s500_Sum;
 }

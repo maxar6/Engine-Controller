@@ -25611,109 +25611,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>DeltaMAP17IdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
-      <struct>ConstantWork.DeltaMAP17IdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>17</len>
-      <input>DeltaMAP17In</input>
-      <index>DeltaMAP17Idx</index>
-   </VarDec>
-   <VarDec>
-      <name>DeltaMAP17Idx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
-      <struct>VolatileWork_BSS.DeltaMAP17Idx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>DeltaMAP17In</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
-      <struct>VolatileWork_BSS.DeltaMAP17In</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>DeltaMAP_MultMap</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>mult</units>
-      <ctype>const Constant_T</ctype>
-      <help>Transient Fueling Multiplier for adjustment based on delta MAP</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
-      <struct>ConstantWork.DeltaMAP_MultMap.data</struct>
-      <class>interpolation_2d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <output>DeltaMAP_Mult</output>
-      <col_prelookup>DeltaMAP17IdxArr</col_prelookup>
-      <col_len>17</col_len>
-      <row_prelookup>MAF09IdxArr</row_prelookup>
-      <row_len>9</row_len>
-   </VarDec>
-   <VarDec>
-      <name>DeltaMAP_Mult</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>mult</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Transient Fueling Multiplier for adjustment based on delta MAP</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
-      <struct>VolatileWork_BSS.DeltaMAP_Mult</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>DeltaTPS17IdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -25811,6 +25708,109 @@
       <help>Transient Fueling Multiplier for adjustment based on delta TPS</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
       <struct>VolatileWork_BSS.DeltaTPS_Mult</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP17IdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>ConstantWork.DeltaMAP17IdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>17</len>
+      <input>DeltaMAP17In</input>
+      <index>DeltaMAP17Idx</index>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP17Idx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>VolatileWork_BSS.DeltaMAP17Idx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP17In</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>VolatileWork_BSS.DeltaMAP17In</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP_MultMap</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>const Constant_T</ctype>
+      <help>Transient Fueling Multiplier for adjustment based on delta MAP</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>ConstantWork.DeltaMAP_MultMap.data</struct>
+      <class>interpolation_2d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <output>DeltaMAP_Mult</output>
+      <col_prelookup>DeltaMAP17IdxArr</col_prelookup>
+      <col_len>17</col_len>
+      <row_prelookup>MAF09IdxArr</row_prelookup>
+      <row_len>9</row_len>
+   </VarDec>
+   <VarDec>
+      <name>DeltaMAP_Mult</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mult</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Transient Fueling Multiplier for adjustment based on delta MAP</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|Fuel System Manager|Injector Manager|Delta TPS Transient Fueling</group>
+      <struct>VolatileWork_BSS.DeltaMAP_Mult</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -29824,7 +29824,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut8675p0002</help>
+      <help>Digital output pin selection for DOut8669p0002</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACPin</struct>
       <storage>FLASH</storage>
@@ -31073,7 +31073,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9277p0001</help>
+      <help>Digital output pin selection for DOut9273p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN1Pin</struct>
       <storage>FLASH</storage>
@@ -31177,7 +31177,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9278p0001</help>
+      <help>Digital output pin selection for DOut9274p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN2Pin</struct>
       <storage>FLASH</storage>
@@ -31281,7 +31281,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9296p0001</help>
+      <help>Digital output pin selection for DOut9294p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>
@@ -31649,63 +31649,6 @@
          <item name="2.7V" value="1"/>
          <default>Unknown</default>
       </enum>
-   </VarDec>
-   <VarDec>
-      <name>CAN_1_std_receive_count</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>4.294967295E9</max>
-      <min>0</min>
-      <format>8.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Total number of received std CAN messages on bus CAN_1</help>
-      <group>System | Debug | Resources | CAN</group>
-      <struct>VolatileWork_BSS.CAN_1_std_receive_count</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint32</type>
-   </VarDec>
-   <VarDec>
-      <name>CAN_1_std_handled_count</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>4.294967295E9</max>
-      <min>0</min>
-      <format>8.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Total number of handled std CAN messages on bus CAN_1</help>
-      <group>System | Debug | Resources | CAN</group>
-      <struct>VolatileWork_BSS.CAN_1_std_handled_count</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint32</type>
-   </VarDec>
-   <VarDec>
-      <name>CAN_1_std_last_unhandled_id</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>4.294967295E9</max>
-      <min>0</min>
-      <format>8.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Last received std CAN message on bus CAN_1, which was unhandled</help>
-      <group>System | Debug | Resources | CAN</group>
-      <struct>VolatileWork_BSS.CAN_1_std_last_unhandled_id</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint32</type>
    </VarDec>
    <VarDec>
       <name>CAN_1_ext_receive_count</name>

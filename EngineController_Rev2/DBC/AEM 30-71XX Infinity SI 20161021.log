@@ -1,0 +1,14 @@
+Conversion Warnings Log
+
+
+MSG_ID: 32546825 	MSG_TYPE: X 	MSG_NAME: Infinity8
+	SIG_NAME: SteeringAngle, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 32546820 	MSG_TYPE: X 	MSG_NAME: Infinity3
+	SIG_NAME: CoolantTempProtectionState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 32546819 	MSG_TYPE: X 	MSG_NAME: Infinity2
+	SIG_NAME: ECUBatteryVoltage, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 1073741824 	MSG_TYPE: X 	MSG_NAME: VECTOR__INDEPENDENT_SIG_MSG
+	SIG_NAME: EngineLoad, STATUS: No error, ACTION: Signal Discarded

@@ -1,0 +1,590 @@
+//******************************BUSMASTER Messages and signals Database ******************************//
+
+[DATABASE_VERSION] 1.3
+
+[PROTOCOL] CAN
+
+[BUSMASTER_VERSION] [3.2.2]
+[NUMBER_OF_MESSAGES] 16
+
+[START_MSG] Infinity8,32546825,8,3,0,X,AEMInfinity
+[START_SIGNALS] AntilagBoostTarget,16,6,0,U,65535,0,0,0,0.1,pressure:kPa,,
+[START_SIGNALS] SteeringAngle,16,4,0,U,32768,0,0,-3276.8,0.1,angle:deg,,
+[START_SIGNALS] BrakePress,16,2,0,U,65535,0,0,0,0.006895,pressure_gauge:bar(g),,
+[END_MSG]
+
+[START_MSG] InfinityKnock2,32546849,8,2,0,X,AEMInfinity
+[START_SIGNALS] KnockCyl10IgnOffset,8,2,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl9gnOffset,8,1,0,U,0,255,0,0,-0.1,angle:deg,,
+[END_MSG]
+
+[START_MSG] InfinityKnock1,32546848,8,8,0,X,AEMInfinity
+[START_SIGNALS] KnockCyl8IgnOffset,8,8,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl7IgnOffset,8,7,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl6IgnOffset,8,6,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl5IgnOffset,8,5,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl4IgnOffset,8,4,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl3IgnOffset,8,3,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl2IgnOffset,8,2,0,U,0,255,0,0,-0.1,angle:deg,,
+[START_SIGNALS] KnockCyl1IgnOffset,8,1,0,U,0,255,0,0,-0.1,angle:deg,,
+[END_MSG]
+
+[START_MSG] InfinityTC3,32546834,7,4,0,X,AEMInfinity
+[START_SIGNALS] TracControlSlipTargetOffset,8,7,0,U,255,0,0,-80.45,1.609,speed:km/h,,
+[START_SIGNALS] TracControlTorqueReduceRequest,16,6,0,U,65535,0,0,0,0.25,unitless:,,
+[START_SIGNALS] TracControlSlipMeasured,16,4,0,U,65535,0,0,0,0.02,speed:km/h,,
+[START_SIGNALS] TracControlSlipTarget,16,2,0,U,65535,0,0,0,0.02,speed:km/h,,
+[END_MSG]
+
+[START_MSG] InfinityTC2,32546833,8,4,0,X,AEMInfinity
+[START_SIGNALS] WheelSpeedRightNonDriven,16,8,0,U,65535,0,0,0,0.02,speed:km/h,,
+[START_SIGNALS] WheelSpeedLeftNonDriven,16,6,0,U,65535,0,0,0,0.02,speed:km/h,,
+[START_SIGNALS] WheelSpeedRightDriven,16,4,0,U,65535,0,0,0,0.02,speed:km/h,,
+[START_SIGNALS] WheelSpeedLeftDriven,16,2,0,U,65535,0,0,0,0.02,speed:km/h,,
+[END_MSG]
+
+[START_MSG] InfinityTC1,32546832,8,10,0,X,AEMInfinity
+[START_SIGNALS] LaunchSlipSwitchState,1,8,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] LaunchSlipIgnCutArmedState,1,8,1,B,1,0,0,0,1,angular_speed:rpm,,
+[VALUE_DESCRIPTION] "Armed",1
+[VALUE_DESCRIPTION] "Disarmed",0
+[START_SIGNALS] LaunchSlipFuelCutArmedState,1,8,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Armed",1
+[VALUE_DESCRIPTION] "Disarmed",0
+[START_SIGNALS] LaunchSlipEngineSpeedIgnLimit,8,7,0,U,255,0,0,0,100,angular_speed:rpm,,
+[START_SIGNALS] LaunchSlipEngineSpeedFuelLimit,8,6,0,U,255,0,0,0,100,angular_speed:rpm,,
+[START_SIGNALS] TracControlModeSwitchState,8,5,0,U,255,0,0,0,1,unitless:,,
+[START_SIGNALS] TracControlThrottleReduceRequest,8,4,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] TracControlIgnOffsetRequest,8,3,0,U,255,0,0,0,0.25,angle:deg,,
+[START_SIGNALS] TracControlIgnCutRequest,8,2,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] TracControlFuelCutRequest,8,1,0,U,255,0,0,0,0.392157,fraction:%,,
+[END_MSG]
+
+[START_MSG] InfinityDBW,32546829,8,20,0,X,AEMInfinity
+[START_SIGNALS] ThrottleDBW2TrackingErrorState,1,8,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Not Tracking",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW2PosBErrorState,1,8,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW2PosAErrorState,1,8,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW2PosErrorState,1,8,5,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Sensor Disagree",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW2ShutdownState,1,8,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Shutdown",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW2HighAmpErrorState,1,8,4,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Over Current",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW1TrackingErrorState,1,7,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Not Tracking",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW1PosBErrorState,1,7,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW1PosAErrorState,1,7,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW1PosErrorState,1,7,5,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW1ShutdownState,1,7,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Shutdown",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW1HighAmpErrorState,1,7,4,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Over Current",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleStuckProtectionState,1,6,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Stuck Throttle",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottlePedalPos2ErrorState,1,6,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottlePedalPos1ErrorState,1,6,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottlePedalPosErrorState,1,6,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Sensor Disagree",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottleDBW2PosA,8,4,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] ThrottleDBW1PosA,8,3,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] ThrottleDBWTarget,8,2,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] ThrottlePedalPos1,8,1,0,U,255,0,0,0,0.392157,fraction:%,,
+[END_MSG]
+
+[START_MSG] Infinity6,32546823,8,13,0,X,AEMInfinity
+[START_SIGNALS] VTECOutputState,1,8,7,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] ThrottleDBWPedalMapMode,1,8,6,B,1,0,0,1,1,unitless:,,
+[VALUE_DESCRIPTION] "Pedal Map 2",1
+[VALUE_DESCRIPTION] "Pedal Map 1",0
+[START_SIGNALS] AFRModeStatus,2,8,4,U,3,0,0,1,1,unitless:,,
+[VALUE_DESCRIPTION] "A/F Map 4",3
+[VALUE_DESCRIPTION] "A/F Map 3",2
+[VALUE_DESCRIPTION] "A/F Map 2",1
+[VALUE_DESCRIPTION] "A/F Map 1",0
+[START_SIGNALS] IgnitionModeStatus,2,8,2,U,3,0,0,1,1,unitless:,,
+[VALUE_DESCRIPTION] "IGN Map 4",3
+[VALUE_DESCRIPTION] "IGN Map 3",2
+[VALUE_DESCRIPTION] "IGN Map 2",1
+[VALUE_DESCRIPTION] "IGN Map 1",0
+[START_SIGNALS] ECULoggingState,1,8,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Logging",1
+[VALUE_DESCRIPTION] "OFF",0
+[START_SIGNALS] LaunchTimerArmedState,1,8,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Armed",1
+[VALUE_DESCRIPTION] "Disarmed",0
+[START_SIGNALS] OilTemp,8,7,0,U,255,0,0,-50,1,temperature:C,,
+[START_SIGNALS] AmbientAirTemp,8,6,0,U,255,0,0,-50,1,temperature:C,,
+[START_SIGNALS] FuelEthanolContent,8,5,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] BaroPress,8,4,0,U,255,0,0,50,0.25,pressure:kPa,,
+[START_SIGNALS] AFRControlKnockTrim,8,3,0,U,255,0,0,0,0.001,afr:LA,,
+[START_SIGNALS] IgnitionEventProbability,8,2,0,U,255,0,0,0,0.392157,angular_speed:rpm,,
+[START_SIGNALS] FuelInjEventProbability,8,1,0,U,255,0,0,0,0.392157,fraction:%,,
+[END_MSG]
+
+[START_MSG] Infinity5,32546822,8,7,0,X,AEMInfinity
+[START_SIGNALS] EngineTorqueEstimated,16,8,0,U,65535,0,0,-3276.8,0.1,torque:N.m,,
+[START_SIGNALS] EngineCrankcasePress,8,6,0,U,255,0,0,0,1,pressure_gauge:kPa,,
+[START_SIGNALS] CoolantPress,8,5,0,U,255,0,0,0,0.04,pressure_gauge:bar(g),,
+[START_SIGNALS] EngineModeSwitchStatus,8,4,0,U,255,0,0,0,1,unitless:,,
+[START_SIGNALS] FuelInjDutyPrimary,8,3,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] AFR1ControlTrim,8,2,0,U,255,0,0,-64,0.5,fraction:%,,
+[START_SIGNALS] FuelInj1Pulsewidth,8,1,0,U,255,0,0,0,0.1,time:ms,,
+[END_MSG]
+
+[START_MSG] Infinity4,32546821,8,8,0,X,AEMInfinity
+[START_SIGNALS] ClutchPress,8,7,0,U,255,0,0,0,0.344738,pressure_gauge:bar(g),,
+[START_SIGNALS] FuelInjStagedSwitchState,1,8,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] GearShiftSwitchState,1,8,2,B,1,0,0,1,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] ClutchSwitchState,1,8,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] BrakeSwitchState,1,8,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] MassAirflowRev,16,6,0,U,65535,0,0,0,0.0005,unitless:,,
+[START_SIGNALS] MassAirflow,16,4,0,U,65535,0,0,0,0.05,mass_flow:g/s,,
+[START_SIGNALS] LaunchRampTime,16,2,0,U,65535,0,0,0,10,time:ms,,
+[END_MSG]
+
+[START_MSG] Infinity3,32546820,8,20,0,X,AEMInfinity
+[START_SIGNALS] CoolantTempProtectionState,1,8,6,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Limp Mode",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] EngineLimitBoostCutState,1,8,5,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Limp Mode",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] AirConOutputState,1,8,4,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] EngineSyncState,1,8,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Synced",1
+[VALUE_DESCRIPTION] "Not Synced",0
+[START_SIGNALS] AntilagEngineSpeedIgnState,1,8,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Armed",1
+[VALUE_DESCRIPTION] "Disarmed",0
+[START_SIGNALS] AntilagEngineSpeedFuelState,1,8,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Armed",1
+[VALUE_DESCRIPTION] "Disarmed",0
+[START_SIGNALS] OilPressProtectionState,1,8,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Limp Mode",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] AFRControlProtectionState,1,7,7,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Limp Mode",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] MILState,1,7,6,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] EngineProtectionState,1,7,5,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Limp Mode",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] AFRControlState,1,7,4,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Closed Loop",1
+[VALUE_DESCRIPTION] "Open Loop",0
+[START_SIGNALS] NitrousOutputState,1,7,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] CoolantFan2State,1,7,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] CoolantFan1State,1,7,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] FuelPumpState,1,7,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[START_SIGNALS] AFRTarget,8,6,0,U,255,0,0,0.5,0.00390625,afr:LA,,
+[START_SIGNALS] OilPress,8,5,0,U,255,0,0,0,0.04,pressure_gauge:bar(g),,
+[START_SIGNALS] FuelPress,8,4,0,U,255,0,0,0,0.04,pressure_gauge:bar(g),,
+[START_SIGNALS] EngineVolumetricEfficency,8,3,0,U,255,0,0,0,1,fraction:%,,
+[START_SIGNALS] IntakeManifoldAirPress,16,2,0,U,65535,0,0,0,0.1,pressure_gauge:bar(g),,
+[END_MSG]
+
+[START_MSG] Infinity2,32546819,8,6,0,X,AEMInfinity
+[START_SIGNALS] ECUBatteryVoltage,16,8,0,U,65535,0,0,0,0.0002455,voltage:V,,
+[START_SIGNALS] IgnitionTiming,8,6,0,U,255,0,0,-17,0.35156,angle:deg,,
+[START_SIGNALS] GearPosCalculated,8,5,0,U,255,0,0,0,1,unitless:,,
+[START_SIGNALS] VehicleSpeed,16,4,0,U,65535,0,0,0,0.0062865,speed:km/h,,
+[START_SIGNALS] AFR2,8,2,0,U,255,0,0,0.5,0.00390625,afr:LA,,
+[START_SIGNALS] AFR1,8,1,0,U,255,0,0,0.5,0.00390625,afr:LA,,
+[END_MSG]
+
+[START_MSG] Infinity1,32546816,8,4,0,X,AEMInfinity
+[START_SIGNALS] CoolantTemp,8,8,0,I,127,-128,0,0,1,temperature:C,,
+[START_SIGNALS] IntakeManifoldAirTemp,8,7,0,I,127,-128,0,0,1,temperature:C,,
+[START_SIGNALS] ThrottlePos,16,6,0,U,65534,0,0,0,0.0015259,fraction:%,,
+[START_SIGNALS] EngineSpeed,16,2,0,U,65535,0,0,0,0.39063,angular_speed:rpm,,
+[END_MSG]
+
+[START_MSG] Infinity7,32546824,8,13,0,X,AEMInfinity
+[START_SIGNALS] BaroPressErrorState,1,8,7,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] IntakeManifoldAirTempErrorState,1,8,6,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] IntakeManifoldAirPressErrorState,1,8,5,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ExhaustPressErrorState,1,8,4,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] OilPressErrorState,1,8,3,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] FuelPresErrorState,1,8,2,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] CoolantTempErrorState,1,8,1,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] ThrottlePosErrorState,1,8,0,B,1,0,0,0,1,unitless:,,
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[START_SIGNALS] AntilagEngineSpeedIgnTarget,8,7,0,U,255,0,0,0,100,angular_speed:rpm,,
+[START_SIGNALS] AntilagEngineSpeedFuelTarget,8,6,0,U,255,0,0,0,100,angular_speed:rpm,,
+[START_SIGNALS] EngineSpeedFuelCutThreshold,16,5,0,U,65535,0,0,0,0.39063,angular_speed:rpm,,
+[START_SIGNALS] EngineSpeedIgnCutThreshold,16,3,0,U,65535,0,0,0,0.39063,angular_speed:rpm,,
+[START_SIGNALS] GearboxTemp,8,1,0,U,255,0,0,-50,1,temperature:C,,
+[END_MSG]
+
+[START_MSG] InfinityVVC,32546826,8,6,0,X,AEMInfinity
+[START_SIGNALS] CamExhaustPosTarget,8,6,0,U,255,0,0,-50,0.5,angle:deg,,
+[START_SIGNALS] CamIntakePosTarget,8,5,0,U,255,0,0,-50,0.5,angle:deg,,
+[START_SIGNALS] CamExhaustBank2Pos,8,4,0,U,255,0,0,-50,0.5,angle:deg,,
+[START_SIGNALS] CamIntakeBank2Pos,8,3,0,U,255,0,0,-50,0.5,ange:deg,,
+[START_SIGNALS] CamExhaustBank1Pos,8,2,0,U,255,0,0,-50,0.5,angle:deg,,
+[START_SIGNALS] CamIntakeBank1Pos,8,1,0,U,255,0,0,-50,0.5,angle:deg,,
+[END_MSG]
+
+[START_MSG] InfinityBoost,32546827,8,6,0,X,AEMInfinity
+[START_SIGNALS] TurboSpeed,8,8,0,U,255,0,0,0,500,angular_speed:rpm,,
+[START_SIGNALS] TurboOutletTemp,8,7,0,U,255,0,0,-50,1,temperature:C,,
+[START_SIGNALS] BoostControlPIDOffset,8,6,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] BoostControlOutput,8,5,0,U,255,0,0,0,0.392157,fraction:%,,
+[START_SIGNALS] TurboOutletPress,16,4,0,U,65535,0,0,0,0.1,pressure:kPa,,
+[START_SIGNALS] BoostControlTarget,16,2,0,U,65535,0,0,0,0.1,pressure:kPa,,
+[END_MSG]
+
+[START_SIG_LIST]
+[START_SIGNALS] EngineLoad,16,1,0,U,65534,0,0,0,0.0015259,fraction:%,,
+[END_SIG_LIST]
+
+[START_VALUE_TABLE]
+[START_TABLE] ThrottleTrackingErrorEnum
+[VALUE_DESCRIPTION] "Not Tracking",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] ThrottleHighCurrentEnum
+[VALUE_DESCRIPTION] "Over Current",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] ShutDownEnum
+[VALUE_DESCRIPTION] "Shutdown",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] ThrottleStuckEnum
+[VALUE_DESCRIPTION] "Stuck Throttle",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] ThrottlePosErrorEnum
+[VALUE_DESCRIPTION] "Sensor Disagree",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] Logging
+[VALUE_DESCRIPTION] "Logging",1
+[VALUE_DESCRIPTION] "OFF",0
+[END_TABLE]
+[START_TABLE] IGNMap
+[VALUE_DESCRIPTION] "IGN Map 4",3
+[VALUE_DESCRIPTION] "IGN Map 3",2
+[VALUE_DESCRIPTION] "IGN Map 2",1
+[VALUE_DESCRIPTION] "IGN Map 1",0
+[END_TABLE]
+[START_TABLE] AFRMode
+[VALUE_DESCRIPTION] "A/F Map 4",3
+[VALUE_DESCRIPTION] "A/F Map 3",2
+[VALUE_DESCRIPTION] "A/F Map 2",1
+[VALUE_DESCRIPTION] "A/F Map 1",0
+[END_TABLE]
+[START_TABLE] PedalMapMode
+[VALUE_DESCRIPTION] "Pedal Map 2",1
+[VALUE_DESCRIPTION] "Pedal Map 1",0
+[END_TABLE]
+[START_TABLE] AFRControlState
+[VALUE_DESCRIPTION] "Closed Loop",1
+[VALUE_DESCRIPTION] "Open Loop",0
+[END_TABLE]
+[START_TABLE] Off_On
+[VALUE_DESCRIPTION] "On",1
+[VALUE_DESCRIPTION] "Off",0
+[END_TABLE]
+[START_TABLE] Ok_Limp
+[VALUE_DESCRIPTION] "Limp Mode",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] Armed
+[VALUE_DESCRIPTION] "Armed",1
+[VALUE_DESCRIPTION] "Disarmed",0
+[END_TABLE]
+[START_TABLE] SyncState
+[VALUE_DESCRIPTION] "Synced",1
+[VALUE_DESCRIPTION] "Not Synced",0
+[END_TABLE]
+[START_TABLE] ModeSelect
+[VALUE_DESCRIPTION] "Mode 8",7
+[VALUE_DESCRIPTION] "Mode 7",6
+[VALUE_DESCRIPTION] "Mode 6",5
+[VALUE_DESCRIPTION] "Mode 5",4
+[VALUE_DESCRIPTION] "Mode 4",3
+[VALUE_DESCRIPTION] "Mode 3",2
+[VALUE_DESCRIPTION] "Mode 2",1
+[VALUE_DESCRIPTION] "Mode 1",0
+[END_TABLE]
+[START_TABLE] OkDisabled
+[VALUE_DESCRIPTION] "Description for the value '0x1'",1
+[VALUE_DESCRIPTION] "Ok",0
+[END_TABLE]
+[START_TABLE] ErrorStateBoolean
+[VALUE_DESCRIPTION] "Out of Range",1
+[VALUE_DESCRIPTION] "OK",0
+[END_TABLE]
+[START_TABLE] ButtonState
+[VALUE_DESCRIPTION] "Pressed",1
+[VALUE_DESCRIPTION] "Not Pressed",0
+[END_TABLE]
+[START_TABLE] ActiveNotActive
+[VALUE_DESCRIPTION] "Active",1
+[VALUE_DESCRIPTION] "Not Active",0
+[END_TABLE]
+[END_VALUE_TABLE]
+
+[NODE] AEMInfinity
+
+[START_DESC]
+[START_DESC_NET]
+[END_DESC_NET]
+
+[START_DESC_NODE]
+[END_DESC_NODE]
+
+[START_DESC_MSG]
+1073741824 X "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+[END_DESC_MSG]
+
+[START_DESC_SIG]
+32546825 X BrakePress "Brake Pressure";
+32546849 X KnockCyl10IgnOffset "Measured Knock Value ";
+32546833 X WheelSpeedRightNonDriven "The speed of the wheel";
+32546833 X WheelSpeedLeftNonDriven "The Speed of the wheel ";
+32546832 X LaunchSlipSwitchState "Boolean State of the Switch0 = Not Pressed1 = Pressed";
+32546832 X LaunchSlipFuelCutArmedState "Boolean State0 = Not Active1 = Active";
+32546832 X LaunchSlipEngineSpeedIgnLimit "RPM Target of the three step system";
+32546832 X TracControlModeSwitchState "TC Mode Select Switch";
+32546832 X TracControlFuelCutRequest "Percentage of Fuel cut";
+32546829 X ThrottleDBW2TrackingErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW2PosBErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW2PosAErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW2PosErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW2ShutdownState "Bolean Error State0 = InRange1 = InError";
+32546829 X ThrottleDBW2HighAmpErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW1TrackingErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW1PosBErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW1PosAErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW1PosErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleDBW1ShutdownState "Boolean State 0 = Ok1 = Disabled";
+32546829 X ThrottleDBW1HighAmpErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottleStuckProtectionState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottlePedalPos2ErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottlePedalPos1ErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottlePedalPosErrorState "Boolean Error State 0 = InRange1 = InError";
+32546829 X ThrottlePedalPos1 "the Pos of the accerator pedal";
+32546823 X VTECOutputState "Boolean State0 = Not Active1 = Active";
+32546823 X ThrottleDBWPedalMapMode "Mode of the Drive by Wire System";
+32546823 X AFRModeStatus "Mode of the AFR System";
+32546823 X IgnitionModeStatus "Mode of the Ignition System";
+32546823 X ECULoggingState "Boolean State0 = Not Active1 = Active";
+32546823 X LaunchTimerArmedState "Boolean State0 = Not Active1 = Active";
+32546823 X BaroPress "Barometric Pressure";
+32546822 X EngineCrankcasePress "Pressure of the crankcase";
+32546822 X EngineModeSwitchStatus "Mode Selection Switch";
+32546821 X ClutchPress "Pressure of the clutch system";
+32546821 X ClutchSwitchState "Boolean Button State 0 = Not Pressed1 = Pressed";
+32546821 X BrakeSwitchState "Boolean Button State 0 = Not Pressed1 = Pressed";
+32546821 X MassAirflowRev "Mass air flow of the inlet air in grams a revolution, Unit is unitless";
+32546821 X MassAirflow "Mass Flow Rate of the inlet air in grams / second";
+32546820 X EngineLimitBoostCutState "Boolean State 0 = Not Active1 = Active";
+32546820 X AirConOutputState "Boolean State 0 = Not Active1 = Active";
+32546820 X EngineSyncState "Boolean Sync State0 = Not Synced1 = Synced";
+32546820 X AntilagEngineSpeedIgnState "Boolean State of the 2 Step Spark Active0 = Not Active1 = Active";
+32546820 X OilPressProtectionState "Boolean State0 = Not Active1 = Active";
+32546820 X AFRControlProtectionState "Boolean State0 = Not Active1 = Active";
+32546820 X MILState "Boolean State0 = Not Active1 = Active";
+32546820 X EngineProtectionState "Boolean State0 = Not Active1 = Active";
+32546820 X AFRControlState "Boolean State0 = Not Active1 = Active";
+32546820 X NitrousOutputState "Boolean State0 = Not Active1 = Active";
+32546820 X CoolantFan2State "Boolean State0 = Not Active1 = Active";
+32546820 X CoolantFan1State "Boolean State0 = Not Active1 = Active";
+32546820 X FuelPumpState "Boolean State0 = Not Active1 = Active";
+32546820 X OilPress "pressure of the oiling system";
+32546820 X FuelPress "Pressure of the fuel system";
+32546820 X IntakeManifoldAirPress "Pressure of the inlet manifold";
+32546819 X IgnitionTiming "Requested Ignition timing value. ";
+32546819 X GearPosCalculated "Gear Pos number";
+32546816 X EngineSpeed "The Angular Speed in Revolutions per Minute of the Engine Crank Shaft";
+32546824 X BaroPressErrorState "Boolean Error0 = InRange1 = InError";
+32546824 X IntakeManifoldAirTempErrorState "Boolean Error0 = InRange1 = InError";
+32546824 X IntakeManifoldAirPressErrorState "Boolean Error State0 = InRange1 = InError";
+32546824 X ExhaustPressErrorState "Boolean Error State 0 = InRange1 = InError";
+32546824 X OilPressErrorState "Boolean Error State0 = InRange1 = InError";
+32546824 X FuelPresErrorState "Boolean Error State0 = InRange1 = InError";
+32546824 X CoolantTempErrorState "Boolean Error0 = InRange1 = InError";
+32546824 X ThrottlePosErrorState "Boolean Error State0 = InRange1 = InError";
+32546824 X EngineSpeedFuelCutThreshold "The rpm limit that the fuel with start to cut at";
+32546826 X CamExhaustPosTarget "Exhaust Cam Target Pos";
+32546826 X CamIntakePosTarget "Inlet Cam Target Pos";
+32546826 X CamExhaustBank2Pos "Measured Cam Pos";
+32546826 X CamIntakeBank2Pos "Measured Cam Pos";
+32546826 X CamExhaustBank1Pos "Measured Cam Pos";
+32546826 X CamIntakeBank1Pos "Measured Cam Pos";
+32546827 X BoostControlPIDOffset "The PID feedback of the boost control";
+32546827 X BoostControlOutput "The duty cycle of the boost control system";
+32546827 X BoostControlTarget "Desired Boost Pressure";
+[END_DESC_SIG]
+[END_DESC]
+
+[START_PARAM]
+[START_PARAM_NET]
+"VersionYear",INT,2016,2016,3000
+"VersionMonth",INT,1,1,12
+"VersionDay",INT,1,1,31
+"VersionNumber",INT,0,0,10000
+"NmType",STRING,""
+"ProtocolType",STRING,""
+"BusType",ENUM,"Can","Can"
+[END_PARAM_NET]
+
+[START_PARAM_NODE]
+"ILUsed",ENUM,"Yes","No","Yes"
+"TpNodeBaseAddress",HEX,0,0,255
+[END_PARAM_NODE]
+
+[START_PARAM_MSG]
+"GenMsgILSupport",ENUM,"Yes","No","Yes"
+"GenMsgSendType",ENUM,"Cyclic","Cyclic"
+"GenMsgCycleTime",INT,10,1,2000
+"DBC_Author_Contact",STRING,"CANbusInfo@AEMelectronics.com"
+[END_PARAM_MSG]
+
+[START_PARAM_SIG]
+[END_PARAM_SIG]
+
+[START_PARAM_NODE_RX_SIG]
+[END_PARAM_NODE_RX_SIG]
+
+[START_PARAM_NODE_TX_MSG]
+[END_PARAM_NODE_TX_MSG]
+[END_PARAM]
+
+[START_PARAM_VAL]
+[START_PARAM_NET_VAL]
+"VersionMonth",10
+"VersionDay",21
+"VersionNumber",4
+"ProtocolType","AEMNet"
+[END_PARAM_NET_VAL]
+
+[START_PARAM_NODE_VAL]
+AEMInfinity,"TpNodeBaseAddress",1
+[END_PARAM_NODE_VAL]
+
+[START_PARAM_MSG_VAL]
+32546825,X,"GenMsgCycleTime",40
+32546849,X,"GenMsgCycleTime",20
+32546848,X,"GenMsgCycleTime",20
+32546834,X,"GenMsgCycleTime",20
+32546833,X,"GenMsgCycleTime",20
+32546832,X,"GenMsgCycleTime",20
+32546829,X,"GenMsgCycleTime",40
+32546823,X,"GenMsgCycleTime",40
+32546822,X,"GenMsgCycleTime",40
+32546821,X,"GenMsgCycleTime",20
+32546820,X,"GenMsgCycleTime",20
+32546819,X,"GenMsgCycleTime",20
+32546816,X,"GenMsgCycleTime",20
+32546824,X,"GenMsgCycleTime",200
+32546826,X,"GenMsgCycleTime",40
+32546827,X,"GenMsgCycleTime",40
+[END_PARAM_MSG_VAL]
+
+[START_PARAM_SIG_VAL]
+[END_PARAM_SIG_VAL]
+
+[END_PARAM_VAL]
+
+
+[START_NOT_SUPPORTED]
+[END_NOT_SUPPORTED]
+
+[START_NOT_PROCESSED]
+	PZ_
+	ON_QRS_
+	ON_
+	INY_
+	PNG_QRS_
+	PNG_
+	SVYGRE
+	ON_QRS_QRS_
+	RI_QNGN_
+	RAIINE_QNGN_
+	FTGLCR_
+	FTGLCR_INY_
+	ON_QRS_FTGLCR_
+	ON_FTGLCR_
+	FVT_GLCR_ERS_
+	INY_GNOYR_
+	FVT_TEBHC_
+	FVT_INYGLCR_
+	FVTGLCR_INYGLCR_
+	OB_GK_OH_
+	ON_QRS_ERY_
+	ON_ERY_
+	ON_QRS_QRS_ERY_
+	OH_FT_ERY_
+	OH_RI_ERY_
+	OH_OB_ERY_
+	FT_ZHY_INY_
+OF_:
+
+[END_NOT_PROCESSED]

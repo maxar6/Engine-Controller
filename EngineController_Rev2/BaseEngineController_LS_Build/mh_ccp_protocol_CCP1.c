@@ -62,7 +62,7 @@ const S_CCPHandlerConfig mh_CCP1_CCPHandlerConfig = {
   10,                                  /* numDAQs;	 */
   8,                                   /* numODTs;	 */
   8,                                   /* numTrigs;	 */
-  0,                                   /* bSendCPB: flag to send the Command Processor Busy prior to long memory writes */
+  1,                                   /* bSendCPB: flag to send the Command Processor Busy prior to long memory writes */
 };
 
 /*---- END OF FILE ----------------------------------------------------------------------------------------*/

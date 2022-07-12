@@ -1,14 +1,13 @@
-CC     = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcc.exe"
-LD     = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcclnk.exe"
-LIBCMD = "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\bin\lcclib.exe"
+CC     = "E:\MATLAB\2011a\sys\lcc\bin\lcc.exe"
+LD     = "E:\MATLAB\2011a\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "E:\MATLAB\2011a\sys\lcc\bin\lcclib.exe"
 CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
-LDFLAGS = -s -dll -L"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\lib"
+LDFLAGS = -s -dll -L"E:\MATLAB\2011a\sys\lcc\lib"
 LIBFLAGS = 
 
 OBJECTS = \
 	"BaseEngineController_LS_sfun.obj"\
 	"BaseEngineController_LS_sfun_registry.obj"\
-	"c1_BaseEngineController_LS.obj"\
 	"c2_BaseEngineController_LS.obj"\
 	"c3_BaseEngineController_LS.obj"\
 	"c7_BaseEngineController_LS.obj"\
@@ -18,18 +17,18 @@ OBJECTS = \
 	"c12_BaseEngineController_LS.obj"\
 	"c19_BaseEngineController_LS.obj"\
 	"lccstub.obj"\
-	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccdef.def"\
-	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmex.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmx.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libfixedpoint.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libut.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwmathutil.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libemlrt.lib"\
-	"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\lcc\libmwblascompat32.lib"\
+	"E:\MATLAB\2011a\sys\lcc\mex\lccdef.def"\
+	"E:\MATLAB\2011a\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"E:\MATLAB\2011a\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libmex.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libmx.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libut.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libmwmathutil.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libemlrt.lib"\
+	"E:\MATLAB\2011a\extern\lib\win32\lcc\libmwblascompat32.lib"\
 
-INCLUDE_PATH= -I"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\extern\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\simulink\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\mex\include"  -I"C:\Program Files (x86)\MATLAB\R2011a\stateflow\c\debugger\include" 
+INCLUDE_PATH= -I"E:\MATLAB\2011a\sys\lcc\include"  -I"E:\MATLAB\2011a\extern\include"  -I"E:\MATLAB\2011a\simulink\include"  -I"E:\MATLAB\2011a\stateflow\c\mex\include"  -I"E:\MATLAB\2011a\stateflow\c\debugger\include" 
  
 
 BaseEngineController_LS_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
@@ -38,8 +37,6 @@ BaseEngineController_LS_sfun.obj :	"BaseEngineController_LS_sfun.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "BaseEngineController_LS_sfun.c"
 BaseEngineController_LS_sfun_registry.obj :	"BaseEngineController_LS_sfun_registry.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "BaseEngineController_LS_sfun_registry.c"
-c1_BaseEngineController_LS.obj :	"c1_BaseEngineController_LS.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c1_BaseEngineController_LS.c"
 c2_BaseEngineController_LS.obj :	"c2_BaseEngineController_LS.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_BaseEngineController_LS.c"
 c3_BaseEngineController_LS.obj :	"c3_BaseEngineController_LS.c"
@@ -56,5 +53,5 @@ c12_BaseEngineController_LS.obj :	"c12_BaseEngineController_LS.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c12_BaseEngineController_LS.c"
 c19_BaseEngineController_LS.obj :	"c19_BaseEngineController_LS.c"
 	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c19_BaseEngineController_LS.c"
-lccstub.obj :	"C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"
-	$(CC) $(CFLAGS) $(INCLUDE_PATH) "C:\Program Files (x86)\MATLAB\R2011a\sys\lcc\mex\lccstub.c"
+lccstub.obj :	"E:\MATLAB\2011a\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "E:\MATLAB\2011a\sys\lcc\mex\lccstub.c"

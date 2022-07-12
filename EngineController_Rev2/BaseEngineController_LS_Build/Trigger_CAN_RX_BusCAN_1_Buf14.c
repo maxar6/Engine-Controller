@@ -20,15 +20,21 @@
 
 
 
+
+
+
    Masked IDs: CAN_1 (ext)
 
 
    masked_id = 0x18EF0231
+   masked_id = 0x000A0002
+   masked_id = 0x000A0001
    masked_id = 0x00000181
    masked_id = 0x00000180
+   masked_id = 0x000A0000
 
    Masks: CAN_1 (ext)
-   computed mask = 0x0710FC4E
+   computed mask = 0x0710FC4C
    computed id   = 0x00000000
 
  */
@@ -61,18 +67,18 @@ static boolean_T MHCAN_handler_CCP1(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_8121p0005 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_24975p0015 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_8121p0005(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_24975p0015(S_CANMessage *messageObj)
 {
-  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x00000181) {
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x000A0002) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_8121p0005.ready;
-      MHCAN_directslot_RxSlot_8121p0005.message = *messageObj;
-      MHCAN_directslot_RxSlot_8121p0005.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_24975p0015.ready;
+      MHCAN_directslot_RxSlot_24975p0015.message = *messageObj;
+      MHCAN_directslot_RxSlot_24975p0015.ready = 1;
     }
 
     return 1;
@@ -81,18 +87,78 @@ static boolean_T MHCAN_handler_RxSlot_8121p0005(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_8120p0006 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_24489p0043 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_8120p0006(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_24489p0043(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x000A0001) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_24489p0043.ready;
+      MHCAN_directslot_RxSlot_24489p0043.message = *messageObj;
+      MHCAN_directslot_RxSlot_24489p0043.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_26754p0004 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_26754p0004(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x00000181) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_26754p0004.ready;
+      MHCAN_directslot_RxSlot_26754p0004.message = *messageObj;
+      MHCAN_directslot_RxSlot_26754p0004.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_26753p0004 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_26753p0004(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x00000180) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_8120p0006.ready;
-      MHCAN_directslot_RxSlot_8120p0006.message = *messageObj;
-      MHCAN_directslot_RxSlot_8120p0006.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_26753p0004.ready;
+      MHCAN_directslot_RxSlot_26753p0004.message = *messageObj;
+      MHCAN_directslot_RxSlot_26753p0004.ready = 1;
+    }
+
+    return 1;
+  }
+
+  return 0;
+}
+
+MHCAN_directslot MHCAN_directslot_RxSlot_24478p5417 = { 0 };
+
+static boolean_T MHCAN_handler_RxSlot_24478p5417(S_CANMessage *messageObj)
+{
+  if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x000A0000) {
+    messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
+
+    {
+      boolean_T new_message;
+      new_message = !MHCAN_directslot_RxSlot_24478p5417.ready;
+      MHCAN_directslot_RxSlot_24478p5417.message = *messageObj;
+      MHCAN_directslot_RxSlot_24478p5417.ready = 1;
     }
 
     return 1;
@@ -104,13 +170,19 @@ static boolean_T MHCAN_handler_RxSlot_8120p0006(S_CANMessage *messageObj)
 static const MHCAN_id_dispatcher_T MHCAN_consumers_0x1FFFFFFF[] = {
   { 0x18ef0231, MHCAN_handler_CCP1 },
 
-  { 0x00000181, MHCAN_handler_RxSlot_8121p0005 },
+  { 0x000a0002, MHCAN_handler_RxSlot_24975p0015 },
 
-  { 0x00000180, MHCAN_handler_RxSlot_8120p0006 },
+  { 0x000a0001, MHCAN_handler_RxSlot_24489p0043 },
+
+  { 0x00000181, MHCAN_handler_RxSlot_26754p0004 },
+
+  { 0x00000180, MHCAN_handler_RxSlot_26753p0004 },
+
+  { 0x000a0000, MHCAN_handler_RxSlot_24478p5417 },
 };
 
 static const MHCAN_mask_dispatcher_T masks[] = {
-  { 0x1FFFFFFF, 3, 0, (MHCAN_id_dispatcher_T *) MHCAN_consumers_0x1FFFFFFF },
+  { 0x1FFFFFFF, 6, 0, (MHCAN_id_dispatcher_T *) MHCAN_consumers_0x1FFFFFFF },
 };
 
 /*---------------------------------------------------------------*/

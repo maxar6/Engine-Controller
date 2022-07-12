@@ -1,0 +1,114 @@
+Conversion Warnings Log
+
+
+MSG_ID: 399 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge16
+	SIG_NAME: AFR16Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR16Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR16Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR16Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR16Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 398 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge15
+	SIG_NAME: AFR15Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR15Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR15Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR15Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR15Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 397 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge14
+	SIG_NAME: AFR14Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR14Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR14Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR14Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR14Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 396 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge13
+	SIG_NAME: AFR13Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR13Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR13Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR13Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR13Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 395 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge12
+	SIG_NAME: AFR12Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR12Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR12Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR12Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR12Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 394 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge11
+	SIG_NAME: AFR11Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR11Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR11Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR11Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR11Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 393 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge10
+	SIG_NAME: AFR10Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR10Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR10Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR10Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR10Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 392 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge9
+	SIG_NAME: AFR9Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR9Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR9Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR9Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR9Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 391 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge8
+	SIG_NAME: AFR8Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR8Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR8Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR8Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR8Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 390 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge7
+	SIG_NAME: AFR7Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR7Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR7Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR7Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR7Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 389 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge6
+	SIG_NAME: AFR6Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR6Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR6Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR6Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR6Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 388 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge5
+	SIG_NAME: AFR5Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR5Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR5Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR5Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR5Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 386 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge3
+	SIG_NAME: AFR3Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR3Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR3Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR3Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR3Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 387 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge4
+	SIG_NAME: AFR4Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR4Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR4Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR4Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR4Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 385 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge2
+	SIG_NAME: AFR2Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR2Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR2Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR2Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR2Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+
+MSG_ID: 384 	MSG_TYPE: X 	MSG_NAME: XSeriesGauge1
+	SIG_NAME: AFR1Ext_UsingFreeAreCalState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR1Ext_SensorStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR1Ext_SensorFaultState, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR1Ext_SensorDetectedStatus, STATUS: Invalid Max or Min value., ACTION: Value Set to default
+	SIG_NAME: AFR1Ext_DataValidState, STATUS: Invalid Max or Min value., ACTION: Value Set to default

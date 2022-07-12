@@ -140,7 +140,7 @@ static void c3_update_debugger_state_c3_BaseEngineController_LS
   c3_prevAniVal = sf_debug_get_animation();
   sf_debug_set_animation(0U);
   if ((int16_T)chartInstance->c3_is_active_c3_BaseEngineController_LS == 1) {
-    _SFD_CC_CALL(CHART_ACTIVE_TAG, 2U, chartInstance->c3_sfEvent);
+    _SFD_CC_CALL(CHART_ACTIVE_TAG, 1U, chartInstance->c3_sfEvent);
   }
 
   if (chartInstance->c3_is_c3_BaseEngineController_LS == c3_IN_Init) {
@@ -309,18 +309,18 @@ static void sf_c3_BaseEngineController_LS
     chartInstance->c3_previousTicks;
   chartInstance->c3_previousTicks = chartInstance->c3_presentTicks;
   chartInstance->c3_temporalCounter_i1 += chartInstance->c3_elapsedTicks;
-  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_SFUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
   _SFD_DATA_RANGE_CHECK(*c3_etc, 0U);
   _SFD_DATA_RANGE_CHECK(*c3_timeSinceKeyOn, 1U);
   _SFD_DATA_RANGE_CHECK(*c3_enblTime, 2U);
   _SFD_DATA_RANGE_CHECK(*c3_hldTime, 3U);
   _SFD_DATA_RANGE_CHECK(*c3_icePos, 4U);
   chartInstance->c3_sfEvent = CALL_EVENT;
-  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+  _SFD_CC_CALL(CHART_ENTER_DURING_FUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
   if ((int16_T)chartInstance->c3_is_active_c3_BaseEngineController_LS == 0) {
-    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+    _SFD_CC_CALL(CHART_ENTER_ENTRY_FUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
     chartInstance->c3_is_active_c3_BaseEngineController_LS = 1U;
-    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+    _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
     _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 0U, chartInstance->c3_sfEvent);
     _SFD_CT_CALL(TRANSITION_ACTIVE_TAG, 0U, chartInstance->c3_sfEvent);
     chartInstance->c3_is_c3_BaseEngineController_LS = c3_IN_Init;
@@ -329,7 +329,7 @@ static void sf_c3_BaseEngineController_LS
   } else {
     switch (chartInstance->c3_is_c3_BaseEngineController_LS) {
      case c3_IN_Init:
-      CV_CHART_EVAL(2, 0, 1);
+      CV_CHART_EVAL(1, 0, 1);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 0U,
                    chartInstance->c3_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 1U,
@@ -353,7 +353,7 @@ static void sf_c3_BaseEngineController_LS
       break;
 
      case c3_IN_Open:
-      CV_CHART_EVAL(2, 0, 2);
+      CV_CHART_EVAL(1, 0, 2);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 1U,
                    chartInstance->c3_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 2U,
@@ -381,7 +381,7 @@ static void sf_c3_BaseEngineController_LS
       break;
 
      case c3_IN_Wait:
-      CV_CHART_EVAL(2, 0, 3);
+      CV_CHART_EVAL(1, 0, 3);
       _SFD_CS_CALL(STATE_ENTER_DURING_FUNCTION_TAG, 2U,
                    chartInstance->c3_sfEvent);
       _SFD_CT_CALL(TRANSITION_BEFORE_PROCESSING_TAG, 3U,
@@ -404,7 +404,7 @@ static void sf_c3_BaseEngineController_LS
       break;
 
      default:
-      CV_CHART_EVAL(2, 0, 0);
+      CV_CHART_EVAL(1, 0, 0);
       chartInstance->c3_is_c3_BaseEngineController_LS = (uint8_T)
         c3_IN_NO_ACTIVE_CHILD;
       _SFD_CS_CALL(STATE_INACTIVE_TAG, 0U, chartInstance->c3_sfEvent);
@@ -412,7 +412,7 @@ static void sf_c3_BaseEngineController_LS
     }
   }
 
-  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 2U, chartInstance->c3_sfEvent);
+  _SFD_CC_CALL(EXIT_OUT_OF_FUNCTION_TAG, 1U, chartInstance->c3_sfEvent);
   sf_debug_check_for_state_inconsistency(_BaseEngineController_LSMachineNumber_,
     chartInstance->chartNumber, chartInstance->instanceNumber);
 }

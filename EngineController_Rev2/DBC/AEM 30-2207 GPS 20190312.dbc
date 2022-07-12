@@ -1,0 +1,99 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: AEM_VDM
+VAL_TABLE_ RxState 0 "FindingSync" 1 "WaitingForSOL" 2 "WaitingForEOL" 3 "BufferOverFlow" 4 "RxError" ;
+
+
+BO_ 2148139008 AEM_VDM_LAT_LONG: 8 AEM_VDM
+ SG_ GPS_Latitude : 7|32@0- (1,0) [0|0] "angle:deg" Vector__XXX
+ SG_ GPS_Longitude : 39|32@0- (1,0) [0|0] "angle:deg" Vector__XXX
+
+BO_ 2148139009 AEM_VDM_SPEED_DIRECTION: 8 AEM_VDM
+ SG_ GPS_Speed : 7|16@0+ (0.01609344,0) [0|1054.684] "speed:km/h" Vector__XXX
+ SG_ GPS_Altitude : 23|16@0- (0.3048,0) [-9987.6864|9987.3816] "distance:m" Vector__XXX
+ SG_ GPS_Course : 39|16@0+ (0.01,0) [0|655.35] "angle:deg" Vector__XXX
+ SG_ GPS_SatelliteCount : 55|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+
+BO_ 2148139010 AEM_VDM_DATE_TIME: 8 AEM_VDM
+ SG_ GPS_Valid : 7|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+ SG_ GPS_YearUTC : 15|8@0+ (1,2000) [2000|2255] "unitless:" Vector__XXX
+ SG_ GPS_MonthUTC : 23|8@0+ (1,0) [0|255] "unitless:" Vector__XXX
+ SG_ GPS_DayUTC : 31|8@0+ (1,0) [0|255] "time:day" Vector__XXX
+ SG_ GPS_HoursUTC : 47|8@0+ (1,0) [0|255] "time:hours" Vector__XXX
+ SG_ GPS_MinutesUTC : 55|8@0+ (1,0) [0|255] "time:min" Vector__XXX
+ SG_ GPS_SecondsUTC : 63|8@0+ (1,0) [0|255] "time:s" Vector__XXX
+
+
+
+BA_DEF_  "BusType" ENUM  "Can";
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "VersionNumber" INT 0 10000;
+BA_DEF_  "VersionDay" INT 1 31;
+BA_DEF_  "VersionMonth" INT 1 12;
+BA_DEF_  "VersionYear" INT 2016 3000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes","vector_leerstring";
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BO_  "TPCanBus" INT 1 2;
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 2047;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "One Time","Cyclic","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 1 2000;
+BA_DEF_ SG_  "SignalType" STRING ;
+BA_DEF_ BO_  "DBC_Author_Contact" STRING ;
+BA_DEF_DEF_  "BusType" "Can";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "VersionNumber" 0;
+BA_DEF_DEF_  "VersionDay" 1;
+BA_DEF_DEF_  "VersionMonth" 1;
+BA_DEF_DEF_  "VersionYear" 2016;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "TPCanBus" 1;
+BA_DEF_DEF_  "TpNodeBaseAddress" 0;
+BA_DEF_DEF_  "ProtocolType" "Can";
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 20;
+BA_DEF_DEF_  "SignalType" "";
+BA_DEF_DEF_  "DBC_Author_Contact" "CANbusInfo@AEMelectronics.com";
+BA_ "VersionNumber" 1;
+BA_ "VersionDay" 8;
+BA_ "VersionMonth" 10;
+BA_ "ProtocolType" "AEMNet";
+SIG_VALTYPE_ 2148139008 GPS_Latitude : 1;
+SIG_VALTYPE_ 2148139008 GPS_Longitude : 1;
+

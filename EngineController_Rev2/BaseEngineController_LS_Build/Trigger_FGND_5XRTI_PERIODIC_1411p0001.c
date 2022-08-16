@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2021
+ * Model version              : 1.2035
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Mon Jul 11 23:56:32 2022
+ * C source code generated on : Mon Aug 15 22:38:43 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_5XRTI_PERIODIC_1411p0001(void)
 {
-  /* Named constants for Stateflow: '<S979>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S1039>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -41,7 +41,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1411p0001(void)
      *  Product: '<S23>/Product1'
      *  Product: '<S23>/Product2'
      */
-    BaseEngineController_LS_B.s23_Sum = BaseEngineController_LS_B.s627_Sum1 *
+    BaseEngineController_LS_B.s23_Sum = BaseEngineController_LS_B.s628_Sum1 *
       360.0 / 60000.0 * BaseEngineController_LS_B.s130_Sum +
       BaseEngineController_LS_B.s135_SparkAdv;
   }

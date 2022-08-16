@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2021
+ * Model version                  : 1.2035
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Jul 11 23:56:32 2022
+ * C/C++ source code generated on : Mon Aug 15 22:38:43 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -176,15 +176,6 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T GetFaultActionStatus(uint32_T action);
-extern boolean_T IsFaultActive(uint32_T fault);
-extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
@@ -193,6 +184,15 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T GetFaultActionStatus(uint32_T action);
+extern boolean_T IsFaultActive(uint32_T fault);
+extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultActive(uint32_T fault);
@@ -225,6 +225,7 @@ extern boolean_T IsFaultActive(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T IsFaultSuspected(uint32_T fault);
 extern boolean_T GetFaultActionStatus(uint32_T action);
+extern real_T rt_roundd_snf(real_T u);
 extern void BaseEngineController_LS_CCPDaqProcessing(int_T controlPortIdx);
 
 #endif                                 /* RTW_HEADER_BaseEngineController_LS_private_h_ */

@@ -4152,6 +4152,146 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>TPS_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>TPS_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>IAT_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>IAT_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>ECT_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>ECT_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>VSPD_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>VSPD_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>SparkAdv_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>SparkAdv_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>ECUVolt_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>ECUVolt_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>MAP_filtDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>MAP_filtIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>FuelPres_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>FuelPres_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>OilPres_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>OilPres_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>Flex_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>Flex_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>ETCReq_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>ETCReq_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>APP_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>APP_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>TPS1_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>TPS1_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>TPS2_FiltDecFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>TPS2_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>ETC_Offset</Name>
              </DataStore>
@@ -5015,6 +5155,21 @@
                <Default>0U</Default>
                <Name>SysVolt09Idx</Name>
              </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>ACPres05In</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1500.0 1750.0 2000.0 2250.0 2500.0 </Default>
+               <Name>ACPres05IdxArr</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint16</DataType>
+               <Default>0U</Default>
+               <Name>ACPres05Idx</Name>
+             </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
@@ -5481,9 +5636,19 @@
                <Name>FuelLevel_KeyUpDelay</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>int8</DataType>
-               <Default>0</Default>
-               <Name>RevLimitType</Name>
+               <DataType>uint16</DataType>
+               <Default>10U</Default>
+               <Name>RPMFilt_RoundValue</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.005</Default>
+               <Name>RPMFilt_LowPass</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>RPMFilt_Enable</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
@@ -5544,6 +5709,11 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>OilPres_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>int8</DataType>
+               <Default>0</Default>
+               <Name>RevLimitType</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
@@ -6059,21 +6229,6 @@
                <DataType>uint16</DataType>
                <Default>0U</Default>
                <Name>App05Idx</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>ACPres05In</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1500.0 1750.0 2000.0 2250.0 2500.0 </Default>
-               <Name>ACPres05IdxArr</Name>
-             </DataStore>
-            <DataStore ref="Volatile">
-               <DataType>uint16</DataType>
-               <Default>0U</Default>
-               <Name>ACPres05Idx</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -7018,7 +7173,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9914p0004</Name>
+               <Name>init_resource_DOut10165p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -7118,7 +7273,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut8754p0001</Name>
+               <Name>init_resource_DOut9005p0001</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -7393,7 +7548,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9366p0001</Name>
+               <Name>init_resource_DOut9617p0005</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -7413,7 +7568,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9367p0001</Name>
+               <Name>init_resource_DOut9618p0005</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
@@ -7433,7 +7588,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut9387p0001</Name>
+               <Name>init_resource_DOut9638p0005</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -20331,6 +20486,482 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="TPS_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>TPS_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="TPS_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>TPS_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="IAT_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>IAT_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="IAT_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>IAT_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ECT_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ECT_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ECT_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ECT_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="VSPD_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>VSPD_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="VSPD_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>VSPD_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="SparkAdv_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>SparkAdv_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="SparkAdv_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>SparkAdv_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ECUVolt_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ECUVolt_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ECUVolt_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ECUVolt_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MAP_filtDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>MAP_filtDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="MAP_filtIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>MAP_filtIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelPres_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>FuelPres_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelPres_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>FuelPres_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="OilPres_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>OilPres_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="OilPres_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>OilPres_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Flex_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Flex_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Flex_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Flex_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ETCReq_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ETCReq_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ETCReq_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ETCReq_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="APP_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>APP_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="APP_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>APP_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="TPS1_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>TPS1_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="TPS1_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>TPS1_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="TPS2_FiltDecFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>TPS2_FiltDecFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="TPS2_FiltIncFiltC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>TPS2_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="ETC_Offset">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -23233,18 +23864,51 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RevLimitType">
+			    <DataStoreVarDec ref="RPMFilt_RoundValue">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+        		                <help>RPM round value</help>
+        		                <max>1000.000000</max>
+        		                <min>0.000000</min>
+        		                <name>RPMFilt_RoundValue</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>RPM</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPMFilt_LowPass">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+        		                <help>Filter time constant</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>RPMFilt_LowPass</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPMFilt_Enable">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_25</enum_name>
+        		                <enum_name>VarDecEnum_4</enum_name>
         		                <exp>1.0</exp>
         		                <format>3.0</format>
         		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|SequenceCutPattern</group>
-        		                <help>Define the type of sequence to be disable when in Rev Limit</help>
-        		                <max>127.000000</max>
-        		                <min>-128.000000</min>
-        		                <name>RevLimitType</name>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+        		                <max>255.000000</max>
+        		                <min>0.000000</min>
+        		                <name>RPMFilt_Enable</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -23449,6 +24113,23 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>psi</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RevLimitType">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_25</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>3.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|SequenceCutPattern</group>
+        		                <help>Define the type of sequence to be disable when in Rev Limit</help>
+        		                <max>127.000000</max>
+        		                <min>-128.000000</min>
+        		                <name>RevLimitType</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -27788,7 +28469,7 @@
         		                <name>ACAirFlowOfstTbl</name>
         		                <offset>0.0</offset>
         		                <output>ACAirFlowOfst</output>
-        		                <prelookup>ECT05IdxArr</prelookup>
+        		                <prelookup>ACPres05IdxArr</prelookup>
         		                <storage>FLASH</storage>
         		                <units>%</units>
         		                <update>BACKGND</update>
@@ -30776,6 +31457,59 @@
         		                <offset>0.0</offset>
         		                <storage>RAM</storage>
         		                <units>Volts</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACPres05IdxArr">
+        		                <access>RW RW RW RW</access>
+        		                <class>prelookup</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
+        		                <help>Index of AC system high side pressure</help>
+        		                <index>ACPres05Idx</index>
+        		                <input>ACPres05In</input>
+        		                <len>5</len>
+        		                <max>10000.000000</max>
+        		                <min>-150.000000</min>
+        		                <name>ACPres05IdxArr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>kPa</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACPres05Idx">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1</exp>
+        		                <format>4.2</format>
+        		                <gain>0.001953125</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
+        		                <help>Index of AC system high side pressure</help>
+        		                <max>127.998047</max>
+        		                <min>0.000000</min>
+        		                <name>ACPres05Idx</name>
+        		                <offset>0</offset>
+        		                <storage>RAM</storage>
+        		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="ACPres05In">
+        		                <access>RO RO RO RO</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
+        		                <help>Index of AC system high side pressure</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>ACPres05In</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
+        		                <units>kPa</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -34796,59 +35530,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="ACPres05IdxArr">
-        		                <access>RW RW RW RW</access>
-        		                <class>prelookup</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
-        		                <help>Index of AC system high side pressure</help>
-        		                <index>ACPres05Idx</index>
-        		                <input>ACPres05In</input>
-        		                <len>5</len>
-        		                <max>10000.000000</max>
-        		                <min>-150.000000</min>
-        		                <name>ACPres05IdxArr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>kPa</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="ACPres05Idx">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1</exp>
-        		                <format>4.2</format>
-        		                <gain>0.001953125</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
-        		                <help>Index of AC system high side pressure</help>
-        		                <max>127.998047</max>
-        		                <min>0.000000</min>
-        		                <name>ACPres05Idx</name>
-        		                <offset>0</offset>
-        		                <storage>RAM</storage>
-        		                <units>idx.frac</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="ACPres05In">
-        		                <access>RO RO RO RO</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
-        		                <help>Index of AC system high side pressure</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>ACPres05In</name>
-        		                <offset>0.0</offset>
-        		                <storage>RAM</storage>
-        		                <units>kPa</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="RPM05IdxArr">
         		                <access>RW RW RW RW</access>
         		                <class>prelookup</class>
@@ -35334,7 +36015,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut8754p0001</help>
+        		                <help>Digital output pin selection for DOut9005p0001</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACPin</name>
@@ -35997,7 +36678,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9366p0001</help>
+        		                <help>Digital output pin selection for DOut9617p0005</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FAN1Pin</name>
@@ -36031,7 +36712,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9367p0001</help>
+        		                <help>Digital output pin selection for DOut9618p0005</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FAN2Pin</name>
@@ -36065,7 +36746,7 @@
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut9387p0001</help>
+        		                <help>Digital output pin selection for DOut9638p0005</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -36276,17 +36957,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_021.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_021.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_021.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_021.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in c:\ecufiles\tdbdll</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_021.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
                 </Command>
         </Add>
     

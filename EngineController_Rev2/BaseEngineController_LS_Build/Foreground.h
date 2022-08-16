@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2021
+ * Model version                  : 1.2035
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Jul 11 23:56:32 2022
+ * C/C++ source code generated on : Mon Aug 15 22:38:43 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,27 +31,28 @@
 /* Child system includes */
 #include "BaseEngineController_LS_IdleStateMachine.h"
 
-/* Block signals for system '<S375>/Collect Average' */
+/* Block signals for system '<S376>/Collect Average' */
 typedef struct {
-  real_T s379_Product;                 /* '<S379>/Product' */
+  real_T s380_Product;                 /* '<S380>/Product' */
 } rtB_CollectAverage_BaseEngineController_LS;
 
-/* Block states (auto storage) for system '<S375>/Collect Average' */
+/* Block states (auto storage) for system '<S376>/Collect Average' */
 typedef struct {
-  real_T s379_UnitDelay1_DSTATE;       /* '<S379>/Unit Delay1' */
-  boolean_T s375_CollectAverage_MODE;  /* '<S375>/Collect Average' */
+  real_T s380_UnitDelay1_DSTATE;       /* '<S380>/Unit Delay1' */
+  boolean_T s376_CollectAverage_MODE;  /* '<S376>/Collect Average' */
 } rtDW_CollectAverage_BaseEngineController_LS;
 
-/* Block signals for system '<S761>/Function-Call Subsystem' */
+/* Block signals for system '<S762>/Function-Call Subsystem' */
 typedef struct {
-  boolean_T s779_InitialConditionisTrue;/* '<S779>/Initial Condition is True' */
+  boolean_T s780_InitialConditionisTrue;/* '<S780>/Initial Condition is True' */
 } rtB_FunctionCallSubsystem_BaseEngineController_LS;
 
-/* Block states (auto storage) for system '<S761>/Function-Call Subsystem' */
+/* Block states (auto storage) for system '<S762>/Function-Call Subsystem' */
 typedef struct {
-  boolean_T s779_InitialConditionisTrue_DSTATE;/* '<S779>/Initial Condition is True' */
+  boolean_T s780_InitialConditionisTrue_DSTATE;/* '<S780>/Initial Condition is True' */
 } rtDW_FunctionCallSubsystem_BaseEngineController_LS;
 
+/* Exported functions */
 extern void BaseEngineController_LS_CollectAverage_Init
   (rtDW_CollectAverage_BaseEngineController_LS *localDW);
 extern void BaseEngineController_LS_CollectAverage_Start

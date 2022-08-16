@@ -58,6 +58,9 @@ VAL_TABLE_ ActiveNotActive 1 "Active" 0 "Not Active" ;
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ EngineLoad : 0|16@0+ (0.0015259,0) [0|99.998] "fraction:%" Vector__XXX
 
+BO_ 2180030720 DASH_CUSTOM_1: 8 AEMInfinity
+ SG_ FuelLevl : 7|16@0+ (0.0015259,0) [0|99.9998565] "%" Vector__XXX
+
 BO_ 2180030473 Infinity8: 8 AEMInfinity
  SG_ AntilagBoostTarget : 39|16@0+ (0.1,0) [0|6553.5] "pressure:kPa" Vector__XXX
  SG_ SteeringAngle : 23|16@0+ (0.1,-3276.8) [0|0] "angle:deg" Vector__XXX
@@ -420,7 +423,6 @@ BA_DEF_  "BusType" ENUM  "Can";
 BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 2000;
 BA_DEF_ BO_  "DBC_Author_Contact" STRING ;
-BA_DEF_DEF_  "DBC_Author_Contact" "CANbusInfo@AEMelectronics.com";
 BA_DEF_DEF_  "GenMsgILSupport" "Yes";
 BA_DEF_DEF_  "ILUsed" "Yes";
 BA_DEF_DEF_  "TpNodeBaseAddress" 0;
@@ -433,10 +435,11 @@ BA_DEF_DEF_  "ProtocolType" "";
 BA_DEF_DEF_  "BusType" "Can";
 BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
 BA_DEF_DEF_  "GenMsgCycleTime" 10;
-BA_ "ProtocolType" "AEMNet";
-BA_ "VersionNumber" 4;
-BA_ "VersionDay" 21;
+BA_DEF_DEF_  "DBC_Author_Contact" "CANbusInfo@AEMelectronics.com";
 BA_ "VersionMonth" 10;
+BA_ "VersionDay" 21;
+BA_ "VersionNumber" 4;
+BA_ "ProtocolType" "AEMNet";
 BA_ "TpNodeBaseAddress" BU_ AEMInfinity 1;
 BA_ "GenMsgCycleTime" BO_ 2180030473 40;
 BA_ "GenMsgCycleTime" BO_ 2180030497 20;

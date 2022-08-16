@@ -10228,6 +10228,566 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>TPS_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+      <struct>ConstantWork.TPS_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>TPS_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+      <struct>ConstantWork.TPS_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>IAT_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+      <struct>ConstantWork.IAT_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>IAT_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+      <struct>ConstantWork.IAT_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ECT_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+      <struct>ConstantWork.ECT_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ECT_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
+      <struct>ConstantWork.ECT_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+      <struct>ConstantWork.VSPD_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+      <struct>ConstantWork.VSPD_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>SparkAdv_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+      <struct>ConstantWork.SparkAdv_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>SparkAdv_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+      <struct>ConstantWork.SparkAdv_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ECUVolt_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+      <struct>ConstantWork.ECUVolt_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ECUVolt_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+      <struct>ConstantWork.ECUVolt_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>MAP_filtDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+      <struct>ConstantWork.MAP_filtDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>MAP_filtIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+      <struct>ConstantWork.MAP_filtIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>FuelPres_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+      <struct>ConstantWork.FuelPres_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>FuelPres_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+      <struct>ConstantWork.FuelPres_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>OilPres_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+      <struct>ConstantWork.OilPres_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>OilPres_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+      <struct>ConstantWork.OilPres_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Flex_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
+      <struct>ConstantWork.Flex_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>Flex_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
+      <struct>ConstantWork.Flex_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ETCReq_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.ETCReq_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ETCReq_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.ETCReq_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>APP_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.APP_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>APP_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.APP_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>TPS1_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.TPS1_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>TPS1_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.TPS1_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>TPS2_FiltDecFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a decreasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.TPS2_FiltDecFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>TPS2_FiltIncFiltC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant for a increasing signal.</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
+      <struct>ConstantWork.TPS2_FiltIncFiltC</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
       <name>ETC_Offset</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -13850,27 +14410,65 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>RevLimitType</name>
+      <name>RPMFilt_RoundValue</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>127</max>
-      <min>-128</min>
+      <max>1000</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <units>RPM</units>
+      <ctype>const Constant_T</ctype>
+      <help>RPM round value</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+      <struct>ConstantWork.RPMFilt_RoundValue</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>RPMFilt_LowPass</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+      <struct>ConstantWork.RPMFilt_LowPass</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RPMFilt_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>255</max>
+      <min>0</min>
       <format>3.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Define the type of sequence to be disable when in Rev Limit</help>
-      <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|SequenceCutPattern</group>
-      <struct>ConstantWork.RevLimitType</struct>
+      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+      <struct>ConstantWork.RPMFilt_Enable</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>int8</type>
+      <type>uint8</type>
       <class>enum</class>
       <enum>
-         <item name="Cut Spark" value="0"/>
-         <item name="Cut Fuel" value="1"/>
-         <item name="Cut Spark and Fuel" value="2"/>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -14119,6 +14717,31 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>RevLimitType</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127</max>
+      <min>-128</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Define the type of sequence to be disable when in Rev Limit</help>
+      <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|SequenceCutPattern</group>
+      <struct>ConstantWork.RevLimitType</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Cut Spark" value="0"/>
+         <item name="Cut Fuel" value="1"/>
+         <item name="Cut Spark and Fuel" value="2"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>FAN1_Polarity</name>
@@ -19542,7 +20165,7 @@
       <type>real32</type>
       <len>5</len>
       <output>ACAirFlowOfst</output>
-      <prelookup>ECT05IdxArr</prelookup>
+      <prelookup>ACPres05IdxArr</prelookup>
    </VarDec>
    <VarDec>
       <name>ACAirFlowOfst</name>
@@ -23053,6 +23676,69 @@
       <help>Index of system voltage</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|SysVolt Index</group>
       <struct>VolatileWork_BSS.SysVolt09In</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ACPres05IdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>10000</max>
+      <min>-150</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>kPa</units>
+      <ctype>const Constant_T</ctype>
+      <help>Index of AC system high side pressure</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
+      <struct>ConstantWork.ACPres05IdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>5</len>
+      <input>ACPres05In</input>
+      <index>ACPres05Idx</index>
+   </VarDec>
+   <VarDec>
+      <name>ACPres05Idx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Index of AC system high side pressure</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
+      <struct>VolatileWork_BSS.ACPres05Idx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>ACPres05In</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>kPa</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Index of AC system high side pressure</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
+      <struct>VolatileWork_BSS.ACPres05In</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -27806,69 +28492,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ACPres05IdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>10000</max>
-      <min>-150</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>const Constant_T</ctype>
-      <help>Index of AC system high side pressure</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
-      <struct>ConstantWork.ACPres05IdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>5</len>
-      <input>ACPres05In</input>
-      <index>ACPres05Idx</index>
-   </VarDec>
-   <VarDec>
-      <name>ACPres05Idx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Index of AC system high side pressure</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
-      <struct>VolatileWork_BSS.ACPres05Idx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>ACPres05In</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Index of AC system high side pressure</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Raw Indexes|ACPres Index</group>
-      <struct>VolatileWork_BSS.ACPres05In</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>RPM05IdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -31075,7 +31698,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut8754p0001</help>
+      <help>Digital output pin selection for DOut9005p0001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACPin</struct>
       <storage>FLASH</storage>
@@ -32324,7 +32947,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9366p0001</help>
+      <help>Digital output pin selection for DOut9617p0005</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN1Pin</struct>
       <storage>FLASH</storage>
@@ -32428,7 +33051,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9367p0001</help>
+      <help>Digital output pin selection for DOut9618p0005</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN2Pin</struct>
       <storage>FLASH</storage>
@@ -32532,7 +33155,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9387p0001</help>
+      <help>Digital output pin selection for DOut9638p0005</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>

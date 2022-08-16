@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2021
+ * Model version                  : 1.2035
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Jul 11 23:56:32 2022
+ * C/C++ source code generated on : Mon Aug 15 22:38:43 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -46,126 +46,156 @@
 
 /* Block signals (auto storage) */
 typedef struct {
-  real_T s452_Gain1;                   /* '<S452>/Gain1' */
-  real_T s611_motohawk_interpolation_1d;/* '<S611>/motohawk_interpolation_1d' */
-  real_T s610_Merge;                   /* '<S610>/Merge' */
-  real_T s577_Switch;                  /* '<S577>/Switch' */
-  real_T s786_motohawk_interpolation_1d;/* '<S786>/motohawk_interpolation_1d' */
-  real_T s765_Switch;                  /* '<S765>/Switch' */
-  real_T s809_MinMax;                  /* '<S809>/MinMax' */
-  real_T s809_MinMax1;                 /* '<S809>/MinMax1' */
-  real_T s813_MinMax1;                 /* '<S813>/MinMax1' */
-  real_T s784_Merge;                   /* '<S784>/Merge' */
-  real_T s823_Merge;                   /* '<S823>/Merge' */
-  real_T s774_motohawk_interpolation_1d;/* '<S774>/motohawk_interpolation_1d' */
-  real_T s764_Switch;                  /* '<S764>/Switch' */
-  real_T s792_MinMax;                  /* '<S792>/MinMax' */
-  real_T s792_MinMax1;                 /* '<S792>/MinMax1' */
-  real_T s796_MinMax1;                 /* '<S796>/MinMax1' */
-  real_T s772_Merge;                   /* '<S772>/Merge' */
-  real_T s806_Merge;                   /* '<S806>/Merge' */
-  real_T s415_Switch1;                 /* '<S415>/Switch1' */
-  real_T s441_Sum;                     /* '<S441>/Sum' */
-  real_T s453_RPMInst;                 /* '<S453>/Data Type Conversion1' */
-  real_T s570_DataTypeConversion;      /* '<S570>/Data Type Conversion' */
-  real_T s628_Sum1;                    /* '<S628>/Sum1' */
-  real_T s641_Merge;                   /* '<S641>/Merge' */
-  real_T s627_Sum1;                    /* '<S627>/Sum1' */
+  real_T s453_Gain1;                   /* '<S453>/Gain1' */
+  real_T s612_motohawk_interpolation_1d;/* '<S612>/motohawk_interpolation_1d' */
+  real_T s611_Merge;                   /* '<S611>/Merge' */
+  real_T s578_Switch;                  /* '<S578>/Switch' */
+  real_T s787_motohawk_interpolation_1d;/* '<S787>/motohawk_interpolation_1d' */
   real_T s766_Switch;                  /* '<S766>/Switch' */
-  real_T s826_MinMax;                  /* '<S826>/MinMax' */
-  real_T s826_MinMax1;                 /* '<S826>/MinMax1' */
-  real_T s830_MinMax1;                 /* '<S830>/MinMax1' */
-  real_T s767_Switch;                  /* '<S767>/Switch' */
-  real_T s843_MinMax;                  /* '<S843>/MinMax' */
-  real_T s843_MinMax1;                 /* '<S843>/MinMax1' */
-  real_T s847_MinMax1;                 /* '<S847>/MinMax1' */
-  real_T s840_Merge;                   /* '<S840>/Merge' */
-  real_T s857_Merge;                   /* '<S857>/Merge' */
-  real_T s422_Switch2;                 /* '<S422>/Switch2' */
+  real_T s810_MinMax;                  /* '<S810>/MinMax' */
+  real_T s810_MinMax1;                 /* '<S810>/MinMax1' */
+  real_T s814_MinMax1;                 /* '<S814>/MinMax1' */
+  real_T s785_Merge;                   /* '<S785>/Merge' */
+  real_T s824_Merge;                   /* '<S824>/Merge' */
+  real_T s775_motohawk_interpolation_1d;/* '<S775>/motohawk_interpolation_1d' */
+  real_T s765_Switch;                  /* '<S765>/Switch' */
+  real_T s793_MinMax;                  /* '<S793>/MinMax' */
+  real_T s793_MinMax1;                 /* '<S793>/MinMax1' */
+  real_T s797_MinMax1;                 /* '<S797>/MinMax1' */
+  real_T s773_Merge;                   /* '<S773>/Merge' */
+  real_T s807_Merge;                   /* '<S807>/Merge' */
+  real_T s416_Switch1;                 /* '<S416>/Switch1' */
+  real_T s442_Sum;                     /* '<S442>/Sum' */
+  real_T s454_RPMInst;                 /* '<S454>/Data Type Conversion1' */
+  real_T s571_DataTypeConversion;      /* '<S571>/Data Type Conversion' */
   real_T s629_Sum1;                    /* '<S629>/Sum1' */
-  real_T s649_Merge;                   /* '<S649>/Merge' */
-  real_T s457_ReadCANMessage_o3;       /* '<S457>/Read CAN Message' */
-  real_T s457_ReadCANMessage_o4;       /* '<S457>/Read CAN Message' */
-  real_T s457_ReadCANMessage_o5;       /* '<S457>/Read CAN Message' */
-  real_T s457_ReadCANMessage_o6;       /* '<S457>/Read CAN Message' */
-  real_T s457_ReadCANMessage_o7;       /* '<S457>/Read CAN Message' */
-  real_T s457_ReadCANMessage_o8;       /* '<S457>/Read CAN Message' */
-  real_T s457_ReadCANMessage2_o2;      /* '<S457>/Read CAN Message2' */
-  real_T s457_ReadCANMessage2_o3;      /* '<S457>/Read CAN Message2' */
-  real_T s457_ReadCANMessage2_o4;      /* '<S457>/Read CAN Message2' */
-  real_T s457_ReadCANMessage2_o5;      /* '<S457>/Read CAN Message2' */
-  real_T s426_Switch2;                 /* '<S426>/Switch2' */
-  real_T s458_ReadCANMessage1_o2;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o3;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o4;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o5;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o6;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o7;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o8;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o9;      /* '<S458>/Read CAN Message1' */
-  real_T s458_ReadCANMessage1_o10;     /* '<S458>/Read CAN Message1' */
-  real_T s458_MathFunction1;           /* '<S458>/Math Function1' */
-  real_T s499_Sum1;                    /* '<S499>/Sum1' */
-  real_T s530_Merge;                   /* '<S530>/Merge' */
-  real_T s458_ReadCANMessage_o2;       /* '<S458>/Read CAN Message' */
+  real_T s642_Merge;                   /* '<S642>/Merge' */
+  real_T s628_Sum1;                    /* '<S628>/Sum1' */
+  real_T s767_Switch;                  /* '<S767>/Switch' */
+  real_T s827_MinMax;                  /* '<S827>/MinMax' */
+  real_T s827_MinMax1;                 /* '<S827>/MinMax1' */
+  real_T s831_MinMax1;                 /* '<S831>/MinMax1' */
+  real_T s768_Switch;                  /* '<S768>/Switch' */
+  real_T s844_MinMax;                  /* '<S844>/MinMax' */
+  real_T s844_MinMax1;                 /* '<S844>/MinMax1' */
+  real_T s848_MinMax1;                 /* '<S848>/MinMax1' */
+  real_T s841_Merge;                   /* '<S841>/Merge' */
+  real_T s858_Merge;                   /* '<S858>/Merge' */
+  real_T s423_Switch2;                 /* '<S423>/Switch2' */
+  real_T s630_Sum1;                    /* '<S630>/Sum1' */
+  real_T s650_Merge;                   /* '<S650>/Merge' */
   real_T s458_ReadCANMessage_o3;       /* '<S458>/Read CAN Message' */
   real_T s458_ReadCANMessage_o4;       /* '<S458>/Read CAN Message' */
   real_T s458_ReadCANMessage_o5;       /* '<S458>/Read CAN Message' */
   real_T s458_ReadCANMessage_o6;       /* '<S458>/Read CAN Message' */
   real_T s458_ReadCANMessage_o7;       /* '<S458>/Read CAN Message' */
   real_T s458_ReadCANMessage_o8;       /* '<S458>/Read CAN Message' */
-  real_T s458_ReadCANMessage_o9;       /* '<S458>/Read CAN Message' */
-  real_T s458_ReadCANMessage_o10;      /* '<S458>/Read CAN Message' */
-  real_T s458_MathFunction;            /* '<S458>/Math Function' */
-  real_T s498_Sum1;                    /* '<S498>/Sum1' */
-  real_T s522_Merge;                   /* '<S522>/Merge' */
-  real_T s458_Gain;                    /* '<S458>/Gain' */
-  real_T s420_Sum1;                    /* '<S420>/Sum1' */
-  real_T s443_Switch;                  /* '<S443>/Switch' */
-  real_T s636_Sum1;                    /* '<S636>/Sum1' */
-  real_T s704_Merge;                   /* '<S704>/Merge' */
-  real_T s633_Merge;                   /* '<S633>/Merge' */
-  real_T s631_Sum1;                    /* '<S631>/Sum1' */
-  real_T s670_Merge;                   /* '<S670>/Merge' */
-  real_T s368_motohawk_delta_time;     /* '<S368>/motohawk_delta_time' */
+  real_T s458_ReadCANMessage2_o2;      /* '<S458>/Read CAN Message2' */
+  real_T s458_ReadCANMessage2_o3;      /* '<S458>/Read CAN Message2' */
+  real_T s458_ReadCANMessage2_o4;      /* '<S458>/Read CAN Message2' */
+  real_T s458_ReadCANMessage2_o5;      /* '<S458>/Read CAN Message2' */
+  real_T s427_Switch2;                 /* '<S427>/Switch2' */
+  real_T s459_ReadCANMessage1_o2;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o3;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o4;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o5;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o6;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o7;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o8;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o9;      /* '<S459>/Read CAN Message1' */
+  real_T s459_ReadCANMessage1_o10;     /* '<S459>/Read CAN Message1' */
+  real_T s459_MathFunction1;           /* '<S459>/Math Function1' */
+  real_T s500_Sum1;                    /* '<S500>/Sum1' */
+  real_T s531_Merge;                   /* '<S531>/Merge' */
+  real_T s459_ReadCANMessage_o2;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o3;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o4;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o5;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o6;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o7;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o8;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o9;       /* '<S459>/Read CAN Message' */
+  real_T s459_ReadCANMessage_o10;      /* '<S459>/Read CAN Message' */
+  real_T s459_MathFunction;            /* '<S459>/Math Function' */
+  real_T s499_Sum1;                    /* '<S499>/Sum1' */
+  real_T s523_Merge;                   /* '<S523>/Merge' */
+  real_T s459_Gain;                    /* '<S459>/Gain' */
+  real_T s421_Sum1;                    /* '<S421>/Sum1' */
+  real_T s444_Switch;                  /* '<S444>/Switch' */
+  real_T s637_Sum1;                    /* '<S637>/Sum1' */
+  real_T s705_Merge;                   /* '<S705>/Merge' */
+  real_T s634_Merge;                   /* '<S634>/Merge' */
   real_T s632_Sum1;                    /* '<S632>/Sum1' */
+  real_T s671_Merge;                   /* '<S671>/Merge' */
+  real_T s369_motohawk_delta_time;     /* '<S369>/motohawk_delta_time' */
+  real_T s633_Sum1;                    /* '<S633>/Sum1' */
+  real_T s379_Sum;                     /* '<S379>/Sum' */
+  real_T s378_motohawk_interpolation_2d2;/* '<S378>/motohawk_interpolation_2d2' */
   real_T s378_Sum;                     /* '<S378>/Sum' */
-  real_T s377_motohawk_interpolation_2d2;/* '<S377>/motohawk_interpolation_2d2' */
-  real_T s377_Sum;                     /* '<S377>/Sum' */
-  real_T s377_NominalAirFlowRate;      /* '<S377>/Nominal Air Flow Rate' */
-  real_T s377_ModelAirMassFlowRate;    /* '<S377>/Model Air Mass Flow Rate' */
-  real_T s452_Gain;                    /* '<S452>/Gain' */
-  real_T s592_motohawk_interpolation_1d;/* '<S592>/motohawk_interpolation_1d' */
-  real_T s591_Merge;                   /* '<S591>/Merge' */
-  real_T s377_MultiportSwitch;         /* '<S377>/Multiport Switch' */
-  real_T s393_Merge;                   /* '<S393>/Merge' */
-  real_T s396_Sum1;                    /* '<S396>/Sum1' */
+  real_T s378_NominalAirFlowRate;      /* '<S378>/Nominal Air Flow Rate' */
+  real_T s378_ModelAirMassFlowRate;    /* '<S378>/Model Air Mass Flow Rate' */
+  real_T s453_Gain;                    /* '<S453>/Gain' */
+  real_T s593_motohawk_interpolation_1d;/* '<S593>/motohawk_interpolation_1d' */
+  real_T s592_Merge;                   /* '<S592>/Merge' */
+  real_T s378_MultiportSwitch;         /* '<S378>/Multiport Switch' */
   real_T s394_Merge;                   /* '<S394>/Merge' */
-  real_T s399_Sum1;                    /* '<S399>/Sum1' */
-  real_T s437_Sum1;                    /* '<S437>/Sum1' */
-  real_T s571_DataTypeConversion;      /* '<S571>/Data Type Conversion' */
-  real_T s574_DataTypeConversion;      /* '<S574>/Data Type Conversion' */
-  real_T s678_Merge;                   /* '<S678>/Merge' */
-  real_T s369_motohawk_data_read;      /* '<S369>/motohawk_data_read' */
-  real_T s388_Sum1;                    /* '<S388>/Sum1' */
-  real_T s419_MultiportSwitch;         /* '<S419>/Multiport Switch' */
+  real_T s397_Sum1;                    /* '<S397>/Sum1' */
+  real_T s395_Merge;                   /* '<S395>/Merge' */
+  real_T s400_Sum1;                    /* '<S400>/Sum1' */
+  real_T s438_Sum1;                    /* '<S438>/Sum1' */
+  real_T s572_DataTypeConversion;      /* '<S572>/Data Type Conversion' */
+  real_T s575_DataTypeConversion;      /* '<S575>/Data Type Conversion' */
+  real_T s679_Merge;                   /* '<S679>/Merge' */
+  real_T s370_motohawk_data_read;      /* '<S370>/motohawk_data_read' */
+  real_T s389_Sum1;                    /* '<S389>/Sum1' */
+  real_T s889_Product1;                /* '<S889>/Product1' */
+  real_T s889_Switch;                  /* '<S889>/Switch' */
+  real_T s886_Merge;                   /* '<S886>/Merge' */
+  real_T s891_Sum1;                    /* '<S891>/Sum1' */
+  real_T s887_Merge;                   /* '<S887>/Merge' */
+  real_T s894_Sum1;                    /* '<S894>/Sum1' */
+  real_T s888_Merge;                   /* '<S888>/Merge' */
+  real_T s897_Sum1;                    /* '<S897>/Sum1' */
+  real_T s901_Merge;                   /* '<S901>/Merge' */
+  real_T s905_Sum1;                    /* '<S905>/Sum1' */
+  real_T s420_MultiportSwitch;         /* '<S420>/Multiport Switch' */
   real_T s135_SparkAdv;                /* '<S135>/Merge4' */
-  real_T s630_Sum1;                    /* '<S630>/Sum1' */
-  real_T s634_Sum1;                    /* '<S634>/Sum1' */
+  real_T s902_Merge;                   /* '<S902>/Merge' */
+  real_T s908_Sum1;                    /* '<S908>/Sum1' */
+  real_T s903_Merge;                   /* '<S903>/Merge' */
+  real_T s911_Sum1;                    /* '<S911>/Sum1' */
+  real_T s916_Merge;                   /* '<S916>/Merge' */
+  real_T s920_Sum1;                    /* '<S920>/Sum1' */
+  real_T s631_Sum1;                    /* '<S631>/Sum1' */
+  real_T s663_Merge;                   /* '<S663>/Merge' */
+  real_T s917_Merge;                   /* '<S917>/Merge' */
+  real_T s923_Sum1;                    /* '<S923>/Sum1' */
+  real_T s635_Sum1;                    /* '<S635>/Sum1' */
+  real_T s689_Merge;                   /* '<S689>/Merge' */
+  real_T s918_Merge;                   /* '<S918>/Merge' */
+  real_T s926_Sum1;                    /* '<S926>/Sum1' */
   real_T s135_FAN1;                    /* '<S135>/Merge12' */
   real_T s135_FAN2;                    /* '<S135>/Merge13' */
-  real_T s662_Merge;                   /* '<S662>/Merge' */
-  real_T s688_Merge;                   /* '<S688>/Merge' */
+  real_T s928_Merge;                   /* '<S928>/Merge' */
+  real_T s930_Sum1;                    /* '<S930>/Sum1' */
+  real_T s933_Merge;                   /* '<S933>/Merge' */
+  real_T s940_Sum1;                    /* '<S940>/Sum1' */
+  real_T s932_Merge;                   /* '<S932>/Merge' */
+  real_T s937_Sum1;                    /* '<S937>/Sum1' */
+  real_T s934_Merge;                   /* '<S934>/Merge' */
+  real_T s943_Sum1;                    /* '<S943>/Sum1' */
+  real_T s935_Merge;                   /* '<S935>/Merge' */
+  real_T s946_Sum1;                    /* '<S946>/Sum1' */
   real_T s135_SparkEnergy;             /* '<S135>/Merge5' */
-  real_T s926_MinMax1;                 /* '<S926>/MinMax1' */
-  real_T s930_MinMax1;                 /* '<S930>/MinMax1' */
-  real_T s445_Switch;                  /* '<S445>/Switch' */
+  real_T s986_MinMax1;                 /* '<S986>/MinMax1' */
+  real_T s990_MinMax1;                 /* '<S990>/MinMax1' */
+  real_T s446_Switch;                  /* '<S446>/Switch' */
   real_T s135_Throttle;                /* '<S135>/Merge8' */
-  real_T s866_ETC;                     /* '<S866>/Saturation' */
+  real_T s867_ETC;                     /* '<S867>/Saturation' */
   real_T s135_IACP;                    /* '<S135>/Merge3' */
-  real_T s944_MinMax1;                 /* '<S944>/MinMax1' */
+  real_T s1004_MinMax1;                /* '<S1004>/MinMax1' */
   real_T s135_IACS;                    /* '<S135>/Merge9' */
-  real_T s948_MinMax1;                 /* '<S948>/MinMax1' */
+  real_T s1008_MinMax1;                /* '<S1008>/MinMax1' */
   real_T s135_SOI;                     /* '<S135>/Merge1' */
   real_T s135_FPC[8];                  /* '<S135>/Merge2' */
   real_T s72_Sum[8];                   /* '<S72>/Sum' */
@@ -176,35 +206,35 @@ typedef struct {
   real_T s21_MinMax[8];                /* '<S21>/MinMax' */
   real_T s135_MakeUpEOI;               /* '<S135>/Merge10' */
   real_T s135_WASTEGATE;               /* '<S135>/Merge11' */
-  real_T s975_MinMax1;                 /* '<S975>/MinMax1' */
+  real_T s1035_MinMax1;                /* '<S1035>/MinMax1' */
   real_T s21_Gain[8];                  /* '<S21>/Gain' */
-  real_T s420_Sum3;                    /* '<S420>/Sum3' */
-  real_T s418_Sum3;                    /* '<S418>/Sum3' */
-  real_T s457_ReadCANMessage1_o2;      /* '<S457>/Read CAN Message1' */
-  real_T s457_ReadCANMessage1_o3;      /* '<S457>/Read CAN Message1' */
-  real_T s635_Sum1;                    /* '<S635>/Sum1' */
-  real_T s696_Merge;                   /* '<S696>/Merge' */
-  real_T s890_Sum;                     /* '<S890>/Sum' */
-  real_T s891_Sum;                     /* '<S891>/Sum' */
-  real_T s893_CrankCounter;            /* '<S893>/CrankCounter' */
-  real_T s716_motohawk_interpolation_1d;/* '<S716>/motohawk_interpolation_1d' */
-  real_T s715_Merge;                   /* '<S715>/Merge' */
-  real_T s738_motohawk_interpolation_1d;/* '<S738>/motohawk_interpolation_1d' */
-  real_T s721_Merge;                   /* '<S721>/Merge' */
-  real_T s737_Merge;                   /* '<S737>/Merge' */
-  real_T s756_motohawk_interpolation_1d;/* '<S756>/motohawk_interpolation_1d' */
-  real_T s723_Merge;                   /* '<S723>/Merge' */
-  real_T s755_Merge;                   /* '<S755>/Merge' */
-  real_T s747_motohawk_interpolation_1d;/* '<S747>/motohawk_interpolation_1d' */
-  real_T s746_Merge;                   /* '<S746>/Merge' */
-  real_T s729_motohawk_interpolation_1d;/* '<S729>/motohawk_interpolation_1d' */
-  real_T s728_Merge;                   /* '<S728>/Merge' */
+  real_T s421_Sum3;                    /* '<S421>/Sum3' */
+  real_T s419_Sum3;                    /* '<S419>/Sum3' */
+  real_T s458_ReadCANMessage1_o2;      /* '<S458>/Read CAN Message1' */
+  real_T s458_ReadCANMessage1_o3;      /* '<S458>/Read CAN Message1' */
+  real_T s636_Sum1;                    /* '<S636>/Sum1' */
+  real_T s697_Merge;                   /* '<S697>/Merge' */
+  real_T s950_Sum;                     /* '<S950>/Sum' */
+  real_T s951_Sum;                     /* '<S951>/Sum' */
+  real_T s953_CrankCounter;            /* '<S953>/CrankCounter' */
+  real_T s717_motohawk_interpolation_1d;/* '<S717>/motohawk_interpolation_1d' */
+  real_T s716_Merge;                   /* '<S716>/Merge' */
+  real_T s739_motohawk_interpolation_1d;/* '<S739>/motohawk_interpolation_1d' */
+  real_T s722_Merge;                   /* '<S722>/Merge' */
+  real_T s738_Merge;                   /* '<S738>/Merge' */
+  real_T s757_motohawk_interpolation_1d;/* '<S757>/motohawk_interpolation_1d' */
+  real_T s724_Merge;                   /* '<S724>/Merge' */
+  real_T s756_Merge;                   /* '<S756>/Merge' */
+  real_T s748_motohawk_interpolation_1d;/* '<S748>/motohawk_interpolation_1d' */
+  real_T s747_Merge;                   /* '<S747>/Merge' */
+  real_T s730_motohawk_interpolation_1d;/* '<S730>/motohawk_interpolation_1d' */
+  real_T s729_Merge;                   /* '<S729>/Merge' */
   real_T s327_Defaultifnoflow[8];      /* '<S327>/Default (if no flow)' */
   real_T s344_Sum1[8];                 /* '<S344>/Sum1' */
   real_T s343_chargemass[8];           /* '<S343>/charge mass' */
-  real_T s412_Merge;                   /* '<S412>/Merge' */
-  real_T s430_Sum2;                    /* '<S430>/Sum2' */
-  real_T s374_Timer;                   /* '<S368>/Baro Stall State Delay' */
+  real_T s413_Merge;                   /* '<S413>/Merge' */
+  real_T s431_Sum2;                    /* '<S431>/Sum2' */
+  real_T s375_Timer;                   /* '<S369>/Baro Stall State Delay' */
   real_T s321_UnitDelay;               /* '<S321>/Unit Delay' */
   real_T s311_Product1;                /* '<S311>/Product1' */
   real_T s311_Switch;                  /* '<S311>/Switch' */
@@ -290,95 +320,110 @@ typedef struct {
   real_T s20_Switch;                   /* '<S20>/Switch' */
   real_T s52_In1;                      /* '<S52>/In1' */
   real_T s27_TestTime;                 /* '<S20>/ETC Test  Manager' */
-  real_T s996_Switch;                  /* '<S996>/Switch' */
-  uint32_T s454_motohawk_frequency_in; /* '<S454>/motohawk_frequency_in' */
-  uint32_T s457_ReadCANMessage_o1;     /* '<S457>/Read CAN Message' */
-  uint32_T s457_ReadCANMessage2_o1;    /* '<S457>/Read CAN Message2' */
-  uint32_T s458_ReadCANMessage1_o1;    /* '<S458>/Read CAN Message1' */
+  real_T s1056_Switch;                 /* '<S1056>/Switch' */
+  uint32_T s455_motohawk_frequency_in; /* '<S455>/motohawk_frequency_in' */
   uint32_T s458_ReadCANMessage_o1;     /* '<S458>/Read CAN Message' */
-  uint32_T s457_ReadCANMessage1_o1;    /* '<S457>/Read CAN Message1' */
-  uint32_T s626_Sum;                   /* '<S626>/Sum' */
+  uint32_T s458_ReadCANMessage2_o1;    /* '<S458>/Read CAN Message2' */
+  uint32_T s459_ReadCANMessage1_o1;    /* '<S459>/Read CAN Message1' */
+  uint32_T s459_ReadCANMessage_o1;     /* '<S459>/Read CAN Message' */
+  uint32_T s458_ReadCANMessage1_o1;    /* '<S458>/Read CAN Message1' */
+  uint32_T s627_Sum;                   /* '<S627>/Sum' */
   uint32_T s9_ReadCANRaw_o2;           /* '<S9>/Read CAN Raw' */
   uint32_T s9_ReadCANRaw_o4;           /* '<S9>/Read CAN Raw' */
   uint32_T s10_motohawk_calibration;   /* '<S10>/motohawk_calibration' */
-  int16_T s866_motohawk_pwm1;          /* '<S866>/motohawk_pwm1' */
-  uint16_T s456_motohawk_ain2;         /* '<S456>/motohawk_ain2' */
-  uint16_T s456_motohawk_ain1;         /* '<S456>/motohawk_ain1' */
-  uint16_T s454_motohawk_ain4;         /* '<S454>/motohawk_ain4' */
-  uint16_T s454_motohawk_ain14;        /* '<S454>/motohawk_ain14' */
-  uint16_T s454_motohawk_ain_read1;    /* '<S454>/motohawk_ain_read1' */
-  uint16_T s454_motohawk_ain2;         /* '<S454>/motohawk_ain2' */
-  uint16_T s454_motohawk_ain1;         /* '<S454>/motohawk_ain1' */
-  uint16_T s454_motohawk_ain3;         /* '<S454>/motohawk_ain3' */
-  uint16_T s862_SparkSequence_o3[8];   /* '<S862>/Spark Sequence' */
-  uint16_T s862_SparkSequence_o4[8];   /* '<S862>/Spark Sequence' */
-  uint16_T s708_motohawk_ain;          /* '<S708>/motohawk_ain' */
+  int16_T s867_motohawk_pwm1;          /* '<S867>/motohawk_pwm1' */
+  uint16_T s457_motohawk_ain2;         /* '<S457>/motohawk_ain2' */
+  uint16_T s457_motohawk_ain1;         /* '<S457>/motohawk_ain1' */
+  uint16_T s455_motohawk_ain4;         /* '<S455>/motohawk_ain4' */
+  uint16_T s455_motohawk_ain14;        /* '<S455>/motohawk_ain14' */
+  uint16_T s455_motohawk_ain_read1;    /* '<S455>/motohawk_ain_read1' */
+  uint16_T s455_motohawk_ain2;         /* '<S455>/motohawk_ain2' */
+  uint16_T s455_motohawk_ain1;         /* '<S455>/motohawk_ain1' */
+  uint16_T s455_motohawk_ain3;         /* '<S455>/motohawk_ain3' */
+  uint16_T s863_SparkSequence_o3[8];   /* '<S863>/Spark Sequence' */
+  uint16_T s863_SparkSequence_o4[8];   /* '<S863>/Spark Sequence' */
   uint16_T s709_motohawk_ain;          /* '<S709>/motohawk_ain' */
-  uint16_T s709_motohawk_ain1;         /* '<S709>/motohawk_ain1' */
-  uint16_T s709_motohawk_ain2;         /* '<S709>/motohawk_ain2' */
-  uint16_T s709_motohawk_ain3;         /* '<S709>/motohawk_ain3' */
+  uint16_T s710_motohawk_ain;          /* '<S710>/motohawk_ain' */
+  uint16_T s710_motohawk_ain1;         /* '<S710>/motohawk_ain1' */
+  uint16_T s710_motohawk_ain2;         /* '<S710>/motohawk_ain2' */
+  uint16_T s710_motohawk_ain3;         /* '<S710>/motohawk_ain3' */
   uint16_T s10_motohawk_calibration3;  /* '<S10>/motohawk_calibration3' */
-  index_T s407_motohawk_prelookup1;    /* '<S407>/motohawk_prelookup1' */
-  index_T s407_Indexes;                /* '<S407>/motohawk_prelookup5' */
-  index_T s403_motohawk_prelookup;     /* '<S403>/motohawk_prelookup' */
+  index_T s408_motohawk_prelookup1;    /* '<S408>/motohawk_prelookup1' */
+  index_T s408_Indexes;                /* '<S408>/motohawk_prelookup5' */
   index_T s404_motohawk_prelookup;     /* '<S404>/motohawk_prelookup' */
-  index_T s408_motohawk_prelookup;     /* '<S408>/motohawk_prelookup' */
-  index_T s405_motohawk_prelookup1;    /* '<S405>/motohawk_prelookup1' */
-  index_T s405_Indexes;                /* '<S405>/motohawk_prelookup5' */
+  index_T s405_motohawk_prelookup;     /* '<S405>/motohawk_prelookup' */
+  index_T s409_motohawk_prelookup;     /* '<S409>/motohawk_prelookup' */
   index_T s402_motohawk_prelookup;     /* '<S402>/motohawk_prelookup' */
-  index_T s373_RPMAccel17Idx;          /* '<S373>/motohawk_prelookup' */
+  index_T s406_motohawk_prelookup1;    /* '<S406>/motohawk_prelookup1' */
+  index_T s406_Indexes;                /* '<S406>/motohawk_prelookup5' */
+  index_T s403_motohawk_prelookup;     /* '<S403>/motohawk_prelookup' */
+  index_T s374_RPMAccel17Idx;          /* '<S374>/motohawk_prelookup' */
   int8_T s22_Merge1[32];               /* '<S22>/Merge1' */
-  int8_T s893_DataTypeConversion;      /* '<S893>/Data Type Conversion' */
+  int8_T s953_DataTypeConversion;      /* '<S953>/Data Type Conversion' */
   int8_T s231_DataTypeConversion;      /* '<S231>/Data Type Conversion' */
   int8_T s231_DataTypeConversion1;     /* '<S231>/Data Type Conversion1' */
   int8_T s102_MultiportSwitch[8];      /* '<S102>/Multiport Switch' */
   int8_T s121_CutArray[8];             /* '<S121>/CutArray' */
   int8_T s27_DC_Override;              /* '<S20>/ETC Test  Manager' */
   int8_T s27_SetpointMode;             /* '<S20>/ETC Test  Manager' */
-  uint8_T s417_UnitDelay;              /* '<S417>/Unit Delay' */
-  uint8_T s368_motohawk_data_read1;    /* '<S368>/motohawk_data_read1' */
-  uint8_T s868_InjectorSequence_o1[8]; /* '<S868>/Injector Sequence' */
+  uint8_T s418_UnitDelay;              /* '<S418>/Unit Delay' */
+  uint8_T s369_motohawk_data_read1;    /* '<S369>/motohawk_data_read1' */
+  uint8_T s869_InjectorSequence_o1[8]; /* '<S869>/Injector Sequence' */
   uint8_T s22_DataTypeConversion5;     /* '<S22>/Data Type Conversion5' */
-  uint8_T s453_motohawk_encoder_fault; /* '<S453>/motohawk_encoder_fault' */
-  uint8_T s453_motohawk_encoder_state; /* '<S453>/motohawk_encoder_state' */
-  uint8_T s895_Switch1;                /* '<S895>/Switch1' */
-  uint8_T s439_Switch;                 /* '<S439>/Switch' */
-  uint8_T s438_State;                  /* '<S417>/Engine State Machine' */
+  uint8_T s454_motohawk_encoder_fault; /* '<S454>/motohawk_encoder_fault' */
+  uint8_T s454_motohawk_encoder_state; /* '<S454>/motohawk_encoder_state' */
+  uint8_T s955_Switch1;                /* '<S955>/Switch1' */
+  uint8_T s440_Switch;                 /* '<S440>/Switch' */
+  uint8_T s439_State;                  /* '<S418>/Engine State Machine' */
   uint8_T s265_IdleState;              /* '<S250>/IdleStateMachine' */
   uint8_T s102_UnitDelay1;             /* '<S102>/Unit Delay1' */
   uint8_T s121_Switch;                 /* '<S121>/Switch' */
   uint8_T s9_ReadCANRaw_o5;            /* '<S9>/Read CAN Raw' */
   uint8_T s9_ReadCANRaw_o6[8];         /* '<S9>/Read CAN Raw' */
-  boolean_T s577_LogicalOperator;      /* '<S577>/Logical Operator' */
-  boolean_T s577_LogicalOperator3;     /* '<S577>/Logical Operator3' */
-  boolean_T s417_Stall;                /* '<S417>/Relational Operator1' */
-  boolean_T s417_Crank;                /* '<S417>/Relational Operator4' */
-  boolean_T s417_Run;                  /* '<S417>/Logical Operator1' */
-  boolean_T s578_Merge;                /* '<S578>/Merge' */
-  boolean_T s457_ReadCANMessage_o2;    /* '<S457>/Read CAN Message' */
-  boolean_T s393_RelationalOperator4;  /* '<S393>/Relational Operator4' */
+  boolean_T s578_LogicalOperator;      /* '<S578>/Logical Operator' */
+  boolean_T s578_LogicalOperator3;     /* '<S578>/Logical Operator3' */
+  boolean_T s418_Stall;                /* '<S418>/Relational Operator1' */
+  boolean_T s418_Crank;                /* '<S418>/Relational Operator4' */
+  boolean_T s418_Run;                  /* '<S418>/Logical Operator1' */
+  boolean_T s579_Merge;                /* '<S579>/Merge' */
+  boolean_T s458_ReadCANMessage_o2;    /* '<S458>/Read CAN Message' */
   boolean_T s394_RelationalOperator4;  /* '<S394>/Relational Operator4' */
-  boolean_T s392_LogicalOperator;      /* '<S392>/Logical Operator' */
-  boolean_T s452_motohawk_din2;        /* '<S452>/motohawk_din2' */
-  boolean_T s581_Merge;                /* '<S581>/Merge' */
-  boolean_T s597_Merge;                /* '<S597>/Merge' */
-  boolean_T s602_Merge;                /* '<S602>/Merge' */
+  boolean_T s395_RelationalOperator4;  /* '<S395>/Relational Operator4' */
+  boolean_T s393_LogicalOperator;      /* '<S393>/Logical Operator' */
+  boolean_T s453_motohawk_din2;        /* '<S453>/motohawk_din2' */
+  boolean_T s582_Merge;                /* '<S582>/Merge' */
+  boolean_T s598_Merge;                /* '<S598>/Merge' */
+  boolean_T s603_Merge;                /* '<S603>/Merge' */
   boolean_T s135_AC;                   /* '<S135>/Merge14' */
-  boolean_T s870_LogicalOperator;      /* '<S870>/Logical Operator' */
+  boolean_T s871_LogicalOperator;      /* '<S871>/Logical Operator' */
+  boolean_T s886_RelationalOperator4;  /* '<S886>/Relational Operator4' */
+  boolean_T s887_RelationalOperator4;  /* '<S887>/Relational Operator4' */
+  boolean_T s888_RelationalOperator4;  /* '<S888>/Relational Operator4' */
+  boolean_T s901_RelationalOperator4;  /* '<S901>/Relational Operator4' */
+  boolean_T s902_RelationalOperator4;  /* '<S902>/Relational Operator4' */
+  boolean_T s903_RelationalOperator4;  /* '<S903>/Relational Operator4' */
+  boolean_T s916_RelationalOperator4;  /* '<S916>/Relational Operator4' */
+  boolean_T s917_RelationalOperator4;  /* '<S917>/Relational Operator4' */
+  boolean_T s918_RelationalOperator4;  /* '<S918>/Relational Operator4' */
   boolean_T s135_FUELP;                /* '<S135>/Merge7' */
   boolean_T s22_LogicalOperator2[8];   /* '<S22>/Logical Operator2' */
-  boolean_T s916_LogicalOperator;      /* '<S916>/Logical Operator' */
-  boolean_T s917_LogicalOperator;      /* '<S917>/Logical Operator' */
-  boolean_T s452_motohawk_din;         /* '<S452>/motohawk_din' */
-  boolean_T s584_Merge;                /* '<S584>/Merge' */
-  boolean_T s934_LogicalOperator;      /* '<S934>/Logical Operator' */
-  boolean_T s866_RelationalOperator4;  /* '<S866>/Relational Operator4' */
-  boolean_T s958_Merge[8];             /* '<S958>/Merge' */
-  boolean_T s377_LogicalOperator;      /* '<S377>/Logical Operator' */
-  boolean_T s862_LogicalOperator1[8];  /* '<S862>/Logical Operator1' */
-  boolean_T s893_RelationalOperator1;  /* '<S893>/Relational Operator1' */
-  boolean_T s412_RelationalOperator3;  /* '<S412>/Relational Operator3' */
-  boolean_T s374_Enable;               /* '<S368>/Baro Stall State Delay' */
+  boolean_T s928_RelationalOperator4;  /* '<S928>/Relational Operator4' */
+  boolean_T s933_RelationalOperator4;  /* '<S933>/Relational Operator4' */
+  boolean_T s932_RelationalOperator4;  /* '<S932>/Relational Operator4' */
+  boolean_T s934_RelationalOperator4;  /* '<S934>/Relational Operator4' */
+  boolean_T s935_RelationalOperator4;  /* '<S935>/Relational Operator4' */
+  boolean_T s976_LogicalOperator;      /* '<S976>/Logical Operator' */
+  boolean_T s977_LogicalOperator;      /* '<S977>/Logical Operator' */
+  boolean_T s453_motohawk_din;         /* '<S453>/motohawk_din' */
+  boolean_T s585_Merge;                /* '<S585>/Merge' */
+  boolean_T s994_LogicalOperator;      /* '<S994>/Logical Operator' */
+  boolean_T s867_RelationalOperator4;  /* '<S867>/Relational Operator4' */
+  boolean_T s1018_Merge[8];            /* '<S1018>/Merge' */
+  boolean_T s378_LogicalOperator;      /* '<S378>/Logical Operator' */
+  boolean_T s863_LogicalOperator1[8];  /* '<S863>/Logical Operator1' */
+  boolean_T s953_RelationalOperator1;  /* '<S953>/Relational Operator1' */
+  boolean_T s413_RelationalOperator3;  /* '<S413>/Relational Operator3' */
+  boolean_T s375_Enable;               /* '<S369>/Baro Stall State Delay' */
   boolean_T s167_Switch1;              /* '<S167>/Switch1' */
   boolean_T s166_Switch1;              /* '<S166>/Switch1' */
   boolean_T s144_LogicalOperator2;     /* '<S144>/Logical Operator2' */
@@ -417,71 +462,142 @@ typedef struct {
   boolean_T s28_LogicalOperator;       /* '<S28>/Logical Operator' */
   boolean_T s35_RelationalOperator;    /* '<S35>/Relational Operator' */
   boolean_T s27_TestComplete;          /* '<S20>/ETC Test  Manager' */
-  boolean_T s979_RelationalOperator;   /* '<S979>/Relational Operator' */
-  boolean_T s979_LogicalOperator2;     /* '<S979>/Logical Operator2' */
-  boolean_T s983_MPRDState;            /* '<S979>/ECUP Latch' */
+  boolean_T s1039_RelationalOperator;  /* '<S1039>/Relational Operator' */
+  boolean_T s1039_LogicalOperator2;    /* '<S1039>/Logical Operator2' */
+  boolean_T s1043_MPRDState;           /* '<S1039>/ECUP Latch' */
   boolean_T s9_ReadCANRaw_o1;          /* '<S9>/Read CAN Raw' */
   boolean_T s9_ReadCANRaw_o3;          /* '<S9>/Read CAN Raw' */
-  rtB_FunctionCallSubsystem_BaseEngineController_LS s763_FunctionCallSubsystem;/* '<S763>/Function-Call Subsystem' */
-  rtB_FunctionCallSubsystem_BaseEngineController_LS s761_FunctionCallSubsystem;/* '<S761>/Function-Call Subsystem' */
+  rtB_FunctionCallSubsystem_BaseEngineController_LS s764_FunctionCallSubsystem;/* '<S764>/Function-Call Subsystem' */
+  rtB_FunctionCallSubsystem_BaseEngineController_LS s762_FunctionCallSubsystem;/* '<S762>/Function-Call Subsystem' */
+  rtB_CollectAverage_BaseEngineController_LS s415_CollectAverage;/* '<S415>/Collect Average' */
   rtB_CollectAverage_BaseEngineController_LS s414_CollectAverage;/* '<S414>/Collect Average' */
-  rtB_CollectAverage_BaseEngineController_LS s413_CollectAverage;/* '<S413>/Collect Average' */
-  rtB_CollectAverage_BaseEngineController_LS s375_CollectAverage;/* '<S375>/Collect Average' */
+  rtB_CollectAverage_BaseEngineController_LS s376_CollectAverage;/* '<S376>/Collect Average' */
 } BlockIO_BaseEngineController_LS;
 
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
+  real_T s578_UnitDelay_DSTATE;        /* '<S578>/Unit Delay' */
+  real_T s616_UnitDelay_DSTATE;        /* '<S616>/Unit Delay' */
   real_T s577_UnitDelay_DSTATE;        /* '<S577>/Unit Delay' */
-  real_T s615_UnitDelay_DSTATE;        /* '<S615>/Unit Delay' */
-  real_T s576_UnitDelay_DSTATE;        /* '<S576>/Unit Delay' */
-  real_T s612_UnitDelay_DSTATE;        /* '<S612>/Unit Delay' */
-  real_T s577_UnitDelay1_DSTATE;       /* '<S577>/Unit Delay1' */
-  real_T s762_UnitDelay_DSTATE;        /* '<S762>/Unit Delay' */
-  real_T s787_UnitDelay_DSTATE;        /* '<S787>/Unit Delay' */
-  real_T s819_UnitDelay_DSTATE;        /* '<S819>/Unit Delay' */
-  real_T s812_UnitDelay1_DSTATE;       /* '<S812>/Unit Delay1' */
-  real_T s760_UnitDelay_DSTATE;        /* '<S760>/Unit Delay' */
-  real_T s775_UnitDelay_DSTATE;        /* '<S775>/Unit Delay' */
-  real_T s802_UnitDelay_DSTATE;        /* '<S802>/Unit Delay' */
-  real_T s795_UnitDelay1_DSTATE;       /* '<S795>/Unit Delay1' */
-  real_T s628_UnitDelay1_DSTATE;       /* '<S628>/Unit Delay1' */
-  real_T s642_UnitDelay_DSTATE;        /* '<S642>/Unit Delay' */
-  real_T s627_UnitDelay_DSTATE;        /* '<S627>/Unit Delay' */
-  real_T s836_UnitDelay_DSTATE;        /* '<S836>/Unit Delay' */
-  real_T s829_UnitDelay1_DSTATE;       /* '<S829>/Unit Delay1' */
-  real_T s853_UnitDelay_DSTATE;        /* '<S853>/Unit Delay' */
-  real_T s846_UnitDelay1_DSTATE;       /* '<S846>/Unit Delay1' */
-  real_T s654_UnitDelay_DSTATE;        /* '<S654>/Unit Delay' */
+  real_T s613_UnitDelay_DSTATE;        /* '<S613>/Unit Delay' */
+  real_T s578_UnitDelay1_DSTATE;       /* '<S578>/Unit Delay1' */
+  real_T s763_UnitDelay_DSTATE;        /* '<S763>/Unit Delay' */
+  real_T s788_UnitDelay_DSTATE;        /* '<S788>/Unit Delay' */
+  real_T s820_UnitDelay_DSTATE;        /* '<S820>/Unit Delay' */
+  real_T s813_UnitDelay1_DSTATE;       /* '<S813>/Unit Delay1' */
+  real_T s761_UnitDelay_DSTATE;        /* '<S761>/Unit Delay' */
+  real_T s776_UnitDelay_DSTATE;        /* '<S776>/Unit Delay' */
+  real_T s803_UnitDelay_DSTATE;        /* '<S803>/Unit Delay' */
+  real_T s796_UnitDelay1_DSTATE;       /* '<S796>/Unit Delay1' */
   real_T s629_UnitDelay1_DSTATE;       /* '<S629>/Unit Delay1' */
-  real_T s653_UnitDelay_DSTATE;        /* '<S653>/Unit Delay' */
-  real_T s651_UnitDelay_DSTATE;        /* '<S651>/Unit Delay' */
-  real_T s651_UnitDelay1_DSTATE;       /* '<S651>/Unit Delay1' */
-  real_T s651_UnitDelay2_DSTATE;       /* '<S651>/Unit Delay2' */
-  real_T s420_UnitDelay_DSTATE;        /* '<S420>/Unit Delay' */
-  real_T s499_UnitDelay1_DSTATE;       /* '<S499>/Unit Delay1' */
-  real_T s531_UnitDelay_DSTATE;        /* '<S531>/Unit Delay' */
-  real_T s498_UnitDelay1_DSTATE;       /* '<S498>/Unit Delay1' */
-  real_T s523_UnitDelay_DSTATE;        /* '<S523>/Unit Delay' */
-  real_T s636_UnitDelay1_DSTATE;       /* '<S636>/Unit Delay1' */
-  real_T s705_UnitDelay_DSTATE;        /* '<S705>/Unit Delay' */
-  real_T s631_UnitDelay1_DSTATE;       /* '<S631>/Unit Delay1' */
-  real_T s671_UnitDelay_DSTATE;        /* '<S671>/Unit Delay' */
-  real_T s632_UnitDelay1_DSTATE;       /* '<S632>/Unit Delay1' */
-  real_T s378_UnitDelay_DSTATE;        /* '<S378>/Unit Delay' */
-  real_T s573_UnitDelay_DSTATE;        /* '<S573>/Unit Delay' */
-  real_T s593_UnitDelay_DSTATE;        /* '<S593>/Unit Delay' */
-  real_T s393_UnitDelay2_DSTATE;       /* '<S393>/Unit Delay2' */
-  real_T s396_UnitDelay_DSTATE;        /* '<S396>/Unit Delay' */
-  real_T s394_UnitDelay2_DSTATE;       /* '<S394>/Unit Delay2' */
-  real_T s399_UnitDelay_DSTATE;        /* '<S399>/Unit Delay' */
-  real_T s435_UnitDelay_DSTATE;        /* '<S435>/Unit Delay' */
-  real_T s437_UnitDelay_DSTATE;        /* '<S437>/Unit Delay' */
-  real_T s679_UnitDelay_DSTATE;        /* '<S679>/Unit Delay' */
-  real_T s388_UnitDelay_DSTATE;        /* '<S388>/Unit Delay' */
+  real_T s643_UnitDelay_DSTATE;        /* '<S643>/Unit Delay' */
+  real_T s628_UnitDelay_DSTATE;        /* '<S628>/Unit Delay' */
+  real_T s837_UnitDelay_DSTATE;        /* '<S837>/Unit Delay' */
+  real_T s830_UnitDelay1_DSTATE;       /* '<S830>/Unit Delay1' */
+  real_T s854_UnitDelay_DSTATE;        /* '<S854>/Unit Delay' */
+  real_T s847_UnitDelay1_DSTATE;       /* '<S847>/Unit Delay1' */
+  real_T s655_UnitDelay_DSTATE;        /* '<S655>/Unit Delay' */
   real_T s630_UnitDelay1_DSTATE;       /* '<S630>/Unit Delay1' */
-  real_T s663_UnitDelay_DSTATE;        /* '<S663>/Unit Delay' */
-  real_T s634_UnitDelay1_DSTATE;       /* '<S634>/Unit Delay1' */
-  real_T s689_UnitDelay_DSTATE;        /* '<S689>/Unit Delay' */
+  real_T s654_UnitDelay_DSTATE;        /* '<S654>/Unit Delay' */
+  real_T s652_UnitDelay_DSTATE;        /* '<S652>/Unit Delay' */
+  real_T s652_UnitDelay1_DSTATE;       /* '<S652>/Unit Delay1' */
+  real_T s652_UnitDelay2_DSTATE;       /* '<S652>/Unit Delay2' */
+  real_T s421_UnitDelay_DSTATE;        /* '<S421>/Unit Delay' */
+  real_T s500_UnitDelay1_DSTATE;       /* '<S500>/Unit Delay1' */
+  real_T s532_UnitDelay_DSTATE;        /* '<S532>/Unit Delay' */
+  real_T s499_UnitDelay1_DSTATE;       /* '<S499>/Unit Delay1' */
+  real_T s524_UnitDelay_DSTATE;        /* '<S524>/Unit Delay' */
+  real_T s637_UnitDelay1_DSTATE;       /* '<S637>/Unit Delay1' */
+  real_T s706_UnitDelay_DSTATE;        /* '<S706>/Unit Delay' */
+  real_T s632_UnitDelay1_DSTATE;       /* '<S632>/Unit Delay1' */
+  real_T s672_UnitDelay_DSTATE;        /* '<S672>/Unit Delay' */
+  real_T s633_UnitDelay1_DSTATE;       /* '<S633>/Unit Delay1' */
+  real_T s379_UnitDelay_DSTATE;        /* '<S379>/Unit Delay' */
+  real_T s574_UnitDelay_DSTATE;        /* '<S574>/Unit Delay' */
+  real_T s594_UnitDelay_DSTATE;        /* '<S594>/Unit Delay' */
+  real_T s394_UnitDelay2_DSTATE;       /* '<S394>/Unit Delay2' */
+  real_T s397_UnitDelay_DSTATE;        /* '<S397>/Unit Delay' */
+  real_T s395_UnitDelay2_DSTATE;       /* '<S395>/Unit Delay2' */
+  real_T s400_UnitDelay_DSTATE;        /* '<S400>/Unit Delay' */
+  real_T s436_UnitDelay_DSTATE;        /* '<S436>/Unit Delay' */
+  real_T s438_UnitDelay_DSTATE;        /* '<S438>/Unit Delay' */
+  real_T s680_UnitDelay_DSTATE;        /* '<S680>/Unit Delay' */
+  real_T s389_UnitDelay_DSTATE;        /* '<S389>/Unit Delay' */
+  real_T s900_UnitDelay_DSTATE;        /* '<S900>/Unit Delay' */
+  real_T s886_UnitDelay2_DSTATE;       /* '<S886>/Unit Delay2' */
+  real_T s891_UnitDelay_DSTATE;        /* '<S891>/Unit Delay' */
+  real_T s887_UnitDelay2_DSTATE;       /* '<S887>/Unit Delay2' */
+  real_T s894_UnitDelay_DSTATE;        /* '<S894>/Unit Delay' */
+  real_T s888_UnitDelay2_DSTATE;       /* '<S888>/Unit Delay2' */
+  real_T s897_UnitDelay_DSTATE;        /* '<S897>/Unit Delay' */
+  real_T s886_UnitDelay1_DSTATE;       /* '<S886>/Unit Delay1' */
+  real_T s886_UnitDelay3_DSTATE;       /* '<S886>/Unit Delay3' */
+  real_T s886_UnitDelay4_DSTATE;       /* '<S886>/Unit Delay4' */
+  real_T s887_UnitDelay1_DSTATE;       /* '<S887>/Unit Delay1' */
+  real_T s887_UnitDelay3_DSTATE;       /* '<S887>/Unit Delay3' */
+  real_T s887_UnitDelay4_DSTATE;       /* '<S887>/Unit Delay4' */
+  real_T s888_UnitDelay1_DSTATE;       /* '<S888>/Unit Delay1' */
+  real_T s888_UnitDelay3_DSTATE;       /* '<S888>/Unit Delay3' */
+  real_T s888_UnitDelay4_DSTATE;       /* '<S888>/Unit Delay4' */
+  real_T s901_UnitDelay2_DSTATE;       /* '<S901>/Unit Delay2' */
+  real_T s905_UnitDelay_DSTATE;        /* '<S905>/Unit Delay' */
+  real_T s902_UnitDelay2_DSTATE;       /* '<S902>/Unit Delay2' */
+  real_T s908_UnitDelay_DSTATE;        /* '<S908>/Unit Delay' */
+  real_T s903_UnitDelay2_DSTATE;       /* '<S903>/Unit Delay2' */
+  real_T s911_UnitDelay_DSTATE;        /* '<S911>/Unit Delay' */
+  real_T s901_UnitDelay1_DSTATE;       /* '<S901>/Unit Delay1' */
+  real_T s901_UnitDelay3_DSTATE;       /* '<S901>/Unit Delay3' */
+  real_T s901_UnitDelay4_DSTATE;       /* '<S901>/Unit Delay4' */
+  real_T s902_UnitDelay1_DSTATE;       /* '<S902>/Unit Delay1' */
+  real_T s902_UnitDelay3_DSTATE;       /* '<S902>/Unit Delay3' */
+  real_T s902_UnitDelay4_DSTATE;       /* '<S902>/Unit Delay4' */
+  real_T s903_UnitDelay1_DSTATE;       /* '<S903>/Unit Delay1' */
+  real_T s903_UnitDelay3_DSTATE;       /* '<S903>/Unit Delay3' */
+  real_T s903_UnitDelay4_DSTATE;       /* '<S903>/Unit Delay4' */
+  real_T s916_UnitDelay2_DSTATE;       /* '<S916>/Unit Delay2' */
+  real_T s920_UnitDelay_DSTATE;        /* '<S920>/Unit Delay' */
+  real_T s631_UnitDelay1_DSTATE;       /* '<S631>/Unit Delay1' */
+  real_T s664_UnitDelay_DSTATE;        /* '<S664>/Unit Delay' */
+  real_T s917_UnitDelay2_DSTATE;       /* '<S917>/Unit Delay2' */
+  real_T s923_UnitDelay_DSTATE;        /* '<S923>/Unit Delay' */
+  real_T s635_UnitDelay1_DSTATE;       /* '<S635>/Unit Delay1' */
+  real_T s690_UnitDelay_DSTATE;        /* '<S690>/Unit Delay' */
+  real_T s918_UnitDelay2_DSTATE;       /* '<S918>/Unit Delay2' */
+  real_T s926_UnitDelay_DSTATE;        /* '<S926>/Unit Delay' */
+  real_T s916_UnitDelay1_DSTATE;       /* '<S916>/Unit Delay1' */
+  real_T s916_UnitDelay3_DSTATE;       /* '<S916>/Unit Delay3' */
+  real_T s916_UnitDelay4_DSTATE;       /* '<S916>/Unit Delay4' */
+  real_T s917_UnitDelay1_DSTATE;       /* '<S917>/Unit Delay1' */
+  real_T s917_UnitDelay3_DSTATE;       /* '<S917>/Unit Delay3' */
+  real_T s917_UnitDelay4_DSTATE;       /* '<S917>/Unit Delay4' */
+  real_T s918_UnitDelay1_DSTATE;       /* '<S918>/Unit Delay1' */
+  real_T s918_UnitDelay3_DSTATE;       /* '<S918>/Unit Delay3' */
+  real_T s918_UnitDelay4_DSTATE;       /* '<S918>/Unit Delay4' */
+  real_T s928_UnitDelay2_DSTATE;       /* '<S928>/Unit Delay2' */
+  real_T s930_UnitDelay_DSTATE;        /* '<S930>/Unit Delay' */
+  real_T s928_UnitDelay1_DSTATE;       /* '<S928>/Unit Delay1' */
+  real_T s928_UnitDelay3_DSTATE;       /* '<S928>/Unit Delay3' */
+  real_T s928_UnitDelay4_DSTATE;       /* '<S928>/Unit Delay4' */
+  real_T s933_UnitDelay2_DSTATE;       /* '<S933>/Unit Delay2' */
+  real_T s940_UnitDelay_DSTATE;        /* '<S940>/Unit Delay' */
+  real_T s932_UnitDelay2_DSTATE;       /* '<S932>/Unit Delay2' */
+  real_T s937_UnitDelay_DSTATE;        /* '<S937>/Unit Delay' */
+  real_T s934_UnitDelay2_DSTATE;       /* '<S934>/Unit Delay2' */
+  real_T s943_UnitDelay_DSTATE;        /* '<S943>/Unit Delay' */
+  real_T s935_UnitDelay2_DSTATE;       /* '<S935>/Unit Delay2' */
+  real_T s946_UnitDelay_DSTATE;        /* '<S946>/Unit Delay' */
+  real_T s932_UnitDelay1_DSTATE;       /* '<S932>/Unit Delay1' */
+  real_T s932_UnitDelay3_DSTATE;       /* '<S932>/Unit Delay3' */
+  real_T s932_UnitDelay4_DSTATE;       /* '<S932>/Unit Delay4' */
+  real_T s933_UnitDelay1_DSTATE;       /* '<S933>/Unit Delay1' */
+  real_T s933_UnitDelay3_DSTATE;       /* '<S933>/Unit Delay3' */
+  real_T s933_UnitDelay4_DSTATE;       /* '<S933>/Unit Delay4' */
+  real_T s934_UnitDelay1_DSTATE;       /* '<S934>/Unit Delay1' */
+  real_T s934_UnitDelay3_DSTATE;       /* '<S934>/Unit Delay3' */
+  real_T s934_UnitDelay4_DSTATE;       /* '<S934>/Unit Delay4' */
+  real_T s935_UnitDelay1_DSTATE;       /* '<S935>/Unit Delay1' */
+  real_T s935_UnitDelay3_DSTATE;       /* '<S935>/Unit Delay3' */
+  real_T s935_UnitDelay4_DSTATE;       /* '<S935>/Unit Delay4' */
   real_T s74_UnitDelay_DSTATE;         /* '<S74>/Unit Delay' */
   real_T s73_UnitDelay_DSTATE;         /* '<S73>/Unit Delay' */
   real_T s71_UnitDelay_DSTATE;         /* '<S71>/Unit Delay' */
@@ -491,51 +607,51 @@ typedef struct {
   real_T s67_UnitDelay_DSTATE;         /* '<S67>/Unit Delay' */
   real_T s66_UnitDelay_DSTATE;         /* '<S66>/Unit Delay' */
   real_T s72_UnitDelay_DSTATE[8];      /* '<S72>/Unit Delay' */
-  real_T s420_UnitDelay1_DSTATE;       /* '<S420>/Unit Delay1' */
-  real_T s635_UnitDelay1_DSTATE;       /* '<S635>/Unit Delay1' */
-  real_T s697_UnitDelay_DSTATE;        /* '<S697>/Unit Delay' */
-  real_T s393_UnitDelay1_DSTATE;       /* '<S393>/Unit Delay1' */
-  real_T s393_UnitDelay3_DSTATE;       /* '<S393>/Unit Delay3' */
-  real_T s393_UnitDelay4_DSTATE;       /* '<S393>/Unit Delay4' */
+  real_T s421_UnitDelay1_DSTATE;       /* '<S421>/Unit Delay1' */
+  real_T s636_UnitDelay1_DSTATE;       /* '<S636>/Unit Delay1' */
+  real_T s698_UnitDelay_DSTATE;        /* '<S698>/Unit Delay' */
   real_T s394_UnitDelay1_DSTATE;       /* '<S394>/Unit Delay1' */
   real_T s394_UnitDelay3_DSTATE;       /* '<S394>/Unit Delay3' */
   real_T s394_UnitDelay4_DSTATE;       /* '<S394>/Unit Delay4' */
-  real_T s799_UnitDelay1_DSTATE;       /* '<S799>/Unit Delay1' */
-  real_T s799_UnitDelay_DSTATE;        /* '<S799>/Unit Delay' */
-  real_T s799_UnitDelay3_DSTATE;       /* '<S799>/Unit Delay3' */
-  real_T s799_UnitDelay4_DSTATE;       /* '<S799>/Unit Delay4' */
-  real_T s816_UnitDelay1_DSTATE;       /* '<S816>/Unit Delay1' */
-  real_T s816_UnitDelay_DSTATE;        /* '<S816>/Unit Delay' */
-  real_T s816_UnitDelay3_DSTATE;       /* '<S816>/Unit Delay3' */
-  real_T s816_UnitDelay4_DSTATE;       /* '<S816>/Unit Delay4' */
-  real_T s833_UnitDelay1_DSTATE;       /* '<S833>/Unit Delay1' */
-  real_T s833_UnitDelay_DSTATE;        /* '<S833>/Unit Delay' */
-  real_T s833_UnitDelay3_DSTATE;       /* '<S833>/Unit Delay3' */
-  real_T s833_UnitDelay4_DSTATE;       /* '<S833>/Unit Delay4' */
-  real_T s850_UnitDelay1_DSTATE;       /* '<S850>/Unit Delay1' */
-  real_T s850_UnitDelay_DSTATE;        /* '<S850>/Unit Delay' */
-  real_T s850_UnitDelay3_DSTATE;       /* '<S850>/Unit Delay3' */
-  real_T s850_UnitDelay4_DSTATE;       /* '<S850>/Unit Delay4' */
-  real_T s890_UnitDelay_DSTATE;        /* '<S890>/Unit Delay' */
-  real_T s891_UnitDelay_DSTATE;        /* '<S891>/Unit Delay' */
-  real_T s893_CrankCounter_DSTATE;     /* '<S893>/CrankCounter' */
-  real_T s710_UnitDelay_DSTATE;        /* '<S710>/Unit Delay' */
-  real_T s717_UnitDelay_DSTATE;        /* '<S717>/Unit Delay' */
-  real_T s721_UnitDelay_DSTATE;        /* '<S721>/Unit Delay' */
-  real_T s739_UnitDelay_DSTATE;        /* '<S739>/Unit Delay' */
-  real_T s723_UnitDelay_DSTATE;        /* '<S723>/Unit Delay' */
-  real_T s757_UnitDelay_DSTATE;        /* '<S757>/Unit Delay' */
+  real_T s395_UnitDelay1_DSTATE;       /* '<S395>/Unit Delay1' */
+  real_T s395_UnitDelay3_DSTATE;       /* '<S395>/Unit Delay3' */
+  real_T s395_UnitDelay4_DSTATE;       /* '<S395>/Unit Delay4' */
+  real_T s800_UnitDelay1_DSTATE;       /* '<S800>/Unit Delay1' */
+  real_T s800_UnitDelay_DSTATE;        /* '<S800>/Unit Delay' */
+  real_T s800_UnitDelay3_DSTATE;       /* '<S800>/Unit Delay3' */
+  real_T s800_UnitDelay4_DSTATE;       /* '<S800>/Unit Delay4' */
+  real_T s817_UnitDelay1_DSTATE;       /* '<S817>/Unit Delay1' */
+  real_T s817_UnitDelay_DSTATE;        /* '<S817>/Unit Delay' */
+  real_T s817_UnitDelay3_DSTATE;       /* '<S817>/Unit Delay3' */
+  real_T s817_UnitDelay4_DSTATE;       /* '<S817>/Unit Delay4' */
+  real_T s834_UnitDelay1_DSTATE;       /* '<S834>/Unit Delay1' */
+  real_T s834_UnitDelay_DSTATE;        /* '<S834>/Unit Delay' */
+  real_T s834_UnitDelay3_DSTATE;       /* '<S834>/Unit Delay3' */
+  real_T s834_UnitDelay4_DSTATE;       /* '<S834>/Unit Delay4' */
+  real_T s851_UnitDelay1_DSTATE;       /* '<S851>/Unit Delay1' */
+  real_T s851_UnitDelay_DSTATE;        /* '<S851>/Unit Delay' */
+  real_T s851_UnitDelay3_DSTATE;       /* '<S851>/Unit Delay3' */
+  real_T s851_UnitDelay4_DSTATE;       /* '<S851>/Unit Delay4' */
+  real_T s950_UnitDelay_DSTATE;        /* '<S950>/Unit Delay' */
+  real_T s951_UnitDelay_DSTATE;        /* '<S951>/Unit Delay' */
+  real_T s953_CrankCounter_DSTATE;     /* '<S953>/CrankCounter' */
+  real_T s711_UnitDelay_DSTATE;        /* '<S711>/Unit Delay' */
+  real_T s718_UnitDelay_DSTATE;        /* '<S718>/Unit Delay' */
   real_T s722_UnitDelay_DSTATE;        /* '<S722>/Unit Delay' */
-  real_T s748_UnitDelay_DSTATE;        /* '<S748>/Unit Delay' */
-  real_T s720_UnitDelay_DSTATE;        /* '<S720>/Unit Delay' */
-  real_T s730_UnitDelay_DSTATE;        /* '<S730>/Unit Delay' */
+  real_T s740_UnitDelay_DSTATE;        /* '<S740>/Unit Delay' */
+  real_T s724_UnitDelay_DSTATE;        /* '<S724>/Unit Delay' */
+  real_T s758_UnitDelay_DSTATE;        /* '<S758>/Unit Delay' */
+  real_T s723_UnitDelay_DSTATE;        /* '<S723>/Unit Delay' */
+  real_T s749_UnitDelay_DSTATE;        /* '<S749>/Unit Delay' */
+  real_T s721_UnitDelay_DSTATE;        /* '<S721>/Unit Delay' */
+  real_T s731_UnitDelay_DSTATE;        /* '<S731>/Unit Delay' */
   real_T s344_UnitDelay_DSTATE[8];     /* '<S344>/Unit Delay' */
-  real_T s412_UnitDelay2_DSTATE;       /* '<S412>/Unit Delay2' */
-  real_T s427_UnitDelay_DSTATE;        /* '<S427>/Unit Delay' */
-  real_T s430_UnitDelay_DSTATE;        /* '<S430>/Unit Delay' */
-  real_T s412_UnitDelay1_DSTATE;       /* '<S412>/Unit Delay1' */
-  real_T s412_UnitDelay3_DSTATE;       /* '<S412>/Unit Delay3' */
-  real_T s412_UnitDelay4_DSTATE;       /* '<S412>/Unit Delay4' */
+  real_T s413_UnitDelay2_DSTATE;       /* '<S413>/Unit Delay2' */
+  real_T s428_UnitDelay_DSTATE;        /* '<S428>/Unit Delay' */
+  real_T s431_UnitDelay_DSTATE;        /* '<S431>/Unit Delay' */
+  real_T s413_UnitDelay1_DSTATE;       /* '<S413>/Unit Delay1' */
+  real_T s413_UnitDelay3_DSTATE;       /* '<S413>/Unit Delay3' */
+  real_T s413_UnitDelay4_DSTATE;       /* '<S413>/Unit Delay4' */
   real_T s321_UnitDelay_DSTATE;        /* '<S321>/Unit Delay' */
   real_T s191_state_DSTATE;            /* '<S191>/state' */
   real_T s147_UnitDelay_DSTATE;        /* '<S147>/Unit Delay' */
@@ -573,64 +689,65 @@ typedef struct {
   real_T s44_UnitDelay_DSTATE;         /* '<S44>/Unit Delay' */
   real_T s47_UnitDelay_DSTATE;         /* '<S47>/Unit Delay' */
   real_T s48_UnitDelay_DSTATE;         /* '<S48>/Unit Delay' */
-  real_T s985_UnitDelay_DSTATE;        /* '<S985>/Unit Delay' */
-  real_T s985_UnitDelay1_DSTATE;       /* '<S985>/Unit Delay1' */
-  real_T s374_TOld;                    /* '<S368>/Baro Stall State Delay' */
+  real_T s1045_UnitDelay_DSTATE;       /* '<S1045>/Unit Delay' */
+  real_T s1045_UnitDelay1_DSTATE;      /* '<S1045>/Unit Delay1' */
+  real_T s375_TOld;                    /* '<S369>/Baro Stall State Delay' */
   real_T s27_TimerOld;                 /* '<S20>/ETC Test  Manager' */
-  uint32_T s449_UnitDelay_DSTATE;      /* '<S449>/Unit Delay' */
-  uint32_T s626_UnitDelay_DSTATE;      /* '<S626>/Unit Delay' */
-  uint32_T s606_motohawk_delta_time_DWORK1;/* '<S606>/motohawk_delta_time' */
-  uint32_T s615_motohawk_delta_time_DWORK1;/* '<S615>/motohawk_delta_time' */
-  uint32_T s780_motohawk_delta_time_DWORK1;/* '<S780>/motohawk_delta_time' */
-  uint32_T s811_motohawk_delta_time_DWORK1;/* '<S811>/motohawk_delta_time' */
-  uint32_T s768_motohawk_delta_time_DWORK1;/* '<S768>/motohawk_delta_time' */
-  uint32_T s794_motohawk_delta_time_DWORK1;/* '<S794>/motohawk_delta_time' */
-  uint32_T s441_motohawk_delta_time_DWORK1;/* '<S441>/motohawk_delta_time' */
-  uint32_T s637_motohawk_delta_time_DWORK1;/* '<S637>/motohawk_delta_time' */
-  uint32_T s620_motohawk_delta_time_DWORK1;/* '<S620>/motohawk_delta_time' */
-  uint32_T s828_motohawk_delta_time_DWORK1;/* '<S828>/motohawk_delta_time' */
-  uint32_T s845_motohawk_delta_time_DWORK1;/* '<S845>/motohawk_delta_time' */
-  uint32_T s654_motohawk_delta_time_DWORK1;/* '<S654>/motohawk_delta_time' */
-  uint32_T s650_motohawk_delta_time_DWORK1;/* '<S650>/motohawk_delta_time' */
-  uint32_T s526_motohawk_delta_time_DWORK1;/* '<S526>/motohawk_delta_time' */
-  uint32_T s518_motohawk_delta_time_DWORK1;/* '<S518>/motohawk_delta_time' */
-  uint32_T s443_motohawk_delta_time_DWORK1;/* '<S443>/motohawk_delta_time' */
-  uint32_T s700_motohawk_delta_time_DWORK1;/* '<S700>/motohawk_delta_time' */
-  uint32_T s666_motohawk_delta_time_DWORK1;/* '<S666>/motohawk_delta_time' */
-  uint32_T s368_motohawk_delta_time_DWORK1;/* '<S368>/motohawk_delta_time' */
-  uint32_T s381_motohawk_delta_time_DWORK1;/* '<S381>/motohawk_delta_time' */
-  uint32_T s587_motohawk_delta_time_DWORK1;/* '<S587>/motohawk_delta_time' */
-  uint32_T s435_motohawk_delta_time_DWORK1;/* '<S435>/motohawk_delta_time' */
-  uint32_T s598_motohawk_delta_time_DWORK1;/* '<S598>/motohawk_delta_time' */
-  uint32_T s603_motohawk_delta_time_DWORK1;/* '<S603>/motohawk_delta_time' */
-  uint32_T s674_motohawk_delta_time_DWORK1;/* '<S674>/motohawk_delta_time' */
+  uint32_T s450_UnitDelay_DSTATE;      /* '<S450>/Unit Delay' */
+  uint32_T s627_UnitDelay_DSTATE;      /* '<S627>/Unit Delay' */
+  uint32_T s607_motohawk_delta_time_DWORK1;/* '<S607>/motohawk_delta_time' */
+  uint32_T s616_motohawk_delta_time_DWORK1;/* '<S616>/motohawk_delta_time' */
+  uint32_T s781_motohawk_delta_time_DWORK1;/* '<S781>/motohawk_delta_time' */
+  uint32_T s812_motohawk_delta_time_DWORK1;/* '<S812>/motohawk_delta_time' */
+  uint32_T s769_motohawk_delta_time_DWORK1;/* '<S769>/motohawk_delta_time' */
+  uint32_T s795_motohawk_delta_time_DWORK1;/* '<S795>/motohawk_delta_time' */
+  uint32_T s442_motohawk_delta_time_DWORK1;/* '<S442>/motohawk_delta_time' */
+  uint32_T s638_motohawk_delta_time_DWORK1;/* '<S638>/motohawk_delta_time' */
+  uint32_T s621_motohawk_delta_time_DWORK1;/* '<S621>/motohawk_delta_time' */
+  uint32_T s829_motohawk_delta_time_DWORK1;/* '<S829>/motohawk_delta_time' */
+  uint32_T s846_motohawk_delta_time_DWORK1;/* '<S846>/motohawk_delta_time' */
+  uint32_T s655_motohawk_delta_time_DWORK1;/* '<S655>/motohawk_delta_time' */
+  uint32_T s651_motohawk_delta_time_DWORK1;/* '<S651>/motohawk_delta_time' */
+  uint32_T s527_motohawk_delta_time_DWORK1;/* '<S527>/motohawk_delta_time' */
+  uint32_T s519_motohawk_delta_time_DWORK1;/* '<S519>/motohawk_delta_time' */
+  uint32_T s444_motohawk_delta_time_DWORK1;/* '<S444>/motohawk_delta_time' */
+  uint32_T s701_motohawk_delta_time_DWORK1;/* '<S701>/motohawk_delta_time' */
+  uint32_T s667_motohawk_delta_time_DWORK1;/* '<S667>/motohawk_delta_time' */
   uint32_T s369_motohawk_delta_time_DWORK1;/* '<S369>/motohawk_delta_time' */
-  uint32_T s658_motohawk_delta_time_DWORK1;/* '<S658>/motohawk_delta_time' */
-  uint32_T s684_motohawk_delta_time_DWORK1;/* '<S684>/motohawk_delta_time' */
-  uint32_T s938_motohawk_delta_time_DWORK1;/* '<S938>/motohawk_delta_time' */
-  uint32_T s445_motohawk_delta_time_DWORK1;/* '<S445>/motohawk_delta_time' */
-  uint32_T s692_motohawk_delta_time_DWORK1;/* '<S692>/motohawk_delta_time' */
-  uint32_T s618_motohawk_delta_time_DWORK1;/* '<S618>/motohawk_delta_time' */
-  uint32_T s711_motohawk_delta_time_DWORK1;/* '<S711>/motohawk_delta_time' */
-  uint32_T s733_motohawk_delta_time_DWORK1;/* '<S733>/motohawk_delta_time' */
-  uint32_T s751_motohawk_delta_time_DWORK1;/* '<S751>/motohawk_delta_time' */
-  uint32_T s742_motohawk_delta_time_DWORK1;/* '<S742>/motohawk_delta_time' */
-  uint32_T s724_motohawk_delta_time_DWORK1;/* '<S724>/motohawk_delta_time' */
+  uint32_T s382_motohawk_delta_time_DWORK1;/* '<S382>/motohawk_delta_time' */
+  uint32_T s588_motohawk_delta_time_DWORK1;/* '<S588>/motohawk_delta_time' */
+  uint32_T s436_motohawk_delta_time_DWORK1;/* '<S436>/motohawk_delta_time' */
+  uint32_T s599_motohawk_delta_time_DWORK1;/* '<S599>/motohawk_delta_time' */
+  uint32_T s604_motohawk_delta_time_DWORK1;/* '<S604>/motohawk_delta_time' */
+  uint32_T s675_motohawk_delta_time_DWORK1;/* '<S675>/motohawk_delta_time' */
+  uint32_T s370_motohawk_delta_time_DWORK1;/* '<S370>/motohawk_delta_time' */
+  uint32_T s899_motohawk_delta_time_DWORK1;/* '<S899>/motohawk_delta_time' */
+  uint32_T s659_motohawk_delta_time_DWORK1;/* '<S659>/motohawk_delta_time' */
+  uint32_T s685_motohawk_delta_time_DWORK1;/* '<S685>/motohawk_delta_time' */
+  uint32_T s998_motohawk_delta_time_DWORK1;/* '<S998>/motohawk_delta_time' */
+  uint32_T s446_motohawk_delta_time_DWORK1;/* '<S446>/motohawk_delta_time' */
+  uint32_T s693_motohawk_delta_time_DWORK1;/* '<S693>/motohawk_delta_time' */
+  uint32_T s619_motohawk_delta_time_DWORK1;/* '<S619>/motohawk_delta_time' */
+  uint32_T s712_motohawk_delta_time_DWORK1;/* '<S712>/motohawk_delta_time' */
+  uint32_T s734_motohawk_delta_time_DWORK1;/* '<S734>/motohawk_delta_time' */
+  uint32_T s752_motohawk_delta_time_DWORK1;/* '<S752>/motohawk_delta_time' */
+  uint32_T s743_motohawk_delta_time_DWORK1;/* '<S743>/motohawk_delta_time' */
+  uint32_T s725_motohawk_delta_time_DWORK1;/* '<S725>/motohawk_delta_time' */
   uint32_T s335_motohawk_delta_time_DWORK1;/* '<S335>/motohawk_delta_time' */
   uint32_T s334_motohawk_delta_time_DWORK1;/* '<S334>/motohawk_delta_time' */
   uint32_T s338_motohawk_delta_time_DWORK1;/* '<S338>/motohawk_delta_time' */
   uint32_T s337_motohawk_delta_time_DWORK1;/* '<S337>/motohawk_delta_time' */
   uint32_T s339_motohawk_delta_time_DWORK1;/* '<S339>/motohawk_delta_time' */
-  uint32_T s345_motohawk_delta_time_DWORK1;/* '<S345>/motohawk_delta_time' */
-  uint32_T s349_motohawk_delta_time_DWORK1;/* '<S349>/motohawk_delta_time' */
+  uint32_T s346_motohawk_delta_time_DWORK1;/* '<S346>/motohawk_delta_time' */
   uint32_T s350_motohawk_delta_time_DWORK1;/* '<S350>/motohawk_delta_time' */
   uint32_T s351_motohawk_delta_time_DWORK1;/* '<S351>/motohawk_delta_time' */
+  uint32_T s352_motohawk_delta_time_DWORK1;/* '<S352>/motohawk_delta_time' */
+  uint32_T s368_motohawk_delta_time_DWORK1;/* '<S368>/motohawk_delta_time' */
   uint32_T s367_motohawk_delta_time_DWORK1;/* '<S367>/motohawk_delta_time' */
-  uint32_T s366_motohawk_delta_time_DWORK1;/* '<S366>/motohawk_delta_time' */
   uint32_T s342_motohawk_delta_time_DWORK1;/* '<S342>/motohawk_delta_time' */
-  uint32_T s347_motohawk_delta_time_DWORK1;/* '<S347>/motohawk_delta_time' */
-  uint32_T s430_motohawk_delta_time_DWORK1;/* '<S430>/motohawk_delta_time' */
-  uint32_T s412_motohawk_delta_time_DWORK1;/* '<S412>/motohawk_delta_time' */
+  uint32_T s348_motohawk_delta_time_DWORK1;/* '<S348>/motohawk_delta_time' */
+  uint32_T s431_motohawk_delta_time_DWORK1;/* '<S431>/motohawk_delta_time' */
+  uint32_T s413_motohawk_delta_time_DWORK1;/* '<S413>/motohawk_delta_time' */
   uint32_T s323_motohawk_delta_time_DWORK1;/* '<S323>/motohawk_delta_time' */
   uint32_T s322_temporalCounter_i1;    /* '<S311>/Ice Break' */
   uint32_T s322_presentTicks;          /* '<S311>/Ice Break' */
@@ -656,26 +773,26 @@ typedef struct {
   uint32_T s55_motohawk_delta_time_DWORK1;/* '<S55>/motohawk_delta_time' */
   uint32_T s43_motohawk_delta_time_DWORK1;/* '<S43>/motohawk_delta_time' */
   uint32_T s48_motohawk_delta_time_DWORK1;/* '<S48>/motohawk_delta_time' */
-  uint32_T s996_motohawk_delta_time_DWORK1;/* '<S996>/motohawk_delta_time' */
-  uint32_T s987_motohawk_delta_time_DWORK1;/* '<S987>/motohawk_delta_time' */
+  uint32_T s1056_motohawk_delta_time_DWORK1;/* '<S1056>/motohawk_delta_time' */
+  uint32_T s1047_motohawk_delta_time_DWORK1;/* '<S1047>/motohawk_delta_time' */
   int_T s153_HitCrossing1_MODE;        /* '<S153>/Hit  Crossing1' */
-  uint16_T s868_InjectorSequence_DWORK2;/* '<S868>/Injector Sequence' */
+  uint16_T s869_InjectorSequence_DWORK2;/* '<S869>/Injector Sequence' */
+  int8_T s415_UnitDelay_DSTATE;        /* '<S415>/Unit Delay' */
   int8_T s414_UnitDelay_DSTATE;        /* '<S414>/Unit Delay' */
-  int8_T s413_UnitDelay_DSTATE;        /* '<S413>/Unit Delay' */
-  int8_T s375_UnitDelay_DSTATE;        /* '<S375>/Unit Delay' */
-  uint8_T s417_UnitDelay_DSTATE;       /* '<S417>/Unit Delay' */
-  uint8_T s439_CrankCounter_DSTATE;    /* '<S439>/CrankCounter' */
+  int8_T s376_UnitDelay_DSTATE;        /* '<S376>/Unit Delay' */
+  uint8_T s418_UnitDelay_DSTATE;       /* '<S418>/Unit Delay' */
+  uint8_T s440_CrankCounter_DSTATE;    /* '<S440>/CrankCounter' */
   uint8_T s102_UnitDelay1_DSTATE;      /* '<S102>/Unit Delay1' */
-  boolean_T s616_UnitDelay_DSTATE;     /* '<S616>/Unit Delay' */
-  boolean_T s577_UnitDelay2_DSTATE;    /* '<S577>/Unit Delay2' */
-  boolean_T s390_UnitDelay_DSTATE;     /* '<S390>/Unit Delay' */
-  boolean_T s389_InitialConditionisTrue_DSTATE;/* '<S389>/Initial Condition is True' */
-  boolean_T s357_UnitDelay_DSTATE;     /* '<S357>/Unit Delay' */
+  boolean_T s617_UnitDelay_DSTATE;     /* '<S617>/Unit Delay' */
+  boolean_T s578_UnitDelay2_DSTATE;    /* '<S578>/Unit Delay2' */
+  boolean_T s391_UnitDelay_DSTATE;     /* '<S391>/Unit Delay' */
+  boolean_T s390_InitialConditionisTrue_DSTATE;/* '<S390>/Initial Condition is True' */
   boolean_T s358_UnitDelay_DSTATE;     /* '<S358>/Unit Delay' */
-  boolean_T s363_UnitDelay_DSTATE;     /* '<S363>/Unit Delay' */
-  boolean_T s364_UnitDelay_DSTATE;     /* '<S364>/Unit Delay' */
   boolean_T s359_UnitDelay_DSTATE;     /* '<S359>/Unit Delay' */
+  boolean_T s364_UnitDelay_DSTATE;     /* '<S364>/Unit Delay' */
   boolean_T s365_UnitDelay_DSTATE;     /* '<S365>/Unit Delay' */
+  boolean_T s360_UnitDelay_DSTATE;     /* '<S360>/Unit Delay' */
+  boolean_T s366_UnitDelay_DSTATE;     /* '<S366>/Unit Delay' */
   boolean_T s318_UnitDelay_DSTATE;     /* '<S318>/Unit Delay' */
   boolean_T s319_UnitDelay_DSTATE;     /* '<S319>/Unit Delay' */
   boolean_T s320_UnitDelay_DSTATE;     /* '<S320>/Unit Delay' */
@@ -694,16 +811,16 @@ typedef struct {
   boolean_T s246_UnitDelay_DSTATE;     /* '<S246>/Unit Delay' */
   boolean_T s297_UnitDelay_DSTATE;     /* '<S297>/Unit Delay' */
   boolean_T s45_UnitDelay_DSTATE;      /* '<S45>/Unit Delay' */
-  boolean_T s984_UnitDelay8_DSTATE;    /* '<S984>/Unit Delay8' */
-  boolean_T s984_UnitDelay6_DSTATE;    /* '<S984>/Unit Delay6' */
-  boolean_T s984_UnitDelay7_DSTATE;    /* '<S984>/Unit Delay7' */
-  boolean_T s980_UnitDelay_DSTATE;     /* '<S980>/Unit Delay' */
-  boolean_T s986_UnitDelay2_DSTATE;    /* '<S986>/Unit Delay2' */
-  boolean_T s979_UnitDelay5_DSTATE;    /* '<S979>/Unit Delay5' */
-  boolean_T s986_UnitDelay_DSTATE;     /* '<S986>/Unit Delay' */
-  boolean_T s986_UnitDelay1_DSTATE;    /* '<S986>/Unit Delay1' */
-  boolean_T s979_UnitDelay3_DSTATE;    /* '<S979>/Unit Delay3' */
-  boolean_T s979_UnitDelay4_DSTATE;    /* '<S979>/Unit Delay4' */
+  boolean_T s1044_UnitDelay8_DSTATE;   /* '<S1044>/Unit Delay8' */
+  boolean_T s1044_UnitDelay6_DSTATE;   /* '<S1044>/Unit Delay6' */
+  boolean_T s1044_UnitDelay7_DSTATE;   /* '<S1044>/Unit Delay7' */
+  boolean_T s1040_UnitDelay_DSTATE;    /* '<S1040>/Unit Delay' */
+  boolean_T s1046_UnitDelay2_DSTATE;   /* '<S1046>/Unit Delay2' */
+  boolean_T s1039_UnitDelay5_DSTATE;   /* '<S1039>/Unit Delay5' */
+  boolean_T s1046_UnitDelay_DSTATE;    /* '<S1046>/Unit Delay' */
+  boolean_T s1046_UnitDelay1_DSTATE;   /* '<S1046>/Unit Delay1' */
+  boolean_T s1039_UnitDelay3_DSTATE;   /* '<S1039>/Unit Delay3' */
+  boolean_T s1039_UnitDelay4_DSTATE;   /* '<S1039>/Unit Delay4' */
   uint8_T s1_motohawk_trigger1_DWORK1; /* '<S1>/motohawk_trigger1' */
   uint8_T s5_motohawk_trigger1_DWORK1; /* '<S5>/motohawk_trigger1' */
   uint8_T s5_motohawk_trigger_DWORK1;  /* '<S5>/motohawk_trigger' */
@@ -714,18 +831,18 @@ typedef struct {
   uint8_T s5_motohawk_trigger6_DWORK1; /* '<S5>/motohawk_trigger6' */
   uint8_T s5_motohawk_trigger7_DWORK1; /* '<S5>/motohawk_trigger7' */
   uint8_T s4_motohawk_trigger1_DWORK1; /* '<S4>/motohawk_trigger1' */
-  uint8_T s455_motohawk_trigger_DWORK1;/* '<S455>/motohawk_trigger' */
-  uint8_T s417_motohawk_trigger_DWORK1;/* '<S417>/motohawk_trigger' */
-  uint8_T s633_motohawk_trigger5_DWORK1;/* '<S633>/motohawk_trigger5' */
-  uint8_T s455_motohawk_trigger1_DWORK1;/* '<S455>/motohawk_trigger1' */
+  uint8_T s456_motohawk_trigger_DWORK1;/* '<S456>/motohawk_trigger' */
+  uint8_T s418_motohawk_trigger_DWORK1;/* '<S418>/motohawk_trigger' */
+  uint8_T s634_motohawk_trigger5_DWORK1;/* '<S634>/motohawk_trigger5' */
+  uint8_T s456_motohawk_trigger1_DWORK1;/* '<S456>/motohawk_trigger1' */
   uint8_T s14_motohawk_trigger1_DWORK1;/* '<S14>/motohawk_trigger1' */
   uint8_T s14_motohawk_trigger_DWORK1; /* '<S14>/motohawk_trigger' */
   uint8_T s13_motohawk_trigger_DWORK1; /* '<S13>/motohawk_trigger' */
-  uint8_T s761_motohawk_trigger_DWORK1;/* '<S761>/motohawk_trigger' */
-  uint8_T s763_motohawk_trigger_DWORK1;/* '<S763>/motohawk_trigger' */
-  uint8_T s893_motohawk_trigger1_DWORK1;/* '<S893>/motohawk_trigger1' */
-  uint8_T s438_is_c2_BaseEngineController_LS;/* '<S417>/Engine State Machine' */
-  uint8_T s374_is_c19_BaseEngineController_LS;/* '<S368>/Baro Stall State Delay' */
+  uint8_T s762_motohawk_trigger_DWORK1;/* '<S762>/motohawk_trigger' */
+  uint8_T s764_motohawk_trigger_DWORK1;/* '<S764>/motohawk_trigger' */
+  uint8_T s953_motohawk_trigger1_DWORK1;/* '<S953>/motohawk_trigger1' */
+  uint8_T s439_is_c2_BaseEngineController_LS;/* '<S418>/Engine State Machine' */
+  uint8_T s375_is_c19_BaseEngineController_LS;/* '<S369>/Baro Stall State Delay' */
   uint8_T s322_is_active_c3_BaseEngineController_LS;/* '<S311>/Ice Break' */
   uint8_T s322_is_c3_BaseEngineController_LS;/* '<S311>/Ice Break' */
   uint8_T s136_motohawk_trigger1_DWORK1;/* '<S136>/motohawk_trigger1' */
@@ -733,16 +850,16 @@ typedef struct {
   uint8_T s265_is_c12_BaseEngineController_LS;/* '<S250>/IdleStateMachine' */
   uint8_T s102_motohawk_trigger_DWORK1;/* '<S102>/motohawk_trigger' */
   uint8_T s27_is_c9_BaseEngineController_LS;/* '<S20>/ETC Test  Manager' */
-  uint8_T s983_is_c8_BaseEngineController_LS;/* '<S979>/ECUP Latch' */
-  boolean_T s617_Memory_PreviousInput; /* '<S617>/Memory' */
-  boolean_T s868_InjectorSequence_DWORK1[8];/* '<S868>/Injector Sequence' */
+  uint8_T s1043_is_c8_BaseEngineController_LS;/* '<S1039>/ECUP Latch' */
+  boolean_T s618_Memory_PreviousInput; /* '<S618>/Memory' */
+  boolean_T s869_InjectorSequence_DWORK1[8];/* '<S869>/Injector Sequence' */
   boolean_T s286_Multiplyby10ifnotyetenabled_FirstOutputTime;/* '<S286>/Multiply by 1.0 if not yet enabled' */
-  boolean_T s1000_Memory_PreviousInput;/* '<S1000>/Memory' */
+  boolean_T s1060_Memory_PreviousInput;/* '<S1060>/Memory' */
   boolean_T s15_Stall_MODE;            /* '<S15>/Stall' */
   boolean_T s15_Crank_MODE;            /* '<S15>/Crank' */
-  boolean_T s368_CaptureSignalAtStartup_MODE;/* '<S368>/Capture Signal At Startup' */
-  boolean_T s372_CaptureECTAtStartup_MODE;/* '<S372>/Capture ECT At Startup' */
-  boolean_T s372_CaptureIATAtStartup_MODE;/* '<S372>/Capture IAT At Startup' */
+  boolean_T s369_CaptureSignalAtStartup_MODE;/* '<S369>/Capture Signal At Startup' */
+  boolean_T s373_CaptureECTAtStartup_MODE;/* '<S373>/Capture ECT At Startup' */
+  boolean_T s373_CaptureIATAtStartup_MODE;/* '<S373>/Capture IAT At Startup' */
   boolean_T s15_Run_MODE;              /* '<S15>/Run' */
   boolean_T s22_PassThrough1_MODE;     /* '<S22>/PassThrough1' */
   boolean_T s22_PassThrough3_MODE;     /* '<S22>/PassThrough3' */
@@ -754,11 +871,11 @@ typedef struct {
   boolean_T s212_ECTTransientFueling_MODE;/* '<S212>/ECT Transient Fueling' */
   boolean_T s212_OXYTransientFueling_MODE;/* '<S212>/OXY Transient Fueling' */
   boolean_T s31_PassThrough_MODE;      /* '<S31>/PassThrough' */
-  rtDW_FunctionCallSubsystem_BaseEngineController_LS s763_FunctionCallSubsystem;/* '<S763>/Function-Call Subsystem' */
-  rtDW_FunctionCallSubsystem_BaseEngineController_LS s761_FunctionCallSubsystem;/* '<S761>/Function-Call Subsystem' */
+  rtDW_FunctionCallSubsystem_BaseEngineController_LS s764_FunctionCallSubsystem;/* '<S764>/Function-Call Subsystem' */
+  rtDW_FunctionCallSubsystem_BaseEngineController_LS s762_FunctionCallSubsystem;/* '<S762>/Function-Call Subsystem' */
+  rtDW_CollectAverage_BaseEngineController_LS s415_CollectAverage;/* '<S415>/Collect Average' */
   rtDW_CollectAverage_BaseEngineController_LS s414_CollectAverage;/* '<S414>/Collect Average' */
-  rtDW_CollectAverage_BaseEngineController_LS s413_CollectAverage;/* '<S413>/Collect Average' */
-  rtDW_CollectAverage_BaseEngineController_LS s375_CollectAverage;/* '<S375>/Collect Average' */
+  rtDW_CollectAverage_BaseEngineController_LS s376_CollectAverage;/* '<S376>/Collect Average' */
 } D_Work_BaseEngineController_LS;
 
 /* Zero-crossing (trigger) state */
@@ -766,24 +883,24 @@ typedef struct {
   ZCSigState HitCrossing1_Input_ZCE;   /* '<S153>/Hit  Crossing1' */
   ZCSigState ResetTasksCompleteToFalse_Trig_ZCE;/* '<S32>/Reset TasksComplete To False' */
   ZCSigState ResetTasksCompleteToTrue_Trig_ZCE;/* '<S20>/Reset TasksComplete To True' */
-  ZCSigState ShutdownpoweronECU565563_Trig_ZCE;/* '<S986>/Shutdown power on ECU565//563' */
-  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE;/* '<S986>/Save NV Vars one tick before MPRD off' */
-  ZCSigState ProcessorReboot_Trig_ZCE; /* '<S986>/Processor Reboot' */
-  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE;/* '<S986>/Post Shutdown two ticks before MPRD off' */
-  ZCSigState ShutdownpoweronECU565563_Trig_ZCE_l;/* '<S984>/Shutdown power on ECU565//563' */
-  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE_m;/* '<S984>/Save NV Vars one tick before MPRD off' */
-  ZCSigState ProcessorReboot_Trig_ZCE_h;/* '<S984>/Processor Reboot' */
-  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE_h;/* '<S984>/Post Shutdown two ticks before MPRD off' */
-  ZCSigState Clear_Trig_ZCE;           /* '<S982>/Clear' */
-  ZCSigState Clear_Trig_ZCE_k;         /* '<S981>/Clear' */
+  ZCSigState ShutdownpoweronECU565563_Trig_ZCE;/* '<S1046>/Shutdown power on ECU565//563' */
+  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE;/* '<S1046>/Save NV Vars one tick before MPRD off' */
+  ZCSigState ProcessorReboot_Trig_ZCE; /* '<S1046>/Processor Reboot' */
+  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE;/* '<S1046>/Post Shutdown two ticks before MPRD off' */
+  ZCSigState ShutdownpoweronECU565563_Trig_ZCE_l;/* '<S1044>/Shutdown power on ECU565//563' */
+  ZCSigState SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE_m;/* '<S1044>/Save NV Vars one tick before MPRD off' */
+  ZCSigState ProcessorReboot_Trig_ZCE_h;/* '<S1044>/Processor Reboot' */
+  ZCSigState PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE_h;/* '<S1044>/Post Shutdown two ticks before MPRD off' */
+  ZCSigState Clear_Trig_ZCE;           /* '<S1042>/Clear' */
+  ZCSigState Clear_Trig_ZCE_k;         /* '<S1041>/Clear' */
 } PrevZCSigStates_BaseEngineController_LS;
 
 /* Invariant block signals (auto storage) */
 typedef struct {
-  const real_T s868_Gain4;             /* '<S868>/Gain4' */
+  const real_T s869_Gain4;             /* '<S869>/Gain4' */
   const real_T s138_motohawk_replicate2;/* '<S138>/motohawk_replicate2' */
   const real_T s138_motohawk_replicate[8];/* '<S138>/motohawk_replicate' */
-  const uint32_T s868_DataTypeConversion5;/* '<S868>/Data Type Conversion5' */
+  const uint32_T s869_DataTypeConversion5;/* '<S869>/Data Type Conversion5' */
 } ConstBlockIO_BaseEngineController_LS;
 
 /* Constant parameters (auto storage) */
@@ -803,23 +920,23 @@ typedef struct {
    *   '<S318>/Combinatorial  Logic'
    *   '<S319>/Combinatorial  Logic'
    *   '<S320>/Combinatorial  Logic'
-   *   '<S357>/Combinatorial  Logic'
    *   '<S358>/Combinatorial  Logic'
    *   '<S359>/Combinatorial  Logic'
-   *   '<S363>/Combinatorial  Logic'
+   *   '<S360>/Combinatorial  Logic'
    *   '<S364>/Combinatorial  Logic'
    *   '<S365>/Combinatorial  Logic'
+   *   '<S366>/Combinatorial  Logic'
    *   '<S45>/Combinatorial  Logic'
    *   '<S297>/Combinatorial  Logic'
    */
-  boolean_T pooled905[8];
+  boolean_T pooled914[8];
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S1000>/Logic'
-   *   '<S617>/Logic'
+   *   '<S1060>/Logic'
+   *   '<S618>/Logic'
    */
-  boolean_T pooled906[16];
+  boolean_T pooled915[16];
 } ConstParam_BaseEngineController_LS;
 
 /* Real-time Model Data Structure */
@@ -1221,672 +1338,732 @@ extern struct RT_MODEL_BaseEngineController_LS *const BaseEngineController_LS_M;
  * '<S342>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Fuel Economy/First Order Low Pass (Tunable)
  * '<S343>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Fuel Economy/Multiply and Divide, avoiding divde by zero1
  * '<S344>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Fuel Economy/First Order Low Pass (Tunable)/First Order Low Pass
- * '<S345>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Lean Protect/Time Since Enabled (With Input)2
- * '<S346>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Low Oil Pressure Fault Logic/Run State
- * '<S347>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Low Oil Pressure Fault Logic/Time Since Enabled (With Input)2
- * '<S348>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Run State
- * '<S349>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Time Since Enabled (With Input)1
- * '<S350>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Time Since Enabled (With Input)2
- * '<S351>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Time Since Enabled (With Input)3
- * '<S352>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit
- * '<S353>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit
- * '<S354>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis
- * '<S355>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis1
- * '<S356>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis2
- * '<S357>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis/Hysteresis
- * '<S358>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis1/Hysteresis
- * '<S359>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis2/Hysteresis
- * '<S360>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis
- * '<S361>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis1
- * '<S362>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis2
- * '<S363>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis/Hysteresis
- * '<S364>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis1/Hysteresis
- * '<S365>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis2/Hysteresis
- * '<S366>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Wrong Fuel Pressure Fault Logic/Time Since Enabled (With Input)1
- * '<S367>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Wrong Fuel Pressure Fault Logic/Time Since Enabled (With Input)2
- * '<S368>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs
- * '<S369>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel
- * '<S370>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs
- * '<S371>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes
- * '<S372>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed
- * '<S373>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes
- * '<S374>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay
- * '<S375>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Capture Signal At Startup
- * '<S376>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Running Baro Learn
- * '<S377>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive
- * '<S378>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/motohawk_override_rel
- * '<S379>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Capture Signal At Startup/Collect Average
- * '<S380>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Running Baro Learn/Compare To Constant
- * '<S381>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Running Baro Learn/Time Since Enabled (With Input)1
- * '<S382>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/Adapt VolEff Map
- * '<S383>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/C to K1
- * '<S384>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/Compare To Constant
- * '<S385>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/Adapt VolEff Map/motohawk_table_1d
- * '<S386>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/motohawk_override_rel/NewValue
- * '<S387>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/motohawk_override_rel/OldValue
- * '<S388>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/First Order Low Pass
- * '<S389>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/First Time
- * '<S390>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/Rising Edge
- * '<S391>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/motohawk_table_2d
- * '<S392>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag
- * '<S393>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1
- * '<S394>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3
- * '<S395>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1/DecreasingFilter
- * '<S396>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1/First Order Low Pass
- * '<S397>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1/IncreasingFilter
- * '<S398>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3/DecreasingFilter
- * '<S399>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3/First Order Low Pass
- * '<S400>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3/IncreasingFilter
- * '<S401>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/ACPres Index
- * '<S402>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/CAT Index
- * '<S403>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/ECT Index
- * '<S404>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/IAT Indexes
- * '<S405>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/MAP Indexes
- * '<S406>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/OXY Index
- * '<S407>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/RPM Indexes
- * '<S408>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/SysVolt Index
- * '<S409>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/TPS Indexes
- * '<S410>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/VSPD Index
- * '<S411>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/APP  Sensor Arbitration1
- * '<S412>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request
- * '<S413>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture ECT At Startup
- * '<S414>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture IAT At Startup
- * '<S415>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/CutThrottle APP Limiting
- * '<S416>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel
- * '<S417>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState
- * '<S418>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Fuel Delta Pressure Calculation
- * '<S419>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Gear Estimator
- * '<S420>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/O2 De-lag
- * '<S421>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Stall
- * '<S422>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/TPS  Sensor Arbitration
- * '<S423>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Key On
- * '<S424>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Run
- * '<S425>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Stall
- * '<S426>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/VSPD_Selector
- * '<S427>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/First Order Low Pass
- * '<S428>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/PassThrough1
- * '<S429>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/PassThrough2
- * '<S430>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/Variable Rate Limiter
- * '<S431>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/Variable Rate Limiter/Saturation
- * '<S432>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture ECT At Startup/Collect Average
- * '<S433>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture IAT At Startup/Collect Average
- * '<S434>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/CutThrottle APP Limiting/Bound APP if overheating
- * '<S435>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel/Derivitive3
- * '<S436>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel/First Order Low Pass (Tunable)
- * '<S437>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel/First Order Low Pass (Tunable)/First Order Low Pass
- * '<S438>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState/Engine State Machine
- * '<S439>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState/TDC_Counter
- * '<S440>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState/TDC_Counter/Crank State
- * '<S441>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Key On/Time Since Enabled (With Input)2
- * '<S442>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Run/RunState
- * '<S443>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Run/Time Since Enabled (With Input)2
- * '<S444>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Stall/Stall State
- * '<S445>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Stall/Time Since Enabled (With Input)1
- * '<S446>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes/ECT_KeyUp
- * '<S447>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes/IAT_KeyUp
- * '<S448>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes/MAFPortIndex
- * '<S449>' : BaseEngineController_LS/Foreground/Control/motohawk_function_collector/motohawk_function_collector_in
- * '<S450>' : BaseEngineController_LS/Foreground/Control/motohawk_function_collector/motohawk_function_collector_in/Triggered Subsystem
- * '<S451>' : BaseEngineController_LS/Foreground/Inputs/CAN
- * '<S452>' : BaseEngineController_LS/Foreground/Inputs/Digital
- * '<S453>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed
- * '<S454>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors
- * '<S455>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors
- * '<S456>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors
- * '<S457>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS
- * '<S458>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda
- * '<S459>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs
- * '<S460>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs1
- * '<S461>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs10
- * '<S462>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs11
- * '<S463>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs12
- * '<S464>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs2
- * '<S465>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs3
- * '<S466>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs4
- * '<S467>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs5
- * '<S468>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs6
- * '<S469>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs7
- * '<S470>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs8
- * '<S471>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs9
- * '<S472>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs/NewValue
- * '<S473>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs/OldValue
- * '<S474>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs1/NewValue
- * '<S475>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs1/OldValue
- * '<S476>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs10/NewValue
- * '<S477>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs10/OldValue
- * '<S478>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs11/NewValue
- * '<S479>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs11/OldValue
- * '<S480>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs12/NewValue
- * '<S481>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs12/OldValue
- * '<S482>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs2/NewValue
- * '<S483>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs2/OldValue
- * '<S484>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs3/NewValue
- * '<S485>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs3/OldValue
- * '<S486>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs4/NewValue
- * '<S487>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs4/OldValue
- * '<S488>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs5/NewValue
- * '<S489>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs5/OldValue
- * '<S490>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs6/NewValue
- * '<S491>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs6/OldValue
- * '<S492>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs7/NewValue
- * '<S493>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs7/OldValue
- * '<S494>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs8/NewValue
- * '<S495>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs8/OldValue
- * '<S496>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs9/NewValue
- * '<S497>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs9/OldValue
- * '<S498>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization
- * '<S499>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1
- * '<S500>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs
- * '<S501>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs1
- * '<S502>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs10
- * '<S503>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs11
- * '<S504>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs12
- * '<S505>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs13
- * '<S506>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs14
- * '<S507>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs15
- * '<S508>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs16
- * '<S509>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs17
- * '<S510>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs2
- * '<S511>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs3
- * '<S512>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs4
- * '<S513>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs5
- * '<S514>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs6
- * '<S515>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs7
- * '<S516>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs8
- * '<S517>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs9
- * '<S518>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/First Order Low Pass
- * '<S519>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/If Action Subsystem
- * '<S520>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/If Action Subsystem1
- * '<S521>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/If Action Subsystem2
- * '<S522>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/Override
- * '<S523>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/First Order Low Pass/First Order Low Pass
- * '<S524>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/Override/NewValue
- * '<S525>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/Override/OldValue
- * '<S526>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/First Order Low Pass
- * '<S527>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/If Action Subsystem
- * '<S528>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/If Action Subsystem1
- * '<S529>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/If Action Subsystem2
- * '<S530>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/Override
- * '<S531>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/First Order Low Pass/First Order Low Pass
- * '<S532>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/Override/NewValue
- * '<S533>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/Override/OldValue
- * '<S534>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs/NewValue
- * '<S535>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs/OldValue
- * '<S536>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs1/NewValue
- * '<S537>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs1/OldValue
- * '<S538>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs10/NewValue
- * '<S539>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs10/OldValue
- * '<S540>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs11/NewValue
- * '<S541>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs11/OldValue
- * '<S542>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs12/NewValue
- * '<S543>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs12/OldValue
- * '<S544>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs13/NewValue
- * '<S545>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs13/OldValue
- * '<S546>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs14/NewValue
- * '<S547>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs14/OldValue
- * '<S548>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs15/NewValue
- * '<S549>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs15/OldValue
- * '<S550>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs16/NewValue
- * '<S551>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs16/OldValue
- * '<S552>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs17/NewValue
- * '<S553>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs17/OldValue
- * '<S554>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs2/NewValue
- * '<S555>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs2/OldValue
- * '<S556>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs3/NewValue
- * '<S557>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs3/OldValue
- * '<S558>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs4/NewValue
- * '<S559>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs4/OldValue
- * '<S560>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs5/NewValue
- * '<S561>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs5/OldValue
- * '<S562>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs6/NewValue
- * '<S563>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs6/OldValue
- * '<S564>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs7/NewValue
- * '<S565>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs7/OldValue
- * '<S566>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs8/NewValue
- * '<S567>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs8/OldValue
- * '<S568>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs9/NewValue
- * '<S569>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs9/OldValue
- * '<S570>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw
- * '<S571>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw
- * '<S572>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP
- * '<S573>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor
- * '<S574>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble
- * '<S575>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step
- * '<S576>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD
- * '<S577>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt
- * '<S578>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw /Override in Engineering Units
- * '<S579>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw /Override in Engineering Units/NewValue
- * '<S580>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw /Override in Engineering Units/OldValue
- * '<S581>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw/Override in Engineering Units
- * '<S582>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw/Override in Engineering Units/NewValue
- * '<S583>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw/Override in Engineering Units/OldValue
- * '<S584>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP/Override in Engineering Units
- * '<S585>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP/Override in Engineering Units/NewValue
- * '<S586>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP/Override in Engineering Units/OldValue
- * '<S587>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/First Order Low Pass
- * '<S588>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/If Action Subsystem
- * '<S589>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/If Action Subsystem1
- * '<S590>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/If Action Subsystem2
- * '<S591>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/Override
- * '<S592>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/motohawk_table_1d1
- * '<S593>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/First Order Low Pass/First Order Low Pass
- * '<S594>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/Override/NewValue
- * '<S595>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/Override/OldValue
- * '<S596>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Button Delay 1
- * '<S597>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Override in Engineering Units
- * '<S598>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Button Delay 1/Time Since Enabled (With Input)4
- * '<S599>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Override in Engineering Units/NewValue
- * '<S600>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Override in Engineering Units/OldValue
- * '<S601>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Button Delay 1
- * '<S602>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Override in Engineering Units
- * '<S603>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Button Delay 1/Time Since Enabled (With Input)4
- * '<S604>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Override in Engineering Units/NewValue
- * '<S605>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Override in Engineering Units/OldValue
- * '<S606>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/First Order Low Pass
- * '<S607>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/If Action Subsystem
- * '<S608>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/If Action Subsystem1
- * '<S609>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/If Action Subsystem2
- * '<S610>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/Override
- * '<S611>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/motohawk_table_1d1
- * '<S612>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/First Order Low Pass/First Order Low Pass
- * '<S613>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/Override/NewValue
- * '<S614>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/Override/OldValue
- * '<S615>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/Derivitive
- * '<S616>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/Falling Edge
- * '<S617>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/S-R Flip-Flop
- * '<S618>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/Time Since Enabled (With Input)1
- * '<S619>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics
- * '<S620>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/First Order Low Pass (Tunable)1
- * '<S621>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CamEdges
- * '<S622>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CamSync
- * '<S623>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CounterThresh
- * '<S624>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CrankEdges
- * '<S625>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CrankSync
- * '<S626>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/motohawk_model_probe_eval_f
- * '<S627>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/First Order Low Pass (Tunable)1/First Order Low Pass
- * '<S628>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres
- * '<S629>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor
- * '<S630>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres
- * '<S631>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP
- * '<S632>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime
- * '<S633>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous
- * '<S634>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres
- * '<S635>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts
- * '<S636>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts
- * '<S637>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /First Order Low Pass
- * '<S638>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /If Action Subsystem
- * '<S639>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /If Action Subsystem1
- * '<S640>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /If Action Subsystem2
- * '<S641>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /Override
- * '<S642>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /First Order Low Pass/First Order Low Pass
- * '<S643>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /Override/NewValue
- * '<S644>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /Override/OldValue
- * '<S645>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options
- * '<S646>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/If Action Subsystem
- * '<S647>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/If Action Subsystem1
- * '<S648>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/If Action Subsystem2
- * '<S649>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Override
- * '<S650>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/First Order Low Pass
- * '<S651>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Moving Average Filter
- * '<S652>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Rate Limiter
- * '<S653>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/First Order Low Pass/First Order Low Pass
- * '<S654>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Rate Limiter/Variable Rate Limiter
- * '<S655>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Rate Limiter/Variable Rate Limiter/Saturation
- * '<S656>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Override/NewValue
- * '<S657>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Override/OldValue
- * '<S658>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/First Order Low Pass
- * '<S659>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/If Action Subsystem
- * '<S660>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/If Action Subsystem1
- * '<S661>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/If Action Subsystem2
- * '<S662>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/Override
- * '<S663>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/First Order Low Pass/First Order Low Pass
- * '<S664>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/Override/NewValue
- * '<S665>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/Override/OldValue
- * '<S666>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/First Order Low Pass
- * '<S667>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/If Action Subsystem
- * '<S668>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/If Action Subsystem1
- * '<S669>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/If Action Subsystem2
- * '<S670>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/Override
- * '<S671>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/First Order Low Pass/First Order Low Pass
- * '<S672>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/Override/NewValue
- * '<S673>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/Override/OldValue
- * '<S674>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/First Order Low Pass
- * '<S675>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/If Action Subsystem
- * '<S676>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/If Action Subsystem1
- * '<S677>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/If Action Subsystem2
- * '<S678>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/Override
- * '<S679>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/First Order Low Pass/First Order Low Pass
- * '<S680>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/Override/NewValue
- * '<S681>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/Override/OldValue
- * '<S682>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/MID_TDC
- * '<S683>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/Once at Startup
- * '<S684>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/First Order Low Pass
- * '<S685>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/If Action Subsystem
- * '<S686>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/If Action Subsystem1
- * '<S687>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/If Action Subsystem2
- * '<S688>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/Override
- * '<S689>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/First Order Low Pass/First Order Low Pass
- * '<S690>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/Override/NewValue
- * '<S691>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/Override/OldValue
- * '<S692>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/First Order Low Pass
- * '<S693>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/If Action Subsystem
- * '<S694>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/If Action Subsystem1
- * '<S695>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/If Action Subsystem2
- * '<S696>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/Override
- * '<S697>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/First Order Low Pass/First Order Low Pass
- * '<S698>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/Override/NewValue
- * '<S699>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/Override/OldValue
- * '<S700>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/First Order Low Pass
- * '<S701>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/If Action Subsystem
- * '<S702>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/If Action Subsystem1
- * '<S703>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/If Action Subsystem2
- * '<S704>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/Override
- * '<S705>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/First Order Low Pass/First Order Low Pass
- * '<S706>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/Override/NewValue
- * '<S707>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/Override/OldValue
- * '<S708>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level
- * '<S709>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors
- * '<S710>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl
- * '<S711>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /First Order Low Pass
- * '<S712>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /If Action Subsystem
- * '<S713>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /If Action Subsystem1
- * '<S714>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /If Action Subsystem2
- * '<S715>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /Override
- * '<S716>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /motohawk_table_1d1
- * '<S717>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /First Order Low Pass/First Order Low Pass
- * '<S718>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /Override/NewValue
- * '<S719>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /Override/OldValue
- * '<S720>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1
- * '<S721>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT
- * '<S722>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP
- * '<S723>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT
- * '<S724>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/First Order Low Pass
- * '<S725>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/If Action Subsystem
- * '<S726>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/If Action Subsystem1
- * '<S727>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/If Action Subsystem2
- * '<S728>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/Override
- * '<S729>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/motohawk_table_1d1
- * '<S730>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/First Order Low Pass/First Order Low Pass
- * '<S731>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/Override/NewValue
- * '<S732>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/Override/OldValue
- * '<S733>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /First Order Low Pass
- * '<S734>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /If Action Subsystem
- * '<S735>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /If Action Subsystem1
- * '<S736>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /If Action Subsystem2
- * '<S737>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /Override
- * '<S738>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /motohawk_table_1d1
- * '<S739>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /First Order Low Pass/First Order Low Pass
- * '<S740>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /Override/NewValue
- * '<S741>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /Override/OldValue
- * '<S742>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /First Order Low Pass
- * '<S743>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /If Action Subsystem
- * '<S744>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /If Action Subsystem1
- * '<S745>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /If Action Subsystem2
- * '<S746>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /Override
- * '<S747>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /motohawk_table_1d1
- * '<S748>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /First Order Low Pass/First Order Low Pass
- * '<S749>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /Override/NewValue
- * '<S750>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /Override/OldValue
- * '<S751>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /First Order Low Pass
- * '<S752>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /If Action Subsystem
- * '<S753>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /If Action Subsystem1
- * '<S754>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /If Action Subsystem2
- * '<S755>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /Override
- * '<S756>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /motohawk_table_1d1
- * '<S757>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /First Order Low Pass/First Order Low Pass
- * '<S758>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /Override/NewValue
- * '<S759>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /Override/OldValue
- * '<S760>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1
- * '<S761>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1ForcedAdapt
- * '<S762>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2
- * '<S763>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt
- * '<S764>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt
- * '<S765>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1
- * '<S766>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1
- * '<S767>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2
- * '<S768>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/First Order Low Pass
- * '<S769>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/If Action Subsystem
- * '<S770>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/If Action Subsystem1
- * '<S771>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/If Action Subsystem2
- * '<S772>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Override
- * '<S773>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Saturation
- * '<S774>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/motohawk_table_1d1
- * '<S775>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/First Order Low Pass/First Order Low Pass
- * '<S776>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Override/NewValue
- * '<S777>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Override/OldValue
- * '<S778>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1ForcedAdapt/Function-Call Subsystem
- * '<S779>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1ForcedAdapt/Function-Call Subsystem/First Time
- * '<S780>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/First Order Low Pass
- * '<S781>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/If Action Subsystem
- * '<S782>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/If Action Subsystem1
- * '<S783>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/If Action Subsystem2
- * '<S784>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Override
- * '<S785>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Saturation
- * '<S786>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/motohawk_table_1d1
- * '<S787>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/First Order Low Pass/First Order Low Pass
- * '<S788>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Override/NewValue
- * '<S789>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Override/OldValue
- * '<S790>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Function-Call Subsystem
- * '<S791>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Function-Call Subsystem/First Time
- * '<S792>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING
- * '<S793>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/FAULTS
- * '<S794>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/First Order Low Pass
- * '<S795>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER
- * '<S796>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/Saturation
- * '<S797>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT HI
- * '<S798>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT LO
- * '<S799>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/MinMaxFilter
- * '<S800>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT HI/Store Current Position
- * '<S801>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT LO/Store Current Position
- * '<S802>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/First Order Low Pass/First Order Low Pass
- * '<S803>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/If Action Subsystem
- * '<S804>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/If Action Subsystem1
- * '<S805>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/If Action Subsystem2
- * '<S806>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/Override
- * '<S807>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/Override/NewValue
- * '<S808>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/Override/OldValue
- * '<S809>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING
- * '<S810>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/FAULTS
- * '<S811>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/First Order Low Pass
- * '<S812>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER
- * '<S813>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/Saturation
- * '<S814>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT HI
- * '<S815>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT LO
- * '<S816>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/MinMaxFilter
- * '<S817>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT HI/Store Current Position
- * '<S818>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT LO/Store Current Position
- * '<S819>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/First Order Low Pass/First Order Low Pass
- * '<S820>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/If Action Subsystem
- * '<S821>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/If Action Subsystem1
- * '<S822>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/If Action Subsystem2
- * '<S823>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/Override
- * '<S824>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/Override/NewValue
- * '<S825>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/Override/OldValue
- * '<S826>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING
- * '<S827>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/FAULTS
- * '<S828>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/First Order Low Pass
- * '<S829>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER
- * '<S830>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/Saturation
- * '<S831>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT HI
- * '<S832>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT LO
- * '<S833>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/MinMaxFilter
- * '<S834>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT HI/Store Current Position
- * '<S835>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT LO/Store Current Position
- * '<S836>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/First Order Low Pass/First Order Low Pass
- * '<S837>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/If Action Subsystem
- * '<S838>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/If Action Subsystem1
- * '<S839>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/If Action Subsystem2
- * '<S840>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/Override
- * '<S841>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/Override/NewValue
- * '<S842>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/Override/OldValue
- * '<S843>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING
- * '<S844>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/FAULTS
- * '<S845>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/First Order Low Pass
- * '<S846>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER
- * '<S847>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/Saturation
- * '<S848>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT HI
- * '<S849>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT LO
- * '<S850>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/MinMaxFilter
- * '<S851>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT HI/Store Current Position
- * '<S852>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT LO/Store Current Position
- * '<S853>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/First Order Low Pass/First Order Low Pass
- * '<S854>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/If Action Subsystem
- * '<S855>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/If Action Subsystem1
- * '<S856>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/If Action Subsystem2
- * '<S857>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/Override
- * '<S858>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/Override/NewValue
- * '<S859>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/Override/OldValue
- * '<S860>' : BaseEngineController_LS/Foreground/Outputs/AC Control
- * '<S861>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash
- * '<S862>' : BaseEngineController_LS/Foreground/Outputs/Coil Control
- * '<S863>' : BaseEngineController_LS/Foreground/Outputs/ETC_CutPower
- * '<S864>' : BaseEngineController_LS/Foreground/Outputs/FAN Control
- * '<S865>' : BaseEngineController_LS/Foreground/Outputs/FuelPump
- * '<S866>' : BaseEngineController_LS/Foreground/Outputs/HBridge
- * '<S867>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control
- * '<S868>' : BaseEngineController_LS/Foreground/Outputs/Injector Control
- * '<S869>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control
- * '<S870>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC
- * '<S871>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC/Override in Engineering Units
- * '<S872>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC/Override in Engineering Units/NewValue
- * '<S873>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC/Override in Engineering Units/OldValue
- * '<S874>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Custom 1
- * '<S875>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1
- * '<S876>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2
- * '<S877>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3
- * '<S878>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 4
- * '<S879>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 5
- * '<S880>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 6
- * '<S881>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 7
- * '<S882>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 8
- * '<S883>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message Boost
- * '<S884>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW
- * '<S885>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/
- * '<S886>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/
- * '<S887>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/ 1
- * '<S888>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager
- * '<S889>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management
- * '<S890>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel
- * '<S891>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel1
- * '<S892>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/CompareTo
- * '<S893>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/EST Enable TDC Counter
- * '<S894>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/EST Enable TDC Counter/EST Enable TDC Counter Stateflow
- * '<S895>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/EST Enable TDC Counter/TDC_Counter
- * '<S896>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo
- * '<S897>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo1
- * '<S898>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo10
- * '<S899>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo11
- * '<S900>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo12
- * '<S901>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo13
- * '<S902>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo14
- * '<S903>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo15
- * '<S904>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo2
- * '<S905>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo3
- * '<S906>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo4
- * '<S907>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo5
- * '<S908>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo6
- * '<S909>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo7
- * '<S910>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo8
- * '<S911>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo9
- * '<S912>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel/NewValue
- * '<S913>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel/OldValue
- * '<S914>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel1/NewValue
- * '<S915>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel1/OldValue
- * '<S916>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1
- * '<S917>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2
- * '<S918>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL
- * '<S919>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1
- * '<S920>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1/Override in Engineering Units
- * '<S921>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1/Override in Engineering Units/NewValue
- * '<S922>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1/Override in Engineering Units/OldValue
- * '<S923>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2/Override in Engineering Units
- * '<S924>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2/Override in Engineering Units/NewValue
- * '<S925>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2/Override in Engineering Units/OldValue
- * '<S926>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/Saturation
- * '<S927>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/motohawk_override_abs2
- * '<S928>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/motohawk_override_abs2/NewValue
- * '<S929>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/motohawk_override_abs2/OldValue
- * '<S930>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/Saturation
- * '<S931>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/motohawk_override_abs2
- * '<S932>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/motohawk_override_abs2/NewValue
- * '<S933>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/motohawk_override_abs2/OldValue
- * '<S934>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP
- * '<S935>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP/Override in Engineering Units
- * '<S936>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP/Override in Engineering Units/NewValue
- * '<S937>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP/Override in Engineering Units/OldValue
- * '<S938>' : BaseEngineController_LS/Foreground/Outputs/HBridge/Time Since Enabled (With Input)1
- * '<S939>' : BaseEngineController_LS/Foreground/Outputs/HBridge/motohawk_override_abs2
- * '<S940>' : BaseEngineController_LS/Foreground/Outputs/HBridge/motohawk_override_abs2/NewValue
- * '<S941>' : BaseEngineController_LS/Foreground/Outputs/HBridge/motohawk_override_abs2/OldValue
- * '<S942>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL
- * '<S943>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL
- * '<S944>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/Saturation
- * '<S945>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/motohawk_override_abs2
- * '<S946>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/motohawk_override_abs2/NewValue
- * '<S947>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/motohawk_override_abs2/OldValue
- * '<S948>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/Saturation
- * '<S949>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/motohawk_override_abs2
- * '<S950>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/motohawk_override_abs2/NewValue
- * '<S951>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/motohawk_override_abs2/OldValue
- * '<S952>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Diagnostics
- * '<S953>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Enable Manager
- * '<S954>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs1
- * '<S955>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs2
- * '<S956>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs3
- * '<S957>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs4
- * '<S958>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs5
- * '<S959>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs6
- * '<S960>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Enable Manager/Stall
- * '<S961>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Enable Manager/Time Since Enabled (With Input)1
- * '<S962>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs1/NewValue
- * '<S963>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs1/OldValue
- * '<S964>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs2/NewValue
- * '<S965>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs2/OldValue
- * '<S966>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs3/NewValue
- * '<S967>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs3/OldValue
- * '<S968>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs4/NewValue
- * '<S969>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs4/OldValue
- * '<S970>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs5/NewValue
- * '<S971>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs5/OldValue
- * '<S972>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs6/NewValue
- * '<S973>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs6/OldValue
- * '<S974>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization
- * '<S975>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/Saturation
- * '<S976>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/motohawk_override_abs2
- * '<S977>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/motohawk_override_abs2/NewValue
- * '<S978>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/motohawk_override_abs2/OldValue
- * '<S979>' : BaseEngineController_LS/Main Power Relay/Main Power Relay
- * '<S980>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Boolean
- * '<S981>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call
- * '<S982>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1
- * '<S983>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ECUP Latch
- * '<S984>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process
- * '<S985>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/On Off Delay
- * '<S986>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes
- * '<S987>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Time Since Enabled (With Input)1
- * '<S988>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/motohawk_restore_nvmem
- * '<S989>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/motohawk_store_nvmem
- * '<S990>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call/Clear
- * '<S991>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1/Clear
- * '<S992>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off
- * '<S993>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Processor Reboot
- * '<S994>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off
- * '<S995>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563
- * '<S996>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Time Since Enabled (With Input)1
- * '<S997>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
- * '<S998>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
- * '<S999>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563/Shutdown power on ECU565-128
- * '<S1000>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/On Off Delay/S-R Flip-Flop
- * '<S1001>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off
- * '<S1002>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Processor Reboot
- * '<S1003>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off
- * '<S1004>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563
- * '<S1005>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs
- * '<S1006>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
- * '<S1007>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
- * '<S1008>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563/Shutdown power on ECU565-128
- * '<S1009>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/NewValue
- * '<S1010>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/OldValue
+ * '<S345>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Lean Protect/Run State
+ * '<S346>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Lean Protect/Time Since Enabled (With Input)2
+ * '<S347>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Low Oil Pressure Fault Logic/Run State
+ * '<S348>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Low Oil Pressure Fault Logic/Time Since Enabled (With Input)2
+ * '<S349>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Run State
+ * '<S350>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Time Since Enabled (With Input)1
+ * '<S351>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Time Since Enabled (With Input)2
+ * '<S352>' : BaseEngineController_LS/Foreground/Control/Diagnostics/MAP Fault Logic/Time Since Enabled (With Input)3
+ * '<S353>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit
+ * '<S354>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit
+ * '<S355>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis
+ * '<S356>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis1
+ * '<S357>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis2
+ * '<S358>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis/Hysteresis
+ * '<S359>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis1/Hysteresis
+ * '<S360>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/BaseRevLimit/Hysterisis2/Hysteresis
+ * '<S361>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis
+ * '<S362>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis1
+ * '<S363>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis2
+ * '<S364>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis/Hysteresis
+ * '<S365>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis1/Hysteresis
+ * '<S366>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Overspeed Protection/TwoStepRevLimit/Hysterisis2/Hysteresis
+ * '<S367>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Wrong Fuel Pressure Fault Logic/Time Since Enabled (With Input)1
+ * '<S368>' : BaseEngineController_LS/Foreground/Control/Diagnostics/Wrong Fuel Pressure Fault Logic/Time Since Enabled (With Input)2
+ * '<S369>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs
+ * '<S370>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel
+ * '<S371>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs
+ * '<S372>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes
+ * '<S373>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed
+ * '<S374>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes
+ * '<S375>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay
+ * '<S376>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Capture Signal At Startup
+ * '<S377>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Running Baro Learn
+ * '<S378>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive
+ * '<S379>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/motohawk_override_rel
+ * '<S380>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Capture Signal At Startup/Collect Average
+ * '<S381>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Running Baro Learn/Compare To Constant
+ * '<S382>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Running Baro Learn/Time Since Enabled (With Input)1
+ * '<S383>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/Adapt VolEff Map
+ * '<S384>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/C to K1
+ * '<S385>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/Compare To Constant
+ * '<S386>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/Speed Density - MAP Referenced - Adaptive/Adapt VolEff Map/motohawk_table_1d
+ * '<S387>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/motohawk_override_rel/NewValue
+ * '<S388>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/AirCalcs/motohawk_override_rel/OldValue
+ * '<S389>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/First Order Low Pass
+ * '<S390>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/First Time
+ * '<S391>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/Rising Edge
+ * '<S392>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/FuelLevel/motohawk_table_2d
+ * '<S393>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag
+ * '<S394>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1
+ * '<S395>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3
+ * '<S396>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1/DecreasingFilter
+ * '<S397>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1/First Order Low Pass
+ * '<S398>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect1/IncreasingFilter
+ * '<S399>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3/DecreasingFilter
+ * '<S400>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3/First Order Low Pass
+ * '<S401>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/LoadBasedCalcs/Engine Steady-State Flag/Inc_DecFilterSelect3/IncreasingFilter
+ * '<S402>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/ACPres Index
+ * '<S403>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/CAT Index
+ * '<S404>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/ECT Index
+ * '<S405>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/IAT Indexes
+ * '<S406>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/MAP Indexes
+ * '<S407>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/OXY Index
+ * '<S408>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/RPM Indexes
+ * '<S409>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/SysVolt Index
+ * '<S410>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/TPS Indexes
+ * '<S411>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Raw Indexes/VSPD Index
+ * '<S412>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/APP  Sensor Arbitration1
+ * '<S413>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request
+ * '<S414>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture ECT At Startup
+ * '<S415>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture IAT At Startup
+ * '<S416>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/CutThrottle APP Limiting
+ * '<S417>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel
+ * '<S418>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState
+ * '<S419>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Fuel Delta Pressure Calculation
+ * '<S420>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Gear Estimator
+ * '<S421>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/O2 De-lag
+ * '<S422>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Stall
+ * '<S423>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/TPS  Sensor Arbitration
+ * '<S424>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Key On
+ * '<S425>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Run
+ * '<S426>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Stall
+ * '<S427>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/VSPD_Selector
+ * '<S428>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/First Order Low Pass
+ * '<S429>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/PassThrough1
+ * '<S430>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/PassThrough2
+ * '<S431>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/Variable Rate Limiter
+ * '<S432>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Base TPS Request/Variable Rate Limiter/Saturation
+ * '<S433>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture ECT At Startup/Collect Average
+ * '<S434>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Capture IAT At Startup/Collect Average
+ * '<S435>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/CutThrottle APP Limiting/Bound APP if overheating
+ * '<S436>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel/Derivitive3
+ * '<S437>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel/First Order Low Pass (Tunable)
+ * '<S438>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Engine Accel/First Order Low Pass (Tunable)/First Order Low Pass
+ * '<S439>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState/Engine State Machine
+ * '<S440>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState/TDC_Counter
+ * '<S441>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/EngineState/TDC_Counter/Crank State
+ * '<S442>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Key On/Time Since Enabled (With Input)2
+ * '<S443>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Run/RunState
+ * '<S444>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Run/Time Since Enabled (With Input)2
+ * '<S445>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Stall/Stall State
+ * '<S446>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/RawProcessed/Time Since Stall/Time Since Enabled (With Input)1
+ * '<S447>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes/ECT_KeyUp
+ * '<S448>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes/IAT_KeyUp
+ * '<S449>' : BaseEngineController_LS/Foreground/Control/VirtualSensors/Virtual Indexes/MAFPortIndex
+ * '<S450>' : BaseEngineController_LS/Foreground/Control/motohawk_function_collector/motohawk_function_collector_in
+ * '<S451>' : BaseEngineController_LS/Foreground/Control/motohawk_function_collector/motohawk_function_collector_in/Triggered Subsystem
+ * '<S452>' : BaseEngineController_LS/Foreground/Inputs/CAN
+ * '<S453>' : BaseEngineController_LS/Foreground/Inputs/Digital
+ * '<S454>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed
+ * '<S455>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors
+ * '<S456>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors
+ * '<S457>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors
+ * '<S458>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS
+ * '<S459>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda
+ * '<S460>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs
+ * '<S461>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs1
+ * '<S462>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs10
+ * '<S463>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs11
+ * '<S464>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs12
+ * '<S465>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs2
+ * '<S466>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs3
+ * '<S467>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs4
+ * '<S468>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs5
+ * '<S469>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs6
+ * '<S470>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs7
+ * '<S471>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs8
+ * '<S472>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs9
+ * '<S473>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs/NewValue
+ * '<S474>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs/OldValue
+ * '<S475>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs1/NewValue
+ * '<S476>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs1/OldValue
+ * '<S477>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs10/NewValue
+ * '<S478>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs10/OldValue
+ * '<S479>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs11/NewValue
+ * '<S480>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs11/OldValue
+ * '<S481>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs12/NewValue
+ * '<S482>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs12/OldValue
+ * '<S483>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs2/NewValue
+ * '<S484>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs2/OldValue
+ * '<S485>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs3/NewValue
+ * '<S486>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs3/OldValue
+ * '<S487>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs4/NewValue
+ * '<S488>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs4/OldValue
+ * '<S489>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs5/NewValue
+ * '<S490>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs5/OldValue
+ * '<S491>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs6/NewValue
+ * '<S492>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs6/OldValue
+ * '<S493>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs7/NewValue
+ * '<S494>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs7/OldValue
+ * '<S495>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs8/NewValue
+ * '<S496>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs8/OldValue
+ * '<S497>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs9/NewValue
+ * '<S498>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM GPS/motohawk_override_abs9/OldValue
+ * '<S499>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization
+ * '<S500>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1
+ * '<S501>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs
+ * '<S502>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs1
+ * '<S503>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs10
+ * '<S504>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs11
+ * '<S505>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs12
+ * '<S506>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs13
+ * '<S507>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs14
+ * '<S508>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs15
+ * '<S509>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs16
+ * '<S510>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs17
+ * '<S511>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs2
+ * '<S512>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs3
+ * '<S513>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs4
+ * '<S514>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs5
+ * '<S515>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs6
+ * '<S516>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs7
+ * '<S517>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs8
+ * '<S518>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs9
+ * '<S519>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/First Order Low Pass
+ * '<S520>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/If Action Subsystem
+ * '<S521>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/If Action Subsystem1
+ * '<S522>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/If Action Subsystem2
+ * '<S523>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/Override
+ * '<S524>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/First Order Low Pass/First Order Low Pass
+ * '<S525>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/Override/NewValue
+ * '<S526>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization/Override/OldValue
+ * '<S527>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/First Order Low Pass
+ * '<S528>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/If Action Subsystem
+ * '<S529>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/If Action Subsystem1
+ * '<S530>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/If Action Subsystem2
+ * '<S531>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/Override
+ * '<S532>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/First Order Low Pass/First Order Low Pass
+ * '<S533>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/Override/NewValue
+ * '<S534>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/Linear Sensor Characterization1/Override/OldValue
+ * '<S535>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs/NewValue
+ * '<S536>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs/OldValue
+ * '<S537>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs1/NewValue
+ * '<S538>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs1/OldValue
+ * '<S539>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs10/NewValue
+ * '<S540>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs10/OldValue
+ * '<S541>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs11/NewValue
+ * '<S542>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs11/OldValue
+ * '<S543>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs12/NewValue
+ * '<S544>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs12/OldValue
+ * '<S545>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs13/NewValue
+ * '<S546>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs13/OldValue
+ * '<S547>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs14/NewValue
+ * '<S548>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs14/OldValue
+ * '<S549>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs15/NewValue
+ * '<S550>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs15/OldValue
+ * '<S551>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs16/NewValue
+ * '<S552>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs16/OldValue
+ * '<S553>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs17/NewValue
+ * '<S554>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs17/OldValue
+ * '<S555>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs2/NewValue
+ * '<S556>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs2/OldValue
+ * '<S557>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs3/NewValue
+ * '<S558>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs3/OldValue
+ * '<S559>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs4/NewValue
+ * '<S560>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs4/OldValue
+ * '<S561>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs5/NewValue
+ * '<S562>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs5/OldValue
+ * '<S563>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs6/NewValue
+ * '<S564>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs6/OldValue
+ * '<S565>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs7/NewValue
+ * '<S566>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs7/OldValue
+ * '<S567>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs8/NewValue
+ * '<S568>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs8/OldValue
+ * '<S569>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs9/NewValue
+ * '<S570>' : BaseEngineController_LS/Foreground/Inputs/CAN/AEM X Lambda/motohawk_override_abs9/OldValue
+ * '<S571>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw
+ * '<S572>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw
+ * '<S573>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP
+ * '<S574>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor
+ * '<S575>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble
+ * '<S576>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step
+ * '<S577>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD
+ * '<S578>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt
+ * '<S579>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw /Override in Engineering Units
+ * '<S580>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw /Override in Engineering Units/NewValue
+ * '<S581>' : BaseEngineController_LS/Foreground/Inputs/Digital/ACSw /Override in Engineering Units/OldValue
+ * '<S582>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw/Override in Engineering Units
+ * '<S583>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw/Override in Engineering Units/NewValue
+ * '<S584>' : BaseEngineController_LS/Foreground/Inputs/Digital/ClutchSw/Override in Engineering Units/OldValue
+ * '<S585>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP/Override in Engineering Units
+ * '<S586>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP/Override in Engineering Units/NewValue
+ * '<S587>' : BaseEngineController_LS/Foreground/Inputs/Digital/ESTOP/Override in Engineering Units/OldValue
+ * '<S588>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/First Order Low Pass
+ * '<S589>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/If Action Subsystem
+ * '<S590>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/If Action Subsystem1
+ * '<S591>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/If Action Subsystem2
+ * '<S592>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/Override
+ * '<S593>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/motohawk_table_1d1
+ * '<S594>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/First Order Low Pass/First Order Low Pass
+ * '<S595>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/Override/NewValue
+ * '<S596>' : BaseEngineController_LS/Foreground/Inputs/Digital/MAF_Sensor/Override/OldValue
+ * '<S597>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Button Delay 1
+ * '<S598>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Override in Engineering Units
+ * '<S599>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Button Delay 1/Time Since Enabled (With Input)4
+ * '<S600>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Override in Engineering Units/NewValue
+ * '<S601>' : BaseEngineController_LS/Foreground/Inputs/Digital/Scramble /Override in Engineering Units/OldValue
+ * '<S602>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Button Delay 1
+ * '<S603>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Override in Engineering Units
+ * '<S604>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Button Delay 1/Time Since Enabled (With Input)4
+ * '<S605>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Override in Engineering Units/NewValue
+ * '<S606>' : BaseEngineController_LS/Foreground/Inputs/Digital/Two Step/Override in Engineering Units/OldValue
+ * '<S607>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/First Order Low Pass
+ * '<S608>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/If Action Subsystem
+ * '<S609>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/If Action Subsystem1
+ * '<S610>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/If Action Subsystem2
+ * '<S611>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/Override
+ * '<S612>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/motohawk_table_1d1
+ * '<S613>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/First Order Low Pass/First Order Low Pass
+ * '<S614>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/Override/NewValue
+ * '<S615>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD/Override/OldValue
+ * '<S616>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/Derivitive
+ * '<S617>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/Falling Edge
+ * '<S618>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/S-R Flip-Flop
+ * '<S619>' : BaseEngineController_LS/Foreground/Inputs/Digital/VSPD_Filt/Time Since Enabled (With Input)1
+ * '<S620>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics
+ * '<S621>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/First Order Low Pass (Tunable)1
+ * '<S622>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CamEdges
+ * '<S623>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CamSync
+ * '<S624>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CounterThresh
+ * '<S625>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CrankEdges
+ * '<S626>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/CrankSync
+ * '<S627>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/Encoder Diagnostics/motohawk_model_probe_eval_f
+ * '<S628>' : BaseEngineController_LS/Foreground/Inputs/EngineSpeed/First Order Low Pass (Tunable)1/First Order Low Pass
+ * '<S629>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres
+ * '<S630>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor
+ * '<S631>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres
+ * '<S632>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP
+ * '<S633>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime
+ * '<S634>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous
+ * '<S635>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres
+ * '<S636>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts
+ * '<S637>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts
+ * '<S638>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /First Order Low Pass
+ * '<S639>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /If Action Subsystem
+ * '<S640>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /If Action Subsystem1
+ * '<S641>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /If Action Subsystem2
+ * '<S642>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /Override
+ * '<S643>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /First Order Low Pass/First Order Low Pass
+ * '<S644>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /Override/NewValue
+ * '<S645>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/ACPres /Override/OldValue
+ * '<S646>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options
+ * '<S647>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/If Action Subsystem
+ * '<S648>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/If Action Subsystem1
+ * '<S649>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/If Action Subsystem2
+ * '<S650>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Override
+ * '<S651>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/First Order Low Pass
+ * '<S652>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Moving Average Filter
+ * '<S653>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Rate Limiter
+ * '<S654>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/First Order Low Pass/First Order Low Pass
+ * '<S655>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Rate Limiter/Variable Rate Limiter
+ * '<S656>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Filter Options/Rate Limiter/Variable Rate Limiter/Saturation
+ * '<S657>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Override/NewValue
+ * '<S658>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelOxygenationSensor/Override/OldValue
+ * '<S659>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/First Order Low Pass
+ * '<S660>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/If Action Subsystem
+ * '<S661>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/If Action Subsystem1
+ * '<S662>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/If Action Subsystem2
+ * '<S663>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/Override
+ * '<S664>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/First Order Low Pass/First Order Low Pass
+ * '<S665>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/Override/NewValue
+ * '<S666>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/FuelPres/Override/OldValue
+ * '<S667>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/First Order Low Pass
+ * '<S668>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/If Action Subsystem
+ * '<S669>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/If Action Subsystem1
+ * '<S670>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/If Action Subsystem2
+ * '<S671>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/Override
+ * '<S672>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/First Order Low Pass/First Order Low Pass
+ * '<S673>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/Override/NewValue
+ * '<S674>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP/Override/OldValue
+ * '<S675>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/First Order Low Pass
+ * '<S676>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/If Action Subsystem
+ * '<S677>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/If Action Subsystem1
+ * '<S678>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/If Action Subsystem2
+ * '<S679>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/Override
+ * '<S680>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/First Order Low Pass/First Order Low Pass
+ * '<S681>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/Override/NewValue
+ * '<S682>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAPTime/Override/OldValue
+ * '<S683>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/MID_TDC
+ * '<S684>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/Once at Startup
+ * '<S685>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/First Order Low Pass
+ * '<S686>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/If Action Subsystem
+ * '<S687>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/If Action Subsystem1
+ * '<S688>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/If Action Subsystem2
+ * '<S689>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/Override
+ * '<S690>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/First Order Low Pass/First Order Low Pass
+ * '<S691>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/Override/NewValue
+ * '<S692>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/OilPres/Override/OldValue
+ * '<S693>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/First Order Low Pass
+ * '<S694>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/If Action Subsystem
+ * '<S695>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/If Action Subsystem1
+ * '<S696>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/If Action Subsystem2
+ * '<S697>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/Override
+ * '<S698>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/First Order Low Pass/First Order Low Pass
+ * '<S699>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/Override/NewValue
+ * '<S700>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SensVolts/Override/OldValue
+ * '<S701>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/First Order Low Pass
+ * '<S702>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/If Action Subsystem
+ * '<S703>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/If Action Subsystem1
+ * '<S704>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/If Action Subsystem2
+ * '<S705>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/Override
+ * '<S706>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/First Order Low Pass/First Order Low Pass
+ * '<S707>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/Override/NewValue
+ * '<S708>' : BaseEngineController_LS/Foreground/Inputs/LinearSensors/SysVolts/Override/OldValue
+ * '<S709>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level
+ * '<S710>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors
+ * '<S711>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl
+ * '<S712>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /First Order Low Pass
+ * '<S713>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /If Action Subsystem
+ * '<S714>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /If Action Subsystem1
+ * '<S715>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /If Action Subsystem2
+ * '<S716>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /Override
+ * '<S717>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /motohawk_table_1d1
+ * '<S718>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /First Order Low Pass/First Order Low Pass
+ * '<S719>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /Override/NewValue
+ * '<S720>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Fuel Level/Fuel_Lvl  /Override/OldValue
+ * '<S721>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1
+ * '<S722>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT
+ * '<S723>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP
+ * '<S724>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT
+ * '<S725>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/First Order Low Pass
+ * '<S726>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/If Action Subsystem
+ * '<S727>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/If Action Subsystem1
+ * '<S728>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/If Action Subsystem2
+ * '<S729>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/Override
+ * '<S730>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/motohawk_table_1d1
+ * '<S731>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/First Order Low Pass/First Order Low Pass
+ * '<S732>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/Override/NewValue
+ * '<S733>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/CAT1/Override/OldValue
+ * '<S734>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /First Order Low Pass
+ * '<S735>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /If Action Subsystem
+ * '<S736>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /If Action Subsystem1
+ * '<S737>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /If Action Subsystem2
+ * '<S738>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /Override
+ * '<S739>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /motohawk_table_1d1
+ * '<S740>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /First Order Low Pass/First Order Low Pass
+ * '<S741>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /Override/NewValue
+ * '<S742>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/ECT /Override/OldValue
+ * '<S743>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /First Order Low Pass
+ * '<S744>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /If Action Subsystem
+ * '<S745>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /If Action Subsystem1
+ * '<S746>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /If Action Subsystem2
+ * '<S747>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /Override
+ * '<S748>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /motohawk_table_1d1
+ * '<S749>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /First Order Low Pass/First Order Low Pass
+ * '<S750>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /Override/NewValue
+ * '<S751>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/EVAP /Override/OldValue
+ * '<S752>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /First Order Low Pass
+ * '<S753>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /If Action Subsystem
+ * '<S754>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /If Action Subsystem1
+ * '<S755>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /If Action Subsystem2
+ * '<S756>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /Override
+ * '<S757>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /motohawk_table_1d1
+ * '<S758>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /First Order Low Pass/First Order Low Pass
+ * '<S759>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /Override/NewValue
+ * '<S760>' : BaseEngineController_LS/Foreground/Inputs/NonLinearSensors/Temp Sensors/IAT /Override/OldValue
+ * '<S761>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1
+ * '<S762>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1ForcedAdapt
+ * '<S763>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2
+ * '<S764>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt
+ * '<S765>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt
+ * '<S766>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1
+ * '<S767>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1
+ * '<S768>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2
+ * '<S769>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/First Order Low Pass
+ * '<S770>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/If Action Subsystem
+ * '<S771>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/If Action Subsystem1
+ * '<S772>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/If Action Subsystem2
+ * '<S773>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Override
+ * '<S774>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Saturation
+ * '<S775>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/motohawk_table_1d1
+ * '<S776>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/First Order Low Pass/First Order Low Pass
+ * '<S777>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Override/NewValue
+ * '<S778>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1/Override/OldValue
+ * '<S779>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1ForcedAdapt/Function-Call Subsystem
+ * '<S780>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP1ForcedAdapt/Function-Call Subsystem/First Time
+ * '<S781>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/First Order Low Pass
+ * '<S782>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/If Action Subsystem
+ * '<S783>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/If Action Subsystem1
+ * '<S784>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/If Action Subsystem2
+ * '<S785>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Override
+ * '<S786>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Saturation
+ * '<S787>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/motohawk_table_1d1
+ * '<S788>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/First Order Low Pass/First Order Low Pass
+ * '<S789>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Override/NewValue
+ * '<S790>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2/Override/OldValue
+ * '<S791>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Function-Call Subsystem
+ * '<S792>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Function-Call Subsystem/First Time
+ * '<S793>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING
+ * '<S794>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/FAULTS
+ * '<S795>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/First Order Low Pass
+ * '<S796>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER
+ * '<S797>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/Saturation
+ * '<S798>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT HI
+ * '<S799>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT LO
+ * '<S800>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/MinMaxFilter
+ * '<S801>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT HI/Store Current Position
+ * '<S802>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/ADAPT SCALING/ADAPT LO/Store Current Position
+ * '<S803>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/First Order Low Pass/First Order Low Pass
+ * '<S804>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/If Action Subsystem
+ * '<S805>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/If Action Subsystem1
+ * '<S806>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/If Action Subsystem2
+ * '<S807>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/Override
+ * '<S808>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/Override/NewValue
+ * '<S809>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt/SENSOR FAULT MANAGER/Override/OldValue
+ * '<S810>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING
+ * '<S811>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/FAULTS
+ * '<S812>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/First Order Low Pass
+ * '<S813>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER
+ * '<S814>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/Saturation
+ * '<S815>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT HI
+ * '<S816>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT LO
+ * '<S817>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/MinMaxFilter
+ * '<S818>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT HI/Store Current Position
+ * '<S819>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/ADAPT SCALING/ADAPT LO/Store Current Position
+ * '<S820>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/First Order Low Pass/First Order Low Pass
+ * '<S821>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/If Action Subsystem
+ * '<S822>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/If Action Subsystem1
+ * '<S823>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/If Action Subsystem2
+ * '<S824>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/Override
+ * '<S825>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/Override/NewValue
+ * '<S826>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/Linear Sensor Characterization w Adapt1/SENSOR FAULT MANAGER/Override/OldValue
+ * '<S827>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING
+ * '<S828>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/FAULTS
+ * '<S829>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/First Order Low Pass
+ * '<S830>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER
+ * '<S831>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/Saturation
+ * '<S832>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT HI
+ * '<S833>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT LO
+ * '<S834>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/MinMaxFilter
+ * '<S835>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT HI/Store Current Position
+ * '<S836>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/ADAPT SCALING/ADAPT LO/Store Current Position
+ * '<S837>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/First Order Low Pass/First Order Low Pass
+ * '<S838>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/If Action Subsystem
+ * '<S839>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/If Action Subsystem1
+ * '<S840>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/If Action Subsystem2
+ * '<S841>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/Override
+ * '<S842>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/Override/NewValue
+ * '<S843>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS1/SENSOR FAULT MANAGER/Override/OldValue
+ * '<S844>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING
+ * '<S845>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/FAULTS
+ * '<S846>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/First Order Low Pass
+ * '<S847>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER
+ * '<S848>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/Saturation
+ * '<S849>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT HI
+ * '<S850>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT LO
+ * '<S851>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/MinMaxFilter
+ * '<S852>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT HI/Store Current Position
+ * '<S853>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/ADAPT SCALING/ADAPT LO/Store Current Position
+ * '<S854>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/First Order Low Pass/First Order Low Pass
+ * '<S855>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/If Action Subsystem
+ * '<S856>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/If Action Subsystem1
+ * '<S857>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/If Action Subsystem2
+ * '<S858>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/Override
+ * '<S859>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/Override/NewValue
+ * '<S860>' : BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/TPS2/SENSOR FAULT MANAGER/Override/OldValue
+ * '<S861>' : BaseEngineController_LS/Foreground/Outputs/AC Control
+ * '<S862>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash
+ * '<S863>' : BaseEngineController_LS/Foreground/Outputs/Coil Control
+ * '<S864>' : BaseEngineController_LS/Foreground/Outputs/ETC_CutPower
+ * '<S865>' : BaseEngineController_LS/Foreground/Outputs/FAN Control
+ * '<S866>' : BaseEngineController_LS/Foreground/Outputs/FuelPump
+ * '<S867>' : BaseEngineController_LS/Foreground/Outputs/HBridge
+ * '<S868>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control
+ * '<S869>' : BaseEngineController_LS/Foreground/Outputs/Injector Control
+ * '<S870>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control
+ * '<S871>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC
+ * '<S872>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC/Override in Engineering Units
+ * '<S873>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC/Override in Engineering Units/NewValue
+ * '<S874>' : BaseEngineController_LS/Foreground/Outputs/AC Control/Discrete Actuator - AC/Override in Engineering Units/OldValue
+ * '<S875>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Custom 1
+ * '<S876>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1
+ * '<S877>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2
+ * '<S878>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3
+ * '<S879>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 4
+ * '<S880>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 5
+ * '<S881>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 6
+ * '<S882>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 7
+ * '<S883>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 8
+ * '<S884>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message Boost
+ * '<S885>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW
+ * '<S886>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect1
+ * '<S887>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect2
+ * '<S888>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect3
+ * '<S889>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/RPM_Filt
+ * '<S890>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect1/DecreasingFilter
+ * '<S891>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect1/First Order Low Pass
+ * '<S892>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect1/IncreasingFilter
+ * '<S893>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect2/DecreasingFilter
+ * '<S894>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect2/First Order Low Pass
+ * '<S895>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect2/IncreasingFilter
+ * '<S896>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect3/DecreasingFilter
+ * '<S897>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect3/First Order Low Pass
+ * '<S898>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/Inc_DecFilterSelect3/IncreasingFilter
+ * '<S899>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/RPM_Filt/First Order Low Pass (Tunable)
+ * '<S900>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 1/RPM_Filt/First Order Low Pass (Tunable)/First Order Low Pass
+ * '<S901>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect1
+ * '<S902>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect2
+ * '<S903>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect3
+ * '<S904>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect1/DecreasingFilter
+ * '<S905>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect1/First Order Low Pass
+ * '<S906>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect1/IncreasingFilter
+ * '<S907>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect2/DecreasingFilter
+ * '<S908>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect2/First Order Low Pass
+ * '<S909>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect2/IncreasingFilter
+ * '<S910>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect3/DecreasingFilter
+ * '<S911>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect3/First Order Low Pass
+ * '<S912>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 2/Inc_DecFilterSelect3/IncreasingFilter
+ * '<S913>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/
+ * '<S914>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/
+ * '<S915>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/ 1
+ * '<S916>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect1
+ * '<S917>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect2
+ * '<S918>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect3
+ * '<S919>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect1/DecreasingFilter
+ * '<S920>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect1/First Order Low Pass
+ * '<S921>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect1/IncreasingFilter
+ * '<S922>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect2/DecreasingFilter
+ * '<S923>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect2/First Order Low Pass
+ * '<S924>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect2/IncreasingFilter
+ * '<S925>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect3/DecreasingFilter
+ * '<S926>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect3/First Order Low Pass
+ * '<S927>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 3/Inc_DecFilterSelect3/IncreasingFilter
+ * '<S928>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 6/Inc_DecFilterSelect2
+ * '<S929>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 6/Inc_DecFilterSelect2/DecreasingFilter
+ * '<S930>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 6/Inc_DecFilterSelect2/First Order Low Pass
+ * '<S931>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message 6/Inc_DecFilterSelect2/IncreasingFilter
+ * '<S932>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect1
+ * '<S933>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect2
+ * '<S934>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect3
+ * '<S935>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect4
+ * '<S936>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect1/DecreasingFilter
+ * '<S937>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect1/First Order Low Pass
+ * '<S938>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect1/IncreasingFilter
+ * '<S939>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect2/DecreasingFilter
+ * '<S940>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect2/First Order Low Pass
+ * '<S941>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect2/IncreasingFilter
+ * '<S942>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect3/DecreasingFilter
+ * '<S943>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect3/First Order Low Pass
+ * '<S944>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect3/IncreasingFilter
+ * '<S945>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect4/DecreasingFilter
+ * '<S946>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect4/First Order Low Pass
+ * '<S947>' : BaseEngineController_LS/Foreground/Outputs/AEM Infinity Dash/Dash Message DBW/Inc_DecFilterSelect4/IncreasingFilter
+ * '<S948>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager
+ * '<S949>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management
+ * '<S950>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel
+ * '<S951>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel1
+ * '<S952>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/CompareTo
+ * '<S953>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/EST Enable TDC Counter
+ * '<S954>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/EST Enable TDC Counter/EST Enable TDC Counter Stateflow
+ * '<S955>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/Coil Enable Manager/EST Enable TDC Counter/TDC_Counter
+ * '<S956>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo
+ * '<S957>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo1
+ * '<S958>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo10
+ * '<S959>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo11
+ * '<S960>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo12
+ * '<S961>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo13
+ * '<S962>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo14
+ * '<S963>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo15
+ * '<S964>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo2
+ * '<S965>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo3
+ * '<S966>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo4
+ * '<S967>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo5
+ * '<S968>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo6
+ * '<S969>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo7
+ * '<S970>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo8
+ * '<S971>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/EST Fault Management/CompareTo9
+ * '<S972>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel/NewValue
+ * '<S973>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel/OldValue
+ * '<S974>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel1/NewValue
+ * '<S975>' : BaseEngineController_LS/Foreground/Outputs/Coil Control/motohawk_override_rel1/OldValue
+ * '<S976>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1
+ * '<S977>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2
+ * '<S978>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL
+ * '<S979>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1
+ * '<S980>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1/Override in Engineering Units
+ * '<S981>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1/Override in Engineering Units/NewValue
+ * '<S982>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN1/Override in Engineering Units/OldValue
+ * '<S983>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2/Override in Engineering Units
+ * '<S984>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2/Override in Engineering Units/NewValue
+ * '<S985>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/Discrete Actuator - FAN2/Override in Engineering Units/OldValue
+ * '<S986>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/Saturation
+ * '<S987>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/motohawk_override_abs2
+ * '<S988>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/motohawk_override_abs2/NewValue
+ * '<S989>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL/motohawk_override_abs2/OldValue
+ * '<S990>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/Saturation
+ * '<S991>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/motohawk_override_abs2
+ * '<S992>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/motohawk_override_abs2/NewValue
+ * '<S993>' : BaseEngineController_LS/Foreground/Outputs/FAN Control/IAC-P-CONTROL1/motohawk_override_abs2/OldValue
+ * '<S994>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP
+ * '<S995>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP/Override in Engineering Units
+ * '<S996>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP/Override in Engineering Units/NewValue
+ * '<S997>' : BaseEngineController_LS/Foreground/Outputs/FuelPump/Discrete Actuator - FUELP/Override in Engineering Units/OldValue
+ * '<S998>' : BaseEngineController_LS/Foreground/Outputs/HBridge/Time Since Enabled (With Input)1
+ * '<S999>' : BaseEngineController_LS/Foreground/Outputs/HBridge/motohawk_override_abs2
+ * '<S1000>' : BaseEngineController_LS/Foreground/Outputs/HBridge/motohawk_override_abs2/NewValue
+ * '<S1001>' : BaseEngineController_LS/Foreground/Outputs/HBridge/motohawk_override_abs2/OldValue
+ * '<S1002>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL
+ * '<S1003>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL
+ * '<S1004>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/Saturation
+ * '<S1005>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/motohawk_override_abs2
+ * '<S1006>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/motohawk_override_abs2/NewValue
+ * '<S1007>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-P-CONTROL/motohawk_override_abs2/OldValue
+ * '<S1008>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/Saturation
+ * '<S1009>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/motohawk_override_abs2
+ * '<S1010>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/motohawk_override_abs2/NewValue
+ * '<S1011>' : BaseEngineController_LS/Foreground/Outputs/IAC-Control/IAC-S-CONTROL/motohawk_override_abs2/OldValue
+ * '<S1012>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Diagnostics
+ * '<S1013>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Enable Manager
+ * '<S1014>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs1
+ * '<S1015>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs2
+ * '<S1016>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs3
+ * '<S1017>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs4
+ * '<S1018>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs5
+ * '<S1019>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs6
+ * '<S1020>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Enable Manager/Stall
+ * '<S1021>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/Injector Enable Manager/Time Since Enabled (With Input)1
+ * '<S1022>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs1/NewValue
+ * '<S1023>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs1/OldValue
+ * '<S1024>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs2/NewValue
+ * '<S1025>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs2/OldValue
+ * '<S1026>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs3/NewValue
+ * '<S1027>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs3/OldValue
+ * '<S1028>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs4/NewValue
+ * '<S1029>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs4/OldValue
+ * '<S1030>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs5/NewValue
+ * '<S1031>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs5/OldValue
+ * '<S1032>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs6/NewValue
+ * '<S1033>' : BaseEngineController_LS/Foreground/Outputs/Injector Control/motohawk_override_abs6/OldValue
+ * '<S1034>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization
+ * '<S1035>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/Saturation
+ * '<S1036>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/motohawk_override_abs2
+ * '<S1037>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/motohawk_override_abs2/NewValue
+ * '<S1038>' : BaseEngineController_LS/Foreground/Outputs/WASTEGATE-Control/PWM Characterization/motohawk_override_abs2/OldValue
+ * '<S1039>' : BaseEngineController_LS/Main Power Relay/Main Power Relay
+ * '<S1040>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Boolean
+ * '<S1041>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call
+ * '<S1042>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1
+ * '<S1043>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ECUP Latch
+ * '<S1044>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process
+ * '<S1045>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/On Off Delay
+ * '<S1046>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes
+ * '<S1047>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Time Since Enabled (With Input)1
+ * '<S1048>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/motohawk_restore_nvmem
+ * '<S1049>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/motohawk_store_nvmem
+ * '<S1050>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call/Clear
+ * '<S1051>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Display Variable Event Function-Call1/Clear
+ * '<S1052>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off
+ * '<S1053>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Processor Reboot
+ * '<S1054>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off
+ * '<S1055>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563
+ * '<S1056>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Time Since Enabled (With Input)1
+ * '<S1057>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
+ * '<S1058>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
+ * '<S1059>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/Forced Shutdown Process/Shutdown power on ECU565//563/Shutdown power on ECU565-128
+ * '<S1060>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/On Off Delay/S-R Flip-Flop
+ * '<S1061>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off
+ * '<S1062>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Processor Reboot
+ * '<S1063>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off
+ * '<S1064>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563
+ * '<S1065>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs
+ * '<S1066>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Post Shutdown two ticks before MPRD off/Post Shutdown two ticks before MPRD off
+ * '<S1067>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Save NV Vars one tick before MPRD off/Save NV Vars one tick before MPRD off
+ * '<S1068>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/Shutdown power on ECU565//563/Shutdown power on ECU565-128
+ * '<S1069>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/NewValue
+ * '<S1070>' : BaseEngineController_LS/Main Power Relay/Main Power Relay/ShutDown Processes/motohawk_override_abs/OldValue
  */
 #endif                                 /* RTW_HEADER_BaseEngineController_LS_h_ */
 

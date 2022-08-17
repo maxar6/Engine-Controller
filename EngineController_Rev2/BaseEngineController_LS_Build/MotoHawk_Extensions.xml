@@ -4181,6 +4181,11 @@
                <Name>ECT_FiltIncFiltC</Name>
              </DataStore>
             <DataStore ref="Constant">
+               <DataType>uint16</DataType>
+               <Default>10U</Default>
+               <Name>RPMFilt_RoundValue</Name>
+             </DataStore>
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>1.25</Default>
                <Name>VSPD_FiltDecFiltC</Name>
@@ -4209,6 +4214,36 @@
                <DataType>real32</DataType>
                <Default>1.25</Default>
                <Name>ECUVolt_FiltIncFiltC</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.5</Default>
+               <Name>PHI1_DefaultVal</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>PH1_FiltDecConst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>PH1_FiltIncConst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.5</Default>
+               <Name>PHI2_DefaultVal</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>PH2_FiltDecConst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.25</Default>
+               <Name>PH2_FiltIncConst</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -4269,26 +4304,6 @@
                <DataType>real32</DataType>
                <Default>1.25</Default>
                <Name>APP_FiltIncFiltC</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.25</Default>
-               <Name>TPS1_FiltDecFiltC</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.25</Default>
-               <Name>TPS1_FiltIncFiltC</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.25</Default>
-               <Name>TPS2_FiltDecFiltC</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.25</Default>
-               <Name>TPS2_FiltIncFiltC</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -4958,46 +4973,6 @@
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>Bank2_EquivRatio_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.005</Default>
-               <Name>Bank2_EquivRatioFilterConst</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Bank2_Lambda_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Bank2_Lambda_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>Bank2_EquivRatioGain</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Bank2_EquivRatioOfst</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>Bank2_EquivRatioDfltValue</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Bank2_EquivRatio_new</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
                <Name>Bank1_EquivRatio_ovr</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -5034,6 +5009,46 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_EquivRatio_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Bank2_EquivRatio_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.005</Default>
+               <Name>Bank2_EquivRatioFilterConst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Bank2_Lambda_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Bank2_Lambda_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>Bank2_EquivRatioGain</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Bank2_EquivRatioOfst</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>Bank2_EquivRatioDfltValue</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Bank2_EquivRatio_new</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -5636,11 +5651,6 @@
                <Name>FuelLevel_KeyUpDelay</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint16</DataType>
-               <Default>10U</Default>
-               <Name>RPMFilt_RoundValue</Name>
-             </DataStore>
-            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>0.005</Default>
                <Name>RPMFilt_LowPass</Name>
@@ -5649,6 +5659,26 @@
                <DataType>uint8</DataType>
                <Default>0U</Default>
                <Name>RPMFilt_Enable</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Bank1_DataValidState_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Bank1_DataValidState_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Bank2_DataValidState_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>0.0</Default>
+               <Name>Bank2_DataValidState_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
@@ -6423,16 +6453,6 @@
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>Bank2_DataValidState_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Bank2_DataValidState_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
                <Name>Bank2_SensorStatus_Ovr_ovr</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -6489,16 +6509,6 @@
                <DataType>real32</DataType>
                <Default>0.0</Default>
                <Name>Bank1_UsingFreeAreCalState_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Bank1_DataValidState_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>real32</DataType>
-               <Default>0.0</Default>
-               <Name>Bank1_DataValidState_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
@@ -20588,6 +20598,23 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="RPMFilt_RoundValue">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
+        		                <help>RPM round value</help>
+        		                <max>1000.000000</max>
+        		                <min>0.000000</min>
+        		                <name>RPMFilt_RoundValue</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>RPM</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="VSPD_FiltDecFiltC">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -20684,6 +20711,104 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>ECUVolt_FiltIncFiltC</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PHI1_DefaultVal">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PHI1_DefaultVal</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PH1_FiltDecConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt|DecreasingFilter</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PH1_FiltDecConst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PH1_FiltIncConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt|IncreasingFilter</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PH1_FiltIncConst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PHI2_DefaultVal">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PHI2_DefaultVal</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PH2_FiltDecConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1|DecreasingFilter</group>
+        		                <help>Filter time constant for a decreasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PH2_FiltDecConst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="PH2_FiltIncConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1|IncreasingFilter</group>
+        		                <help>Filter time constant for a increasing signal.</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>PH2_FiltIncConst</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>sec</units>
@@ -20888,74 +21013,6 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>APP_FiltIncFiltC</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TPS1_FiltDecFiltC">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-        		                <help>Filter time constant for a decreasing signal.</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TPS1_FiltDecFiltC</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TPS1_FiltIncFiltC">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-        		                <help>Filter time constant for a increasing signal.</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TPS1_FiltIncFiltC</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TPS2_FiltDecFiltC">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-        		                <help>Filter time constant for a decreasing signal.</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TPS2_FiltDecFiltC</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="TPS2_FiltIncFiltC">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-        		                <help>Filter time constant for a increasing signal.</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>TPS2_FiltIncFiltC</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>sec</units>
@@ -22811,138 +22868,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_EquivRatio_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank2_EquivRatio_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_EquivRatioFilterConst">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
-        		                <help>Filter time constant</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_EquivRatioFilterConst</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>sec</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_Lambda_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_Lambda_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank2_Lambda_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_Lambda_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_Lambda_Ovr Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_Lambda_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_EquivRatioGain">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>5.4</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
-        		                <help>Scaling from A/D counts to engineering units</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_EquivRatioGain</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>EquivRatio/ADC</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_EquivRatioOfst">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
-        		                <help>Offset after gain in engineering units</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_EquivRatioOfst</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>EquivRatio</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_EquivRatioDfltValue">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
-        		                <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_EquivRatioDfltValue</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>EquivRatio</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_EquivRatio_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Override</group>
-        		                <help>Override result of linear sensor characterization, in engineering units</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_EquivRatio_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>EquivRatio</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Bank1_EquivRatio_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -23069,6 +22994,138 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_EquivRatio_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>EquivRatio</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_EquivRatio_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank2_EquivRatio_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_EquivRatioFilterConst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
+        		                <help>Filter time constant</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_EquivRatioFilterConst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_Lambda_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_Lambda_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank2_Lambda_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_Lambda_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_Lambda_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_Lambda_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_EquivRatioGain">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>5.4</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
+        		                <help>Scaling from A/D counts to engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_EquivRatioGain</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>EquivRatio/ADC</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_EquivRatioOfst">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
+        		                <help>Offset after gain in engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_EquivRatioOfst</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>EquivRatio</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_EquivRatioDfltValue">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Config</group>
+        		                <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_EquivRatioDfltValue</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>EquivRatio</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_EquivRatio_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio | Bank2_EquivRatio Override</group>
+        		                <help>Override result of linear sensor characterization, in engineering units</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_EquivRatio_new</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>EquivRatio</units>
@@ -23864,23 +23921,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="RPMFilt_RoundValue">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>5.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
-        		                <help>RPM round value</help>
-        		                <max>1000.000000</max>
-        		                <min>0.000000</min>
-        		                <name>RPMFilt_RoundValue</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>RPM</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="RPMFilt_LowPass">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -23909,6 +23949,68 @@
         		                <max>255.000000</max>
         		                <min>0.000000</min>
         		                <name>RPMFilt_Enable</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank1_DataValidState_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank1_DataValidState_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank2_DataValidState_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>Bank2_DataValidState_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -26187,37 +26289,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank2_DataValidState_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank2_DataValidState_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Bank2_SensorStatus_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -26399,37 +26470,6 @@
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
         		                <name>Bank1_UsingFreeAreCalState_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank1_DataValidState_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
-        		                <max>100000000000000000.000000</max>
-        		                <min>-100000000000000000.000000</min>
-        		                <name>Bank1_DataValidState_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -36957,17 +36997,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in c:\ecufiles\tdbdll</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_022.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
                 </Command>
         </Add>
     

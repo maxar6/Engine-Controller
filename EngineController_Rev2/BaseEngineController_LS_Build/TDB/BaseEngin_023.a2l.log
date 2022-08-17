@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application_Log xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Messages>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:48.8949034-04:00</TimeStamp>
+      <Text>Loading MotoTuneDll xml format: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.xml</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:49.3407598-04:00</TimeStamp>
+      <Text>Generating ASAP2 objects</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:49.5330146-04:00</TimeStamp>
+      <Text>Creating Address Updater: VirtualCalSpace</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:49.5370031-04:00</TimeStamp>
+      <Text>Updating ASAP2 addresses</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:49.5750014-04:00</TimeStamp>
+      <Text>Saving ASAP2 file: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_023.a2l</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:49.9918541-04:00</TimeStamp>
+      <Text>Loading transform: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Bin\ASAP2.xslt</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:50.6266497-04:00</TimeStamp>
+      <Text>Generated 744 Measurements</Text>
+    </Message>
+    <Message>
+      <Category>Detail</Category>
+      <TimeStamp>2022-08-16T23:26:50.6266497-04:00</TimeStamp>
+      <Text>Generated 2785 Characteristics</Text>
+    </Message>
+  </Messages>
+</Application_Log>

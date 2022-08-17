@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2036"
+    ComputedModelVersion    "1.2050"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,33 +26,33 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildGUID;MotoHawkBuildInfo;RegisteredStructs"
-  MotoHawkBuildVersion	  "023"
+  MotoHawkBuildVersion	  "024"
   MotoHawkBuildStats	  "struct('TotalFLASH',{373552},'TotalEEPROM',{1254},'TotalRAM',{26040},'AppFLASH',{154160},'AppE"
-  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{36},'BuildErrorCount',{71},'OSRAM',{4962},'Stack"
+  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{37},'BuildErrorCount',{74},'OSRAM',{4962},'Stack"
   "RAM',{9216},'FgndTimeStackSize',{4096},'FgndAngleStackSize',{1024},'BgndStackSize',{2048},'IdleStackSize',{1024},'In"
   "terruptStackSize',{1024},'RTWBlockIOSize',{2192},'RTWDWorkSize',{1776},'RTWPrevZCSize',{0},'VolatileSize',{1668},'No"
   "nVolatileSize',{1080},'ConstantSize',{18616},'NonVolatileFormatID',{32179})"
   MotoHawkModelSavedName  "BaseEngineController_LS"
   MotoHawkModelGUID	  "12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9"
   MotoHawkModelOpenTime	  "2022 8 6 18 18 59.58 "
-  MotoHawkModelElapsedTime "-3916675643.232"
-  MotoHawkBuildGUID	  "d20a084e-f502-40ec-b9-00-9c-4c-90-6d-e0"
+  MotoHawkModelElapsedTime "-3904378518.473"
+  MotoHawkBuildGUID	  "ee8d7daa-a900-47cc-a7-09-12-07-b9-ae-e8"
   MotoHawkBuildInfo	  "struct('model_name',{'BaseEngineController_LS'},'motohawk_version',{'2011a_sp0.184'},'motohawk_"
-  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'022'},'module_type',{'ECU555-80'},'layout"
+  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'023'},'module_type',{'ECU555-80'},'layout"
   "_type',{'DEV'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolc"
   "hain_version',{'4.4.0'},'component',{0},'archive_file',{'PCM.a'},'enable_build',{1},'fptype',{0},'flash_size',{36864"
   "0},'ee_size',{8192},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_8KEE_Dev'},'eri_t"
   "able0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5}"
   ",'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Engine-Controller\\EngineControl"
   "ler_Rev2'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Engine-Controller\\EngineController_Rev2\\BaseEngineCo"
-  "ntroller_LS_Build'},'dll_name',{'BaseEngin_022'},'srz_name',{'BaseEngineController_LS_022'},'fgnd_stack_size',{4096}"
+  "ntroller_LS_Build'},'dll_name',{'BaseEngin_023'},'srz_name',{'BaseEngineController_LS_023'},'fgnd_stack_size',{4096}"
   ",'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1280},'heap_size',{"
   "4096},'heap_margin',{409},'install_dll_dir',{'c:\\ecufiles\\tdbdll'},'install_srz_dir',{'C:\\ECUFiles\\Programs\\'},"
   "'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\G"
   "CC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\"
   "Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'E:\\MATLAB"
-  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'d20a084e-f502-40ec-b9-00-9c-4c-90-"
-  "6d-e0'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'ee8d7daa-a900-47cc-a7-09-12-07-b9-"
+  "ae-e8'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
   RegisteredStructs	  "struct('Name',{'FreezeFrame','FreezeFrames'},'Data',{struct('Name',{int32(0)},'Code',{int32(0)}"
   ",'Var1',{int32(0)},'Var2',{int32(0)},'Var3',{int32(0)},'Var4',{int32(0)},'Var5',{int32(0)},'Var6',{int32(0)},'Var7',"
   "{int32(0)},'Var8',{int32(0)},'Var9',{int32(0)},'Var10',{int32(0)}),struct('Name',{int32(0)},'Code',{int32(0)},'Var1'"
@@ -84,9 +84,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Aug 15 22:40:38 2022"
+  LastModifiedDate	  "Tue Aug 16 23:26:52 2022"
   RTWModifiedTimeStamp	  582498776
-  ModelVersionFormat	  "1.%<AutoIncrement:2036>"
+  ModelVersionFormat	  "1.%<AutoIncrement:2050>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2138,7 +2138,7 @@ Model {
   }
   System {
     Name		    "BaseEngineController_LS"
-    Location		    [303, 75, 1877, 1019]
+    Location		    [-1617, 75, -43, 1019]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    342
@@ -2152,7 +2152,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "63"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1497"
+    SIDHighWatermark	    "1567"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -5043,8 +5043,8 @@ Model {
 		    Frame		    "on"
 		    DisplayStringWithTags   "Model Info:\nAuthor: Suhre, Poorman\n%<Created>\n%<ModifiedDate>\nVersion: %<ModelVersi"
 		    "on>\nMotoTron Confidential\nand Propietary\n"
-		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nMon Aug 15 22:37:25 202"
-		    "2\\nVersion: 1.2035\\nMotoTron Confidential\\nand Propietary\\n"
+		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nTue Aug 16 23:24:00 202"
+		    "2\\nVersion: 1.2049\\nMotoTron Confidential\\nand Propietary\\n"
 		    HorizontalTextAlignment "Center"
 		    LeftAlignmentValue	    "0.5"
 		    SourceBlockDiagram	    "BaseEngineController_LS"
@@ -92205,7 +92205,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "1487"
+	    SIDHighWatermark	    "1491"
 	    Block {
 	      BlockType		      BusCreator
 	      Name		      "Bus\nCreator"
@@ -94104,7 +94104,7 @@ Model {
 		  Port {
 		    PortNumber		    2
 		    Name		    "O2_BUS"
-		    PropagatedSignals	    "BANK1, BANK2"
+		    PropagatedSignals	    "BANK1, BANK2, PHI1, PHI2"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		  }
@@ -94173,18 +94173,10 @@ Model {
 		    BlockType		    BusCreator
 		    Name		    "Bus\nCreator2"
 		    SID			    "919:1225"
-		    Ports		    [2, 1]
-		    Position		    [1425, 401, 1430, 439]
+		    Ports		    [4, 1]
+		    Position		    [1575, 390, 1585, 550]
 		    ShowName		    off
-		    Inputs		    "2"
 		    DisplayOption	    "bar"
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "Constant"
-		    SID			    "919:1226"
-		    Position		    [1650, 266, 1680, 284]
-		    Value		    "0"
 		    }
 		    Block {
 		    BlockType		    From
@@ -94199,6 +94191,32 @@ Model {
 		    SID			    "919:1228"
 		    Position		    [1175, 301, 1215, 329]
 		    GotoTag		    "LAM2"
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From2"
+		    SID			    "919:1488"
+		    Position		    [1445, 476, 1485, 504]
+		    GotoTag		    "PHI1"
+		    Port {
+		    PortNumber		    1
+		    Name		    "PHI1"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From3"
+		    SID			    "919:1491"
+		    Position		    [1445, 516, 1485, 544]
+		    GotoTag		    "PHI2"
+		    Port {
+		    PortNumber		    1
+		    Name		    "PHI2"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
 		    }
 		    Block {
 		    BlockType		    Gain
@@ -94224,6 +94242,22 @@ Model {
 		    SID			    "919:1231"
 		    Position		    [1075, 800, 1125, 830]
 		    GotoTag		    "LAM2"
+		    TagVisibility	    "local"
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto2"
+		    SID			    "919:1489"
+		    Position		    [1360, 60, 1400, 90]
+		    GotoTag		    "PHI1"
+		    TagVisibility	    "local"
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto3"
+		    SID			    "919:1490"
+		    Position		    [1355, 210, 1395, 240]
+		    GotoTag		    "PHI2"
 		    TagVisibility	    "local"
 		    }
 		    Block {
@@ -94323,7 +94357,7 @@ Model {
 		    Name		    "Multiport\nSwitch"
 		    SID			    "919:1238"
 		    Ports		    [3, 1]
-		    Position		    [1725, 238, 1760, 312]
+		    Position		    [2045, 98, 2080, 172]
 		    DataPortOrder	    "Zero-based contiguous"
 		    Inputs		    "2"
 		    zeroidx		    on
@@ -94501,7 +94535,7 @@ Model {
 		    Name		    "motohawk_calibration2"
 		    SID			    "919:1249"
 		    Ports		    [0, 1]
-		    Position		    [1470, 215, 1620, 255]
+		    Position		    [1870, 45, 2020, 85]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -95913,7 +95947,7 @@ Model {
 		    Name		    "motohawk_probe20"
 		    SID			    "919:1285"
 		    Ports		    [1]
-		    Position		    [1935, 122, 2085, 148]
+		    Position		    [2140, 122, 2290, 148]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -96160,14 +96194,14 @@ Model {
 		    BlockType		    Outport
 		    Name		    "O2_PreCat"
 		    SID			    "919:1293"
-		    Position		    [1935, 153, 1965, 167]
+		    Position		    [2140, 153, 2170, 167]
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
 		    BlockType		    Outport
 		    Name		    "O2_BUS"
 		    SID			    "919:1294"
-		    Position		    [1480, 413, 1510, 427]
+		    Position		    [1630, 463, 1660, 477]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
 		    }
@@ -96648,7 +96682,7 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Bus\nCreator1"
 		    SrcPort		    1
-		    Points		    [260, 0]
+		    Points		    [275, 0; 0, -635]
 		    DstBlock		    "Bus\nCreator2"
 		    DstPort		    2
 		    }
@@ -96692,8 +96726,15 @@ Model {
 		    }
 		    Branch {
 		    Points		    [0, -45]
+		    Branch {
 		    DstBlock		    "motohawk_probe18"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -45]
+		    DstBlock		    "Goto2"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    Line {
@@ -96706,8 +96747,15 @@ Model {
 		    }
 		    Branch {
 		    Points		    [0, -45]
+		    Branch {
 		    DstBlock		    "motohawk_probe19"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -45]
+		    DstBlock		    "Goto3"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    Line {
@@ -96725,8 +96773,16 @@ Model {
 		    Line {
 		    SrcBlock		    "Linear Sensor Characterization"
 		    SrcPort		    1
+		    Points		    [145, 0]
+		    Branch {
 		    DstBlock		    "Add"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -15]
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    2
+		    }
 		    }
 		    Line {
 		    SrcBlock		    "Add"
@@ -96735,44 +96791,11 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "Gain"
-		    SrcPort		    1
-		    Points		    [10, 0]
-		    Branch {
-		    DstBlock		    "O2_PreCat"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -25]
-		    DstBlock		    "motohawk_probe20"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Linear Sensor Characterization1"
-		    SrcPort		    1
-		    DstBlock		    "Multiport\nSwitch"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "Constant"
-		    SrcPort		    1
-		    DstBlock		    "Multiport\nSwitch"
-		    DstPort		    2
-		    }
-		    Line {
 		    SrcBlock		    "motohawk_calibration2"
 		    SrcPort		    1
-		    Points		    [85, 0]
+		    Points		    [0, 45]
 		    DstBlock		    "Multiport\nSwitch"
 		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Multiport\nSwitch"
-		    SrcPort		    1
-		    Points		    [10, 0; 0, -110]
-		    DstBlock		    "Add"
-		    DstPort		    2
 		    }
 		    Line {
 		    SrcBlock		    "Saturation"
@@ -96785,6 +96808,49 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "Math\nFunction1"
 		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Linear Sensor Characterization1"
+		    SrcPort		    1
+		    Points		    [80, 0; 0, -135]
+		    DstBlock		    "Add"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Multiport\nSwitch"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    Points		    [0, 25]
+		    DstBlock		    "O2_PreCat"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "motohawk_probe20"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    3
+		    }
+		    Line {
+		    Name		    "PHI1"
+		    Labels		    [0, 0]
+		    SrcBlock		    "From2"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nCreator2"
+		    DstPort		    3
+		    }
+		    Line {
+		    Name		    "PHI2"
+		    Labels		    [0, 0]
+		    SrcBlock		    "From3"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nCreator2"
+		    DstPort		    4
 		    }
 		  }
 		}
@@ -110694,21 +110760,21 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Raw"
 		    SID			    "1468"
-		    Position		    [625, 493, 655, 507]
+		    Position		    [845, 488, 875, 502]
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
 		    BlockType		    Constant
 		    Name		    "Constant"
 		    SID			    "1476"
-		    Position		    [195, 250, 225, 280]
+		    Position		    [460, 245, 490, 275]
 		    }
 		    Block {
 		    BlockType		    Reference
 		    Name		    "First Order Low Pass (Tunable)"
 		    SID			    "1482"
 		    Ports		    [1, 1]
-		    Position		    [625, 232, 735, 288]
+		    Position		    [360, 82, 470, 138]
 		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
 		    LibraryVersion	    "1.490"
 		    SourceBlock		    "motohawk_control_primitives_lib/First Order Low Pass (Tunable)"
@@ -110730,14 +110796,14 @@ Model {
 		    BlockType		    From
 		    Name		    "From"
 		    SID			    "1479"
-		    Position		    [195, 141, 295, 169]
+		    Position		    [220, 96, 320, 124]
 		    GotoTag		    "RPM"
 		    }
 		    Block {
 		    BlockType		    Goto
 		    Name		    "Goto"
 		    SID			    "1478"
-		    Position		    [710, 445, 750, 475]
+		    Position		    [930, 440, 970, 470]
 		    GotoTag		    "RPM"
 		    TagVisibility	    "local"
 		    }
@@ -110746,7 +110812,7 @@ Model {
 		    Name		    "MinMax"
 		    SID			    "1475"
 		    Ports		    [2, 1]
-		    Position		    [265, 180, 295, 295]
+		    Position		    [530, 175, 560, 290]
 		    Function		    "max"
 		    Inputs		    "2"
 		    InputSameDT		    off
@@ -110757,7 +110823,7 @@ Model {
 		    Name		    "Product"
 		    SID			    "1477"
 		    Ports		    [2, 1]
-		    Position		    [350, 110, 380, 285]
+		    Position		    [615, 105, 645, 280]
 		    Inputs		    "*/"
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -110768,7 +110834,7 @@ Model {
 		    Name		    "Product1"
 		    SID			    "1481"
 		    Ports		    [2, 1]
-		    Position		    [530, 128, 560, 392]
+		    Position		    [795, 123, 825, 387]
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
@@ -110777,14 +110843,14 @@ Model {
 		    BlockType		    Rounding
 		    Name		    "Rounding\nFunction"
 		    SID			    "1480"
-		    Position		    [410, 181, 500, 209]
+		    Position		    [675, 176, 765, 204]
 		    Operator		    "round"
 		    }
 		    Block {
 		    BlockType		    Switch
 		    Name		    "Switch"
 		    SID			    "1470"
-		    Position		    [845, 198, 905, 562]
+		    Position		    [1065, 193, 1125, 557]
 		    Threshold		    "1"
 		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
@@ -110794,7 +110860,7 @@ Model {
 		    Name		    "motohawk_calibration"
 		    SID			    "1472"
 		    Ports		    [0, 1]
-		    Position		    [625, 360, 775, 400]
+		    Position		    [845, 355, 995, 395]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -110833,7 +110899,7 @@ Model {
 		    Name		    "motohawk_calibration1"
 		    SID			    "1474"
 		    Ports		    [0, 1]
-		    Position		    [75, 190, 225, 230]
+		    Position		    [340, 185, 490, 225]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -110872,7 +110938,7 @@ Model {
 		    Name		    "motohawk_probe"
 		    SID			    "1471"
 		    Ports		    [1]
-		    Position		    [990, 312, 1140, 338]
+		    Position		    [1210, 307, 1360, 333]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -110903,12 +110969,12 @@ Model {
 		    Name		    "motohawk_probe1"
 		    SID			    "1483"
 		    Ports		    [1]
-		    Position		    [625, 187, 775, 213]
+		    Position		    [615, 67, 765, 93]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
 		    SourceType		    "MotoHawk Probe"
-		    nam			    "'RPMFilt_PostRound'"
+		    nam			    "'RPMFilt_PostLowPass'"
 		    show_more		    off
 		    name_source		    "Use Parameter"
 		    read_level		    "1"
@@ -110933,7 +110999,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "Filt"
 		    SID			    "1469"
-		    Position		    [1015, 373, 1045, 387]
+		    Position		    [1235, 368, 1265, 382]
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
@@ -110997,12 +111063,6 @@ Model {
 		    }
 		    }
 		    Line {
-		    SrcBlock		    "From"
-		    SrcPort		    1
-		    DstBlock		    "Product"
-		    DstPort		    1
-		    }
-		    Line {
 		    SrcBlock		    "Product"
 		    SrcPort		    1
 		    DstBlock		    "Rounding\nFunction"
@@ -111017,22 +111077,29 @@ Model {
 		    Line {
 		    SrcBlock		    "Product1"
 		    SrcPort		    1
-		    Points		    [30, 0]
-		    Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "From"
+		    SrcPort		    1
 		    DstBlock		    "First Order Low Pass (Tunable)"
 		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -60]
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    SrcBlock		    "First Order Low Pass (Tunable)"
 		    SrcPort		    1
-		    DstBlock		    "Switch"
+		    Points		    [60, 0]
+		    Branch {
+		    Points		    [0, 40]
+		    DstBlock		    "Product"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "motohawk_probe1"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    }
@@ -111149,51 +111216,81 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Data"
 		    SID			    "1233"
-		    Position		    [85, 478, 115, 492]
+		    Position		    [70, 623, 100, 637]
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector"
 		    SID			    "1234"
-		    Ports		    [1, 6]
-		    Position		    [145, 45, 150, 920]
+		    Ports		    [1, 4]
+		    Position		    [145, 339, 155, 916]
 		    ShowName		    off
-		    OutputSignals	    "Sensors.Raw.CAN.O2_BUS.BANK1.Lambda,Sensors.Raw.CAN.O2_BUS.BANK2.Lambda,Sensors.RawProcessed."
-		    "VSPD_Final,Sensors.RawProcessed.GearEst,Controller.SparkAdv,Sensors.Raw.LinearSensors.SysVolt"
+		    OutputSignals	    "Sensors.RawProcessed.VSPD_Final,Sensors.RawProcessed.GearEst,Controller.SparkAdv,Sensors.Raw."
+		    "LinearSensors.SysVolt"
 		    Port {
 		    PortNumber		    1
-		    Name		    "<Lambda>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    Port {
-		    PortNumber		    2
-		    Name		    "<Lambda>"
-		    RTWStorageClass	    "Auto"
-		    DataLoggingNameMode	    "SignalName"
-		    }
-		    Port {
-		    PortNumber		    3
 		    Name		    "<VSPD_Final>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
 		    Port {
-		    PortNumber		    4
+		    PortNumber		    2
 		    Name		    "<GearEst>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
 		    Port {
-		    PortNumber		    5
+		    PortNumber		    3
 		    Name		    "<SparkAdv>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
 		    Port {
-		    PortNumber		    6
+		    PortNumber		    4
 		    Name		    "<SysVolt>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector1"
+		    SID			    "1503"
+		    Ports		    [1, 2]
+		    Position		    [260, 79, 265, 161]
+		    ShowName		    off
+		    OutputSignals	    "Sensors.Raw.CAN.O2_BUS.PHI1,Sensors.Raw.CAN.O2_BUS.BANK1.DataValidState"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<PHI1>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<DataValidState>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector2"
+		    SID			    "1537"
+		    Ports		    [1, 2]
+		    Position		    [255, 224, 260, 306]
+		    ShowName		    off
+		    OutputSignals	    "Sensors.Raw.CAN.O2_BUS.PHI2,Sensors.Raw.CAN.O2_BUS.BANK2.DataValidState"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<PHI2>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<DataValidState>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -113057,6 +113154,1302 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "PHI_Filt"
+		    SID			    "1500"
+		    Ports		    [2, 1]
+		    Position		    [375, 78, 475, 162]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "PHI_Filt"
+		    Location		    [202, 75, 1918, 1019]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    301
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "PHI RAW"
+		    SID			    "1501"
+		    Position		    [190, 503, 220, 517]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "PHI DR"
+		    SID			    "1504"
+		    Position		    [945, 633, 975, 647]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "1535"
+		    Position		    [725, 765, 755, 795]
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "DecreasingFilter"
+		    SID			    "1509"
+		    Ports		    [0, 1, 1]
+		    Position		    [280, 789, 380, 831]
+		    BackgroundColor	    "gray"
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "DecreasingFilter"
+		    Location		    [421, 301, 919, 601]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "1510"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration2"
+		    SID			    "1511"
+		    Ports		    [0, 1]
+		    Position		    [145, 100, 295, 140]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'PH1_FiltDecConst'"
+		    val			    "1.25"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    on
+		    help		    "'Filter time constant for a decreasing signal.'"
+		    units		    "'sec'"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "1512"
+		    Position		    [360, 113, 390, 127]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    ".005"
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "First Order Low Pass"
+		    SID			    "1513"
+		    Ports		    [2, 1]
+		    Position		    [865, 497, 975, 553]
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    LibraryVersion	    "1.490"
+		    SourceBlock		    "motohawk_control_primitives_lib/First Order Low Pass"
+		    SourceType		    "First-Order Low-Pass Filter"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From"
+		    SID			    "1533"
+		    Position		    [650, 680, 745, 710]
+		    GotoTag		    "PHI_DR"
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto"
+		    SID			    "1532"
+		    Position		    [1055, 585, 1120, 615]
+		    GotoTag		    "PHI_DR"
+		    TagVisibility	    "local"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "IncreasingFilter"
+		    SID			    "1514"
+		    Ports		    [0, 1, 1]
+		    Position		    [365, 714, 465, 756]
+		    BackgroundColor	    "gray"
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "IncreasingFilter"
+		    Location		    [-1617, 75, -2, 1019]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "1515"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration1"
+		    SID			    "1516"
+		    Ports		    [0, 1]
+		    Position		    [165, 90, 315, 130]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'PH1_FiltIncConst'"
+		    val			    "1.25"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    on
+		    help		    "'Filter time constant for a increasing signal.'"
+		    units		    "'sec'"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "1517"
+		    Position		    [360, 103, 390, 117]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    ".005"
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration1"
+		    SrcPort		    1
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Merge
+		    Name		    "Merge"
+		    SID			    "1518"
+		    Ports		    [2, 1]
+		    Position		    [505, 696, 520, 849]
+		    BackgroundColor	    "magenta"
+		    ShowName		    off
+		    }
+		    Block {
+		    BlockType		    MinMax
+		    Name		    "MinMax"
+		    SID			    "1519"
+		    Ports		    [2, 1]
+		    Position		    [630, 617, 660, 648]
+		    ShowName		    off
+		    Function		    "max"
+		    Inputs		    "2"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "1520"
+		    Ports		    [2, 1]
+		    Position		    [690, 554, 710, 661]
+		    BackgroundColor	    "yellow"
+		    ShowName		    off
+		    Inputs		    "*/"
+		    RndMeth		    "Floor"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator3"
+		    SID			    "1521"
+		    Ports		    [2, 1]
+		    Position		    [285, 747, 315, 778]
+		    ShowName		    off
+		    Operator		    ">"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator4"
+		    SID			    "1522"
+		    Ports		    [2, 1]
+		    Position		    [370, 672, 400, 703]
+		    ShowName		    off
+		    Operator		    "<"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "1505"
+		    Position		    [1130, 470, 1175, 810]
+		    Threshold		    "1"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    "1534"
+		    Position		    [785, 570, 820, 820]
+		    Threshold		    "1"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay1"
+		    SID			    "1523"
+		    Position		    [259, 610, 281, 630]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay2"
+		    SID			    "1524"
+		    Position		    [259, 650, 281, 670]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay3"
+		    SID			    "1525"
+		    Position		    [259, 570, 281, 590]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay4"
+		    SID			    "1526"
+		    Position		    [259, 530, 281, 550]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration"
+		    SID			    "1507"
+		    Ports		    [0, 1]
+		    Position		    [945, 735, 1095, 775]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'PHI1_DefaultVal'"
+		    val			    "0.5"
+		    storage		    "Calibration"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_delta_time"
+		    SID			    "1527"
+		    Ports		    [0, 1]
+		    Position		    [530, 566, 575, 594]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Extra Development Blocks/motohawk_delta_time"
+		    SourceType		    "MotoHawk Delta Time"
+		    samp_time		    ".005"
+		    init_val		    ".005"
+		    mode		    "Seconds (double)"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe"
+		    SID			    "1536"
+		    Ports		    [1]
+		    Position		    [1255, 582, 1405, 608]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'PHI1_FiltFin'"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Filt Out"
+		    SID			    "1502"
+		    Position		    [1255, 638, 1285, 652]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "PHI DR"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -40]
+		    DstBlock		    "Goto"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay4"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay3"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay1"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay2"
+		    SrcPort		    1
+		    Points		    [0, 5]
+		    Branch {
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_delta_time"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "MinMax"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "MinMax"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Merge"
+		    SrcPort		    1
+		    Points		    [80, 0; 0, -135]
+		    DstBlock		    "MinMax"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator4"
+		    SrcPort		    1
+		    Points		    [10, 0]
+		    DstBlock		    "IncreasingFilter"
+		    DstPort		    enable
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator3"
+		    SrcPort		    1
+		    Points		    [10, 0]
+		    DstBlock		    "DecreasingFilter"
+		    DstPort		    enable
+		    }
+		    Line {
+		    SrcBlock		    "DecreasingFilter"
+		    SrcPort		    1
+		    DstBlock		    "Merge"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "IncreasingFilter"
+		    SrcPort		    1
+		    DstBlock		    "Merge"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "PHI RAW"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    Points		    [25, 0]
+		    Branch {
+		    DstBlock		    "First Order Low Pass"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Unit Delay4"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    Points		    [0, 185]
+		    Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    2
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "From"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, -155]
+		    DstBlock		    "First Order Low Pass"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "First Order Low Pass"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    Points		    [50, 0]
+		    Branch {
+		    DstBlock		    "Filt Out"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "PHI_Filt1"
+		    SID			    "1538"
+		    Ports		    [2, 1]
+		    Position		    [370, 223, 470, 307]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "PHI_Filt1"
+		    Location		    [303, 75, 1918, 1019]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "PHI RAW"
+		    SID			    "1539"
+		    Position		    [190, 503, 220, 517]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "PHI DR"
+		    SID			    "1540"
+		    Position		    [945, 633, 975, 647]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "1541"
+		    Position		    [725, 765, 755, 795]
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "DecreasingFilter"
+		    SID			    "1542"
+		    Ports		    [0, 1, 1]
+		    Position		    [280, 789, 380, 831]
+		    BackgroundColor	    "gray"
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "DecreasingFilter"
+		    Location		    [202, 75, 1918, 1019]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "1543"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration2"
+		    SID			    "1544"
+		    Ports		    [0, 1]
+		    Position		    [145, 100, 295, 140]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'PH2_FiltDecConst'"
+		    val			    "1.25"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    on
+		    help		    "'Filter time constant for a decreasing signal.'"
+		    units		    "'sec'"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "1545"
+		    Position		    [360, 113, 390, 127]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    ".005"
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "First Order Low Pass"
+		    SID			    "1546"
+		    Ports		    [2, 1]
+		    Position		    [865, 497, 975, 553]
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    LibraryVersion	    "1.490"
+		    SourceBlock		    "motohawk_control_primitives_lib/First Order Low Pass"
+		    SourceType		    "First-Order Low-Pass Filter"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From"
+		    SID			    "1547"
+		    Position		    [650, 680, 745, 710]
+		    GotoTag		    "PHI_DR"
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto"
+		    SID			    "1548"
+		    Position		    [1055, 585, 1120, 615]
+		    GotoTag		    "PHI_DR"
+		    TagVisibility	    "local"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "IncreasingFilter"
+		    SID			    "1549"
+		    Ports		    [0, 1, 1]
+		    Position		    [365, 714, 465, 756]
+		    BackgroundColor	    "gray"
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "IncreasingFilter"
+		    Location		    [303, 75, 1918, 1019]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "1550"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration1"
+		    SID			    "1551"
+		    Ports		    [0, 1]
+		    Position		    [165, 90, 315, 130]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'PH2_FiltIncConst'"
+		    val			    "1.25"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    on
+		    help		    "'Filter time constant for a increasing signal.'"
+		    units		    "'sec'"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "1552"
+		    Position		    [360, 103, 390, 117]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    ".005"
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration1"
+		    SrcPort		    1
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Merge
+		    Name		    "Merge"
+		    SID			    "1553"
+		    Ports		    [2, 1]
+		    Position		    [505, 696, 520, 849]
+		    BackgroundColor	    "magenta"
+		    ShowName		    off
+		    }
+		    Block {
+		    BlockType		    MinMax
+		    Name		    "MinMax"
+		    SID			    "1554"
+		    Ports		    [2, 1]
+		    Position		    [630, 617, 660, 648]
+		    ShowName		    off
+		    Function		    "max"
+		    Inputs		    "2"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "1555"
+		    Ports		    [2, 1]
+		    Position		    [690, 554, 710, 661]
+		    BackgroundColor	    "yellow"
+		    ShowName		    off
+		    Inputs		    "*/"
+		    RndMeth		    "Floor"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator3"
+		    SID			    "1556"
+		    Ports		    [2, 1]
+		    Position		    [285, 747, 315, 778]
+		    ShowName		    off
+		    Operator		    ">"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator4"
+		    SID			    "1557"
+		    Ports		    [2, 1]
+		    Position		    [370, 672, 400, 703]
+		    ShowName		    off
+		    Operator		    "<"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "1558"
+		    Position		    [1130, 470, 1175, 810]
+		    Threshold		    "1"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    "1559"
+		    Position		    [785, 570, 820, 820]
+		    Threshold		    "1"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay1"
+		    SID			    "1560"
+		    Position		    [259, 610, 281, 630]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay2"
+		    SID			    "1561"
+		    Position		    [259, 650, 281, 670]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay3"
+		    SID			    "1562"
+		    Position		    [259, 570, 281, 590]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    UnitDelay
+		    Name		    "Unit Delay4"
+		    SID			    "1563"
+		    Position		    [259, 530, 281, 550]
+		    BlockRotation	    270
+		    BlockMirror		    on
+		    ShowName		    off
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration"
+		    SID			    "1564"
+		    Ports		    [0, 1]
+		    Position		    [945, 735, 1095, 775]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'PHI2_DefaultVal'"
+		    val			    "0.5"
+		    storage		    "Calibration"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_delta_time"
+		    SID			    "1565"
+		    Ports		    [0, 1]
+		    Position		    [530, 566, 575, 594]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Extra Development Blocks/motohawk_delta_time"
+		    SourceType		    "MotoHawk Delta Time"
+		    samp_time		    ".005"
+		    init_val		    ".005"
+		    mode		    "Seconds (double)"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe"
+		    SID			    "1566"
+		    Ports		    [1]
+		    Position		    [1255, 582, 1405, 608]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'PHI2_FiltFin'"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Filt Out"
+		    SID			    "1567"
+		    Position		    [1255, 638, 1285, 652]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "PHI DR"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -40]
+		    DstBlock		    "Goto"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay4"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay3"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay1"
+		    SrcPort		    1
+		    DstBlock		    "Unit Delay2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Unit Delay2"
+		    SrcPort		    1
+		    Points		    [0, 5]
+		    Branch {
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_delta_time"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "MinMax"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "MinMax"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Merge"
+		    SrcPort		    1
+		    Points		    [80, 0; 0, -135]
+		    DstBlock		    "MinMax"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator4"
+		    SrcPort		    1
+		    Points		    [10, 0]
+		    DstBlock		    "IncreasingFilter"
+		    DstPort		    enable
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator3"
+		    SrcPort		    1
+		    Points		    [10, 0]
+		    DstBlock		    "DecreasingFilter"
+		    DstPort		    enable
+		    }
+		    Line {
+		    SrcBlock		    "DecreasingFilter"
+		    SrcPort		    1
+		    DstBlock		    "Merge"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "IncreasingFilter"
+		    SrcPort		    1
+		    DstBlock		    "Merge"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "PHI RAW"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    Points		    [25, 0]
+		    Branch {
+		    DstBlock		    "First Order Low Pass"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Unit Delay4"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    Points		    [0, 185]
+		    Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "Relational\nOperator3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Relational\nOperator4"
+		    DstPort		    2
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "From"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, -155]
+		    DstBlock		    "First Order Low Pass"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "First Order Low Pass"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    Points		    [0, 5; 50, 0]
+		    Branch {
+		    DstBlock		    "Filt Out"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    }
+		    Block {
 		    BlockType		    Reference
 		    Name		    "Send CAN Messages"
 		    SID			    "1235"
@@ -113075,56 +114468,23 @@ Model {
 		    Line {
 		    SrcBlock		    "Data"
 		    SrcPort		    1
+		    Points		    [10, 0]
+		    Branch {
 		    DstBlock		    "Bus\nSelector"
 		    DstPort		    1
 		    }
-		    Line {
-		    Name		    "<Lambda>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    1
-		    DstBlock		    "Send CAN Messages"
+		    Branch {
+		    Points		    [0, -365]
+		    Branch {
+		    Points		    [0, -145]
+		    DstBlock		    "Bus\nSelector1"
 		    DstPort		    1
 		    }
-		    Line {
-		    Name		    "<Lambda>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    2
-		    DstBlock		    "Send CAN Messages"
-		    DstPort		    2
-		    }
-		    Line {
-		    Name		    "<VSPD_Final>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    3
-		    DstBlock		    "Inc_DecFilterSelect1"
+		    Branch {
+		    DstBlock		    "Bus\nSelector2"
 		    DstPort		    1
 		    }
-		    Line {
-		    Name		    "<GearEst>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    4
-		    DstBlock		    "Send CAN Messages"
-		    DstPort		    4
 		    }
-		    Line {
-		    Name		    "<SparkAdv>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    5
-		    DstBlock		    "Inc_DecFilterSelect2"
-		    DstPort		    1
-		    }
-		    Line {
-		    Name		    "<SysVolt>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    6
-		    DstBlock		    "Inc_DecFilterSelect3"
-		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "Gain"
@@ -113149,6 +114509,82 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "Send CAN Messages"
 		    DstPort		    6
+		    }
+		    Line {
+		    SrcBlock		    "PHI_Filt1"
+		    SrcPort		    1
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "PHI_Filt"
+		    SrcPort		    1
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<VSPD_Final>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    DstBlock		    "Inc_DecFilterSelect1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<GearEst>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "<SparkAdv>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    DstBlock		    "Inc_DecFilterSelect2"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<SysVolt>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    4
+		    DstBlock		    "Inc_DecFilterSelect3"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<PHI1>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector1"
+		    SrcPort		    1
+		    DstBlock		    "PHI_Filt"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<DataValidState>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector1"
+		    SrcPort		    2
+		    DstBlock		    "PHI_Filt"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<PHI2>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    1
+		    DstBlock		    "PHI_Filt1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<DataValidState>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    2
+		    DstBlock		    "PHI_Filt1"
+		    DstPort		    2
 		    }
 		  }
 		}
@@ -119234,1238 +120670,6 @@ Model {
 		    }
 		    }
 		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Inc_DecFilterSelect3"
-		    SID			    "1496"
-		    Ports		    [1, 1]
-		    Position		    [715, 179, 870, 221]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    AncestorBlock	    "motohawk_control_primitives_lib/Inc_DecFilterSelect1"
-		    LibraryVersion	    "*1.490"
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    MaskPromptString	    "Signal Name|MotoTune Display Group|MotoTune Calibration Group"
-		    MaskStyleString	    "edit,edit,edit"
-		    MaskVariables	    "nam=@1;grp_dis=@2;grp_cal=@3;"
-		    MaskTunableValueString  "off,off,off"
-		    MaskCallbackString	    "||"
-		    MaskEnableString	    "on,on,on"
-		    MaskVisibilityString    "on,on,on"
-		    MaskToolTipString	    "on,on,on"
-		    MaskDisplay		    "patch([0 0 1 1], [0 0.075 0.075 0], [230/255 0/255 0/255])\npatch([0 0 1 1], [0.025 0.05 0.05 "
-		    "0.025], [150/255 0/255 0/255])\npatch([0 0 1 1], [0 0.025 0.025 0], [0/255 0/255 0/255])\n\ndisp('Increasing/Dec"
-		    "reasing\\nFiler Select');\n"
-		    MaskIconFrame	    on
-		    MaskIconOpaque	    off
-		    MaskIconRotate	    "none"
-		    MaskPortRotate	    "default"
-		    MaskIconUnits	    "normalized"
-		    MaskValueString	    "'TPS1_Filt'|motohawk_vardec_path(gcb)|motohawk_vardec_path(gcb)"
-		    System {
-		    Name		    "Inc_DecFilterSelect3"
-		    Location		    [344, 75, 1901, 1019]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "265"
-		    SIDPrevWatermark	    "265"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "In"
-		    SID			    "1496:97"
-		    Position		    [105, 363, 135, 377]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "DecreasingFilter"
-		    SID			    "1496:98"
-		    Ports		    [0, 1, 1]
-		    Position		    [190, 649, 290, 691]
-		    BackgroundColor	    "gray"
-		    TreatAsAtomicUnit	    on
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "DecreasingFilter"
-		    Location		    [421, 301, 919, 601]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    EnablePort
-		    Name		    "Enable"
-		    SID			    "1496:99"
-		    Ports		    []
-		    Position		    [235, 20, 255, 40]
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration2"
-		    SID			    "1496:100"
-		    Ports		    [0, 1]
-		    Position		    [145, 100, 295, 140]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "[nam 'DecFiltC']"
-		    val			    "1.25"
-		    storage		    "Calibration"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "'Filter time constant for a decreasing signal.'"
-		    units		    "'sec'"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_cal"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "1496:101"
-		    Position		    [360, 113, 390, 127]
-		    IconDisplay		    "Port number"
-		    InitialOutput	    ".005"
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration2"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "First Order Low Pass"
-		    SID			    "1496:106"
-		    Ports		    [2, 1]
-		    Position		    [670, 357, 780, 413]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    LibraryVersion	    "1.490"
-		    SourceBlock		    "motohawk_control_primitives_lib/First Order Low Pass"
-		    SourceType		    "First-Order Low-Pass Filter"
-		    ShowPortLabels	    "FromPortIcon"
-		    SystemSampleTime	    "-1"
-		    FunctionWithSeparateData off
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
-		    GeneratePreprocessorConditionals off
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "IncreasingFilter"
-		    SID			    "1496:107"
-		    Ports		    [0, 1, 1]
-		    Position		    [275, 574, 375, 616]
-		    BackgroundColor	    "gray"
-		    TreatAsAtomicUnit	    on
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "IncreasingFilter"
-		    Location		    [421, 301, 919, 601]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    EnablePort
-		    Name		    "Enable"
-		    SID			    "1496:108"
-		    Ports		    []
-		    Position		    [235, 20, 255, 40]
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration1"
-		    SID			    "1496:109"
-		    Ports		    [0, 1]
-		    Position		    [165, 90, 315, 130]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "[nam 'IncFiltC']"
-		    val			    "1.25"
-		    storage		    "Calibration"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "'Filter time constant for a increasing signal.'"
-		    units		    "'sec'"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_cal"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "1496:110"
-		    Position		    [360, 103, 390, 117]
-		    IconDisplay		    "Port number"
-		    InitialOutput	    ".005"
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration1"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Merge
-		    Name		    "Merge"
-		    SID			    "1496:111"
-		    Ports		    [2, 1]
-		    Position		    [415, 556, 430, 709]
-		    BackgroundColor	    "magenta"
-		    ShowName		    off
-		    }
-		    Block {
-		    BlockType		    MinMax
-		    Name		    "MinMax"
-		    SID			    "1496:112"
-		    Ports		    [2, 1]
-		    Position		    [540, 477, 570, 508]
-		    ShowName		    off
-		    Function		    "max"
-		    Inputs		    "2"
-		    }
-		    Block {
-		    BlockType		    Product
-		    Name		    "Product"
-		    SID			    "1496:113"
-		    Ports		    [2, 1]
-		    Position		    [600, 414, 620, 521]
-		    BackgroundColor	    "yellow"
-		    ShowName		    off
-		    Inputs		    "*/"
-		    RndMeth		    "Floor"
-		    }
-		    Block {
-		    BlockType		    RelationalOperator
-		    Name		    "Relational\nOperator3"
-		    SID			    "1496:114"
-		    Ports		    [2, 1]
-		    Position		    [195, 607, 225, 638]
-		    ShowName		    off
-		    Operator		    ">"
-		    InputSameDT		    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    RelationalOperator
-		    Name		    "Relational\nOperator4"
-		    SID			    "1496:115"
-		    Ports		    [2, 1]
-		    Position		    [280, 532, 310, 563]
-		    ShowName		    off
-		    Operator		    "<"
-		    InputSameDT		    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay1"
-		    SID			    "1496:116"
-		    Position		    [169, 470, 191, 490]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay2"
-		    SID			    "1496:117"
-		    Position		    [169, 510, 191, 530]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay3"
-		    SID			    "1496:118"
-		    Position		    [169, 430, 191, 450]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay4"
-		    SID			    "1496:119"
-		    Position		    [169, 390, 191, 410]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_delta_time"
-		    SID			    "1496:120"
-		    Ports		    [0, 1]
-		    Position		    [440, 426, 485, 454]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Extra Development Blocks/motohawk_delta_time"
-		    SourceType		    "MotoHawk Delta Time"
-		    samp_time		    ".005"
-		    init_val		    ".005"
-		    mode		    "Seconds (double)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "1496:121"
-		    Ports		    [1]
-		    Position		    [595, 622, 745, 648]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "[nam 'FilterConst']"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_dis"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "1496:122"
-		    Ports		    [1]
-		    Position		    [840, 327, 990, 353]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "[nam 'Filtered']"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_dis"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe3"
-		    SID			    "1496:123"
-		    Ports		    [1]
-		    Position		    [385, 482, 485, 508]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "[nam 'Direction']"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Enumeration"
-		    enum_struct		    "{'Decreasing', 'Increasing'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_dis"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out"
-		    SID			    "1496:124"
-		    Position		    [840, 378, 870, 392]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay4"
-		    SrcPort		    1
-		    DstBlock		    "Unit Delay3"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay3"
-		    SrcPort		    1
-		    DstBlock		    "Unit Delay1"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay1"
-		    SrcPort		    1
-		    DstBlock		    "Unit Delay2"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay2"
-		    SrcPort		    1
-		    Points		    [0, 0; 0, 5]
-		    Branch {
-		    DstBlock		    "Relational\nOperator4"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Relational\nOperator3"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Product"
-		    SrcPort		    1
-		    Points		    [15, 0; 0, -70]
-		    DstBlock		    "First Order Low Pass"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "First Order Low Pass"
-		    SrcPort		    1
-		    Points		    [0, 0; 35, 0]
-		    Branch {
-		    DstBlock		    "Out"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -45]
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_delta_time"
-		    SrcPort		    1
-		    Points		    [0, 0; 25, 0]
-		    Branch {
-		    Points		    [0, 45]
-		    DstBlock		    "MinMax"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Product"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "MinMax"
-		    SrcPort		    1
-		    DstBlock		    "Product"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Merge"
-		    SrcPort		    1
-		    Points		    [0, 0; 80, 0]
-		    Branch {
-		    Points		    [0, -135]
-		    DstBlock		    "MinMax"
-		    DstPort		    2
-		    }
-		    Branch {
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Relational\nOperator4"
-		    SrcPort		    1
-		    Points		    [0, 0; 10, 0]
-		    Branch {
-		    Points		    [0, -55]
-		    DstBlock		    "motohawk_probe3"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "IncreasingFilter"
-		    DstPort		    enable
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Relational\nOperator3"
-		    SrcPort		    1
-		    Points		    [10, 0]
-		    DstBlock		    "DecreasingFilter"
-		    DstPort		    enable
-		    }
-		    Line {
-		    SrcBlock		    "DecreasingFilter"
-		    SrcPort		    1
-		    DstBlock		    "Merge"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "IncreasingFilter"
-		    SrcPort		    1
-		    DstBlock		    "Merge"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "In"
-		    SrcPort		    1
-		    Points		    [0, 0; 15, 0]
-		    Branch {
-		    Points		    [25, 0]
-		    Branch {
-		    DstBlock		    "First Order Low Pass"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Unit Delay4"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [0, 185]
-		    Branch {
-		    Points		    [0, 75]
-		    DstBlock		    "Relational\nOperator3"
-		    DstPort		    2
-		    }
-		    Branch {
-		    DstBlock		    "Relational\nOperator4"
-		    DstPort		    2
-		    }
-		    }
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Inc_DecFilterSelect4"
-		    SID			    "1497"
-		    Ports		    [1, 1]
-		    Position		    [715, 244, 870, 286]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    AncestorBlock	    "motohawk_control_primitives_lib/Inc_DecFilterSelect1"
-		    LibraryVersion	    "*1.490"
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    MaskPromptString	    "Signal Name|MotoTune Display Group|MotoTune Calibration Group"
-		    MaskStyleString	    "edit,edit,edit"
-		    MaskVariables	    "nam=@1;grp_dis=@2;grp_cal=@3;"
-		    MaskTunableValueString  "off,off,off"
-		    MaskCallbackString	    "||"
-		    MaskEnableString	    "on,on,on"
-		    MaskVisibilityString    "on,on,on"
-		    MaskToolTipString	    "on,on,on"
-		    MaskDisplay		    "patch([0 0 1 1], [0 0.075 0.075 0], [230/255 0/255 0/255])\npatch([0 0 1 1], [0.025 0.05 0.05 "
-		    "0.025], [150/255 0/255 0/255])\npatch([0 0 1 1], [0 0.025 0.025 0], [0/255 0/255 0/255])\n\ndisp('Increasing/Dec"
-		    "reasing\\nFiler Select');\n"
-		    MaskIconFrame	    on
-		    MaskIconOpaque	    off
-		    MaskIconRotate	    "none"
-		    MaskPortRotate	    "default"
-		    MaskIconUnits	    "normalized"
-		    MaskValueString	    "'TPS2_Filt'|motohawk_vardec_path(gcb)|motohawk_vardec_path(gcb)"
-		    System {
-		    Name		    "Inc_DecFilterSelect4"
-		    Location		    [344, 83, 1918, 1027]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "265"
-		    SIDPrevWatermark	    "265"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "In"
-		    SID			    "1497:97"
-		    Position		    [105, 363, 135, 377]
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "DecreasingFilter"
-		    SID			    "1497:98"
-		    Ports		    [0, 1, 1]
-		    Position		    [190, 649, 290, 691]
-		    BackgroundColor	    "gray"
-		    TreatAsAtomicUnit	    on
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "DecreasingFilter"
-		    Location		    [421, 301, 919, 601]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    EnablePort
-		    Name		    "Enable"
-		    SID			    "1497:99"
-		    Ports		    []
-		    Position		    [235, 20, 255, 40]
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration2"
-		    SID			    "1497:100"
-		    Ports		    [0, 1]
-		    Position		    [145, 100, 295, 140]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "[nam 'DecFiltC']"
-		    val			    "1.25"
-		    storage		    "Calibration"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "'Filter time constant for a decreasing signal.'"
-		    units		    "'sec'"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_cal"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "1497:101"
-		    Position		    [360, 113, 390, 127]
-		    IconDisplay		    "Port number"
-		    InitialOutput	    ".005"
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration2"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "First Order Low Pass"
-		    SID			    "1497:106"
-		    Ports		    [2, 1]
-		    Position		    [670, 357, 780, 413]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    LibraryVersion	    "1.490"
-		    SourceBlock		    "motohawk_control_primitives_lib/First Order Low Pass"
-		    SourceType		    "First-Order Low-Pass Filter"
-		    ShowPortLabels	    "FromPortIcon"
-		    SystemSampleTime	    "-1"
-		    FunctionWithSeparateData off
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
-		    GeneratePreprocessorConditionals off
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "IncreasingFilter"
-		    SID			    "1497:107"
-		    Ports		    [0, 1, 1]
-		    Position		    [275, 574, 375, 616]
-		    BackgroundColor	    "gray"
-		    TreatAsAtomicUnit	    on
-		    MinAlgLoopOccurrences   off
-		    PropExecContextOutsideSubsystem off
-		    RTWSystemCode	    "Auto"
-		    FunctionWithSeparateData off
-		    Opaque		    off
-		    RequestExecContextInheritance off
-		    MaskHideContents	    off
-		    System {
-		    Name		    "IncreasingFilter"
-		    Location		    [421, 301, 919, 601]
-		    Open		    off
-		    ModelBrowserVisibility  on
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    EnablePort
-		    Name		    "Enable"
-		    SID			    "1497:108"
-		    Ports		    []
-		    Position		    [235, 20, 255, 40]
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_calibration1"
-		    SID			    "1497:109"
-		    Ports		    [0, 1]
-		    Position		    [165, 90, 315, 130]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "[nam 'IncFiltC']"
-		    val			    "1.25"
-		    storage		    "Calibration"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    data_type		    "Inherit from 'Default Value'"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "'Filter time constant for a increasing signal.'"
-		    units		    "'sec'"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_cal"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out1"
-		    SID			    "1497:110"
-		    Position		    [360, 103, 390, 117]
-		    IconDisplay		    "Port number"
-		    InitialOutput	    ".005"
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration1"
-		    SrcPort		    1
-		    DstBlock		    "Out1"
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Merge
-		    Name		    "Merge"
-		    SID			    "1497:111"
-		    Ports		    [2, 1]
-		    Position		    [415, 556, 430, 709]
-		    BackgroundColor	    "magenta"
-		    ShowName		    off
-		    }
-		    Block {
-		    BlockType		    MinMax
-		    Name		    "MinMax"
-		    SID			    "1497:112"
-		    Ports		    [2, 1]
-		    Position		    [540, 477, 570, 508]
-		    ShowName		    off
-		    Function		    "max"
-		    Inputs		    "2"
-		    }
-		    Block {
-		    BlockType		    Product
-		    Name		    "Product"
-		    SID			    "1497:113"
-		    Ports		    [2, 1]
-		    Position		    [600, 414, 620, 521]
-		    BackgroundColor	    "yellow"
-		    ShowName		    off
-		    Inputs		    "*/"
-		    RndMeth		    "Floor"
-		    }
-		    Block {
-		    BlockType		    RelationalOperator
-		    Name		    "Relational\nOperator3"
-		    SID			    "1497:114"
-		    Ports		    [2, 1]
-		    Position		    [195, 607, 225, 638]
-		    ShowName		    off
-		    Operator		    ">"
-		    InputSameDT		    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    RelationalOperator
-		    Name		    "Relational\nOperator4"
-		    SID			    "1497:115"
-		    Ports		    [2, 1]
-		    Position		    [280, 532, 310, 563]
-		    ShowName		    off
-		    Operator		    "<"
-		    InputSameDT		    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay1"
-		    SID			    "1497:116"
-		    Position		    [169, 470, 191, 490]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay2"
-		    SID			    "1497:117"
-		    Position		    [169, 510, 191, 530]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay3"
-		    SID			    "1497:118"
-		    Position		    [169, 430, 191, 450]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    UnitDelay
-		    Name		    "Unit Delay4"
-		    SID			    "1497:119"
-		    Position		    [169, 390, 191, 410]
-		    BlockRotation	    270
-		    BlockMirror		    on
-		    ShowName		    off
-		    SampleTime		    "-1"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_delta_time"
-		    SID			    "1497:120"
-		    Ports		    [0, 1]
-		    Position		    [440, 426, 485, 454]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Extra Development Blocks/motohawk_delta_time"
-		    SourceType		    "MotoHawk Delta Time"
-		    samp_time		    ".005"
-		    init_val		    ".005"
-		    mode		    "Seconds (double)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "1497:121"
-		    Ports		    [1]
-		    Position		    [595, 622, 745, 648]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "[nam 'FilterConst']"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_dis"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "1497:122"
-		    Ports		    [1]
-		    Position		    [840, 327, 990, 353]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "[nam 'Filtered']"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_dis"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe3"
-		    SID			    "1497:123"
-		    Ports		    [1]
-		    Position		    [385, 482, 485, 508]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "[nam 'Direction']"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Enumeration"
-		    enum_struct		    "{'Decreasing', 'Increasing'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    on
-		    mototune_group	    "grp_dis"
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Out"
-		    SID			    "1497:124"
-		    Position		    [840, 378, 870, 392]
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay4"
-		    SrcPort		    1
-		    DstBlock		    "Unit Delay3"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay3"
-		    SrcPort		    1
-		    DstBlock		    "Unit Delay1"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay1"
-		    SrcPort		    1
-		    DstBlock		    "Unit Delay2"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Unit Delay2"
-		    SrcPort		    1
-		    Points		    [0, 0; 0, 5]
-		    Branch {
-		    DstBlock		    "Relational\nOperator4"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Relational\nOperator3"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Product"
-		    SrcPort		    1
-		    Points		    [15, 0; 0, -70]
-		    DstBlock		    "First Order Low Pass"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "First Order Low Pass"
-		    SrcPort		    1
-		    Points		    [0, 0; 35, 0]
-		    Branch {
-		    DstBlock		    "Out"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -45]
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_delta_time"
-		    SrcPort		    1
-		    Points		    [0, 0; 25, 0]
-		    Branch {
-		    Points		    [0, 45]
-		    DstBlock		    "MinMax"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Product"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "MinMax"
-		    SrcPort		    1
-		    DstBlock		    "Product"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Merge"
-		    SrcPort		    1
-		    Points		    [0, 0; 80, 0]
-		    Branch {
-		    Points		    [0, -135]
-		    DstBlock		    "MinMax"
-		    DstPort		    2
-		    }
-		    Branch {
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Relational\nOperator4"
-		    SrcPort		    1
-		    Points		    [0, 0; 10, 0]
-		    Branch {
-		    Points		    [0, -55]
-		    DstBlock		    "motohawk_probe3"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "IncreasingFilter"
-		    DstPort		    enable
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Relational\nOperator3"
-		    SrcPort		    1
-		    Points		    [10, 0]
-		    DstBlock		    "DecreasingFilter"
-		    DstPort		    enable
-		    }
-		    Line {
-		    SrcBlock		    "DecreasingFilter"
-		    SrcPort		    1
-		    DstBlock		    "Merge"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "IncreasingFilter"
-		    SrcPort		    1
-		    DstBlock		    "Merge"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "In"
-		    SrcPort		    1
-		    Points		    [0, 0; 15, 0]
-		    Branch {
-		    Points		    [25, 0]
-		    Branch {
-		    DstBlock		    "First Order Low Pass"
-		    DstPort		    1
-		    }
-		    Branch {
-		    DstBlock		    "Unit Delay4"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [0, 185]
-		    Branch {
-		    Points		    [0, 75]
-		    DstBlock		    "Relational\nOperator3"
-		    DstPort		    2
-		    }
-		    Branch {
-		    DstBlock		    "Relational\nOperator4"
-		    DstPort		    2
-		    }
-		    }
-		    }
-		    }
-		    }
-		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator1"
 		    SID			    "1370"
@@ -120748,16 +120952,16 @@ Model {
 		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    "Bus\nSelector"
 		    SrcPort		    3
-		    DstBlock		    "Inc_DecFilterSelect3"
-		    DstPort		    1
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    3
 		    }
 		    Line {
 		    Name		    "<TPS2>"
 		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    "Bus\nSelector"
 		    SrcPort		    4
-		    DstBlock		    "Inc_DecFilterSelect4"
-		    DstPort		    1
+		    DstBlock		    "Send CAN Messages"
+		    DstPort		    4
 		    }
 		    Line {
 		    SrcBlock		    "motohawk_fault_status9"
@@ -120926,18 +121130,6 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "Send CAN Messages"
 		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Inc_DecFilterSelect3"
-		    SrcPort		    1
-		    DstBlock		    "Send CAN Messages"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "Inc_DecFilterSelect4"
-		    SrcPort		    1
-		    DstBlock		    "Send CAN Messages"
-		    DstPort		    4
 		    }
 		  }
 		}
@@ -129417,7 +129609,7 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"123"
+	SIDHighWatermark	"124"
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "Main Power Relay"
@@ -129452,7 +129644,7 @@ Model {
 	      Name		      "f"
 	      SID		      "1214:6"
 	      Ports		      []
-	      Position		      [775, 260, 795, 280]
+	      Position		      [865, 260, 885, 280]
 	      BackgroundColor	      "red"
 	      TriggerType	      "function-call"
 	      StatesWhenEnabling      "held"
@@ -129542,7 +129734,7 @@ Model {
 	      Name		      "ECUP Latch"
 	      SID		      "1214:6"
 	      Ports		      [2, 1]
-	      Position		      [670, 398, 825, 547]
+	      Position		      [760, 398, 915, 547]
 	      BackgroundColor	      "darkGreen"
 	      FontName		      "Arial"
 	      FontSize		      14
@@ -129674,7 +129866,7 @@ Model {
 	      Name		      "Forced Shutdown Process"
 	      SID		      "1214:6"
 	      Ports		      [1]
-	      Position		      [1060, 544, 1140, 646]
+	      Position		      [1150, 544, 1230, 646]
 	      BackgroundColor	      "[0.498039, 0.498039, 0.498039]"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -130313,7 +130505,7 @@ Model {
 	      Name		      "Logical\nOperator"
 	      SID		      "1214:6"
 	      Ports		      [2, 1]
-	      Position		      [975, 385, 1005, 505]
+	      Position		      [1065, 385, 1095, 505]
 	      ShowName		      off
 	    }
 	    Block {
@@ -130321,7 +130513,7 @@ Model {
 	      Name		      "Logical\nOperator1"
 	      SID		      "1214:6"
 	      Ports		      [1, 1]
-	      Position		      [870, 399, 900, 431]
+	      Position		      [960, 399, 990, 431]
 	      ShowName		      off
 	      Operator		      "NOT"
 	    }
@@ -130329,16 +130521,27 @@ Model {
 	      BlockType		      Logic
 	      Name		      "Logical\nOperator2"
 	      SID		      "1214:121"
-	      Ports		      [2, 1]
-	      Position		      [580, 459, 610, 561]
+	      Ports		      [3, 1]
+	      Position		      [670, 462, 705, 588]
 	      ShowName		      off
+	      Inputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Logic
+	      Name		      "Logical\nOperator3"
+	      SID		      "1214:124"
+	      Ports		      [1, 1]
+	      Position		      [375, 459, 405, 491]
+	      Operator		      "NOT"
+	      AllPortsSameDT	      off
+	      OutDataTypeStr	      "boolean"
 	    }
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "On Off Delay"
 	      SID		      "1214:6"
 	      Ports		      [1, 1]
-	      Position		      [860, 453, 920, 497]
+	      Position		      [950, 453, 1010, 497]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -130740,7 +130943,7 @@ Model {
 	      Name		      "Relational\nOperator1"
 	      SID		      "1214:123"
 	      Ports		      [2, 1]
-	      Position		      [515, 467, 545, 498]
+	      Position		      [605, 467, 635, 498]
 	      ShowName		      off
 	      ZeroCross		      off
 	    }
@@ -130749,7 +130952,7 @@ Model {
 	      Name		      "ShutDown Processes"
 	      SID		      "1214:6"
 	      Ports		      [2, 1]
-	      Position		      [1060, 370, 1140, 470]
+	      Position		      [1150, 370, 1230, 470]
 	      BackgroundColor	      "[0.498039, 0.498039, 0.498039]"
 	      MinAlgLoopOccurrences   off
 	      PropExecContextOutsideSubsystem off
@@ -131262,7 +131465,7 @@ Model {
 	      Name		      "Time Since Enabled (With Input)1"
 	      SID		      "1214:119"
 	      Ports		      [1, 1]
-	      Position		      [350, 447, 480, 503]
+	      Position		      [440, 447, 570, 503]
 	      BackgroundColor	      "[0.815686, 0.976471, 0.674510]"
 	      ShowName		      off
 	      LibraryVersion	      "1.490"
@@ -131286,7 +131489,7 @@ Model {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay3"
 	      SID		      "1214:6"
-	      Position		      [860, 285, 895, 325]
+	      Position		      [950, 285, 985, 325]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
 	      SampleTime	      "-1"
@@ -131295,7 +131498,7 @@ Model {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay4"
 	      SID		      "1214:6"
-	      Position		      [930, 285, 965, 325]
+	      Position		      [1020, 285, 1055, 325]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
 	      SampleTime	      "-1"
@@ -131304,7 +131507,7 @@ Model {
 	      BlockType		      UnitDelay
 	      Name		      "Unit Delay5"
 	      SID		      "1214:6"
-	      Position		      [995, 285, 1030, 325]
+	      Position		      [1085, 285, 1120, 325]
 	      BackgroundColor	      "[0.917647, 0.917647, 0.917647]"
 	      ShowName		      off
 	      SampleTime	      "-1"
@@ -131382,7 +131585,7 @@ Model {
 	      Name		      "motohawk_calibration1"
 	      SID		      "1214:122"
 	      Ports		      [0, 1]
-	      Position		      [330, 515, 480, 555]
+	      Position		      [420, 515, 570, 555]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -131421,7 +131624,7 @@ Model {
 	      Name		      "motohawk_data_def"
 	      SID		      "1214:6"
 	      Ports		      []
-	      Position		      [1190, 535, 1325, 582]
+	      Position		      [1280, 535, 1415, 582]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Data Storage Blocks/motohawk_data_def"
@@ -131513,7 +131716,7 @@ Model {
 	      Name		      "motohawk_data_read"
 	      SID		      "1214:6"
 	      Ports		      [0, 1]
-	      Position		      [270, 566, 480, 624]
+	      Position		      [360, 576, 570, 634]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
@@ -131535,7 +131738,7 @@ Model {
 	      Name		      "motohawk_data_write"
 	      SID		      "1214:6"
 	      Ports		      [1]
-	      Position		      [1190, 481, 1325, 529]
+	      Position		      [1280, 481, 1415, 529]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Data Storage Blocks/motohawk_data_write"
@@ -131558,7 +131761,7 @@ Model {
 	      Name		      "motohawk_dout"
 	      SID		      "1214:6"
 	      Ports		      [1]
-	      Position		      [1175, 383, 1375, 457]
+	      Position		      [1265, 383, 1465, 457]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      UserDataPersistent      on
@@ -131579,7 +131782,7 @@ Model {
 	      Name		      "motohawk_probe"
 	      SID		      "1214:6"
 	      Ports		      [1]
-	      Position		      [675, 352, 825, 378]
+	      Position		      [765, 352, 915, 378]
 	      ShowName		      off
 	      LibraryVersion	      "MotoHawk 0.2.3"
 	      SourceBlock	      "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -131668,9 +131871,9 @@ Model {
 	    Line {
 	      SrcBlock		      "Relational\nOperator"
 	      SrcPort		      1
-	      Points		      [10, 0]
+	      Points		      [25, 0]
 	      Branch {
-		Points			[315, 0]
+		Points			[390, 0]
 		Branch {
 		  Points		  [0, 160]
 		  DstBlock		  "Forced Shutdown Process"
@@ -131687,7 +131890,8 @@ Model {
 		}
 	      }
 	      Branch {
-		DstBlock		"Time Since Enabled (With Input)1"
+		Points			[0, 40]
+		DstBlock		"Logical\nOperator3"
 		DstPort			1
 	      }
 	    }
@@ -131745,7 +131949,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Display Variable Event Boolean"
 	      SrcPort		      1
-	      Points		      [605, 0]
+	      Points		      [695, 0]
 	      Branch {
 		DstBlock		"Unit Delay3"
 		DstPort			1
@@ -131770,15 +131974,9 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      SrcBlock		      "motohawk_data_read"
-	      SrcPort		      1
-	      Points		      [65, 0; 0, -60]
-	      DstBlock		      "Logical\nOperator2"
-	      DstPort		      2
-	    }
-	    Line {
 	      SrcBlock		      "Logical\nOperator2"
 	      SrcPort		      1
+	      Points		      [0, -15]
 	      DstBlock		      "ECUP Latch"
 	      DstPort		      2
 	    }
@@ -131791,7 +131989,7 @@ Model {
 	    Line {
 	      SrcBlock		      "motohawk_calibration1"
 	      SrcPort		      1
-	      Points		      [10, 0; 0, -45]
+	      Points		      [15, 0]
 	      DstBlock		      "Relational\nOperator1"
 	      DstPort		      2
 	    }
@@ -131801,16 +131999,37 @@ Model {
 	      DstBlock		      "Logical\nOperator2"
 	      DstPort		      1
 	    }
+	    Line {
+	      SrcBlock		      "Logical\nOperator3"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		DstBlock		"Time Since Enabled (With Input)1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 90; 205, 0; 0, -40]
+		DstBlock		"Logical\nOperator2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "motohawk_data_read"
+	      SrcPort		      1
+	      Points		      [80, 0]
+	      DstBlock		      "Logical\nOperator2"
+	      DstPort		      3
+	    }
 	    Annotation {
 	      Name		      "Provide Data Store\nAccess to MPRD State"
-	      Position		      [1260, 614]
+	      Position		      [1350, 614]
 	      FontName		      "Arial"
 	      FontSize		      14
 	      FontWeight	      "bold"
 	    }
 	    Annotation {
 	      Name		      "Control Main Power Relay"
-	      Position		      [1270, 364]
+	      Position		      [1360, 364]
 	      FontName		      "Arial"
 	      FontSize		      14
 	      FontWeight	      "bold"
@@ -133515,6 +133734,8 @@ Stateflow {
     firstTransition	    47
     viewObj		    44
     machine		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     firstData		    50

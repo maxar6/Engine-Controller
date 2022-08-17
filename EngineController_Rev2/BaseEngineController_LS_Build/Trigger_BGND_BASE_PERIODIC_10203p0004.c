@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2035
+ * Model version              : 1.2049
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Mon Aug 15 22:38:43 2022
+ * C source code generated on : Tue Aug 16 23:25:15 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -43,9 +43,9 @@ void Trigger_BGND_BASE_PERIODIC_10203p0004(void)
       uint16_T rtb_motohawk_ain5;
       boolean_T rtb_Logic[2];
       boolean_T rtb_Merge;
-      boolean_T rtb_LogicalOperator2_o;
       boolean_T rtb_LogicalOperator1_n;
       boolean_T rtb_Memory;
+      boolean_T rtb_LogicalOperator2_o;
       boolean_T rtb_LogicalOperator5;
       boolean_T rtb_UnitDelay8;
       boolean_T rtb_UnitDelay6;
@@ -238,13 +238,17 @@ void Trigger_BGND_BASE_PERIODIC_10203p0004(void)
         rtb_motohawk_delta_time_g = ((real_T) delta) * 0.000001;
       }
 
+      /* Logic: '<S1039>/Logical Operator3' */
+      rtb_LogicalOperator2_o =
+        !BaseEngineController_LS_B.s1039_RelationalOperator;
+
       /* Switch: '<S1047>/Switch' incorporates:
        *  Constant: '<S1047>/Constant'
        *  S-Function (motohawk_sfun_data_read): '<S1047>/motohawk_data_read'
        *  S-Function (motohawk_sfun_delta_time): '<S1047>/motohawk_delta_time'
        *  Sum: '<S1047>/Sum'
        */
-      if (BaseEngineController_LS_B.s1039_RelationalOperator) {
+      if (rtb_LogicalOperator2_o) {
         rtb_Switch_i = rtb_motohawk_delta_time_g + TimeSinceShutdown_DataStore();
       } else {
         rtb_Switch_i = 0.0;
@@ -260,7 +264,7 @@ void Trigger_BGND_BASE_PERIODIC_10203p0004(void)
        *  S-Function (motohawk_sfun_data_read): '<S1039>/motohawk_data_read'
        */
       BaseEngineController_LS_B.s1039_LogicalOperator2 = ((rtb_UnitDelay8 &&
-        ShutDownTasksComplete_DataStore()));
+        rtb_LogicalOperator2_o && ShutDownTasksComplete_DataStore()));
 
       /* Stateflow: '<S1039>/ECUP Latch' */
 
@@ -364,8 +368,8 @@ void Trigger_BGND_BASE_PERIODIC_10203p0004(void)
         rowidx = (rowidx << 1) + (uint_T)(rtb_Memory != 0);
 
         /* Copy the appropriate row of the table into the block output vector */
-        rtb_Logic[0] = BaseEngineController_LS_ConstP.pooled915[rowidx];
-        rtb_Logic[1] = BaseEngineController_LS_ConstP.pooled915[rowidx + 8];
+        rtb_Logic[0] = BaseEngineController_LS_ConstP.pooled917[rowidx];
+        rtb_Logic[1] = BaseEngineController_LS_ConstP.pooled917[rowidx + 8];
       }
 
       /* Logic: '<S1039>/Logical Operator' incorporates:

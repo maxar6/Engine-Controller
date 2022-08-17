@@ -620,7 +620,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt" Help:""   */
 
-/* Name: RPMFilt_PostRound ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s889_Product1 Mask:FFFFFFFF
+/* Name: RPMFilt_PostLowPass ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s900_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt" Help:""   */
 
@@ -628,7 +628,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""   */
 
-/* Name: VSPD_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s905_Sum1 Mask:FFFFFFFF
+/* Name: VSPD_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s907_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""   */
 
@@ -640,7 +640,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""   */
 
-/* Name: SparkAdv_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s908_Sum1 Mask:FFFFFFFF
+/* Name: SparkAdv_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s910_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""   */
 
@@ -652,7 +652,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""   */
 
-/* Name: ECUVolt_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s911_Sum1 Mask:FFFFFFFF
+/* Name: ECUVolt_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s913_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""   */
 
@@ -660,99 +660,83 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2" Help:""  EnumDec:VarDecEnum_21 */
 
-/* Name: MAP_filtFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s916_Merge Mask:FFFFFFFF
+/* Name: PHI1_FiltFin ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s904_Switch Mask:FFFFFFFF
+   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt" Help:""   */
+
+/* Name: PHI2_FiltFin ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s905_Switch Mask:FFFFFFFF
+   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
+   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1" Help:""   */
+
+/* Name: MAP_filtFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s924_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""   */
 
-/* Name: MAP_filtFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s920_Sum1 Mask:FFFFFFFF
+/* Name: MAP_filtFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s928_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""   */
 
-/* Name: MAP_filtDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s916_RelationalOperator4 Mask:FFFFFFFF
+/* Name: MAP_filtDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s924_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""  EnumDec:VarDecEnum_21 */
 
-/* Name: FuelPres_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s917_Merge Mask:FFFFFFFF
+/* Name: FuelPres_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s925_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""   */
 
-/* Name: FuelPres_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s923_Sum1 Mask:FFFFFFFF
+/* Name: FuelPres_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s931_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""   */
 
-/* Name: FuelPres_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s917_RelationalOperator4 Mask:FFFFFFFF
+/* Name: FuelPres_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s925_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""  EnumDec:VarDecEnum_21 */
 
-/* Name: OilPres_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s918_Merge Mask:FFFFFFFF
+/* Name: OilPres_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s926_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""   */
 
-/* Name: OilPres_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s926_Sum1 Mask:FFFFFFFF
+/* Name: OilPres_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s934_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""   */
 
-/* Name: OilPres_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s918_RelationalOperator4 Mask:FFFFFFFF
+/* Name: OilPres_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s926_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3" Help:""  EnumDec:VarDecEnum_21 */
 
-/* Name: Flex_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s928_Merge Mask:FFFFFFFF
+/* Name: Flex_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s936_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6" Help:""   */
 
-/* Name: Flex_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s930_Sum1 Mask:FFFFFFFF
+/* Name: Flex_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s938_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6" Help:""   */
 
-/* Name: Flex_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s928_RelationalOperator4 Mask:FFFFFFFF
+/* Name: Flex_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s936_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6" Help:""  EnumDec:VarDecEnum_21 */
 
-/* Name: ETCReq_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s932_Merge Mask:FFFFFFFF
+/* Name: ETCReq_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s940_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
 
-/* Name: ETCReq_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s937_Sum1 Mask:FFFFFFFF
+/* Name: ETCReq_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s943_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
 
-/* Name: ETCReq_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s932_RelationalOperator4 Mask:FFFFFFFF
+/* Name: ETCReq_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s940_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""  EnumDec:VarDecEnum_21 */
 
-/* Name: APP_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s933_Merge Mask:FFFFFFFF
+/* Name: APP_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s941_Merge Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
 
-/* Name: APP_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s940_Sum1 Mask:FFFFFFFF
+/* Name: APP_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s946_Sum1 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
 
-/* Name: APP_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s933_RelationalOperator4 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""  EnumDec:VarDecEnum_21 */
-
-/* Name: TPS1_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s934_Merge Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
-
-/* Name: TPS1_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s943_Sum1 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
-
-/* Name: TPS1_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s934_RelationalOperator4 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
-   Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""  EnumDec:VarDecEnum_21 */
-
-/* Name: TPS2_FiltFilterConst ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s935_Merge Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
-
-/* Name: TPS2_FiltFiltered ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s946_Sum1 Mask:FFFFFFFF
-   Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
-   Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""   */
-
-/* Name: TPS2_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s935_RelationalOperator4 Mask:FFFFFFFF
+/* Name: APP_FiltDirection ClassID:ENUMVAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:UINT1 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s941_RelationalOperator4 Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:0.000000
    Max:1.000000 Format:1.0 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW" Help:""  EnumDec:VarDecEnum_21 */
 
@@ -1064,7 +1048,7 @@
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda" Help:""   */
 
-/* Name: O2_EquivRatio_Avg ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s459_Gain Mask:FFFFFFFF
+/* Name: O2_EquivRatio_Avg ClassID:VAR StorageID:RAM Access:RO4+RO3+RO2+RO1 TypeID:REAL4 CType:BlockIO_BaseEngineController_LS Struct:BaseEngineController_LS_B.s459_MultiportSwitch Mask:FFFFFFFF
    Gain:1.0 Offset:0.0 Exp:1.0 Min:-100000000000000000.000000
    Max:100000000000000000.000000 Format:4.2 UpdateID:BACKGND Group:"BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda" Help:""   */
 

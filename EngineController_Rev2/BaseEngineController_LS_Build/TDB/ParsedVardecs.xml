@@ -147,7 +147,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s908_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s910_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
 	</VarDec>
 	<VarDec>
@@ -474,6 +474,24 @@
 		<struct>BaseEngineController_LS_B.s977_LogicalOperator</struct>
 		<help>Display output in engineering units</help>
 		<group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2</group>
+	</VarDec>
+	<VarDec>
+		<name>PHI2_FiltFin</name>
+		<class>var</class>
+		<access>RO RO RO RO</access>
+		<storage>RAM</storage>
+		<update>BACKGND</update>
+		<type>real32</type>
+		<gain>1.0</gain>
+		<offset>0.0</offset>
+		<exp>1.0</exp>
+		<max>100000000000000000.000000</max>
+		<min>-100000000000000000.000000</min>
+		<format>4.2</format>
+		<mask>0xFFFFFFFF</mask>
+		<ctype>BlockIO_BaseEngineController_LS</ctype>
+		<struct>BaseEngineController_LS_B.s905_Switch</struct>
+		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1</group>
 	</VarDec>
 	<VarDec>
 		<name>RPMFilt_Final</name>
@@ -1233,42 +1251,6 @@
 		<group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
 	</VarDec>
 	<VarDec>
-		<name>TPS1_FiltFiltered</name>
-		<class>var</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>real32</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>100000000000000000.000000</max>
-		<min>-100000000000000000.000000</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s943_Sum1</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-	</VarDec>
-	<VarDec>
-		<name>TPS1_FiltFilterConst</name>
-		<class>var</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>real32</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>100000000000000000.000000</max>
-		<min>-100000000000000000.000000</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s934_Merge</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-	</VarDec>
-	<VarDec>
 		<name>APP_FiltFiltered</name>
 		<class>var</class>
 		<access>RO RO RO RO</access>
@@ -1283,7 +1265,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s940_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s946_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 	</VarDec>
 	<VarDec>
@@ -1301,7 +1283,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s911_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s913_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
 	</VarDec>
 	<VarDec>
@@ -1781,24 +1763,6 @@
 		<group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Engine Accel</group>
 	</VarDec>
 	<VarDec>
-		<name>TPS2_FiltFiltered</name>
-		<class>var</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>real32</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>100000000000000000.000000</max>
-		<min>-100000000000000000.000000</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s946_Sum1</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-	</VarDec>
-	<VarDec>
 		<name>DFCODesEquivRatio</name>
 		<class>var</class>
 		<access>RO RO RO RO</access>
@@ -2076,7 +2040,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s917_Merge</struct>
+		<struct>BaseEngineController_LS_B.s925_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 	</VarDec>
 	<VarDec>
@@ -2094,8 +2058,26 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s916_Merge</struct>
+		<struct>BaseEngineController_LS_B.s924_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
+	</VarDec>
+	<VarDec>
+		<name>PHI1_FiltFin</name>
+		<class>var</class>
+		<access>RO RO RO RO</access>
+		<storage>RAM</storage>
+		<update>BACKGND</update>
+		<type>real32</type>
+		<gain>1.0</gain>
+		<offset>0.0</offset>
+		<exp>1.0</exp>
+		<max>100000000000000000.000000</max>
+		<min>-100000000000000000.000000</min>
+		<format>4.2</format>
+		<mask>0xFFFFFFFF</mask>
+		<ctype>BlockIO_BaseEngineController_LS</ctype>
+		<struct>BaseEngineController_LS_B.s904_Switch</struct>
+		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt</group>
 	</VarDec>
 	<VarDec>
 		<name>ETCReqFilterConst</name>
@@ -2358,7 +2340,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s937_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s943_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 	</VarDec>
 	<VarDec>
@@ -2376,7 +2358,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s930_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s938_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
 	</VarDec>
 	<VarDec>
@@ -3075,7 +3057,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s459_Gain</struct>
+		<struct>BaseEngineController_LS_B.s459_MultiportSwitch</struct>
 		<group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
 	</VarDec>
 	<VarDec>
@@ -3428,26 +3410,8 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s926_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s934_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-	</VarDec>
-	<VarDec>
-		<name>RPMFilt_PostRound</name>
-		<class>var</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>real32</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>100000000000000000.000000</max>
-		<min>-100000000000000000.000000</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s889_Product1</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
 	</VarDec>
 	<VarDec>
 		<name>TDCCount</name>
@@ -3959,7 +3923,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s905_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s907_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
 	</VarDec>
 	<VarDec>
@@ -3979,6 +3943,24 @@
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
 		<struct>BaseEngineController_LS_B.s901_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
+	</VarDec>
+	<VarDec>
+		<name>RPMFilt_PostLowPass</name>
+		<class>var</class>
+		<access>RO RO RO RO</access>
+		<storage>RAM</storage>
+		<update>BACKGND</update>
+		<type>real32</type>
+		<gain>1.0</gain>
+		<offset>0.0</offset>
+		<exp>1.0</exp>
+		<max>100000000000000000.000000</max>
+		<min>-100000000000000000.000000</min>
+		<format>4.2</format>
+		<mask>0xFFFFFFFF</mask>
+		<ctype>BlockIO_BaseEngineController_LS</ctype>
+		<struct>BaseEngineController_LS_B.s900_Sum1</struct>
+		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
 	</VarDec>
 	<VarDec>
 		<name>SpkMinGovDTerm</name>
@@ -4314,7 +4296,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s932_Merge</struct>
+		<struct>BaseEngineController_LS_B.s940_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 	</VarDec>
 	<VarDec>
@@ -4332,7 +4314,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s920_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s928_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 	</VarDec>
 	<VarDec>
@@ -4729,7 +4711,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s933_Merge</struct>
+		<struct>BaseEngineController_LS_B.s941_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 	</VarDec>
 	<VarDec>
@@ -4747,7 +4729,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s918_Merge</struct>
+		<struct>BaseEngineController_LS_B.s926_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 	</VarDec>
 	<VarDec>
@@ -5068,7 +5050,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s928_Merge</struct>
+		<struct>BaseEngineController_LS_B.s936_Merge</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
 	</VarDec>
 	<VarDec>
@@ -5401,24 +5383,6 @@
 		<struct>BaseEngineController_LS_B.s867_ETC</struct>
 		<help>Actual duty cycle of actuator</help>
 		<group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
-	</VarDec>
-	<VarDec>
-		<name>TPS2_FiltFilterConst</name>
-		<class>var</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>real32</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>100000000000000000.000000</max>
-		<min>-100000000000000000.000000</min>
-		<format>4.2</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s935_Merge</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 	</VarDec>
 	<VarDec>
 		<name>SparkAdv_FiltFilterConst</name>
@@ -6154,7 +6118,7 @@
 		<format>4.2</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s923_Sum1</struct>
+		<struct>BaseEngineController_LS_B.s931_Sum1</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 	</VarDec>
 	<VarDec>
@@ -9328,29 +9292,6 @@
 		</enum>
 	</VarDec>
 	<VarDec>
-		<name>TPS1_FiltDirection</name>
-		<class>enum</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>uint8</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>1.000000</max>
-		<min>0.000000</min>
-		<format>1.0</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s934_RelationalOperator4</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-		<enum name="VarDecEnum_21">
-			<item name="Decreasing" value="0"/>
-			<item name="Increasing" value="1"/>
-			<default>Unknown</default>
-		</enum>
-	</VarDec>
-	<VarDec>
 		<name>ETCReq_FiltDirection</name>
 		<class>enum</class>
 		<access>RO RO RO RO</access>
@@ -9365,7 +9306,7 @@
 		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s932_RelationalOperator4</struct>
+		<struct>BaseEngineController_LS_B.s940_RelationalOperator4</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 		<enum name="VarDecEnum_21">
 			<item name="Decreasing" value="0"/>
@@ -13210,7 +13151,7 @@
 		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s933_RelationalOperator4</struct>
+		<struct>BaseEngineController_LS_B.s941_RelationalOperator4</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
 		<enum name="VarDecEnum_21">
 			<item name="Decreasing" value="0"/>
@@ -14445,7 +14386,7 @@
 		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s928_RelationalOperator4</struct>
+		<struct>BaseEngineController_LS_B.s936_RelationalOperator4</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
 		<enum name="VarDecEnum_21">
 			<item name="Decreasing" value="0"/>
@@ -15310,29 +15251,6 @@
 		</enum>
 	</VarDec>
 	<VarDec>
-		<name>TPS2_FiltDirection</name>
-		<class>enum</class>
-		<access>RO RO RO RO</access>
-		<storage>RAM</storage>
-		<update>BACKGND</update>
-		<type>uint8</type>
-		<gain>1.0</gain>
-		<offset>0.0</offset>
-		<exp>1.0</exp>
-		<max>1.000000</max>
-		<min>0.000000</min>
-		<format>1.0</format>
-		<mask>0xFFFFFFFF</mask>
-		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s935_RelationalOperator4</struct>
-		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-		<enum name="VarDecEnum_21">
-			<item name="Decreasing" value="0"/>
-			<item name="Increasing" value="1"/>
-			<default>Unknown</default>
-		</enum>
-	</VarDec>
-	<VarDec>
 		<name>OilPres_FiltDirection</name>
 		<class>enum</class>
 		<access>RO RO RO RO</access>
@@ -15347,7 +15265,7 @@
 		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s918_RelationalOperator4</struct>
+		<struct>BaseEngineController_LS_B.s926_RelationalOperator4</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 		<enum name="VarDecEnum_21">
 			<item name="Decreasing" value="0"/>
@@ -16061,7 +15979,7 @@
 		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s916_RelationalOperator4</struct>
+		<struct>BaseEngineController_LS_B.s924_RelationalOperator4</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 		<enum name="VarDecEnum_21">
 			<item name="Decreasing" value="0"/>
@@ -16809,7 +16727,7 @@
 		<format>1.0</format>
 		<mask>0xFFFFFFFF</mask>
 		<ctype>BlockIO_BaseEngineController_LS</ctype>
-		<struct>BaseEngineController_LS_B.s917_RelationalOperator4</struct>
+		<struct>BaseEngineController_LS_B.s925_RelationalOperator4</struct>
 		<group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
 		<enum name="VarDecEnum_21">
 			<item name="Decreasing" value="0"/>

@@ -4,16 +4,16 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        15-Aug-2022 22:37:22           ###
+###        16-Aug-2022 23:23:59           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_LS_022.srz
-MotoTune DLL:    BaseEngin_022.dll
+DEV Executable:  BaseEngineController_LS_023.srz
+MotoTune DLL:    BaseEngin_023.dll
  
 Project GUID:    12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9
-Build GUID:      d20a084e-f502-40ec-b9-00-9c-4c-90-6d-e0
+Build GUID:      ee8d7daa-a900-47cc-a7-09-12-07-b9-ae-e8
  
 ### Starting build procedure for model: BaseEngineController_LS
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build
@@ -30,7 +30,7 @@ Build GUID:      d20a084e-f502-40ec-b9-00-9c-4c-90-6d-e0
 ...............................................................................
 ...............................................................................
 ...............................................................................
-...........................................
+.........................................
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -82,7 +82,7 @@ Build GUID:      d20a084e-f502-40ec-b9-00-9c-4c-90-6d-e0
 ...............................................................................
 ...............................................................................
 ...............................................................................
-...............................................................
+......................................................................
 ### Writing source file BaseEngineController_LS.c
 .
 ### Writing header file BaseEngineController_LS_private.h
@@ -102,8 +102,8 @@ Build GUID:      d20a084e-f502-40ec-b9-00-9c-4c-90-6d-e0
 .
 ### Writing source file rt_nonfinite.c
 ### Writing header file BaseEngineController_LS_IdleStateMachine.h
-### Writing source file BaseEngineController_LS_data.c
 .
+### Writing source file BaseEngineController_LS_data.c
 ### TLC code generation complete.
 ...............................................................................
 ...............................................................................
@@ -118,9 +118,9 @@ Build GUID:      d20a084e-f502-40ec-b9-00-9c-4c-90-6d-e0
 ...............................................................................
 ...............................................................................
 ...............................................................................
-............
+.............
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
-### Creating BaseEngineController_LS.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### BaseEngineController_LS.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BaseEngineController_LS: .\BaseEngineController_LS.bat
 ### Created Code and Build Scripts.  Ready to Build ### 
 ### Successful completion of build procedure for model: BaseEngineController_LS
@@ -225,33 +225,33 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 19.9 seconds. 
+Total time: 17.6 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x0005515B 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x00055463 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003FC6EC], ROM[0x0005E670], Length[0x00000794] 
+    Adding RAM[0x003FC6EC], ROM[0x0005E968], Length[0x00000794] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F9800], ROM[0x0005EE34], Length[0x00000019] 
+    Adding RAM[0x003F9800], ROM[0x0005F12C], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Adding RAM[0x003FA8E0], ROM[0x0005EE50], Length[0x000008C4] 
+    Adding RAM[0x003FA8E0], ROM[0x0005F148], Length[0x000008C4] 
 Complete. 
 Writing file sr://BaseEngineController_LS.sr... 
-Encrypting 'sr://BaseEngineController_LS.sr' into 'srz://.\Target\BaseEngineController_LS_022.srz' ... 
+Encrypting 'sr://BaseEngineController_LS.sr' into 'srz://.\Target\BaseEngineController_LS_023.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                               352771 bytes   98% of 360184
+	FLASH:                               353527 bytes   98% of 360184
 	    BaseEngineController_LS_M:            4 bytes    0% of 360184
 	    NonVolatileDefault:                1940 bytes    1% of 360184
-	    BaseEngineController_LS_Foreground:72616 bytes   20% of 360184
+	    BaseEngineController_LS_Foreground:73368 bytes   20% of 360184
 	INTERNAL_RAM:                         22256 bytes   84% of  26544
 	    BaseEngineController_LS_B:         1636 bytes    6% of  26544
 	    BaseEngineController_LS_DWork:     1388 bytes    5% of  26544
@@ -262,26 +262,26 @@ Memory Summary:
 	    BgndStack:                         2048 bytes    8% of  26544
 	    IdleStack:                         1024 bytes    4% of  26544
 	    InterruptStack:                    1280 bytes    5% of  26544
-	CAL_SPACE:                            30472 bytes   46% of  65536
-	    ConstantWork:                     30316 bytes   46% of  65536
+	CAL_SPACE:                            30480 bytes   47% of  65536
+	    ConstantWork:                     30324 bytes   46% of  65536
 	EEPROM_SPACE:                          1943 bytes   24% of   8192
 
-### Copy BaseEngin_022.dll and BaseEngineController_LS_022.srz 
+### Copy BaseEngin_023.dll and BaseEngineController_LS_023.srz 
 ### Dumping DLL to XML 
 ### Generating ASAP2 file 
 ### Installing ASAP2 file in c:\ecufiles\tdbdll 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 3 minutes, 42.1 seconds  (222.1 seconds)
-{Warning: Block diagram 'BaseEngineController_LS' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.  The diagram has been
-saved but may not contain what you intended.} 
-{Warning: Block diagram 'BaseEngineController_LS' contains one or more parameterized library links.  To find the parameterized links use the Model Advisor.  The diagram has
-been saved but may not behave as you intended.} 
+Elapsed Build Time: 3 minutes, 18.6 seconds  (198.6 seconds)
+{Warning: Block diagram 'BaseEngineController_LS' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.  The diagram has been saved but may
+not contain what you intended.} 
+{Warning: Block diagram 'BaseEngineController_LS' contains one or more parameterized library links.  To find the parameterized links use the Model Advisor.  The diagram has been saved but
+may not behave as you intended.} 
  
 #############################################################################
 ###
 ### Target Module: ECU555-80
-### Created Development Executable: BaseEngineController_LS_022.srz
-### Created MotoTune DLL: BaseEngin_022.dll
+### Created Development Executable: BaseEngineController_LS_023.srz
+### Created MotoTune DLL: BaseEngin_023.dll
 ###
 ### Successful MotoHawk Build for model: BaseEngineController_LS
 ###

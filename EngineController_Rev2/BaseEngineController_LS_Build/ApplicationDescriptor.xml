@@ -4,7 +4,7 @@
 	<Name>BaseEngineController_LS</Name>
 	<Author>maxar</Author>
 	<Copyright>2022 Woodward.</Copyright>
-	<CreateDate>15-Aug-2022</CreateDate>
+	<CreateDate>16-Aug-2022</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_022</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_LS_022</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_LS_022_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_023</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_LS_023</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_LS_023_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_022.dll and BaseEngineController_LS_022.srz</Description>
+			<Description>Copy BaseEngin_023.dll and BaseEngineController_LS_023.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_022.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_022.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
+			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_023.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_023.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -125,7 +125,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_022.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_023.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -159,5 +159,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>44db7a1d-0aad-4a09-91-7e-0b-f6-d1-a8-6e</Signature>
+	<Signature>c3461964-50b8-4a97-8a-0f-31-ce-ea-fe-92</Signature>
 </Application>

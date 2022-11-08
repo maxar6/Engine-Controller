@@ -67,18 +67,18 @@ static boolean_T MHCAN_handler_CCP1(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_7763p0002 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_7768p0002 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_7763p0002(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_7768p0002(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x000A0002) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_7763p0002.ready;
-      MHCAN_directslot_RxSlot_7763p0002.message = *messageObj;
-      MHCAN_directslot_RxSlot_7763p0002.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_7768p0002.ready;
+      MHCAN_directslot_RxSlot_7768p0002.message = *messageObj;
+      MHCAN_directslot_RxSlot_7768p0002.ready = 1;
     }
 
     return 1;
@@ -87,18 +87,18 @@ static boolean_T MHCAN_handler_RxSlot_7763p0002(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_7765p0001 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_7770p0001 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_7765p0001(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_7770p0001(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x000A0001) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_7765p0001.ready;
-      MHCAN_directslot_RxSlot_7765p0001.message = *messageObj;
-      MHCAN_directslot_RxSlot_7765p0001.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_7770p0001.ready;
+      MHCAN_directslot_RxSlot_7770p0001.message = *messageObj;
+      MHCAN_directslot_RxSlot_7770p0001.ready = 1;
     }
 
     return 1;
@@ -107,18 +107,18 @@ static boolean_T MHCAN_handler_RxSlot_7765p0001(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_7889p0002 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_7897p0002 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_7889p0002(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_7897p0002(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x00000180) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_7889p0002.ready;
-      MHCAN_directslot_RxSlot_7889p0002.message = *messageObj;
-      MHCAN_directslot_RxSlot_7889p0002.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_7897p0002.ready;
+      MHCAN_directslot_RxSlot_7897p0002.message = *messageObj;
+      MHCAN_directslot_RxSlot_7897p0002.ready = 1;
     }
 
     return 1;
@@ -127,18 +127,18 @@ static boolean_T MHCAN_handler_RxSlot_7889p0002(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_7890p0001 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_7898p0001 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_7890p0001(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_7898p0001(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x00000181) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_7890p0001.ready;
-      MHCAN_directslot_RxSlot_7890p0001.message = *messageObj;
-      MHCAN_directslot_RxSlot_7890p0001.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_7898p0001.ready;
+      MHCAN_directslot_RxSlot_7898p0001.message = *messageObj;
+      MHCAN_directslot_RxSlot_7898p0001.ready = 1;
     }
 
     return 1;
@@ -147,18 +147,18 @@ static boolean_T MHCAN_handler_RxSlot_7890p0001(S_CANMessage *messageObj)
   return 0;
 }
 
-MHCAN_directslot MHCAN_directslot_RxSlot_7764p0001 = { 0 };
+MHCAN_directslot MHCAN_directslot_RxSlot_7769p0001 = { 0 };
 
-static boolean_T MHCAN_handler_RxSlot_7764p0001(S_CANMessage *messageObj)
+static boolean_T MHCAN_handler_RxSlot_7769p0001(S_CANMessage *messageObj)
 {
   if ((messageObj->u4MessageID & 0x1FFFFFFF) == 0x000A0000) {
     messageObj->u1Length = messageObj->u1Length > 8 ? 8 : messageObj->u1Length;
 
     {
       boolean_T new_message;
-      new_message = !MHCAN_directslot_RxSlot_7764p0001.ready;
-      MHCAN_directslot_RxSlot_7764p0001.message = *messageObj;
-      MHCAN_directslot_RxSlot_7764p0001.ready = 1;
+      new_message = !MHCAN_directslot_RxSlot_7769p0001.ready;
+      MHCAN_directslot_RxSlot_7769p0001.message = *messageObj;
+      MHCAN_directslot_RxSlot_7769p0001.ready = 1;
     }
 
     return 1;
@@ -170,15 +170,15 @@ static boolean_T MHCAN_handler_RxSlot_7764p0001(S_CANMessage *messageObj)
 static const MHCAN_id_dispatcher_T MHCAN_consumers_0x1FFFFFFF[] = {
   { 0x18ef0231, MHCAN_handler_CCP1 },
 
-  { 0x000a0002, MHCAN_handler_RxSlot_7763p0002 },
+  { 0x000a0002, MHCAN_handler_RxSlot_7768p0002 },
 
-  { 0x000a0001, MHCAN_handler_RxSlot_7765p0001 },
+  { 0x000a0001, MHCAN_handler_RxSlot_7770p0001 },
 
-  { 0x00000180, MHCAN_handler_RxSlot_7889p0002 },
+  { 0x00000180, MHCAN_handler_RxSlot_7897p0002 },
 
-  { 0x00000181, MHCAN_handler_RxSlot_7890p0001 },
+  { 0x00000181, MHCAN_handler_RxSlot_7898p0001 },
 
-  { 0x000a0000, MHCAN_handler_RxSlot_7764p0001 },
+  { 0x000a0000, MHCAN_handler_RxSlot_7769p0001 },
 };
 
 static const MHCAN_mask_dispatcher_T masks[] = {

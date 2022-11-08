@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2049
+ * Model version              : 1.2053
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Tue Aug 16 23:25:15 2022
+ * C source code generated on : Tue Nov 08 18:29:01 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -15,7 +15,7 @@
 
 #include "MotoHawk_IO.h"
 
-/* S-Function Block: <S1039>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S1010>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -73,8 +73,8 @@ NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S1039>/motohawk_dout Resource: DOut10165p0004 */
-NativeError_S DOut10165p0004_DiscreteOutput_Create(void)
+/* S-Function Block: <S1010>/motohawk_dout Resource: DOut10387p0001 */
+NativeError_S DOut10387p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
   S_DiscreteOutCreateAttributes CreateInfo;
@@ -86,45 +86,45 @@ NativeError_S DOut10165p0004_DiscreteOutput_Create(void)
   sErrorResult = CreateResource((E_ModuleResource) (((int16_T) 52)), &CreateInfo,
     BEHAVIOUR_DISCRETE_OUT);
   if (SUCCESS(sErrorResult)) {
-    (init_resource_DOut10165p0004_DataStore()) = ((int16_T) 52);
+    (init_resource_DOut10387p0001_DataStore()) = ((int16_T) 52);
   } else {
-    (init_resource_DOut10165p0004_DataStore()) = -1;
+    (init_resource_DOut10387p0001_DataStore()) = -1;
     LogNativeError(sErrorResult);
   }
 
   {
-    extern uint8_T dout_create_DOut10165p0004;
+    extern uint8_T dout_create_DOut10387p0001;
     if (SUCCESS(sErrorResult))
-      dout_create_DOut10165p0004 = 0;
+      dout_create_DOut10387p0001 = 0;
     else
-      dout_create_DOut10165p0004 = (uint8_T) GetErrorCode(sErrorResult);
+      dout_create_DOut10387p0001 = (uint8_T) GetErrorCode(sErrorResult);
   }
 
   return sErrorResult;
 }
 
-NativeError_S DOut10165p0004_DiscreteOutput_Set(boolean_T in)
+NativeError_S DOut10387p0001_DiscreteOutput_Set(boolean_T in)
 {
-  if ((init_resource_DOut10165p0004_DataStore()) >= 0) {
+  if ((init_resource_DOut10387p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut10165p0004_DataStore())), (in) ? RES_ON : RES_OFF);
+      ((init_resource_DOut10387p0001_DataStore())), (in) ? RES_ON : RES_OFF);
   }
 
   return ERROR_FAIL;                   /* Return an error */
 }
 
-NativeError_S DOut10165p0004_DiscreteOutputPushPull_Set(int8_T in)
+NativeError_S DOut10387p0001_DiscreteOutputPushPull_Set(int8_T in)
 {
-  if ((init_resource_DOut10165p0004_DataStore()) >= 0) {
+  if ((init_resource_DOut10387p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut10165p0004_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+      ((init_resource_DOut10387p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
                                (((in) > 0) ? RES_ON : RES_OFF));
   }
 
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S684>/motohawk_ain Resource: MAPSensorPin */
+/* S-Function Block: <S683>/motohawk_ain Resource: MAPSensorPin */
 NativeError_S MAPSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -186,7 +186,7 @@ NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S710>/motohawk_ain Resource: ECTSensorPin */
+/* S-Function Block: <S709>/motohawk_ain Resource: ECTSensorPin */
 NativeError_S ECTSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -248,7 +248,7 @@ NativeError_S ECTSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S710>/motohawk_ain1 Resource: IATSensorPin */
+/* S-Function Block: <S709>/motohawk_ain1 Resource: IATSensorPin */
 NativeError_S IATSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -310,7 +310,7 @@ NativeError_S IATSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S710>/motohawk_ain2 Resource: EVAPSensorPin */
+/* S-Function Block: <S709>/motohawk_ain2 Resource: EVAPSensorPin */
 NativeError_S EVAPSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -373,7 +373,7 @@ NativeError_S EVAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S710>/motohawk_ain3 Resource: CATSensorPin */
+/* S-Function Block: <S709>/motohawk_ain3 Resource: CATSensorPin */
 NativeError_S CATSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -435,7 +435,7 @@ NativeError_S CATSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S709>/motohawk_ain Resource: FuelLvlSensorPin */
+/* S-Function Block: <S708>/motohawk_ain Resource: FuelLvlSensorPin */
 NativeError_S FuelLvlSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -499,8 +499,8 @@ NativeError_S FuelLvlSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S861>/motohawk_dout Resource: DOut9005p0001 */
-NativeError_S DOut9005p0001_DiscreteOutput_Create(void)
+/* S-Function Block: <S860>/motohawk_dout Resource: DOut9020p0001 */
+NativeError_S DOut9020p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
   if ((ACPin_DataStore()) >= 0) {
@@ -513,18 +513,18 @@ NativeError_S DOut9005p0001_DiscreteOutput_Create(void)
     sErrorResult = CreateResource((E_ModuleResource) ((ACPin_DataStore())),
       &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
     if (SUCCESS(sErrorResult)) {
-      (init_resource_DOut9005p0001_DataStore()) = (ACPin_DataStore());
+      (init_resource_DOut9020p0001_DataStore()) = (ACPin_DataStore());
     } else {
-      (init_resource_DOut9005p0001_DataStore()) = -1;
+      (init_resource_DOut9020p0001_DataStore()) = -1;
       LogNativeError(sErrorResult);
     }
 
     {
-      extern uint8_T dout_create_DOut9005p0001;
+      extern uint8_T dout_create_DOut9020p0001;
       if (SUCCESS(sErrorResult))
-        dout_create_DOut9005p0001 = 0;
+        dout_create_DOut9020p0001 = 0;
       else
-        dout_create_DOut9005p0001 = (uint8_T) GetErrorCode(sErrorResult);
+        dout_create_DOut9020p0001 = (uint8_T) GetErrorCode(sErrorResult);
     }
   } else {
     sErrorResult = ERROR_FAIL;
@@ -533,21 +533,21 @@ NativeError_S DOut9005p0001_DiscreteOutput_Create(void)
   return sErrorResult;
 }
 
-NativeError_S DOut9005p0001_DiscreteOutput_Set(boolean_T in)
+NativeError_S DOut9020p0001_DiscreteOutput_Set(boolean_T in)
 {
-  if ((init_resource_DOut9005p0001_DataStore()) >= 0) {
+  if ((init_resource_DOut9020p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9005p0001_DataStore())), (in) ? RES_ON : RES_OFF);
+      ((init_resource_DOut9020p0001_DataStore())), (in) ? RES_ON : RES_OFF);
   }
 
   return ERROR_FAIL;                   /* Return an error */
 }
 
-NativeError_S DOut9005p0001_DiscreteOutputPushPull_Set(int8_T in)
+NativeError_S DOut9020p0001_DiscreteOutputPushPull_Set(int8_T in)
 {
-  if ((init_resource_DOut9005p0001_DataStore()) >= 0) {
+  if ((init_resource_DOut9020p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9005p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+      ((init_resource_DOut9020p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
                                (((in) > 0) ? RES_ON : RES_OFF));
   }
 
@@ -1601,8 +1601,8 @@ NativeError_S OilPresPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S865>/motohawk_dout Resource: DOut9617p0005 */
-NativeError_S DOut9617p0005_DiscreteOutput_Create(void)
+/* S-Function Block: <S864>/motohawk_dout Resource: DOut9838p0001 */
+NativeError_S DOut9838p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
   if ((FAN1Pin_DataStore()) >= 0) {
@@ -1615,18 +1615,18 @@ NativeError_S DOut9617p0005_DiscreteOutput_Create(void)
     sErrorResult = CreateResource((E_ModuleResource) ((FAN1Pin_DataStore())),
       &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
     if (SUCCESS(sErrorResult)) {
-      (init_resource_DOut9617p0005_DataStore()) = (FAN1Pin_DataStore());
+      (init_resource_DOut9838p0001_DataStore()) = (FAN1Pin_DataStore());
     } else {
-      (init_resource_DOut9617p0005_DataStore()) = -1;
+      (init_resource_DOut9838p0001_DataStore()) = -1;
       LogNativeError(sErrorResult);
     }
 
     {
-      extern uint8_T dout_create_DOut9617p0005;
+      extern uint8_T dout_create_DOut9838p0001;
       if (SUCCESS(sErrorResult))
-        dout_create_DOut9617p0005 = 0;
+        dout_create_DOut9838p0001 = 0;
       else
-        dout_create_DOut9617p0005 = (uint8_T) GetErrorCode(sErrorResult);
+        dout_create_DOut9838p0001 = (uint8_T) GetErrorCode(sErrorResult);
     }
   } else {
     sErrorResult = ERROR_FAIL;
@@ -1635,21 +1635,21 @@ NativeError_S DOut9617p0005_DiscreteOutput_Create(void)
   return sErrorResult;
 }
 
-NativeError_S DOut9617p0005_DiscreteOutput_Set(boolean_T in)
+NativeError_S DOut9838p0001_DiscreteOutput_Set(boolean_T in)
 {
-  if ((init_resource_DOut9617p0005_DataStore()) >= 0) {
+  if ((init_resource_DOut9838p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9617p0005_DataStore())), (in) ? RES_ON : RES_OFF);
+      ((init_resource_DOut9838p0001_DataStore())), (in) ? RES_ON : RES_OFF);
   }
 
   return ERROR_FAIL;                   /* Return an error */
 }
 
-NativeError_S DOut9617p0005_DiscreteOutputPushPull_Set(int8_T in)
+NativeError_S DOut9838p0001_DiscreteOutputPushPull_Set(int8_T in)
 {
-  if ((init_resource_DOut9617p0005_DataStore()) >= 0) {
+  if ((init_resource_DOut9838p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9617p0005_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+      ((init_resource_DOut9838p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
                                (((in) > 0) ? RES_ON : RES_OFF));
   }
 
@@ -1728,8 +1728,8 @@ void FAN1Pin_PWM_PWMOutput_PWMOutput_Create()
   (init_resource_FAN1Pin_PWM_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S865>/motohawk_dout1 Resource: DOut9618p0005 */
-NativeError_S DOut9618p0005_DiscreteOutput_Create(void)
+/* S-Function Block: <S864>/motohawk_dout1 Resource: DOut9839p0001 */
+NativeError_S DOut9839p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
   if ((FAN2Pin_DataStore()) >= 0) {
@@ -1742,18 +1742,18 @@ NativeError_S DOut9618p0005_DiscreteOutput_Create(void)
     sErrorResult = CreateResource((E_ModuleResource) ((FAN2Pin_DataStore())),
       &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
     if (SUCCESS(sErrorResult)) {
-      (init_resource_DOut9618p0005_DataStore()) = (FAN2Pin_DataStore());
+      (init_resource_DOut9839p0001_DataStore()) = (FAN2Pin_DataStore());
     } else {
-      (init_resource_DOut9618p0005_DataStore()) = -1;
+      (init_resource_DOut9839p0001_DataStore()) = -1;
       LogNativeError(sErrorResult);
     }
 
     {
-      extern uint8_T dout_create_DOut9618p0005;
+      extern uint8_T dout_create_DOut9839p0001;
       if (SUCCESS(sErrorResult))
-        dout_create_DOut9618p0005 = 0;
+        dout_create_DOut9839p0001 = 0;
       else
-        dout_create_DOut9618p0005 = (uint8_T) GetErrorCode(sErrorResult);
+        dout_create_DOut9839p0001 = (uint8_T) GetErrorCode(sErrorResult);
     }
   } else {
     sErrorResult = ERROR_FAIL;
@@ -1762,21 +1762,21 @@ NativeError_S DOut9618p0005_DiscreteOutput_Create(void)
   return sErrorResult;
 }
 
-NativeError_S DOut9618p0005_DiscreteOutput_Set(boolean_T in)
+NativeError_S DOut9839p0001_DiscreteOutput_Set(boolean_T in)
 {
-  if ((init_resource_DOut9618p0005_DataStore()) >= 0) {
+  if ((init_resource_DOut9839p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9618p0005_DataStore())), (in) ? RES_ON : RES_OFF);
+      ((init_resource_DOut9839p0001_DataStore())), (in) ? RES_ON : RES_OFF);
   }
 
   return ERROR_FAIL;                   /* Return an error */
 }
 
-NativeError_S DOut9618p0005_DiscreteOutputPushPull_Set(int8_T in)
+NativeError_S DOut9839p0001_DiscreteOutputPushPull_Set(int8_T in)
 {
-  if ((init_resource_DOut9618p0005_DataStore()) >= 0) {
+  if ((init_resource_DOut9839p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9618p0005_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+      ((init_resource_DOut9839p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
                                (((in) > 0) ? RES_ON : RES_OFF));
   }
 
@@ -1855,8 +1855,8 @@ void FAN2Pin_PWM_PWMOutput_PWMOutput_Create()
   (init_resource_FAN2Pin_PWM_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S866>/motohawk_dout Resource: DOut9638p0005 */
-NativeError_S DOut9638p0005_DiscreteOutput_Create(void)
+/* S-Function Block: <S865>/motohawk_dout Resource: DOut9859p0001 */
+NativeError_S DOut9859p0001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
   if ((FuelPumpPin_DataStore()) >= 0) {
@@ -1869,18 +1869,18 @@ NativeError_S DOut9638p0005_DiscreteOutput_Create(void)
     sErrorResult = CreateResource((E_ModuleResource) ((FuelPumpPin_DataStore())),
       &CreateInfo, BEHAVIOUR_DISCRETE_OUT);
     if (SUCCESS(sErrorResult)) {
-      (init_resource_DOut9638p0005_DataStore()) = (FuelPumpPin_DataStore());
+      (init_resource_DOut9859p0001_DataStore()) = (FuelPumpPin_DataStore());
     } else {
-      (init_resource_DOut9638p0005_DataStore()) = -1;
+      (init_resource_DOut9859p0001_DataStore()) = -1;
       LogNativeError(sErrorResult);
     }
 
     {
-      extern uint8_T dout_create_DOut9638p0005;
+      extern uint8_T dout_create_DOut9859p0001;
       if (SUCCESS(sErrorResult))
-        dout_create_DOut9638p0005 = 0;
+        dout_create_DOut9859p0001 = 0;
       else
-        dout_create_DOut9638p0005 = (uint8_T) GetErrorCode(sErrorResult);
+        dout_create_DOut9859p0001 = (uint8_T) GetErrorCode(sErrorResult);
     }
   } else {
     sErrorResult = ERROR_FAIL;
@@ -1889,21 +1889,21 @@ NativeError_S DOut9638p0005_DiscreteOutput_Create(void)
   return sErrorResult;
 }
 
-NativeError_S DOut9638p0005_DiscreteOutput_Set(boolean_T in)
+NativeError_S DOut9859p0001_DiscreteOutput_Set(boolean_T in)
 {
-  if ((init_resource_DOut9638p0005_DataStore()) >= 0) {
+  if ((init_resource_DOut9859p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9638p0005_DataStore())), (in) ? RES_ON : RES_OFF);
+      ((init_resource_DOut9859p0001_DataStore())), (in) ? RES_ON : RES_OFF);
   }
 
   return ERROR_FAIL;                   /* Return an error */
 }
 
-NativeError_S DOut9638p0005_DiscreteOutputPushPull_Set(int8_T in)
+NativeError_S DOut9859p0001_DiscreteOutputPushPull_Set(int8_T in)
 {
-  if ((init_resource_DOut9638p0005_DataStore()) >= 0) {
+  if ((init_resource_DOut9859p0001_DataStore()) >= 0) {
     return SetDiscreteOutState((E_ModuleResource)
-      ((init_resource_DOut9638p0005_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
+      ((init_resource_DOut9859p0001_DataStore())), ((in) < 0) ? RES_ON_REVERSE :
                                (((in) > 0) ? RES_ON : RES_OFF));
   }
 

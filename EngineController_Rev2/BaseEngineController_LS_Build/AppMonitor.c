@@ -262,21 +262,21 @@ void CheckApplicationStatus(void)
               index), 1, SEQ_DISABLED);
           }
 
-          (&BaseEngineController_LS_DWork.s869_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s868_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 1) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_LS_DWork.s869_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s868_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 2) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_LS_DWork.s869_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s868_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         }
       }

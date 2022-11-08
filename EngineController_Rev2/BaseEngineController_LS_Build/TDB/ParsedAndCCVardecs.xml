@@ -16,7 +16,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s697_Merge</struct>
+      <struct>BaseEngineController_LS_B.s696_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -109,7 +109,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s867_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s866_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
    <VarDec>
@@ -128,45 +128,9 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s976_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s947_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1</group>
-   </VarDec>
-   <VarDec>
-      <name>SparkAdv_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s910_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-   </VarDec>
-   <VarDec>
-      <name>TPS_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s886_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
    </VarDec>
    <VarDec>
       <name>EVAPRaw</name>
@@ -184,7 +148,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s748_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s747_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -356,7 +320,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s827_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s826_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -375,7 +339,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s773_Merge</struct>
+      <struct>BaseEngineController_LS_B.s772_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -395,7 +359,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s636_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s635_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -415,7 +379,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s663_Merge</struct>
+      <struct>BaseEngineController_LS_B.s662_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -471,7 +435,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s977_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s948_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2</group>
    </VarDec>
@@ -490,7 +454,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s905_Switch</struct>
+      <struct>BaseEngineController_LS_B.s894_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1</group>
    </VarDec>
    <VarDec>
@@ -508,7 +472,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s889_Switch</struct>
+      <struct>BaseEngineController_LS_B.s886_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
    </VarDec>
    <VarDec>
@@ -527,7 +491,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s950_Sum</struct>
+      <struct>BaseEngineController_LS_B.s921_Sum</struct>
       <help>StartAngle for coils to establish dwell.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -547,7 +511,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s730_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s729_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -567,7 +531,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s729_Merge</struct>
+      <struct>BaseEngineController_LS_B.s728_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -587,7 +551,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s739_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s738_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -607,7 +571,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s738_Merge</struct>
+      <struct>BaseEngineController_LS_B.s737_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -723,7 +687,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s785_Merge</struct>
+      <struct>BaseEngineController_LS_B.s784_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -903,27 +867,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1035_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s1006_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|WASTEGATE-Control | WASTEGATE</group>
-   </VarDec>
-   <VarDec>
-      <name>ECUVolt_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s903_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
    </VarDec>
    <VarDec>
       <name>AC</name>
@@ -941,7 +887,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s871_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s870_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|AC Control | AC</group>
    </VarDec>
@@ -1135,7 +1081,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s807_Merge</struct>
+      <struct>BaseEngineController_LS_B.s806_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1249,42 +1195,6 @@
       <ctype>BlockIO_BaseEngineController_LS</ctype>
       <struct>BaseEngineController_LS_B.s395_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
-   </VarDec>
-   <VarDec>
-      <name>APP_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s946_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-   </VarDec>
-   <VarDec>
-      <name>ECUVolt_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s913_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
    </VarDec>
    <VarDec>
       <name>Fan1Cmd</name>
@@ -1569,7 +1479,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s827_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s826_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -1587,7 +1497,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s814_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s813_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1605,7 +1515,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s824_Merge</struct>
+      <struct>BaseEngineController_LS_B.s823_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1623,7 +1533,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s793_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s792_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1642,7 +1552,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s689_Merge</struct>
+      <struct>BaseEngineController_LS_B.s688_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1928,7 +1838,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s841_Merge</struct>
+      <struct>BaseEngineController_LS_B.s840_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -1946,7 +1856,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s793_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s792_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1965,7 +1875,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s635_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s634_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -2026,42 +1936,6 @@
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
-      <name>FuelPres_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s925_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-   </VarDec>
-   <VarDec>
-      <name>MAP_filtFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s924_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-   </VarDec>
-   <VarDec>
       <name>PHI1_FiltFin</name>
       <class>var</class>
       <access>RO RO RO RO</access>
@@ -2076,7 +1950,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s904_Switch</struct>
+      <struct>BaseEngineController_LS_B.s893_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt</group>
    </VarDec>
    <VarDec>
@@ -2244,7 +2118,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s848_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s847_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -2263,7 +2137,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s634_Merge</struct>
+      <struct>BaseEngineController_LS_B.s633_Merge</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -2301,7 +2175,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1008_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s979_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_S</group>
    </VarDec>
@@ -2321,45 +2195,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s986_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s957_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM</group>
-   </VarDec>
-   <VarDec>
-      <name>ETCReq_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s943_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-   </VarDec>
-   <VarDec>
-      <name>Flex_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s938_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
    </VarDec>
    <VarDec>
       <name>IATADC</name>
@@ -2377,7 +2215,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s710_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s709_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -2491,7 +2329,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s768_Switch</struct>
+      <struct>BaseEngineController_LS_B.s767_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -2510,7 +2348,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s671_Merge</struct>
+      <struct>BaseEngineController_LS_B.s670_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -2712,7 +2550,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s994_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s965_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FuelPump | FUELP</group>
    </VarDec>
@@ -2732,27 +2570,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s990_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s961_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM</group>
-   </VarDec>
-   <VarDec>
-      <name>IAT_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s887_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
    </VarDec>
    <VarDec>
       <name>Fuel_LvlADC</name>
@@ -2770,7 +2590,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s709_motohawk_ain</struct>
+      <struct>BaseEngineController_LS_B.s708_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -2790,7 +2610,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s756_Merge</struct>
+      <struct>BaseEngineController_LS_B.s755_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -2921,7 +2741,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s767_Switch</struct>
+      <struct>BaseEngineController_LS_B.s766_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -2939,7 +2759,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s810_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s809_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -2978,7 +2798,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s637_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s636_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -3018,7 +2838,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s631_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s630_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -3131,7 +2951,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1004_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s975_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_P</group>
    </VarDec>
@@ -3243,7 +3063,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1056_Switch</struct>
+      <struct>BaseEngineController_LS_B.s1027_Switch</struct>
       <group>System | Main Power Relay</group>
    </VarDec>
    <VarDec>
@@ -3280,7 +3100,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s844_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s843_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -3396,24 +3216,6 @@
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
-      <name>OilPres_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s934_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-   </VarDec>
-   <VarDec>
       <name>TDCCount</name>
       <class>var</class>
       <access>RO RO RO RO</access>
@@ -3428,7 +3230,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s955_Switch1</struct>
+      <struct>BaseEngineController_LS_B.s926_Switch1</struct>
       <help>Number of TDC events counted after stall.  This will reset once in Crank and Run.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
    </VarDec>
@@ -3448,7 +3250,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s716_Merge</struct>
+      <struct>BaseEngineController_LS_B.s715_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -3467,7 +3269,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s627_Sum</struct>
+      <struct>BaseEngineController_LS_B.s626_Sum</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
    </VarDec>
    <VarDec>
@@ -3641,7 +3443,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s797_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s796_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -3659,7 +3461,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s765_Switch</struct>
+      <struct>BaseEngineController_LS_B.s764_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -3698,7 +3500,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s650_Merge</struct>
+      <struct>BaseEngineController_LS_B.s649_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -3718,7 +3520,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s629_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s628_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -3909,42 +3711,6 @@
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
    <VarDec>
-      <name>VSPD_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s907_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s901_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-   </VarDec>
-   <VarDec>
       <name>RPMFilt_PostLowPass</name>
       <class>var</class>
       <access>RO RO RO RO</access>
@@ -3959,7 +3725,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s900_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s889_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
    </VarDec>
    <VarDec>
@@ -4128,7 +3894,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s628_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s627_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -4282,42 +4048,6 @@
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
-      <name>ETCReq_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s940_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-   </VarDec>
-   <VarDec>
-      <name>MAP_filtFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s928_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-   </VarDec>
-   <VarDec>
       <name>EVAPADC</name>
       <class>var</class>
       <units>ADC</units>
@@ -4333,7 +4063,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s710_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s709_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -4521,7 +4251,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s858_Merge</struct>
+      <struct>BaseEngineController_LS_B.s857_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -4539,7 +4269,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s831_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s830_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -4557,7 +4287,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s810_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s809_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -4596,7 +4326,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s632_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s631_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -4692,63 +4422,9 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s867_motohawk_pwm1</struct>
+      <struct>BaseEngineController_LS_B.s866_motohawk_pwm1</struct>
       <help>Current output of ETC duty cycle.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
-   </VarDec>
-   <VarDec>
-      <name>APP_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s941_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-   </VarDec>
-   <VarDec>
-      <name>OilPres_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s926_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-   </VarDec>
-   <VarDec>
-      <name>TPS_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s891_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
    </VarDec>
    <VarDec>
       <name>CATADC</name>
@@ -4766,7 +4442,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s710_motohawk_ain3</struct>
+      <struct>BaseEngineController_LS_B.s709_motohawk_ain3</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -4786,7 +4462,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s757_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s756_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -4806,7 +4482,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s710_motohawk_ain</struct>
+      <struct>BaseEngineController_LS_B.s709_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -5036,24 +4712,6 @@
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs</group>
    </VarDec>
    <VarDec>
-      <name>Flex_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s936_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
-   </VarDec>
-   <VarDec>
       <name>Fuel_LvlRaw</name>
       <class>var</class>
       <units>%</units>
@@ -5069,7 +4727,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s717_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s716_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -5206,7 +4864,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s787_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s786_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -5226,7 +4884,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s633_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s632_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -5246,7 +4904,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s679_Merge</struct>
+      <struct>BaseEngineController_LS_B.s678_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -5380,45 +5038,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s867_ETC</struct>
+      <struct>BaseEngineController_LS_B.s866_ETC</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
-   </VarDec>
-   <VarDec>
-      <name>SparkAdv_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s902_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-   </VarDec>
-   <VarDec>
-      <name>IAT_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s894_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
    </VarDec>
    <VarDec>
       <name>CrankTDCs</name>
@@ -5640,7 +5262,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s844_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s843_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -5658,7 +5280,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s766_Switch</struct>
+      <struct>BaseEngineController_LS_B.s765_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -5677,7 +5299,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s775_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s774_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -5776,42 +5398,6 @@
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Run</group>
    </VarDec>
    <VarDec>
-      <name>ECT_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s897_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
-   </VarDec>
-   <VarDec>
-      <name>ECT_FiltFilterConst</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s888_Merge</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
-   </VarDec>
-   <VarDec>
       <name>EVAP</name>
       <class>var</class>
       <units>C</units>
@@ -5827,7 +5413,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s747_Merge</struct>
+      <struct>BaseEngineController_LS_B.s746_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -5964,7 +5550,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s705_Merge</struct>
+      <struct>BaseEngineController_LS_B.s704_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -6004,7 +5590,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s630_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s629_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -6024,7 +5610,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s642_Merge</struct>
+      <struct>BaseEngineController_LS_B.s641_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -6104,24 +5690,6 @@
       <group>BaseEngineController_LS|Foreground|Control|ActuatorCharacterization|Injector Characterization</group>
    </VarDec>
    <VarDec>
-      <name>FuelPres_FiltFiltered</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s931_Sum1</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-   </VarDec>
-   <VarDec>
       <name>CoilStopAngle</name>
       <class>var</class>
       <units>degBTDC</units>
@@ -6137,7 +5705,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s951_Sum</struct>
+      <struct>BaseEngineController_LS_B.s922_Sum</struct>
       <help>Stop angle for coils to establish dwell.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -6384,7 +5952,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1018_Merge</struct>
+      <struct>BaseEngineController_LS_B.s989_Merge</struct>
       <help>Enable state for injectors.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
@@ -6405,7 +5973,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s863_SparkSequence_o3</struct>
+      <struct>BaseEngineController_LS_B.s862_SparkSequence_o3</struct>
       <help>ADC counts of measured voltage feedback for diagnosing the ESTs during stall state.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -6449,7 +6017,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s863_LogicalOperator1</struct>
+      <struct>BaseEngineController_LS_B.s862_LogicalOperator1</struct>
       <help>Enable sate for coils.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
       <col_len>8</col_len>
@@ -6471,7 +6039,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s863_SparkSequence_o4</struct>
+      <struct>BaseEngineController_LS_B.s862_SparkSequence_o4</struct>
       <help>Dwell time used to diagnose ESTs during run-state.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -6532,7 +6100,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s869_InjectorSequence_o1</struct>
+      <struct>BaseEngineController_LS_B.s868_InjectorSequence_o1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -8257,7 +7825,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s953_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s924_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -8330,6 +7898,118 @@
       <struct>can_tx_err_CAN_2_0</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | CAN</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut9839p0001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut9839p0001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -8837,29 +8517,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>ECT_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s888_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ETCRequestDirection</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -8953,6 +8610,118 @@
          <item name="Pause" value="2"/>
          <item name="Stop" value="3"/>
          <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut9838p0001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut9838p0001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -9292,29 +9061,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>ETCReq_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s940_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>RPMFalling</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -9379,6 +9125,118 @@
       <struct>protocol_register_CAN_1</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | CAN</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut9859p0001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut9859p0001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -9944,29 +9802,6 @@
          <item name="POSN_UNKNOWN" value="2"/>
          <item name="ENC_SYNC_CAM_UNKNOWN" value="3"/>
          <item name="ENC_SYNC_CAM_SYNC" value="4"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s901_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -10893,118 +10728,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DOut10165p0004</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut10165p0004</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>VEAdapting</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -11474,52 +11197,6 @@
          <item name="TPU Error 0x5E" value="94"/>
          <item name="TPU Error 0x5F" value="95"/>
          <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>ECUVolt_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s903_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>IAT_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s887_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -12011,118 +11688,6 @@
       <struct>ain_create_TPS2AnalogInput</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | AnalogIn</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut9005p0001</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9005p0001</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -13137,29 +12702,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>APP_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s941_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message DBW</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>TDCCountThreshEnabled</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -13174,7 +12716,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s953_RelationalOperator1</struct>
+      <struct>BaseEngineController_LS_B.s924_RelationalOperator1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -13766,29 +13308,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>SparkAdv_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s902_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>MaxGovETCMode</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -14372,29 +13891,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>Flex_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s936_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 6</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ApplicationPausePoint</name>
       <class>enum</class>
       <access>RO RO RW RW</access>
@@ -14438,118 +13934,6 @@
       <struct>din_create_ESTOPPin</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DigitalInput</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut9618p0005</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9618p0005</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -14892,230 +14276,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DOut9638p0005</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9638p0005</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut9617p0005</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9617p0005</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ain_read_OilPresPin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -15244,29 +14404,6 @@
       <ctype>BlockIO_BaseEngineController_LS</ctype>
       <struct>BaseEngineController_LS_B.s395_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>OilPres_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s926_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
          <item name="Increasing" value="1"/>
@@ -15853,6 +14990,118 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>dout_create_DOut9020p0001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut9020p0001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>ain_create_EVAPSensorPin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -15965,7 +15214,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>MAP_filtDirection</name>
+      <name>dout_create_DOut10387p0001</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -15974,40 +15223,106 @@
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s924_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>TPS_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s886_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut10387p0001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -16713,29 +16028,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>FuelPres_FiltDirection</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>1.000000</max>
-      <min>0.000000</min>
-      <format>1.0</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s925_RelationalOperator4</struct>
-      <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 3</group>
-      <enum name="VarDecEnum_21">
-         <item name="Decreasing" value="0"/>
-         <item name="Increasing" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ECUP_Enabled</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -16750,7 +16042,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1039_RelationalOperator</struct>
+      <struct>BaseEngineController_LS_B.s1010_RelationalOperator</struct>
       <group>System | Main Power Relay</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>

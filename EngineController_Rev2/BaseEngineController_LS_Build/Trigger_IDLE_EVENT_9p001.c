@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2049
+ * Model version              : 1.2053
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Tue Aug 16 23:25:15 2022
+ * C source code generated on : Tue Nov 08 18:29:01 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_IDLE_EVENT_9p001(void)
 {
-  /* Named constants for Stateflow: '<S1039>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S1010>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 

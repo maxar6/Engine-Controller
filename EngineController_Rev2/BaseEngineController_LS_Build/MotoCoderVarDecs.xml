@@ -5295,26 +5295,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>MinETCSetpoint</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Minimum setpoint for ETC.</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AirFlow Manager</group>
-      <struct>ConstantWork.MinETCSetpoint</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>ThrottleSource</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -5650,8 +5630,8 @@
       <exp>1</exp>
       <max>100</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Fan speed % req for AC Sw 0 to disable</help>
@@ -5660,7 +5640,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>DeltaMAP_FiltConst</name>
@@ -6145,16 +6125,16 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>127</max>
-      <min>-128</min>
-      <format>3.0</format>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|O2 Control</group>
       <struct>ConstantWork.O2DisablmentMult</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>int8</type>
+      <type>uint8</type>
       <class>enum</class>
       <enum>
          <item name="Disabled" value="0"/>
@@ -6211,9 +6191,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Enables AC airflow adder</help>
@@ -6578,10 +6558,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM above setpoint where Min Gov will enable when RPM is falling into idle.</help>
@@ -6590,7 +6570,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>StallSaverDeltaRPM</name>
@@ -6598,10 +6578,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM delta below setpoint where Min Gov will enable to prevent engine stalls.</help>
@@ -6610,7 +6590,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>MinGovEntryAirPcnt</name>
@@ -6798,10 +6778,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>This is the amount RPM must be above the Setpoint RPM to set a Motorin Flag.</help>
@@ -6810,7 +6790,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>MotoringDtctTimerLimit</name>
@@ -6918,10 +6898,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Max Gov RPM setpoint when in gear.</help>
@@ -6930,7 +6910,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovInGearUpperLim</name>
@@ -6938,10 +6918,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Max Gov RPM setpoint when in gear.</help>
@@ -6950,7 +6930,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovInGearRPMThresh</name>
@@ -6958,10 +6938,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>When in-gear, RPM has to pass the base RPM setpoint minus this calibration. to start the I term preload and ramp-in.</help>
@@ -6970,7 +6950,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovInGearRPMSetPt</name>
@@ -6978,10 +6958,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Max Gov RPM setpoint when in gear.</help>
@@ -6990,7 +6970,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovNtrlLowerLim</name>
@@ -6998,10 +6978,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Max Gov RPM setpoint when in gear.</help>
@@ -7010,7 +6990,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovNtrlUpperLim</name>
@@ -7018,10 +6998,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Max Gov RPM setpoint when in gear.</help>
@@ -7030,7 +7010,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovNtrlRPMThresh</name>
@@ -7038,10 +7018,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>When in neutral, RPM has to pass the base RPM setpoint minus this calibration. to start the I term preload and ramp-in.</help>
@@ -7050,7 +7030,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovNtrlRPMSetPt</name>
@@ -7058,10 +7038,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>65535</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Max Gov RPM setpoint when in neutral.</help>
@@ -7070,7 +7050,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxGovPIDOutUpperLimit</name>
@@ -7357,7 +7337,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>ACSpdSlowOn</name>
+      <name>ACTempOn</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -7366,6 +7346,42 @@
       <min>-1.0E17</min>
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
+      <struct>ConstantWork.ACTempOn</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ACTempOff</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
+      <struct>ConstantWork.ACTempOff</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>ACSpdSlowOn</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Engine speed at which the compressor turns on at low side</help>
@@ -7374,7 +7390,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>ACSpdSlowOff</name>
@@ -7382,10 +7398,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Engine speed at which the compressor turns off at low side</help>
@@ -7394,7 +7410,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>ACSpdFastOff</name>
@@ -7402,10 +7418,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Engine speed at which the compressor turns off at high side</help>
@@ -7414,7 +7430,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>ACSpdFastOn</name>
@@ -7422,10 +7438,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Engine speed at which the compressor turns on at high side</help>
@@ -7434,7 +7450,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>AC_TPSOff</name>
@@ -7442,10 +7458,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Throttle position at which AC gets disengaged</help>
@@ -7454,7 +7470,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>AC_TPSOn</name>
@@ -7462,10 +7478,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Throttle position at which AC gets engaged</help>
@@ -7474,7 +7490,79 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>ACLowPresOn</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
+      <struct>ConstantWork.ACLowPresOn</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>ACLowPresOff</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
+      <struct>ConstantWork.ACLowPresOff</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>ACHighPresOff</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
+      <struct>ConstantWork.ACHighPresOff</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>ACHighPresOn</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
+      <struct>ConstantWork.ACHighPresOn</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>ACTimeFromStartDelay</name>
@@ -7546,10 +7634,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1000</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>kPa</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO MAP entry threshold</help>
@@ -7558,7 +7646,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>DFCOEnable</name>
@@ -7566,9 +7654,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|DFCO|DesEquivRatioMod</group>
@@ -7591,8 +7679,8 @@
       <exp>1</exp>
       <max>7000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO entry above idle speed setpoint</help>
@@ -7601,7 +7689,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>DFCODelayTime</name>
@@ -7631,8 +7719,8 @@
       <exp>1</exp>
       <max>7000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO exit offset from desired idle speed</help>
@@ -7641,7 +7729,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>DFCOExitAPP</name>
@@ -7669,10 +7757,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1000</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>kPa</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO exit MAP threhsold</help>
@@ -7681,7 +7769,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>DFCOExitSparkRet</name>
@@ -7914,8 +8002,8 @@
       <exp>1</exp>
       <max>100</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Fan speed % req for AC Sw 0 to disable</help>
@@ -7924,7 +8012,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>FuelPumpStartTime</name>
@@ -7952,10 +8040,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>const Constant_T</ctype>
       <help>ECT temp when the fan turns on</help>
@@ -7964,7 +8052,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>ECTFanOff</name>
@@ -7972,10 +8060,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>const Constant_T</ctype>
       <help>ECT temp when the fan turns off</help>
@@ -7984,7 +8072,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>IATFanOn</name>
@@ -7992,10 +8080,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>const Constant_T</ctype>
       <help>IAT temp when the fan turns on</help>
@@ -8004,7 +8092,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>IATFanOff</name>
@@ -8012,10 +8100,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>const Constant_T</ctype>
       <help>IAT temp when the fan turns off</help>
@@ -8024,7 +8112,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>ACPresFanOn</name>
@@ -8032,10 +8120,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>kpa</units>
       <ctype>const Constant_T</ctype>
       <help>AC pressure when the fan turns on</help>
@@ -8044,7 +8132,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>ACPresFanOff</name>
@@ -8052,10 +8140,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>kpa</units>
       <ctype>const Constant_T</ctype>
       <help>AC pressure when the fan turns off</help>
@@ -8064,7 +8152,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>FAN_Mode</name>
@@ -8095,9 +8183,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8119,9 +8207,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8143,9 +8231,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8167,9 +8255,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8191,9 +8279,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8215,9 +8303,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8239,9 +8327,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8263,9 +8351,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <help>Fan Enabler</help>
@@ -8287,17 +8375,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|Fuel Pump at Startup</group>
       <struct>ConstantWork.Constant_Fuel_Pump</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>ETC_StallAppOvrThesh</name>
@@ -8637,10 +8725,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>Max APP command to allow during overheat condition</help>
@@ -8649,7 +8737,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Overheat_ScaleAPP</name>
@@ -8839,9 +8927,9 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|VSPD_Selector</group>
@@ -8862,10 +8950,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>kpa</units>
       <ctype>const Constant_T</ctype>
       <help>Pressure when ac gets disabled</help>
@@ -8874,27 +8962,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACHighPressureTime</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>After high pressure level reached for this time ACChargeHigh_Fault becomes active</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|AC Fault</group>
-      <struct>ConstantWork.ACHighPressureTime</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>ACLowPressureDisable</name>
@@ -8902,10 +8970,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>kpa</units>
       <ctype>const Constant_T</ctype>
       <help>Pressure when ac gets disabled</help>
@@ -8914,27 +8982,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACLowPressureTime</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>After low pressure level reached for this time ACChargeLow_Fault becomes active</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|AC Fault</group>
-      <struct>ConstantWork.ACLowPressureTime</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>SoftOverBoostLimit</name>
@@ -8951,26 +8999,6 @@
       <help>Soft overboost limit</help>
       <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Boost Fault</group>
       <struct>ConstantWork.SoftOverBoostLimit</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>SoftOverBoostTime</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>After soft overboost level reached for this time SoftOverBoost_Fault becomes active</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Boost Fault</group>
-      <struct>ConstantWork.SoftOverBoostTime</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -8997,26 +9025,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>HardOverBoostTime</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>After hard overboost level reached for this time HardOverBoost_Fault becomes active</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Boost Fault</group>
-      <struct>ConstantWork.HardOverBoostTime</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>WastegateLossOfControl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -9037,26 +9045,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>WastegateTime</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>After wastegate loss of control level reached for this time Wastegate_Fault becomes active</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Boost Fault</group>
-      <struct>ConstantWork.WastegateTime</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>LeanProtect_Threshold</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -9071,26 +9059,6 @@
       <help>Target fuel pressure delta across injector (rail - manifold)</help>
       <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Lean Protect</group>
       <struct>ConstantWork.LeanProtect_Threshold</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>LeanProtec_TmrThresh</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>Number of seconds that fuel pressure must be out of spec for fault</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Lean Protect</group>
-      <struct>ConstantWork.LeanProtec_TmrThresh</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -9222,10 +9190,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>32767</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Maximum RPM allowed, before any action is taken</help>
@@ -9234,7 +9202,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>RevLimitHyst</name>
@@ -9244,8 +9212,8 @@
       <exp>1</exp>
       <max>12000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Hysteresis applied to MaxRPM once rev limit threshold is satisfied</help>
@@ -9254,7 +9222,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>MediumRevOffset</name>
@@ -9262,10 +9230,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>32767</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM rev limit for medium action to be taken</help>
@@ -9274,7 +9242,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>TwoStepRevLimit</name>
@@ -9282,10 +9250,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>32767</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Maximum RPM allowed, before any action is taken</help>
@@ -9294,7 +9262,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>TwoStepRevLimitHyst</name>
@@ -9304,8 +9272,8 @@
       <exp>1</exp>
       <max>12000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>Hysteresis applied to MaxRPM once rev limit threshold is satisfied</help>
@@ -9314,7 +9282,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>TwoStepMediumRevOffset</name>
@@ -9322,10 +9290,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>32767</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM rev limit for medium action to be taken</help>
@@ -9334,7 +9302,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>HardRevOffset</name>
@@ -9342,10 +9310,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>32767</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM rev limit for hard action to be taken</help>
@@ -9354,7 +9322,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>TwoStepHardRevOffset</name>
@@ -9362,10 +9330,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
+      <max>32767</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM rev limit for hard action to be taken</help>
@@ -9374,7 +9342,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>FuelPres_DeltaTarget</name>
@@ -9411,26 +9379,6 @@
       <help>Target fuel pressure delta across injector (rail - manifold)</help>
       <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Wrong Fuel Pressure Fault Logic</group>
       <struct>ConstantWork.FuelPres_DeltaTolerance</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>FuelPres_FaultTimer</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>Number of seconds that fuel pressure must be out of spec for fault</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Wrong Fuel Pressure Fault Logic</group>
-      <struct>ConstantWork.FuelPres_FaultTimer</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -9511,26 +9459,6 @@
       <help>Time constant for fuel economy filter</help>
       <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Fuel Economy|First Order Low Pass (Tunable)</group>
       <struct>ConstantWork.FuelEconomy_FilterC</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>NoOilPres_FaultTime</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>s</units>
-      <ctype>const Constant_T</ctype>
-      <help>After no oil pressure for this long the NoOilFault becomes active.</help>
-      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Low Oil Pressure Fault Logic</group>
-      <struct>ConstantWork.NoOilPres_FaultTime</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -10226,6 +10154,52 @@
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>APP1_AlwaysAdapt</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors|APP1ForcedAdapt|Function-Call Subsystem</group>
+      <struct>ConstantWork.APP1_AlwaysAdapt</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>APP2_AlwaysAdapt</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors|APP2ForcedAdapt|Function-Call Subsystem</group>
+      <struct>ConstantWork.APP2_AlwaysAdapt</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
    </VarDec>
    <VarDec>
       <name>RPMFilt_RoundValue</name>
@@ -10980,7 +10954,7 @@
       <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>VSPD_ovr</name>
+      <name>APP_AdaptMode</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -10988,199 +10962,6 @@
       <max>1</max>
       <min>0</min>
       <format>1.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Override</group>
-      <struct>ConstantWork.VSPD_ovr</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Pass-Through" value="0"/>
-         <item name="Override" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VSPDFiltConst</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>sec</units>
-      <ctype>const Constant_T</ctype>
-      <help>Filter time constant</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Config</group>
-      <struct>ConstantWork.VSPDFiltConst</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPDDefault</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>MPH</units>
-      <ctype>const Constant_T</ctype>
-      <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Config</group>
-      <struct>ConstantWork.VSPDDefault</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_new</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>MPH</units>
-      <ctype>const Constant_T</ctype>
-      <help>Override result of linear sensor characterization, in engineering units</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Override</group>
-      <struct>ConstantWork.VSPD_new</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_RateReject</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>mph/s</units>
-      <ctype>const Constant_T</ctype>
-      <help>If VSPD changes by more than this per/second ignore it</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
-      <struct>ConstantWork.VSPD_RateReject</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_RateReject_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <units>enum</units>
-      <ctype>const Constant_T</ctype>
-      <help>Enable for if VSPD changes by more than this per/second ignore it</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
-      <struct>ConstantWork.VSPD_RateReject_Enable</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VPSD_ChangeReject</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>mph/s</units>
-      <ctype>const Constant_T</ctype>
-      <help>If VSPD changes by more than this per/second ignore it</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
-      <struct>ConstantWork.VPSD_ChangeReject</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_ZeroSpeed</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>mph</units>
-      <ctype>const Constant_T</ctype>
-      <help>What VSPD filter considers zero speed</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
-      <struct>ConstantWork.VSPD_ZeroSpeed</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_ChangeReject_Enable</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <units>enum</units>
-      <ctype>const Constant_T</ctype>
-      <help>Enable for if VSPD changes by more than this per/second ignore it</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
-      <struct>ConstantWork.VSPD_ChangeReject_Enable</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Disabled" value="0"/>
-         <item name="Enabled" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>APP_AdaptMode</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>255</max>
-      <min>0</min>
-      <format>3.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors</group>
@@ -12631,13 +12412,206 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>255</max>
+      <max>1</max>
       <min>0</min>
-      <format>3.0</format>
+      <format>1.0</format>
       <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|VSPD_Selector</group>
       <struct>ConstantWork.VSPD_GPSPreferred</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_ovr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Override</group>
+      <struct>ConstantWork.VSPD_ovr</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Pass-Through" value="0"/>
+         <item name="Override" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>VSPDFiltConst</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>sec</units>
+      <ctype>const Constant_T</ctype>
+      <help>Filter time constant</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Config</group>
+      <struct>ConstantWork.VSPDFiltConst</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPDDefault</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>MPH</units>
+      <ctype>const Constant_T</ctype>
+      <help>This is the initial default value should the sensor be in fault on key-up.  Otherwise the sensors outputs the last value prior to faulting</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Config</group>
+      <struct>ConstantWork.VSPDDefault</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_new</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>MPH</units>
+      <ctype>const Constant_T</ctype>
+      <help>Override result of linear sensor characterization, in engineering units</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD | VSPD Override</group>
+      <struct>ConstantWork.VSPD_new</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_RateReject</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mph/s</units>
+      <ctype>const Constant_T</ctype>
+      <help>If VSPD changes by more than this per/second ignore it</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
+      <struct>ConstantWork.VSPD_RateReject</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_RateReject_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <units>enum</units>
+      <ctype>const Constant_T</ctype>
+      <help>Enable for if VSPD changes by more than this per/second ignore it</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
+      <struct>ConstantWork.VSPD_RateReject_Enable</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>VPSD_ChangeReject</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mph/s</units>
+      <ctype>const Constant_T</ctype>
+      <help>If VSPD changes by more than this per/second ignore it</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
+      <struct>ConstantWork.VPSD_ChangeReject</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_ZeroSpeed</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>mph</units>
+      <ctype>const Constant_T</ctype>
+      <help>What VSPD filter considers zero speed</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
+      <struct>ConstantWork.VSPD_ZeroSpeed</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_ChangeReject_Enable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <units>enum</units>
+      <ctype>const Constant_T</ctype>
+      <help>Enable for if VSPD changes by more than this per/second ignore it</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
+      <struct>ConstantWork.VSPD_ChangeReject_Enable</struct>
       <storage>FLASH</storage>
       <update>BACKGND</update>
       <type>uint8</type>
@@ -16432,17 +16406,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_YearUTC_Ovr Override</group>
       <struct>ConstantWork.GPS_YearUTC_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_Altitude_Ovr_ovr</name>
@@ -16555,17 +16529,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_SatelliteCount_Ovr Override</group>
       <struct>ConstantWork.GPS_SatelliteCount_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_MonthUTC_Ovr_ovr</name>
@@ -16596,17 +16570,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_MonthUTC_Ovr Override</group>
       <struct>ConstantWork.GPS_MonthUTC_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_DayUTC_Ovr_ovr</name>
@@ -16637,17 +16611,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_DayUTC_Ovr Override</group>
       <struct>ConstantWork.GPS_DayUTC_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_HoursUTC_Ovr_ovr</name>
@@ -16678,17 +16652,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_HoursUTC_Ovr Override</group>
       <struct>ConstantWork.GPS_HoursUTC_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_MinutesUTC_Ovr_ovr</name>
@@ -16719,17 +16693,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_MinutesUTC_Ovr Override</group>
       <struct>ConstantWork.GPS_MinutesUTC_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_SecondsUTC_Ovr_ovr</name>
@@ -16760,17 +16734,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS | GPS_SecondsUTC_Ovr Override</group>
       <struct>ConstantWork.GPS_SecondsUTC_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>GPS_Latitude_Ovr_ovr</name>
@@ -17047,17 +17021,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_SensorDetectedStatus_Ovr Override</group>
       <struct>ConstantWork.Bank2_SensorDetectedStatus_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank2_UsingFreeAreCalState_Ovr_ovr</name>
@@ -17088,17 +17062,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_UsingFreeAreCalState_Ovr Override</group>
       <struct>ConstantWork.Bank2_UsingFreeAreCalState_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank2_DataValidState_Ovr_ovr</name>
@@ -17129,17 +17103,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
       <struct>ConstantWork.Bank2_DataValidState_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank2_SensorStatus_Ovr_ovr</name>
@@ -17170,17 +17144,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_SensorStatus_Ovr Override</group>
       <struct>ConstantWork.Bank2_SensorStatus_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank2_SensorFaultState_Ovr_ovr</name>
@@ -17211,17 +17185,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_SensorFaultState_Ovr Override</group>
       <struct>ConstantWork.Bank2_SensorFaultState_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank1_SystemVolts_Ovr_ovr</name>
@@ -17334,17 +17308,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_SensorDetectedStatus_Ovr Override</group>
       <struct>ConstantWork.Bank1_SensorDetectedStatus_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank1_UsingFreeAreCalState_Ovr_ovr</name>
@@ -17375,17 +17349,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_UsingFreeAreCalState_Ovr Override</group>
       <struct>ConstantWork.Bank1_UsingFreeAreCalState_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank1_DataValidState_Ovr_ovr</name>
@@ -17416,17 +17390,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
       <struct>ConstantWork.Bank1_DataValidState_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank1_SensorStatus_Ovr_ovr</name>
@@ -17457,17 +17431,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_SensorStatus_Ovr Override</group>
       <struct>ConstantWork.Bank1_SensorStatus_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>Bank1_SensorFaultState_Ovr_ovr</name>
@@ -17498,17 +17472,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_SensorFaultState_Ovr Override</group>
       <struct>ConstantWork.Bank1_SensorFaultState_Ovr_new</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>SensVolt_ovr</name>
@@ -17783,10 +17757,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ms</units>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
@@ -17794,7 +17768,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>GPS_DateTime_Timeout</name>
@@ -17802,10 +17776,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ms</units>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
@@ -17813,7 +17787,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>GPS_SpeedDir_Timeout</name>
@@ -17821,10 +17795,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ms</units>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
@@ -17832,7 +17806,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>Lambda_2_Timeout</name>
@@ -17840,10 +17814,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ms</units>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
@@ -17851,7 +17825,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>Lambda_1_Timeout</name>
@@ -17859,10 +17833,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ms</units>
       <ctype>const Constant_T</ctype>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
@@ -17870,7 +17844,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>Bank1_EquivRatioInputHiFltPos</name>
@@ -18038,10 +18012,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>sec</units>
       <ctype>const Constant_T</ctype>
       <help>TimeToHoldLastValue</help>
@@ -18050,7 +18024,7 @@
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>PseudoRPM</name>
@@ -19583,10 +19557,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>RPM setpoint based on ECT.</help>
@@ -19595,7 +19569,7 @@
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>5</len>
       <output>MinGovClntRPMSetPt</output>
       <prelookup>ECT05IdxArr</prelookup>
@@ -19606,10 +19580,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>RPM setpoint based on ECT.</help>
@@ -19618,7 +19592,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>AirMinGovSpeedErrorIdxArr</name>
@@ -21348,72 +21322,6 @@
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>VSPDIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>Hz</units>
-      <ctype>const Constant_T</ctype>
-      <help>Look up table to allownon-linear characterization of sensors</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
-      <struct>ConstantWork.VSPDIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>13</len>
-      <input>VSPDADC</input>
-      <index>VSPDIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>VSPDIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Look up table to allownon-linear characterization of sensors</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
-      <struct>VolatileWork_BSS.VSPDIdx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPDTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>MPH</units>
-      <ctype>const Constant_T</ctype>
-      <help>Look up table to allownon-linear characterization of sensors</help>
-      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
-      <struct>ConstantWork.VSPDTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>13</len>
-      <output>VSPDRaw</output>
-      <prelookup>VSPDIdxArr</prelookup>
-   </VarDec>
-   <VarDec>
       <name>APP2IdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -21546,30 +21454,28 @@
       <prelookup>APP1IdxArr</prelookup>
    </VarDec>
    <VarDec>
-      <name>ECTFanSpeed_StallColIdxArr</name>
+      <name>ECTFanSpeed_StallIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>300</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>VSPD</units>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>ECT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.ECTFanSpeed_StallColIdxArr</struct>
+      <struct>ConstantWork.ECTFanSpeed_StallIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>7</len>
-      <input>ECTFanSpeed_StallColIn</input>
-      <index>ECTFanSpeed_StallColIdx</index>
+      <input>ECTFanSpeed_StallIn</input>
+      <index>ECTFanSpeed_StallIdx</index>
    </VarDec>
    <VarDec>
-      <name>ECTFanSpeed_StallColIdx</name>
+      <name>ECTFanSpeed_StallIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -21580,121 +21486,51 @@
       <mask>0x0000FFFF</mask>
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>ECT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ECTFanSpeed_StallColIdx</struct>
+      <struct>VolatileWork_BSS.ECTFanSpeed_StallIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>ECTFanSpeed_StallColIn</name>
+      <name>ECTFanSpeed_StallIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>VSPD</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>ECT Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ECTFanSpeed_StallColIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ECTFanSpeed_StallRowIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>250</max>
-      <min>-40</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>ECT</units>
-      <ctype>const Constant_T</ctype>
-      <help>ECT Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.ECTFanSpeed_StallRowIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>7</len>
-      <input>ECTFanSpeed_StallRowIn</input>
-      <index>ECTFanSpeed_StallRowIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>ECTFanSpeed_StallRowIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
       <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>ECT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ECTFanSpeed_StallRowIdx</struct>
+      <struct>VolatileWork_BSS.ECTFanSpeed_StallIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
-      <name>ECTFanSpeed_StallRowIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>ECT</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>ECT Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ECTFanSpeed_StallRowIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ECTFanSpeed_StallMap</name>
+      <name>ECTFanSpeed_StallTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>100</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
-      <help>ECT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.ECTFanSpeed_StallMap.data</struct>
-      <class>interpolation_2d</class>
+      <struct>ConstantWork.ECTFanSpeed_StallTbl</struct>
+      <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint8</type>
+      <len>7</len>
       <output>ECTFanSpeed_Stall</output>
-      <col_prelookup>ECTFanSpeed_StallColIdxArr</col_prelookup>
-      <col_len>7</col_len>
-      <row_prelookup>ECTFanSpeed_StallRowIdxArr</row_prelookup>
-      <row_len>7</row_len>
+      <prelookup>ECTFanSpeed_StallIdxArr</prelookup>
    </VarDec>
    <VarDec>
       <name>ECTFanSpeed_Stall</name>
@@ -21702,45 +21538,41 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <help>ECT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
       <struct>VolatileWork_BSS.ECTFanSpeed_Stall</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>IATFanSpeed_StallColIdxArr</name>
+      <name>IATFanSpeed_StallIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>300</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>VSPD</units>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>IAT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.IATFanSpeed_StallColIdxArr</struct>
+      <struct>ConstantWork.IATFanSpeed_StallIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>7</len>
-      <input>IATFanSpeed_StallColIn</input>
-      <index>IATFanSpeed_StallColIdx</index>
+      <input>IATFanSpeed_StallIn</input>
+      <index>IATFanSpeed_StallIdx</index>
    </VarDec>
    <VarDec>
-      <name>IATFanSpeed_StallColIdx</name>
+      <name>IATFanSpeed_StallIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -21751,121 +21583,51 @@
       <mask>0x0000FFFF</mask>
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>IAT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.IATFanSpeed_StallColIdx</struct>
+      <struct>VolatileWork_BSS.IATFanSpeed_StallIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>IATFanSpeed_StallColIn</name>
+      <name>IATFanSpeed_StallIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>VSPD</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>IAT Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.IATFanSpeed_StallColIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>IATFanSpeed_StallRowIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>250</max>
-      <min>-40</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>IAT</units>
-      <ctype>const Constant_T</ctype>
-      <help>IAT Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.IATFanSpeed_StallRowIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>7</len>
-      <input>IATFanSpeed_StallRowIn</input>
-      <index>IATFanSpeed_StallRowIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>IATFanSpeed_StallRowIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
       <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>IAT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.IATFanSpeed_StallRowIdx</struct>
+      <struct>VolatileWork_BSS.IATFanSpeed_StallIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
-      <name>IATFanSpeed_StallRowIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>IAT</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>IAT Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.IATFanSpeed_StallRowIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>IATFanSpeed_StallMap</name>
+      <name>IATFanSpeed_StallTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>100</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
-      <help>IAT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.IATFanSpeed_StallMap.data</struct>
-      <class>interpolation_2d</class>
+      <struct>ConstantWork.IATFanSpeed_StallTbl</struct>
+      <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint8</type>
+      <len>7</len>
       <output>IATFanSpeed_Stall</output>
-      <col_prelookup>IATFanSpeed_StallColIdxArr</col_prelookup>
-      <col_len>7</col_len>
-      <row_prelookup>IATFanSpeed_StallRowIdxArr</row_prelookup>
-      <row_len>7</row_len>
+      <prelookup>IATFanSpeed_StallIdxArr</prelookup>
    </VarDec>
    <VarDec>
       <name>IATFanSpeed_Stall</name>
@@ -21873,45 +21635,41 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <help>IAT Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
       <struct>VolatileWork_BSS.IATFanSpeed_Stall</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
-      <name>ACPresFanSpeed_StallColIdxArr</name>
+      <name>ACPresFanSpeed_StallIdxArr</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>300</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>VSPD</units>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>ACPres Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.ACPresFanSpeed_StallColIdxArr</struct>
+      <struct>ConstantWork.ACPresFanSpeed_StallIdxArr</struct>
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>7</len>
-      <input>ACPresFanSpeed_StallColIn</input>
-      <index>ACPresFanSpeed_StallColIdx</index>
+      <input>ACPresFanSpeed_StallIn</input>
+      <index>ACPresFanSpeed_StallIdx</index>
    </VarDec>
    <VarDec>
-      <name>ACPresFanSpeed_StallColIdx</name>
+      <name>ACPresFanSpeed_StallIdx</name>
       <access>RO RO RO RO</access>
       <gain>0.001953125</gain>
       <offset>0</offset>
@@ -21922,121 +21680,51 @@
       <mask>0x0000FFFF</mask>
       <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>ACPres Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ACPresFanSpeed_StallColIdx</struct>
+      <struct>VolatileWork_BSS.ACPresFanSpeed_StallIdx</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
    </VarDec>
    <VarDec>
-      <name>ACPresFanSpeed_StallColIn</name>
+      <name>ACPresFanSpeed_StallIn</name>
       <access>RO RO RO RO</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>VSPD</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>ACPres Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ACPresFanSpeed_StallColIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACPresFanSpeed_StallRowIdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1000</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>ACPres</units>
-      <ctype>const Constant_T</ctype>
-      <help>ACPres Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.ACPresFanSpeed_StallRowIdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>7</len>
-      <input>ACPresFanSpeed_StallRowIn</input>
-      <index>ACPresFanSpeed_StallRowIdx</index>
-   </VarDec>
-   <VarDec>
-      <name>ACPresFanSpeed_StallRowIdx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
       <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
       <ctype>Volatile_BSS_T</ctype>
-      <help>ACPres Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ACPresFanSpeed_StallRowIdx</struct>
+      <struct>VolatileWork_BSS.ACPresFanSpeed_StallIn</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>uint16</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
-      <name>ACPresFanSpeed_StallRowIn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>ACPres</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>ACPres Fan speed request</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>VolatileWork_BSS.ACPresFanSpeed_StallRowIn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACPresFanSpeed_StallMap</name>
+      <name>ACPresFanSpeed_StallTbl</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>100</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>const Constant_T</ctype>
-      <help>ACPres Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
-      <struct>ConstantWork.ACPresFanSpeed_StallMap.data</struct>
-      <class>interpolation_2d</class>
+      <struct>ConstantWork.ACPresFanSpeed_StallTbl</struct>
+      <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint8</type>
+      <len>7</len>
       <output>ACPresFanSpeed_Stall</output>
-      <col_prelookup>ACPresFanSpeed_StallColIdxArr</col_prelookup>
-      <col_len>7</col_len>
-      <row_prelookup>ACPresFanSpeed_StallRowIdxArr</row_prelookup>
-      <row_len>7</row_len>
+      <prelookup>ACPresFanSpeed_StallIdxArr</prelookup>
    </VarDec>
    <VarDec>
       <name>ACPresFanSpeed_Stall</name>
@@ -22044,19 +21732,17 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <ctype>Volatile_BSS_T</ctype>
-      <help>ACPres Fan speed request</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Stall|FAN Control</group>
       <struct>VolatileWork_BSS.ACPresFanSpeed_Stall</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>CrankECT05IdxArr</name>
@@ -22801,6 +22487,72 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPDIdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>Hz</units>
+      <ctype>const Constant_T</ctype>
+      <help>Look up table to allownon-linear characterization of sensors</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
+      <struct>ConstantWork.VSPDIdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>13</len>
+      <input>VSPDADC</input>
+      <index>VSPDIdx</index>
+   </VarDec>
+   <VarDec>
+      <name>VSPDIdx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Look up table to allownon-linear characterization of sensors</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
+      <struct>VolatileWork_BSS.VSPDIdx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPDTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>MPH</units>
+      <ctype>const Constant_T</ctype>
+      <help>Look up table to allownon-linear characterization of sensors</help>
+      <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
+      <struct>ConstantWork.VSPDTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>13</len>
+      <output>VSPDRaw</output>
+      <prelookup>VSPDIdxArr</prelookup>
    </VarDec>
    <VarDec>
       <name>VSPD17IdxArr</name>
@@ -24527,327 +24279,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>IAT_KeyUp09IdxArr</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>degC</units>
-      <ctype>const Constant_T</ctype>
-      <help>Index of IAT captured at key-up.</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Virtual Indexes|IAT_KeyUp</group>
-      <struct>ConstantWork.IAT_KeyUp09IdxArr</struct>
-      <class>prelookup</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <len>9</len>
-      <input>IAT_KeyUp09In</input>
-      <index>IAT_KeyUp09Idx</index>
-   </VarDec>
-   <VarDec>
-      <name>IAT_KeyUp09Idx</name>
-      <access>RO RO RO RO</access>
-      <gain>0.001953125</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>127.998046875</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0x0000FFFF</mask>
-      <units>idx.frac</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Index of IAT captured at key-up.</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Virtual Indexes|IAT_KeyUp</group>
-      <struct>VolatileWork_BSS.IAT_KeyUp09Idx</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint16</type>
-   </VarDec>
-   <VarDec>
-      <name>IAT_KeyUp09In</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>degC</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>Index of IAT captured at key-up.</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Virtual Indexes|IAT_KeyUp</group>
-      <struct>VolatileWork_BSS.IAT_KeyUp09In</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACTempOnTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>degC</units>
-      <ctype>const Constant_T</ctype>
-      <help>AC evap temp that the compressor turns on at</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>ConstantWork.ACTempOnTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>9</len>
-      <output>ACTempOn</output>
-      <prelookup>IAT_KeyUp09IdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>ACTempOn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>degC</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>AC evap temp that the compressor turns on at</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>VolatileWork_BSS.ACTempOn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACTempOffTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>degC</units>
-      <ctype>const Constant_T</ctype>
-      <help>AC evap temp that the compressor turns on at</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>ConstantWork.ACTempOffTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>9</len>
-      <output>ACTempOff</output>
-      <prelookup>IAT_KeyUp09IdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>ACTempOff</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>degC</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>AC evap temp that the compressor turns on at</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>VolatileWork_BSS.ACTempOff</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACLowPresOnTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>const Constant_T</ctype>
-      <help>AC pressure that the AC turns on at low</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>ConstantWork.ACLowPresOnTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>9</len>
-      <output>ACLowPresOn</output>
-      <prelookup>IAT_KeyUp09IdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>ACLowPresOn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>AC pressure that the AC turns on at low</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>VolatileWork_BSS.ACLowPresOn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACLowPresOffTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>const Constant_T</ctype>
-      <help>AC pressure that the AC turns off at low</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>ConstantWork.ACLowPresOffTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>9</len>
-      <output>ACLowPresOff</output>
-      <prelookup>IAT_KeyUp09IdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>ACLowPresOff</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>AC pressure that the AC turns off at low</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>VolatileWork_BSS.ACLowPresOff</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACHighPresOffTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>const Constant_T</ctype>
-      <help>AC pressure that the AC turns off at high</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>ConstantWork.ACHighPresOffTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>9</len>
-      <output>ACHighPresOff</output>
-      <prelookup>IAT_KeyUp09IdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>ACHighPresOff</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>AC pressure that the AC turns off at high</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>VolatileWork_BSS.ACHighPresOff</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
-      <name>ACHighPresOnTbl</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>const Constant_T</ctype>
-      <help>AC pressure that the AC turns on at high</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>ConstantWork.ACHighPresOnTbl</struct>
-      <class>interpolation_1d</class>
-      <storage>FLASH</storage>
-      <update>REMOTE</update>
-      <type>real32</type>
-      <len>9</len>
-      <output>ACHighPresOn</output>
-      <prelookup>IAT_KeyUp09IdxArr</prelookup>
-   </VarDec>
-   <VarDec>
-      <name>ACHighPresOn</name>
-      <access>RO RO RO RO</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>kPa</units>
-      <ctype>Volatile_BSS_T</ctype>
-      <help>AC pressure that the AC turns on at high</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AC Control</group>
-      <struct>VolatileWork_BSS.ACHighPresOn</struct>
-      <class>var</class>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>WarmUpEqRatioMap</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -25121,8 +24552,8 @@
       <exp>1</exp>
       <max>250</max>
       <min>-40</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO entry RPM as a function of ECT</help>
@@ -25131,7 +24562,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>10</len>
       <input>DFCOEntryRPMIn</input>
       <index>DFCOEntryRPMIdx</index>
@@ -25162,10 +24593,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>DFCO entry RPM as a function of ECT</help>
@@ -25174,7 +24605,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>DFCOEntryRPMTbl</name>
@@ -25184,8 +24615,8 @@
       <exp>1</exp>
       <max>14000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO entry RPM as a function of ECT</help>
@@ -25194,7 +24625,7 @@
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint16</type>
       <len>10</len>
       <output>DFCOEntryRPM</output>
       <prelookup>DFCOEntryRPMIdxArr</prelookup>
@@ -25205,10 +24636,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>DFCO entry RPM as a function of ECT</help>
@@ -25217,7 +24648,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>DFCOExitRPMIdxArr</name>
@@ -25227,8 +24658,8 @@
       <exp>1</exp>
       <max>250</max>
       <min>-40</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO exit rpm</help>
@@ -25237,7 +24668,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>10</len>
       <input>DFCOExitRPMIn</input>
       <index>DFCOExitRPMIdx</index>
@@ -25268,10 +24699,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>degC</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>DFCO exit rpm</help>
@@ -25280,7 +24711,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>DFCOExitRPMTbl</name>
@@ -25290,8 +24721,8 @@
       <exp>1</exp>
       <max>14000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>const Constant_T</ctype>
       <help>DFCO exit rpm</help>
@@ -25300,7 +24731,7 @@
       <class>interpolation_1d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint16</type>
       <len>10</len>
       <output>DFCOExitRPM</output>
       <prelookup>DFCOExitRPMIdxArr</prelookup>
@@ -25311,10 +24742,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>65535</max>
+      <min>0</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>RPM</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>DFCO exit rpm</help>
@@ -25323,7 +24754,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint16</type>
    </VarDec>
    <VarDec>
       <name>MaxETCSetPtLimitTbl</name>
@@ -25363,6 +24794,49 @@
       <help>Maximum allowable ETC position.</help>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AirFlow Manager</group>
       <struct>VolatileWork_BSS.MaxETCSetPtLimit</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>MinETCSetPtLimitTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>100</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Min allowable ETC position.</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AirFlow Manager</group>
+      <struct>ConstantWork.MinETCSetPtLimitTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>9</len>
+      <output>MinETCSetPtLimit</output>
+      <prelookup>RPM09IdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>MinETCSetPtLimit</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Min allowable ETC position.</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Run|AirFlow Manager</group>
+      <struct>VolatileWork_BSS.MinETCSetPtLimit</struct>
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
@@ -25920,10 +25394,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>300</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>VSPD</units>
       <ctype>const Constant_T</ctype>
       <help>ECT Fan speed request</help>
@@ -25932,7 +25406,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <len>7</len>
       <input>ECTFanSpeedColIn</input>
       <index>ECTFanSpeedColIdx</index>
@@ -25963,10 +25437,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>VSPD</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ECT Fan speed request</help>
@@ -25975,7 +25449,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>ECTFanSpeedRowIdxArr</name>
@@ -25985,8 +25459,8 @@
       <exp>1</exp>
       <max>250</max>
       <min>-40</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ECT</units>
       <ctype>const Constant_T</ctype>
       <help>ECT Fan speed request</help>
@@ -25995,7 +25469,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>7</len>
       <input>ECTFanSpeedRowIn</input>
       <index>ECTFanSpeedRowIdx</index>
@@ -26026,10 +25500,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ECT</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26038,7 +25512,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>ECTFanSpeedMap</name>
@@ -26048,8 +25522,8 @@
       <exp>1</exp>
       <max>100</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26058,7 +25532,7 @@
       <class>interpolation_2d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint8</type>
       <output>ECTFanSpeed</output>
       <col_prelookup>ECTFanSpeedColIdxArr</col_prelookup>
       <col_len>7</col_len>
@@ -26071,10 +25545,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26083,7 +25557,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>IATFanSpeedColIdxArr</name>
@@ -26091,10 +25565,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>300</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>VSPD</units>
       <ctype>const Constant_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26103,7 +25577,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <len>7</len>
       <input>IATFanSpeedColIn</input>
       <index>IATFanSpeedColIdx</index>
@@ -26134,10 +25608,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>VSPD</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26146,7 +25620,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>IATFanSpeedRowIdxArr</name>
@@ -26156,8 +25630,8 @@
       <exp>1</exp>
       <max>250</max>
       <min>-40</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>IAT</units>
       <ctype>const Constant_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26166,7 +25640,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>7</len>
       <input>IATFanSpeedRowIn</input>
       <index>IATFanSpeedRowIdx</index>
@@ -26197,10 +25671,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>IAT</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26209,7 +25683,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>IATFanSpeedMap</name>
@@ -26219,8 +25693,8 @@
       <exp>1</exp>
       <max>100</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26229,7 +25703,7 @@
       <class>interpolation_2d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint8</type>
       <output>IATFanSpeed</output>
       <col_prelookup>IATFanSpeedColIdxArr</col_prelookup>
       <col_len>7</col_len>
@@ -26242,10 +25716,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ECT Fan speed request</help>
@@ -26254,7 +25728,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>ACPresFanSpeedColIdxArr</name>
@@ -26262,10 +25736,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>300</max>
+      <max>255</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>VSPD</units>
       <ctype>const Constant_T</ctype>
       <help>ACPres Fan speed request</help>
@@ -26274,7 +25748,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <len>7</len>
       <input>ACPresFanSpeedColIn</input>
       <index>ACPresFanSpeedColIdx</index>
@@ -26305,10 +25779,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>VSPD</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ACPres Fan speed request</help>
@@ -26317,7 +25791,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>ACPresFanSpeedRowIdxArr</name>
@@ -26327,8 +25801,8 @@
       <exp>1</exp>
       <max>1000</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ACPRes</units>
       <ctype>const Constant_T</ctype>
       <help>ACPres Fan speed request</help>
@@ -26337,7 +25811,7 @@
       <class>prelookup</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
       <len>7</len>
       <input>ACPresFanSpeedRowIn</input>
       <index>ACPresFanSpeedRowIdx</index>
@@ -26368,10 +25842,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
       <units>ACPRes</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ACPres Fan speed request</help>
@@ -26380,7 +25854,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>int16</type>
    </VarDec>
    <VarDec>
       <name>ACPresFanSpeedMap</name>
@@ -26390,8 +25864,8 @@
       <exp>1</exp>
       <max>100</max>
       <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>const Constant_T</ctype>
       <help>ACPres Fan speed request</help>
@@ -26400,7 +25874,7 @@
       <class>interpolation_2d</class>
       <storage>FLASH</storage>
       <update>REMOTE</update>
-      <type>real32</type>
+      <type>uint8</type>
       <output>ACPresFanSpeed</output>
       <col_prelookup>ACPresFanSpeedColIdxArr</col_prelookup>
       <col_len>7</col_len>
@@ -26413,10 +25887,10 @@
       <gain>1</gain>
       <offset>0</offset>
       <exp>1</exp>
-      <max>1.0E17</max>
-      <min>-1.0E17</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
+      <max>255</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
       <units>%</units>
       <ctype>Volatile_BSS_T</ctype>
       <help>ACPres Fan speed request</help>
@@ -26425,7 +25899,7 @@
       <class>var</class>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
    </VarDec>
    <VarDec>
       <name>O2StartUpDelayTbl</name>
@@ -28188,6 +27662,69 @@
          <item name="Transient" value="1"/>
          <default>Unknown</default>
       </enum>
+   </VarDec>
+   <VarDec>
+      <name>IAT_KeyUp09IdxArr</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>degC</units>
+      <ctype>const Constant_T</ctype>
+      <help>Index of IAT captured at key-up.</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Virtual Indexes|IAT_KeyUp</group>
+      <struct>ConstantWork.IAT_KeyUp09IdxArr</struct>
+      <class>prelookup</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+      <len>9</len>
+      <input>IAT_KeyUp09In</input>
+      <index>IAT_KeyUp09Idx</index>
+   </VarDec>
+   <VarDec>
+      <name>IAT_KeyUp09Idx</name>
+      <access>RO RO RO RO</access>
+      <gain>0.001953125</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>127.998046875</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0x0000FFFF</mask>
+      <units>idx.frac</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Index of IAT captured at key-up.</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Virtual Indexes|IAT_KeyUp</group>
+      <struct>VolatileWork_BSS.IAT_KeyUp09Idx</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>IAT_KeyUp09In</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>degC</units>
+      <ctype>Volatile_BSS_T</ctype>
+      <help>Index of IAT captured at key-up.</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|Virtual Indexes|IAT_KeyUp</group>
+      <struct>VolatileWork_BSS.IAT_KeyUp09In</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>App05IdxArr</name>
@@ -31454,7 +30991,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9020p0001</help>
+      <help>Digital output pin selection for DOut5883p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACPin</struct>
       <storage>FLASH</storage>
@@ -31492,125 +31029,6 @@
          <item name="OILP" value="11"/>
          <item name="FINJ1" value="12"/>
          <item name="FINJ2" value="13"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_Pin</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>32767</max>
-      <min>-32768</min>
-      <format>5.0</format>
-      <mask>0x0000FFFF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Frequency input pin selection for VSPD_Pin</help>
-      <group>System | I/O Pins | Inputs Config</group>
-      <struct>ConstantWork.VSPD_Pin</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>int16</type>
-      <class>enum</class>
-      <enum>
-         <item name="(None)" value="-1"/>
-         <item name="DG1M" value="93"/>
-         <item name="DG2M" value="94"/>
-         <item name="DG4M" value="96"/>
-         <item name="CNK" value="100"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_Pin_EdgeDetect</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Frequency input edge trigger for VSPD_Pin</help>
-      <group>System | I/O Pins | Frequency In Config</group>
-      <struct>ConstantWork.VSPD_Pin_EdgeDetect</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Rising Edge" value="0"/>
-         <item name="Falling Edge" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_Pin_AliasProtect</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Frequency input alias detection for VSPD_Pin</help>
-      <group>System | I/O Pins | Frequency In Config</group>
-      <struct>ConstantWork.VSPD_Pin_AliasProtect</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="No Alias Protect" value="0"/>
-         <item name="Use Alias Protect" value="1"/>
-         <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_Pin_MinFrequency</name>
-      <access>RW RW RW RW</access>
-      <gain>0.01</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>10000</max>
-      <min>0.01</min>
-      <format>5.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>Hz</units>
-      <ctype>const Constant_T</ctype>
-      <help>Minimum expected input frequency for VSPD_Pin</help>
-      <group>System | I/O Pins | Frequency In Config</group>
-      <struct>ConstantWork.VSPD_Pin_MinFrequency</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint32</type>
-   </VarDec>
-   <VarDec>
-      <name>VSPD_Pin_Interface</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1</max>
-      <min>0</min>
-      <format>3.0</format>
-      <mask>0x000000FF</mask>
-      <ctype>const Constant_T</ctype>
-      <help>Frequency input signal interface for VSPD_Pin</help>
-      <group>System | I/O Pins | Frequency In Config</group>
-      <struct>ConstantWork.VSPD_Pin_Interface</struct>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <class>enum</class>
-      <enum>
-         <item name="Digital Input" value="0"/>
-         <item name="VR Input" value="1"/>
          <default>Unknown</default>
       </enum>
    </VarDec>
@@ -32166,6 +31584,125 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>VSPD_Pin</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>32767</max>
+      <min>-32768</min>
+      <format>5.0</format>
+      <mask>0x0000FFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Frequency input pin selection for VSPD_Pin</help>
+      <group>System | I/O Pins | Inputs Config</group>
+      <struct>ConstantWork.VSPD_Pin</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>int16</type>
+      <class>enum</class>
+      <enum>
+         <item name="(None)" value="-1"/>
+         <item name="DG1M" value="93"/>
+         <item name="DG2M" value="94"/>
+         <item name="DG4M" value="96"/>
+         <item name="CNK" value="100"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_Pin_EdgeDetect</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Frequency input edge trigger for VSPD_Pin</help>
+      <group>System | I/O Pins | Frequency In Config</group>
+      <struct>ConstantWork.VSPD_Pin_EdgeDetect</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Rising Edge" value="0"/>
+         <item name="Falling Edge" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_Pin_AliasProtect</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Frequency input alias detection for VSPD_Pin</help>
+      <group>System | I/O Pins | Frequency In Config</group>
+      <struct>ConstantWork.VSPD_Pin_AliasProtect</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="No Alias Protect" value="0"/>
+         <item name="Use Alias Protect" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_Pin_MinFrequency</name>
+      <access>RW RW RW RW</access>
+      <gain>0.01</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>10000</max>
+      <min>0.01</min>
+      <format>5.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>Hz</units>
+      <ctype>const Constant_T</ctype>
+      <help>Minimum expected input frequency for VSPD_Pin</help>
+      <group>System | I/O Pins | Frequency In Config</group>
+      <struct>ConstantWork.VSPD_Pin_MinFrequency</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint32</type>
+   </VarDec>
+   <VarDec>
+      <name>VSPD_Pin_Interface</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>3.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <help>Frequency input signal interface for VSPD_Pin</help>
+      <group>System | I/O Pins | Frequency In Config</group>
+      <struct>ConstantWork.VSPD_Pin_Interface</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Digital Input" value="0"/>
+         <item name="VR Input" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>SysVoltage</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -32703,7 +32240,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9838p0001</help>
+      <help>Digital output pin selection for DOut6701p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN1Pin</struct>
       <storage>FLASH</storage>
@@ -32807,7 +32344,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9839p0001</help>
+      <help>Digital output pin selection for DOut6702p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FAN2Pin</struct>
       <storage>FLASH</storage>
@@ -32911,7 +32448,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut9859p0001</help>
+      <help>Digital output pin selection for DOut6722p001</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>

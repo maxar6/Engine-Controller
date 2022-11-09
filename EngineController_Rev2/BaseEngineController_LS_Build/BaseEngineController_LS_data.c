@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2053
+ * Model version                  : 1.2094
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Tue Nov 08 18:29:01 2022
+ * C/C++ source code generated on : Tue Nov 08 22:17:40 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,14 +20,14 @@
 /* Invariant block signals (auto storage) */
 const ConstBlockIO_BaseEngineController_LS BaseEngineController_LS_ConstB = {
   0.0
-  ,                                    /* '<S868>/Gain4' */
+  ,                                    /* '<S856>/Gain4' */
   0.0
   ,                                    /* '<S138>/motohawk_replicate2' */
 
   { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
   ,                                    /* '<S138>/motohawk_replicate' */
   0U
-  /* '<S868>/Data Type Conversion5' */
+  /* '<S856>/Data Type Conversion5' */
 };
 
 /* Constant parameters (auto storage) */
@@ -47,12 +47,12 @@ const ConstParam_BaseEngineController_LS BaseEngineController_LS_ConstP = {
    *   '<S318>/Combinatorial  Logic'
    *   '<S319>/Combinatorial  Logic'
    *   '<S320>/Combinatorial  Logic'
-   *   '<S358>/Combinatorial  Logic'
-   *   '<S359>/Combinatorial  Logic'
-   *   '<S360>/Combinatorial  Logic'
-   *   '<S364>/Combinatorial  Logic'
-   *   '<S365>/Combinatorial  Logic'
-   *   '<S366>/Combinatorial  Logic'
+   *   '<S348>/Combinatorial  Logic'
+   *   '<S349>/Combinatorial  Logic'
+   *   '<S350>/Combinatorial  Logic'
+   *   '<S354>/Combinatorial  Logic'
+   *   '<S355>/Combinatorial  Logic'
+   *   '<S356>/Combinatorial  Logic'
    *   '<S45>/Combinatorial  Logic'
    *   '<S297>/Combinatorial  Logic'
    */
@@ -60,8 +60,8 @@ const ConstParam_BaseEngineController_LS BaseEngineController_LS_ConstP = {
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S1031>/Logic'
-   *   '<S617>/Logic'
+   *   '<S1019>/Logic'
+   *   '<S605>/Logic'
    */
   { 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0 }
 };

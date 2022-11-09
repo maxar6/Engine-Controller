@@ -16,7 +16,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s696_Merge</struct>
+      <struct>BaseEngineController_LS_B.s684_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -26,16 +26,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o7</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -53,7 +53,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o3</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -71,7 +71,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s389_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s377_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel</group>
    </VarDec>
    <VarDec>
@@ -90,7 +90,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s378_motohawk_interpolation_2d2</struct>
+      <struct>BaseEngineController_LS_B.s366_motohawk_interpolation_2d2</struct>
       <help>Volumetric efficiency adapt amount at the given speed and load</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -109,7 +109,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s866_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s854_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
    <VarDec>
@@ -128,7 +128,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s947_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s935_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1</group>
    </VarDec>
@@ -148,7 +148,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s747_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s735_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -320,7 +320,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s826_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s814_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -339,7 +339,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s772_Merge</struct>
+      <struct>BaseEngineController_LS_B.s760_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -359,7 +359,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s635_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s623_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -379,7 +379,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s662_Merge</struct>
+      <struct>BaseEngineController_LS_B.s650_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -398,7 +398,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s578_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s566_LogicalOperator</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
    </VarDec>
    <VarDec>
@@ -407,16 +407,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o8</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion6</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -435,7 +435,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s948_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s936_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2</group>
    </VarDec>
@@ -454,7 +454,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s894_Switch</struct>
+      <struct>BaseEngineController_LS_B.s882_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1</group>
    </VarDec>
    <VarDec>
@@ -472,7 +472,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s886_Switch</struct>
+      <struct>BaseEngineController_LS_B.s874_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
    </VarDec>
    <VarDec>
@@ -491,7 +491,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s921_Sum</struct>
+      <struct>BaseEngineController_LS_B.s909_Sum</struct>
       <help>StartAngle for coils to establish dwell.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -511,7 +511,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s729_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s717_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -531,7 +531,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s728_Merge</struct>
+      <struct>BaseEngineController_LS_B.s716_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -551,7 +551,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s738_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s726_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -571,7 +571,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s737_Merge</struct>
+      <struct>BaseEngineController_LS_B.s725_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -687,7 +687,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s784_Merge</struct>
+      <struct>BaseEngineController_LS_B.s772_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -707,7 +707,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_ain14</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_ain14</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -727,7 +727,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_ain2</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -747,7 +747,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s453_Gain1</struct>
+      <struct>BaseEngineController_LS_B.s441_Gain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
    </VarDec>
@@ -767,7 +767,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s611_Merge</struct>
+      <struct>BaseEngineController_LS_B.s599_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
    </VarDec>
@@ -787,7 +787,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s575_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s563_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | Scramble</group>
    </VarDec>
@@ -807,7 +807,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s499_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s487_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_EquivRatio</group>
    </VarDec>
@@ -827,7 +827,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s416_Switch1</struct>
+      <struct>BaseEngineController_LS_B.s404_Switch1</struct>
       <help>APP used in controller (after power curve and CutThrottle limiting</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed</group>
    </VarDec>
@@ -847,7 +847,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s378_MultiportSwitch</struct>
+      <struct>BaseEngineController_LS_B.s366_MultiportSwitch</struct>
       <help>Air mass flow rate at the intake manifold - Used by the fueling algorithm</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -867,7 +867,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1006_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s994_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|WASTEGATE-Control | WASTEGATE</group>
    </VarDec>
@@ -887,7 +887,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s870_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s858_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|AC Control | AC</group>
    </VarDec>
@@ -1081,7 +1081,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s806_Merge</struct>
+      <struct>BaseEngineController_LS_B.s794_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1100,7 +1100,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s585_Merge</struct>
+      <struct>BaseEngineController_LS_B.s573_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ESTOP</group>
    </VarDec>
@@ -1110,16 +1110,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o10</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1128,16 +1128,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o7</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion7</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1155,7 +1155,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o4</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1174,7 +1174,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_Switch</struct>
+      <struct>BaseEngineController_LS_B.s434_Switch</struct>
       <help>Indicates time since entering Stall State - saturates and disables at 2000 seconds</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Stall</group>
    </VarDec>
@@ -1193,7 +1193,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s395_Merge</struct>
+      <struct>BaseEngineController_LS_B.s383_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -1479,7 +1479,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s826_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s814_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -1497,7 +1497,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s813_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s801_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1515,7 +1515,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s823_Merge</struct>
+      <struct>BaseEngineController_LS_B.s811_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1533,7 +1533,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s792_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s780_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1552,7 +1552,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s688_Merge</struct>
+      <struct>BaseEngineController_LS_B.s676_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1572,7 +1572,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_ain4</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_ain4</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -1592,7 +1592,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s579_Merge</struct>
+      <struct>BaseEngineController_LS_B.s567_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ACSw</group>
    </VarDec>
@@ -1612,7 +1612,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_MathFunction1</struct>
+      <struct>BaseEngineController_LS_B.s447_MathFunction1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio</group>
    </VarDec>
@@ -1622,16 +1622,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o9</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1640,16 +1640,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o6</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1668,7 +1668,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s438_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s426_Sum1</struct>
       <help>Acceleration rate of engine</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Engine Accel</group>
    </VarDec>
@@ -1838,7 +1838,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s840_Merge</struct>
+      <struct>BaseEngineController_LS_B.s828_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -1856,7 +1856,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s792_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s780_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1875,7 +1875,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s634_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s622_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1895,7 +1895,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s593_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s581_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -1914,7 +1914,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o5</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1932,7 +1932,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s394_Merge</struct>
+      <struct>BaseEngineController_LS_B.s382_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -1950,7 +1950,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s893_Switch</struct>
+      <struct>BaseEngineController_LS_B.s881_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt</group>
    </VarDec>
    <VarDec>
@@ -1968,7 +1968,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s413_Merge</struct>
+      <struct>BaseEngineController_LS_B.s401_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
    </VarDec>
    <VarDec>
@@ -2118,7 +2118,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s847_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s835_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -2137,7 +2137,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s633_Merge</struct>
+      <struct>BaseEngineController_LS_B.s621_Merge</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -2156,7 +2156,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s420_MultiportSwitch</struct>
+      <struct>BaseEngineController_LS_B.s408_MultiportSwitch</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Gear Estimator</group>
    </VarDec>
    <VarDec>
@@ -2175,7 +2175,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s979_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s967_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_S</group>
    </VarDec>
@@ -2195,7 +2195,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s957_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s945_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM</group>
    </VarDec>
@@ -2215,7 +2215,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s709_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s697_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -2329,7 +2329,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s767_Switch</struct>
+      <struct>BaseEngineController_LS_B.s755_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -2348,7 +2348,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s670_Merge</struct>
+      <struct>BaseEngineController_LS_B.s658_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -2367,7 +2367,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s454_RPMInst</struct>
+      <struct>BaseEngineController_LS_B.s442_RPMInst</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -2376,34 +2376,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o8</struct>
-      <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
-   </VarDec>
-   <VarDec>
-      <name>Bank2EquivRatio</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_MathFunction1</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2412,16 +2394,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o9</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion9</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2430,16 +2412,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o6</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion8</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2457,7 +2439,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o2</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2475,7 +2457,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s427_Switch2</struct>
+      <struct>BaseEngineController_LS_B.s415_Switch2</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|VSPD_Selector</group>
    </VarDec>
    <VarDec>
@@ -2493,7 +2475,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s439_State</struct>
+      <struct>BaseEngineController_LS_B.s427_State</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|EngineState</group>
    </VarDec>
    <VarDec>
@@ -2512,7 +2494,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s378_Sum</struct>
+      <struct>BaseEngineController_LS_B.s366_Sum</struct>
       <help>Final volumentric efficiency after adapt table</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -2550,7 +2532,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s965_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s953_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FuelPump | FUELP</group>
    </VarDec>
@@ -2570,7 +2552,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s961_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s949_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM</group>
    </VarDec>
@@ -2590,7 +2572,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s708_motohawk_ain</struct>
+      <struct>BaseEngineController_LS_B.s696_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -2610,7 +2592,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s755_Merge</struct>
+      <struct>BaseEngineController_LS_B.s743_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -2630,7 +2612,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s415_CollectAverage.s380_Product</struct>
+      <struct>BaseEngineController_LS_B.s403_CollectAverage.s368_Product</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Capture IAT At Startup</group>
    </VarDec>
    <VarDec>
@@ -2741,7 +2723,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s766_Switch</struct>
+      <struct>BaseEngineController_LS_B.s754_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -2759,7 +2741,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s809_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s797_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -2778,7 +2760,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s457_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s445_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -2798,7 +2780,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s636_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s624_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -2818,7 +2800,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_ain_read1</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_ain_read1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -2838,7 +2820,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s630_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s618_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -2858,7 +2840,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s612_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s600_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
    </VarDec>
@@ -2877,7 +2859,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_MultiportSwitch</struct>
+      <struct>BaseEngineController_LS_B.s447_MultiportSwitch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2886,16 +2868,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage2_o5</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion8</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -2914,7 +2896,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s423_Switch2</struct>
+      <struct>BaseEngineController_LS_B.s411_Switch2</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|TPS  Sensor Arbitration</group>
    </VarDec>
    <VarDec>
@@ -2932,7 +2914,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s421_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s409_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag</group>
    </VarDec>
    <VarDec>
@@ -2951,7 +2933,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s975_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s963_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_P</group>
    </VarDec>
@@ -2971,7 +2953,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s431_Sum2</struct>
+      <struct>BaseEngineController_LS_B.s419_Sum2</struct>
       <help>Final ETC request</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
    </VarDec>
@@ -3063,7 +3045,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1027_Switch</struct>
+      <struct>BaseEngineController_LS_B.s1015_Switch</struct>
       <group>System | Main Power Relay</group>
    </VarDec>
    <VarDec>
@@ -3100,7 +3082,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s843_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s831_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -3119,7 +3101,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s457_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s445_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -3138,7 +3120,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s578_Switch</struct>
+      <struct>BaseEngineController_LS_B.s566_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
    </VarDec>
    <VarDec>
@@ -3157,7 +3139,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s603_Merge</struct>
+      <struct>BaseEngineController_LS_B.s591_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | TwoStep</group>
    </VarDec>
@@ -3167,16 +3149,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o10</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3194,7 +3176,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o4</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3212,7 +3194,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage2_o4</struct>
+      <struct>BaseEngineController_LS_B.s446_ReadCANMessage2_o4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3230,7 +3212,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s926_Switch1</struct>
+      <struct>BaseEngineController_LS_B.s914_Switch1</struct>
       <help>Number of TDC events counted after stall.  This will reset once in Crank and Run.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
    </VarDec>
@@ -3250,7 +3232,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s715_Merge</struct>
+      <struct>BaseEngineController_LS_B.s703_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -3269,7 +3251,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s626_Sum</struct>
+      <struct>BaseEngineController_LS_B.s614_Sum</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
    </VarDec>
    <VarDec>
@@ -3443,7 +3425,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s796_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s784_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -3461,7 +3443,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s764_Switch</struct>
+      <struct>BaseEngineController_LS_B.s752_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -3480,7 +3462,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_frequency_in</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_frequency_in</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -3500,7 +3482,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s649_Merge</struct>
+      <struct>BaseEngineController_LS_B.s637_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -3520,7 +3502,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s628_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s616_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -3539,7 +3521,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s578_LogicalOperator3</struct>
+      <struct>BaseEngineController_LS_B.s566_LogicalOperator3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
    </VarDec>
    <VarDec>
@@ -3558,7 +3540,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s500_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s488_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio</group>
    </VarDec>
@@ -3578,7 +3560,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s523_Merge</struct>
+      <struct>BaseEngineController_LS_B.s511_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_EquivRatio</group>
    </VarDec>
@@ -3597,7 +3579,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o3</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3615,7 +3597,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage1_o2</struct>
+      <struct>BaseEngineController_LS_B.s446_ReadCANMessage1_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3624,16 +3606,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o7</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3642,16 +3624,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o3</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3669,7 +3651,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s418_Crank</struct>
+      <struct>BaseEngineController_LS_B.s406_Crank</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|EngineState</group>
    </VarDec>
    <VarDec>
@@ -3687,7 +3669,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s400_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s388_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -3706,7 +3688,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s378_NominalAirFlowRate</struct>
+      <struct>BaseEngineController_LS_B.s366_NominalAirFlowRate</struct>
       <help>Air Mass Flow Rate - ideal</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -3725,7 +3707,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s889_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s877_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
    </VarDec>
    <VarDec>
@@ -3894,7 +3876,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s627_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s615_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -3913,7 +3895,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s453_motohawk_din2</struct>
+      <struct>BaseEngineController_LS_B.s441_motohawk_din2</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | TwoStep</group>
    </VarDec>
@@ -3933,7 +3915,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s598_Merge</struct>
+      <struct>BaseEngineController_LS_B.s586_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | Scramble</group>
    </VarDec>
@@ -3953,7 +3935,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s571_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s559_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ACSw</group>
    </VarDec>
@@ -3972,7 +3954,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage1_o2</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3990,7 +3972,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_ReadCANMessage_o5</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3999,16 +3981,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o6</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4017,16 +3999,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o4</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4044,7 +4026,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s393_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -4063,7 +4045,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s709_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s697_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -4251,7 +4233,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s857_Merge</struct>
+      <struct>BaseEngineController_LS_B.s845_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -4269,7 +4251,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s830_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s818_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -4287,7 +4269,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s809_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s797_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -4306,7 +4288,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_ain3</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_ain3</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -4326,7 +4308,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s631_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s619_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -4346,7 +4328,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s453_motohawk_din</struct>
+      <struct>BaseEngineController_LS_B.s441_motohawk_din</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ESTOP</group>
    </VarDec>
@@ -4366,7 +4348,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s582_Merge</struct>
+      <struct>BaseEngineController_LS_B.s570_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ClutchSw</group>
    </VarDec>
@@ -4385,7 +4367,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage2_o2</struct>
+      <struct>BaseEngineController_LS_B.s446_ReadCANMessage2_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4403,7 +4385,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s421_Sum3</struct>
+      <struct>BaseEngineController_LS_B.s409_Sum3</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag</group>
    </VarDec>
    <VarDec>
@@ -4422,7 +4404,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s866_motohawk_pwm1</struct>
+      <struct>BaseEngineController_LS_B.s854_motohawk_pwm1</struct>
       <help>Current output of ETC duty cycle.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
@@ -4442,7 +4424,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s709_motohawk_ain3</struct>
+      <struct>BaseEngineController_LS_B.s697_motohawk_ain3</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -4462,7 +4444,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s756_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s744_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -4482,7 +4464,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s709_motohawk_ain</struct>
+      <struct>BaseEngineController_LS_B.s697_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -4614,27 +4596,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_MathFunction</struct>
+      <struct>BaseEngineController_LS_B.s447_MathFunction</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_EquivRatio</group>
-   </VarDec>
-   <VarDec>
-      <name>Bank1EquivRatio</name>
-      <class>var</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s459_MathFunction</struct>
-      <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
       <name>GPS_DayUTC_Prb</name>
@@ -4642,16 +4606,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o5</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4669,7 +4633,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o2</struct>
+      <struct>BaseEngineController_LS_B.s446_ReadCANMessage_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4688,7 +4652,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s378_ModelAirMassFlowRate</struct>
+      <struct>BaseEngineController_LS_B.s366_ModelAirMassFlowRate</struct>
       <help>Air Mass Flow Rate - Port Total</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
    </VarDec>
@@ -4708,7 +4672,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s379_Sum</struct>
+      <struct>BaseEngineController_LS_B.s367_Sum</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs</group>
    </VarDec>
    <VarDec>
@@ -4727,7 +4691,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s716_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s704_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -4864,7 +4828,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s786_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s774_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -4884,7 +4848,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s632_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s620_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -4904,7 +4868,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s678_Merge</struct>
+      <struct>BaseEngineController_LS_B.s666_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -4924,7 +4888,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s592_Merge</struct>
+      <struct>BaseEngineController_LS_B.s580_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -4934,16 +4898,16 @@
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
       <update>BACKGND</update>
-      <type>real32</type>
+      <type>uint8</type>
       <gain>1.0</gain>
       <offset>0.0</offset>
       <exp>1.0</exp>
-      <max>100000000000000000.000000</max>
-      <min>-100000000000000000.000000</min>
-      <format>4.2</format>
+      <max>255.000000</max>
+      <min>0.000000</min>
+      <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage_o8</struct>
+      <struct>BaseEngineController_LS_B.s446_DataTypeConversion5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4961,7 +4925,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s442_Sum</struct>
+      <struct>BaseEngineController_LS_B.s430_Sum</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Key On</group>
    </VarDec>
    <VarDec>
@@ -4980,7 +4944,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s419_Sum3</struct>
+      <struct>BaseEngineController_LS_B.s407_Sum3</struct>
       <help>Fuel pressure across injector (rail - manifold)</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Fuel Delta Pressure Calculation</group>
    </VarDec>
@@ -4999,7 +4963,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s370_motohawk_data_read</struct>
+      <struct>BaseEngineController_LS_B.s358_motohawk_data_read</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel</group>
    </VarDec>
    <VarDec>
@@ -5038,7 +5002,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s866_ETC</struct>
+      <struct>BaseEngineController_LS_B.s854_ETC</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
@@ -5057,7 +5021,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s440_Switch</struct>
+      <struct>BaseEngineController_LS_B.s428_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|EngineState|TDC_Counter</group>
    </VarDec>
    <VarDec>
@@ -5262,7 +5226,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s843_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s831_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -5280,7 +5244,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s765_Switch</struct>
+      <struct>BaseEngineController_LS_B.s753_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -5299,7 +5263,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s774_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s762_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -5319,7 +5283,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s572_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s560_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ClutchSw</group>
    </VarDec>
@@ -5339,7 +5303,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s531_Merge</struct>
+      <struct>BaseEngineController_LS_B.s519_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio</group>
    </VarDec>
@@ -5358,7 +5322,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage1_o3</struct>
+      <struct>BaseEngineController_LS_B.s446_ReadCANMessage1_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -5376,7 +5340,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s458_ReadCANMessage2_o3</struct>
+      <struct>BaseEngineController_LS_B.s446_ReadCANMessage2_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -5394,7 +5358,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s444_Switch</struct>
+      <struct>BaseEngineController_LS_B.s432_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Run</group>
    </VarDec>
    <VarDec>
@@ -5413,7 +5377,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s746_Merge</struct>
+      <struct>BaseEngineController_LS_B.s734_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -5550,7 +5514,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s704_Merge</struct>
+      <struct>BaseEngineController_LS_B.s692_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -5570,7 +5534,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s455_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_ain1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -5590,7 +5554,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s629_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s617_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -5610,7 +5574,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s641_Merge</struct>
+      <struct>BaseEngineController_LS_B.s629_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -5630,7 +5594,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s453_Gain</struct>
+      <struct>BaseEngineController_LS_B.s441_Gain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -5649,7 +5613,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s397_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s385_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -5668,7 +5632,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s375_Timer</struct>
+      <struct>BaseEngineController_LS_B.s363_Timer</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs</group>
    </VarDec>
    <VarDec>
@@ -5705,7 +5669,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s922_Sum</struct>
+      <struct>BaseEngineController_LS_B.s910_Sum</struct>
       <help>Stop angle for coils to establish dwell.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -5725,7 +5689,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s414_CollectAverage.s380_Product</struct>
+      <struct>BaseEngineController_LS_B.s402_CollectAverage.s368_Product</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed</group>
    </VarDec>
    <VarDec>
@@ -5952,7 +5916,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s989_Merge</struct>
+      <struct>BaseEngineController_LS_B.s977_Merge</struct>
       <help>Enable state for injectors.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
@@ -5973,7 +5937,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s862_SparkSequence_o3</struct>
+      <struct>BaseEngineController_LS_B.s850_SparkSequence_o3</struct>
       <help>ADC counts of measured voltage feedback for diagnosing the ESTs during stall state.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -6017,7 +5981,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s862_LogicalOperator1</struct>
+      <struct>BaseEngineController_LS_B.s850_LogicalOperator1</struct>
       <help>Enable sate for coils.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
       <col_len>8</col_len>
@@ -6039,7 +6003,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s862_SparkSequence_o4</struct>
+      <struct>BaseEngineController_LS_B.s850_SparkSequence_o4</struct>
       <help>Dwell time used to diagnose ESTs during run-state.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -6060,7 +6024,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s344_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s339_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Fuel Economy</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -6100,7 +6064,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s868_InjectorSequence_o1</struct>
+      <struct>BaseEngineController_LS_B.s856_InjectorSequence_o1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -7825,7 +7789,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s924_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s912_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -7848,7 +7812,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s393_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -7898,118 +7862,6 @@
       <struct>can_tx_err_CAN_2_0</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | CAN</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut9839p0001</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9839p0001</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -8455,7 +8307,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s454_motohawk_encoder_fault</struct>
+      <struct>BaseEngineController_LS_B.s442_motohawk_encoder_fault</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
       <enum name="VarDecEnum_30">
          <item name="No Fault" value="0"/>
@@ -8482,7 +8334,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s393_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
       <help>Steady-State Engine Operation</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs|Engine Steady-State Flag</group>
       <enum name="VarDecEnum_28">
@@ -8531,7 +8383,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s413_RelationalOperator3</struct>
+      <struct>BaseEngineController_LS_B.s401_RelationalOperator3</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
@@ -8610,118 +8462,6 @@
          <item name="Pause" value="2"/>
          <item name="Stop" value="3"/>
          <default>Unknown</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut9838p0001</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9838p0001</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
       </enum>
    </VarDec>
    <VarDec>
@@ -9220,7 +8960,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DOut9859p0001</name>
+      <name>dout_create_DOut6722p001</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -9234,121 +8974,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9859p0001</struct>
+      <struct>dout_create_DOut6722p001</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>freq_in_create_FuelSensorPin</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>freq_in_create_FuelSensorPin</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | FrequencyIn</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -9459,6 +9087,118 @@
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
       <struct>freq_in_read_VSPD_Pin</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | FrequencyIn</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>freq_in_create_FuelSensorPin</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>freq_in_create_FuelSensorPin</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | FrequencyIn</group>
       <enum name="E_NativeFWError">
@@ -9794,7 +9534,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s454_motohawk_encoder_state</struct>
+      <struct>BaseEngineController_LS_B.s442_motohawk_encoder_state</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
       <enum name="VarDecEnum_31">
          <item name="zero" value="0"/>
@@ -10392,6 +10132,118 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>dout_create_DOut6701p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut6701p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>freq_in_create_MAF_Pin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -10742,7 +10594,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s378_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s366_LogicalOperator</struct>
       <help>Indicates whether the volumetric efficiency map is currently being adjusted</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive</group>
       <enum name="VarDecEnum_27">
@@ -10881,6 +10733,118 @@
       <struct>pwm_create_IAC_PPin_PWMOutput</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | PWM</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut6702p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut6702p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -12478,6 +12442,118 @@
       </enum>
    </VarDec>
    <VarDec>
+      <name>dout_create_DOut7250p0009</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut7250p0009</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>ain_create_ECUP</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -12716,7 +12792,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s924_RelationalOperator1</struct>
+      <struct>BaseEngineController_LS_B.s912_RelationalOperator1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -13084,7 +13160,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>ain_read_TPS1AnalogInput</name>
+      <name>freq_in_create_VSPD_Pin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -13098,9 +13174,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>ain_read_TPS1AnalogInput</struct>
+      <struct>freq_in_create_VSPD_Pin</struct>
       <help>Debug Variable</help>
-      <group>System | Debug | Resources | AnalogIn</group>
+      <group>System | Debug | Resources | FrequencyIn</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -13196,7 +13272,7 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>freq_in_create_VSPD_Pin</name>
+      <name>ain_read_TPS1AnalogInput</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
       <storage>RAM</storage>
@@ -13210,9 +13286,9 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>E_NativeFWError</ctype>
-      <struct>freq_in_create_VSPD_Pin</struct>
+      <struct>ain_read_TPS1AnalogInput</struct>
       <help>Debug Variable</help>
-      <group>System | Debug | Resources | FrequencyIn</group>
+      <group>System | Debug | Resources | AnalogIn</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -13572,6 +13648,118 @@
       <struct>ain_read_ACPresPin</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | AnalogIn</group>
+      <enum name="E_NativeFWError">
+         <item name="Normal Operation" value="0"/>
+         <item name="Bad Resource ID" value="1"/>
+         <item name="Hardware Not Supported" value="2"/>
+         <item name="Behaviour Not Supported" value="3"/>
+         <item name="Bad Attribute Data" value="4"/>
+         <item name="Fail On Create" value="5"/>
+         <item name="Fail On Set Attributes" value="6"/>
+         <item name="Resource Not Created" value="7"/>
+         <item name="Missing Attribute" value="8"/>
+         <item name="Behaviour Method Not Supported" value="9"/>
+         <item name="A Service Failed" value="10"/>
+         <item name="Failed to destroy a resource" value="11"/>
+         <item name="Resource Was Created" value="12"/>
+         <item name="Resource Conflict" value="13"/>
+         <item name="Invalid Encoder Type" value="14"/>
+         <item name="2-Strike Not Supported" value="15"/>
+         <item name="720degCA Pattern Not Supported" value="16"/>
+         <item name="CAM Pattern Not Supported" value="17"/>
+         <item name="Unknown CAM Pattern Supplied" value="18"/>
+         <item name="Engine Speed Present" value="19"/>
+         <item name="Hardware Interface Not Supported" value="20"/>
+         <item name="Service Already Started" value="21"/>
+         <item name="Register Write Failed to verify" value="22"/>
+         <item name="Register access was denied" value="23"/>
+         <item name="Out of free store memory" value="24"/>
+         <item name="Software Q Overrun" value="25"/>
+         <item name="Hardware Q Overrun" value="26"/>
+         <item name="Feature unsupported in archive" value="27"/>
+         <item name="Insufficient FW resource" value="28"/>
+         <item name="OS Resource conflict" value="29"/>
+         <item name="Driver Mode conflict" value="30"/>
+         <item name="RTC time is illegal" value="31"/>
+         <item name="FFS unmounted" value="32"/>
+         <item name="Access from an ISR" value="33"/>
+         <item name="FFS internal" value="34"/>
+         <item name="Operation timed out" value="35"/>
+         <item name="Task Kernel API Usage" value="36"/>
+         <item name="Operation aborted" value="37"/>
+         <item name="File not Found" value="38"/>
+         <item name="Invalid characters in filename" value="39"/>
+         <item name="Duplicate filename" value="40"/>
+         <item name="Filename is too long" value="41"/>
+         <item name="Dir not empty on remove" value="42"/>
+         <item name="Dir not found" value="43"/>
+         <item name="Dir name invalid" value="44"/>
+         <item name="Dir exists" value="45"/>
+         <item name="Dir too deep" value="46"/>
+         <item name="Illegal Handle" value="47"/>
+         <item name="End of File" value="48"/>
+         <item name="Media Full" value="49"/>
+         <item name="Media Write" value="50"/>
+         <item name="Media Read" value="51"/>
+         <item name="Media Write Protected" value="52"/>
+         <item name="File Read Only" value="53"/>
+         <item name="FS Media Changed" value="54"/>
+         <item name="Internal USB" value="55"/>
+         <item name="Voltage too high for USB IC" value="56"/>
+         <item name="Encoder not created" value="57"/>
+         <item name="TPU Chan Conflict" value="64"/>
+         <item name="TPU Func Unavailable" value="65"/>
+         <item name="TPU Config" value="66"/>
+         <item name="TPU Primative Usage" value="67"/>
+         <item name="TPU Primitive Count" value="68"/>
+         <item name="TPU Restricted TPU channel" value="69"/>
+         <item name="TPU Not Created" value="70"/>
+         <item name="TPU Self Modify constant write err" value="71"/>
+         <item name="TPU Error 0x48" value="72"/>
+         <item name="TPU Error 0x49" value="73"/>
+         <item name="TPU Error 0x4A" value="74"/>
+         <item name="TPU Error 0x4B" value="75"/>
+         <item name="TPU Error 0x4C" value="76"/>
+         <item name="TPU Error 0x4D" value="77"/>
+         <item name="TPU Error 0x4E" value="78"/>
+         <item name="TPU Error 0x4F" value="79"/>
+         <item name="TPU Error 0x50" value="80"/>
+         <item name="TPU Error 0x51" value="81"/>
+         <item name="TPU Error 0x52" value="82"/>
+         <item name="TPU Error 0x53" value="83"/>
+         <item name="TPU Error 0x54" value="84"/>
+         <item name="TPU Error 0x55" value="85"/>
+         <item name="TPU Error 0x56" value="86"/>
+         <item name="TPU Error 0x57" value="87"/>
+         <item name="TPU Error 0x58" value="88"/>
+         <item name="TPU Error 0x59" value="89"/>
+         <item name="TPU Error 0x5A" value="90"/>
+         <item name="TPU Error 0x5B" value="91"/>
+         <item name="TPU Error 0x5C" value="92"/>
+         <item name="TPU Error 0x5D" value="93"/>
+         <item name="TPU Error 0x5E" value="94"/>
+         <item name="TPU Error 0x5F" value="95"/>
+         <default>Illegal Error</default>
+      </enum>
+   </VarDec>
+   <VarDec>
+      <name>dout_create_DOut5883p001</name>
+      <class>enum</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>0.0</max>
+      <min>0.0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>E_NativeFWError</ctype>
+      <struct>dout_create_DOut5883p001</struct>
+      <help>Debug Variable</help>
+      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -14402,7 +14590,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s395_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s383_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
@@ -14990,118 +15178,6 @@
       </enum>
    </VarDec>
    <VarDec>
-      <name>dout_create_DOut9020p0001</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut9020p0001</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
       <name>ain_create_EVAPSensorPin</name>
       <class>enum</class>
       <access>RO RO RO RO</access>
@@ -15119,118 +15195,6 @@
       <struct>ain_create_EVAPSensorPin</struct>
       <help>Debug Variable</help>
       <group>System | Debug | Resources | AnalogIn</group>
-      <enum name="E_NativeFWError">
-         <item name="Normal Operation" value="0"/>
-         <item name="Bad Resource ID" value="1"/>
-         <item name="Hardware Not Supported" value="2"/>
-         <item name="Behaviour Not Supported" value="3"/>
-         <item name="Bad Attribute Data" value="4"/>
-         <item name="Fail On Create" value="5"/>
-         <item name="Fail On Set Attributes" value="6"/>
-         <item name="Resource Not Created" value="7"/>
-         <item name="Missing Attribute" value="8"/>
-         <item name="Behaviour Method Not Supported" value="9"/>
-         <item name="A Service Failed" value="10"/>
-         <item name="Failed to destroy a resource" value="11"/>
-         <item name="Resource Was Created" value="12"/>
-         <item name="Resource Conflict" value="13"/>
-         <item name="Invalid Encoder Type" value="14"/>
-         <item name="2-Strike Not Supported" value="15"/>
-         <item name="720degCA Pattern Not Supported" value="16"/>
-         <item name="CAM Pattern Not Supported" value="17"/>
-         <item name="Unknown CAM Pattern Supplied" value="18"/>
-         <item name="Engine Speed Present" value="19"/>
-         <item name="Hardware Interface Not Supported" value="20"/>
-         <item name="Service Already Started" value="21"/>
-         <item name="Register Write Failed to verify" value="22"/>
-         <item name="Register access was denied" value="23"/>
-         <item name="Out of free store memory" value="24"/>
-         <item name="Software Q Overrun" value="25"/>
-         <item name="Hardware Q Overrun" value="26"/>
-         <item name="Feature unsupported in archive" value="27"/>
-         <item name="Insufficient FW resource" value="28"/>
-         <item name="OS Resource conflict" value="29"/>
-         <item name="Driver Mode conflict" value="30"/>
-         <item name="RTC time is illegal" value="31"/>
-         <item name="FFS unmounted" value="32"/>
-         <item name="Access from an ISR" value="33"/>
-         <item name="FFS internal" value="34"/>
-         <item name="Operation timed out" value="35"/>
-         <item name="Task Kernel API Usage" value="36"/>
-         <item name="Operation aborted" value="37"/>
-         <item name="File not Found" value="38"/>
-         <item name="Invalid characters in filename" value="39"/>
-         <item name="Duplicate filename" value="40"/>
-         <item name="Filename is too long" value="41"/>
-         <item name="Dir not empty on remove" value="42"/>
-         <item name="Dir not found" value="43"/>
-         <item name="Dir name invalid" value="44"/>
-         <item name="Dir exists" value="45"/>
-         <item name="Dir too deep" value="46"/>
-         <item name="Illegal Handle" value="47"/>
-         <item name="End of File" value="48"/>
-         <item name="Media Full" value="49"/>
-         <item name="Media Write" value="50"/>
-         <item name="Media Read" value="51"/>
-         <item name="Media Write Protected" value="52"/>
-         <item name="File Read Only" value="53"/>
-         <item name="FS Media Changed" value="54"/>
-         <item name="Internal USB" value="55"/>
-         <item name="Voltage too high for USB IC" value="56"/>
-         <item name="Encoder not created" value="57"/>
-         <item name="TPU Chan Conflict" value="64"/>
-         <item name="TPU Func Unavailable" value="65"/>
-         <item name="TPU Config" value="66"/>
-         <item name="TPU Primative Usage" value="67"/>
-         <item name="TPU Primitive Count" value="68"/>
-         <item name="TPU Restricted TPU channel" value="69"/>
-         <item name="TPU Not Created" value="70"/>
-         <item name="TPU Self Modify constant write err" value="71"/>
-         <item name="TPU Error 0x48" value="72"/>
-         <item name="TPU Error 0x49" value="73"/>
-         <item name="TPU Error 0x4A" value="74"/>
-         <item name="TPU Error 0x4B" value="75"/>
-         <item name="TPU Error 0x4C" value="76"/>
-         <item name="TPU Error 0x4D" value="77"/>
-         <item name="TPU Error 0x4E" value="78"/>
-         <item name="TPU Error 0x4F" value="79"/>
-         <item name="TPU Error 0x50" value="80"/>
-         <item name="TPU Error 0x51" value="81"/>
-         <item name="TPU Error 0x52" value="82"/>
-         <item name="TPU Error 0x53" value="83"/>
-         <item name="TPU Error 0x54" value="84"/>
-         <item name="TPU Error 0x55" value="85"/>
-         <item name="TPU Error 0x56" value="86"/>
-         <item name="TPU Error 0x57" value="87"/>
-         <item name="TPU Error 0x58" value="88"/>
-         <item name="TPU Error 0x59" value="89"/>
-         <item name="TPU Error 0x5A" value="90"/>
-         <item name="TPU Error 0x5B" value="91"/>
-         <item name="TPU Error 0x5C" value="92"/>
-         <item name="TPU Error 0x5D" value="93"/>
-         <item name="TPU Error 0x5E" value="94"/>
-         <item name="TPU Error 0x5F" value="95"/>
-         <default>Illegal Error</default>
-      </enum>
-   </VarDec>
-   <VarDec>
-      <name>dout_create_DOut10387p0001</name>
-      <class>enum</class>
-      <access>RO RO RO RO</access>
-      <storage>RAM</storage>
-      <update>BACKGND</update>
-      <type>uint8</type>
-      <gain>1.0</gain>
-      <offset>0.0</offset>
-      <exp>1.0</exp>
-      <max>0.0</max>
-      <min>0.0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <ctype>E_NativeFWError</ctype>
-      <struct>dout_create_DOut10387p0001</struct>
-      <help>Debug Variable</help>
-      <group>System | Debug | Resources | DiscreteOut</group>
       <enum name="E_NativeFWError">
          <item name="Normal Operation" value="0"/>
          <item name="Bad Resource ID" value="1"/>
@@ -15587,7 +15551,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s394_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s382_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
@@ -16042,7 +16006,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1010_RelationalOperator</struct>
+      <struct>BaseEngineController_LS_B.s998_RelationalOperator</struct>
       <group>System | Main Power Relay</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>

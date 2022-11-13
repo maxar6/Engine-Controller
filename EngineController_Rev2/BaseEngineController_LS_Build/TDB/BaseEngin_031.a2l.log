@@ -5,43 +5,43 @@
   <Messages>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:57.8086833-05:00</TimeStamp>
-      <Text>Loading MotoTuneDll xml format: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.xml</Text>
+      <TimeStamp>2022-11-12T21:06:04.6982731-05:00</TimeStamp>
+      <Text>Loading MotoTuneDll xml format: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_031.xml</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:58.119571-05:00</TimeStamp>
+      <TimeStamp>2022-11-12T21:06:05.0131702-05:00</TimeStamp>
       <Text>Generating ASAP2 objects</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:58.301512-05:00</TimeStamp>
+      <TimeStamp>2022-11-12T21:06:05.1911149-05:00</TimeStamp>
       <Text>Creating Address Updater: VirtualCalSpace</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:58.3035115-05:00</TimeStamp>
+      <TimeStamp>2022-11-12T21:06:05.1951253-05:00</TimeStamp>
       <Text>Updating ASAP2 addresses</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:58.3394998-05:00</TimeStamp>
-      <Text>Saving ASAP2 file: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.a2l</Text>
+      <TimeStamp>2022-11-12T21:06:05.2301141-05:00</TimeStamp>
+      <Text>Saving ASAP2 file: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_031.a2l</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:58.7413843-05:00</TimeStamp>
+      <TimeStamp>2022-11-12T21:06:05.627987-05:00</TimeStamp>
       <Text>Loading transform: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Bin\ASAP2.xslt</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:59.3368312-05:00</TimeStamp>
+      <TimeStamp>2022-11-12T21:06:06.2254077-05:00</TimeStamp>
       <Text>Generated 697 Measurements</Text>
     </Message>
     <Message>
       <Category>Detail</Category>
-      <TimeStamp>2022-11-12T20:29:59.3368312-05:00</TimeStamp>
-      <Text>Generated 2725 Characteristics</Text>
+      <TimeStamp>2022-11-12T21:06:06.2254077-05:00</TimeStamp>
+      <Text>Generated 2726 Characteristics</Text>
     </Message>
   </Messages>
 </Application_Log>

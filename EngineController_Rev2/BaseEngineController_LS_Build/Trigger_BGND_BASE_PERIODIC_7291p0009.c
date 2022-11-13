@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2103
+ * Model version              : 1.2107
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Nov 12 20:28:28 2022
+ * C source code generated on : Sat Nov 12 21:04:35 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -368,8 +368,8 @@ void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
         rowidx = (rowidx << 1) + (uint_T)(rtb_Memory != 0);
 
         /* Copy the appropriate row of the table into the block output vector */
-        rtb_Logic[0] = BaseEngineController_LS_ConstP.pooled909[rowidx];
-        rtb_Logic[1] = BaseEngineController_LS_ConstP.pooled909[rowidx + 8];
+        rtb_Logic[0] = BaseEngineController_LS_ConstP.pooled914[rowidx];
+        rtb_Logic[1] = BaseEngineController_LS_ConstP.pooled914[rowidx + 8];
       }
 
       /* Logic: '<S1000>/Logical Operator' incorporates:

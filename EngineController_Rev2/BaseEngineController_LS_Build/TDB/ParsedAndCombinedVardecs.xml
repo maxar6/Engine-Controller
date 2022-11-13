@@ -26049,6 +26049,29 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>BoostDiag_MAPIRDiagEnable</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Diagnostics|Boost Fault</group>
+      <struct>ConstantWork.BoostDiag_MAPIRDiagEnable</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="Disabled" value="0"/>
+         <item name="Enabled" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>HardOverBoostLimit</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>

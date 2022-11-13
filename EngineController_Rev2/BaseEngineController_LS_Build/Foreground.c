@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2103
+ * Model version                  : 1.2107
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Nov 12 20:28:28 2022
+ * C/C++ source code generated on : Sat Nov 12 21:04:35 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -2429,9 +2429,12 @@ void BaseEngineController_LS_Foreground(void)
   boolean_T rtb_LogicalOperator1_joj;
   boolean_T rtb_LogicalOperator2_bv;
   boolean_T rtb_LogicalOperator4_l;
-  boolean_T rtb_LogicalOperator4_k;
+  boolean_T rtb_LogicalOperator4_kk;
   boolean_T rtb_LogicalOperator2_ip;
   boolean_T rtb_LogicalOperator5_oa;
+  boolean_T rtb_LogicalOperator1_g5;
+  boolean_T rtb_LogicalOperator2_bl;
+  boolean_T rtb_LogicalOperator3_eo;
   boolean_T rtb_LogicalOperator4_j;
   boolean_T rtb_LogicalOperator2_o4;
   boolean_T rtb_LogicalOperator2_ie;
@@ -2470,12 +2473,12 @@ void BaseEngineController_LS_Foreground(void)
   boolean_T rtb_Switch_oh;
   boolean_T rtb_BelowLoTarget_b;
   boolean_T rtb_CombinatorialLogic_l[2];
-  boolean_T rtb_motohawk_data_read13;
   boolean_T rtb_BelowLoTarget_j;
+  boolean_T rtb_motohawk_data_read13;
+  boolean_T rtb_Switch2_k;
   boolean_T rtb_LogicalOperator3_cj;
   boolean_T rtb_RelationalOperator8_o;
   boolean_T rtb_LogicalOperator2_l;
-  boolean_T rtb_RelOp_mp;
   boolean_T rtb_LogicalOperator1_cv;
   boolean_T rtb_RelationalOperator6_h;
   boolean_T rtb_CombinatorialLogic_c[2];
@@ -2558,6 +2561,7 @@ void BaseEngineController_LS_Foreground(void)
   real_T rtb_Product4_o;
   real_T rtb_Multiplyby10ifnotyetenabled;
   boolean_T rtb_Switch1_mj;
+  boolean_T rtb_RelOp_mp;
   uint16_T rtb_Product1_mc;
   int16_T rtb_DataTypeConversion_ol;
   int16_T rtb_Sum2_lt;
@@ -3738,9 +3742,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_da[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_da[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S319>/Switch1' incorporates:
@@ -3776,9 +3780,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_da[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_da[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S320>/Switch1' incorporates:
@@ -3814,9 +3818,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_da[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_da[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S321>/Switch1' incorporates:
@@ -5612,8 +5616,8 @@ void BaseEngineController_LS_Foreground(void)
     rowidx = (rowidx << 1) + (uint_T)(rtb_RelationalOperator5_fz != 0);
 
     /* Copy the appropriate row of the table into the block output vector */
-    rtb_Logic_j[0] = BaseEngineController_LS_ConstP.pooled909[rowidx];
-    rtb_Logic_j[1] = BaseEngineController_LS_ConstP.pooled909[rowidx + 8];
+    rtb_Logic_j[0] = BaseEngineController_LS_ConstP.pooled914[rowidx];
+    rtb_Logic_j[1] = BaseEngineController_LS_ConstP.pooled914[rowidx + 8];
   }
 
   /* Switch: '<S568>/Switch' incorporates:
@@ -8136,9 +8140,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S167>/Switch1' incorporates:
@@ -8189,9 +8193,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S166>/Switch1' incorporates:
@@ -8228,9 +8232,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S164>/Switch1' incorporates:
@@ -8283,9 +8287,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S165>/Switch1' incorporates:
@@ -8342,9 +8346,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S163>/Switch1' incorporates:
@@ -8380,9 +8384,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S162>/Switch1' incorporates:
@@ -8719,9 +8723,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S192>/Switch1' incorporates:
@@ -9494,9 +9498,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S203>/Switch1' incorporates:
@@ -9610,9 +9614,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S204>/Switch1' incorporates:
@@ -9712,9 +9716,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_c[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_c[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S205>/Switch1' incorporates:
@@ -9993,9 +9997,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S298>/Switch1' incorporates:
@@ -15119,9 +15123,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_d[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_d[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S45>/Switch1' incorporates:
@@ -17590,11 +17594,19 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S325>/Relational Operator' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration'
      */
-    rtb_RelOp_mp = (BaseEngineController_LS_B.s631_Merge >= (real_T)((uint16_T)
-      (ACHighPressureDisable_DataStore())));
+    rtb_Switch2_k = (BaseEngineController_LS_B.s631_Merge >= (real_T)((uint16_T)
+                      (ACHighPressureDisable_DataStore())));
+
+    /* Logic: '<S325>/Logical Operator4' incorporates:
+     *  Logic: '<S325>/Logical Operator3'
+     *  S-Function (motohawk_sfun_fault_status): '<S325>/motohawk_fault_status1'
+     *  S-Function (motohawk_sfun_fault_status): '<S325>/motohawk_fault_status4'
+     */
+    rtb_RelOp_mp = !(IsFaultActive(2) || IsFaultActive(3));
 
     /* Logic: '<S325>/Logical Operator' */
-    rtb_LogicalOperator_ct = ((rtb_BelowLoTarget_j && rtb_RelOp_mp));
+    rtb_LogicalOperator_ct = ((rtb_BelowLoTarget_j && rtb_Switch2_k &&
+      rtb_RelOp_mp));
 
     /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def1' */
 
@@ -17609,12 +17621,12 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S325>/Relational Operator1' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration2'
      */
-    rtb_RelOp_mp = (BaseEngineController_LS_B.s631_Merge <= (real_T)((uint16_T)
-      (ACLowPressureDisable_DataStore())));
+    rtb_Switch2_k = (BaseEngineController_LS_B.s631_Merge <= (real_T)((uint16_T)
+                      (ACLowPressureDisable_DataStore())));
 
     /* Logic: '<S325>/Logical Operator1' */
-    rtb_LogicalOperator1_o = ((rtb_BelowLoTarget_j && rtb_RelOp_mp &&
-      BaseEngineController_LS_B.s135_AC));
+    rtb_LogicalOperator1_o = ((rtb_BelowLoTarget_j && rtb_Switch2_k &&
+      rtb_RelOp_mp && BaseEngineController_LS_B.s135_AC));
 
     /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def2' */
 
@@ -17636,12 +17648,38 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_interpolation_1d3_a = 0.145038 *
       BaseEngineController_LS_B.s660_Merge;
 
-    /* Logic: '<S326>/Logical Operator' incorporates:
-     *  RelationalOperator: '<S326>/Relational Operator'
+    /* RelationalOperator: '<S326>/Relational Operator' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration'
      */
-    rtb_LogicalOperator_bx = ((rtb_RelOp_mp && (rtb_motohawk_interpolation_1d3_a
-      >= (SoftOverBoostLimit_DataStore()))));
+    rtb_LogicalOperator6_b = (rtb_motohawk_interpolation_1d3_a >=
+      (SoftOverBoostLimit_DataStore()));
+
+    /* Logic: '<S326>/Logical Operator3' incorporates:
+     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status1'
+     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status4'
+     */
+    rtb_LogicalOperator1_al = (IsFaultActive(86) || IsFaultActive(87));
+
+    /* Logic: '<S326>/Logical Operator5' incorporates:
+     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status2'
+     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status3'
+     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status5'
+     */
+    rtb_RelationalOperator3_bp = (IsFaultActive(90) || IsFaultActive(91) ||
+      IsFaultActive(92));
+
+    /* Logic: '<S326>/Logical Operator8' incorporates:
+     *  Logic: '<S326>/Logical Operator4'
+     *  Logic: '<S326>/Logical Operator6'
+     *  Logic: '<S326>/Logical Operator7'
+     *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration3'
+     */
+    rtb_Switch2_k = ((!rtb_LogicalOperator1_al) && (!(rtb_RelationalOperator3_bp
+      && (BoostDiag_MAPIRDiagEnable_DataStore()))));
+
+    /* Logic: '<S326>/Logical Operator' */
+    rtb_LogicalOperator_bx = ((rtb_RelOp_mp && rtb_LogicalOperator6_b &&
+      rtb_Switch2_k));
 
     /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def1' */
 
@@ -17658,7 +17696,8 @@ void BaseEngineController_LS_Foreground(void)
      *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration1'
      */
     rtb_LogicalOperator1_joj = ((rtb_RelOp_mp &&
-      (rtb_motohawk_interpolation_1d3_a >= (HardOverBoostLimit_DataStore()))));
+      (rtb_motohawk_interpolation_1d3_a >= (HardOverBoostLimit_DataStore())) &&
+      rtb_Switch2_k));
 
     /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def2' */
 
@@ -17676,7 +17715,7 @@ void BaseEngineController_LS_Foreground(void)
      */
     rtb_LogicalOperator2_bv = ((rtb_RelOp_mp &&
       (BaseEngineController_LS_B.s135_WASTEGATE >=
-       (WastegateLossOfControl_DataStore()))));
+       (WastegateLossOfControl_DataStore())) && rtb_Switch2_k));
 
     /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def3' */
 
@@ -17750,7 +17789,7 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S343>/RelOp' incorporates:
      *  Constant: '<S343>/Constant'
      */
-    rtb_BelowLoTarget_j = (BaseEngineController_LS_B.s429_State == 3);
+    rtb_Switch2_k = (BaseEngineController_LS_B.s429_State == 3);
 
     /* RelationalOperator: '<S331>/Relational Operator3' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration2'
@@ -17762,7 +17801,7 @@ void BaseEngineController_LS_Foreground(void)
      *  RelationalOperator: '<S331>/Relational Operator4'
      *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration4'
      */
-    rtb_LogicalOperator4_k = ((rtb_RelOp_mp && rtb_BelowLoTarget_j &&
+    rtb_LogicalOperator4_kk = ((rtb_RelOp_mp && rtb_Switch2_k &&
       rtb_LogicalOperator6_b && (BaseEngineController_LS_B.s660_Merge >
       (MAP_IR_HI_DataStore()))));
 
@@ -17772,7 +17811,7 @@ void BaseEngineController_LS_Foreground(void)
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(90, rtb_LogicalOperator4_k);
+      SetFaultSuspected(90, rtb_LogicalOperator4_kk);
       UpdateFault(90);
     }
 
@@ -17786,7 +17825,7 @@ void BaseEngineController_LS_Foreground(void)
      *  RelationalOperator: '<S331>/Relational Operator2'
      *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration5'
      */
-    rtb_LogicalOperator2_ip = ((rtb_RelOp_mp && rtb_BelowLoTarget_j &&
+    rtb_LogicalOperator2_ip = ((rtb_RelOp_mp && rtb_Switch2_k &&
       rtb_LogicalOperator6_b && (BaseEngineController_LS_B.s660_Merge <
       (MAP_IR_LO_DataStore()))));
 
@@ -17814,7 +17853,7 @@ void BaseEngineController_LS_Foreground(void)
      *  RelationalOperator: '<S331>/Relational Operator8'
      *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration7'
      */
-    rtb_LogicalOperator5_oa = ((rtb_RelOp_mp && rtb_BelowLoTarget_j &&
+    rtb_LogicalOperator5_oa = ((rtb_RelOp_mp && rtb_Switch2_k &&
       rtb_LogicalOperator6_b && (rtb_DataTypeConversion1_e <
       (MAP_STUCK_DataStore()))));
 
@@ -17827,6 +17866,16 @@ void BaseEngineController_LS_Foreground(void)
       SetFaultSuspected(92, rtb_LogicalOperator5_oa);
       UpdateFault(92);
     }
+
+    /* Logic: '<S332>/Logical Operator5' incorporates:
+     *  Logic: '<S332>/Logical Operator4'
+     *  S-Function (motohawk_sfun_fault_status): '<S332>/motohawk_fault_status1'
+     *  S-Function (motohawk_sfun_fault_status): '<S332>/motohawk_fault_status2'
+     *  S-Function (motohawk_sfun_fault_status): '<S332>/motohawk_fault_status3'
+     *  S-Function (motohawk_sfun_fault_status): '<S332>/motohawk_fault_status4'
+     */
+    rtb_RelOp_mp = !(IsFaultActive(30) || IsFaultActive(29) || IsFaultActive(27)
+                     || IsFaultActive(28));
 
     /* DataTypeConversion: '<S332>/Data Type Conversion' */
     if (rtIsNaN(BaseEngineController_LS_B.s444_RPMInst) || rtIsInf
@@ -17845,7 +17894,7 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S346>/LT' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
      */
-    rtb_RelOp_mp = (rtb_DataTypeConversion_ol >= ((int16_T)
+    rtb_Switch2_k = (rtb_DataTypeConversion_ol >= ((int16_T)
       (BaseRevLimit_DataStore())));
 
     /* Sum: '<S344>/Sum2' incorporates:
@@ -17874,14 +17923,14 @@ void BaseEngineController_LS_Foreground(void)
       uint_T rowidx= 0;
 
       /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_RelOp_mp != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_Switch2_k != 0);
       rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S349>/Switch1' incorporates:
@@ -17913,7 +17962,7 @@ void BaseEngineController_LS_Foreground(void)
     /* End of Sum: '<S344>/Sum3' */
 
     /* RelationalOperator: '<S347>/LT' */
-    rtb_RelOp_mp = (rtb_DataTypeConversion_ol >= rtb_Sum4_e);
+    rtb_Switch2_k = (rtb_DataTypeConversion_ol >= rtb_Sum4_e);
 
     /* Sum: '<S344>/Sum1' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration1'
@@ -17939,14 +17988,14 @@ void BaseEngineController_LS_Foreground(void)
       uint_T rowidx= 0;
 
       /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_RelOp_mp != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_Switch2_k != 0);
       rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S350>/Switch1' incorporates:
@@ -17973,7 +18022,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_LogicalOperator6_b = (rtb_DataTypeConversion_ol > rtb_Sum4_e);
 
     /* Logic: '<S332>/Logical Operator' */
-    rtb_RelOp_mp = !BaseEngineController_LS_B.s593_Merge;
+    rtb_Switch2_k = !BaseEngineController_LS_B.s593_Merge;
 
     /* RelationalOperator: '<S352>/LT' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration'
@@ -18012,9 +18061,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S355>/Switch1' incorporates:
@@ -18077,9 +18126,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S356>/Switch1' incorporates:
@@ -18113,7 +18162,7 @@ void BaseEngineController_LS_Foreground(void)
      *  RelationalOperator: '<S344>/Overspeed'
      *  RelationalOperator: '<S345>/Overspeed'
      */
-    if (rtb_RelOp_mp) {
+    if (rtb_Switch2_k) {
       /* Switch: '<S346>/Switch2' incorporates:
        *  Logic: '<S346>/Logical Operator'
        *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
@@ -18141,13 +18190,16 @@ void BaseEngineController_LS_Foreground(void)
 
     /* End of Switch: '<S332>/Switch' */
 
+    /* Logic: '<S332>/Logical Operator1' */
+    rtb_LogicalOperator1_g5 = ((rtb_RelOp_mp && rtb_LogicalOperator3_cj));
+
     /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: SoftOverspeed */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(103, rtb_LogicalOperator3_cj);
+      SetFaultSuspected(103, rtb_LogicalOperator1_g5);
       UpdateFault(103);
     }
 
@@ -18201,9 +18253,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S351>/Switch1' incorporates:
@@ -18279,9 +18331,9 @@ void BaseEngineController_LS_Foreground(void)
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
+        BaseEngineController_LS_ConstP.pooled913[rowidx];
       rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+        BaseEngineController_LS_ConstP.pooled913[rowidx + 4];
     }
 
     /* Switch: '<S357>/Switch1' incorporates:
@@ -18313,7 +18365,7 @@ void BaseEngineController_LS_Foreground(void)
      *  Logic: '<S345>/Logical Operator5'
      *  Logic: '<S345>/Logical Operator6'
      */
-    if (rtb_RelOp_mp) {
+    if (rtb_Switch2_k) {
       rtb_LogicalOperator3_cj = (rtb_LogicalOperator6_b &&
         (!rtb_RelationalOperator3_bp));
     } else {
@@ -18322,24 +18374,30 @@ void BaseEngineController_LS_Foreground(void)
 
     /* End of Switch: '<S332>/Switch1' */
 
+    /* Logic: '<S332>/Logical Operator2' */
+    rtb_LogicalOperator2_bl = ((rtb_RelOp_mp && rtb_LogicalOperator3_cj));
+
     /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: MediumOverspeed */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(93, rtb_LogicalOperator3_cj);
+      SetFaultSuspected(93, rtb_LogicalOperator2_bl);
       UpdateFault(93);
     }
 
     /* Switch: '<S332>/Switch2' */
-    if (rtb_RelOp_mp) {
-      rtb_RelOp_mp = rtb_RelationalOperator3_bp;
+    if (rtb_Switch2_k) {
+      rtb_Switch2_k = rtb_RelationalOperator3_bp;
     } else {
-      rtb_RelOp_mp = rtb_RelOp_pu;
+      rtb_Switch2_k = rtb_RelOp_pu;
     }
 
     /* End of Switch: '<S332>/Switch2' */
+
+    /* Logic: '<S332>/Logical Operator3' */
+    rtb_LogicalOperator3_eo = ((rtb_RelOp_mp && rtb_Switch2_k));
 
     /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def3' */
 
@@ -18347,7 +18405,7 @@ void BaseEngineController_LS_Foreground(void)
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(70, rtb_RelOp_mp);
+      SetFaultSuspected(70, rtb_LogicalOperator3_eo);
       UpdateFault(70);
     }
 

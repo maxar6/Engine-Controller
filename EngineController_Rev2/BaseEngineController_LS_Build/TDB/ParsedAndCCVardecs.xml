@@ -16,7 +16,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s684_Merge</struct>
+      <struct>BaseEngineController_LS_B.s685_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -35,7 +35,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion1</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -53,7 +53,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o3</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage1_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -109,7 +109,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s854_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s855_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
    <VarDec>
@@ -128,7 +128,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s935_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s936_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1</group>
    </VarDec>
@@ -148,7 +148,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s735_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s736_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -320,7 +320,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s814_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s815_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -339,7 +339,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s760_Merge</struct>
+      <struct>BaseEngineController_LS_B.s761_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -359,7 +359,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s623_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s624_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -379,7 +379,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s650_Merge</struct>
+      <struct>BaseEngineController_LS_B.s651_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -398,7 +398,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s566_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s567_LogicalOperator</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
    </VarDec>
    <VarDec>
@@ -416,7 +416,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion6</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion6</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -435,7 +435,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s936_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s937_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2</group>
    </VarDec>
@@ -454,7 +454,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s882_Switch</struct>
+      <struct>BaseEngineController_LS_B.s883_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt1</group>
    </VarDec>
    <VarDec>
@@ -472,7 +472,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s874_Switch</struct>
+      <struct>BaseEngineController_LS_B.s875_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
    </VarDec>
    <VarDec>
@@ -491,7 +491,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s909_Sum</struct>
+      <struct>BaseEngineController_LS_B.s910_Sum</struct>
       <help>StartAngle for coils to establish dwell.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -511,7 +511,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s717_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s718_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -531,7 +531,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s716_Merge</struct>
+      <struct>BaseEngineController_LS_B.s717_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -551,7 +551,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s726_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s727_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -571,7 +571,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s725_Merge</struct>
+      <struct>BaseEngineController_LS_B.s726_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -687,7 +687,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s772_Merge</struct>
+      <struct>BaseEngineController_LS_B.s773_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -707,7 +707,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_ain14</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_ain14</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -727,7 +727,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_ain2</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -747,7 +747,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s441_Gain1</struct>
+      <struct>BaseEngineController_LS_B.s442_Gain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
    </VarDec>
@@ -767,7 +767,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s599_Merge</struct>
+      <struct>BaseEngineController_LS_B.s600_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
    </VarDec>
@@ -787,7 +787,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s563_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s564_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | Scramble</group>
    </VarDec>
@@ -807,7 +807,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s487_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s488_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_EquivRatio</group>
    </VarDec>
@@ -827,7 +827,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s404_Switch1</struct>
+      <struct>BaseEngineController_LS_B.s405_Switch1</struct>
       <help>APP used in controller (after power curve and CutThrottle limiting</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed</group>
    </VarDec>
@@ -867,7 +867,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s994_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s995_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|WASTEGATE-Control | WASTEGATE</group>
    </VarDec>
@@ -887,7 +887,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s858_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s859_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|AC Control | AC</group>
    </VarDec>
@@ -1081,7 +1081,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s794_Merge</struct>
+      <struct>BaseEngineController_LS_B.s795_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1100,7 +1100,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s573_Merge</struct>
+      <struct>BaseEngineController_LS_B.s574_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ESTOP</group>
    </VarDec>
@@ -1119,7 +1119,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion5</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1137,7 +1137,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion7</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion7</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1155,7 +1155,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o4</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage1_o4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1174,7 +1174,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s434_Switch</struct>
+      <struct>BaseEngineController_LS_B.s435_Switch</struct>
       <help>Indicates time since entering Stall State - saturates and disables at 2000 seconds</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Stall</group>
    </VarDec>
@@ -1193,8 +1193,26 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s383_Merge</struct>
+      <struct>BaseEngineController_LS_B.s384_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
+   </VarDec>
+   <VarDec>
+      <name>FuelLevel_RefuelEvent</name>
+      <class>var</class>
+      <access>RO RO RO RO</access>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <gain>1.0</gain>
+      <offset>0.0</offset>
+      <exp>1.0</exp>
+      <max>1.000000</max>
+      <min>0.000000</min>
+      <format>1.0</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>BlockIO_BaseEngineController_LS</ctype>
+      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel|RefuelEvent</group>
    </VarDec>
    <VarDec>
       <name>Fan1Cmd</name>
@@ -1479,7 +1497,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s814_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s815_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -1497,7 +1515,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s801_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s802_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1515,7 +1533,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s811_Merge</struct>
+      <struct>BaseEngineController_LS_B.s812_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1533,7 +1551,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s780_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s781_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1552,7 +1570,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s676_Merge</struct>
+      <struct>BaseEngineController_LS_B.s677_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1572,7 +1590,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_ain4</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_ain4</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -1592,7 +1610,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s567_Merge</struct>
+      <struct>BaseEngineController_LS_B.s568_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ACSw</group>
    </VarDec>
@@ -1612,7 +1630,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_MathFunction1</struct>
+      <struct>BaseEngineController_LS_B.s448_MathFunction1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio</group>
    </VarDec>
@@ -1631,7 +1649,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion3</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1649,7 +1667,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1668,7 +1686,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s426_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s427_Sum1</struct>
       <help>Acceleration rate of engine</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Engine Accel</group>
    </VarDec>
@@ -1838,7 +1856,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s828_Merge</struct>
+      <struct>BaseEngineController_LS_B.s829_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -1856,7 +1874,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s780_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s781_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -1875,7 +1893,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s622_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s623_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -1895,7 +1913,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s581_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s582_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -1914,7 +1932,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o5</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage1_o5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -1932,7 +1950,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s382_Merge</struct>
+      <struct>BaseEngineController_LS_B.s383_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -1950,7 +1968,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s881_Switch</struct>
+      <struct>BaseEngineController_LS_B.s882_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 2|PHI_Filt</group>
    </VarDec>
    <VarDec>
@@ -1968,7 +1986,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s401_Merge</struct>
+      <struct>BaseEngineController_LS_B.s402_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
    </VarDec>
    <VarDec>
@@ -2118,7 +2136,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s835_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s836_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -2137,7 +2155,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s621_Merge</struct>
+      <struct>BaseEngineController_LS_B.s622_Merge</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -2156,7 +2174,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s408_MultiportSwitch</struct>
+      <struct>BaseEngineController_LS_B.s409_MultiportSwitch</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Gear Estimator</group>
    </VarDec>
    <VarDec>
@@ -2175,7 +2193,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s967_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s968_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_S</group>
    </VarDec>
@@ -2195,7 +2213,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s945_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s946_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN1_PWM</group>
    </VarDec>
@@ -2215,7 +2233,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s697_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s698_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -2329,7 +2347,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s755_Switch</struct>
+      <struct>BaseEngineController_LS_B.s756_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -2348,7 +2366,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s658_Merge</struct>
+      <struct>BaseEngineController_LS_B.s659_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -2367,7 +2385,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s442_RPMInst</struct>
+      <struct>BaseEngineController_LS_B.s443_RPMInst</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -2385,7 +2403,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion2</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2403,7 +2421,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion9</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion9</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2421,7 +2439,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion8</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion8</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2439,7 +2457,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o2</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2457,7 +2475,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s415_Switch2</struct>
+      <struct>BaseEngineController_LS_B.s416_Switch2</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|VSPD_Selector</group>
    </VarDec>
    <VarDec>
@@ -2475,7 +2493,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s427_State</struct>
+      <struct>BaseEngineController_LS_B.s428_State</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|EngineState</group>
    </VarDec>
    <VarDec>
@@ -2532,7 +2550,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s953_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s954_LogicalOperator</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FuelPump | FUELP</group>
    </VarDec>
@@ -2552,7 +2570,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s949_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s950_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|FAN Control | FAN2_PWM</group>
    </VarDec>
@@ -2572,7 +2590,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s696_motohawk_ain</struct>
+      <struct>BaseEngineController_LS_B.s697_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -2592,7 +2610,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s743_Merge</struct>
+      <struct>BaseEngineController_LS_B.s744_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -2612,7 +2630,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s403_CollectAverage.s368_Product</struct>
+      <struct>BaseEngineController_LS_B.s404_CollectAverage.s368_Product</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Capture IAT At Startup</group>
    </VarDec>
    <VarDec>
@@ -2723,7 +2741,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s754_Switch</struct>
+      <struct>BaseEngineController_LS_B.s755_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -2741,7 +2759,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s797_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s798_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -2760,7 +2778,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s445_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s446_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -2780,7 +2798,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s624_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s625_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -2800,7 +2818,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_ain_read1</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_ain_read1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -2820,7 +2838,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s618_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s619_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelPres</group>
    </VarDec>
@@ -2840,7 +2858,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s600_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s601_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | VSPD</group>
    </VarDec>
@@ -2859,7 +2877,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_MultiportSwitch</struct>
+      <struct>BaseEngineController_LS_B.s448_MultiportSwitch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -2877,7 +2895,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion8</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion8</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -2896,7 +2914,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s411_Switch2</struct>
+      <struct>BaseEngineController_LS_B.s412_Switch2</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|TPS  Sensor Arbitration</group>
    </VarDec>
    <VarDec>
@@ -2914,7 +2932,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s409_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s410_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag</group>
    </VarDec>
    <VarDec>
@@ -2933,7 +2951,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s963_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s964_MinMax1</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|IAC-Control | IAC_P</group>
    </VarDec>
@@ -2953,7 +2971,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s419_Sum2</struct>
+      <struct>BaseEngineController_LS_B.s420_Sum2</struct>
       <help>Final ETC request</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
    </VarDec>
@@ -3045,7 +3063,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s1015_Switch</struct>
+      <struct>BaseEngineController_LS_B.s1016_Switch</struct>
       <group>System | Main Power Relay</group>
    </VarDec>
    <VarDec>
@@ -3082,7 +3100,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s831_MinMax</struct>
+      <struct>BaseEngineController_LS_B.s832_MinMax</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -3101,7 +3119,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s445_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s446_motohawk_ain1</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -3120,7 +3138,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s566_Switch</struct>
+      <struct>BaseEngineController_LS_B.s567_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
    </VarDec>
    <VarDec>
@@ -3139,7 +3157,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s591_Merge</struct>
+      <struct>BaseEngineController_LS_B.s592_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | TwoStep</group>
    </VarDec>
@@ -3158,7 +3176,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_DataTypeConversion4</struct>
+      <struct>BaseEngineController_LS_B.s448_DataTypeConversion4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3176,7 +3194,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o4</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage_o4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3194,7 +3212,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_ReadCANMessage2_o4</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage2_o4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3212,7 +3230,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s914_Switch1</struct>
+      <struct>BaseEngineController_LS_B.s915_Switch1</struct>
       <help>Number of TDC events counted after stall.  This will reset once in Crank and Run.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
    </VarDec>
@@ -3232,7 +3250,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s703_Merge</struct>
+      <struct>BaseEngineController_LS_B.s704_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -3251,7 +3269,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s614_Sum</struct>
+      <struct>BaseEngineController_LS_B.s615_Sum</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
    </VarDec>
    <VarDec>
@@ -3425,7 +3443,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s784_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s785_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -3443,7 +3461,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s752_Switch</struct>
+      <struct>BaseEngineController_LS_B.s753_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1_Adapt</group>
    </VarDec>
    <VarDec>
@@ -3462,7 +3480,7 @@
       <format>8.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_frequency_in</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_frequency_in</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -3482,7 +3500,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s637_Merge</struct>
+      <struct>BaseEngineController_LS_B.s638_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -3502,7 +3520,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s616_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s617_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -3521,7 +3539,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s566_LogicalOperator3</struct>
+      <struct>BaseEngineController_LS_B.s567_LogicalOperator3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital|VSPD_Filt</group>
    </VarDec>
    <VarDec>
@@ -3540,7 +3558,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s488_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s489_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio</group>
    </VarDec>
@@ -3560,7 +3578,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s511_Merge</struct>
+      <struct>BaseEngineController_LS_B.s512_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_EquivRatio</group>
    </VarDec>
@@ -3579,7 +3597,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o3</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3597,7 +3615,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_ReadCANMessage1_o2</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3615,7 +3633,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion4</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion4</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3633,7 +3651,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -3651,7 +3669,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s406_Crank</struct>
+      <struct>BaseEngineController_LS_B.s407_Crank</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|EngineState</group>
    </VarDec>
    <VarDec>
@@ -3669,7 +3687,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s388_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s389_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -3707,7 +3725,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s877_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s878_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|AEM Infinity Dash|Dash Message 1|RPM_Filt</group>
    </VarDec>
    <VarDec>
@@ -3876,7 +3894,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s615_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s616_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
    </VarDec>
    <VarDec>
@@ -3895,7 +3913,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s441_motohawk_din2</struct>
+      <struct>BaseEngineController_LS_B.s442_motohawk_din2</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | TwoStep</group>
    </VarDec>
@@ -3915,7 +3933,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s586_Merge</struct>
+      <struct>BaseEngineController_LS_B.s587_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | Scramble</group>
    </VarDec>
@@ -3935,7 +3953,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s559_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s560_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ACSw</group>
    </VarDec>
@@ -3954,7 +3972,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o2</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage1_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3972,7 +3990,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o5</struct>
+      <struct>BaseEngineController_LS_B.s448_ReadCANMessage_o5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
    </VarDec>
    <VarDec>
@@ -3990,7 +4008,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion3</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4008,7 +4026,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion1</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4026,7 +4044,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s382_LogicalOperator</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -4045,7 +4063,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s697_motohawk_ain2</struct>
+      <struct>BaseEngineController_LS_B.s698_motohawk_ain2</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -4233,7 +4251,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s845_Merge</struct>
+      <struct>BaseEngineController_LS_B.s846_Merge</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -4251,7 +4269,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s818_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s819_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS1</group>
    </VarDec>
    <VarDec>
@@ -4269,7 +4287,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s797_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s798_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -4288,7 +4306,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_ain3</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_ain3</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SensVolt</group>
    </VarDec>
@@ -4308,7 +4326,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s619_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s620_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAP</group>
    </VarDec>
@@ -4328,7 +4346,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s441_motohawk_din</struct>
+      <struct>BaseEngineController_LS_B.s442_motohawk_din</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ESTOP</group>
    </VarDec>
@@ -4348,7 +4366,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s570_Merge</struct>
+      <struct>BaseEngineController_LS_B.s571_Merge</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ClutchSw</group>
    </VarDec>
@@ -4367,7 +4385,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_ReadCANMessage2_o2</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage2_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4385,7 +4403,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s409_Sum3</struct>
+      <struct>BaseEngineController_LS_B.s410_Sum3</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|O2 De-lag</group>
    </VarDec>
    <VarDec>
@@ -4404,7 +4422,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s854_motohawk_pwm1</struct>
+      <struct>BaseEngineController_LS_B.s855_motohawk_pwm1</struct>
       <help>Current output of ETC duty cycle.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
@@ -4424,7 +4442,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s697_motohawk_ain3</struct>
+      <struct>BaseEngineController_LS_B.s698_motohawk_ain3</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | CAT</group>
    </VarDec>
@@ -4444,7 +4462,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s744_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s745_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | IAT</group>
    </VarDec>
@@ -4464,7 +4482,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s697_motohawk_ain</struct>
+      <struct>BaseEngineController_LS_B.s698_motohawk_ain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | ECT</group>
    </VarDec>
@@ -4596,7 +4614,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s447_MathFunction</struct>
+      <struct>BaseEngineController_LS_B.s448_MathFunction</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_EquivRatio</group>
    </VarDec>
@@ -4615,7 +4633,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion2</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4633,7 +4651,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_ReadCANMessage_o2</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage_o2</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4691,7 +4709,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s704_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s705_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Fuel Level | Fuel_Lvl</group>
    </VarDec>
@@ -4828,7 +4846,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s774_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s775_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2</group>
    </VarDec>
@@ -4848,7 +4866,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s620_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s621_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -4868,7 +4886,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s666_Merge</struct>
+      <struct>BaseEngineController_LS_B.s667_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | MAPTime</group>
    </VarDec>
@@ -4888,7 +4906,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s580_Merge</struct>
+      <struct>BaseEngineController_LS_B.s581_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -4907,7 +4925,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_DataTypeConversion5</struct>
+      <struct>BaseEngineController_LS_B.s447_DataTypeConversion5</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -4925,7 +4943,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s430_Sum</struct>
+      <struct>BaseEngineController_LS_B.s431_Sum</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Key On</group>
    </VarDec>
    <VarDec>
@@ -4944,7 +4962,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s407_Sum3</struct>
+      <struct>BaseEngineController_LS_B.s408_Sum3</struct>
       <help>Fuel pressure across injector (rail - manifold)</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Fuel Delta Pressure Calculation</group>
    </VarDec>
@@ -5002,7 +5020,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s854_ETC</struct>
+      <struct>BaseEngineController_LS_B.s855_ETC</struct>
       <help>Actual duty cycle of actuator</help>
       <group>BaseEngineController_LS|Foreground|Outputs|HBridge</group>
    </VarDec>
@@ -5021,7 +5039,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s428_Switch</struct>
+      <struct>BaseEngineController_LS_B.s429_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|EngineState|TDC_Counter</group>
    </VarDec>
    <VarDec>
@@ -5226,7 +5244,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s831_MinMax1</struct>
+      <struct>BaseEngineController_LS_B.s832_MinMax1</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | TPS2</group>
    </VarDec>
    <VarDec>
@@ -5244,7 +5262,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s753_Switch</struct>
+      <struct>BaseEngineController_LS_B.s754_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP2_Adapt</group>
    </VarDec>
    <VarDec>
@@ -5263,7 +5281,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s762_motohawk_interpolation_1d</struct>
+      <struct>BaseEngineController_LS_B.s763_motohawk_interpolation_1d</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|PotentiometerSensors | APP1</group>
    </VarDec>
@@ -5283,7 +5301,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s560_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s561_DataTypeConversion</struct>
       <help>Display output in engineering units</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | ClutchSw</group>
    </VarDec>
@@ -5303,7 +5321,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s519_Merge</struct>
+      <struct>BaseEngineController_LS_B.s520_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_EquivRatio</group>
    </VarDec>
@@ -5322,7 +5340,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_ReadCANMessage1_o3</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage1_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -5340,7 +5358,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s446_ReadCANMessage2_o3</struct>
+      <struct>BaseEngineController_LS_B.s447_ReadCANMessage2_o3</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM GPS</group>
    </VarDec>
    <VarDec>
@@ -5358,7 +5376,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s432_Switch</struct>
+      <struct>BaseEngineController_LS_B.s433_Switch</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Time Since Run</group>
    </VarDec>
    <VarDec>
@@ -5377,7 +5395,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s734_Merge</struct>
+      <struct>BaseEngineController_LS_B.s735_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|NonLinearSensors|Temp Sensors | EVAP</group>
    </VarDec>
@@ -5514,7 +5532,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s692_Merge</struct>
+      <struct>BaseEngineController_LS_B.s693_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | SysVolt</group>
    </VarDec>
@@ -5534,7 +5552,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s443_motohawk_ain1</struct>
+      <struct>BaseEngineController_LS_B.s444_motohawk_ain1</struct>
       <help>Singal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | OilPres</group>
    </VarDec>
@@ -5554,7 +5572,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s617_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s618_Sum1</struct>
       <help>After conversion to engineering units, before range checking</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | FuelSens</group>
    </VarDec>
@@ -5574,7 +5592,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s629_Merge</struct>
+      <struct>BaseEngineController_LS_B.s630_Merge</struct>
       <help>Final value after Linear Sensor Characterization</help>
       <group>BaseEngineController_LS|Foreground|Inputs|LinearSensors | ACPres</group>
    </VarDec>
@@ -5594,7 +5612,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s441_Gain</struct>
+      <struct>BaseEngineController_LS_B.s442_Gain</struct>
       <help>Signal measured directly from sensor</help>
       <group>BaseEngineController_LS|Foreground|Inputs|Digital | MAF</group>
    </VarDec>
@@ -5613,7 +5631,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s385_Sum1</struct>
+      <struct>BaseEngineController_LS_B.s386_Sum1</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
    </VarDec>
    <VarDec>
@@ -5669,7 +5687,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s910_Sum</struct>
+      <struct>BaseEngineController_LS_B.s911_Sum</struct>
       <help>Stop angle for coils to establish dwell.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
    </VarDec>
@@ -5689,7 +5707,7 @@
       <format>4.2</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s402_CollectAverage.s368_Product</struct>
+      <struct>BaseEngineController_LS_B.s403_CollectAverage.s368_Product</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed</group>
    </VarDec>
    <VarDec>
@@ -5916,7 +5934,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s977_Merge</struct>
+      <struct>BaseEngineController_LS_B.s978_Merge</struct>
       <help>Enable state for injectors.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
@@ -5937,7 +5955,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s850_SparkSequence_o3</struct>
+      <struct>BaseEngineController_LS_B.s851_SparkSequence_o3</struct>
       <help>ADC counts of measured voltage feedback for diagnosing the ESTs during stall state.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -5981,7 +5999,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s850_LogicalOperator1</struct>
+      <struct>BaseEngineController_LS_B.s851_LogicalOperator1</struct>
       <help>Enable sate for coils.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control</group>
       <col_len>8</col_len>
@@ -6003,7 +6021,7 @@
       <format>5.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s850_SparkSequence_o4</struct>
+      <struct>BaseEngineController_LS_B.s851_SparkSequence_o4</struct>
       <help>Dwell time used to diagnose ESTs during run-state.</help>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|EST Fault Management</group>
       <col_len>8</col_len>
@@ -6064,7 +6082,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s856_InjectorSequence_o1</struct>
+      <struct>BaseEngineController_LS_B.s857_InjectorSequence_o1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Injector Control</group>
       <col_len>8</col_len>
       <row_len>1</row_len>
@@ -7789,7 +7807,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s912_DataTypeConversion</struct>
+      <struct>BaseEngineController_LS_B.s913_DataTypeConversion</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -7812,7 +7830,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s382_LogicalOperator</struct>
       <group>BaseEngineController_LS|Foreground|Control|Controller|Run|O2 Control|O2 Control State Determination</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -8307,7 +8325,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s442_motohawk_encoder_fault</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_encoder_fault</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed|Encoder Diagnostics</group>
       <enum name="VarDecEnum_30">
          <item name="No Fault" value="0"/>
@@ -8334,7 +8352,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s381_LogicalOperator</struct>
+      <struct>BaseEngineController_LS_B.s382_LogicalOperator</struct>
       <help>Steady-State Engine Operation</help>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs|Engine Steady-State Flag</group>
       <enum name="VarDecEnum_28">
@@ -8383,7 +8401,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s401_RelationalOperator3</struct>
+      <struct>BaseEngineController_LS_B.s402_RelationalOperator3</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|RawProcessed|Base TPS Request</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
@@ -9534,7 +9552,7 @@
       <format>3.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s442_motohawk_encoder_state</struct>
+      <struct>BaseEngineController_LS_B.s443_motohawk_encoder_state</struct>
       <group>BaseEngineController_LS|Foreground|Inputs|EngineSpeed</group>
       <enum name="VarDecEnum_31">
          <item name="zero" value="0"/>
@@ -12792,7 +12810,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s912_RelationalOperator1</struct>
+      <struct>BaseEngineController_LS_B.s913_RelationalOperator1</struct>
       <group>BaseEngineController_LS|Foreground|Outputs|Coil Control|Coil Enable Manager|EST Enable TDC Counter</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>
@@ -14590,7 +14608,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s383_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s384_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
@@ -15551,7 +15569,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s382_RelationalOperator4</struct>
+      <struct>BaseEngineController_LS_B.s383_RelationalOperator4</struct>
       <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|LoadBasedCalcs</group>
       <enum name="VarDecEnum_21">
          <item name="Decreasing" value="0"/>
@@ -16006,7 +16024,7 @@
       <format>1.0</format>
       <mask>0xFFFFFFFF</mask>
       <ctype>BlockIO_BaseEngineController_LS</ctype>
-      <struct>BaseEngineController_LS_B.s998_RelationalOperator</struct>
+      <struct>BaseEngineController_LS_B.s999_RelationalOperator</struct>
       <group>System | Main Power Relay</group>
       <enum name="VarDecEnum_4">
          <item name="Disabled" value="0"/>

@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2094
+ * Model version              : 1.2098
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Tue Nov 08 22:17:40 2022
+ * C source code generated on : Sat Nov 12 20:07:34 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_20XRTI_PERIODIC_5792p001(void)
 {
-  /* Named constants for Stateflow: '<S998>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S999>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -32,14 +32,25 @@ void Trigger_FGND_20XRTI_PERIODIC_5792p001(void)
     BaseEngineController_LS_M->Timing.clockTickH0 = upper32Bits;
   }
 
-  if (BaseEngineController_LS_DWork.s751_motohawk_trigger_DWORK1) {
-    /* Output and update for function-call system: '<S751>/Function-Call Subsystem' */
+  if (BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1) {
+    /* Output and update for function-call system: '<S752>/Function-Call Subsystem' */
     {
-      /* local block i/o variables */
-      boolean_T rtb_motohawk_calibration;
+      boolean_T rtb_InitialConditionisTrue_d;
 
-      /* S-Function (motohawk_sfun_calibration): '<S778>/motohawk_calibration' */
-      rtb_motohawk_calibration = (APP2_AlwaysAdapt_DataStore());
+      /* UnitDelay: '<S780>/Initial Condition is True' */
+      rtb_InitialConditionisTrue_d =
+        BaseEngineController_LS_DWork.s780_InitialConditionisTrue_DSTATE;
+
+      /* Logic: '<S779>/Logical Operator' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S779>/motohawk_calibration'
+       */
+      BaseEngineController_LS_B.s779_LogicalOperator =
+        ((rtb_InitialConditionisTrue_d || (APP2_AlwaysAdapt_DataStore())));
+
+      /* Update for UnitDelay: '<S780>/Initial Condition is True' incorporates:
+       *  Constant: '<S780>/False After First Sample'
+       */
+      BaseEngineController_LS_DWork.s780_InitialConditionisTrue_DSTATE = FALSE;
     }
   }
 }

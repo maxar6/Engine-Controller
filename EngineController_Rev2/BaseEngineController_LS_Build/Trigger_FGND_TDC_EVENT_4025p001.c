@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2094
+ * Model version              : 1.2098
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Tue Nov 08 22:17:40 2022
+ * C source code generated on : Sat Nov 12 20:07:34 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_TDC_EVENT_4025p001(void)
 {
-  /* Named constants for Stateflow: '<S998>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S999>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -32,40 +32,40 @@ void Trigger_FGND_TDC_EVENT_4025p001(void)
     BaseEngineController_LS_M->Timing.clockTickH0 = upper32Bits;
   }
 
-  if (BaseEngineController_LS_DWork.s406_motohawk_trigger_DWORK1) {
-    /* Output and update for function-call system: '<S406>/TDC_Counter' */
+  if (BaseEngineController_LS_DWork.s407_motohawk_trigger_DWORK1) {
+    /* Output and update for function-call system: '<S407>/TDC_Counter' */
     {
       int32_T tmp;
 
-      /* Switch: '<S428>/Switch' incorporates:
-       *  Constant: '<S428>/Constant1'
-       *  Constant: '<S429>/Constant'
-       *  RelationalOperator: '<S429>/RelOp'
-       *  Sum: '<S428>/Sum'
+      /* Switch: '<S429>/Switch' incorporates:
+       *  Constant: '<S429>/Constant1'
+       *  Constant: '<S430>/Constant'
+       *  RelationalOperator: '<S430>/RelOp'
+       *  Sum: '<S429>/Sum'
        */
-      if (BaseEngineController_LS_B.s406_UnitDelay == 2) {
-        /* Sum: '<S428>/Sum' incorporates:
-         *  Constant: '<S428>/Constant'
-         *  UnitDelay: '<S428>/CrankCounter'
+      if (BaseEngineController_LS_B.s407_UnitDelay == 2) {
+        /* Sum: '<S429>/Sum' incorporates:
+         *  Constant: '<S429>/Constant'
+         *  UnitDelay: '<S429>/CrankCounter'
          */
         tmp = (int32_T)((uint32_T)
-                        BaseEngineController_LS_DWork.s428_CrankCounter_DSTATE +
+                        BaseEngineController_LS_DWork.s429_CrankCounter_DSTATE +
                         1U);
         if ((uint32_T)tmp > 255U) {
           tmp = 255;
         }
 
-        /* End of Sum: '<S428>/Sum' */
-        BaseEngineController_LS_B.s428_Switch = (uint8_T)tmp;
+        /* End of Sum: '<S429>/Sum' */
+        BaseEngineController_LS_B.s429_Switch = (uint8_T)tmp;
       } else {
-        BaseEngineController_LS_B.s428_Switch = 0U;
+        BaseEngineController_LS_B.s429_Switch = 0U;
       }
 
-      /* End of Switch: '<S428>/Switch' */
+      /* End of Switch: '<S429>/Switch' */
 
-      /* Update for UnitDelay: '<S428>/CrankCounter' */
-      BaseEngineController_LS_DWork.s428_CrankCounter_DSTATE =
-        BaseEngineController_LS_B.s428_Switch;
+      /* Update for UnitDelay: '<S429>/CrankCounter' */
+      BaseEngineController_LS_DWork.s429_CrankCounter_DSTATE =
+        BaseEngineController_LS_B.s429_Switch;
     }
   }
 }

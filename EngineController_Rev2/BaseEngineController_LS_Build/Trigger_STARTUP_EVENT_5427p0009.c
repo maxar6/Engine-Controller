@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2094
+ * Model version              : 1.2098
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Tue Nov 08 22:17:40 2022
+ * C source code generated on : Sat Nov 12 20:07:34 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_STARTUP_EVENT_5427p0009(void)
 {
-  /* Named constants for Stateflow: '<S998>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S999>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -33,22 +33,22 @@ void Trigger_STARTUP_EVENT_5427p0009(void)
   }
 
   {
-    /* Output and update for function-call system: '<S621>/Once at Startup' */
+    /* Output and update for function-call system: '<S622>/Once at Startup' */
     {
       /* local block i/o variables */
       uint16_T rtb_motohawk_ain;
 
-      /* S-Function Block: <S671>/motohawk_ain Resource: MAPSensorPin */
+      /* S-Function Block: <S672>/motohawk_ain Resource: MAPSensorPin */
       {
         extern NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc,
           uint16_T *status);
         MAPSensorPin_AnalogInput_Get(&rtb_motohawk_ain, NULL);
       }
 
-      /* DataTypeConversion: '<S671>/Data Type Conversion' incorporates:
-       *  S-Function (motohawk_sfun_ain): '<S671>/motohawk_ain'
+      /* DataTypeConversion: '<S672>/Data Type Conversion' incorporates:
+       *  S-Function (motohawk_sfun_ain): '<S672>/motohawk_ain'
        */
-      BaseEngineController_LS_B.s621_Merge = (real_T)rtb_motohawk_ain;
+      BaseEngineController_LS_B.s622_Merge = (real_T)rtb_motohawk_ain;
     }
   }
 }

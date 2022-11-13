@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2094
+ * Model version              : 1.2098
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Tue Nov 08 22:17:40 2022
+ * C source code generated on : Sat Nov 12 20:07:34 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
 {
-  /* Named constants for Stateflow: '<S998>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S999>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -81,7 +81,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       /* Sum: '<S268>/Sum2' incorporates:
        *  UnitDelay: '<S268>/Unit Delay'
        */
-      rtb_Sum2_g = BaseEngineController_LS_B.s442_RPMInst -
+      rtb_Sum2_g = BaseEngineController_LS_B.s443_RPMInst -
         BaseEngineController_LS_DWork.s268_UnitDelay_DSTATE;
 
       /* S-Function Block: <S268>/motohawk_delta_time */
@@ -122,11 +122,11 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         -(RPMFallingRate_DataStore())));
 
       /* DataTypeConversion: '<S250>/Data Type Conversion' */
-      if (rtIsNaN(BaseEngineController_LS_B.s442_RPMInst) || rtIsInf
-          (BaseEngineController_LS_B.s442_RPMInst)) {
+      if (rtIsNaN(BaseEngineController_LS_B.s443_RPMInst) || rtIsInf
+          (BaseEngineController_LS_B.s443_RPMInst)) {
         rtb_Sum2_g = 0.0;
       } else {
-        rtb_Sum2_g = fmod(floor(BaseEngineController_LS_B.s442_RPMInst), 65536.0);
+        rtb_Sum2_g = fmod(floor(BaseEngineController_LS_B.s443_RPMInst), 65536.0);
       }
 
       rtb_DataTypeConversion_f = (int16_T)(rtb_Sum2_g < 0.0 ? (int16_T)-(int16_T)
@@ -141,7 +141,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern int16_T TableInterpolation1D_int16_T(uint16_T idx, int16_T
           *tbl_data, uint32_T sz);
         rtb_motohawk_interpolation_1d2_i = TableInterpolation1D_int16_T
-          (BaseEngineController_LS_B.s392_motohawk_prelookup, (int16_T *)
+          (BaseEngineController_LS_B.s393_motohawk_prelookup, (int16_T *)
            ((MinGovClntRPMSetPtTbl_DataStore())), 5);
         (MinGovClntRPMSetPt_DataStore()) = rtb_motohawk_interpolation_1d2_i;
       }
@@ -194,9 +194,9 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        *  S-Function (motohawk_sfun_data_read): '<S250>/motohawk_data_read1'
        */
       if (AirControlSource_DataStore() == FALSE) {
-        rtb_Switch_e = BaseEngineController_LS_B.s404_Switch1;
+        rtb_Switch_e = BaseEngineController_LS_B.s405_Switch1;
       } else {
-        rtb_Switch_e = BaseEngineController_LS_B.s411_Switch2;
+        rtb_Switch_e = BaseEngineController_LS_B.s412_Switch2;
       }
 
       /* End of MultiPortSwitch: '<S250>/Multiport Switch1' */
@@ -213,7 +213,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        *  UnitDelay: '<S153>/Unit Delay3'
        */
       if (AirControlSource_DataStore() == FALSE) {
-        rtb_RelationalOperator2_e = (BaseEngineController_LS_B.s419_Sum2 >
+        rtb_RelationalOperator2_e = (BaseEngineController_LS_B.s420_Sum2 >
           BaseEngineController_LS_DWork.s153_UnitDelay3_DSTATE);
       } else {
         rtb_RelationalOperator2_e = TRUE;
@@ -503,7 +503,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        *  Sum: '<S253>/Sum1'
        */
       if (rtb_LogicalOperator_i) {
-        rtb_Product5 = BaseEngineController_LS_B.s442_RPMInst;
+        rtb_Product5 = BaseEngineController_LS_B.s443_RPMInst;
       } else {
         /* Product: '<S253>/Product1' incorporates:
          *  S-Function (motohawk_sfun_calibration): '<S253>/motohawk_calibration2'
@@ -525,7 +525,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       /* Sum: '<S279>/Sum2' */
       BaseEngineController_LS_B.s279_Sum2 =
         BaseEngineController_LS_B.s253_DontallowsetpointtoeverdropbelowtheTargetRPM
-        - BaseEngineController_LS_B.s615_Sum1;
+        - BaseEngineController_LS_B.s616_Sum1;
 
       /* Product: '<S279>/Product5' incorporates:
        *  S-Function (motohawk_sfun_calibration): '<S255>/motohawk_calibration5'
@@ -645,7 +645,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       /* Sum: '<S274>/Sum1' */
       BaseEngineController_LS_B.s274_Sum1 =
         BaseEngineController_LS_B.s253_DontallowsetpointtoeverdropbelowtheTargetRPM
-        - BaseEngineController_LS_B.s615_Sum1;
+        - BaseEngineController_LS_B.s616_Sum1;
 
       /* Product: '<S274>/Product4' incorporates:
        *  S-Function (motohawk_sfun_calibration): '<S254>/motohawk_calibration4'
@@ -755,7 +755,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_motohawk_interpolation_1d1_i = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s390_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s391_motohawk_prelookup, (real_T *)
            ((ACAirFlowOfstTbl_DataStore())), 5);
         (ACAirFlowOfst_DataStore()) = rtb_motohawk_interpolation_1d1_i;
       }
@@ -772,7 +772,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_motohawk_interpolation_1d2_p = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s392_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
            ((BaseAirflowOfstTbl_DataStore())), 5);
         (BaseAirflowOfst_DataStore()) = rtb_motohawk_interpolation_1d2_p;
       }
@@ -820,7 +820,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        *  Sum: '<S256>/Sum1'
        */
       if (!rtb_LogicalOperator_i) {
-        rtb_Sum2_g = BaseEngineController_LS_B.s411_Switch2;
+        rtb_Sum2_g = BaseEngineController_LS_B.s412_Switch2;
       } else {
         /* Product: '<S256>/Product1' incorporates:
          *  S-Function (motohawk_sfun_calibration): '<S256>/motohawk_calibration2'
@@ -863,7 +863,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       rtb_motohawk_delta_time_n2 = 0.005;
 
       /* Sum: '<S251>/Sum' */
-      rtb_UnitDelay1_j = BaseEngineController_LS_B.s615_Sum1 -
+      rtb_UnitDelay1_j = BaseEngineController_LS_B.s616_Sum1 -
         BaseEngineController_LS_B.s253_DontallowsetpointtoeverdropbelowtheTargetRPM;
 
       /* Switch: '<S271>/Switch' incorporates:
@@ -951,7 +951,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
 
       /* Update for UnitDelay: '<S268>/Unit Delay' */
       BaseEngineController_LS_DWork.s268_UnitDelay_DSTATE =
-        BaseEngineController_LS_B.s442_RPMInst;
+        BaseEngineController_LS_B.s443_RPMInst;
 
       /* Update for UnitDelay: '<S270>/Unit Delay' */
       BaseEngineController_LS_DWork.s270_UnitDelay_DSTATE = rtb_Sum1_f;
@@ -1022,7 +1022,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       /* Sum: '<S152>/Sum' */
       BaseEngineController_LS_B.s152_Sum =
         BaseEngineController_LS_B.s256_DontallowsetpointtoeverdropbelowtheTargetRPM
-        + BaseEngineController_LS_B.s419_Sum2;
+        + BaseEngineController_LS_B.s420_Sum2;
 
       /* Outputs for Enabled SubSystem: '<S233>/InGear' incorporates:
        *  EnablePort: '<S236>/Enable'
@@ -1030,7 +1030,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       /* Outputs for Enabled SubSystem: '<S233>/InNeutral' incorporates:
        *  EnablePort: '<S237>/Enable'
        */
-      if (BaseEngineController_LS_B.s570_Merge) {
+      if (BaseEngineController_LS_B.s571_Merge) {
         /* S-Function (motohawk_sfun_data_read): '<S236>/motohawk_data_read' */
         rtb_MinMax_ny = MaxGovInGearSetPoint_DataStore();
 
@@ -1094,14 +1094,14 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       /* RelationalOperator: '<S233>/Relational Operator' incorporates:
        *  Sum: '<S233>/Sum1'
        */
-      rtb_RelationalOperator_j = (BaseEngineController_LS_B.s442_RPMInst >
+      rtb_RelationalOperator_j = (BaseEngineController_LS_B.s443_RPMInst >
         (real_T)(uint16_T)(rtb_Merge_a - rtb_Merge1));
 
       /* DataTypeConversion: '<S152>/Data Type Conversion' */
       rtb_DataTypeConversion_m = (real_T)rtb_Merge_a;
 
       /* RelationalOperator: '<S231>/Relational Operator2' */
-      rtb_RelationalOperator2_n = (BaseEngineController_LS_B.s442_RPMInst >
+      rtb_RelationalOperator2_n = (BaseEngineController_LS_B.s443_RPMInst >
         rtb_DataTypeConversion_m);
 
       /* RelationalOperator: '<S231>/Relational Operator' incorporates:
@@ -1109,7 +1109,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        *  Sum: '<S231>/Sum'
        */
       rtb_RelationalOperator_c = (BaseEngineController_LS_B.s152_Sum <=
-        BaseEngineController_LS_B.s411_Switch2 - (MaxGovTPSHyst_DataStore()));
+        BaseEngineController_LS_B.s412_Switch2 - (MaxGovTPSHyst_DataStore()));
 
       /* Logic: '<S231>/Logical Operator1' incorporates:
        *  RelationalOperator: '<S231>/Relational Operator1'
@@ -1118,7 +1118,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        */
       rtb_LogicalOperator1_l = (rtb_RelationalOperator_j &&
         (BaseEngineController_LS_B.s152_Sum > (MaxGovTPSHyst_DataStore()) +
-         BaseEngineController_LS_B.s411_Switch2));
+         BaseEngineController_LS_B.s412_Switch2));
 
       /* MATLAB Function Block: '<S231>/MaxGOV Stateflow' incorporates:
        *  Logic: '<S231>/Logical Operator'
@@ -1222,7 +1222,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
        *  Sum: '<S232>/Sum1'
        */
       if (rtb_RelationalOperator_j) {
-        rtb_alpha_o = BaseEngineController_LS_B.s442_RPMInst;
+        rtb_alpha_o = BaseEngineController_LS_B.s443_RPMInst;
       } else {
         /* Product: '<S232>/Product1' incorporates:
          *  S-Function (motohawk_sfun_calibration): '<S232>/motohawk_calibration2'
@@ -1251,7 +1251,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         rtb_alpha_o =
           BaseEngineController_LS_B.s232_DontallowsetpointtoevergoabovetheTargetRPM;
       } else {
-        rtb_alpha_o = BaseEngineController_LS_B.s442_RPMInst;
+        rtb_alpha_o = BaseEngineController_LS_B.s443_RPMInst;
       }
 
       /* End of Switch: '<S234>/Switch1' */
@@ -1507,8 +1507,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_RichEquivRatioTargetDelta = TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_Indexes,
-           BaseEngineController_LS_B.s396_Indexes, (real_T *)
+          (BaseEngineController_LS_B.s395_Indexes,
+           BaseEngineController_LS_B.s397_Indexes, (real_T *)
            ((SparkAdvMap_DataStore())), 17, 17);
         (SparkAdv_DataStore()) = rtb_RichEquivRatioTargetDelta;
       }
@@ -1518,7 +1518,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_motohawk_interpolation_1d = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s392_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
            ((ECT_SpkOfstTbl_DataStore())), 5);
         (ECT_SpkOfst_DataStore()) = rtb_motohawk_interpolation_1d;
       }
@@ -1528,8 +1528,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_RichEquivRatioTargetDelta_l = TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup1,
-           BaseEngineController_LS_B.s396_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup1,
+           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
            ((ECT_SpkOfstMultMap_DataStore())), 9, 9);
         (ECT_SpkOfstMult_DataStore()) = rtb_RichEquivRatioTargetDelta_l;
       }
@@ -1546,7 +1546,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_motohawk_interpolation_1d1_o = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
            ((IAT_SpkOfstTbl_DataStore())), 5);
         (IAT_SpkOfst_DataStore()) = rtb_motohawk_interpolation_1d1_o;
       }
@@ -1556,8 +1556,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_RichEquivRatioTargetDelta_h = TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup1,
-           BaseEngineController_LS_B.s396_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup1,
+           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
            ((IAT_SpkOfstMultMap_DataStore())), 9, 9);
         (IAT_SpkOfstMult_DataStore()) = rtb_RichEquivRatioTargetDelta_h;
       }
@@ -1574,7 +1574,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_motohawk_interpolation_1d2_m = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s391_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s392_motohawk_prelookup, (real_T *)
            ((CAT_SpkOfstTbl_DataStore())), 5);
         (CAT_SpkOfst_DataStore()) = rtb_motohawk_interpolation_1d2_m;
       }
@@ -1584,8 +1584,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_RichEquivRatioTargetDelta_i = TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup1,
-           BaseEngineController_LS_B.s396_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup1,
+           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
            ((CAT_SpkOfstMultMap_DataStore())), 9, 9);
         (CAT_SpkOfstMult_DataStore()) = rtb_RichEquivRatioTargetDelta_i;
       }
@@ -1602,9 +1602,9 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
       {
         extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
           ordarr[], uint32_T sz, uint16_T prev);
-        (Eth11IdxIn_DataStore()) = BaseEngineController_LS_B.s637_Merge;
+        (Eth11IdxIn_DataStore()) = BaseEngineController_LS_B.s638_Merge;
         (Eth11IdxIdx_DataStore()) = TablePrelookup_real_T
-          (BaseEngineController_LS_B.s637_Merge, (Eth11IdxIdxArr_DataStore()),
+          (BaseEngineController_LS_B.s638_Merge, (Eth11IdxIdxArr_DataStore()),
            11, (Eth11IdxIdx_DataStore()));
         rtb_motohawk_prelookup = (Eth11IdxIdx_DataStore());
       }
@@ -1623,8 +1623,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_RichEquivRatioTargetDelta_m = TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup1,
-           BaseEngineController_LS_B.s396_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup1,
+           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
            ((Ethanol_SpkOfstMultMap_DataStore())), 9, 9);
         (Ethanol_SpkOfstMult_DataStore()) = rtb_RichEquivRatioTargetDelta_m;
       }
@@ -1663,8 +1663,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_RichEquivRatioTargetDelta_e = TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup1,
-           BaseEngineController_LS_B.s396_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup1,
+           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
            ((EqRatio_SpkOfsMultMap_DataStore())), 9, 9);
         (EqRatio_SpkOfsMult_DataStore()) = rtb_RichEquivRatioTargetDelta_e;
       }
@@ -1707,7 +1707,7 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
           extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T
             *tbl_data, uint32_T sz);
           rtb_motohawk_interpolation_1d4_p = TableInterpolation1D_real_T
-            (BaseEngineController_LS_B.s394_motohawk_prelookup1, (real_T *)
+            (BaseEngineController_LS_B.s395_motohawk_prelookup1, (real_T *)
              ((MaxSparkLimitTbl_DataStore())), 9);
           (MaxSparkLimit_DataStore()) = rtb_motohawk_interpolation_1d4_p;
         }
@@ -1764,8 +1764,8 @@ void Trigger_FGND_5XRTI_PERIODIC_1295p0007(void)
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         BaseEngineController_LS_B.s155_motohawk_interpolation_2d1 =
           TableInterpolation2D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup1,
-           BaseEngineController_LS_B.s396_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup1,
+           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
            ((BaseSparkEnergyMap_DataStore())), 9, 9);
         (BaseSparkEnergy_DataStore()) =
           BaseEngineController_LS_B.s155_motohawk_interpolation_2d1;

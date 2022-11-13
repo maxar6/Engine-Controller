@@ -5347,13 +5347,13 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>5.0</Default>
-               <Name>FuelLevl_KeyUpDiff</Name>
+               <Default>0.2</Default>
+               <Name>FuelLevel_KeyUpDelay</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>0.2</Default>
-               <Name>FuelLevel_KeyUpDelay</Name>
+               <Default>5.0</Default>
+               <Name>FuelLevl_KeyUpDiff</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -23218,30 +23218,13 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="FuelLevl_KeyUpDiff">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>4.2</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel</group>
-        		                <help>Fuel level key up different for refuel event</help>
-        		                <max>100000000000000000.000000</max>
-        		                <min>0.000000</min>
-        		                <name>FuelLevl_KeyUpDiff</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <units>%</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="FuelLevel_KeyUpDelay">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel</group>
+        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel|RefuelEvent</group>
         		                <help>Fuel level time from key on delay</help>
         		                <max>100000000000000000.000000</max>
         		                <min>0.000000</min>
@@ -23249,6 +23232,23 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="FuelLevl_KeyUpDiff">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel|RefuelEvent</group>
+        		                <help>Fuel level key up different for refuel event</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>0.000000</min>
+        		                <name>FuelLevl_KeyUpDiff</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>%</units>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -36121,17 +36121,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_026.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_026.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_026.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_026.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in c:\ecufiles\tdbdll</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_026.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
                 </Command>
         </Add>
     

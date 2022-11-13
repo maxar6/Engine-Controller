@@ -13920,26 +13920,6 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>FuelLevl_KeyUpDiff</name>
-      <access>RW RW RW RW</access>
-      <gain>1</gain>
-      <offset>0</offset>
-      <exp>1</exp>
-      <max>1.0E17</max>
-      <min>0</min>
-      <format>4.2</format>
-      <mask>0xFFFFFFFF</mask>
-      <units>%</units>
-      <ctype>const Constant_T</ctype>
-      <help>Fuel level key up different for refuel event</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel</group>
-      <struct>ConstantWork.FuelLevl_KeyUpDiff</struct>
-      <class>var</class>
-      <storage>FLASH</storage>
-      <update>BACKGND</update>
-      <type>real32</type>
-   </VarDec>
-   <VarDec>
       <name>FuelLevel_KeyUpDelay</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -13952,8 +13932,28 @@
       <units>sec</units>
       <ctype>const Constant_T</ctype>
       <help>Fuel level time from key on delay</help>
-      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel</group>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel|RefuelEvent</group>
       <struct>ConstantWork.FuelLevel_KeyUpDelay</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>FuelLevl_KeyUpDiff</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>0</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>%</units>
+      <ctype>const Constant_T</ctype>
+      <help>Fuel level key up different for refuel event</help>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|FuelLevel|RefuelEvent</group>
+      <struct>ConstantWork.FuelLevl_KeyUpDiff</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>

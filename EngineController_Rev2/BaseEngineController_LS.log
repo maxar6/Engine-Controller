@@ -4,22 +4,19 @@
 ###  Starting MotoHawk Build              ###
 ###  MotoHawk version: 2011a_sp0.184      ###
 ###    MATLAB version: 7.12.0.635 (R2011a)###
-###        08-Nov-2022 22:16:28           ###
+###        12-Nov-2022 20:06:24           ###
 ###                                       ###
 #############################################
  
 Target Module:   ECU555-80 (DEV)
-DEV Executable:  BaseEngineController_LS_026.srz
-MotoTune DLL:    BaseEngin_026.dll
+DEV Executable:  BaseEngineController_LS_028.srz
+MotoTune DLL:    BaseEngin_028.dll
  
 Project GUID:    12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9
-Build GUID:      782cbebc-5164-4ba8-8c-15-31-53-bb-57-d1
+Build GUID:      79d21bc5-a922-460c-a0-25-f8-c2-8e-0c-2f
  
 ### Starting build procedure for model: BaseEngineController_LS
 ### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build
-{Warning: Unconnected input line found on 'BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Logical Operator1' (input port: 1)} 
-{Warning: Unconnected input line found on 'BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Logical Operator' (input port: 1)} 
-{Warning: Output port 1 of '<a href="matlab:open_and_hilite_system ('BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Function-Call Subsystem')">BaseEngineController_LS/Foreground/Inputs/PotentiometerSensors/APP2ForcedAdapt/Function-Call Subsystem</a>' is not connected.} 
 ### Invoking Target Language Compiler on BaseEngineController_LS.rtw
 ### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
 ### Loading TLC function libraries
@@ -33,7 +30,7 @@ Build GUID:      782cbebc-5164-4ba8-8c-15-31-53-bb-57-d1
 ...............................................................................
 ...............................................................................
 ...............................................................................
-.........
+..........
 ### Caching model source code
 ...............................................................................
 ...............................................................................
@@ -82,28 +79,28 @@ Build GUID:      782cbebc-5164-4ba8-8c-15-31-53-bb-57-d1
 ...............................................................................
 ...............................................................................
 ...............................................................................
-...........
+.............
 ### Writing source file BaseEngineController_LS.c
 .
 ### Writing header file BaseEngineController_LS_private.h
 ### Writing header file BaseEngineController_LS.h
-.
 ### Writing header file BaseEngineController_LS_types.h
+.
 ### Writing source file BaseEngineController_LS_IdleStateMachine.c
-.
 ### Writing source file Foreground.c
+.
 ### Writing header file Foreground.h
-.
 ### Writing header file rtwtypes.h
+.
 ### Writing header file rt_zcfcn.h
-.
 ### Writing source file rt_zcfcn.c
+.
 ### Writing header file rt_nonfinite.h
-.
 ### Writing source file rt_nonfinite.c
-### Writing header file BaseEngineController_LS_IdleStateMachine.h
 .
+### Writing header file BaseEngineController_LS_IdleStateMachine.h
 ### Writing source file BaseEngineController_LS_data.c
+.
 ### TLC code generation complete.
 ...............................................................................
 ...............................................................................
@@ -119,7 +116,7 @@ Build GUID:      782cbebc-5164-4ba8-8c-15-31-53-bb-57-d1
 ...............................................................................
 ............................................................
 ### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
-### Creating BaseEngineController_LS.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### BaseEngineController_LS.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf is up to date
 ### Building BaseEngineController_LS: .\BaseEngineController_LS.bat
 ### Created Code and Build Scripts.  Ready to Build ### 
 ### Successful completion of build procedure for model: BaseEngineController_LS
@@ -224,35 +221,35 @@ s-records:
  
 BUILD SUCCEEDED 
  
-Total time: 17.2 seconds. 
+Total time: 16.9 seconds. 
  
 ### Call MotoConvert 
 Project format is MPC5xx 
 Toolchain format is GCC 
 Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
 Transforming range 0x00000000-0x0006FFFF into 64 byte pages... 
-Searching for Table Database address 'EriRequestTableList'...Found at 0x000551C3 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x00055303 
 Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00008100 
 Calculating Application defined CRC's...OK. 
 Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
 Searching for initialised section '.ramcals' aliased to '.romcals' ... 
-    Adding RAM[0x003FC53C], ROM[0x0005E488], Length[0x00000790] 
+    Adding RAM[0x003FC540], ROM[0x0005E5D0], Length[0x00000790] 
 Searching for initialised section '.sdata' aliased to '.romsdata' ... 
-    Adding RAM[0x003F9800], ROM[0x0005EC48], Length[0x00000019] 
+    Adding RAM[0x003F9800], ROM[0x0005ED90], Length[0x00000019] 
 Searching for initialised section '.data' aliased to '.romdata' ... 
-    Adding RAM[0x003FA8E0], ROM[0x0005EC64], Length[0x000008C4] 
+    Adding RAM[0x003FA8E0], ROM[0x0005EDAC], Length[0x000008C4] 
 Complete. 
 Writing file sr://BaseEngineController_LS.sr... 
-Encrypting 'sr://BaseEngineController_LS.sr' into 'srz://.\Target\BaseEngineController_LS_026.srz' ... 
+Encrypting 'sr://BaseEngineController_LS.sr' into 'srz://.\Target\BaseEngineController_LS_028.srz' ... 
 Done. 
 ### Creating Build Statistics 
 Memory Summary:
-	FLASH:                               352283 bytes   98% of 360184
+	FLASH:                               352607 bytes   98% of 360184
 	    BaseEngineController_LS_M:            4 bytes    0% of 360184
 	    NonVolatileDefault:                1936 bytes    1% of 360184
-	    BaseEngineController_LS_Foreground:71652 bytes   20% of 360184
-	INTERNAL_RAM:                         21820 bytes   82% of  26544
-	    BaseEngineController_LS_B:         1544 bytes    6% of  26544
+	    BaseEngineController_LS_Foreground:71872 bytes   20% of 360184
+	INTERNAL_RAM:                         21824 bytes   82% of  26544
+	    BaseEngineController_LS_B:         1548 bytes    6% of  26544
 	    BaseEngineController_LS_DWork:     1184 bytes    4% of  26544
 	    BaseEngineController_LS_M_:          16 bytes    0% of  26544
 	    VolatileWork:                        13 bytes    0% of  26544
@@ -265,12 +262,12 @@ Memory Summary:
 	    ConstantWork:                     28584 bytes   44% of  65536
 	EEPROM_SPACE:                          1939 bytes   24% of   8192
 
-### Copy BaseEngin_026.dll and BaseEngineController_LS_026.srz 
+### Copy BaseEngin_028.dll and BaseEngineController_LS_028.srz 
 ### Dumping DLL to XML 
 ### Generating ASAP2 file 
 ### Installing ASAP2 file in c:\ecufiles\tdbdll 
 ### Successful Build with MotoCoder 
-Elapsed Build Time: 3 minutes, 9.1 seconds  (189.1 seconds)
+Elapsed Build Time: 3 minutes, 6.4 seconds  (186.4 seconds)
 {Warning: Block diagram 'BaseEngineController_LS' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.  The diagram has been saved but may
 not contain what you intended.} 
 {Warning: Block diagram 'BaseEngineController_LS' contains one or more parameterized library links.  To find the parameterized links use the Model Advisor.  The diagram has been saved but
@@ -279,8 +276,8 @@ may not behave as you intended.}
 #############################################################################
 ###
 ### Target Module: ECU555-80
-### Created Development Executable: BaseEngineController_LS_026.srz
-### Created MotoTune DLL: BaseEngin_026.dll
+### Created Development Executable: BaseEngineController_LS_028.srz
+### Created MotoTune DLL: BaseEngin_028.dll
 ###
 ### Successful MotoHawk Build for model: BaseEngineController_LS
 ###

@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2094
+ * Model version                  : 1.2098
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Tue Nov 08 22:17:40 2022
+ * C/C++ source code generated on : Sat Nov 12 20:07:34 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,14 +20,14 @@
 /* Invariant block signals (auto storage) */
 const ConstBlockIO_BaseEngineController_LS BaseEngineController_LS_ConstB = {
   0.0
-  ,                                    /* '<S856>/Gain4' */
+  ,                                    /* '<S857>/Gain4' */
   0.0
   ,                                    /* '<S138>/motohawk_replicate2' */
 
   { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
   ,                                    /* '<S138>/motohawk_replicate' */
   0U
-  /* '<S856>/Data Type Conversion5' */
+  /* '<S857>/Data Type Conversion5' */
 };
 
 /* Constant parameters (auto storage) */
@@ -60,8 +60,8 @@ const ConstParam_BaseEngineController_LS BaseEngineController_LS_ConstP = {
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S1019>/Logic'
-   *   '<S605>/Logic'
+   *   '<S1020>/Logic'
+   *   '<S606>/Logic'
    */
   { 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0 }
 };

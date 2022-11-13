@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_028</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_LS_028</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_LS_028_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_029</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_LS_029</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_LS_029_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_028.dll and BaseEngineController_LS_028.srz</Description>
+			<Description>Copy BaseEngin_029.dll and BaseEngineController_LS_029.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_028.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_028.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
+			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_029.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_029.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -125,7 +125,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_028.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_029.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -159,5 +159,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>a165063e-96b8-40e1-b7-42-ad-51-69-1b-da</Signature>
+	<Signature>ab9632ad-e80b-42fe-9d-97-6d-ab-f2-2f-b0</Signature>
 </Application>

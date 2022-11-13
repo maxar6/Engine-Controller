@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2098
+ * Model version              : 1.2103
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Nov 12 20:07:34 2022
+ * C source code generated on : Sat Nov 12 20:28:28 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
 {
-  /* Named constants for Stateflow: '<S999>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S1000>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -59,59 +59,59 @@ void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
       boolean_T rtb_UnitDelay3;
       boolean_T rtb_UnitDelay4;
 
-      /* S-Function Block: <S1016>/motohawk_delta_time */
+      /* S-Function Block: <S1017>/motohawk_delta_time */
       {
         uint32_T delta;
         extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
           (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
         delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-          (&BaseEngineController_LS_DWork.s1016_motohawk_delta_time_DWORK1, NULL);
+          (&BaseEngineController_LS_DWork.s1017_motohawk_delta_time_DWORK1, NULL);
         rtb_motohawk_delta_time = ((real_T) delta) * 0.000001;
       }
 
-      /* S-Function Block: <S999>/motohawk_ain5 Resource: ECUP */
+      /* S-Function Block: <S1000>/motohawk_ain5 Resource: ECUP */
       {
         extern NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T
           *status);
         ECUP_AnalogInput_Get(&rtb_motohawk_ain5, NULL);
       }
 
-      /* RelationalOperator: '<S999>/Relational Operator' incorporates:
-       *  S-Function (motohawk_sfun_ain): '<S999>/motohawk_ain5'
-       *  S-Function (motohawk_sfun_calibration): '<S999>/motohawk_calibration'
+      /* RelationalOperator: '<S1000>/Relational Operator' incorporates:
+       *  S-Function (motohawk_sfun_ain): '<S1000>/motohawk_ain5'
+       *  S-Function (motohawk_sfun_calibration): '<S1000>/motohawk_calibration'
        */
-      BaseEngineController_LS_B.s999_RelationalOperator = ((rtb_motohawk_ain5 >=
+      BaseEngineController_LS_B.s1000_RelationalOperator = ((rtb_motohawk_ain5 >=
         ((uint16_T)(ECUP_Threshold_DataStore()))));
 
-      /* Switch: '<S1016>/Switch' incorporates:
-       *  Constant: '<S1016>/Constant'
-       *  Logic: '<S1004>/Logical Operator1'
-       *  S-Function (motohawk_sfun_data_read): '<S1016>/motohawk_data_read'
-       *  S-Function (motohawk_sfun_delta_time): '<S1016>/motohawk_delta_time'
-       *  Sum: '<S1016>/Sum'
+      /* Switch: '<S1017>/Switch' incorporates:
+       *  Constant: '<S1017>/Constant'
+       *  Logic: '<S1005>/Logical Operator1'
+       *  S-Function (motohawk_sfun_data_read): '<S1017>/motohawk_data_read'
+       *  S-Function (motohawk_sfun_delta_time): '<S1017>/motohawk_delta_time'
+       *  Sum: '<S1017>/Sum'
        */
-      if (!BaseEngineController_LS_B.s999_RelationalOperator) {
-        BaseEngineController_LS_B.s1016_Switch = rtb_motohawk_delta_time +
+      if (!BaseEngineController_LS_B.s1000_RelationalOperator) {
+        BaseEngineController_LS_B.s1017_Switch = rtb_motohawk_delta_time +
           ForcedShutdown_DataStore();
       } else {
-        BaseEngineController_LS_B.s1016_Switch = 0.0;
+        BaseEngineController_LS_B.s1017_Switch = 0.0;
       }
 
-      /* End of Switch: '<S1016>/Switch' */
-      /* Logic: '<S1004>/Logical Operator5' incorporates:
-       *  RelationalOperator: '<S1004>/Relational Operator1'
-       *  S-Function (motohawk_sfun_calibration): '<S1004>/motohawk_calibration1'
+      /* End of Switch: '<S1017>/Switch' */
+      /* Logic: '<S1005>/Logical Operator5' incorporates:
+       *  RelationalOperator: '<S1005>/Relational Operator1'
+       *  S-Function (motohawk_sfun_calibration): '<S1005>/motohawk_calibration1'
        */
-      rtb_LogicalOperator5 = !(BaseEngineController_LS_B.s1016_Switch >=
+      rtb_LogicalOperator5 = !(BaseEngineController_LS_B.s1017_Switch >=
         (ForcedShutDownTimerThresh_DataStore()));
 
-      /* Outputs for Triggered SubSystem: '<S1004>/Post Shutdown two ticks before MPRD off' incorporates:
-       *  TriggerPort: '<S1012>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1005>/Post Shutdown two ticks before MPRD off' incorporates:
+       *  TriggerPort: '<S1013>/Trigger'
        */
       if ((!rtb_LogicalOperator5) &&
           (BaseEngineController_LS_PrevZCSigState.PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE_h
            != ZERO_ZCSIG)) {
-        /* S-Function (motohawk_sfun_fault_clr): '<S1012>/motohawk_single_fault_clear' */
+        /* S-Function (motohawk_sfun_fault_clr): '<S1013>/motohawk_single_fault_clear' */
 
         /* Set Fault Status: ETCSpringTest */
         {
@@ -121,132 +121,132 @@ void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
           }
         }
 
-        /* Outputs for Function Call SubSystem: '<S1012>/Post Shutdown two ticks before MPRD off' */
+        /* Outputs for Function Call SubSystem: '<S1013>/Post Shutdown two ticks before MPRD off' */
 
-        /* S-Function Block: <S1017>/motohawk_event_call */
+        /* S-Function Block: <S1018>/motohawk_event_call */
         {
           /* post the event */
           PostEvent(SHUTDOWN_EVENT);
         }
 
-        /* End of Outputs for SubSystem: '<S1012>/Post Shutdown two ticks before MPRD off' */
+        /* End of Outputs for SubSystem: '<S1013>/Post Shutdown two ticks before MPRD off' */
       }
 
       BaseEngineController_LS_PrevZCSigState.PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE_h
         = (uint8_T)(rtb_LogicalOperator5 ? (int32_T)POS_ZCSIG : (int32_T)
                     ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1004>/Post Shutdown two ticks before MPRD off' */
+      /* End of Outputs for SubSystem: '<S1005>/Post Shutdown two ticks before MPRD off' */
 
-      /* UnitDelay: '<S1004>/Unit Delay8' */
-      rtb_UnitDelay8 = BaseEngineController_LS_DWork.s1004_UnitDelay8_DSTATE;
+      /* UnitDelay: '<S1005>/Unit Delay8' */
+      rtb_UnitDelay8 = BaseEngineController_LS_DWork.s1005_UnitDelay8_DSTATE;
 
-      /* Outputs for Triggered SubSystem: '<S1004>/Processor Reboot' incorporates:
-       *  TriggerPort: '<S1013>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1005>/Processor Reboot' incorporates:
+       *  TriggerPort: '<S1014>/Trigger'
        */
-      if ((!BaseEngineController_LS_DWork.s1004_UnitDelay8_DSTATE) &&
+      if ((!BaseEngineController_LS_DWork.s1005_UnitDelay8_DSTATE) &&
           (BaseEngineController_LS_PrevZCSigState.ProcessorReboot_Trig_ZCE_h !=
            ZERO_ZCSIG)) {
-        /* S-Function (motohawk_sfun_inline_code): '<S1013>/Loop Forever Causing Watchdog Reset' */
+        /* S-Function (motohawk_sfun_inline_code): '<S1014>/Loop Forever Causing Watchdog Reset' */
         while (1) ;
       }
 
-      /* End of UnitDelay: '<S1004>/Unit Delay8' */
+      /* End of UnitDelay: '<S1005>/Unit Delay8' */
       BaseEngineController_LS_PrevZCSigState.ProcessorReboot_Trig_ZCE_h =
         (uint8_T)(rtb_UnitDelay8 ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1004>/Processor Reboot' */
+      /* End of Outputs for SubSystem: '<S1005>/Processor Reboot' */
 
-      /* UnitDelay: '<S1004>/Unit Delay6' */
-      rtb_UnitDelay6 = BaseEngineController_LS_DWork.s1004_UnitDelay6_DSTATE;
+      /* UnitDelay: '<S1005>/Unit Delay6' */
+      rtb_UnitDelay6 = BaseEngineController_LS_DWork.s1005_UnitDelay6_DSTATE;
 
-      /* Outputs for Triggered SubSystem: '<S1004>/Save NV Vars one tick before MPRD off' incorporates:
-       *  TriggerPort: '<S1014>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1005>/Save NV Vars one tick before MPRD off' incorporates:
+       *  TriggerPort: '<S1015>/Trigger'
        */
-      if ((!BaseEngineController_LS_DWork.s1004_UnitDelay6_DSTATE) &&
+      if ((!BaseEngineController_LS_DWork.s1005_UnitDelay6_DSTATE) &&
           (BaseEngineController_LS_PrevZCSigState.SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE_m
            != ZERO_ZCSIG)) {
-        /* Outputs for Function Call SubSystem: '<S1014>/Save NV Vars one tick before MPRD off' */
+        /* Outputs for Function Call SubSystem: '<S1015>/Save NV Vars one tick before MPRD off' */
 
-        /* S-Function (motohawk_sfun_store_nvmem): '<S1018>/motohawk_event_call' */
+        /* S-Function (motohawk_sfun_store_nvmem): '<S1019>/motohawk_event_call' */
         {
           extern void NonVolatile_StoreNonVolatile(void);
           NonVolatile_StoreNonVolatile();
         }
 
-        /* End of Outputs for SubSystem: '<S1014>/Save NV Vars one tick before MPRD off' */
+        /* End of Outputs for SubSystem: '<S1015>/Save NV Vars one tick before MPRD off' */
       }
 
-      /* End of UnitDelay: '<S1004>/Unit Delay6' */
+      /* End of UnitDelay: '<S1005>/Unit Delay6' */
       BaseEngineController_LS_PrevZCSigState.SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE_m
         = (uint8_T)(rtb_UnitDelay6 ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1004>/Save NV Vars one tick before MPRD off' */
+      /* End of Outputs for SubSystem: '<S1005>/Save NV Vars one tick before MPRD off' */
 
-      /* UnitDelay: '<S1004>/Unit Delay7' */
-      rtb_UnitDelay7 = BaseEngineController_LS_DWork.s1004_UnitDelay7_DSTATE;
+      /* UnitDelay: '<S1005>/Unit Delay7' */
+      rtb_UnitDelay7 = BaseEngineController_LS_DWork.s1005_UnitDelay7_DSTATE;
 
-      /* Outputs for Triggered SubSystem: '<S1004>/Shutdown power on ECU565//563' incorporates:
-       *  TriggerPort: '<S1015>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1005>/Shutdown power on ECU565//563' incorporates:
+       *  TriggerPort: '<S1016>/Trigger'
        */
-      if ((!BaseEngineController_LS_DWork.s1004_UnitDelay7_DSTATE) &&
+      if ((!BaseEngineController_LS_DWork.s1005_UnitDelay7_DSTATE) &&
           (BaseEngineController_LS_PrevZCSigState.ShutdownpoweronECU565563_Trig_ZCE_l
            != ZERO_ZCSIG)) {
-        /* Outputs for Function Call SubSystem: '<S1015>/Shutdown power on ECU565-128' */
+        /* Outputs for Function Call SubSystem: '<S1016>/Shutdown power on ECU565-128' */
 
-        /* S-Function Block: <S1019>/motohawk_shutdown_power */
+        /* S-Function Block: <S1020>/motohawk_shutdown_power */
         {
           /* Shut off power on PCM-128.  Other modules will ignore this call */
           SendCloseOSMessage();
         }
 
-        /* End of Outputs for SubSystem: '<S1015>/Shutdown power on ECU565-128' */
+        /* End of Outputs for SubSystem: '<S1016>/Shutdown power on ECU565-128' */
       }
 
-      /* End of UnitDelay: '<S1004>/Unit Delay7' */
+      /* End of UnitDelay: '<S1005>/Unit Delay7' */
       BaseEngineController_LS_PrevZCSigState.ShutdownpoweronECU565563_Trig_ZCE_l
         = (uint8_T)(rtb_UnitDelay7 ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1004>/Shutdown power on ECU565//563' */
+      /* End of Outputs for SubSystem: '<S1005>/Shutdown power on ECU565//563' */
 
-      /* Saturate: '<S1016>/Saturation' */
-      rtb_Saturation = BaseEngineController_LS_B.s1016_Switch >= 16000.0 ?
-        16000.0 : BaseEngineController_LS_B.s1016_Switch <= 0.0 ? 0.0 :
-        BaseEngineController_LS_B.s1016_Switch;
+      /* Saturate: '<S1017>/Saturation' */
+      rtb_Saturation = BaseEngineController_LS_B.s1017_Switch >= 16000.0 ?
+        16000.0 : BaseEngineController_LS_B.s1017_Switch <= 0.0 ? 0.0 :
+        BaseEngineController_LS_B.s1017_Switch;
 
-      /* S-Function (motohawk_sfun_data_write): '<S1016>/motohawk_data_write' */
+      /* S-Function (motohawk_sfun_data_write): '<S1017>/motohawk_data_write' */
       /* Write to Data Storage as scalar: ForcedShutdown */
       {
         ForcedShutdown_DataStore() = rtb_Saturation;
       }
 
-      /* Logic: '<S1000>/Logical Operator' incorporates:
-       *  Logic: '<S1000>/Logical Operator1'
-       *  S-Function (motohawk_sfun_calibration): '<S1000>/motohawk_calibration'
-       *  UnitDelay: '<S1000>/Unit Delay'
+      /* Logic: '<S1001>/Logical Operator' incorporates:
+       *  Logic: '<S1001>/Logical Operator1'
+       *  S-Function (motohawk_sfun_calibration): '<S1001>/motohawk_calibration'
+       *  UnitDelay: '<S1001>/Unit Delay'
        */
       rtb_LogicalOperator = ((!(ProcessorReboot_DataStore())) &&
-        BaseEngineController_LS_DWork.s1000_UnitDelay_DSTATE);
+        BaseEngineController_LS_DWork.s1001_UnitDelay_DSTATE);
 
-      /* S-Function Block: <S1007>/motohawk_delta_time */
+      /* S-Function Block: <S1008>/motohawk_delta_time */
       {
         uint32_T delta;
         extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
           (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
         delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-          (&BaseEngineController_LS_DWork.s1007_motohawk_delta_time_DWORK1, NULL);
+          (&BaseEngineController_LS_DWork.s1008_motohawk_delta_time_DWORK1, NULL);
         rtb_motohawk_delta_time_g = ((real_T) delta) * 0.000001;
       }
 
-      /* Logic: '<S999>/Logical Operator3' */
+      /* Logic: '<S1000>/Logical Operator3' */
       rtb_LogicalOperator2_o =
-        !BaseEngineController_LS_B.s999_RelationalOperator;
+        !BaseEngineController_LS_B.s1000_RelationalOperator;
 
-      /* Switch: '<S1007>/Switch' incorporates:
-       *  Constant: '<S1007>/Constant'
-       *  S-Function (motohawk_sfun_data_read): '<S1007>/motohawk_data_read'
-       *  S-Function (motohawk_sfun_delta_time): '<S1007>/motohawk_delta_time'
-       *  Sum: '<S1007>/Sum'
+      /* Switch: '<S1008>/Switch' incorporates:
+       *  Constant: '<S1008>/Constant'
+       *  S-Function (motohawk_sfun_data_read): '<S1008>/motohawk_data_read'
+       *  S-Function (motohawk_sfun_delta_time): '<S1008>/motohawk_delta_time'
+       *  Sum: '<S1008>/Sum'
        */
       if (rtb_LogicalOperator2_o) {
         rtb_Switch_i = rtb_motohawk_delta_time_g + TimeSinceShutdown_DataStore();
@@ -254,111 +254,111 @@ void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
         rtb_Switch_i = 0.0;
       }
 
-      /* End of Switch: '<S1007>/Switch' */
-      /* RelationalOperator: '<S999>/Relational Operator1' incorporates:
-       *  S-Function (motohawk_sfun_calibration): '<S999>/motohawk_calibration1'
+      /* End of Switch: '<S1008>/Switch' */
+      /* RelationalOperator: '<S1000>/Relational Operator1' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S1000>/motohawk_calibration1'
        */
       rtb_UnitDelay8 = (rtb_Switch_i >= (Shutdown_Delay_DataStore()));
 
-      /* Logic: '<S999>/Logical Operator2' incorporates:
-       *  S-Function (motohawk_sfun_data_read): '<S999>/motohawk_data_read'
+      /* Logic: '<S1000>/Logical Operator2' incorporates:
+       *  S-Function (motohawk_sfun_data_read): '<S1000>/motohawk_data_read'
        */
-      BaseEngineController_LS_B.s999_LogicalOperator2 = ((rtb_UnitDelay8 &&
+      BaseEngineController_LS_B.s1000_LogicalOperator2 = ((rtb_UnitDelay8 &&
         rtb_LogicalOperator2_o && ShutDownTasksComplete_DataStore()));
 
-      /* Stateflow: '<S999>/ECUP Latch' */
+      /* Stateflow: '<S1000>/ECUP Latch' */
 
       /* Gateway: Main Power Relay/Main Power Relay/ECUP Latch */
       /* During: Main Power Relay/Main Power Relay/ECUP Latch */
-      switch (BaseEngineController_LS_DWork.s1003_is_c8_BaseEngineController_LS)
+      switch (BaseEngineController_LS_DWork.s1004_is_c8_BaseEngineController_LS)
       {
        case BaseEngineController_LS_IN_PowerDown:
-        /* During 'PowerDown': '<S1003>:1' */
-        if (BaseEngineController_LS_B.s999_RelationalOperator) {
-          /* Transition: '<S1003>:5' */
-          BaseEngineController_LS_DWork.s1003_is_c8_BaseEngineController_LS =
+        /* During 'PowerDown': '<S1004>:1' */
+        if (BaseEngineController_LS_B.s1000_RelationalOperator) {
+          /* Transition: '<S1004>:5' */
+          BaseEngineController_LS_DWork.s1004_is_c8_BaseEngineController_LS =
             BaseEngineController_LS_IN_PowerUp;
 
-          /* Entry 'PowerUp': '<S1003>:2' */
-          BaseEngineController_LS_B.s1003_MPRDState = TRUE;
+          /* Entry 'PowerUp': '<S1004>:2' */
+          BaseEngineController_LS_B.s1004_MPRDState = TRUE;
         }
         break;
 
        case BaseEngineController_LS_IN_PowerUp:
-        /* During 'PowerUp': '<S1003>:2' */
-        if ((!BaseEngineController_LS_B.s999_RelationalOperator) &&
-            BaseEngineController_LS_B.s999_LogicalOperator2) {
-          /* Transition: '<S1003>:4' */
-          BaseEngineController_LS_DWork.s1003_is_c8_BaseEngineController_LS =
+        /* During 'PowerUp': '<S1004>:2' */
+        if ((!BaseEngineController_LS_B.s1000_RelationalOperator) &&
+            BaseEngineController_LS_B.s1000_LogicalOperator2) {
+          /* Transition: '<S1004>:4' */
+          BaseEngineController_LS_DWork.s1004_is_c8_BaseEngineController_LS =
             BaseEngineController_LS_IN_PowerDown;
 
-          /* Entry 'PowerDown': '<S1003>:1' */
-          BaseEngineController_LS_B.s1003_MPRDState = FALSE;
+          /* Entry 'PowerDown': '<S1004>:1' */
+          BaseEngineController_LS_B.s1004_MPRDState = FALSE;
         }
         break;
 
        default:
-        /* Transition: '<S1003>:3' */
-        BaseEngineController_LS_DWork.s1003_is_c8_BaseEngineController_LS =
+        /* Transition: '<S1004>:3' */
+        BaseEngineController_LS_DWork.s1004_is_c8_BaseEngineController_LS =
           BaseEngineController_LS_IN_PowerDown;
 
-        /* Entry 'PowerDown': '<S1003>:1' */
-        BaseEngineController_LS_B.s1003_MPRDState = FALSE;
+        /* Entry 'PowerDown': '<S1004>:1' */
+        BaseEngineController_LS_B.s1004_MPRDState = FALSE;
         break;
       }
 
-      /* End of Stateflow: '<S999>/ECUP Latch' */
+      /* End of Stateflow: '<S1000>/ECUP Latch' */
 
-      /* Switch: '<S1005>/Switch' incorporates:
-       *  Constant: '<S1005>/Constant1'
-       *  DataTypeConversion: '<S1005>/Data Type Conversion'
-       *  Sum: '<S1005>/Sum'
-       *  UnitDelay: '<S1005>/Unit Delay'
+      /* Switch: '<S1006>/Switch' incorporates:
+       *  Constant: '<S1006>/Constant1'
+       *  DataTypeConversion: '<S1006>/Data Type Conversion'
+       *  Sum: '<S1006>/Sum'
+       *  UnitDelay: '<S1006>/Unit Delay'
        */
-      if (BaseEngineController_LS_B.s1003_MPRDState) {
-        rtb_Switch = (real_T)BaseEngineController_LS_B.s1003_MPRDState +
-          BaseEngineController_LS_DWork.s1005_UnitDelay_DSTATE;
+      if (BaseEngineController_LS_B.s1004_MPRDState) {
+        rtb_Switch = (real_T)BaseEngineController_LS_B.s1004_MPRDState +
+          BaseEngineController_LS_DWork.s1006_UnitDelay_DSTATE;
       } else {
         rtb_Switch = 0.0;
       }
 
-      /* End of Switch: '<S1005>/Switch' */
+      /* End of Switch: '<S1006>/Switch' */
 
-      /* Logic: '<S1005>/Logical Operator2' incorporates:
-       *  Constant: '<S1005>/Constant2'
-       *  RelationalOperator: '<S1005>/Relational Operator1'
+      /* Logic: '<S1006>/Logical Operator2' incorporates:
+       *  Constant: '<S1006>/Constant2'
+       *  RelationalOperator: '<S1006>/Relational Operator1'
        */
-      rtb_LogicalOperator2_o = (BaseEngineController_LS_B.s1003_MPRDState &&
+      rtb_LogicalOperator2_o = (BaseEngineController_LS_B.s1004_MPRDState &&
         (rtb_Switch >= 2.0));
 
-      /* Logic: '<S1005>/Logical Operator' */
-      rtb_UnitDelay8 = !BaseEngineController_LS_B.s1003_MPRDState;
+      /* Logic: '<S1006>/Logical Operator' */
+      rtb_UnitDelay8 = !BaseEngineController_LS_B.s1004_MPRDState;
 
-      /* Switch: '<S1005>/Switch1' incorporates:
-       *  Constant: '<S1005>/Constant3'
-       *  DataTypeConversion: '<S1005>/Data Type Conversion1'
-       *  Sum: '<S1005>/Sum1'
-       *  UnitDelay: '<S1005>/Unit Delay1'
+      /* Switch: '<S1006>/Switch1' incorporates:
+       *  Constant: '<S1006>/Constant3'
+       *  DataTypeConversion: '<S1006>/Data Type Conversion1'
+       *  Sum: '<S1006>/Sum1'
+       *  UnitDelay: '<S1006>/Unit Delay1'
        */
       if (rtb_UnitDelay8) {
         rtb_Switch1 = 1.0 +
-          BaseEngineController_LS_DWork.s1005_UnitDelay1_DSTATE;
+          BaseEngineController_LS_DWork.s1006_UnitDelay1_DSTATE;
       } else {
         rtb_Switch1 = 0.0;
       }
 
-      /* End of Switch: '<S1005>/Switch1' */
+      /* End of Switch: '<S1006>/Switch1' */
 
-      /* Logic: '<S1005>/Logical Operator1' incorporates:
-       *  Constant: '<S1005>/Constant4'
-       *  RelationalOperator: '<S1005>/Relational Operator2'
+      /* Logic: '<S1006>/Logical Operator1' incorporates:
+       *  Constant: '<S1006>/Constant4'
+       *  RelationalOperator: '<S1006>/Relational Operator2'
        */
       rtb_LogicalOperator1_n = (rtb_UnitDelay8 && (rtb_Switch1 >= 5.0));
 
-      /* Memory: '<S1020>/Memory' */
-      rtb_Memory = BaseEngineController_LS_DWork.s1020_Memory_PreviousInput;
+      /* Memory: '<S1021>/Memory' */
+      rtb_Memory = BaseEngineController_LS_DWork.s1021_Memory_PreviousInput;
 
-      /* CombinatorialLogic: '<S1020>/Logic' */
+      /* CombinatorialLogic: '<S1021>/Logic' */
       {
         uint_T rowidx= 0;
 
@@ -372,87 +372,87 @@ void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
         rtb_Logic[1] = BaseEngineController_LS_ConstP.pooled909[rowidx + 8];
       }
 
-      /* Logic: '<S999>/Logical Operator' incorporates:
-       *  Logic: '<S999>/Logical Operator1'
+      /* Logic: '<S1000>/Logical Operator' incorporates:
+       *  Logic: '<S1000>/Logical Operator1'
        */
       rtb_LogicalOperator_h = ((!rtb_LogicalOperator) && rtb_Logic[0]);
 
-      /* UnitDelay: '<S1006>/Unit Delay2' */
-      rtb_UnitDelay8 = BaseEngineController_LS_DWork.s1006_UnitDelay2_DSTATE;
+      /* UnitDelay: '<S1007>/Unit Delay2' */
+      rtb_UnitDelay8 = BaseEngineController_LS_DWork.s1007_UnitDelay2_DSTATE;
 
-      /* Logic: '<S1006>/Logical Operator2' incorporates:
-       *  UnitDelay: '<S1006>/Unit Delay2'
+      /* Logic: '<S1007>/Logical Operator2' incorporates:
+       *  UnitDelay: '<S1007>/Unit Delay2'
        */
       rtb_LogicalOperator2 = (rtb_LogicalOperator_h ||
-        BaseEngineController_LS_DWork.s1006_UnitDelay2_DSTATE);
+        BaseEngineController_LS_DWork.s1007_UnitDelay2_DSTATE);
 
-      /* If: '<S1025>/If' incorporates:
-       *  Inport: '<S1029>/In1'
+      /* If: '<S1026>/If' incorporates:
        *  Inport: '<S1030>/In1'
-       *  S-Function (motohawk_sfun_calibration): '<S1025>/new_value'
-       *  S-Function (motohawk_sfun_calibration): '<S1025>/override_enable'
+       *  Inport: '<S1031>/In1'
+       *  S-Function (motohawk_sfun_calibration): '<S1026>/new_value'
+       *  S-Function (motohawk_sfun_calibration): '<S1026>/override_enable'
        */
       if ((MPRD_ovr_DataStore())) {
-        /* Outputs for IfAction SubSystem: '<S1025>/NewValue' incorporates:
-         *  ActionPort: '<S1029>/Action Port'
+        /* Outputs for IfAction SubSystem: '<S1026>/NewValue' incorporates:
+         *  ActionPort: '<S1030>/Action Port'
          */
         rtb_Merge = (MPRD_new_DataStore());
 
-        /* End of Outputs for SubSystem: '<S1025>/NewValue' */
+        /* End of Outputs for SubSystem: '<S1026>/NewValue' */
       } else {
-        /* Outputs for IfAction SubSystem: '<S1025>/OldValue' incorporates:
-         *  ActionPort: '<S1030>/Action Port'
+        /* Outputs for IfAction SubSystem: '<S1026>/OldValue' incorporates:
+         *  ActionPort: '<S1031>/Action Port'
          */
         rtb_Merge = rtb_LogicalOperator2;
 
-        /* End of Outputs for SubSystem: '<S1025>/OldValue' */
+        /* End of Outputs for SubSystem: '<S1026>/OldValue' */
       }
 
-      /* End of If: '<S1025>/If' */
+      /* End of If: '<S1026>/If' */
 
-      /* S-Function (motohawk_sfun_data_write): '<S999>/motohawk_data_write' */
+      /* S-Function (motohawk_sfun_data_write): '<S1000>/motohawk_data_write' */
       /* Write to Data Storage as scalar: MPRD */
       {
         MPRD_DataStore() = rtb_Merge;
       }
 
-      /* Outputs for Triggered SubSystem: '<S1006>/Post Shutdown two ticks before MPRD off' incorporates:
-       *  TriggerPort: '<S1021>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1007>/Post Shutdown two ticks before MPRD off' incorporates:
+       *  TriggerPort: '<S1022>/Trigger'
        */
       if ((!rtb_LogicalOperator_h) &&
           (BaseEngineController_LS_PrevZCSigState.PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE
            != ZERO_ZCSIG)) {
-        /* Outputs for Function Call SubSystem: '<S1021>/Post Shutdown two ticks before MPRD off' */
+        /* Outputs for Function Call SubSystem: '<S1022>/Post Shutdown two ticks before MPRD off' */
 
-        /* S-Function Block: <S1026>/motohawk_event_call */
+        /* S-Function Block: <S1027>/motohawk_event_call */
         {
           /* post the event */
           PostEvent(SHUTDOWN_EVENT);
         }
 
-        /* End of Outputs for SubSystem: '<S1021>/Post Shutdown two ticks before MPRD off' */
+        /* End of Outputs for SubSystem: '<S1022>/Post Shutdown two ticks before MPRD off' */
       }
 
       BaseEngineController_LS_PrevZCSigState.PostShutdowntwoticksbeforeMPRDoff_Trig_ZCE
         = (uint8_T)(rtb_LogicalOperator_h ? (int32_T)POS_ZCSIG : (int32_T)
                     ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1006>/Post Shutdown two ticks before MPRD off' */
+      /* End of Outputs for SubSystem: '<S1007>/Post Shutdown two ticks before MPRD off' */
 
-      /* Outputs for Enabled and Triggered SubSystem: '<S1006>/Processor Reboot' incorporates:
-       *  EnablePort: '<S1022>/Enable'
-       *  TriggerPort: '<S1022>/Trigger'
+      /* Outputs for Enabled and Triggered SubSystem: '<S1007>/Processor Reboot' incorporates:
+       *  EnablePort: '<S1023>/Enable'
+       *  TriggerPort: '<S1023>/Trigger'
        */
-      /* UnitDelay: '<S999>/Unit Delay5' */
-      if (BaseEngineController_LS_DWork.s999_UnitDelay5_DSTATE) {
-        /* Outputs for Enabled and Triggered SubSystem: '<S1006>/Processor Reboot' incorporates:
-         *  EnablePort: '<S1022>/Enable'
-         *  TriggerPort: '<S1022>/Trigger'
+      /* UnitDelay: '<S1000>/Unit Delay5' */
+      if (BaseEngineController_LS_DWork.s1000_UnitDelay5_DSTATE) {
+        /* Outputs for Enabled and Triggered SubSystem: '<S1007>/Processor Reboot' incorporates:
+         *  EnablePort: '<S1023>/Enable'
+         *  TriggerPort: '<S1023>/Trigger'
          */
         if ((!rtb_UnitDelay8) &&
             (BaseEngineController_LS_PrevZCSigState.ProcessorReboot_Trig_ZCE !=
              ZERO_ZCSIG)) {
-          /* S-Function (motohawk_sfun_inline_code): '<S1022>/Loop Forever Causing Watchdog Reset' */
+          /* S-Function (motohawk_sfun_inline_code): '<S1023>/Loop Forever Causing Watchdog Reset' */
           while (1) ;
         }
 
@@ -460,181 +460,182 @@ void Trigger_BGND_BASE_PERIODIC_7291p0009(void)
           (uint8_T)(rtb_UnitDelay8 ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
       }
 
-      /* End of UnitDelay: '<S999>/Unit Delay5' */
+      /* End of UnitDelay: '<S1000>/Unit Delay5' */
       BaseEngineController_LS_PrevZCSigState.ProcessorReboot_Trig_ZCE = (uint8_T)
         (rtb_UnitDelay8 ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1006>/Processor Reboot' */
+      /* End of Outputs for SubSystem: '<S1007>/Processor Reboot' */
 
-      /* UnitDelay: '<S1006>/Unit Delay' */
-      rtb_UnitDelay8 = BaseEngineController_LS_DWork.s1006_UnitDelay_DSTATE;
+      /* UnitDelay: '<S1007>/Unit Delay' */
+      rtb_UnitDelay8 = BaseEngineController_LS_DWork.s1007_UnitDelay_DSTATE;
 
-      /* Outputs for Triggered SubSystem: '<S1006>/Save NV Vars one tick before MPRD off' incorporates:
-       *  TriggerPort: '<S1023>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1007>/Save NV Vars one tick before MPRD off' incorporates:
+       *  TriggerPort: '<S1024>/Trigger'
        */
-      if ((!BaseEngineController_LS_DWork.s1006_UnitDelay_DSTATE) &&
+      if ((!BaseEngineController_LS_DWork.s1007_UnitDelay_DSTATE) &&
           (BaseEngineController_LS_PrevZCSigState.SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE
            != ZERO_ZCSIG)) {
-        /* Outputs for Function Call SubSystem: '<S1023>/Save NV Vars one tick before MPRD off' */
+        /* Outputs for Function Call SubSystem: '<S1024>/Save NV Vars one tick before MPRD off' */
 
-        /* S-Function (motohawk_sfun_store_nvmem): '<S1027>/motohawk_event_call' */
+        /* S-Function (motohawk_sfun_store_nvmem): '<S1028>/motohawk_event_call' */
         {
           extern void NonVolatile_StoreNonVolatile(void);
           NonVolatile_StoreNonVolatile();
         }
 
-        /* End of Outputs for SubSystem: '<S1023>/Save NV Vars one tick before MPRD off' */
+        /* End of Outputs for SubSystem: '<S1024>/Save NV Vars one tick before MPRD off' */
       }
 
-      /* End of UnitDelay: '<S1006>/Unit Delay' */
+      /* End of UnitDelay: '<S1007>/Unit Delay' */
       BaseEngineController_LS_PrevZCSigState.SaveNVVarsonetickbeforeMPRDoff_Trig_ZCE
         = (uint8_T)(rtb_UnitDelay8 ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1006>/Save NV Vars one tick before MPRD off' */
+      /* End of Outputs for SubSystem: '<S1007>/Save NV Vars one tick before MPRD off' */
 
-      /* UnitDelay: '<S1006>/Unit Delay1' */
+      /* UnitDelay: '<S1007>/Unit Delay1' */
       rtb_LogicalOperator2 =
-        BaseEngineController_LS_DWork.s1006_UnitDelay1_DSTATE;
+        BaseEngineController_LS_DWork.s1007_UnitDelay1_DSTATE;
 
-      /* Outputs for Triggered SubSystem: '<S1006>/Shutdown power on ECU565//563' incorporates:
-       *  TriggerPort: '<S1024>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1007>/Shutdown power on ECU565//563' incorporates:
+       *  TriggerPort: '<S1025>/Trigger'
        */
-      if ((!BaseEngineController_LS_DWork.s1006_UnitDelay1_DSTATE) &&
+      if ((!BaseEngineController_LS_DWork.s1007_UnitDelay1_DSTATE) &&
           (BaseEngineController_LS_PrevZCSigState.ShutdownpoweronECU565563_Trig_ZCE
            != ZERO_ZCSIG)) {
-        /* Outputs for Function Call SubSystem: '<S1024>/Shutdown power on ECU565-128' */
+        /* Outputs for Function Call SubSystem: '<S1025>/Shutdown power on ECU565-128' */
 
-        /* S-Function Block: <S1028>/motohawk_shutdown_power */
+        /* S-Function Block: <S1029>/motohawk_shutdown_power */
         {
           /* Shut off power on PCM-128.  Other modules will ignore this call */
           SendCloseOSMessage();
         }
 
-        /* End of Outputs for SubSystem: '<S1024>/Shutdown power on ECU565-128' */
+        /* End of Outputs for SubSystem: '<S1025>/Shutdown power on ECU565-128' */
       }
 
-      /* End of UnitDelay: '<S1006>/Unit Delay1' */
+      /* End of UnitDelay: '<S1007>/Unit Delay1' */
       BaseEngineController_LS_PrevZCSigState.ShutdownpoweronECU565563_Trig_ZCE =
         (uint8_T)(rtb_LogicalOperator2 ? (int32_T)POS_ZCSIG : (int32_T)
                   ZERO_ZCSIG);
 
-      /* End of Outputs for SubSystem: '<S1006>/Shutdown power on ECU565//563' */
+      /* End of Outputs for SubSystem: '<S1007>/Shutdown power on ECU565//563' */
 
-      /* Saturate: '<S1007>/Saturation' */
+      /* Saturate: '<S1008>/Saturation' */
       rtb_Saturation_o = rtb_Switch_i >= 16000.0 ? 16000.0 : rtb_Switch_i <= 0.0
         ? 0.0 : rtb_Switch_i;
 
-      /* S-Function (motohawk_sfun_data_write): '<S1007>/motohawk_data_write' */
+      /* S-Function (motohawk_sfun_data_write): '<S1008>/motohawk_data_write' */
       /* Write to Data Storage as scalar: TimeSinceShutdown */
       {
         TimeSinceShutdown_DataStore() = rtb_Saturation_o;
       }
 
-      /* UnitDelay: '<S999>/Unit Delay3' */
-      rtb_UnitDelay3 = BaseEngineController_LS_DWork.s999_UnitDelay3_DSTATE;
+      /* UnitDelay: '<S1000>/Unit Delay3' */
+      rtb_UnitDelay3 = BaseEngineController_LS_DWork.s1000_UnitDelay3_DSTATE;
 
-      /* UnitDelay: '<S999>/Unit Delay4' */
-      rtb_UnitDelay4 = BaseEngineController_LS_DWork.s999_UnitDelay4_DSTATE;
+      /* UnitDelay: '<S1000>/Unit Delay4' */
+      rtb_UnitDelay4 = BaseEngineController_LS_DWork.s1000_UnitDelay4_DSTATE;
 
-      /* Outputs for Triggered SubSystem: '<S1001>/Clear' incorporates:
-       *  TriggerPort: '<S1010>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1002>/Clear' incorporates:
+       *  TriggerPort: '<S1011>/Trigger'
        */
-      /* S-Function (motohawk_sfun_calibration): '<S1001>/motohawk_calibration' */
+      /* S-Function (motohawk_sfun_calibration): '<S1002>/motohawk_calibration' */
       if ((!(RestoreNVFactoryDefaults_DataStore())) &&
           (BaseEngineController_LS_PrevZCSigState.Clear_Trig_ZCE_k != ZERO_ZCSIG))
       {
-        /* Outputs for Function Call SubSystem: '<S999>/motohawk_restore_nvmem' */
+        /* Outputs for Function Call SubSystem: '<S1000>/motohawk_restore_nvmem' */
 
-        /* S-Function (motohawk_sfun_restore_nvmem): '<S1008>/motohawk_event_call' */
+        /* S-Function (motohawk_sfun_restore_nvmem): '<S1009>/motohawk_event_call' */
         /* S-Function Restore Factory Defaults */
         {
           NonVolatile_RestoreDefaultNonVolatile();
           NonVolatile_NonVolatileStatus_Reset();
         }
 
-        /* End of Outputs for SubSystem: '<S999>/motohawk_restore_nvmem' */
+        /* End of Outputs for SubSystem: '<S1000>/motohawk_restore_nvmem' */
       }
 
       BaseEngineController_LS_PrevZCSigState.Clear_Trig_ZCE_k = (uint8_T)
         ((RestoreNVFactoryDefaults_DataStore()) ? (int32_T)POS_ZCSIG : (int32_T)
          ZERO_ZCSIG);
 
-      /* End of S-Function (motohawk_sfun_calibration): '<S1001>/motohawk_calibration' */
+      /* End of S-Function (motohawk_sfun_calibration): '<S1002>/motohawk_calibration' */
 
-      /* Outputs for Triggered SubSystem: '<S1002>/Clear' incorporates:
-       *  TriggerPort: '<S1011>/Trigger'
+      /* Outputs for Triggered SubSystem: '<S1003>/Clear' incorporates:
+       *  TriggerPort: '<S1012>/Trigger'
        */
-      /* S-Function (motohawk_sfun_calibration): '<S1002>/motohawk_calibration' */
+      /* S-Function (motohawk_sfun_calibration): '<S1003>/motohawk_calibration' */
       if ((!(StoreNV_DataStore())) &&
           (BaseEngineController_LS_PrevZCSigState.Clear_Trig_ZCE != ZERO_ZCSIG))
       {
-        /* Outputs for Function Call SubSystem: '<S999>/motohawk_store_nvmem' */
+        /* Outputs for Function Call SubSystem: '<S1000>/motohawk_store_nvmem' */
 
-        /* S-Function (motohawk_sfun_store_nvmem): '<S1009>/motohawk_event_call' */
+        /* S-Function (motohawk_sfun_store_nvmem): '<S1010>/motohawk_event_call' */
         {
           extern void NonVolatile_StoreNonVolatile(void);
           NonVolatile_StoreNonVolatile();
         }
 
-        /* End of Outputs for SubSystem: '<S999>/motohawk_store_nvmem' */
+        /* End of Outputs for SubSystem: '<S1000>/motohawk_store_nvmem' */
       }
 
       BaseEngineController_LS_PrevZCSigState.Clear_Trig_ZCE = (uint8_T)
         ((StoreNV_DataStore()) ? (int32_T)POS_ZCSIG : (int32_T)ZERO_ZCSIG);
 
-      /* End of S-Function (motohawk_sfun_calibration): '<S1002>/motohawk_calibration' */
+      /* End of S-Function (motohawk_sfun_calibration): '<S1003>/motohawk_calibration' */
 
-      /* Update for UnitDelay: '<S1004>/Unit Delay8' */
-      BaseEngineController_LS_DWork.s1004_UnitDelay8_DSTATE = rtb_UnitDelay7;
+      /* Update for UnitDelay: '<S1005>/Unit Delay8' */
+      BaseEngineController_LS_DWork.s1005_UnitDelay8_DSTATE = rtb_UnitDelay7;
 
-      /* Update for UnitDelay: '<S1004>/Unit Delay6' */
-      BaseEngineController_LS_DWork.s1004_UnitDelay6_DSTATE =
+      /* Update for UnitDelay: '<S1005>/Unit Delay6' */
+      BaseEngineController_LS_DWork.s1005_UnitDelay6_DSTATE =
         rtb_LogicalOperator5;
 
-      /* Update for UnitDelay: '<S1004>/Unit Delay7' */
-      BaseEngineController_LS_DWork.s1004_UnitDelay7_DSTATE = rtb_UnitDelay6;
+      /* Update for UnitDelay: '<S1005>/Unit Delay7' */
+      BaseEngineController_LS_DWork.s1005_UnitDelay7_DSTATE = rtb_UnitDelay6;
 
-      /* Update for UnitDelay: '<S1000>/Unit Delay' incorporates:
-       *  S-Function (motohawk_sfun_calibration): '<S1000>/motohawk_calibration'
+      /* Update for UnitDelay: '<S1001>/Unit Delay' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S1001>/motohawk_calibration'
        */
-      BaseEngineController_LS_DWork.s1000_UnitDelay_DSTATE =
+      BaseEngineController_LS_DWork.s1001_UnitDelay_DSTATE =
         (ProcessorReboot_DataStore());
 
-      /* Update for UnitDelay: '<S1005>/Unit Delay' */
-      BaseEngineController_LS_DWork.s1005_UnitDelay_DSTATE = rtb_Switch;
+      /* Update for UnitDelay: '<S1006>/Unit Delay' */
+      BaseEngineController_LS_DWork.s1006_UnitDelay_DSTATE = rtb_Switch;
 
-      /* Update for UnitDelay: '<S1005>/Unit Delay1' */
-      BaseEngineController_LS_DWork.s1005_UnitDelay1_DSTATE = rtb_Switch1;
+      /* Update for UnitDelay: '<S1006>/Unit Delay1' */
+      BaseEngineController_LS_DWork.s1006_UnitDelay1_DSTATE = rtb_Switch1;
 
-      /* Update for Memory: '<S1020>/Memory' */
-      BaseEngineController_LS_DWork.s1020_Memory_PreviousInput = rtb_Logic[0];
+      /* Update for Memory: '<S1021>/Memory' */
+      BaseEngineController_LS_DWork.s1021_Memory_PreviousInput = rtb_Logic[0];
 
-      /* Update for UnitDelay: '<S1006>/Unit Delay2' */
-      BaseEngineController_LS_DWork.s1006_UnitDelay2_DSTATE =
+      /* Update for UnitDelay: '<S1007>/Unit Delay2' */
+      BaseEngineController_LS_DWork.s1007_UnitDelay2_DSTATE =
         rtb_LogicalOperator2;
 
-      /* Update for S-Function (motohawk_sfun_dout): '<S999>/motohawk_dout' */
+      /* Update for S-Function (motohawk_sfun_dout): '<S1000>/motohawk_dout' */
 
       /* S-Function Block: DOut7250p0009 */
       {
         DOut7250p0009_DiscreteOutput_Set(rtb_Merge);
       }
 
-      /* Update for UnitDelay: '<S999>/Unit Delay5' */
-      BaseEngineController_LS_DWork.s999_UnitDelay5_DSTATE = rtb_UnitDelay4;
+      /* Update for UnitDelay: '<S1000>/Unit Delay5' */
+      BaseEngineController_LS_DWork.s1000_UnitDelay5_DSTATE = rtb_UnitDelay4;
 
-      /* Update for UnitDelay: '<S1006>/Unit Delay' */
-      BaseEngineController_LS_DWork.s1006_UnitDelay_DSTATE =
+      /* Update for UnitDelay: '<S1007>/Unit Delay' */
+      BaseEngineController_LS_DWork.s1007_UnitDelay_DSTATE =
         rtb_LogicalOperator_h;
 
-      /* Update for UnitDelay: '<S1006>/Unit Delay1' */
-      BaseEngineController_LS_DWork.s1006_UnitDelay1_DSTATE = rtb_UnitDelay8;
+      /* Update for UnitDelay: '<S1007>/Unit Delay1' */
+      BaseEngineController_LS_DWork.s1007_UnitDelay1_DSTATE = rtb_UnitDelay8;
 
-      /* Update for UnitDelay: '<S999>/Unit Delay3' */
-      BaseEngineController_LS_DWork.s999_UnitDelay3_DSTATE = rtb_LogicalOperator;
+      /* Update for UnitDelay: '<S1000>/Unit Delay3' */
+      BaseEngineController_LS_DWork.s1000_UnitDelay3_DSTATE =
+        rtb_LogicalOperator;
 
-      /* Update for UnitDelay: '<S999>/Unit Delay4' */
-      BaseEngineController_LS_DWork.s999_UnitDelay4_DSTATE = rtb_UnitDelay3;
+      /* Update for UnitDelay: '<S1000>/Unit Delay4' */
+      BaseEngineController_LS_DWork.s1000_UnitDelay4_DSTATE = rtb_UnitDelay3;
     }
   }
 }

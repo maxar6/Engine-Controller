@@ -5,18 +5,18 @@
 
 uint32_T NullFault(void)
 {
-  return 125;
+  return 122;
 }
 
 boolean_T IsFaultValid(uint32_T fault)
 {
-  return (fault < 125);
+  return (fault < 122);
 }
 
 boolean_T IsFaultEnabled(uint32_T fault)
 {
   uint16_T mode;
-  if (fault >= 125)
+  if (fault >= 122)
     return 0;
   mode = FaultManager_DataStore_ByIndex(fault).mode;
   return (mode != 0);
@@ -26,7 +26,7 @@ boolean_T IsFaultSuspected(uint32_T fault)
 {
   uint16_T index;
   uint8_T mask;
-  if (fault >= 125)
+  if (fault >= 122)
     return 0;
   index = (uint16_T) (fault >> 3UL);
   mask = (uint8_T) (1U << (fault & 7U));
@@ -38,7 +38,7 @@ boolean_T IsFaultActive(uint32_T fault)
 {
   uint16_T index;
   uint8_T mask;
-  if (fault >= 125)
+  if (fault >= 122)
     return 0;
   index = (uint16_T) (fault >> 3UL);
   mask = (uint8_T) (1U << (fault & 7U));
@@ -49,7 +49,7 @@ boolean_T IsFaultOccurred(uint32_T fault)
 {
   uint16_T index;
   uint8_T mask;
-  if (fault >= 125)
+  if (fault >= 122)
     return 0;
   index = (uint16_T) (fault >> 3UL);
   mask = (uint8_T) (1U << (fault & 7U));
@@ -66,7 +66,7 @@ void RefreshFaultActionReferenceCounts(void)
     Actions_DataStore_ByIndex(action).reference_count = 0;
   }
 
-  for (fault=0; fault < 125; fault++) {
+  for (fault=0; fault < 122; fault++) {
     uint8_T mask;
     mask = (uint8_T) (1U << (fault & 7U));
     index = (uint16_T) (fault >> 3UL);
@@ -160,7 +160,7 @@ void AdjustFaultActionReferenceCount(uint32_T fault, boolean_T val, uint8_T
 {
   uint16_T action;
   S_ConstFault_T const* pFlt;
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   pFlt = &(FaultManager_DataStore_ByIndex(fault));
 
@@ -220,7 +220,7 @@ void AdjustFaultActionReferenceCount(uint32_T fault, boolean_T val, uint8_T
 
 void OnChangeFaultSuspected(uint32_T fault, boolean_T val)
 {
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   AdjustFaultActionReferenceCount(fault, val, FAULT_COND_SUSPECTED);
   if (val) {
@@ -234,7 +234,7 @@ void OnChangeFaultSuspected(uint32_T fault, boolean_T val)
 
 void OnChangeFaultActive(uint32_T fault, boolean_T val)
 {
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   AdjustFaultActionReferenceCount(fault, val, FAULT_COND_ACTIVE);
   if (val) {
@@ -248,7 +248,7 @@ void OnChangeFaultActive(uint32_T fault, boolean_T val)
 
 void OnChangeFaultOccurred(uint32_T fault, boolean_T val)
 {
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   AdjustFaultActionReferenceCount(fault, val, FAULT_COND_OCCURRED);
   if (val) {
@@ -262,7 +262,7 @@ void SetFaultSuspected(uint32_T fault, boolean_T val)
   uint16_T index;
   uint8_T mask;
   boolean_T old;
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   index = (uint16_T) (fault >> 3UL);
   mask = (uint8_T) (1U << (fault & 7U));
@@ -284,7 +284,7 @@ void SetFaultActive(uint32_T fault, boolean_T val)
   uint16_T index;
   uint8_T mask;
   boolean_T old;
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   index = (uint16_T) (fault >> 3UL);
   mask = (uint8_T) (1U << (fault & 7U));
@@ -305,7 +305,7 @@ void SetFaultOccurred(uint32_T fault, boolean_T val)
   uint16_T index;
   uint8_T mask;
   boolean_T old;
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   index = (uint16_T) (fault >> 3UL);
   mask = (uint8_T) (1U << (fault & 7U));
@@ -349,11 +349,11 @@ uint32_T GetLastOccurredFault(void)
 
 uint32_T GetNextFault(uint32_T fault, boolean_T loop)
 {
-  if (fault == 124) {
+  if (fault == 121) {
     if (!loop)
-      return 125;
+      return 122;
     fault = 0;
-  } else if (fault > 124) {
+  } else if (fault > 121) {
     fault = 0;
   } else {
     fault++;
@@ -365,142 +365,142 @@ uint32_T GetNextFault(uint32_T fault, boolean_T loop)
 uint32_T GetNextEnabledFault(uint32_T fault, boolean_T loop)
 {
   uint8_T count;
-  if (fault == 124) {
+  if (fault == 121) {
     if (!loop)
-      return 125;
+      return 122;
     fault = 0;
-  } else if (fault > 124) {
+  } else if (fault > 121) {
     fault = 0;
   } else {
     fault++;
   }
 
   count = 0;
-  while (count < 125) {
+  while (count < 122) {
     if (IsFaultEnabled(fault)) {
       return fault;
     }
 
     fault++;
-    if (fault >= 125) {
+    if (fault >= 122) {
       if (loop) {
         fault = 0;
       } else {
-        return 125;
+        return 122;
       }
     }
 
     count++;
   }
 
-  return 125;
+  return 122;
 }
 
 uint32_T GetNextSuspectedFault(uint32_T fault, boolean_T loop)
 {
   uint8_T count;
-  if (fault == 124) {
+  if (fault == 121) {
     if (!loop)
-      return 125;
+      return 122;
     fault = 0;
-  } else if (fault > 124) {
+  } else if (fault > 121) {
     fault = 0;
   } else {
     fault++;
   }
 
   count = 0;
-  while (count < 125) {
+  while (count < 122) {
     if (IsFaultSuspected(fault)) {
       return fault;
     }
 
     fault++;
-    if (fault >= 125) {
+    if (fault >= 122) {
       if (loop) {
         fault = 0;
       } else {
-        return 125;
+        return 122;
       }
     }
 
     count++;
   }
 
-  return 125;
+  return 122;
 }
 
 uint32_T GetNextActiveFault(uint32_T fault, boolean_T loop)
 {
   uint8_T count;
-  if (fault == 124) {
+  if (fault == 121) {
     if (!loop)
-      return 125;
+      return 122;
     fault = 0;
-  } else if (fault > 124) {
+  } else if (fault > 121) {
     fault = 0;
   } else {
     fault++;
   }
 
   count = 0;
-  while (count < 125) {
+  while (count < 122) {
     if (IsFaultActive(fault)) {
       return fault;
     }
 
     fault++;
-    if (fault >= 125) {
+    if (fault >= 122) {
       if (loop) {
         fault = 0;
       } else {
-        return 125;
+        return 122;
       }
     }
 
     count++;
   }
 
-  return 125;
+  return 122;
 }
 
 uint32_T GetNextOccurredFault(uint32_T fault, boolean_T loop)
 {
   uint8_T count;
-  if (fault == 124) {
+  if (fault == 121) {
     if (!loop)
-      return 125;
+      return 122;
     fault = 0;
-  } else if (fault > 124) {
+  } else if (fault > 121) {
     fault = 0;
   } else {
     fault++;
   }
 
   count = 0;
-  while (count < 125) {
+  while (count < 122) {
     if (IsFaultOccurred(fault)) {
       return fault;
     }
 
     fault++;
-    if (fault >= 125) {
+    if (fault >= 122) {
       if (loop) {
         fault = 0;
       } else {
-        return 125;
+        return 122;
       }
     }
 
     count++;
   }
 
-  return 125;
+  return 122;
 }
 
 void ClearFault(uint32_T fault)
 {
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   VolFaults_DataStore_ByIndex(fault).x = 0;
   VolFaults_DataStore_ByIndex(fault).y = 0;
@@ -522,7 +522,7 @@ void UpdateFault(uint32_T fault)
   uint8_T mask;
   uint16_T index;
   S_ConstFault_T const* pFlt;
-  if (fault >= 125)
+  if (fault >= 122)
     return;
   pFlt = &(FaultManager_DataStore_ByIndex(fault));
   mode = pFlt->mode;
@@ -610,7 +610,7 @@ void UpdateFault(uint32_T fault)
 
 void ResetFaultXY(uint32_T fault)
 {
-  if (fault >= 125)
+  if (fault >= 122)
     return;
 
   /* Reset X/Y Counters to Zero */
@@ -623,7 +623,7 @@ boolean_T GetFaultProperties(uint32_T fault,
   uint32_T *out_xlim, uint32_T *out_ylim,
   uint32_T *out_x, uint32_T *out_y)
 {
-  if (fault >= 125) {
+  if (fault >= 122) {
     if (out_id)
       *out_id = 0;
     if (out_mode)
@@ -666,7 +666,7 @@ const char *GetFaultName(uint32_T fault)
 uint8_T GetActionCondForFaultAction(uint32_T fault, uint8_T action)
 {
   S_ConstFault_T const* pFlt;
-  if (fault >= 125 || action >= 13)
+  if (fault >= 122 || action >= 13)
     return 0;
   pFlt = &(FaultManager_DataStore_ByIndex(fault));
   if ((pFlt->action1 == action) && (pFlt->action1_condition > 0)) {
@@ -693,7 +693,7 @@ void GlobalFaultClear(void)
 {
   {
     uint32_T index;
-    for (index=0; index < 125; index++) {
+    for (index=0; index < 122; index++) {
       ClearFault(index);
     }
 
@@ -711,14 +711,14 @@ void GlobalFaultClear(void)
     }
   }
 
-  FaultMarquees_DataStore_FaultMarquees().current_suspected_vardec = 125;
-  FaultMarquees_DataStore_FaultMarquees().current_active_vardec = 125;
-  FaultMarquees_DataStore_FaultMarquees().current_occurred_vardec = 125;
-  VolFaultManager_DataStore_VolFaultManager().last_suspected_fault = 125;
-  VolFaultManager_DataStore_VolFaultManager().last_unsuspected_fault = 125;
-  VolFaultManager_DataStore_VolFaultManager().last_active_fault = 125;
-  VolFaultManager_DataStore_VolFaultManager().last_inactive_fault = 125;
-  VolFaultManager_DataStore_VolFaultManager().last_occurred_fault = 125;
+  FaultMarquees_DataStore_FaultMarquees().current_suspected_vardec = 122;
+  FaultMarquees_DataStore_FaultMarquees().current_active_vardec = 122;
+  FaultMarquees_DataStore_FaultMarquees().current_occurred_vardec = 122;
+  VolFaultManager_DataStore_VolFaultManager().last_suspected_fault = 122;
+  VolFaultManager_DataStore_VolFaultManager().last_unsuspected_fault = 122;
+  VolFaultManager_DataStore_VolFaultManager().last_active_fault = 122;
+  VolFaultManager_DataStore_VolFaultManager().last_inactive_fault = 122;
+  VolFaultManager_DataStore_VolFaultManager().last_occurred_fault = 122;
 }
 
 static void UpdateSuspectedMarquee(void)
@@ -755,11 +755,11 @@ static void UpdateActionReasonMarquee(uint32_T fault_action_index)
   if (GetFaultActionStatus(fault_action_index)) {
     fault = fault_action_marquee_state[fault_action_index].fault_index;
     count = 0;
-    while (count < 125) {
+    while (count < 122) {
       uint8_T mask;
       uint16_T index;
       fault++;
-      if (fault >= 125) {
+      if (fault >= 122) {
         fault = 0;
       }
 
@@ -877,7 +877,7 @@ static void UpdateActionReasonMarquee(uint32_T fault_action_index)
     }
   }
 
-  (FaultActionReason_DataStore())[fault_action_index] = 125;
+  (FaultActionReason_DataStore())[fault_action_index] = 122;
 }
 
 void FaultManagerPeriodicTick(void)

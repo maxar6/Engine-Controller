@@ -8,11 +8,11 @@
 #include "BaseEngineController_LS.h"
 
 /*---- DEFINES --------------------------------------------------------------------------------------------*/
-#define DLL_NAME                       "BaseEngin_028"
-#define SRZ_NAME                       "BaseEngineController_LS_028"
+#define DLL_NAME                       "BaseEngin_029"
+#define SRZ_NAME                       "BaseEngineController_LS_029"
 #define MODEL_NAME                     "BaseEngineController_LS"
 #define MODEL_GUID                     "12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9"
-#define BUILD_GUID                     "79d21bc5-a922-460c-a0-25-f8-c2-8e-0c-2f"
+#define BUILD_GUID                     "91b3ca79-6328-44da-86-e5-17-07-81-38-68"
 #define TOKEN_GUID                     "DD8AD11F95A6FC42BFF9AC780840E4B4"
 #define MOTOHAWK_VERSION               "MotoHawk 2011a_sp0.184"
 #define MATLAB_VERSION                 "MATLAB 7.12.0"
@@ -544,7 +544,7 @@ void OpenApplication(E_OpenEventType open_type)
   /* Initialize Fault Manager */
   {
     uint32_T i;
-    for (i=0; i < 125; i++) {
+    for (i=0; i < 122; i++) {
       if ((FaultManager_DataStore_ByIndex(i).mode ==
            FAULT_MODE_STICKYDASHPERSISTENT) ||
           (FaultManager_DataStore_ByIndex(i).mode ==
@@ -812,7 +812,7 @@ void OpenApplication(E_OpenEventType open_type)
     }
   }
 
-  /* S-Function Block: <S443>/motohawk_encoder_def */
+  /* S-Function Block: <S444>/motohawk_encoder_def */
   {
     extern void EncoderStateCallback(E_EncoderStatus, NativePtrSizedInt_U);
     extern void EncoderDiagnosticsCallback(E_EncoderError, NativePtrSizedInt_U);

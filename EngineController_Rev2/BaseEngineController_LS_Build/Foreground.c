@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2098
+ * Model version                  : 1.2103
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Nov 12 20:07:34 2022
+ * C/C++ source code generated on : Sat Nov 12 20:28:28 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -28,51 +28,51 @@
 #define BaseEngineController_LS_IN_SpringTestComplete (5U)
 #define BaseEngineController_LS_IN_SpringTestSetpoint (6U)
 
-/* Named constants for Stateflow: '<S311>/Ice Break' */
+/* Named constants for Stateflow: '<S312>/Ice Break' */
 #define BaseEngineController_LS_IN_Init (1U)
 #define BaseEngineController_LS_IN_Open (2U)
 #define BaseEngineController_LS_IN_Wait (3U)
 
-/* Named constants for Stateflow: '<S357>/Baro Stall State Delay' */
+/* Named constants for Stateflow: '<S358>/Baro Stall State Delay' */
 #define BaseEngineController_LS_IN_CrankRun (1U)
 #define BaseEngineController_LS_IN_Stall (2U)
 #define BaseEngineController_LS_IN_StallDelay (3U)
 
-/* Named constants for Stateflow: '<S407>/Engine State Machine' */
+/* Named constants for Stateflow: '<S408>/Engine State Machine' */
 #define BaseEngineController_LS_IN_Crank (1U)
 #define BaseEngineController_LS_IN_Run (2U)
-#define BaseEngineController_LS_IN_Stall_l (3U)
+#define BaseEngineController_LS_IN_Stall_g (3U)
 
 /*
  * Initial conditions for enable system:
- *    '<S364>/Collect Average'
- *    '<S403>/Collect Average'
+ *    '<S365>/Collect Average'
  *    '<S404>/Collect Average'
+ *    '<S405>/Collect Average'
  */
 void BaseEngineController_LS_CollectAverage_Init
   (rtDW_CollectAverage_BaseEngineController_LS *localDW)
 {
-  /* InitializeConditions for UnitDelay: '<S368>/Unit Delay1' */
-  localDW->s368_UnitDelay1_DSTATE = 0.0;
+  /* InitializeConditions for UnitDelay: '<S369>/Unit Delay1' */
+  localDW->s369_UnitDelay1_DSTATE = 0.0;
 }
 
 /*
  * Disable for enable system:
- *    '<S364>/Collect Average'
- *    '<S403>/Collect Average'
+ *    '<S365>/Collect Average'
  *    '<S404>/Collect Average'
+ *    '<S405>/Collect Average'
  */
 void BaseEngineController_LS_CollectAverage_Disable
   (rtDW_CollectAverage_BaseEngineController_LS *localDW)
 {
-  localDW->s364_CollectAverage_MODE = FALSE;
+  localDW->s365_CollectAverage_MODE = FALSE;
 }
 
 /*
  * Start for enable system:
- *    '<S364>/Collect Average'
- *    '<S403>/Collect Average'
+ *    '<S365>/Collect Average'
  *    '<S404>/Collect Average'
+ *    '<S405>/Collect Average'
  */
 void BaseEngineController_LS_CollectAverage_Start
   (rtDW_CollectAverage_BaseEngineController_LS *localDW)
@@ -82,9 +82,9 @@ void BaseEngineController_LS_CollectAverage_Start
 
 /*
  * Output and update for enable system:
- *    '<S364>/Collect Average'
- *    '<S403>/Collect Average'
+ *    '<S365>/Collect Average'
  *    '<S404>/Collect Average'
+ *    '<S405>/Collect Average'
  */
 void BaseEngineController_LS_CollectAverage(boolean_T rtu_0, int8_T rtu_Count,
   real_T rtu_Signal, rtB_CollectAverage_BaseEngineController_LS *localB,
@@ -92,83 +92,83 @@ void BaseEngineController_LS_CollectAverage(boolean_T rtu_0, int8_T rtu_Count,
 {
   real_T rtb_Sum1_b4g;
 
-  /* Outputs for Enabled SubSystem: '<S364>/Collect Average' incorporates:
-   *  EnablePort: '<S368>/Enable'
+  /* Outputs for Enabled SubSystem: '<S365>/Collect Average' incorporates:
+   *  EnablePort: '<S369>/Enable'
    */
   if (rtu_0) {
-    if (!localDW->s364_CollectAverage_MODE) {
+    if (!localDW->s365_CollectAverage_MODE) {
       BaseEngineController_LS_CollectAverage_Init(localDW);
-      localDW->s364_CollectAverage_MODE = TRUE;
+      localDW->s365_CollectAverage_MODE = TRUE;
     }
 
-    /* Sum: '<S368>/Sum1' incorporates:
-     *  UnitDelay: '<S368>/Unit Delay1'
+    /* Sum: '<S369>/Sum1' incorporates:
+     *  UnitDelay: '<S369>/Unit Delay1'
      */
-    rtb_Sum1_b4g = rtu_Signal + localDW->s368_UnitDelay1_DSTATE;
+    rtb_Sum1_b4g = rtu_Signal + localDW->s369_UnitDelay1_DSTATE;
 
-    /* Product: '<S368>/Product' incorporates:
-     *  DataTypeConversion: '<S368>/Data Type Conversion'
+    /* Product: '<S369>/Product' incorporates:
+     *  DataTypeConversion: '<S369>/Data Type Conversion'
      */
-    localB->s368_Product = 1.0 / (real_T)rtu_Count * rtb_Sum1_b4g;
+    localB->s369_Product = 1.0 / (real_T)rtu_Count * rtb_Sum1_b4g;
 
-    /* Update for UnitDelay: '<S368>/Unit Delay1' */
-    localDW->s368_UnitDelay1_DSTATE = rtb_Sum1_b4g;
+    /* Update for UnitDelay: '<S369>/Unit Delay1' */
+    localDW->s369_UnitDelay1_DSTATE = rtb_Sum1_b4g;
   } else {
-    if (localDW->s364_CollectAverage_MODE) {
+    if (localDW->s365_CollectAverage_MODE) {
       BaseEngineController_LS_CollectAverage_Disable(localDW);
     }
   }
 
-  /* End of Outputs for SubSystem: '<S364>/Collect Average' */
+  /* End of Outputs for SubSystem: '<S365>/Collect Average' */
 }
 
 /*
  * Start for enable system:
- *    '<S402>/PassThrough1'
- *    '<S402>/PassThrough2'
+ *    '<S403>/PassThrough1'
+ *    '<S403>/PassThrough2'
  */
 void BaseEngineController_LS_PassThrough1_Start(real_T *rty_Out1)
 {
-  /* VirtualOutportStart for Outport: '<S418>/Out1' */
+  /* VirtualOutportStart for Outport: '<S419>/Out1' */
   (*rty_Out1) = 0.005;
 }
 
 /*
  * Output and update for enable system:
- *    '<S402>/PassThrough1'
- *    '<S402>/PassThrough2'
+ *    '<S403>/PassThrough1'
+ *    '<S403>/PassThrough2'
  */
 void BaseEngineController_LS_PassThrough1(boolean_T rtu_0, real_T rtu_1, real_T *
   rty_Out1)
 {
-  /* Outputs for Enabled SubSystem: '<S402>/PassThrough1' incorporates:
-   *  EnablePort: '<S418>/Enable'
+  /* Outputs for Enabled SubSystem: '<S403>/PassThrough1' incorporates:
+   *  EnablePort: '<S419>/Enable'
    */
   if (rtu_0) {
-    /* Inport: '<S418>/In1' */
+    /* Inport: '<S419>/In1' */
     (*rty_Out1) = rtu_1;
   }
 
-  /* End of Outputs for SubSystem: '<S402>/PassThrough1' */
+  /* End of Outputs for SubSystem: '<S403>/PassThrough1' */
 }
 
 /*
  * Output and update for action system:
- *    '<S488>/If Action Subsystem'
- *    '<S488>/If Action Subsystem1'
- *    '<S488>/If Action Subsystem2'
  *    '<S489>/If Action Subsystem'
  *    '<S489>/If Action Subsystem1'
  *    '<S489>/If Action Subsystem2'
- *    '<S563>/If Action Subsystem'
- *    '<S563>/If Action Subsystem1'
- *    '<S563>/If Action Subsystem2'
- *    '<S566>/If Action Subsystem'
+ *    '<S490>/If Action Subsystem'
+ *    '<S490>/If Action Subsystem1'
+ *    '<S490>/If Action Subsystem2'
+ *    '<S564>/If Action Subsystem'
+ *    '<S564>/If Action Subsystem1'
+ *    '<S564>/If Action Subsystem2'
+ *    '<S567>/If Action Subsystem'
  *    ...
  */
 void BaseEngineController_LS_IfActionSubsystem(real_T rtu_0, real_T *rty_Out)
 {
-  /* Inport: '<S509>/In' */
+  /* Inport: '<S510>/In' */
   (*rty_Out) = rtu_0;
 }
 
@@ -187,9 +187,9 @@ real_T rt_roundd_snf(real_T u)
 /* Initial conditions for function-call system: '<Root>/Foreground' */
 void BaseEngineController_LS_Foreground_Init(void)
 {
-  /* Initial conditions for function-call system: '<S445>/Temp Sensors' */
+  /* Initial conditions for function-call system: '<S446>/Temp Sensors' */
 
-  /* S-Function Block: <S722>/motohawk_delta_time */
+  /* S-Function Block: <S723>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -197,11 +197,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s722_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s723_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S740>/motohawk_delta_time */
+  /* S-Function Block: <S741>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -209,11 +209,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s740_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s741_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S731>/motohawk_delta_time */
+  /* S-Function Block: <S732>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -221,11 +221,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s731_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s732_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S713>/motohawk_delta_time */
+  /* S-Function Block: <S714>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -233,11 +233,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s713_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s714_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S769>/motohawk_delta_time */
+  /* S-Function Block: <S770>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -245,11 +245,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s769_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s770_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S800>/motohawk_delta_time */
+  /* S-Function Block: <S801>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -257,11 +257,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s800_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s801_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S757>/motohawk_delta_time */
+  /* S-Function Block: <S758>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -269,11 +269,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s757_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s758_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S783>/motohawk_delta_time */
+  /* S-Function Block: <S784>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -281,11 +281,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s783_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s784_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S431>/motohawk_delta_time */
+  /* S-Function Block: <S432>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -293,21 +293,21 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s431_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s432_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* InitializeConditions for Stateflow: '<S407>/Engine State Machine' */
+  /* InitializeConditions for Stateflow: '<S408>/Engine State Machine' */
 
   /* Entry: Foreground/Control/VirtualSensors/RawProcessed/EngineState/Engine State Machine */
-  /* Transition: '<S428>:4' */
-  BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS =
-    BaseEngineController_LS_IN_Stall_l;
+  /* Transition: '<S429>:4' */
+  BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS =
+    BaseEngineController_LS_IN_Stall_g;
 
-  /* Entry 'Stall': '<S428>:1' */
-  BaseEngineController_LS_B.s428_State = 1U;
+  /* Entry 'Stall': '<S429>:1' */
+  BaseEngineController_LS_B.s429_State = 1U;
 
-  /* S-Function Block: <S626>/motohawk_delta_time */
+  /* S-Function Block: <S627>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -315,11 +315,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s626_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s627_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S609>/motohawk_delta_time */
+  /* S-Function Block: <S610>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -327,11 +327,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s609_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s610_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S817>/motohawk_delta_time */
+  /* S-Function Block: <S818>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -339,11 +339,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s817_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s818_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S834>/motohawk_delta_time */
+  /* S-Function Block: <S835>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -351,11 +351,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s834_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s835_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S643>/motohawk_delta_time */
+  /* S-Function Block: <S644>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -363,11 +363,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s643_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s644_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* S-Function Block: <S639>/motohawk_delta_time */
+  /* S-Function Block: <S640>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -375,11 +375,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s639_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s640_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S596>/motohawk_delta_time */
+  /* S-Function Block: <S597>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -387,11 +387,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s596_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s597_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S605>/motohawk_delta_time */
+  /* S-Function Block: <S606>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -399,13 +399,13 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s605_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s606_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(-1);
   }
 
-  /* InitializeConditions for Atomic SubSystem: '<S361>/Base TPS Request' */
+  /* InitializeConditions for Atomic SubSystem: '<S362>/Base TPS Request' */
 
-  /* S-Function Block: <S420>/motohawk_delta_time */
+  /* S-Function Block: <S421>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -413,11 +413,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s420_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s421_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* S-Function Block: <S402>/motohawk_delta_time */
+  /* S-Function Block: <S403>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -425,13 +425,13 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s402_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s403_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* End of InitializeConditions for SubSystem: '<S361>/Base TPS Request' */
+  /* End of InitializeConditions for SubSystem: '<S362>/Base TPS Request' */
 
-  /* S-Function Block: <S508>/motohawk_delta_time */
+  /* S-Function Block: <S509>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -439,11 +439,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s508_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s509_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S516>/motohawk_delta_time */
+  /* S-Function Block: <S517>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -451,11 +451,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s516_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s517_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S433>/motohawk_delta_time */
+  /* S-Function Block: <S434>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -463,11 +463,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s433_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s434_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* S-Function Block: <S689>/motohawk_delta_time */
+  /* S-Function Block: <S690>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -475,11 +475,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s689_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s690_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S655>/motohawk_delta_time */
+  /* S-Function Block: <S656>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -487,117 +487,7 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s655_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
-  }
-
-  /* S-Function Block: <S357>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s357_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
-
-  /* InitializeConditions for Stateflow: '<S357>/Baro Stall State Delay' */
-  BaseEngineController_LS_DWork.s363_TOld = 0.0;
-  BaseEngineController_LS_B.s363_Timer = 0.0;
-
-  /* Entry: Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay */
-  /* Transition: '<S363>:4' */
-  BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS =
-    BaseEngineController_LS_IN_Stall;
-
-  /* Entry 'Stall': '<S363>:1' */
-  BaseEngineController_LS_B.s363_Enable = TRUE;
-
-  /* S-Function Block: <S370>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s370_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
-
-  /* S-Function Block: <S577>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s577_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
-  }
-
-  /* S-Function Block: <S425>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s425_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(-1);
-  }
-
-  /* S-Function Block: <S588>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s588_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
-
-  /* S-Function Block: <S593>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s593_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
-
-  /* S-Function Block: <S663>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s663_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
-  }
-
-  /* Initial conditions for function-call system: '<S445>/Fuel Level' */
-
-  /* S-Function Block: <S700>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s700_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s656_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
@@ -610,10 +500,22 @@ void BaseEngineController_LS_Foreground_Init(void)
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
     BaseEngineController_LS_DWork.s358_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* S-Function Block: <S877>/motohawk_delta_time */
+  /* InitializeConditions for Stateflow: '<S358>/Baro Stall State Delay' */
+  BaseEngineController_LS_DWork.s364_TOld = 0.0;
+  BaseEngineController_LS_B.s364_Timer = 0.0;
+
+  /* Entry: Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay */
+  /* Transition: '<S364>:4' */
+  BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS =
+    BaseEngineController_LS_IN_Stall;
+
+  /* Entry 'Stall': '<S364>:1' */
+  BaseEngineController_LS_B.s364_Enable = TRUE;
+
+  /* S-Function Block: <S371>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -621,11 +523,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s877_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+    BaseEngineController_LS_DWork.s371_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* S-Function Block: <S874>/motohawk_delta_time */
+  /* S-Function Block: <S578>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -633,11 +535,11 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s874_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s578_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S879>/motohawk_delta_time */
+  /* S-Function Block: <S426>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -645,7 +547,93 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s879_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s426_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(-1);
+  }
+
+  /* S-Function Block: <S589>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s589_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+  }
+
+  /* S-Function Block: <S594>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s594_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+  }
+
+  /* S-Function Block: <S664>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s664_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* Initial conditions for function-call system: '<S446>/Fuel Level' */
+
+  /* S-Function Block: <S701>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s701_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* S-Function Block: <S359>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s359_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* S-Function Block: <S878>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s878_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* S-Function Block: <S875>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s875_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
@@ -673,7 +661,7 @@ void BaseEngineController_LS_Foreground_Init(void)
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S896>/motohawk_delta_time */
+  /* S-Function Block: <S882>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -681,19 +669,7 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s896_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
-  }
-
-  /* S-Function Block: <S647>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s647_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s882_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
@@ -709,7 +685,7 @@ void BaseEngineController_LS_Foreground_Init(void)
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S673>/motohawk_delta_time */
+  /* S-Function Block: <S648>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -717,7 +693,7 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s673_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s648_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
@@ -733,7 +709,7 @@ void BaseEngineController_LS_Foreground_Init(void)
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S902>/motohawk_delta_time */
+  /* S-Function Block: <S674>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -741,7 +717,43 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s902_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s674_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* S-Function Block: <S899>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s899_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* S-Function Block: <S903>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s903_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
+  }
+
+  /* S-Function Block: <S906>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s906_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
@@ -757,7 +769,7 @@ void BaseEngineController_LS_Foreground_Init(void)
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S904>/motohawk_delta_time */
+  /* S-Function Block: <S959>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -765,11 +777,35 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s904_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s959_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+  }
+
+  /* S-Function Block: <S436>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s436_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+  }
+
+  /* S-Function Block: <S682>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s682_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* S-Function Block: <S958>/motohawk_delta_time */
+  /* S-Function Block: <S608>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -777,79 +813,43 @@ void BaseEngineController_LS_Foreground_Init(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s958_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s608_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* S-Function Block: <S435>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s435_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
+  /* Initial conditions for function-call system: '<S751>/Function-Call Subsystem' */
 
-  /* S-Function Block: <S681>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s681_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
-  }
+  /* InitializeConditions for UnitDelay: '<S769>/Initial Condition is True' */
+  BaseEngineController_LS_DWork.s769_InitialConditionisTrue_DSTATE = TRUE;
 
-  /* S-Function Block: <S607>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s607_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
+  /* Initial conditions for function-call system: '<S753>/Function-Call Subsystem' */
 
-  /* Initial conditions for function-call system: '<S750>/Function-Call Subsystem' */
-
-  /* InitializeConditions for UnitDelay: '<S768>/Initial Condition is True' */
-  BaseEngineController_LS_DWork.s768_InitialConditionisTrue_DSTATE = TRUE;
-
-  /* Initial conditions for function-call system: '<S752>/Function-Call Subsystem' */
-
-  /* InitializeConditions for UnitDelay: '<S780>/Initial Condition is True' */
-  BaseEngineController_LS_DWork.s780_InitialConditionisTrue_DSTATE = TRUE;
+  /* InitializeConditions for UnitDelay: '<S781>/Initial Condition is True' */
+  BaseEngineController_LS_DWork.s781_InitialConditionisTrue_DSTATE = TRUE;
 }
 
 /* Enable for function-call system: '<Root>/Foreground' */
 void BaseEngineController_LS_Foreground_Enable(void)
 {
-  /* Level2 S-Function Block: '<S445>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S446>/motohawk_trigger' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_5XRTI_PERIODIC_5522p0011 */
-  BaseEngineController_LS_DWork.s445_motohawk_trigger_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s446_motohawk_trigger_DWORK1 = 1;
 
-  /* Level2 S-Function Block: '<S407>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S408>/motohawk_trigger' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_TDC_EVENT_4025p001 */
-  BaseEngineController_LS_DWork.s407_motohawk_trigger_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s408_motohawk_trigger_DWORK1 = 1;
 
-  /* Level2 S-Function Block: '<S622>/motohawk_trigger5' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S623>/motohawk_trigger5' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_MID_TDC_EVENT_5428p0009 */
-  BaseEngineController_LS_DWork.s622_motohawk_trigger5_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s623_motohawk_trigger5_DWORK1 = 1;
 
-  /* Level2 S-Function Block: '<S445>/motohawk_trigger1' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S446>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_5XRTI_PERIODIC_5523p0009 */
-  BaseEngineController_LS_DWork.s445_motohawk_trigger1_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s446_motohawk_trigger1_DWORK1 = 1;
 
   /* Level2 S-Function Block: '<S14>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
@@ -867,25 +867,25 @@ void BaseEngineController_LS_Foreground_Enable(void)
 
   /* Enable for function-call system: '<S13>/Coil Control' */
 
-  /* Enable for Atomic SubSystem: '<S908>/EST Enable TDC Counter' */
+  /* Enable for Atomic SubSystem: '<S909>/EST Enable TDC Counter' */
 
-  /* Level2 S-Function Block: '<S913>/motohawk_trigger1' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S914>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_TDC_EVENT_6487p001 */
-  BaseEngineController_LS_DWork.s913_motohawk_trigger1_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s914_motohawk_trigger1_DWORK1 = 1;
 
-  /* End of Enable for SubSystem: '<S908>/EST Enable TDC Counter' */
+  /* End of Enable for SubSystem: '<S909>/EST Enable TDC Counter' */
   BaseEngineController_LS_DWork.s13_motohawk_trigger_DWORK1 = 1;
 
-  /* Level2 S-Function Block: '<S750>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S751>/motohawk_trigger' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_20XRTI_PERIODIC_5658p001 */
-  BaseEngineController_LS_DWork.s750_motohawk_trigger_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s751_motohawk_trigger_DWORK1 = 1;
 
-  /* Level2 S-Function Block: '<S752>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S753>/motohawk_trigger' (motohawk_sfun_trigger) */
 
   /* Enable for Trigger_FGND_20XRTI_PERIODIC_5792p001 */
-  BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1 = 1;
+  BaseEngineController_LS_DWork.s753_motohawk_trigger_DWORK1 = 1;
 }
 
 /* Disable for function-call system: '<Root>/Foreground' */
@@ -893,26 +893,26 @@ void BaseEngineController_LS_Foreground_Disable(void)
 {
   int32_T i;
 
-  /* Level2 S-Function Block: '<S445>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S446>/motohawk_trigger' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_5XRTI_PERIODIC_5522p0011 */
-  BaseEngineController_LS_DWork.s445_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s446_motohawk_trigger_DWORK1 = 0;
 
-  /* Level2 S-Function Block: '<S407>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S408>/motohawk_trigger' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_TDC_EVENT_4025p001 */
-  BaseEngineController_LS_DWork.s407_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s408_motohawk_trigger_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S15>/Stall' */
-  /* Disable for Stateflow: '<S311>/Ice Break' */
-  BaseEngineController_LS_DWork.s322_presentTicks =
+  /* Disable for Stateflow: '<S312>/Ice Break' */
+  BaseEngineController_LS_DWork.s323_presentTicks =
     BaseEngineController_LS_M->Timing.clockTick0;
-  BaseEngineController_LS_DWork.s322_elapsedTicks =
-    BaseEngineController_LS_DWork.s322_presentTicks -
-    BaseEngineController_LS_DWork.s322_previousTicks;
-  BaseEngineController_LS_DWork.s322_previousTicks =
-    BaseEngineController_LS_DWork.s322_presentTicks;
-  BaseEngineController_LS_DWork.s322_temporalCounter_i1 =
-    BaseEngineController_LS_DWork.s322_temporalCounter_i1 +
-    BaseEngineController_LS_DWork.s322_elapsedTicks;
+  BaseEngineController_LS_DWork.s323_elapsedTicks =
+    BaseEngineController_LS_DWork.s323_presentTicks -
+    BaseEngineController_LS_DWork.s323_previousTicks;
+  BaseEngineController_LS_DWork.s323_previousTicks =
+    BaseEngineController_LS_DWork.s323_presentTicks;
+  BaseEngineController_LS_DWork.s323_temporalCounter_i1 =
+    BaseEngineController_LS_DWork.s323_temporalCounter_i1 +
+    BaseEngineController_LS_DWork.s323_elapsedTicks;
   BaseEngineController_LS_DWork.s15_Stall_MODE = FALSE;
 
   /* End of Disable for SubSystem: '<S15>/Stall' */
@@ -922,31 +922,31 @@ void BaseEngineController_LS_Foreground_Disable(void)
 
   /* End of Disable for SubSystem: '<S15>/Crank' */
 
-  /* Level2 S-Function Block: '<S622>/motohawk_trigger5' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S623>/motohawk_trigger5' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_MID_TDC_EVENT_5428p0009 */
-  BaseEngineController_LS_DWork.s622_motohawk_trigger5_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s623_motohawk_trigger5_DWORK1 = 0;
 
-  /* Disable for Enabled SubSystem: '<S357>/Capture Signal At Startup' */
+  /* Disable for Enabled SubSystem: '<S358>/Capture Signal At Startup' */
 
-  /* Disable for Enabled SubSystem: '<S364>/Collect Average' */
+  /* Disable for Enabled SubSystem: '<S365>/Collect Average' */
   BaseEngineController_LS_CollectAverage_Disable
-    (&BaseEngineController_LS_DWork.s364_CollectAverage);
+    (&BaseEngineController_LS_DWork.s365_CollectAverage);
 
-  /* End of Disable for SubSystem: '<S364>/Collect Average' */
-  BaseEngineController_LS_DWork.s357_CaptureSignalAtStartup_MODE = FALSE;
+  /* End of Disable for SubSystem: '<S365>/Collect Average' */
+  BaseEngineController_LS_DWork.s358_CaptureSignalAtStartup_MODE = FALSE;
 
-  /* End of Disable for SubSystem: '<S357>/Capture Signal At Startup' */
+  /* End of Disable for SubSystem: '<S358>/Capture Signal At Startup' */
 
-  /* Disable for Enabled SubSystem: '<S361>/Capture ECT At Startup' */
+  /* Disable for Enabled SubSystem: '<S362>/Capture ECT At Startup' */
 
-  /* Disable for Enabled SubSystem: '<S403>/Collect Average' */
+  /* Disable for Enabled SubSystem: '<S404>/Collect Average' */
   BaseEngineController_LS_CollectAverage_Disable
-    (&BaseEngineController_LS_DWork.s403_CollectAverage);
+    (&BaseEngineController_LS_DWork.s404_CollectAverage);
 
-  /* End of Disable for SubSystem: '<S403>/Collect Average' */
-  BaseEngineController_LS_DWork.s361_CaptureECTAtStartup_MODE = FALSE;
+  /* End of Disable for SubSystem: '<S404>/Collect Average' */
+  BaseEngineController_LS_DWork.s362_CaptureECTAtStartup_MODE = FALSE;
 
-  /* End of Disable for SubSystem: '<S361>/Capture ECT At Startup' */
+  /* End of Disable for SubSystem: '<S362>/Capture ECT At Startup' */
 
   /* Disable for Enabled SubSystem: '<S15>/Run' */
 
@@ -982,9 +982,9 @@ void BaseEngineController_LS_Foreground_Disable(void)
 
   /* End of Disable for SubSystem: '<S15>/Run' */
 
-  /* Level2 S-Function Block: '<S445>/motohawk_trigger1' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S446>/motohawk_trigger1' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_5XRTI_PERIODIC_5523p0009 */
-  BaseEngineController_LS_DWork.s445_motohawk_trigger1_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s446_motohawk_trigger1_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S22>/PassThrough1' */
   BaseEngineController_LS_DWork.s22_PassThrough1_MODE = FALSE;
@@ -1029,16 +1029,16 @@ void BaseEngineController_LS_Foreground_Disable(void)
 
   /* End of Disable for SubSystem: '<S22>/PassThrough4' */
 
-  /* Disable for Enabled SubSystem: '<S361>/Capture IAT At Startup' */
+  /* Disable for Enabled SubSystem: '<S362>/Capture IAT At Startup' */
 
-  /* Disable for Enabled SubSystem: '<S404>/Collect Average' */
+  /* Disable for Enabled SubSystem: '<S405>/Collect Average' */
   BaseEngineController_LS_CollectAverage_Disable
-    (&BaseEngineController_LS_DWork.s404_CollectAverage);
+    (&BaseEngineController_LS_DWork.s405_CollectAverage);
 
-  /* End of Disable for SubSystem: '<S404>/Collect Average' */
-  BaseEngineController_LS_DWork.s361_CaptureIATAtStartup_MODE = FALSE;
+  /* End of Disable for SubSystem: '<S405>/Collect Average' */
+  BaseEngineController_LS_DWork.s362_CaptureIATAtStartup_MODE = FALSE;
 
-  /* End of Disable for SubSystem: '<S361>/Capture IAT At Startup' */
+  /* End of Disable for SubSystem: '<S362>/Capture IAT At Startup' */
 
   /* Level2 S-Function Block: '<S14>/motohawk_trigger1' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_5XRTI_PERIODIC_11481p0005 */
@@ -1053,13 +1053,13 @@ void BaseEngineController_LS_Foreground_Disable(void)
 
   /* Disable for function-call system: '<S13>/Coil Control' */
 
-  /* Disable for Atomic SubSystem: '<S908>/EST Enable TDC Counter' */
+  /* Disable for Atomic SubSystem: '<S909>/EST Enable TDC Counter' */
 
-  /* Level2 S-Function Block: '<S913>/motohawk_trigger1' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S914>/motohawk_trigger1' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_TDC_EVENT_6487p001 */
-  BaseEngineController_LS_DWork.s913_motohawk_trigger1_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s914_motohawk_trigger1_DWORK1 = 0;
 
-  /* End of Disable for SubSystem: '<S908>/EST Enable TDC Counter' */
+  /* End of Disable for SubSystem: '<S909>/EST Enable TDC Counter' */
   BaseEngineController_LS_DWork.s13_motohawk_trigger_DWORK1 = 0;
 
   /* Disable for Enabled SubSystem: '<S14>/Electronic Throttle Controller' */
@@ -1073,32 +1073,29 @@ void BaseEngineController_LS_Foreground_Disable(void)
 
   /* End of Disable for SubSystem: '<S14>/Electronic Throttle Controller' */
 
-  /* Level2 S-Function Block: '<S750>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S751>/motohawk_trigger' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_20XRTI_PERIODIC_5658p001 */
-  BaseEngineController_LS_DWork.s750_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s751_motohawk_trigger_DWORK1 = 0;
 
-  /* Level2 S-Function Block: '<S752>/motohawk_trigger' (motohawk_sfun_trigger) */
+  /* Level2 S-Function Block: '<S753>/motohawk_trigger' (motohawk_sfun_trigger) */
   /* Disable for Trigger_FGND_20XRTI_PERIODIC_5792p001 */
-  BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s753_motohawk_trigger_DWORK1 = 0;
 }
 
 /* Start for function-call system: '<Root>/Foreground' */
 void BaseEngineController_LS_Foreground_Start(void)
 {
-  /* Start for S-Function (motohawk_sfun_trigger): '<S445>/motohawk_trigger' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S446>/motohawk_trigger' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_5522p0011 */
-  BaseEngineController_LS_DWork.s445_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s446_motohawk_trigger_DWORK1 = 0;
 
-  /* Start for S-Function (motohawk_sfun_trigger): '<S407>/motohawk_trigger' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S408>/motohawk_trigger' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC_EVENT_4025p001 */
-  BaseEngineController_LS_DWork.s407_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s408_motohawk_trigger_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S15>/Stall' */
-
-  /* InitializeConditions for UnitDelay: '<S318>/Unit Delay' */
-  BaseEngineController_LS_DWork.s318_UnitDelay_DSTATE = FALSE;
 
   /* InitializeConditions for UnitDelay: '<S319>/Unit Delay' */
   BaseEngineController_LS_DWork.s319_UnitDelay_DSTATE = FALSE;
@@ -1107,9 +1104,12 @@ void BaseEngineController_LS_Foreground_Start(void)
   BaseEngineController_LS_DWork.s320_UnitDelay_DSTATE = FALSE;
 
   /* InitializeConditions for UnitDelay: '<S321>/Unit Delay' */
-  BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE = 0.0;
+  BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE = FALSE;
 
-  /* S-Function Block: <S323>/motohawk_delta_time */
+  /* InitializeConditions for UnitDelay: '<S322>/Unit Delay' */
+  BaseEngineController_LS_DWork.s322_UnitDelay_DSTATE = 0.0;
+
+  /* S-Function Block: <S324>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -1117,94 +1117,94 @@ void BaseEngineController_LS_Foreground_Start(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s323_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s324_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
-  /* InitializeConditions for Stateflow: '<S311>/Ice Break' */
-  BaseEngineController_LS_DWork.s322_is_active_c3_BaseEngineController_LS = 0U;
-  BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS = 0U;
-  BaseEngineController_LS_B.s322_etc = 0.0;
-  BaseEngineController_LS_DWork.s322_presentTicks = 0U;
-  BaseEngineController_LS_DWork.s322_elapsedTicks = 0U;
-  BaseEngineController_LS_DWork.s322_previousTicks = 0U;
+  /* InitializeConditions for Stateflow: '<S312>/Ice Break' */
+  BaseEngineController_LS_DWork.s323_is_active_c3_BaseEngineController_LS = 0U;
+  BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS = 0U;
+  BaseEngineController_LS_B.s323_etc = 0.0;
+  BaseEngineController_LS_DWork.s323_presentTicks = 0U;
+  BaseEngineController_LS_DWork.s323_elapsedTicks = 0U;
+  BaseEngineController_LS_DWork.s323_previousTicks = 0U;
 
   /* End of Start for SubSystem: '<S15>/Stall' */
 
-  /* Start for Atomic SubSystem: '<S361>/Base TPS Request' */
+  /* Start for Atomic SubSystem: '<S362>/Base TPS Request' */
 
-  /* Start for Enabled SubSystem: '<S402>/PassThrough1' */
+  /* Start for Enabled SubSystem: '<S403>/PassThrough1' */
   BaseEngineController_LS_PassThrough1_Start
-    (&BaseEngineController_LS_B.s402_Merge);
+    (&BaseEngineController_LS_B.s403_Merge);
 
-  /* End of Start for SubSystem: '<S402>/PassThrough1' */
+  /* End of Start for SubSystem: '<S403>/PassThrough1' */
 
-  /* Start for Enabled SubSystem: '<S402>/PassThrough2' */
+  /* Start for Enabled SubSystem: '<S403>/PassThrough2' */
   BaseEngineController_LS_PassThrough1_Start
-    (&BaseEngineController_LS_B.s402_Merge);
+    (&BaseEngineController_LS_B.s403_Merge);
 
-  /* End of Start for SubSystem: '<S402>/PassThrough2' */
+  /* End of Start for SubSystem: '<S403>/PassThrough2' */
 
-  /* End of Start for SubSystem: '<S361>/Base TPS Request' */
+  /* End of Start for SubSystem: '<S362>/Base TPS Request' */
 
-  /* Start for S-Function (motohawk_sfun_trigger): '<S622>/motohawk_trigger5' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S623>/motohawk_trigger5' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_MID_TDC_EVENT_5428p0009 */
-  BaseEngineController_LS_DWork.s622_motohawk_trigger5_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s623_motohawk_trigger5_DWORK1 = 0;
 
-  /* Start for Enabled SubSystem: '<S357>/Capture Signal At Startup' */
+  /* Start for Enabled SubSystem: '<S358>/Capture Signal At Startup' */
 
-  /* Start for Enabled SubSystem: '<S364>/Collect Average' */
+  /* Start for Enabled SubSystem: '<S365>/Collect Average' */
   BaseEngineController_LS_CollectAverage_Start
-    (&BaseEngineController_LS_DWork.s364_CollectAverage);
+    (&BaseEngineController_LS_DWork.s365_CollectAverage);
 
-  /* End of Start for SubSystem: '<S364>/Collect Average' */
+  /* End of Start for SubSystem: '<S365>/Collect Average' */
 
-  /* InitializeConditions for UnitDelay: '<S364>/Unit Delay' */
-  BaseEngineController_LS_DWork.s364_UnitDelay_DSTATE = 0;
+  /* InitializeConditions for UnitDelay: '<S365>/Unit Delay' */
+  BaseEngineController_LS_DWork.s365_UnitDelay_DSTATE = 0;
 
-  /* End of Start for SubSystem: '<S357>/Capture Signal At Startup' */
-
-  /* Start for Enabled SubSystem: '<S383>/IncreasingFilter' */
-
-  /* VirtualOutportStart for Outport: '<S387>/Out1' */
-  BaseEngineController_LS_B.s383_Merge = 0.005;
-
-  /* End of Start for SubSystem: '<S383>/IncreasingFilter' */
-
-  /* Start for Enabled SubSystem: '<S383>/DecreasingFilter' */
-
-  /* VirtualOutportStart for Outport: '<S385>/Out1' */
-  BaseEngineController_LS_B.s383_Merge = 0.005;
-
-  /* End of Start for SubSystem: '<S383>/DecreasingFilter' */
+  /* End of Start for SubSystem: '<S358>/Capture Signal At Startup' */
 
   /* Start for Enabled SubSystem: '<S384>/IncreasingFilter' */
 
-  /* VirtualOutportStart for Outport: '<S390>/Out1' */
+  /* VirtualOutportStart for Outport: '<S388>/Out1' */
   BaseEngineController_LS_B.s384_Merge = 0.005;
 
   /* End of Start for SubSystem: '<S384>/IncreasingFilter' */
 
   /* Start for Enabled SubSystem: '<S384>/DecreasingFilter' */
 
-  /* VirtualOutportStart for Outport: '<S388>/Out1' */
+  /* VirtualOutportStart for Outport: '<S386>/Out1' */
   BaseEngineController_LS_B.s384_Merge = 0.005;
 
   /* End of Start for SubSystem: '<S384>/DecreasingFilter' */
 
-  /* Start for Enabled SubSystem: '<S361>/Capture ECT At Startup' */
+  /* Start for Enabled SubSystem: '<S385>/IncreasingFilter' */
 
-  /* Start for Enabled SubSystem: '<S403>/Collect Average' */
+  /* VirtualOutportStart for Outport: '<S391>/Out1' */
+  BaseEngineController_LS_B.s385_Merge = 0.005;
+
+  /* End of Start for SubSystem: '<S385>/IncreasingFilter' */
+
+  /* Start for Enabled SubSystem: '<S385>/DecreasingFilter' */
+
+  /* VirtualOutportStart for Outport: '<S389>/Out1' */
+  BaseEngineController_LS_B.s385_Merge = 0.005;
+
+  /* End of Start for SubSystem: '<S385>/DecreasingFilter' */
+
+  /* Start for Enabled SubSystem: '<S362>/Capture ECT At Startup' */
+
+  /* Start for Enabled SubSystem: '<S404>/Collect Average' */
   BaseEngineController_LS_CollectAverage_Start
-    (&BaseEngineController_LS_DWork.s403_CollectAverage);
+    (&BaseEngineController_LS_DWork.s404_CollectAverage);
 
-  /* End of Start for SubSystem: '<S403>/Collect Average' */
+  /* End of Start for SubSystem: '<S404>/Collect Average' */
 
-  /* InitializeConditions for UnitDelay: '<S403>/Unit Delay' */
-  BaseEngineController_LS_DWork.s403_UnitDelay_DSTATE = 0;
+  /* InitializeConditions for UnitDelay: '<S404>/Unit Delay' */
+  BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE = 0;
 
-  /* End of Start for SubSystem: '<S361>/Capture ECT At Startup' */
+  /* End of Start for SubSystem: '<S362>/Capture ECT At Startup' */
 
   /* Start for Enabled SubSystem: '<S15>/Run' */
 
@@ -1423,8 +1423,8 @@ void BaseEngineController_LS_Foreground_Start(void)
   if (rtmIsFirstInitCond(BaseEngineController_LS_M)) {
     /* Initial conditions for function-call system: '<S136>/Spark Manager' */
 
-    /* InitializeConditions for UnitDelay: '<S306>/Initial Condition is True' */
-    BaseEngineController_LS_DWork.s306_InitialConditionisTrue_DSTATE = TRUE;
+    /* InitializeConditions for UnitDelay: '<S307>/Initial Condition is True' */
+    BaseEngineController_LS_DWork.s307_InitialConditionisTrue_DSTATE = TRUE;
   }
 
   /* InitializeConditions for UnitDelay: '<S147>/Unit Delay' */
@@ -1475,16 +1475,16 @@ void BaseEngineController_LS_Foreground_Start(void)
   /* InitializeConditions for Atomic SubSystem: '<S136>/O2 Control' */
 
   /* InitializeConditions for Atomic SubSystem: '<S154>/O2 PID Controller' */
-  /* InitializeConditions for UnitDelay: '<S297>/Unit Delay' */
-  BaseEngineController_LS_DWork.s297_UnitDelay_DSTATE = FALSE;
+  /* InitializeConditions for UnitDelay: '<S298>/Unit Delay' */
+  BaseEngineController_LS_DWork.s298_UnitDelay_DSTATE = FALSE;
+
+  /* InitializeConditions for UnitDelay: '<S295>/Unit Delay' */
+  BaseEngineController_LS_DWork.s295_UnitDelay_DSTATE = 0.0;
 
   /* InitializeConditions for UnitDelay: '<S294>/Unit Delay' */
   BaseEngineController_LS_DWork.s294_UnitDelay_DSTATE = 0.0;
 
-  /* InitializeConditions for UnitDelay: '<S293>/Unit Delay' */
-  BaseEngineController_LS_DWork.s293_UnitDelay_DSTATE = 0.0;
-
-  /* S-Function Block: <S294>/motohawk_delta_time */
+  /* S-Function Block: <S295>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -1492,42 +1492,12 @@ void BaseEngineController_LS_Foreground_Start(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s294_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s295_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* InitializeConditions for UnitDelay: '<S290>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s290_UnitDelay1_DSTATE = 0.0;
-
-  /* S-Function Block: <S298>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s298_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
-
-  /* InitializeConditions for UnitDelay: '<S290>/Unit Delay' */
-  BaseEngineController_LS_DWork.s290_UnitDelay_DSTATE = 0.0;
-
-  /* S-Function Block: <S300>/motohawk_delta_time */
-  {
-    uint32_T now = 0;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-      u32Time_us);
-    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s300_motohawk_delta_time_DWORK1 = now -
-      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-  }
-
-  /* InitializeConditions for UnitDelay: '<S290>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s290_UnitDelay2_DSTATE = 0.0;
+  /* InitializeConditions for UnitDelay: '<S291>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s291_UnitDelay1_DSTATE = 0.0;
 
   /* S-Function Block: <S299>/motohawk_delta_time */
   {
@@ -1541,43 +1511,73 @@ void BaseEngineController_LS_Foreground_Start(void)
       Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
   }
 
+  /* InitializeConditions for UnitDelay: '<S291>/Unit Delay' */
+  BaseEngineController_LS_DWork.s291_UnitDelay_DSTATE = 0.0;
+
+  /* S-Function Block: <S301>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s301_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+  }
+
+  /* InitializeConditions for UnitDelay: '<S291>/Unit Delay2' */
+  BaseEngineController_LS_DWork.s291_UnitDelay2_DSTATE = 0.0;
+
+  /* S-Function Block: <S300>/motohawk_delta_time */
+  {
+    uint32_T now = 0;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+      u32Time_us);
+    Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+    BaseEngineController_LS_DWork.s300_motohawk_delta_time_DWORK1 = now -
+      Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+  }
+
   /* End of InitializeConditions for SubSystem: '<S154>/O2 PID Controller' */
   /* End of InitializeConditions for SubSystem: '<S136>/O2 Control' */
 
   /* End of Start for SubSystem: '<S15>/Run' */
 
-  /* Start for S-Function (motohawk_sfun_trigger): '<S445>/motohawk_trigger1' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S446>/motohawk_trigger1' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_5XRTI_PERIODIC_5523p0009 */
-  BaseEngineController_LS_DWork.s445_motohawk_trigger1_DWORK1 = 0;
-
-  /* Start for Enabled SubSystem: '<S882>/IncreasingFilter' */
-
-  /* VirtualOutportStart for Outport: '<S889>/Out1' */
-  BaseEngineController_LS_B.s882_Merge = 0.005;
-
-  /* End of Start for SubSystem: '<S882>/IncreasingFilter' */
-
-  /* Start for Enabled SubSystem: '<S882>/DecreasingFilter' */
-
-  /* VirtualOutportStart for Outport: '<S887>/Out1' */
-  BaseEngineController_LS_B.s882_Merge = 0.005;
-
-  /* End of Start for SubSystem: '<S882>/DecreasingFilter' */
+  BaseEngineController_LS_DWork.s446_motohawk_trigger1_DWORK1 = 0;
 
   /* Start for Enabled SubSystem: '<S883>/IncreasingFilter' */
 
-  /* VirtualOutportStart for Outport: '<S892>/Out1' */
+  /* VirtualOutportStart for Outport: '<S890>/Out1' */
   BaseEngineController_LS_B.s883_Merge = 0.005;
 
   /* End of Start for SubSystem: '<S883>/IncreasingFilter' */
 
   /* Start for Enabled SubSystem: '<S883>/DecreasingFilter' */
 
-  /* VirtualOutportStart for Outport: '<S890>/Out1' */
+  /* VirtualOutportStart for Outport: '<S888>/Out1' */
   BaseEngineController_LS_B.s883_Merge = 0.005;
 
   /* End of Start for SubSystem: '<S883>/DecreasingFilter' */
+
+  /* Start for Enabled SubSystem: '<S884>/IncreasingFilter' */
+
+  /* VirtualOutportStart for Outport: '<S893>/Out1' */
+  BaseEngineController_LS_B.s884_Merge = 0.005;
+
+  /* End of Start for SubSystem: '<S884>/IncreasingFilter' */
+
+  /* Start for Enabled SubSystem: '<S884>/DecreasingFilter' */
+
+  /* VirtualOutportStart for Outport: '<S891>/Out1' */
+  BaseEngineController_LS_B.s884_Merge = 0.005;
+
+  /* End of Start for SubSystem: '<S884>/DecreasingFilter' */
 
   /* Start for Enabled SubSystem: '<S22>/SequenceCutMachine' */
 
@@ -1600,18 +1600,18 @@ void BaseEngineController_LS_Foreground_Start(void)
 
   /* End of Start for SubSystem: '<S22>/SequenceCutMachine' */
 
-  /* Start for Enabled SubSystem: '<S361>/Capture IAT At Startup' */
+  /* Start for Enabled SubSystem: '<S362>/Capture IAT At Startup' */
 
-  /* Start for Enabled SubSystem: '<S404>/Collect Average' */
+  /* Start for Enabled SubSystem: '<S405>/Collect Average' */
   BaseEngineController_LS_CollectAverage_Start
-    (&BaseEngineController_LS_DWork.s404_CollectAverage);
+    (&BaseEngineController_LS_DWork.s405_CollectAverage);
 
-  /* End of Start for SubSystem: '<S404>/Collect Average' */
+  /* End of Start for SubSystem: '<S405>/Collect Average' */
 
-  /* InitializeConditions for UnitDelay: '<S404>/Unit Delay' */
-  BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE = 0;
+  /* InitializeConditions for UnitDelay: '<S405>/Unit Delay' */
+  BaseEngineController_LS_DWork.s405_UnitDelay_DSTATE = 0;
 
-  /* End of Start for SubSystem: '<S361>/Capture IAT At Startup' */
+  /* End of Start for SubSystem: '<S362>/Capture IAT At Startup' */
 
   /* Start for S-Function (motohawk_sfun_trigger): '<S14>/motohawk_trigger1' */
 
@@ -1625,16 +1625,16 @@ void BaseEngineController_LS_Foreground_Start(void)
 
   /* Start for function-call system: '<S13>/Coil Control' */
 
-  /* Start for Atomic SubSystem: '<S908>/EST Enable TDC Counter' */
+  /* Start for Atomic SubSystem: '<S909>/EST Enable TDC Counter' */
 
-  /* Start for S-Function (motohawk_sfun_trigger): '<S913>/motohawk_trigger1' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S914>/motohawk_trigger1' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_TDC_EVENT_6487p001 */
-  BaseEngineController_LS_DWork.s913_motohawk_trigger1_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s914_motohawk_trigger1_DWORK1 = 0;
 
-  /* End of Start for SubSystem: '<S908>/EST Enable TDC Counter' */
+  /* End of Start for SubSystem: '<S909>/EST Enable TDC Counter' */
 
-  /* S-Function Block: <S851>/Spark Sequence */
+  /* S-Function Block: <S852>/Spark Sequence */
   {
     NativeError_S createErrorResult;
     int32_T i;
@@ -1823,7 +1823,7 @@ void BaseEngineController_LS_Foreground_Start(void)
 
   /* End of Start for SubSystem: '<S14>/Electronic Throttle Controller' */
 
-  /* S-Function Block: <S857>/Injector Sequence */
+  /* S-Function Block: <S858>/Injector Sequence */
   {
     S_SeqOutAttributes DynamicObj;
     NativeError_S createErrorResult = ERROR_BEHAVIOUR_METHOD_UNSUPPORTED;
@@ -1976,28 +1976,28 @@ void BaseEngineController_LS_Foreground_Start(void)
         INJ_InjectorCreate = (uint8_T) GetErrorCode(createErrorResult);
     }
 
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[1] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[2] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[3] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[4] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[5] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[6] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[7] = 0;
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK2 = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[1] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[2] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[3] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[4] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[5] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[6] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[7] = 0;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK2 = 0;
   }
 
-  /* Start for Enabled SubSystem: '<S439>/Triggered Subsystem' incorporates:
-   *  Start for S-Function (fcncallgen): '<S440>/Function-Call Generator'
+  /* Start for Enabled SubSystem: '<S440>/Triggered Subsystem' incorporates:
+   *  Start for S-Function (fcncallgen): '<S441>/Function-Call Generator'
    *  Start for SubSystem: '<S11>/Diagnostics'
    */
 
-  /* Start for Enabled SubSystem: '<S439>/Triggered Subsystem' incorporates:
-   *  InitializeConditions for S-Function (fcncallgen): '<S440>/Function-Call Generator'
+  /* Start for Enabled SubSystem: '<S440>/Triggered Subsystem' incorporates:
+   *  InitializeConditions for S-Function (fcncallgen): '<S441>/Function-Call Generator'
    *  InitializeConditions for SubSystem: '<S11>/Diagnostics'
    */
 
-  /* S-Function Block: <S337>/motohawk_delta_time */
+  /* S-Function Block: <S338>/motohawk_delta_time */
   {
     uint32_T now = 0;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
@@ -2005,19 +2005,19 @@ void BaseEngineController_LS_Foreground_Start(void)
     extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
       u32Time_us);
     Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-    BaseEngineController_LS_DWork.s337_motohawk_delta_time_DWORK1 = now -
+    BaseEngineController_LS_DWork.s338_motohawk_delta_time_DWORK1 = now -
       Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
   }
 
-  /* Start for S-Function (motohawk_sfun_trigger): '<S750>/motohawk_trigger' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S751>/motohawk_trigger' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_5658p001 */
-  BaseEngineController_LS_DWork.s750_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s751_motohawk_trigger_DWORK1 = 0;
 
-  /* Start for S-Function (motohawk_sfun_trigger): '<S752>/motohawk_trigger' */
+  /* Start for S-Function (motohawk_sfun_trigger): '<S753>/motohawk_trigger' */
 
   /* Clear enable/disable state for embedded trigger Trigger_FGND_20XRTI_PERIODIC_5792p001 */
-  BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1 = 0;
+  BaseEngineController_LS_DWork.s753_motohawk_trigger_DWORK1 = 0;
 }
 
 /* Output and update for function-call system: '<Root>/Foreground' */
@@ -2364,9 +2364,6 @@ void BaseEngineController_LS_Foreground(void)
   boolean_T rtb_RelationalOperator_jv;
   boolean_T rtb_RelationalOperator3_h;
   boolean_T rtb_RelationalOperator3_or;
-  boolean_T rtb_LogicalOperator_ay;
-  boolean_T rtb_LogicalOperator_f0;
-  boolean_T rtb_LogicalOperator1_a5;
   boolean_T rtb_LogicalOperator2_n;
   boolean_T rtb_LogicalOperator3_hv;
   boolean_T rtb_LogicalOperator2_b;
@@ -2376,7 +2373,7 @@ void BaseEngineController_LS_Foreground(void)
   boolean_T rtb_LogicalOperator2_m;
   boolean_T rtb_LogicalOperator3_jn;
   boolean_T rtb_RelationalOperator_l;
-  boolean_T rtb_LogicalOperator_f0c;
+  boolean_T rtb_LogicalOperator_f0;
   boolean_T rtb_LogicalOperator1_dw;
   boolean_T rtb_LogicalOperator2_g;
   boolean_T rtb_LogicalOperator3_nz;
@@ -2460,7 +2457,6 @@ void BaseEngineController_LS_Foreground(void)
   boolean_T rtb_RelationalOperator1_hq;
   boolean_T rtb_motohawk_data_read1_kw;
   boolean_T rtb_motohawk_data_read1_iz;
-  boolean_T rtb_motohawk_fault_action_b;
   boolean_T rtb_AboveRich;
   boolean_T rtb_CombinatorialLogic[2];
   boolean_T rtb_BelowLoTarget;
@@ -2496,7 +2492,6 @@ void BaseEngineController_LS_Foreground(void)
   real_T rtb_UnitDelay1_h;
   real_T rtb_Sum2_gr;
   real_T rtb_Sum1_mz;
-  boolean_T rtb_Merge_n2;
   real_T rtb_Switch_f;
   real_T rtb_Merge_b3;
   boolean_T rtb_RelOp_d;
@@ -2526,8 +2521,6 @@ void BaseEngineController_LS_Foreground(void)
   real_T rtb_UnitDelay3_j;
   real_T rtb_UnitDelay4_ie;
   real_T rtb_APP2;
-  boolean_T rtb_Merge_iz;
-  boolean_T rtb_Merge_oq;
   real_T rtb_UnitDelay4_b3;
   real_T rtb_Sum1_nb;
   real_T rtb_Sum1_m;
@@ -2539,7 +2532,9 @@ void BaseEngineController_LS_Foreground(void)
   real_T rtb_Sum1_d4;
   real_T rtb_Sum1_fm;
   real_T rtb_Sum1_mzy;
+  boolean_T rtb_Merge_iz;
   real_T rtb_Sum1_c;
+  boolean_T rtb_Merge_oq;
   real_T rtb_Sum1_lm;
   real_T rtb_Sum1_cs;
   real_T rtb_Sum1_o;
@@ -2563,6 +2558,7 @@ void BaseEngineController_LS_Foreground(void)
   real_T rtb_Product4_o;
   real_T rtb_Multiplyby10ifnotyetenabled;
   boolean_T rtb_Switch1_mj;
+  uint16_T rtb_Product1_mc;
   int16_T rtb_DataTypeConversion_ol;
   int16_T rtb_Sum2_lt;
   int16_T rtb_Sum4_e;
@@ -2578,40 +2574,40 @@ void BaseEngineController_LS_Foreground(void)
   real_T rtb_DesiredLambda_idx_1;
   real_T y;
 
-  /* S-Function (motohawk_sfun_trigger): '<S445>/motohawk_trigger' */
+  /* S-Function (motohawk_sfun_trigger): '<S446>/motohawk_trigger' */
   /* Enable for Trigger_FGND_5XRTI_PERIODIC_5522p0011 */
-  if (BaseEngineController_LS_DWork.s445_motohawk_trigger_DWORK1 == 0) {
-    BaseEngineController_LS_DWork.s445_motohawk_trigger_DWORK1 = 1;
+  if (BaseEngineController_LS_DWork.s446_motohawk_trigger_DWORK1 == 0) {
+    BaseEngineController_LS_DWork.s446_motohawk_trigger_DWORK1 = 1;
   }
 
-  /* Logic: '<S751>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S751>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S751>/motohawk_fault_status4'
+  /* Logic: '<S752>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S752>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S752>/motohawk_fault_status4'
    */
   rtb_LogicalOperator1_cv = (IsFaultActive(12) || IsFaultActive(13));
 
-  /* Logic: '<S751>/Logical Operator6' */
+  /* Logic: '<S752>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S751>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S751>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S751>/motohawk_fault_status3'
+  /* Logic: '<S752>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S752>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S752>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_al = (IsFaultSuspected(12) || IsFaultSuspected(13));
 
-  /* S-Function Block: <S446>/motohawk_ain2 Resource: APP2AnalogInput */
+  /* S-Function Block: <S447>/motohawk_ain2 Resource: APP2AnalogInput */
   {
     extern NativeError_S APP2AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
     APP2AnalogInput_AnalogInput_Get
-      (&BaseEngineController_LS_B.s446_motohawk_ain2, NULL);
+      (&BaseEngineController_LS_B.s447_motohawk_ain2, NULL);
   }
 
-  /* DataTypeConversion: '<S751>/Data Type Conversion' */
+  /* DataTypeConversion: '<S752>/Data Type Conversion' */
   rtb_DataTypeConversion_fc = (real_T)
-    BaseEngineController_LS_B.s446_motohawk_ain2;
+    BaseEngineController_LS_B.s447_motohawk_ain2;
 
-  /* S-Function Block: <S775>/motohawk_prelookup */
+  /* S-Function Block: <S776>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
@@ -2620,318 +2616,318 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_prelookup_aq = (APP2Idx_DataStore());
   }
 
-  /* S-Function Block: <S775>/motohawk_interpolation_1d */
+  /* S-Function Block: <S776>/motohawk_interpolation_1d */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
-    BaseEngineController_LS_B.s775_motohawk_interpolation_1d =
+    BaseEngineController_LS_B.s776_motohawk_interpolation_1d =
       TableInterpolation1D_real_T(rtb_motohawk_prelookup_aq, (real_T *)
       ((APP2Tbl_DataStore())), 9);
   }
 
-  /* UnitDelay: '<S751>/Unit Delay' */
-  rtb_UnitDelay_jb = BaseEngineController_LS_DWork.s751_UnitDelay_DSTATE;
+  /* UnitDelay: '<S752>/Unit Delay' */
+  rtb_UnitDelay_jb = BaseEngineController_LS_DWork.s752_UnitDelay_DSTATE;
 
-  /* If: '<S751>/If' incorporates:
-   *  Logic: '<S751>/Logical Operator5'
+  /* If: '<S752>/If' incorporates:
+   *  Logic: '<S752>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S751>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S770>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S752>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S771>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay_jb, &rtb_Merge_c);
 
-    /* End of Outputs for SubSystem: '<S751>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S752>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S751>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S771>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S752>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S772>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((APP2Default_DataStore()),
       &rtb_Merge_c);
 
-    /* End of Outputs for SubSystem: '<S751>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S752>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S751>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S772>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S752>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S773>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s775_motohawk_interpolation_1d, &rtb_Merge_c);
+      (BaseEngineController_LS_B.s776_motohawk_interpolation_1d, &rtb_Merge_c);
 
-    /* End of Outputs for SubSystem: '<S751>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S752>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S751>/If' */
+  /* End of If: '<S752>/If' */
 
-  /* MinMax: '<S774>/MinMax' incorporates:
-   *  Constant: '<S751>/Constant1'
+  /* MinMax: '<S775>/MinMax' incorporates:
+   *  Constant: '<S752>/Constant1'
    */
   rtb_DataTypeConversion_e = rtb_Merge_c >= 0.0 ? rtb_Merge_c : 0.0;
 
-  /* MinMax: '<S774>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S751>/motohawk_calibration2'
+  /* MinMax: '<S775>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S752>/motohawk_calibration2'
    */
   minV = (rtb_DataTypeConversion_e <= (APP2MaxLimit_DataStore())) || rtIsNaN
     ((APP2MaxLimit_DataStore())) ? rtb_DataTypeConversion_e :
     (APP2MaxLimit_DataStore());
 
-  /* S-Function Block: <S769>/motohawk_delta_time */
+  /* S-Function Block: <S770>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s769_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s770_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S769>/Product' incorporates:
-   *  MinMax: '<S769>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S769>/motohawk_calibration'
+  /* Product: '<S770>/Product' incorporates:
+   *  MinMax: '<S770>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S770>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (APP2FiltConst_DataStore())) || rtIsNaN((APP2FiltConst_DataStore())) ?
     rtb_DataTypeConversion_e : (APP2FiltConst_DataStore());
 
-  /* Sum: '<S776>/Sum1' incorporates:
-   *  Constant: '<S776>/Constant'
-   *  MinMax: '<S774>/MinMax1'
-   *  Product: '<S776>/Product'
-   *  Product: '<S776>/Product1'
-   *  Sum: '<S776>/Sum'
-   *  UnitDelay: '<S776>/Unit Delay'
+  /* Sum: '<S777>/Sum1' incorporates:
+   *  Constant: '<S777>/Constant'
+   *  MinMax: '<S775>/MinMax1'
+   *  Product: '<S777>/Product'
+   *  Product: '<S777>/Product1'
+   *  Sum: '<S777>/Sum'
+   *  UnitDelay: '<S777>/Unit Delay'
    */
   rtb_Sum1_nb = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s776_UnitDelay_DSTATE + minV *
+    BaseEngineController_LS_DWork.s777_UnitDelay_DSTATE + minV *
     rtb_DataTypeConversion_e;
 
-  /* If: '<S773>/If' incorporates:
-   *  Inport: '<S777>/In1'
+  /* If: '<S774>/If' incorporates:
    *  Inport: '<S778>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S773>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S773>/override_enable'
+   *  Inport: '<S779>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S774>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S774>/override_enable'
    */
   if ((APP2_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S773>/NewValue' incorporates:
-     *  ActionPort: '<S777>/Action Port'
-     */
-    BaseEngineController_LS_B.s773_Merge = (APP2_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S773>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S773>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S774>/NewValue' incorporates:
      *  ActionPort: '<S778>/Action Port'
      */
-    BaseEngineController_LS_B.s773_Merge = rtb_Sum1_nb;
+    BaseEngineController_LS_B.s774_Merge = (APP2_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S773>/OldValue' */
+    /* End of Outputs for SubSystem: '<S774>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S774>/OldValue' incorporates:
+     *  ActionPort: '<S779>/Action Port'
+     */
+    BaseEngineController_LS_B.s774_Merge = rtb_Sum1_nb;
+
+    /* End of Outputs for SubSystem: '<S774>/OldValue' */
   }
 
-  /* End of If: '<S773>/If' */
+  /* End of If: '<S774>/If' */
 
-  /* Logic: '<S801>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S801>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S801>/motohawk_fault_status4'
+  /* Logic: '<S802>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S802>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S802>/motohawk_fault_status4'
    */
   rtb_LogicalOperator1_cv = (IsFaultActive(18) || IsFaultActive(19));
 
-  /* Logic: '<S801>/Logical Operator6' */
+  /* Logic: '<S802>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S801>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S801>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S801>/motohawk_fault_status3'
+  /* Logic: '<S802>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S802>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S802>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_al = (IsFaultSuspected(18) || IsFaultSuspected(19));
 
-  /* DataTypeConversion: '<S754>/Data Type Conversion1' */
+  /* DataTypeConversion: '<S755>/Data Type Conversion1' */
   rtb_DataTypeConversion1_e = (real_T)
-    BaseEngineController_LS_B.s446_motohawk_ain2;
+    BaseEngineController_LS_B.s447_motohawk_ain2;
 
-  /* Switch: '<S754>/Switch' incorporates:
-   *  Fcn: '<S754>/Fcn'
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration2'
+  /* Switch: '<S755>/Switch' incorporates:
+   *  Fcn: '<S755>/Fcn'
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration2'
    */
   if ((APP2_AdaptRev_Polarity_DataStore())) {
-    BaseEngineController_LS_B.s754_Switch = 1023.0 - rtb_DataTypeConversion1_e;
+    BaseEngineController_LS_B.s755_Switch = 1023.0 - rtb_DataTypeConversion1_e;
   } else {
-    BaseEngineController_LS_B.s754_Switch = rtb_DataTypeConversion1_e;
+    BaseEngineController_LS_B.s755_Switch = rtb_DataTypeConversion1_e;
   }
 
-  /* End of Switch: '<S754>/Switch' */
+  /* End of Switch: '<S755>/Switch' */
 
-  /* S-Function (motohawk_sfun_data_read): '<S798>/motohawk_data_read' */
+  /* S-Function (motohawk_sfun_data_read): '<S799>/motohawk_data_read' */
   rtb_DataTypeConversion_iq = APP2_AdaptRaw_Adpt_Low_DataStore();
 
-  /* MinMax: '<S798>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration9'
+  /* MinMax: '<S799>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration9'
    */
   rtb_UnitDelay4_b3 = (real_T)rtb_DataTypeConversion_iq;
-  BaseEngineController_LS_B.s798_MinMax = (rtb_UnitDelay4_b3 <=
+  BaseEngineController_LS_B.s799_MinMax = (rtb_UnitDelay4_b3 <=
     (APP2_AdaptAdapt_Low_Max_DataStore())) || rtIsNaN
     ((APP2_AdaptAdapt_Low_Max_DataStore())) ? rtb_UnitDelay4_b3 :
     (APP2_AdaptAdapt_Low_Max_DataStore());
 
-  /* Sum: '<S754>/Sum2' */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s754_Switch -
-    BaseEngineController_LS_B.s798_MinMax;
+  /* Sum: '<S755>/Sum2' */
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s755_Switch -
+    BaseEngineController_LS_B.s799_MinMax;
 
-  /* S-Function (motohawk_sfun_data_read): '<S798>/motohawk_data_read1' */
+  /* S-Function (motohawk_sfun_data_read): '<S799>/motohawk_data_read1' */
   rtb_DataTypeConversion_iq = APP2_AdaptRaw_Adpt_Hi_DataStore();
 
-  /* MinMax: '<S798>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration11'
+  /* MinMax: '<S799>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration11'
    */
   rtb_UnitDelay4_b3 = (real_T)rtb_DataTypeConversion_iq;
-  BaseEngineController_LS_B.s798_MinMax1 = (rtb_UnitDelay4_b3 >=
+  BaseEngineController_LS_B.s799_MinMax1 = (rtb_UnitDelay4_b3 >=
     (APP2_AdaptAdapt_Hi_Min_DataStore())) || rtIsNaN
     ((APP2_AdaptAdapt_Hi_Min_DataStore())) ? rtb_UnitDelay4_b3 :
     (APP2_AdaptAdapt_Hi_Min_DataStore());
 
-  /* Gain: '<S754>/Gain2' incorporates:
-   *  Product: '<S754>/Product1'
-   *  Sum: '<S754>/Sum1'
+  /* Gain: '<S755>/Gain2' incorporates:
+   *  Product: '<S755>/Product1'
+   *  Sum: '<S755>/Sum1'
    */
   rtb_DataTypeConversion_e = rtb_DataTypeConversion1_e /
-    (BaseEngineController_LS_B.s798_MinMax1 -
-     BaseEngineController_LS_B.s798_MinMax) * 100.0;
+    (BaseEngineController_LS_B.s799_MinMax1 -
+     BaseEngineController_LS_B.s799_MinMax) * 100.0;
 
-  /* MinMax: '<S802>/MinMax' incorporates:
-   *  Constant: '<S754>/Constant1'
+  /* MinMax: '<S803>/MinMax' incorporates:
+   *  Constant: '<S755>/Constant1'
    */
   rtb_DataTypeConversion_e = rtb_DataTypeConversion_e >= 0.0 ?
     rtb_DataTypeConversion_e : 0.0;
 
-  /* MinMax: '<S802>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration1'
+  /* MinMax: '<S803>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration1'
    */
-  BaseEngineController_LS_B.s802_MinMax1 = (rtb_DataTypeConversion_e <=
+  BaseEngineController_LS_B.s803_MinMax1 = (rtb_DataTypeConversion_e <=
     (APP2_AdaptMaxLimit_DataStore())) || rtIsNaN((APP2_AdaptMaxLimit_DataStore()))
     ? rtb_DataTypeConversion_e : (APP2_AdaptMaxLimit_DataStore());
 
-  /* S-Function Block: <S800>/motohawk_delta_time */
+  /* S-Function Block: <S801>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s800_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s801_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S800>/Product' incorporates:
-   *  MinMax: '<S800>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S800>/motohawk_calibration'
+  /* Product: '<S801>/Product' incorporates:
+   *  MinMax: '<S801>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S801>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (APP2_AdaptFilterConst_DataStore())) || rtIsNaN
     ((APP2_AdaptFilterConst_DataStore())) ? rtb_DataTypeConversion_e :
     (APP2_AdaptFilterConst_DataStore());
 
-  /* Sum: '<S808>/Sum1' incorporates:
-   *  Constant: '<S808>/Constant'
-   *  Product: '<S808>/Product'
-   *  Product: '<S808>/Product1'
-   *  Sum: '<S808>/Sum'
-   *  UnitDelay: '<S808>/Unit Delay'
+  /* Sum: '<S809>/Sum1' incorporates:
+   *  Constant: '<S809>/Constant'
+   *  Product: '<S809>/Product'
+   *  Product: '<S809>/Product1'
+   *  Sum: '<S809>/Sum'
+   *  UnitDelay: '<S809>/Unit Delay'
    */
   rtb_Sum1_b4 = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s808_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s802_MinMax1 * rtb_DataTypeConversion_e;
+    BaseEngineController_LS_DWork.s809_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s803_MinMax1 * rtb_DataTypeConversion_e;
 
-  /* UnitDelay: '<S801>/Unit Delay1' */
-  rtb_UnitDelay1_ok = BaseEngineController_LS_DWork.s801_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S802>/Unit Delay1' */
+  rtb_UnitDelay1_ok = BaseEngineController_LS_DWork.s802_UnitDelay1_DSTATE;
 
-  /* If: '<S801>/If' incorporates:
-   *  Logic: '<S801>/Logical Operator5'
+  /* If: '<S802>/If' incorporates:
+   *  Logic: '<S802>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S801>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S809>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S802>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S810>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_ok, &rtb_Merge_m);
 
-    /* End of Outputs for SubSystem: '<S801>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S802>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S801>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S810>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S802>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S811>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((APP2_AdaptDfltValue_DataStore()),
       &rtb_Merge_m);
 
-    /* End of Outputs for SubSystem: '<S801>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S802>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S801>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S811>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S802>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S812>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_Sum1_b4, &rtb_Merge_m);
 
-    /* End of Outputs for SubSystem: '<S801>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S802>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S801>/If' */
+  /* End of If: '<S802>/If' */
 
-  /* If: '<S812>/If' incorporates:
-   *  Inport: '<S813>/In1'
+  /* If: '<S813>/If' incorporates:
    *  Inport: '<S814>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S812>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S812>/override_enable'
+   *  Inport: '<S815>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S813>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S813>/override_enable'
    */
   if ((APP2_Adapt_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S812>/NewValue' incorporates:
-     *  ActionPort: '<S813>/Action Port'
-     */
-    BaseEngineController_LS_B.s812_Merge = (APP2_Adapt_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S812>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S812>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S813>/NewValue' incorporates:
      *  ActionPort: '<S814>/Action Port'
      */
-    BaseEngineController_LS_B.s812_Merge = rtb_Merge_m;
+    BaseEngineController_LS_B.s813_Merge = (APP2_Adapt_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S812>/OldValue' */
+    /* End of Outputs for SubSystem: '<S813>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S813>/OldValue' incorporates:
+     *  ActionPort: '<S815>/Action Port'
+     */
+    BaseEngineController_LS_B.s813_Merge = rtb_Merge_m;
+
+    /* End of Outputs for SubSystem: '<S813>/OldValue' */
   }
 
-  /* End of If: '<S812>/If' */
+  /* End of If: '<S813>/If' */
 
-  /* Switch: '<S446>/Switch1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S446>/motohawk_calibration'
+  /* Switch: '<S447>/Switch1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S447>/motohawk_calibration'
    */
   if ((APP_AdaptMode_DataStore())) {
-    rtb_APP2 = BaseEngineController_LS_B.s812_Merge;
+    rtb_APP2 = BaseEngineController_LS_B.s813_Merge;
   } else {
-    rtb_APP2 = BaseEngineController_LS_B.s773_Merge;
+    rtb_APP2 = BaseEngineController_LS_B.s774_Merge;
   }
 
-  /* End of Switch: '<S446>/Switch1' */
-  /* Logic: '<S749>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S749>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S749>/motohawk_fault_status4'
+  /* End of Switch: '<S447>/Switch1' */
+  /* Logic: '<S750>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S750>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S750>/motohawk_fault_status4'
    */
   rtb_LogicalOperator1_cv = (IsFaultActive(4) || IsFaultActive(5));
 
-  /* Logic: '<S749>/Logical Operator6' */
+  /* Logic: '<S750>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S749>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S749>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S749>/motohawk_fault_status3'
+  /* Logic: '<S750>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S750>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S750>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_al = (IsFaultSuspected(4) || IsFaultSuspected(5));
 
-  /* S-Function Block: <S446>/motohawk_ain1 Resource: APP1AnalogInput */
+  /* S-Function Block: <S447>/motohawk_ain1 Resource: APP1AnalogInput */
   {
     extern NativeError_S APP1AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
     APP1AnalogInput_AnalogInput_Get
-      (&BaseEngineController_LS_B.s446_motohawk_ain1, NULL);
+      (&BaseEngineController_LS_B.s447_motohawk_ain1, NULL);
   }
 
-  /* DataTypeConversion: '<S749>/Data Type Conversion' */
+  /* DataTypeConversion: '<S750>/Data Type Conversion' */
   rtb_DataTypeConversion_hd = (real_T)
-    BaseEngineController_LS_B.s446_motohawk_ain1;
+    BaseEngineController_LS_B.s447_motohawk_ain1;
 
-  /* S-Function Block: <S763>/motohawk_prelookup */
+  /* S-Function Block: <S764>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
@@ -2940,385 +2936,385 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_prelookup_he = (APP1Idx_DataStore());
   }
 
-  /* S-Function Block: <S763>/motohawk_interpolation_1d */
+  /* S-Function Block: <S764>/motohawk_interpolation_1d */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
-    BaseEngineController_LS_B.s763_motohawk_interpolation_1d =
+    BaseEngineController_LS_B.s764_motohawk_interpolation_1d =
       TableInterpolation1D_real_T(rtb_motohawk_prelookup_he, (real_T *)
       ((APP1Tbl_DataStore())), 9);
   }
 
-  /* UnitDelay: '<S749>/Unit Delay' */
-  rtb_UnitDelay_m = BaseEngineController_LS_DWork.s749_UnitDelay_DSTATE;
+  /* UnitDelay: '<S750>/Unit Delay' */
+  rtb_UnitDelay_m = BaseEngineController_LS_DWork.s750_UnitDelay_DSTATE;
 
-  /* If: '<S749>/If' incorporates:
-   *  Logic: '<S749>/Logical Operator5'
+  /* If: '<S750>/If' incorporates:
+   *  Logic: '<S750>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S749>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S758>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S750>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S759>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay_m, &rtb_Merge_o);
 
-    /* End of Outputs for SubSystem: '<S749>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S750>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S749>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S759>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S750>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S760>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((APP1Default_DataStore()),
       &rtb_Merge_o);
 
-    /* End of Outputs for SubSystem: '<S749>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S750>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S749>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S760>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S750>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S761>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s763_motohawk_interpolation_1d, &rtb_Merge_o);
+      (BaseEngineController_LS_B.s764_motohawk_interpolation_1d, &rtb_Merge_o);
 
-    /* End of Outputs for SubSystem: '<S749>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S750>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S749>/If' */
+  /* End of If: '<S750>/If' */
 
-  /* MinMax: '<S762>/MinMax' incorporates:
-   *  Constant: '<S749>/Constant1'
+  /* MinMax: '<S763>/MinMax' incorporates:
+   *  Constant: '<S750>/Constant1'
    */
   rtb_DataTypeConversion_e = rtb_Merge_o >= 0.0 ? rtb_Merge_o : 0.0;
 
-  /* MinMax: '<S762>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S749>/motohawk_calibration2'
+  /* MinMax: '<S763>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S750>/motohawk_calibration2'
    */
   minV_0 = (rtb_DataTypeConversion_e <= (APP1MaxLimit_DataStore())) || rtIsNaN
     ((APP1MaxLimit_DataStore())) ? rtb_DataTypeConversion_e :
     (APP1MaxLimit_DataStore());
 
-  /* S-Function Block: <S757>/motohawk_delta_time */
+  /* S-Function Block: <S758>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s757_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s758_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S757>/Product' incorporates:
-   *  MinMax: '<S757>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration'
+  /* Product: '<S758>/Product' incorporates:
+   *  MinMax: '<S758>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S758>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (APP1FiltConst_DataStore())) || rtIsNaN((APP1FiltConst_DataStore())) ?
     rtb_DataTypeConversion_e : (APP1FiltConst_DataStore());
 
-  /* Sum: '<S764>/Sum1' incorporates:
-   *  Constant: '<S764>/Constant'
-   *  MinMax: '<S762>/MinMax1'
-   *  Product: '<S764>/Product'
-   *  Product: '<S764>/Product1'
-   *  Sum: '<S764>/Sum'
-   *  UnitDelay: '<S764>/Unit Delay'
+  /* Sum: '<S765>/Sum1' incorporates:
+   *  Constant: '<S765>/Constant'
+   *  MinMax: '<S763>/MinMax1'
+   *  Product: '<S765>/Product'
+   *  Product: '<S765>/Product1'
+   *  Sum: '<S765>/Sum'
+   *  UnitDelay: '<S765>/Unit Delay'
    */
   rtb_Sum1_m = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s764_UnitDelay_DSTATE + minV_0 *
+    BaseEngineController_LS_DWork.s765_UnitDelay_DSTATE + minV_0 *
     rtb_DataTypeConversion_e;
 
-  /* If: '<S761>/If' incorporates:
-   *  Inport: '<S765>/In1'
+  /* If: '<S762>/If' incorporates:
    *  Inport: '<S766>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S761>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S761>/override_enable'
+   *  Inport: '<S767>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S762>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S762>/override_enable'
    */
   if ((APP1_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S761>/NewValue' incorporates:
-     *  ActionPort: '<S765>/Action Port'
-     */
-    BaseEngineController_LS_B.s761_Merge = (APP1_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S761>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S761>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S762>/NewValue' incorporates:
      *  ActionPort: '<S766>/Action Port'
      */
-    BaseEngineController_LS_B.s761_Merge = rtb_Sum1_m;
+    BaseEngineController_LS_B.s762_Merge = (APP1_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S761>/OldValue' */
+    /* End of Outputs for SubSystem: '<S762>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S762>/OldValue' incorporates:
+     *  ActionPort: '<S767>/Action Port'
+     */
+    BaseEngineController_LS_B.s762_Merge = rtb_Sum1_m;
+
+    /* End of Outputs for SubSystem: '<S762>/OldValue' */
   }
 
-  /* End of If: '<S761>/If' */
+  /* End of If: '<S762>/If' */
 
-  /* Logic: '<S784>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S784>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S784>/motohawk_fault_status4'
+  /* Logic: '<S785>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S785>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S785>/motohawk_fault_status4'
    */
   rtb_LogicalOperator1_cv = (IsFaultActive(10) || IsFaultActive(11));
 
-  /* Logic: '<S784>/Logical Operator6' */
+  /* Logic: '<S785>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S784>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S784>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S784>/motohawk_fault_status3'
+  /* Logic: '<S785>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S785>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S785>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_al = (IsFaultSuspected(10) || IsFaultSuspected(11));
 
-  /* DataTypeConversion: '<S753>/Data Type Conversion1' */
+  /* DataTypeConversion: '<S754>/Data Type Conversion1' */
   rtb_DataTypeConversion1_e = (real_T)
-    BaseEngineController_LS_B.s446_motohawk_ain1;
+    BaseEngineController_LS_B.s447_motohawk_ain1;
 
-  /* Switch: '<S753>/Switch' incorporates:
-   *  Fcn: '<S753>/Fcn'
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration2'
+  /* Switch: '<S754>/Switch' incorporates:
+   *  Fcn: '<S754>/Fcn'
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration2'
    */
   if ((APP1_AdaptRev_Polarity_DataStore())) {
-    BaseEngineController_LS_B.s753_Switch = 1023.0 - rtb_DataTypeConversion1_e;
+    BaseEngineController_LS_B.s754_Switch = 1023.0 - rtb_DataTypeConversion1_e;
   } else {
-    BaseEngineController_LS_B.s753_Switch = rtb_DataTypeConversion1_e;
+    BaseEngineController_LS_B.s754_Switch = rtb_DataTypeConversion1_e;
   }
 
-  /* End of Switch: '<S753>/Switch' */
+  /* End of Switch: '<S754>/Switch' */
 
-  /* S-Function (motohawk_sfun_data_read): '<S781>/motohawk_data_read' */
+  /* S-Function (motohawk_sfun_data_read): '<S782>/motohawk_data_read' */
   rtb_DataTypeConversion_iq = APP1_AdaptRaw_Adpt_Low_DataStore();
 
-  /* MinMax: '<S781>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration9'
+  /* MinMax: '<S782>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration9'
    */
   rtb_UnitDelay4_b3 = (real_T)rtb_DataTypeConversion_iq;
-  BaseEngineController_LS_B.s781_MinMax = (rtb_UnitDelay4_b3 <=
+  BaseEngineController_LS_B.s782_MinMax = (rtb_UnitDelay4_b3 <=
     (APP1_AdaptAdapt_Low_Max_DataStore())) || rtIsNaN
     ((APP1_AdaptAdapt_Low_Max_DataStore())) ? rtb_UnitDelay4_b3 :
     (APP1_AdaptAdapt_Low_Max_DataStore());
 
-  /* Sum: '<S753>/Sum2' */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s753_Switch -
-    BaseEngineController_LS_B.s781_MinMax;
+  /* Sum: '<S754>/Sum2' */
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s754_Switch -
+    BaseEngineController_LS_B.s782_MinMax;
 
-  /* S-Function (motohawk_sfun_data_read): '<S781>/motohawk_data_read1' */
+  /* S-Function (motohawk_sfun_data_read): '<S782>/motohawk_data_read1' */
   rtb_DataTypeConversion_iq = APP1_AdaptRaw_Adpt_Hi_DataStore();
 
-  /* MinMax: '<S781>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration11'
+  /* MinMax: '<S782>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration11'
    */
   rtb_UnitDelay4_b3 = (real_T)rtb_DataTypeConversion_iq;
-  BaseEngineController_LS_B.s781_MinMax1 = (rtb_UnitDelay4_b3 >=
+  BaseEngineController_LS_B.s782_MinMax1 = (rtb_UnitDelay4_b3 >=
     (APP1_AdaptAdapt_Hi_Min_DataStore())) || rtIsNaN
     ((APP1_AdaptAdapt_Hi_Min_DataStore())) ? rtb_UnitDelay4_b3 :
     (APP1_AdaptAdapt_Hi_Min_DataStore());
 
-  /* Gain: '<S753>/Gain2' incorporates:
-   *  Product: '<S753>/Product1'
-   *  Sum: '<S753>/Sum1'
+  /* Gain: '<S754>/Gain2' incorporates:
+   *  Product: '<S754>/Product1'
+   *  Sum: '<S754>/Sum1'
    */
   rtb_DataTypeConversion_e = rtb_DataTypeConversion1_e /
-    (BaseEngineController_LS_B.s781_MinMax1 -
-     BaseEngineController_LS_B.s781_MinMax) * 100.0;
+    (BaseEngineController_LS_B.s782_MinMax1 -
+     BaseEngineController_LS_B.s782_MinMax) * 100.0;
 
-  /* MinMax: '<S785>/MinMax' incorporates:
-   *  Constant: '<S753>/Constant1'
+  /* MinMax: '<S786>/MinMax' incorporates:
+   *  Constant: '<S754>/Constant1'
    */
   rtb_DataTypeConversion_e = rtb_DataTypeConversion_e >= 0.0 ?
     rtb_DataTypeConversion_e : 0.0;
 
-  /* MinMax: '<S785>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration1'
+  /* MinMax: '<S786>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration1'
    */
-  BaseEngineController_LS_B.s785_MinMax1 = (rtb_DataTypeConversion_e <=
+  BaseEngineController_LS_B.s786_MinMax1 = (rtb_DataTypeConversion_e <=
     (APP1_AdaptMaxLimit_DataStore())) || rtIsNaN((APP1_AdaptMaxLimit_DataStore()))
     ? rtb_DataTypeConversion_e : (APP1_AdaptMaxLimit_DataStore());
 
-  /* S-Function Block: <S783>/motohawk_delta_time */
+  /* S-Function Block: <S784>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s783_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s784_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S783>/Product' incorporates:
-   *  MinMax: '<S783>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S783>/motohawk_calibration'
+  /* Product: '<S784>/Product' incorporates:
+   *  MinMax: '<S784>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S784>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (APP1_AdaptFilterConst_DataStore())) || rtIsNaN
     ((APP1_AdaptFilterConst_DataStore())) ? rtb_DataTypeConversion_e :
     (APP1_AdaptFilterConst_DataStore());
 
-  /* Sum: '<S791>/Sum1' incorporates:
-   *  Constant: '<S791>/Constant'
-   *  Product: '<S791>/Product'
-   *  Product: '<S791>/Product1'
-   *  Sum: '<S791>/Sum'
-   *  UnitDelay: '<S791>/Unit Delay'
+  /* Sum: '<S792>/Sum1' incorporates:
+   *  Constant: '<S792>/Constant'
+   *  Product: '<S792>/Product'
+   *  Product: '<S792>/Product1'
+   *  Sum: '<S792>/Sum'
+   *  UnitDelay: '<S792>/Unit Delay'
    */
   rtb_Sum1_h1 = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s791_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s785_MinMax1 * rtb_DataTypeConversion_e;
+    BaseEngineController_LS_DWork.s792_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s786_MinMax1 * rtb_DataTypeConversion_e;
 
-  /* UnitDelay: '<S784>/Unit Delay1' */
-  rtb_UnitDelay1_e = BaseEngineController_LS_DWork.s784_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S785>/Unit Delay1' */
+  rtb_UnitDelay1_e = BaseEngineController_LS_DWork.s785_UnitDelay1_DSTATE;
 
-  /* If: '<S784>/If' incorporates:
-   *  Logic: '<S784>/Logical Operator5'
+  /* If: '<S785>/If' incorporates:
+   *  Logic: '<S785>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S784>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S792>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S785>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S793>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_e, &rtb_Merge_ao);
 
-    /* End of Outputs for SubSystem: '<S784>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S785>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S784>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S793>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S785>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S794>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((APP1_AdaptDfltValue_DataStore()),
       &rtb_Merge_ao);
 
-    /* End of Outputs for SubSystem: '<S784>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S785>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S784>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S794>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S785>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S795>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_Sum1_h1, &rtb_Merge_ao);
 
-    /* End of Outputs for SubSystem: '<S784>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S785>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S784>/If' */
+  /* End of If: '<S785>/If' */
 
-  /* If: '<S795>/If' incorporates:
-   *  Inport: '<S796>/In1'
+  /* If: '<S796>/If' incorporates:
    *  Inport: '<S797>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S795>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S795>/override_enable'
+   *  Inport: '<S798>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S796>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S796>/override_enable'
    */
   if ((APP1_Adapt_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S795>/NewValue' incorporates:
-     *  ActionPort: '<S796>/Action Port'
-     */
-    BaseEngineController_LS_B.s795_Merge = (APP1_Adapt_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S795>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S795>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S796>/NewValue' incorporates:
      *  ActionPort: '<S797>/Action Port'
      */
-    BaseEngineController_LS_B.s795_Merge = rtb_Merge_ao;
+    BaseEngineController_LS_B.s796_Merge = (APP1_Adapt_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S795>/OldValue' */
+    /* End of Outputs for SubSystem: '<S796>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S796>/OldValue' incorporates:
+     *  ActionPort: '<S798>/Action Port'
+     */
+    BaseEngineController_LS_B.s796_Merge = rtb_Merge_ao;
+
+    /* End of Outputs for SubSystem: '<S796>/OldValue' */
   }
 
-  /* End of If: '<S795>/If' */
+  /* End of If: '<S796>/If' */
 
-  /* Switch: '<S446>/Switch' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S446>/motohawk_calibration'
+  /* Switch: '<S447>/Switch' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S447>/motohawk_calibration'
    */
   if ((APP_AdaptMode_DataStore())) {
-    rtb_APP1 = BaseEngineController_LS_B.s795_Merge;
+    rtb_APP1 = BaseEngineController_LS_B.s796_Merge;
   } else {
-    rtb_APP1 = BaseEngineController_LS_B.s761_Merge;
+    rtb_APP1 = BaseEngineController_LS_B.s762_Merge;
   }
 
-  /* End of Switch: '<S446>/Switch' */
-  /* Logic: '<S401>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S401>/motohawk_fault_status'
-   *  S-Function (motohawk_sfun_fault_status): '<S401>/motohawk_fault_status1'
+  /* End of Switch: '<S447>/Switch' */
+  /* Logic: '<S402>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S402>/motohawk_fault_status'
+   *  S-Function (motohawk_sfun_fault_status): '<S402>/motohawk_fault_status1'
    */
   rtb_LogicalOperator6_b = (IsFaultActive(4) || IsFaultActive(5));
 
-  /* Logic: '<S401>/Logical Operator6' incorporates:
-   *  Logic: '<S401>/Logical Operator5'
-   *  S-Function (motohawk_sfun_fault_status): '<S401>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S401>/motohawk_fault_status3'
+  /* Logic: '<S402>/Logical Operator6' incorporates:
+   *  Logic: '<S402>/Logical Operator5'
+   *  S-Function (motohawk_sfun_fault_status): '<S402>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S402>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_al = (rtb_LogicalOperator6_b && (IsFaultActive(12) ||
     IsFaultActive(13)));
 
-  /* Switch: '<S401>/Switch2' incorporates:
-   *  Logic: '<S401>/Logical Operator1'
-   *  S-Function (motohawk_sfun_fault_status): '<S401>/motohawk_fault_status4'
+  /* Switch: '<S402>/Switch2' incorporates:
+   *  Logic: '<S402>/Logical Operator1'
+   *  S-Function (motohawk_sfun_fault_status): '<S402>/motohawk_fault_status4'
    */
   if (rtb_LogicalOperator1_al || IsFaultActive(20)) {
-    /* MinMax: '<S401>/MinMax' */
+    /* MinMax: '<S402>/MinMax' */
     rtb_DataTypeConversion1_e = (rtb_APP2 <= rtb_APP1) || rtIsNaN(rtb_APP1) ?
       rtb_APP2 : rtb_APP1;
   } else {
-    /* Switch: '<S401>/Switch1' */
+    /* Switch: '<S402>/Switch1' */
     if (rtb_LogicalOperator6_b) {
       rtb_DataTypeConversion1_e = rtb_APP2;
     } else {
       rtb_DataTypeConversion1_e = rtb_APP1;
     }
 
-    /* End of Switch: '<S401>/Switch1' */
+    /* End of Switch: '<S402>/Switch1' */
   }
 
-  /* End of Switch: '<S401>/Switch2' */
-  /* Switch: '<S405>/Switch1' incorporates:
-   *  S-Function (motohawk_sfun_fault_action): '<S405>/motohawk_fault_action1'
+  /* End of Switch: '<S402>/Switch2' */
+  /* Switch: '<S406>/Switch1' incorporates:
+   *  S-Function (motohawk_sfun_fault_action): '<S406>/motohawk_fault_action1'
    */
   if (GetFaultActionStatus(0)) {
-    /* DataTypeConversion: '<S405>/Data Type Conversion' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S405>/motohawk_calibration1'
+    /* DataTypeConversion: '<S406>/Data Type Conversion' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S406>/motohawk_calibration1'
      */
     rtb_DataTypeConversion_b2 = (real_T)((uint8_T)(Overheat_MaxAPP_DataStore()));
 
-    /* MinMax: '<S424>/MinMax' incorporates:
-     *  Constant: '<S405>/Constant1'
-     *  Product: '<S405>/Product1'
-     *  S-Function (motohawk_sfun_calibration): '<S405>/motohawk_calibration2'
+    /* MinMax: '<S425>/MinMax' incorporates:
+     *  Constant: '<S406>/Constant1'
+     *  Product: '<S406>/Product1'
+     *  S-Function (motohawk_sfun_calibration): '<S406>/motohawk_calibration2'
      */
     rtb_UnitDelay4_b3 = (Overheat_ScaleAPP_DataStore()) *
       rtb_DataTypeConversion1_e;
     y = rtb_UnitDelay4_b3 >= 0.0 ? rtb_UnitDelay4_b3 : 0.0;
 
-    /* MinMax: '<S424>/MinMax1' incorporates:
-     *  Constant: '<S405>/Constant1'
-     *  MinMax: '<S424>/MinMax'
+    /* MinMax: '<S425>/MinMax1' incorporates:
+     *  Constant: '<S406>/Constant1'
+     *  MinMax: '<S425>/MinMax'
      */
-    BaseEngineController_LS_B.s405_Switch1 = y <= rtb_DataTypeConversion_b2 ? y :
+    BaseEngineController_LS_B.s406_Switch1 = y <= rtb_DataTypeConversion_b2 ? y :
       rtb_DataTypeConversion_b2;
   } else {
-    BaseEngineController_LS_B.s405_Switch1 = rtb_DataTypeConversion1_e;
+    BaseEngineController_LS_B.s406_Switch1 = rtb_DataTypeConversion1_e;
   }
 
-  /* End of Switch: '<S405>/Switch1' */
-  /* S-Function Block: <S431>/motohawk_delta_time */
+  /* End of Switch: '<S406>/Switch1' */
+  /* S-Function Block: <S432>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s431_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s432_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_hb = ((real_T) delta) * 0.000001;
   }
 
-  /* Sum: '<S431>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_data_read): '<S431>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S431>/motohawk_delta_time'
+  /* Sum: '<S432>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_data_read): '<S432>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S432>/motohawk_delta_time'
    */
-  BaseEngineController_LS_B.s431_Sum = rtb_motohawk_delta_time_hb +
+  BaseEngineController_LS_B.s432_Sum = rtb_motohawk_delta_time_hb +
     TimeSinceKeyOnTimer_DataStore();
 
-  /* S-Function Block: <S443>/motohawk_encoder_instant_rpm */
+  /* S-Function Block: <S444>/motohawk_encoder_instant_rpm */
   {
     rtb_RPMInst = GetEncoderResourceInstantRPM();
   }
 
-  /* DataTypeConversion: '<S443>/Data Type Conversion1' incorporates:
-   *  S-Function (motohawk_sfun_encoder_instant_rpm): '<S443>/motohawk_encoder_instant_rpm'
+  /* DataTypeConversion: '<S444>/Data Type Conversion1' incorporates:
+   *  S-Function (motohawk_sfun_encoder_instant_rpm): '<S444>/motohawk_encoder_instant_rpm'
    */
-  BaseEngineController_LS_B.s443_RPMInst = (real_T)rtb_RPMInst;
+  BaseEngineController_LS_B.s444_RPMInst = (real_T)rtb_RPMInst;
 
-  /* DataTypeConversion: '<S407>/Data Type Conversion' */
-  if (BaseEngineController_LS_B.s443_RPMInst < 65536.0) {
-    if (BaseEngineController_LS_B.s443_RPMInst >= 0.0) {
+  /* DataTypeConversion: '<S408>/Data Type Conversion' */
+  if (BaseEngineController_LS_B.s444_RPMInst < 65536.0) {
+    if (BaseEngineController_LS_B.s444_RPMInst >= 0.0) {
       rtb_DataTypeConversion_iq = (uint16_T)
-        BaseEngineController_LS_B.s443_RPMInst;
+        BaseEngineController_LS_B.s444_RPMInst;
     } else {
       rtb_DataTypeConversion_iq = 0U;
     }
@@ -3326,10 +3322,10 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion_iq = MAX_uint16_T;
   }
 
-  /* End of DataTypeConversion: '<S407>/Data Type Conversion' */
-  /* Sum: '<S407>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S407>/motohawk_calibration3'
-   *  S-Function (motohawk_sfun_calibration): '<S407>/motohawk_calibration4'
+  /* End of DataTypeConversion: '<S408>/Data Type Conversion' */
+  /* Sum: '<S408>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S408>/motohawk_calibration3'
+   *  S-Function (motohawk_sfun_calibration): '<S408>/motohawk_calibration4'
    */
   i = ((uint16_T)(StallRPMMinThreshold_DataStore())) - ((uint16_T)
     (StallRPMThresholdHyst_DataStore()));
@@ -3339,287 +3335,284 @@ void BaseEngineController_LS_Foreground(void)
 
   rtb_Product_mp = (uint16_T)i;
 
-  /* End of Sum: '<S407>/Sum' */
+  /* End of Sum: '<S408>/Sum' */
 
-  /* RelationalOperator: '<S407>/Relational Operator1' */
-  BaseEngineController_LS_B.s407_Stall = ((rtb_DataTypeConversion_iq <
+  /* RelationalOperator: '<S408>/Relational Operator1' */
+  BaseEngineController_LS_B.s408_Stall = ((rtb_DataTypeConversion_iq <
     rtb_Product_mp));
 
-  /* RelationalOperator: '<S407>/Relational Operator4' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S407>/motohawk_calibration4'
+  /* RelationalOperator: '<S408>/Relational Operator4' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S408>/motohawk_calibration4'
    */
-  BaseEngineController_LS_B.s407_Crank = ((rtb_DataTypeConversion_iq >
+  BaseEngineController_LS_B.s408_Crank = ((rtb_DataTypeConversion_iq >
     ((uint16_T)(StallRPMMinThreshold_DataStore()))));
 
-  /* RelationalOperator: '<S407>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S407>/motohawk_calibration1'
+  /* RelationalOperator: '<S408>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S408>/motohawk_calibration1'
    */
   rtb_LogicalOperator6_b = (rtb_DataTypeConversion_iq > ((uint16_T)
     (CrankToRunRPMThresh_DataStore())));
 
-  /* UnitDelay: '<S407>/Unit Delay' */
-  BaseEngineController_LS_B.s407_UnitDelay =
-    BaseEngineController_LS_DWork.s407_UnitDelay_DSTATE;
+  /* UnitDelay: '<S408>/Unit Delay' */
+  BaseEngineController_LS_B.s408_UnitDelay =
+    BaseEngineController_LS_DWork.s408_UnitDelay_DSTATE;
 
-  /* S-Function (motohawk_sfun_trigger): '<S407>/motohawk_trigger' */
+  /* S-Function (motohawk_sfun_trigger): '<S408>/motohawk_trigger' */
   /* Enable for Trigger_FGND_TDC_EVENT_4025p001 */
-  if (BaseEngineController_LS_DWork.s407_motohawk_trigger_DWORK1 == 0) {
-    BaseEngineController_LS_DWork.s407_motohawk_trigger_DWORK1 = 1;
+  if (BaseEngineController_LS_DWork.s408_motohawk_trigger_DWORK1 == 0) {
+    BaseEngineController_LS_DWork.s408_motohawk_trigger_DWORK1 = 1;
   }
 
-  /* Logic: '<S407>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S407>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S407>/motohawk_calibration2'
+  /* Logic: '<S408>/Logical Operator1' incorporates:
+   *  RelationalOperator: '<S408>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S408>/motohawk_calibration2'
    */
-  BaseEngineController_LS_B.s407_Run = ((rtb_LogicalOperator6_b &&
-    (BaseEngineController_LS_B.s429_Switch >= ((uint8_T)(RunLatchTDCs_DataStore())))));
+  BaseEngineController_LS_B.s408_Run = ((rtb_LogicalOperator6_b &&
+    (BaseEngineController_LS_B.s430_Switch >= ((uint8_T)(RunLatchTDCs_DataStore())))));
 
-  /* Stateflow: '<S407>/Engine State Machine' */
+  /* Stateflow: '<S408>/Engine State Machine' */
 
   /* Gateway: Foreground/Control/VirtualSensors/RawProcessed/EngineState/Engine State Machine */
   /* During: Foreground/Control/VirtualSensors/RawProcessed/EngineState/Engine State Machine */
-  switch (BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS) {
+  switch (BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS) {
    case BaseEngineController_LS_IN_Crank:
-    /* During 'Crank': '<S428>:3' */
-    if (BaseEngineController_LS_B.s407_Stall) {
-      /* Transition: '<S428>:8' */
-      BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS =
-        BaseEngineController_LS_IN_Stall_l;
+    /* During 'Crank': '<S429>:3' */
+    if (BaseEngineController_LS_B.s408_Stall) {
+      /* Transition: '<S429>:8' */
+      BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS =
+        BaseEngineController_LS_IN_Stall_g;
 
-      /* Entry 'Stall': '<S428>:1' */
-      BaseEngineController_LS_B.s428_State = 1U;
+      /* Entry 'Stall': '<S429>:1' */
+      BaseEngineController_LS_B.s429_State = 1U;
     } else {
-      if (BaseEngineController_LS_B.s407_Run) {
-        /* Transition: '<S428>:6' */
-        BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS =
+      if (BaseEngineController_LS_B.s408_Run) {
+        /* Transition: '<S429>:6' */
+        BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS =
           BaseEngineController_LS_IN_Run;
 
-        /* Entry 'Run': '<S428>:2' */
-        BaseEngineController_LS_B.s428_State = 3U;
+        /* Entry 'Run': '<S429>:2' */
+        BaseEngineController_LS_B.s429_State = 3U;
       }
     }
     break;
 
    case BaseEngineController_LS_IN_Run:
-    /* During 'Run': '<S428>:2' */
-    if (BaseEngineController_LS_B.s407_Stall) {
-      /* Transition: '<S428>:7' */
-      BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS =
-        BaseEngineController_LS_IN_Stall_l;
+    /* During 'Run': '<S429>:2' */
+    if (BaseEngineController_LS_B.s408_Stall) {
+      /* Transition: '<S429>:7' */
+      BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS =
+        BaseEngineController_LS_IN_Stall_g;
 
-      /* Entry 'Stall': '<S428>:1' */
-      BaseEngineController_LS_B.s428_State = 1U;
+      /* Entry 'Stall': '<S429>:1' */
+      BaseEngineController_LS_B.s429_State = 1U;
     }
     break;
 
-   case BaseEngineController_LS_IN_Stall_l:
-    /* During 'Stall': '<S428>:1' */
-    if (BaseEngineController_LS_B.s407_Crank) {
-      /* Transition: '<S428>:5' */
-      BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS =
+   case BaseEngineController_LS_IN_Stall_g:
+    /* During 'Stall': '<S429>:1' */
+    if (BaseEngineController_LS_B.s408_Crank) {
+      /* Transition: '<S429>:5' */
+      BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS =
         BaseEngineController_LS_IN_Crank;
 
-      /* Entry 'Crank': '<S428>:3' */
-      BaseEngineController_LS_B.s428_State = 2U;
+      /* Entry 'Crank': '<S429>:3' */
+      BaseEngineController_LS_B.s429_State = 2U;
     }
     break;
 
    default:
-    /* Transition: '<S428>:4' */
-    BaseEngineController_LS_DWork.s428_is_c2_BaseEngineController_LS =
-      BaseEngineController_LS_IN_Stall_l;
+    /* Transition: '<S429>:4' */
+    BaseEngineController_LS_DWork.s429_is_c2_BaseEngineController_LS =
+      BaseEngineController_LS_IN_Stall_g;
 
-    /* Entry 'Stall': '<S428>:1' */
-    BaseEngineController_LS_B.s428_State = 1U;
+    /* Entry 'Stall': '<S429>:1' */
+    BaseEngineController_LS_B.s429_State = 1U;
     break;
   }
 
-  /* End of Stateflow: '<S407>/Engine State Machine' */
+  /* End of Stateflow: '<S408>/Engine State Machine' */
 
   /* RelationalOperator: '<S139>/RelOp' incorporates:
    *  Constant: '<S139>/Constant'
    */
-  rtb_RelOp_pu = (BaseEngineController_LS_B.s428_State == 1);
+  rtb_RelOp_pu = (BaseEngineController_LS_B.s429_State == 1);
 
-  /* S-Function Block: <S442>/motohawk_ain5 Resource: ACSwPin */
+  /* S-Function Block: <S443>/motohawk_ain5 Resource: ACSwPin */
   {
     extern NativeError_S ACSwPin_AnalogInput_Get(uint16_T *adc, uint16_T *status);
     ACSwPin_AnalogInput_Get(&rtb_motohawk_ain5_i, NULL);
   }
 
-  /* DataTypeConversion: '<S560>/Data Type Conversion' incorporates:
-   *  S-Function (motohawk_sfun_ain): '<S442>/motohawk_ain5'
+  /* DataTypeConversion: '<S561>/Data Type Conversion' incorporates:
+   *  S-Function (motohawk_sfun_ain): '<S443>/motohawk_ain5'
    */
-  BaseEngineController_LS_B.s560_DataTypeConversion = (real_T)
+  BaseEngineController_LS_B.s561_DataTypeConversion = (real_T)
     rtb_motohawk_ain5_i;
 
-  /* RelationalOperator: '<S560>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S560>/SwitchPoint'
+  /* RelationalOperator: '<S561>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S561>/SwitchPoint'
    */
-  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s560_DataTypeConversion >
+  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s561_DataTypeConversion >
                             (ACSwSwitchPt_DataStore()));
 
-  /* Logic: '<S560>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S560>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S561>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S561>/0 = No Inversion 1 = Inversion'
    */
   rtb_LogicalOperator6_b ^= (ACSwPolarity_DataStore());
 
-  /* If: '<S568>/If' incorporates:
-   *  Inport: '<S569>/In1'
+  /* If: '<S569>/If' incorporates:
    *  Inport: '<S570>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S568>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S568>/override_enable'
+   *  Inport: '<S571>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S569>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S569>/override_enable'
    */
   if ((ACSw_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S568>/NewValue' incorporates:
-     *  ActionPort: '<S569>/Action Port'
-     */
-    BaseEngineController_LS_B.s568_Merge = (ACSw_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S568>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S568>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S569>/NewValue' incorporates:
      *  ActionPort: '<S570>/Action Port'
      */
-    BaseEngineController_LS_B.s568_Merge = rtb_LogicalOperator6_b;
+    BaseEngineController_LS_B.s569_Merge = (ACSw_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S568>/OldValue' */
+    /* End of Outputs for SubSystem: '<S569>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S569>/OldValue' incorporates:
+     *  ActionPort: '<S571>/Action Port'
+     */
+    BaseEngineController_LS_B.s569_Merge = rtb_LogicalOperator6_b;
+
+    /* End of Outputs for SubSystem: '<S569>/OldValue' */
   }
 
-  /* End of If: '<S568>/If' */
+  /* End of If: '<S569>/If' */
 
-  /* S-Function Block: <S626>/motohawk_delta_time */
+  /* S-Function Block: <S627>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s626_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s627_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S626>/Product' incorporates:
-   *  MinMax: '<S626>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S626>/motohawk_calibration'
+  /* Product: '<S627>/Product' incorporates:
+   *  MinMax: '<S627>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S627>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (ACPresFilterConst_DataStore())) || rtIsNaN((ACPresFilterConst_DataStore()))
     ? rtb_DataTypeConversion_e : (ACPresFilterConst_DataStore());
 
-  /* Logic: '<S617>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S617>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S617>/motohawk_fault_status4'
+  /* Logic: '<S618>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status4'
    */
   rtb_LogicalOperator1_cv = (IsFaultActive(2) || IsFaultActive(3));
 
-  /* Logic: '<S617>/Logical Operator6' */
+  /* Logic: '<S618>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S617>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S617>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S617>/motohawk_fault_status3'
+  /* Logic: '<S618>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_al = (IsFaultSuspected(2) || IsFaultSuspected(3));
 
-  /* S-Function Block: <S444>/motohawk_ain4 Resource: ACPresPin */
+  /* S-Function Block: <S445>/motohawk_ain4 Resource: ACPresPin */
   {
     extern NativeError_S ACPresPin_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
-    ACPresPin_AnalogInput_Get(&BaseEngineController_LS_B.s444_motohawk_ain4,
+    ACPresPin_AnalogInput_Get(&BaseEngineController_LS_B.s445_motohawk_ain4,
       NULL);
   }
 
-  /* DataTypeConversion: '<S617>/Data Type Conversion' */
+  /* DataTypeConversion: '<S618>/Data Type Conversion' */
   rtb_DataTypeConversion_ik = (real_T)
-    BaseEngineController_LS_B.s444_motohawk_ain4;
+    BaseEngineController_LS_B.s445_motohawk_ain4;
 
-  /* Product: '<S617>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S617>/motohawk_calibration4'
+  /* Product: '<S618>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration4'
    */
   rtb_DataTypeConversion1_e = rtb_DataTypeConversion_ik * (ACPresGain_DataStore());
 
-  /* Sum: '<S617>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S617>/motohawk_calibration5'
+  /* Sum: '<S618>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration5'
    */
-  BaseEngineController_LS_B.s617_Sum1 = rtb_DataTypeConversion1_e +
+  BaseEngineController_LS_B.s618_Sum1 = rtb_DataTypeConversion1_e +
     (ACPresOfst_DataStore());
 
-  /* UnitDelay: '<S617>/Unit Delay1' */
-  rtb_UnitDelay1_i = BaseEngineController_LS_DWork.s617_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S618>/Unit Delay1' */
+  rtb_UnitDelay1_i = BaseEngineController_LS_DWork.s618_UnitDelay1_DSTATE;
 
-  /* If: '<S617>/If' incorporates:
-   *  Logic: '<S617>/Logical Operator5'
+  /* If: '<S618>/If' incorporates:
+   *  Logic: '<S618>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S617>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S627>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S618>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S628>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_i, &rtb_Merge_b);
 
-    /* End of Outputs for SubSystem: '<S617>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S618>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S617>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S628>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S618>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S629>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((ACPresDfltValue_DataStore()),
       &rtb_Merge_b);
 
-    /* End of Outputs for SubSystem: '<S617>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S618>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S617>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S629>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S618>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S630>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s617_Sum1, &rtb_Merge_b);
+      (BaseEngineController_LS_B.s618_Sum1, &rtb_Merge_b);
 
-    /* End of Outputs for SubSystem: '<S617>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S618>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S617>/If' */
+  /* End of If: '<S618>/If' */
 
-  /* Sum: '<S631>/Sum1' incorporates:
-   *  Constant: '<S631>/Constant'
-   *  Product: '<S631>/Product'
-   *  Product: '<S631>/Product1'
-   *  Sum: '<S631>/Sum'
-   *  UnitDelay: '<S631>/Unit Delay'
+  /* Sum: '<S632>/Sum1' incorporates:
+   *  Constant: '<S632>/Constant'
+   *  Product: '<S632>/Product'
+   *  Product: '<S632>/Product1'
+   *  Sum: '<S632>/Sum'
+   *  UnitDelay: '<S632>/Unit Delay'
    */
   rtb_Sum1_li = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s631_UnitDelay_DSTATE + rtb_Merge_b *
+    BaseEngineController_LS_DWork.s632_UnitDelay_DSTATE + rtb_Merge_b *
     rtb_DataTypeConversion_e;
 
-  /* If: '<S630>/If' incorporates:
-   *  Inport: '<S632>/In1'
+  /* If: '<S631>/If' incorporates:
    *  Inport: '<S633>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S630>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S630>/override_enable'
+   *  Inport: '<S634>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S631>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S631>/override_enable'
    */
   if ((ACPres_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S630>/NewValue' incorporates:
-     *  ActionPort: '<S632>/Action Port'
-     */
-    BaseEngineController_LS_B.s630_Merge = (ACPres_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S630>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S630>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S631>/NewValue' incorporates:
      *  ActionPort: '<S633>/Action Port'
      */
-    BaseEngineController_LS_B.s630_Merge = rtb_Sum1_li;
+    BaseEngineController_LS_B.s631_Merge = (ACPres_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S630>/OldValue' */
+    /* End of Outputs for SubSystem: '<S631>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S631>/OldValue' incorporates:
+     *  ActionPort: '<S634>/Action Port'
+     */
+    BaseEngineController_LS_B.s631_Merge = rtb_Sum1_li;
+
+    /* End of Outputs for SubSystem: '<S631>/OldValue' */
   }
 
-  /* End of If: '<S630>/If' */
+  /* End of If: '<S631>/If' */
 
   /* Outputs for Enabled SubSystem: '<S15>/Stall' incorporates:
    *  EnablePort: '<S138>/Enable'
    */
   if (rtb_RelOp_pu) {
     if (!BaseEngineController_LS_DWork.s15_Stall_MODE) {
-      /* InitializeConditions for UnitDelay: '<S318>/Unit Delay' */
-      BaseEngineController_LS_DWork.s318_UnitDelay_DSTATE = FALSE;
-
       /* InitializeConditions for UnitDelay: '<S319>/Unit Delay' */
       BaseEngineController_LS_DWork.s319_UnitDelay_DSTATE = FALSE;
 
@@ -3627,9 +3620,12 @@ void BaseEngineController_LS_Foreground(void)
       BaseEngineController_LS_DWork.s320_UnitDelay_DSTATE = FALSE;
 
       /* InitializeConditions for UnitDelay: '<S321>/Unit Delay' */
-      BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE = 0.0;
+      BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE = FALSE;
 
-      /* S-Function Block: <S323>/motohawk_delta_time */
+      /* InitializeConditions for UnitDelay: '<S322>/Unit Delay' */
+      BaseEngineController_LS_DWork.s322_UnitDelay_DSTATE = 0.0;
+
+      /* S-Function Block: <S324>/motohawk_delta_time */
       {
         uint32_T now = 0;
         extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
@@ -3637,24 +3633,24 @@ void BaseEngineController_LS_Foreground(void)
         extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
           u32Time_us);
         Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-        BaseEngineController_LS_DWork.s323_motohawk_delta_time_DWORK1 = now -
+        BaseEngineController_LS_DWork.s324_motohawk_delta_time_DWORK1 = now -
           Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
       }
 
-      /* InitializeConditions for Stateflow: '<S311>/Ice Break' */
-      BaseEngineController_LS_DWork.s322_is_active_c3_BaseEngineController_LS =
+      /* InitializeConditions for Stateflow: '<S312>/Ice Break' */
+      BaseEngineController_LS_DWork.s323_is_active_c3_BaseEngineController_LS =
         0U;
-      BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS = 0U;
-      BaseEngineController_LS_B.s322_etc = 0.0;
-      BaseEngineController_LS_DWork.s322_presentTicks = 0U;
-      BaseEngineController_LS_DWork.s322_elapsedTicks = 0U;
-      BaseEngineController_LS_DWork.s322_previousTicks = 0U;
+      BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS = 0U;
+      BaseEngineController_LS_B.s323_etc = 0.0;
+      BaseEngineController_LS_DWork.s323_presentTicks = 0U;
+      BaseEngineController_LS_DWork.s323_elapsedTicks = 0U;
+      BaseEngineController_LS_DWork.s323_previousTicks = 0U;
 
-      /* Enable for Stateflow: '<S311>/Ice Break' */
-      BaseEngineController_LS_DWork.s322_presentTicks =
+      /* Enable for Stateflow: '<S312>/Ice Break' */
+      BaseEngineController_LS_DWork.s323_presentTicks =
         BaseEngineController_LS_M->Timing.clockTick0;
-      BaseEngineController_LS_DWork.s322_previousTicks =
-        BaseEngineController_LS_DWork.s322_presentTicks;
+      BaseEngineController_LS_DWork.s323_previousTicks =
+        BaseEngineController_LS_DWork.s323_presentTicks;
       BaseEngineController_LS_DWork.s15_Stall_MODE = TRUE;
     }
 
@@ -3673,15 +3669,15 @@ void BaseEngineController_LS_Foreground(void)
      */
     BaseEngineController_LS_B.s135_IACP = 0.0;
 
-    /* DataTypeConversion: '<S309>/Data Type Conversion' */
-    rtb_DataTypeConversion1_e = (real_T)BaseEngineController_LS_B.s568_Merge;
+    /* DataTypeConversion: '<S310>/Data Type Conversion' */
+    rtb_DataTypeConversion1_e = (real_T)BaseEngineController_LS_B.s569_Merge;
 
-    /* DataTypeConversion: '<S309>/Data Type Conversion1' */
-    if (rtIsNaN(BaseEngineController_LS_B.s726_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s726_Merge)) {
+    /* DataTypeConversion: '<S310>/Data Type Conversion1' */
+    if (rtIsNaN(BaseEngineController_LS_B.s727_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s727_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s726_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s727_Merge),
         65536.0);
     }
 
@@ -3689,14 +3685,14 @@ void BaseEngineController_LS_Foreground(void)
       -(int16_T)(uint16_T)-rtb_UnitDelay4_b3 : (int16_T)(uint16_T)
       rtb_UnitDelay4_b3);
 
-    /* End of DataTypeConversion: '<S309>/Data Type Conversion1' */
+    /* End of DataTypeConversion: '<S310>/Data Type Conversion1' */
 
-    /* DataTypeConversion: '<S309>/Data Type Conversion2' */
-    if (rtIsNaN(BaseEngineController_LS_B.s744_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s744_Merge)) {
+    /* DataTypeConversion: '<S310>/Data Type Conversion2' */
+    if (rtIsNaN(BaseEngineController_LS_B.s745_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s745_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s744_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s745_Merge),
         65536.0);
     }
 
@@ -3704,14 +3700,14 @@ void BaseEngineController_LS_Foreground(void)
       -(int16_T)(uint16_T)-rtb_UnitDelay4_b3 : (int16_T)(uint16_T)
       rtb_UnitDelay4_b3);
 
-    /* End of DataTypeConversion: '<S309>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S310>/Data Type Conversion2' */
 
-    /* DataTypeConversion: '<S309>/Data Type Conversion3' */
-    if (rtIsNaN(BaseEngineController_LS_B.s630_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s630_Merge)) {
+    /* DataTypeConversion: '<S310>/Data Type Conversion3' */
+    if (rtIsNaN(BaseEngineController_LS_B.s631_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s631_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s630_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s631_Merge),
         65536.0);
     }
 
@@ -3719,64 +3715,26 @@ void BaseEngineController_LS_Foreground(void)
       -(int16_T)(uint16_T)-rtb_UnitDelay4_b3 : (int16_T)(uint16_T)
       rtb_UnitDelay4_b3);
 
-    /* End of DataTypeConversion: '<S309>/Data Type Conversion3' */
-    /* RelationalOperator: '<S312>/LT' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration1'
+    /* End of DataTypeConversion: '<S310>/Data Type Conversion3' */
+    /* RelationalOperator: '<S313>/LT' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration1'
      */
     rtb_RelationalOperator2_py = (rtb_DataTypeConversion1_i >= ((int16_T)
       (ECTFanOn_DataStore())));
 
-    /* RelationalOperator: '<S312>/LT1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration'
+    /* RelationalOperator: '<S313>/LT1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration'
      */
     rtb_Switch_oh = (rtb_DataTypeConversion1_i <= ((int16_T)(ECTFanOff_DataStore
                        ())));
-
-    /* CombinatorialLogic: '<S318>/Combinatorial  Logic' */
-    {
-      uint_T rowidx= 0;
-
-      /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_RelationalOperator2_py != 0);
-      rowidx = (rowidx << 1) + (uint_T)(rtb_Switch_oh != 0);
-
-      /* Copy the appropriate row of the table into the block output vector */
-      rtb_CombinatorialLogic_da[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
-      rtb_CombinatorialLogic_da[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
-    }
-
-    /* Switch: '<S318>/Switch1' incorporates:
-     *  UnitDelay: '<S318>/Unit Delay'
-     */
-    if (rtb_CombinatorialLogic_da[1]) {
-      rtb_LogicalOperator6_b = rtb_CombinatorialLogic_da[0];
-    } else {
-      rtb_LogicalOperator6_b =
-        BaseEngineController_LS_DWork.s318_UnitDelay_DSTATE;
-    }
-
-    /* End of Switch: '<S318>/Switch1' */
-    /* RelationalOperator: '<S313>/LT' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration3'
-     */
-    rtb_Switch_oh = (rtb_DataTypeConversion2_g5 >= ((int16_T)(IATFanOn_DataStore
-                       ())));
-
-    /* RelationalOperator: '<S313>/LT1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration2'
-     */
-    rtb_RelationalOperator2_py = (rtb_DataTypeConversion2_g5 <= ((int16_T)
-      (IATFanOff_DataStore())));
 
     /* CombinatorialLogic: '<S319>/Combinatorial  Logic' */
     {
       uint_T rowidx= 0;
 
       /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_Switch_oh != 0);
       rowidx = (rowidx << 1) + (uint_T)(rtb_RelationalOperator2_py != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_Switch_oh != 0);
 
       /* Copy the appropriate row of the table into the block output vector */
       rtb_CombinatorialLogic_da[0] =
@@ -3789,24 +3747,24 @@ void BaseEngineController_LS_Foreground(void)
      *  UnitDelay: '<S319>/Unit Delay'
      */
     if (rtb_CombinatorialLogic_da[1]) {
-      rtb_LogicalOperator1_al = rtb_CombinatorialLogic_da[0];
+      rtb_LogicalOperator6_b = rtb_CombinatorialLogic_da[0];
     } else {
-      rtb_LogicalOperator1_al =
+      rtb_LogicalOperator6_b =
         BaseEngineController_LS_DWork.s319_UnitDelay_DSTATE;
     }
 
     /* End of Switch: '<S319>/Switch1' */
     /* RelationalOperator: '<S314>/LT' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration5'
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration3'
      */
-    rtb_Switch_oh = (rtb_DataTypeConversion3_g >= ((int16_T)
-      (ACPresFanOn_DataStore())));
+    rtb_Switch_oh = (rtb_DataTypeConversion2_g5 >= ((int16_T)(IATFanOn_DataStore
+                       ())));
 
     /* RelationalOperator: '<S314>/LT1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration4'
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration2'
      */
-    rtb_RelationalOperator2_py = (rtb_DataTypeConversion3_g <= ((int16_T)
-      (ACPresFanOff_DataStore())));
+    rtb_RelationalOperator2_py = (rtb_DataTypeConversion2_g5 <= ((int16_T)
+      (IATFanOff_DataStore())));
 
     /* CombinatorialLogic: '<S320>/Combinatorial  Logic' */
     {
@@ -3827,21 +3785,59 @@ void BaseEngineController_LS_Foreground(void)
      *  UnitDelay: '<S320>/Unit Delay'
      */
     if (rtb_CombinatorialLogic_da[1]) {
-      rtb_RelOp_pu = rtb_CombinatorialLogic_da[0];
+      rtb_LogicalOperator1_al = rtb_CombinatorialLogic_da[0];
     } else {
-      rtb_RelOp_pu = BaseEngineController_LS_DWork.s320_UnitDelay_DSTATE;
+      rtb_LogicalOperator1_al =
+        BaseEngineController_LS_DWork.s320_UnitDelay_DSTATE;
     }
 
     /* End of Switch: '<S320>/Switch1' */
-    /* Switch: '<S309>/Switch' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration15'
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S315>/motohawk_interpolation_1d'
-     *  S-Function (motohawk_sfun_prelookup): '<S315>/motohawk_prelookup'
+    /* RelationalOperator: '<S315>/LT' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration5'
+     */
+    rtb_Switch_oh = (rtb_DataTypeConversion3_g >= ((int16_T)
+      (ACPresFanOn_DataStore())));
+
+    /* RelationalOperator: '<S315>/LT1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration4'
+     */
+    rtb_RelationalOperator2_py = (rtb_DataTypeConversion3_g <= ((int16_T)
+      (ACPresFanOff_DataStore())));
+
+    /* CombinatorialLogic: '<S321>/Combinatorial  Logic' */
+    {
+      uint_T rowidx= 0;
+
+      /* Compute the truth table row index corresponding to the input */
+      rowidx = (rowidx << 1) + (uint_T)(rtb_Switch_oh != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_RelationalOperator2_py != 0);
+
+      /* Copy the appropriate row of the table into the block output vector */
+      rtb_CombinatorialLogic_da[0] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx];
+      rtb_CombinatorialLogic_da[1] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+    }
+
+    /* Switch: '<S321>/Switch1' incorporates:
+     *  UnitDelay: '<S321>/Unit Delay'
+     */
+    if (rtb_CombinatorialLogic_da[1]) {
+      rtb_RelOp_pu = rtb_CombinatorialLogic_da[0];
+    } else {
+      rtb_RelOp_pu = BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE;
+    }
+
+    /* End of Switch: '<S321>/Switch1' */
+    /* Switch: '<S310>/Switch' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration15'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S316>/motohawk_interpolation_1d'
+     *  S-Function (motohawk_sfun_prelookup): '<S316>/motohawk_prelookup'
      */
     if (((uint8_T)(FAN_Mode_DataStore())) >= 1) {
       rtb_Switch_om = rtb_LogicalOperator6_b;
     } else {
-      /* S-Function Block: <S315>/motohawk_prelookup */
+      /* S-Function Block: <S316>/motohawk_prelookup */
       {
         extern uint16_T TablePrelookup_int16_T(int16_T in, const volatile
           int16_T ordarr[], uint32_T sz, uint16_T prev);
@@ -3852,7 +3848,7 @@ void BaseEngineController_LS_Foreground(void)
         rtb_motohawk_prelookup_kl = (ECTFanSpeed_StallIdx_DataStore());
       }
 
-      /* S-Function Block: <S315>/motohawk_interpolation_1d */
+      /* S-Function Block: <S316>/motohawk_interpolation_1d */
       {
         extern uint8_T TableInterpolation1D_uint8_T(uint16_T idx, uint8_T
           *tbl_data, uint32_T sz);
@@ -3865,21 +3861,21 @@ void BaseEngineController_LS_Foreground(void)
       rtb_Switch_om = rtb_motohawk_interpolation_1d_kl;
     }
 
-    /* End of Switch: '<S309>/Switch' */
-    /* Product: '<S309>/Product' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration6'
+    /* End of Switch: '<S310>/Switch' */
+    /* Product: '<S310>/Product' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration6'
      */
     rtb_Product_ln = (uint8_T)((Fan1ECT_DataStore()) ? rtb_Switch_om : 0);
 
-    /* Switch: '<S309>/Switch1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration15'
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S317>/motohawk_interpolation_1d'
-     *  S-Function (motohawk_sfun_prelookup): '<S317>/motohawk_prelookup'
+    /* Switch: '<S310>/Switch1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration15'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S318>/motohawk_interpolation_1d'
+     *  S-Function (motohawk_sfun_prelookup): '<S318>/motohawk_prelookup'
      */
     if (((uint8_T)(FAN_Mode_DataStore())) >= 1) {
       rtb_Product6_m = rtb_LogicalOperator1_al;
     } else {
-      /* S-Function Block: <S317>/motohawk_prelookup */
+      /* S-Function Block: <S318>/motohawk_prelookup */
       {
         extern uint16_T TablePrelookup_int16_T(int16_T in, const volatile
           int16_T ordarr[], uint32_T sz, uint16_T prev);
@@ -3890,7 +3886,7 @@ void BaseEngineController_LS_Foreground(void)
         rtb_motohawk_prelookup_nn = (IATFanSpeed_StallIdx_DataStore());
       }
 
-      /* S-Function Block: <S317>/motohawk_interpolation_1d */
+      /* S-Function Block: <S318>/motohawk_interpolation_1d */
       {
         extern uint8_T TableInterpolation1D_uint8_T(uint16_T idx, uint8_T
           *tbl_data, uint32_T sz);
@@ -3903,21 +3899,21 @@ void BaseEngineController_LS_Foreground(void)
       rtb_Product6_m = rtb_motohawk_interpolation_1d_l;
     }
 
-    /* End of Switch: '<S309>/Switch1' */
-    /* Product: '<S309>/Product1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration7'
+    /* End of Switch: '<S310>/Switch1' */
+    /* Product: '<S310>/Product1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration7'
      */
     rtb_Product5_j = (uint8_T)((Fan1IAT_DataStore()) ? rtb_Product6_m : 0);
 
-    /* Switch: '<S309>/Switch2' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration15'
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S316>/motohawk_interpolation_1d'
-     *  S-Function (motohawk_sfun_prelookup): '<S316>/motohawk_prelookup'
+    /* Switch: '<S310>/Switch2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration15'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S317>/motohawk_interpolation_1d'
+     *  S-Function (motohawk_sfun_prelookup): '<S317>/motohawk_prelookup'
      */
     if (((uint8_T)(FAN_Mode_DataStore())) >= 1) {
       rtb_Switch2_a = rtb_RelOp_pu;
     } else {
-      /* S-Function Block: <S316>/motohawk_prelookup */
+      /* S-Function Block: <S317>/motohawk_prelookup */
       {
         extern uint16_T TablePrelookup_int16_T(int16_T in, const volatile
           int16_T ordarr[], uint32_T sz, uint16_T prev);
@@ -3928,7 +3924,7 @@ void BaseEngineController_LS_Foreground(void)
         rtb_motohawk_prelookup_br = (ACPresFanSpeed_StallIdx_DataStore());
       }
 
-      /* S-Function Block: <S316>/motohawk_interpolation_1d */
+      /* S-Function Block: <S317>/motohawk_interpolation_1d */
       {
         extern uint8_T TableInterpolation1D_uint8_T(uint16_T idx, uint8_T
           *tbl_data, uint32_T sz);
@@ -3941,26 +3937,26 @@ void BaseEngineController_LS_Foreground(void)
       rtb_Switch2_a = rtb_motohawk_interpolation_1d_lt;
     }
 
-    /* End of Switch: '<S309>/Switch2' */
-    /* Product: '<S309>/Product2' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration8'
+    /* End of Switch: '<S310>/Switch2' */
+    /* Product: '<S310>/Product2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration8'
      */
     rtb_Product4_i = (uint8_T)((Fan1ACPres_DataStore()) ? rtb_Switch2_a : 0);
 
-    /* Switch: '<S309>/Switch3' incorporates:
-     *  Product: '<S309>/Product8'
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration14'
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration15'
+    /* Switch: '<S310>/Switch3' incorporates:
+     *  Product: '<S310>/Product8'
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration14'
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration15'
      */
     if (!(((uint8_T)(FAN_Mode_DataStore())) >= 1)) {
       rtb_DataTypeConversion1_e *= (real_T)((uint8_T)
         (ACSwFanSpeed_Stall_DataStore()));
     }
 
-    /* End of Switch: '<S309>/Switch3' */
-    /* MinMax: '<S309>/MinMax' incorporates:
-     *  Product: '<S309>/Product3'
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration9'
+    /* End of Switch: '<S310>/Switch3' */
+    /* MinMax: '<S310>/MinMax' incorporates:
+     *  Product: '<S310>/Product3'
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration9'
      */
     rtb_UnitDelay4_b3 = (real_T)rtb_Product_ln;
     rtb_DesiredLambda_idx_0 = (real_T)rtb_Product5_j;
@@ -3971,24 +3967,24 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DesiredLambda_idx_0 = rtb_DataTypeConversion1_e * (real_T)
       (Fan1ACSw_DataStore());
 
-    /* Product: '<S309>/Product4' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration10'
+    /* Product: '<S310>/Product4' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration10'
      */
     rtb_Product4_i = (uint8_T)((Fan2ECT_DataStore()) ? rtb_Switch_om : 0);
 
-    /* Product: '<S309>/Product5' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration11'
+    /* Product: '<S310>/Product5' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration11'
      */
     rtb_Product5_j = (uint8_T)((Fan2IAT_DataStore()) ? rtb_Product6_m : 0);
 
-    /* Product: '<S309>/Product6' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration12'
+    /* Product: '<S310>/Product6' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration12'
      */
     rtb_Product6_m = (uint8_T)((Fan2ACPres_DataStore()) ? rtb_Switch2_a : 0);
 
-    /* MinMax: '<S309>/MinMax1' incorporates:
-     *  Product: '<S309>/Product7'
-     *  S-Function (motohawk_sfun_calibration): '<S309>/motohawk_calibration13'
+    /* MinMax: '<S310>/MinMax1' incorporates:
+     *  Product: '<S310>/Product7'
+     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration13'
      */
     rtb_UnitDelay4_b3 = (real_T)rtb_Product4_i;
     rtb_DesiredLambda_idx = (real_T)rtb_Product5_j;
@@ -4000,54 +3996,54 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DesiredLambda_idx = rtb_DataTypeConversion1_e * (real_T)
       (Fan2ACSw_DataStore());
 
-    /* UnitDelay: '<S321>/Unit Delay' */
-    BaseEngineController_LS_B.s321_UnitDelay =
-      BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE;
+    /* UnitDelay: '<S322>/Unit Delay' */
+    BaseEngineController_LS_B.s322_UnitDelay =
+      BaseEngineController_LS_DWork.s322_UnitDelay_DSTATE;
 
-    /* Switch: '<S310>/Switch' incorporates:
-     *  Constant: '<S310>/Constant'
-     *  RelationalOperator: '<S310>/Relational Operator'
-     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S310>/motohawk_calibration1'
+    /* Switch: '<S311>/Switch' incorporates:
+     *  Constant: '<S311>/Constant'
+     *  RelationalOperator: '<S311>/Relational Operator'
+     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration1'
      */
     if ((Constant_Fuel_Pump_DataStore())) {
       rtb_Switch_oh = TRUE;
     } else {
-      rtb_Switch_oh = (BaseEngineController_LS_B.s321_UnitDelay <
+      rtb_Switch_oh = (BaseEngineController_LS_B.s322_UnitDelay <
                        (FuelPumpStartTime_DataStore()));
     }
 
-    /* End of Switch: '<S310>/Switch' */
-    /* S-Function Block: <S321>/motohawk_delta_time */
+    /* End of Switch: '<S311>/Switch' */
+    /* S-Function Block: <S322>/motohawk_delta_time */
     rtb_motohawk_delta_time_op = 0.005;
 
-    /* Sum: '<S321>/Sum' incorporates:
-     *  S-Function (motohawk_sfun_delta_time): '<S321>/motohawk_delta_time'
+    /* Sum: '<S322>/Sum' incorporates:
+     *  S-Function (motohawk_sfun_delta_time): '<S322>/motohawk_delta_time'
      */
     rtb_DataTypeConversion_b2 = rtb_motohawk_delta_time_op +
-      BaseEngineController_LS_B.s321_UnitDelay;
+      BaseEngineController_LS_B.s322_UnitDelay;
 
-    /* S-Function Block: <S323>/motohawk_delta_time */
+    /* S-Function Block: <S324>/motohawk_delta_time */
     {
       uint32_T delta;
       extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
         (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
       delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (&BaseEngineController_LS_DWork.s323_motohawk_delta_time_DWORK1, NULL);
+        (&BaseEngineController_LS_DWork.s324_motohawk_delta_time_DWORK1, NULL);
       rtb_motohawk_delta_time_cj = ((real_T) delta) * 0.000001;
     }
 
-    /* RelationalOperator: '<S311>/Relational Operator2' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration3'
+    /* RelationalOperator: '<S312>/Relational Operator2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S312>/motohawk_calibration3'
      */
-    rtb_RelationalOperator2_py = (BaseEngineController_LS_B.s405_Switch1 >=
+    rtb_RelationalOperator2_py = (BaseEngineController_LS_B.s406_Switch1 >=
       (ETC_StallAppOvrThesh_DataStore()));
 
-    /* Switch: '<S323>/Switch' incorporates:
-     *  Constant: '<S323>/Constant'
-     *  S-Function (motohawk_sfun_data_read): '<S323>/motohawk_data_read'
-     *  S-Function (motohawk_sfun_delta_time): '<S323>/motohawk_delta_time'
-     *  Sum: '<S323>/Sum'
+    /* Switch: '<S324>/Switch' incorporates:
+     *  Constant: '<S324>/Constant'
+     *  S-Function (motohawk_sfun_data_read): '<S324>/motohawk_data_read'
+     *  S-Function (motohawk_sfun_delta_time): '<S324>/motohawk_delta_time'
+     *  Sum: '<S324>/Sum'
      */
     if (rtb_RelationalOperator2_py) {
       rtb_Switch_mq = rtb_motohawk_delta_time_cj + AppStallOvrTmr_DataStore();
@@ -4055,113 +4051,113 @@ void BaseEngineController_LS_Foreground(void)
       rtb_Switch_mq = 0.0;
     }
 
-    /* End of Switch: '<S323>/Switch' */
-    /* RelationalOperator: '<S311>/Relational Operator3' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration4'
+    /* End of Switch: '<S324>/Switch' */
+    /* RelationalOperator: '<S312>/Relational Operator3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S312>/motohawk_calibration4'
      */
     rtb_RelationalOperator3_bp = (rtb_Switch_mq >= (ETC_StallAppOvrTm_DataStore()));
 
-    /* Product: '<S311>/Product1' */
-    BaseEngineController_LS_B.s311_Product1 = (rtb_RelationalOperator3_bp ?
+    /* Product: '<S312>/Product1' */
+    BaseEngineController_LS_B.s312_Product1 = (rtb_RelationalOperator3_bp ?
       (real_T)rtb_RelationalOperator2_py : 0.0) *
-      BaseEngineController_LS_B.s405_Switch1;
+      BaseEngineController_LS_B.s406_Switch1;
 
-    /* Product: '<S311>/Product2' */
+    /* Product: '<S312>/Product2' */
     rtb_Product2_o = (uint16_T)(rtb_RelationalOperator3_bp ?
       rtb_RelationalOperator2_py : 0);
 
-    /* Stateflow: '<S311>/Ice Break' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration1'
-     *  S-Function (motohawk_sfun_calibration): '<S311>/motohawk_calibration2'
+    /* Stateflow: '<S312>/Ice Break' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S312>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S312>/motohawk_calibration1'
+     *  S-Function (motohawk_sfun_calibration): '<S312>/motohawk_calibration2'
      */
-    BaseEngineController_LS_DWork.s322_presentTicks =
+    BaseEngineController_LS_DWork.s323_presentTicks =
       BaseEngineController_LS_M->Timing.clockTick0;
-    BaseEngineController_LS_DWork.s322_elapsedTicks =
-      BaseEngineController_LS_DWork.s322_presentTicks -
-      BaseEngineController_LS_DWork.s322_previousTicks;
-    BaseEngineController_LS_DWork.s322_previousTicks =
-      BaseEngineController_LS_DWork.s322_presentTicks;
-    BaseEngineController_LS_DWork.s322_temporalCounter_i1 =
-      BaseEngineController_LS_DWork.s322_temporalCounter_i1 +
-      BaseEngineController_LS_DWork.s322_elapsedTicks;
+    BaseEngineController_LS_DWork.s323_elapsedTicks =
+      BaseEngineController_LS_DWork.s323_presentTicks -
+      BaseEngineController_LS_DWork.s323_previousTicks;
+    BaseEngineController_LS_DWork.s323_previousTicks =
+      BaseEngineController_LS_DWork.s323_presentTicks;
+    BaseEngineController_LS_DWork.s323_temporalCounter_i1 =
+      BaseEngineController_LS_DWork.s323_temporalCounter_i1 +
+      BaseEngineController_LS_DWork.s323_elapsedTicks;
 
     /* Gateway: Foreground/Control/Controller/Stall/Stall Throttle/Ice Break */
     /* During: Foreground/Control/Controller/Stall/Stall Throttle/Ice Break */
-    if (BaseEngineController_LS_DWork.s322_is_active_c3_BaseEngineController_LS ==
+    if (BaseEngineController_LS_DWork.s323_is_active_c3_BaseEngineController_LS ==
         0) {
       /* Entry: Foreground/Control/Controller/Stall/Stall Throttle/Ice Break */
-      BaseEngineController_LS_DWork.s322_is_active_c3_BaseEngineController_LS =
+      BaseEngineController_LS_DWork.s323_is_active_c3_BaseEngineController_LS =
         1U;
 
-      /* Transition: '<S322>:2' */
-      BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS =
+      /* Transition: '<S323>:2' */
+      BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS =
         BaseEngineController_LS_IN_Init;
     } else {
-      switch (BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS)
+      switch (BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS)
   {
        case BaseEngineController_LS_IN_Init:
-        /* During 'Init': '<S322>:1' */
-        if (BaseEngineController_LS_B.s431_Sum < (ETC_IceBreakEnblTm_DataStore()))
+        /* During 'Init': '<S323>:1' */
+        if (BaseEngineController_LS_B.s432_Sum < (ETC_IceBreakEnblTm_DataStore()))
         {
-          /* Transition: '<S322>:5' */
-          BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS =
+          /* Transition: '<S323>:5' */
+          BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS =
             BaseEngineController_LS_IN_Open;
-          BaseEngineController_LS_DWork.s322_temporalCounter_i1 = 0U;
+          BaseEngineController_LS_DWork.s323_temporalCounter_i1 = 0U;
         } else {
-          BaseEngineController_LS_B.s322_etc = 0.0;
+          BaseEngineController_LS_B.s323_etc = 0.0;
         }
         break;
 
        case BaseEngineController_LS_IN_Open:
-        /* During 'Open': '<S322>:4' */
-        if (BaseEngineController_LS_DWork.s322_temporalCounter_i1 >= (uint32_T)
+        /* During 'Open': '<S323>:4' */
+        if (BaseEngineController_LS_DWork.s323_temporalCounter_i1 >= (uint32_T)
             ceil((ETC_IceBreakHoldTm_DataStore()) / 0.2 - 2.0E-9)) {
-          /* Transition: '<S322>:14' */
-          BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS =
+          /* Transition: '<S323>:14' */
+          BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS =
             BaseEngineController_LS_IN_Wait;
         } else {
-          BaseEngineController_LS_B.s322_etc = (ETC_IceBreakPos_DataStore());
+          BaseEngineController_LS_B.s323_etc = (ETC_IceBreakPos_DataStore());
         }
         break;
 
        case BaseEngineController_LS_IN_Wait:
-        /* During 'Wait': '<S322>:15' */
-        if (BaseEngineController_LS_B.s431_Sum > (ETC_IceBreakEnblTm_DataStore()))
+        /* During 'Wait': '<S323>:15' */
+        if (BaseEngineController_LS_B.s432_Sum > (ETC_IceBreakEnblTm_DataStore()))
         {
-          /* Transition: '<S322>:16' */
-          BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS =
+          /* Transition: '<S323>:16' */
+          BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS =
             BaseEngineController_LS_IN_Init;
         } else {
-          BaseEngineController_LS_B.s322_etc = 0.0;
+          BaseEngineController_LS_B.s323_etc = 0.0;
         }
         break;
 
        default:
-        /* Transition: '<S322>:2' */
-        BaseEngineController_LS_DWork.s322_is_c3_BaseEngineController_LS =
+        /* Transition: '<S323>:2' */
+        BaseEngineController_LS_DWork.s323_is_c3_BaseEngineController_LS =
           BaseEngineController_LS_IN_Init;
         break;
       }
     }
 
-    /* End of Stateflow: '<S311>/Ice Break' */
+    /* End of Stateflow: '<S312>/Ice Break' */
 
-    /* Switch: '<S311>/Switch' */
+    /* Switch: '<S312>/Switch' */
     if (rtb_Product2_o != 0) {
-      BaseEngineController_LS_B.s311_Switch =
-        BaseEngineController_LS_B.s311_Product1;
+      BaseEngineController_LS_B.s312_Switch =
+        BaseEngineController_LS_B.s312_Product1;
     } else {
-      BaseEngineController_LS_B.s311_Switch = BaseEngineController_LS_B.s322_etc;
+      BaseEngineController_LS_B.s312_Switch = BaseEngineController_LS_B.s323_etc;
     }
 
-    /* End of Switch: '<S311>/Switch' */
+    /* End of Switch: '<S312>/Switch' */
 
-    /* Saturate: '<S323>/Saturation' */
+    /* Saturate: '<S324>/Saturation' */
     rtb_Saturation_d = rtb_Switch_mq >= 16000.0 ? 16000.0 : rtb_Switch_mq <= 0.0
       ? 0.0 : rtb_Switch_mq;
 
-    /* S-Function (motohawk_sfun_data_write): '<S323>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S324>/motohawk_data_write' */
     /* Write to Data Storage as scalar: AppStallOvrTmr */
     {
       AppStallOvrTmr_DataStore() = rtb_Saturation_d;
@@ -4173,13 +4169,13 @@ void BaseEngineController_LS_Foreground(void)
     BaseEngineController_LS_B.s135_FuelMult = 0.0;
 
     /* ZeroOrderHold: '<S138>/Zero-Order Hold12' incorporates:
-     *  MinMax: '<S309>/MinMax'
+     *  MinMax: '<S310>/MinMax'
      */
     BaseEngineController_LS_B.s135_FAN1 = y >= rtb_DesiredLambda_idx_0 ? y :
       rtb_DesiredLambda_idx_0;
 
     /* ZeroOrderHold: '<S138>/Zero-Order Hold13' incorporates:
-     *  MinMax: '<S309>/MinMax1'
+     *  MinMax: '<S310>/MinMax1'
      */
     BaseEngineController_LS_B.s135_FAN2 = rtb_UnitDelay4_b3 >=
       rtb_DesiredLambda_idx ? rtb_UnitDelay4_b3 : rtb_DesiredLambda_idx;
@@ -4218,281 +4214,110 @@ void BaseEngineController_LS_Foreground(void)
 
     /* ZeroOrderHold: '<S138>/Zero-Order Hold9' */
     BaseEngineController_LS_B.s135_Throttle =
-      BaseEngineController_LS_B.s311_Switch;
-
-    /* Update for UnitDelay: '<S318>/Unit Delay' */
-    BaseEngineController_LS_DWork.s318_UnitDelay_DSTATE = rtb_LogicalOperator6_b;
+      BaseEngineController_LS_B.s312_Switch;
 
     /* Update for UnitDelay: '<S319>/Unit Delay' */
-    BaseEngineController_LS_DWork.s319_UnitDelay_DSTATE =
-      rtb_LogicalOperator1_al;
+    BaseEngineController_LS_DWork.s319_UnitDelay_DSTATE = rtb_LogicalOperator6_b;
 
     /* Update for UnitDelay: '<S320>/Unit Delay' */
-    BaseEngineController_LS_DWork.s320_UnitDelay_DSTATE = rtb_RelOp_pu;
+    BaseEngineController_LS_DWork.s320_UnitDelay_DSTATE =
+      rtb_LogicalOperator1_al;
 
     /* Update for UnitDelay: '<S321>/Unit Delay' */
-    BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE =
+    BaseEngineController_LS_DWork.s321_UnitDelay_DSTATE = rtb_RelOp_pu;
+
+    /* Update for UnitDelay: '<S322>/Unit Delay' */
+    BaseEngineController_LS_DWork.s322_UnitDelay_DSTATE =
       rtb_DataTypeConversion_b2;
   } else {
     if (BaseEngineController_LS_DWork.s15_Stall_MODE) {
-      /* Disable for Stateflow: '<S311>/Ice Break' */
-      BaseEngineController_LS_DWork.s322_presentTicks =
+      /* Disable for Stateflow: '<S312>/Ice Break' */
+      BaseEngineController_LS_DWork.s323_presentTicks =
         BaseEngineController_LS_M->Timing.clockTick0;
-      BaseEngineController_LS_DWork.s322_elapsedTicks =
-        BaseEngineController_LS_DWork.s322_presentTicks -
-        BaseEngineController_LS_DWork.s322_previousTicks;
-      BaseEngineController_LS_DWork.s322_previousTicks =
-        BaseEngineController_LS_DWork.s322_presentTicks;
-      BaseEngineController_LS_DWork.s322_temporalCounter_i1 =
-        BaseEngineController_LS_DWork.s322_temporalCounter_i1 +
-        BaseEngineController_LS_DWork.s322_elapsedTicks;
+      BaseEngineController_LS_DWork.s323_elapsedTicks =
+        BaseEngineController_LS_DWork.s323_presentTicks -
+        BaseEngineController_LS_DWork.s323_previousTicks;
+      BaseEngineController_LS_DWork.s323_previousTicks =
+        BaseEngineController_LS_DWork.s323_presentTicks;
+      BaseEngineController_LS_DWork.s323_temporalCounter_i1 =
+        BaseEngineController_LS_DWork.s323_temporalCounter_i1 +
+        BaseEngineController_LS_DWork.s323_elapsedTicks;
       BaseEngineController_LS_DWork.s15_Stall_MODE = FALSE;
     }
   }
 
   /* End of Outputs for SubSystem: '<S15>/Stall' */
-  /* S-Function Block: <S443>/motohawk_encoder_average_rpm */
+  /* S-Function Block: <S444>/motohawk_encoder_average_rpm */
   {
     rtb_RPM = GetEncoderResourceAverageRPM();
   }
 
-  /* DataTypeConversion: '<S616>/Data Type Conversion' incorporates:
-   *  S-Function (motohawk_sfun_encoder_average_rpm): '<S443>/motohawk_encoder_average_rpm'
+  /* DataTypeConversion: '<S617>/Data Type Conversion' incorporates:
+   *  S-Function (motohawk_sfun_encoder_average_rpm): '<S444>/motohawk_encoder_average_rpm'
    */
   rtb_DataTypeConversion1_e = (real_T)rtb_RPM;
 
-  /* S-Function Block: <S609>/motohawk_delta_time */
+  /* S-Function Block: <S610>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s609_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s610_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S609>/Product' incorporates:
-   *  MinMax: '<S609>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S609>/motohawk_calibration'
+  /* Product: '<S610>/Product' incorporates:
+   *  MinMax: '<S610>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S610>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (RPMFiltConst_DataStore())) || rtIsNaN((RPMFiltConst_DataStore())) ?
     rtb_DataTypeConversion_e : (RPMFiltConst_DataStore());
 
-  /* Sum: '<S616>/Sum1' incorporates:
-   *  Constant: '<S616>/Constant'
-   *  Product: '<S616>/Product'
-   *  Product: '<S616>/Product1'
-   *  Sum: '<S616>/Sum'
-   *  UnitDelay: '<S616>/Unit Delay'
+  /* Sum: '<S617>/Sum1' incorporates:
+   *  Constant: '<S617>/Constant'
+   *  Product: '<S617>/Product'
+   *  Product: '<S617>/Product1'
+   *  Sum: '<S617>/Sum'
+   *  UnitDelay: '<S617>/Unit Delay'
    */
-  BaseEngineController_LS_B.s616_Sum1 = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s616_UnitDelay_DSTATE +
+  BaseEngineController_LS_B.s617_Sum1 = (1.0 - rtb_DataTypeConversion_e) *
+    BaseEngineController_LS_DWork.s617_UnitDelay_DSTATE +
     rtb_DataTypeConversion1_e * rtb_DataTypeConversion_e;
 
-  /* Logic: '<S818>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S818>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S818>/motohawk_fault_status4'
+  /* Logic: '<S819>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S819>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S819>/motohawk_fault_status4'
    */
-  rtb_LogicalOperator1_cv = (IsFaultActive(113) || IsFaultActive(114));
+  rtb_LogicalOperator1_cv = (IsFaultActive(110) || IsFaultActive(111));
 
-  /* Logic: '<S818>/Logical Operator6' */
+  /* Logic: '<S819>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S818>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S818>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S818>/motohawk_fault_status3'
+  /* Logic: '<S819>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S819>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S819>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(113) || IsFaultSuspected(114));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(110) || IsFaultSuspected(111));
 
-  /* S-Function Block: <S446>/motohawk_ain6 Resource: TPS1AnalogInput */
+  /* S-Function Block: <S447>/motohawk_ain6 Resource: TPS1AnalogInput */
   {
     extern NativeError_S TPS1AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
     TPS1AnalogInput_AnalogInput_Get(&rtb_motohawk_ain6, NULL);
   }
 
-  /* DataTypeConversion: '<S755>/Data Type Conversion1' incorporates:
-   *  S-Function (motohawk_sfun_ain): '<S446>/motohawk_ain6'
+  /* DataTypeConversion: '<S756>/Data Type Conversion1' incorporates:
+   *  S-Function (motohawk_sfun_ain): '<S447>/motohawk_ain6'
    */
   rtb_DataTypeConversion1_e = (real_T)rtb_motohawk_ain6;
-
-  /* Switch: '<S755>/Switch' incorporates:
-   *  Fcn: '<S755>/Fcn'
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration2'
-   */
-  if ((TPS1Rev_Polarity_DataStore())) {
-    BaseEngineController_LS_B.s755_Switch = 1023.0 - rtb_DataTypeConversion1_e;
-  } else {
-    BaseEngineController_LS_B.s755_Switch = rtb_DataTypeConversion1_e;
-  }
-
-  /* End of Switch: '<S755>/Switch' */
-
-  /* S-Function (motohawk_sfun_data_read): '<S815>/motohawk_data_read' */
-  rtb_Product_mp = TPS1Raw_Adpt_Low_DataStore();
-
-  /* MinMax: '<S815>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration9'
-   */
-  rtb_UnitDelay4_b3 = (real_T)rtb_Product_mp;
-  BaseEngineController_LS_B.s815_MinMax = (rtb_UnitDelay4_b3 <=
-    (TPS1Adapt_Low_Max_DataStore())) || rtIsNaN((TPS1Adapt_Low_Max_DataStore()))
-    ? rtb_UnitDelay4_b3 : (TPS1Adapt_Low_Max_DataStore());
-
-  /* Sum: '<S755>/Sum2' */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s755_Switch -
-    BaseEngineController_LS_B.s815_MinMax;
-
-  /* S-Function (motohawk_sfun_data_read): '<S815>/motohawk_data_read1' */
-  rtb_Product_mp = TPS1Raw_Adpt_Hi_DataStore();
-
-  /* MinMax: '<S815>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration11'
-   */
-  rtb_UnitDelay4_b3 = (real_T)rtb_Product_mp;
-  BaseEngineController_LS_B.s815_MinMax1 = (rtb_UnitDelay4_b3 >=
-    (TPS1Adapt_Hi_Min_DataStore())) || rtIsNaN((TPS1Adapt_Hi_Min_DataStore())) ?
-    rtb_UnitDelay4_b3 : (TPS1Adapt_Hi_Min_DataStore());
-
-  /* Gain: '<S755>/Gain2' incorporates:
-   *  Product: '<S755>/Product1'
-   *  Sum: '<S755>/Sum1'
-   */
-  rtb_DataTypeConversion_e = rtb_DataTypeConversion1_e /
-    (BaseEngineController_LS_B.s815_MinMax1 -
-     BaseEngineController_LS_B.s815_MinMax) * 100.0;
-
-  /* MinMax: '<S819>/MinMax' incorporates:
-   *  Constant: '<S755>/Constant1'
-   */
-  rtb_DataTypeConversion_e = rtb_DataTypeConversion_e >= 0.0 ?
-    rtb_DataTypeConversion_e : 0.0;
-
-  /* MinMax: '<S819>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration1'
-   */
-  BaseEngineController_LS_B.s819_MinMax1 = (rtb_DataTypeConversion_e <=
-    (TPS1MaxLimit_DataStore())) || rtIsNaN((TPS1MaxLimit_DataStore())) ?
-    rtb_DataTypeConversion_e : (TPS1MaxLimit_DataStore());
-
-  /* S-Function Block: <S817>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s817_motohawk_delta_time_DWORK1, NULL);
-    rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
-  }
-
-  /* Product: '<S817>/Product' incorporates:
-   *  MinMax: '<S817>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S817>/motohawk_calibration'
-   */
-  rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
-    (TPS1FilterConst_DataStore())) || rtIsNaN((TPS1FilterConst_DataStore())) ?
-    rtb_DataTypeConversion_e : (TPS1FilterConst_DataStore());
-
-  /* Sum: '<S825>/Sum1' incorporates:
-   *  Constant: '<S825>/Constant'
-   *  Product: '<S825>/Product'
-   *  Product: '<S825>/Product1'
-   *  Sum: '<S825>/Sum'
-   *  UnitDelay: '<S825>/Unit Delay'
-   */
-  rtb_Sum1_hw = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s825_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s819_MinMax1 * rtb_DataTypeConversion_e;
-
-  /* UnitDelay: '<S818>/Unit Delay1' */
-  rtb_UnitDelay1_d = BaseEngineController_LS_DWork.s818_UnitDelay1_DSTATE;
-
-  /* If: '<S818>/If' incorporates:
-   *  Logic: '<S818>/Logical Operator5'
-   */
-  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S818>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S826>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_d, &rtb_Merge_li);
-
-    /* End of Outputs for SubSystem: '<S818>/If Action Subsystem' */
-  } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S818>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S827>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem((TPS1DfltValue_DataStore()),
-      &rtb_Merge_li);
-
-    /* End of Outputs for SubSystem: '<S818>/If Action Subsystem1' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S818>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S828>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem(rtb_Sum1_hw, &rtb_Merge_li);
-
-    /* End of Outputs for SubSystem: '<S818>/If Action Subsystem2' */
-  }
-
-  /* End of If: '<S818>/If' */
-
-  /* If: '<S829>/If' incorporates:
-   *  Inport: '<S830>/In1'
-   *  Inport: '<S831>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S829>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S829>/override_enable'
-   */
-  if ((TPS1_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S829>/NewValue' incorporates:
-     *  ActionPort: '<S830>/Action Port'
-     */
-    BaseEngineController_LS_B.s829_Merge = (TPS1_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S829>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S829>/OldValue' incorporates:
-     *  ActionPort: '<S831>/Action Port'
-     */
-    BaseEngineController_LS_B.s829_Merge = rtb_Merge_li;
-
-    /* End of Outputs for SubSystem: '<S829>/OldValue' */
-  }
-
-  /* End of If: '<S829>/If' */
-
-  /* Logic: '<S835>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S835>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S835>/motohawk_fault_status4'
-   */
-  rtb_LogicalOperator1_cv = (IsFaultActive(119) || IsFaultActive(120));
-
-  /* Logic: '<S835>/Logical Operator6' */
-  rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
-
-  /* Logic: '<S835>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S835>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S835>/motohawk_fault_status3'
-   */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(119) || IsFaultSuspected(120));
-
-  /* S-Function Block: <S446>/motohawk_ain9 Resource: TPS2AnalogInput */
-  {
-    extern NativeError_S TPS2AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T
-      *status);
-    TPS2AnalogInput_AnalogInput_Get(&rtb_motohawk_ain9, NULL);
-  }
-
-  /* DataTypeConversion: '<S756>/Data Type Conversion1' incorporates:
-   *  S-Function (motohawk_sfun_ain): '<S446>/motohawk_ain9'
-   */
-  rtb_DataTypeConversion1_e = (real_T)rtb_motohawk_ain9;
 
   /* Switch: '<S756>/Switch' incorporates:
    *  Fcn: '<S756>/Fcn'
    *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration2'
    */
-  if ((TPS2Rev_Polarity_DataStore())) {
+  if ((TPS1Rev_Polarity_DataStore())) {
     BaseEngineController_LS_B.s756_Switch = 1023.0 - rtb_DataTypeConversion1_e;
   } else {
     BaseEngineController_LS_B.s756_Switch = rtb_DataTypeConversion1_e;
@@ -4500,342 +4325,513 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Switch: '<S756>/Switch' */
 
-  /* S-Function (motohawk_sfun_data_read): '<S832>/motohawk_data_read' */
-  rtb_Product_mp = TPS2Raw_Adpt_Low_DataStore();
+  /* S-Function (motohawk_sfun_data_read): '<S816>/motohawk_data_read' */
+  rtb_Product_mp = TPS1Raw_Adpt_Low_DataStore();
 
-  /* MinMax: '<S832>/MinMax' incorporates:
+  /* MinMax: '<S816>/MinMax' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration9'
    */
   rtb_UnitDelay4_b3 = (real_T)rtb_Product_mp;
-  BaseEngineController_LS_B.s832_MinMax = (rtb_UnitDelay4_b3 <=
-    (TPS2Adapt_Low_Max_DataStore())) || rtIsNaN((TPS2Adapt_Low_Max_DataStore()))
-    ? rtb_UnitDelay4_b3 : (TPS2Adapt_Low_Max_DataStore());
+  BaseEngineController_LS_B.s816_MinMax = (rtb_UnitDelay4_b3 <=
+    (TPS1Adapt_Low_Max_DataStore())) || rtIsNaN((TPS1Adapt_Low_Max_DataStore()))
+    ? rtb_UnitDelay4_b3 : (TPS1Adapt_Low_Max_DataStore());
 
   /* Sum: '<S756>/Sum2' */
   rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s756_Switch -
-    BaseEngineController_LS_B.s832_MinMax;
+    BaseEngineController_LS_B.s816_MinMax;
 
-  /* S-Function (motohawk_sfun_data_read): '<S832>/motohawk_data_read1' */
-  rtb_Product_mp = TPS2Raw_Adpt_Hi_DataStore();
+  /* S-Function (motohawk_sfun_data_read): '<S816>/motohawk_data_read1' */
+  rtb_Product_mp = TPS1Raw_Adpt_Hi_DataStore();
 
-  /* MinMax: '<S832>/MinMax1' incorporates:
+  /* MinMax: '<S816>/MinMax1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration11'
    */
   rtb_UnitDelay4_b3 = (real_T)rtb_Product_mp;
-  BaseEngineController_LS_B.s832_MinMax1 = (rtb_UnitDelay4_b3 >=
-    (TPS2Adapt_Hi_Min_DataStore())) || rtIsNaN((TPS2Adapt_Hi_Min_DataStore())) ?
-    rtb_UnitDelay4_b3 : (TPS2Adapt_Hi_Min_DataStore());
+  BaseEngineController_LS_B.s816_MinMax1 = (rtb_UnitDelay4_b3 >=
+    (TPS1Adapt_Hi_Min_DataStore())) || rtIsNaN((TPS1Adapt_Hi_Min_DataStore())) ?
+    rtb_UnitDelay4_b3 : (TPS1Adapt_Hi_Min_DataStore());
 
   /* Gain: '<S756>/Gain2' incorporates:
    *  Product: '<S756>/Product1'
    *  Sum: '<S756>/Sum1'
    */
   rtb_DataTypeConversion_e = rtb_DataTypeConversion1_e /
-    (BaseEngineController_LS_B.s832_MinMax1 -
-     BaseEngineController_LS_B.s832_MinMax) * 100.0;
+    (BaseEngineController_LS_B.s816_MinMax1 -
+     BaseEngineController_LS_B.s816_MinMax) * 100.0;
 
-  /* MinMax: '<S836>/MinMax' incorporates:
+  /* MinMax: '<S820>/MinMax' incorporates:
    *  Constant: '<S756>/Constant1'
    */
   rtb_DataTypeConversion_e = rtb_DataTypeConversion_e >= 0.0 ?
     rtb_DataTypeConversion_e : 0.0;
 
-  /* MinMax: '<S836>/MinMax1' incorporates:
+  /* MinMax: '<S820>/MinMax1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration1'
    */
-  BaseEngineController_LS_B.s836_MinMax1 = (rtb_DataTypeConversion_e <=
-    (TPS2MaxLimit_DataStore())) || rtIsNaN((TPS2MaxLimit_DataStore())) ?
-    rtb_DataTypeConversion_e : (TPS2MaxLimit_DataStore());
+  BaseEngineController_LS_B.s820_MinMax1 = (rtb_DataTypeConversion_e <=
+    (TPS1MaxLimit_DataStore())) || rtIsNaN((TPS1MaxLimit_DataStore())) ?
+    rtb_DataTypeConversion_e : (TPS1MaxLimit_DataStore());
 
-  /* S-Function Block: <S834>/motohawk_delta_time */
+  /* S-Function Block: <S818>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s834_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s818_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S834>/Product' incorporates:
-   *  MinMax: '<S834>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S834>/motohawk_calibration'
+  /* Product: '<S818>/Product' incorporates:
+   *  MinMax: '<S818>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S818>/motohawk_calibration'
+   */
+  rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
+    (TPS1FilterConst_DataStore())) || rtIsNaN((TPS1FilterConst_DataStore())) ?
+    rtb_DataTypeConversion_e : (TPS1FilterConst_DataStore());
+
+  /* Sum: '<S826>/Sum1' incorporates:
+   *  Constant: '<S826>/Constant'
+   *  Product: '<S826>/Product'
+   *  Product: '<S826>/Product1'
+   *  Sum: '<S826>/Sum'
+   *  UnitDelay: '<S826>/Unit Delay'
+   */
+  rtb_Sum1_hw = (1.0 - rtb_DataTypeConversion_e) *
+    BaseEngineController_LS_DWork.s826_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s820_MinMax1 * rtb_DataTypeConversion_e;
+
+  /* UnitDelay: '<S819>/Unit Delay1' */
+  rtb_UnitDelay1_d = BaseEngineController_LS_DWork.s819_UnitDelay1_DSTATE;
+
+  /* If: '<S819>/If' incorporates:
+   *  Logic: '<S819>/Logical Operator5'
+   */
+  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
+    /* Outputs for IfAction SubSystem: '<S819>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S827>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_d, &rtb_Merge_li);
+
+    /* End of Outputs for SubSystem: '<S819>/If Action Subsystem' */
+  } else if (rtb_LogicalOperator1_cv) {
+    /* Outputs for IfAction SubSystem: '<S819>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S828>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem((TPS1DfltValue_DataStore()),
+      &rtb_Merge_li);
+
+    /* End of Outputs for SubSystem: '<S819>/If Action Subsystem1' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S819>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S829>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem(rtb_Sum1_hw, &rtb_Merge_li);
+
+    /* End of Outputs for SubSystem: '<S819>/If Action Subsystem2' */
+  }
+
+  /* End of If: '<S819>/If' */
+
+  /* If: '<S830>/If' incorporates:
+   *  Inport: '<S831>/In1'
+   *  Inport: '<S832>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S830>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S830>/override_enable'
+   */
+  if ((TPS1_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S830>/NewValue' incorporates:
+     *  ActionPort: '<S831>/Action Port'
+     */
+    BaseEngineController_LS_B.s830_Merge = (TPS1_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S830>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S830>/OldValue' incorporates:
+     *  ActionPort: '<S832>/Action Port'
+     */
+    BaseEngineController_LS_B.s830_Merge = rtb_Merge_li;
+
+    /* End of Outputs for SubSystem: '<S830>/OldValue' */
+  }
+
+  /* End of If: '<S830>/If' */
+
+  /* Logic: '<S836>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S836>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S836>/motohawk_fault_status4'
+   */
+  rtb_LogicalOperator1_cv = (IsFaultActive(116) || IsFaultActive(117));
+
+  /* Logic: '<S836>/Logical Operator6' */
+  rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
+
+  /* Logic: '<S836>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S836>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S836>/motohawk_fault_status3'
+   */
+  rtb_LogicalOperator1_al = (IsFaultSuspected(116) || IsFaultSuspected(117));
+
+  /* S-Function Block: <S447>/motohawk_ain9 Resource: TPS2AnalogInput */
+  {
+    extern NativeError_S TPS2AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T
+      *status);
+    TPS2AnalogInput_AnalogInput_Get(&rtb_motohawk_ain9, NULL);
+  }
+
+  /* DataTypeConversion: '<S757>/Data Type Conversion1' incorporates:
+   *  S-Function (motohawk_sfun_ain): '<S447>/motohawk_ain9'
+   */
+  rtb_DataTypeConversion1_e = (real_T)rtb_motohawk_ain9;
+
+  /* Switch: '<S757>/Switch' incorporates:
+   *  Fcn: '<S757>/Fcn'
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration2'
+   */
+  if ((TPS2Rev_Polarity_DataStore())) {
+    BaseEngineController_LS_B.s757_Switch = 1023.0 - rtb_DataTypeConversion1_e;
+  } else {
+    BaseEngineController_LS_B.s757_Switch = rtb_DataTypeConversion1_e;
+  }
+
+  /* End of Switch: '<S757>/Switch' */
+
+  /* S-Function (motohawk_sfun_data_read): '<S833>/motohawk_data_read' */
+  rtb_Product_mp = TPS2Raw_Adpt_Low_DataStore();
+
+  /* MinMax: '<S833>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration9'
+   */
+  rtb_UnitDelay4_b3 = (real_T)rtb_Product_mp;
+  BaseEngineController_LS_B.s833_MinMax = (rtb_UnitDelay4_b3 <=
+    (TPS2Adapt_Low_Max_DataStore())) || rtIsNaN((TPS2Adapt_Low_Max_DataStore()))
+    ? rtb_UnitDelay4_b3 : (TPS2Adapt_Low_Max_DataStore());
+
+  /* Sum: '<S757>/Sum2' */
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s757_Switch -
+    BaseEngineController_LS_B.s833_MinMax;
+
+  /* S-Function (motohawk_sfun_data_read): '<S833>/motohawk_data_read1' */
+  rtb_Product_mp = TPS2Raw_Adpt_Hi_DataStore();
+
+  /* MinMax: '<S833>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration11'
+   */
+  rtb_UnitDelay4_b3 = (real_T)rtb_Product_mp;
+  BaseEngineController_LS_B.s833_MinMax1 = (rtb_UnitDelay4_b3 >=
+    (TPS2Adapt_Hi_Min_DataStore())) || rtIsNaN((TPS2Adapt_Hi_Min_DataStore())) ?
+    rtb_UnitDelay4_b3 : (TPS2Adapt_Hi_Min_DataStore());
+
+  /* Gain: '<S757>/Gain2' incorporates:
+   *  Product: '<S757>/Product1'
+   *  Sum: '<S757>/Sum1'
+   */
+  rtb_DataTypeConversion_e = rtb_DataTypeConversion1_e /
+    (BaseEngineController_LS_B.s833_MinMax1 -
+     BaseEngineController_LS_B.s833_MinMax) * 100.0;
+
+  /* MinMax: '<S837>/MinMax' incorporates:
+   *  Constant: '<S757>/Constant1'
+   */
+  rtb_DataTypeConversion_e = rtb_DataTypeConversion_e >= 0.0 ?
+    rtb_DataTypeConversion_e : 0.0;
+
+  /* MinMax: '<S837>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration1'
+   */
+  BaseEngineController_LS_B.s837_MinMax1 = (rtb_DataTypeConversion_e <=
+    (TPS2MaxLimit_DataStore())) || rtIsNaN((TPS2MaxLimit_DataStore())) ?
+    rtb_DataTypeConversion_e : (TPS2MaxLimit_DataStore());
+
+  /* S-Function Block: <S835>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s835_motohawk_delta_time_DWORK1, NULL);
+    rtb_DataTypeConversion_e = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S835>/Product' incorporates:
+   *  MinMax: '<S835>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S835>/motohawk_calibration'
    */
   rtb_DataTypeConversion_e /= (rtb_DataTypeConversion_e >=
     (TPS2FilterConst_DataStore())) || rtIsNaN((TPS2FilterConst_DataStore())) ?
     rtb_DataTypeConversion_e : (TPS2FilterConst_DataStore());
 
-  /* Sum: '<S842>/Sum1' incorporates:
-   *  Constant: '<S842>/Constant'
-   *  Product: '<S842>/Product'
-   *  Product: '<S842>/Product1'
-   *  Sum: '<S842>/Sum'
-   *  UnitDelay: '<S842>/Unit Delay'
+  /* Sum: '<S843>/Sum1' incorporates:
+   *  Constant: '<S843>/Constant'
+   *  Product: '<S843>/Product'
+   *  Product: '<S843>/Product1'
+   *  Sum: '<S843>/Sum'
+   *  UnitDelay: '<S843>/Unit Delay'
    */
   rtb_Sum1_lp = (1.0 - rtb_DataTypeConversion_e) *
-    BaseEngineController_LS_DWork.s842_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s836_MinMax1 * rtb_DataTypeConversion_e;
+    BaseEngineController_LS_DWork.s843_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s837_MinMax1 * rtb_DataTypeConversion_e;
 
-  /* UnitDelay: '<S835>/Unit Delay1' */
-  rtb_UnitDelay1_p = BaseEngineController_LS_DWork.s835_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S836>/Unit Delay1' */
+  rtb_UnitDelay1_p = BaseEngineController_LS_DWork.s836_UnitDelay1_DSTATE;
 
-  /* If: '<S835>/If' incorporates:
-   *  Logic: '<S835>/Logical Operator5'
+  /* If: '<S836>/If' incorporates:
+   *  Logic: '<S836>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S835>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S843>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S836>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S844>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_p, &rtb_Merge_mv);
 
-    /* End of Outputs for SubSystem: '<S835>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S836>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S835>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S844>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S836>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S845>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((TPS2DfltValue_DataStore()),
       &rtb_Merge_mv);
 
-    /* End of Outputs for SubSystem: '<S835>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S836>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S835>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S845>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S836>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S846>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_Sum1_lp, &rtb_Merge_mv);
 
-    /* End of Outputs for SubSystem: '<S835>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S836>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S835>/If' */
+  /* End of If: '<S836>/If' */
 
-  /* If: '<S846>/If' incorporates:
-   *  Inport: '<S847>/In1'
+  /* If: '<S847>/If' incorporates:
    *  Inport: '<S848>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S846>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S846>/override_enable'
+   *  Inport: '<S849>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S847>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S847>/override_enable'
    */
   if ((TPS2_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S846>/NewValue' incorporates:
-     *  ActionPort: '<S847>/Action Port'
-     */
-    BaseEngineController_LS_B.s846_Merge = (TPS2_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S846>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S846>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S847>/NewValue' incorporates:
      *  ActionPort: '<S848>/Action Port'
      */
-    BaseEngineController_LS_B.s846_Merge = rtb_Merge_mv;
+    BaseEngineController_LS_B.s847_Merge = (TPS2_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S846>/OldValue' */
+    /* End of Outputs for SubSystem: '<S847>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S847>/OldValue' incorporates:
+     *  ActionPort: '<S849>/Action Port'
+     */
+    BaseEngineController_LS_B.s847_Merge = rtb_Merge_mv;
+
+    /* End of Outputs for SubSystem: '<S847>/OldValue' */
   }
 
-  /* End of If: '<S846>/If' */
+  /* End of If: '<S847>/If' */
 
-  /* Logic: '<S412>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S412>/motohawk_fault_status'
-   *  S-Function (motohawk_sfun_fault_status): '<S412>/motohawk_fault_status1'
+  /* Logic: '<S413>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S413>/motohawk_fault_status'
+   *  S-Function (motohawk_sfun_fault_status): '<S413>/motohawk_fault_status1'
    */
-  rtb_LogicalOperator6_b = (IsFaultActive(113) || IsFaultActive(114));
+  rtb_LogicalOperator6_b = (IsFaultActive(110) || IsFaultActive(111));
 
-  /* Logic: '<S412>/Logical Operator6' incorporates:
-   *  Logic: '<S412>/Logical Operator5'
-   *  S-Function (motohawk_sfun_fault_status): '<S412>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S412>/motohawk_fault_status3'
+  /* Logic: '<S413>/Logical Operator6' incorporates:
+   *  Logic: '<S413>/Logical Operator5'
+   *  S-Function (motohawk_sfun_fault_status): '<S413>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S413>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (rtb_LogicalOperator6_b && (IsFaultActive(119) ||
-    IsFaultActive(120)));
+  rtb_LogicalOperator1_al = (rtb_LogicalOperator6_b && (IsFaultActive(116) ||
+    IsFaultActive(117)));
 
-  /* Switch: '<S412>/Switch2' incorporates:
-   *  Logic: '<S412>/Logical Operator1'
-   *  S-Function (motohawk_sfun_fault_status): '<S412>/motohawk_fault_status4'
+  /* Switch: '<S413>/Switch2' incorporates:
+   *  Logic: '<S413>/Logical Operator1'
+   *  S-Function (motohawk_sfun_fault_status): '<S413>/motohawk_fault_status4'
    */
-  if (rtb_LogicalOperator1_al || IsFaultActive(121)) {
-    /* MinMax: '<S412>/MinMax' */
-    BaseEngineController_LS_B.s412_Switch2 =
-      (BaseEngineController_LS_B.s846_Merge >=
-       BaseEngineController_LS_B.s829_Merge) || rtIsNaN
-      (BaseEngineController_LS_B.s829_Merge) ?
-      BaseEngineController_LS_B.s846_Merge :
-      BaseEngineController_LS_B.s829_Merge;
+  if (rtb_LogicalOperator1_al || IsFaultActive(118)) {
+    /* MinMax: '<S413>/MinMax' */
+    BaseEngineController_LS_B.s413_Switch2 =
+      (BaseEngineController_LS_B.s847_Merge >=
+       BaseEngineController_LS_B.s830_Merge) || rtIsNaN
+      (BaseEngineController_LS_B.s830_Merge) ?
+      BaseEngineController_LS_B.s847_Merge :
+      BaseEngineController_LS_B.s830_Merge;
   } else {
-    /* Switch: '<S412>/Switch1' */
+    /* Switch: '<S413>/Switch1' */
     if (rtb_LogicalOperator6_b) {
-      BaseEngineController_LS_B.s412_Switch2 =
-        BaseEngineController_LS_B.s846_Merge;
+      BaseEngineController_LS_B.s413_Switch2 =
+        BaseEngineController_LS_B.s847_Merge;
     } else {
-      BaseEngineController_LS_B.s412_Switch2 =
-        BaseEngineController_LS_B.s829_Merge;
+      BaseEngineController_LS_B.s413_Switch2 =
+        BaseEngineController_LS_B.s830_Merge;
     }
 
-    /* End of Switch: '<S412>/Switch1' */
+    /* End of Switch: '<S413>/Switch1' */
   }
 
-  /* End of Switch: '<S412>/Switch2' */
+  /* End of Switch: '<S413>/Switch2' */
 
   /* RelationalOperator: '<S134>/RelOp' incorporates:
    *  Constant: '<S134>/Constant'
    */
-  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s428_State == 2);
+  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s429_State == 2);
 
-  /* S-Function Block: <S643>/motohawk_delta_time */
+  /* S-Function Block: <S644>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s643_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s644_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_ea = ((real_T) delta) * 0.000001;
   }
 
-  /* UnitDelay: '<S643>/Unit Delay' */
+  /* UnitDelay: '<S644>/Unit Delay' */
   rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s643_UnitDelay_DSTATE;
+    BaseEngineController_LS_DWork.s644_UnitDelay_DSTATE;
 
-  /* Logic: '<S618>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status4'
+  /* Logic: '<S619>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status4'
    */
   rtb_LogicalOperator1_cv = (IsFaultActive(62) || IsFaultActive(63));
 
-  /* Logic: '<S618>/Logical Operator6' */
+  /* Logic: '<S619>/Logical Operator6' */
   rtb_LogicalOperator1_al = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S618>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S618>/motohawk_fault_status3'
+  /* Logic: '<S619>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status3'
    */
   rtb_RelOp_pu = (IsFaultSuspected(62) || IsFaultSuspected(63));
 
-  /* S-Function Block: <S444>/motohawk_frequency_in Frequency Input Get: FuelSensorPin */
+  /* S-Function Block: <S445>/motohawk_frequency_in Frequency Input Get: FuelSensorPin */
   {
     extern NativeError_S FuelSensorPin_FrequencyInput_Get(uint32_T *frequency,
       int16_T *duty_cycle);
     FuelSensorPin_FrequencyInput_Get
-      (&BaseEngineController_LS_B.s444_motohawk_frequency_in, NULL);
+      (&BaseEngineController_LS_B.s445_motohawk_frequency_in, NULL);
   }
 
-  /* DataTypeConversion: '<S618>/Data Type Conversion' */
+  /* DataTypeConversion: '<S619>/Data Type Conversion' */
   rtb_DataTypeConversion_e = (real_T)
-    BaseEngineController_LS_B.s444_motohawk_frequency_in;
+    BaseEngineController_LS_B.s445_motohawk_frequency_in;
 
-  /* Product: '<S618>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration4'
+  /* Product: '<S619>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration4'
    */
   rtb_DataTypeConversion_b2 = rtb_DataTypeConversion_e * (FuelSensGain_DataStore
     ());
 
-  /* Sum: '<S618>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration5'
+  /* Sum: '<S619>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration5'
    */
-  BaseEngineController_LS_B.s618_Sum1 = rtb_DataTypeConversion_b2 +
+  BaseEngineController_LS_B.s619_Sum1 = rtb_DataTypeConversion_b2 +
     (FuelSensOfst_DataStore());
 
-  /* Saturate: '<S618>/Saturation' */
-  rtb_Saturation_g = BaseEngineController_LS_B.s618_Sum1 >= 90.0 ? 90.0 :
-    BaseEngineController_LS_B.s618_Sum1 <= 0.0 ? 0.0 :
-    BaseEngineController_LS_B.s618_Sum1;
+  /* Saturate: '<S619>/Saturation' */
+  rtb_Saturation_g = BaseEngineController_LS_B.s619_Sum1 >= 90.0 ? 90.0 :
+    BaseEngineController_LS_B.s619_Sum1 <= 0.0 ? 0.0 :
+    BaseEngineController_LS_B.s619_Sum1;
 
-  /* UnitDelay: '<S618>/Unit Delay1' */
-  rtb_UnitDelay1_ew = BaseEngineController_LS_DWork.s618_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S619>/Unit Delay1' */
+  rtb_UnitDelay1_ew = BaseEngineController_LS_DWork.s619_UnitDelay1_DSTATE;
 
-  /* If: '<S618>/If' incorporates:
-   *  Logic: '<S618>/Logical Operator5'
+  /* If: '<S619>/If' incorporates:
+   *  Logic: '<S619>/Logical Operator5'
    */
   if (rtb_LogicalOperator1_al && rtb_RelOp_pu) {
-    /* Outputs for IfAction SubSystem: '<S618>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S635>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S619>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S636>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_ew, &rtb_Merge_i);
 
-    /* End of Outputs for SubSystem: '<S618>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S619>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S618>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S636>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S619>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S637>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((FuelSensDfltValue_DataStore()),
       &rtb_Merge_i);
 
-    /* End of Outputs for SubSystem: '<S618>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S619>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S618>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S637>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S619>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S638>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_Saturation_g, &rtb_Merge_i);
 
-    /* End of Outputs for SubSystem: '<S618>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S619>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S618>/If' */
+  /* End of If: '<S619>/If' */
 
-  /* Product: '<S643>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_delta_time): '<S643>/motohawk_delta_time'
-   *  Sum: '<S643>/Sum3'
+  /* Product: '<S644>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_delta_time): '<S644>/motohawk_delta_time'
+   *  Sum: '<S644>/Sum3'
    */
   rtb_DataTypeConversion_c4 = 1.0 / rtb_motohawk_delta_time_ea * (rtb_Merge_i -
     rtb_DataTypeConversion1_e);
 
-  /* MinMax: '<S644>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S641>/motohawk_calibration1'
+  /* MinMax: '<S645>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S642>/motohawk_calibration1'
    */
   rtb_DataTypeConversion_c4 = (rtb_DataTypeConversion_c4 >= (Fall_Rate_DataStore
                                 ())) || rtIsNaN((Fall_Rate_DataStore())) ?
     rtb_DataTypeConversion_c4 : (Fall_Rate_DataStore());
 
-  /* Sum: '<S643>/Sum2' incorporates:
-   *  MinMax: '<S644>/MinMax1'
-   *  Product: '<S643>/Product'
-   *  S-Function (motohawk_sfun_calibration): '<S641>/motohawk_calibration'
-   *  S-Function (motohawk_sfun_delta_time): '<S643>/motohawk_delta_time'
+  /* Sum: '<S644>/Sum2' incorporates:
+   *  MinMax: '<S645>/MinMax1'
+   *  Product: '<S644>/Product'
+   *  S-Function (motohawk_sfun_calibration): '<S642>/motohawk_calibration'
+   *  S-Function (motohawk_sfun_delta_time): '<S644>/motohawk_delta_time'
    */
   rtb_Sum2_gr = ((rtb_DataTypeConversion_c4 <= (Rise_Rate_DataStore())) ||
                  rtIsNaN((Rise_Rate_DataStore())) ? rtb_DataTypeConversion_c4 :
                  (Rise_Rate_DataStore())) * rtb_motohawk_delta_time_ea +
     rtb_DataTypeConversion1_e;
 
-  /* S-Function Block: <S639>/motohawk_delta_time */
+  /* S-Function Block: <S640>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s639_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s640_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_c4 = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S639>/Product' incorporates:
-   *  MinMax: '<S639>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S639>/motohawk_calibration'
+  /* Product: '<S640>/Product' incorporates:
+   *  MinMax: '<S640>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S640>/motohawk_calibration'
    */
   rtb_DataTypeConversion_c4 /= (rtb_DataTypeConversion_c4 >=
     (FuelSensFilterConst_DataStore())) || rtIsNaN((FuelSensFilterConst_DataStore
     ())) ? rtb_DataTypeConversion_c4 : (FuelSensFilterConst_DataStore());
 
-  /* Sum: '<S642>/Sum1' incorporates:
-   *  Constant: '<S642>/Constant'
-   *  Product: '<S642>/Product'
-   *  Product: '<S642>/Product1'
-   *  Sum: '<S642>/Sum'
-   *  UnitDelay: '<S642>/Unit Delay'
+  /* Sum: '<S643>/Sum1' incorporates:
+   *  Constant: '<S643>/Constant'
+   *  Product: '<S643>/Product'
+   *  Product: '<S643>/Product1'
+   *  Sum: '<S643>/Sum'
+   *  UnitDelay: '<S643>/Unit Delay'
    */
   rtb_Sum1_mz = (1.0 - rtb_DataTypeConversion_c4) *
-    BaseEngineController_LS_DWork.s642_UnitDelay_DSTATE + rtb_Merge_i *
+    BaseEngineController_LS_DWork.s643_UnitDelay_DSTATE + rtb_Merge_i *
     rtb_DataTypeConversion_c4;
 
-  /* UnitDelay: '<S640>/Unit Delay' */
-  rtb_UnitDelay_n = BaseEngineController_LS_DWork.s640_UnitDelay_DSTATE;
+  /* UnitDelay: '<S641>/Unit Delay' */
+  rtb_UnitDelay_n = BaseEngineController_LS_DWork.s641_UnitDelay_DSTATE;
 
-  /* UnitDelay: '<S640>/Unit Delay1' */
-  rtb_UnitDelay1_h = BaseEngineController_LS_DWork.s640_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S641>/Unit Delay1' */
+  rtb_UnitDelay1_h = BaseEngineController_LS_DWork.s641_UnitDelay1_DSTATE;
 
-  /* UnitDelay: '<S640>/Unit Delay2' */
+  /* UnitDelay: '<S641>/Unit Delay2' */
   rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s640_UnitDelay2_DSTATE;
+    BaseEngineController_LS_DWork.s641_UnitDelay2_DSTATE;
 
-  /* MultiPortSwitch: '<S634>/Multiport Switch' incorporates:
-   *  Product: '<S640>/Product'
-   *  S-Function (motohawk_sfun_calibration): '<S634>/motohawk_calibration'
-   *  S-Function (motohawk_sfun_calibration): '<S640>/motohawk_calibration'
+  /* MultiPortSwitch: '<S635>/Multiport Switch' incorporates:
+   *  Product: '<S641>/Product'
+   *  S-Function (motohawk_sfun_calibration): '<S635>/motohawk_calibration'
+   *  S-Function (motohawk_sfun_calibration): '<S641>/motohawk_calibration'
    */
   switch (((uint8_T)(Filter_Type_Selection_DataStore()))) {
    case 0:
@@ -4847,21 +4843,21 @@ void BaseEngineController_LS_Foreground(void)
     break;
 
    default:
-    /* Product: '<S640>/Product3' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S640>/motohawk_calibration3'
+    /* Product: '<S641>/Product3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S641>/motohawk_calibration3'
      */
     rtb_DataTypeConversion1_e *= (Gain3_DataStore());
 
-    /* Sum: '<S640>/Sum2' incorporates:
-     *  Product: '<S640>/Product2'
-     *  S-Function (motohawk_sfun_calibration): '<S640>/motohawk_calibration2'
+    /* Sum: '<S641>/Sum2' incorporates:
+     *  Product: '<S641>/Product2'
+     *  S-Function (motohawk_sfun_calibration): '<S641>/motohawk_calibration2'
      */
     rtb_DataTypeConversion1_e += (Gain2_DataStore()) * rtb_UnitDelay1_h;
 
-    /* Sum: '<S640>/Sum' incorporates:
-     *  Product: '<S640>/Product1'
-     *  S-Function (motohawk_sfun_calibration): '<S640>/motohawk_calibration1'
-     *  Sum: '<S640>/Sum1'
+    /* Sum: '<S641>/Sum' incorporates:
+     *  Product: '<S641>/Product1'
+     *  S-Function (motohawk_sfun_calibration): '<S641>/motohawk_calibration1'
+     *  Sum: '<S641>/Sum1'
      */
     rtb_DataTypeConversion1_e = ((Gain1_DataStore()) * rtb_UnitDelay_n +
       rtb_DataTypeConversion1_e) + rtb_Merge_i;
@@ -4869,30 +4865,30 @@ void BaseEngineController_LS_Foreground(void)
     break;
   }
 
-  /* End of MultiPortSwitch: '<S634>/Multiport Switch' */
-  /* If: '<S638>/If' incorporates:
-   *  Inport: '<S645>/In1'
+  /* End of MultiPortSwitch: '<S635>/Multiport Switch' */
+  /* If: '<S639>/If' incorporates:
    *  Inport: '<S646>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S638>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S638>/override_enable'
+   *  Inport: '<S647>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S639>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S639>/override_enable'
    */
   if ((FuelSens_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S638>/NewValue' incorporates:
-     *  ActionPort: '<S645>/Action Port'
-     */
-    BaseEngineController_LS_B.s638_Merge = (FuelSens_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S638>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S638>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S639>/NewValue' incorporates:
      *  ActionPort: '<S646>/Action Port'
      */
-    BaseEngineController_LS_B.s638_Merge = rtb_DataTypeConversion1_e;
+    BaseEngineController_LS_B.s639_Merge = (FuelSens_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S638>/OldValue' */
+    /* End of Outputs for SubSystem: '<S639>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S639>/OldValue' incorporates:
+     *  ActionPort: '<S647>/Action Port'
+     */
+    BaseEngineController_LS_B.s639_Merge = rtb_DataTypeConversion1_e;
+
+    /* End of Outputs for SubSystem: '<S639>/OldValue' */
   }
 
-  /* End of If: '<S638>/If' */
+  /* End of If: '<S639>/If' */
 
   /* Outputs for Enabled SubSystem: '<S15>/Crank' incorporates:
    *  EnablePort: '<S133>/Enable'
@@ -4921,7 +4917,7 @@ void BaseEngineController_LS_Foreground(void)
     if (AirControlSource_DataStore() == FALSE) {
       rtb_motohawk_replicate1 = rtb_APP1;
     } else {
-      rtb_motohawk_replicate1 = BaseEngineController_LS_B.s412_Switch2;
+      rtb_motohawk_replicate1 = BaseEngineController_LS_B.s413_Switch2;
     }
 
     /* End of MultiPortSwitch: '<S140>/Multiport Switch1' */
@@ -4945,7 +4941,7 @@ void BaseEngineController_LS_Foreground(void)
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
       (CrankECT05Idx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s726_Merge, (CrankECT05IdxArr_DataStore()), 5,
+        (BaseEngineController_LS_B.s727_Merge, (CrankECT05IdxArr_DataStore()), 5,
          (CrankECT05Idx_DataStore()));
       rtb_motohawk_prelookup1_nl = (CrankECT05Idx_DataStore());
     }
@@ -4954,9 +4950,9 @@ void BaseEngineController_LS_Foreground(void)
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
-      (CrankRPM05In_DataStore()) = BaseEngineController_LS_B.s616_Sum1;
+      (CrankRPM05In_DataStore()) = BaseEngineController_LS_B.s617_Sum1;
       (CrankRPM05Idx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s616_Sum1, (CrankRPM05IdxArr_DataStore()), 5,
+        (BaseEngineController_LS_B.s617_Sum1, (CrankRPM05IdxArr_DataStore()), 5,
          (CrankRPM05Idx_DataStore()));
       rtb_motohawk_prelookup_c = (CrankRPM05Idx_DataStore());
     }
@@ -4966,7 +4962,7 @@ void BaseEngineController_LS_Foreground(void)
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
       (CrankIAT05Idx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s744_Merge, (CrankIAT05IdxArr_DataStore()), 5,
+        (BaseEngineController_LS_B.s745_Merge, (CrankIAT05IdxArr_DataStore()), 5,
          (CrankIAT05Idx_DataStore()));
       rtb_motohawk_prelookup2_h = (CrankIAT05Idx_DataStore());
     }
@@ -4975,9 +4971,9 @@ void BaseEngineController_LS_Foreground(void)
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
-      (CrankOXY05In_DataStore()) = BaseEngineController_LS_B.s638_Merge;
+      (CrankOXY05In_DataStore()) = BaseEngineController_LS_B.s639_Merge;
       (CrankOXY05Idx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s638_Merge, (CrankOXY05IdxArr_DataStore()), 5,
+        (BaseEngineController_LS_B.s639_Merge, (CrankOXY05IdxArr_DataStore()), 5,
          (CrankOXY05Idx_DataStore()));
       rtb_motohawk_prelookup3_n = (CrankOXY05Idx_DataStore());
     }
@@ -5234,28 +5230,28 @@ void BaseEngineController_LS_Foreground(void)
   }
 
   /* End of Outputs for SubSystem: '<S15>/Crank' */
-  /* S-Function Block: <S399>/motohawk_prelookup2 */
+  /* S-Function Block: <S400>/motohawk_prelookup2 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (TPS09In_DataStore()) = BaseEngineController_LS_B.s412_Switch2;
+    (TPS09In_DataStore()) = BaseEngineController_LS_B.s413_Switch2;
     (TPS09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s412_Switch2, (TPS09IdxArr_DataStore()), 9,
+      (BaseEngineController_LS_B.s413_Switch2, (TPS09IdxArr_DataStore()), 9,
        (TPS09Idx_DataStore()));
     rtb_motohawk_prelookup2 = (TPS09Idx_DataStore());
   }
 
-  /* Logic: '<S416>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S416>/motohawk_fault_status2'
+  /* Logic: '<S417>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S417>/motohawk_fault_status2'
    */
   rtb_LogicalOperator6_b = !IsFaultActive(66);
 
-  /* Logic: '<S416>/Logical Operator2' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S416>/motohawk_fault_status1'
+  /* Logic: '<S417>/Logical Operator2' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S417>/motohawk_fault_status1'
    */
-  rtb_LogicalOperator1_al = !IsFaultActive(69);
+  rtb_LogicalOperator1_al = !IsFaultActive(68);
 
-  /* S-Function (motohawk_sfun_read_canmsg): '<S447>/Read CAN Message' */
+  /* S-Function (motohawk_sfun_read_canmsg): '<S448>/Read CAN Message' */
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
@@ -5264,9 +5260,9 @@ void BaseEngineController_LS_Foreground(void)
       messageObj);
     boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4602p0007,
       &messageObj);
-    if ((BaseEngineController_LS_B.s447_ReadCANMessage_o1 + 1) >
-        BaseEngineController_LS_B.s447_ReadCANMessage_o1)
-      BaseEngineController_LS_B.s447_ReadCANMessage_o1++;
+    if ((BaseEngineController_LS_B.s448_ReadCANMessage_o1 + 1) >
+        BaseEngineController_LS_B.s448_ReadCANMessage_o1)
+      BaseEngineController_LS_B.s448_ReadCANMessage_o1++;
     if (msg_valid) {
       uint8_T tmp0 = 0;
       uint8_T tmp1 = 0;
@@ -5282,47 +5278,47 @@ void BaseEngineController_LS_Foreground(void)
       ((uint8_T *)(&tmp4))[0] = ((messageObj.u1DataArr[5])) ;
       ((uint8_T *)(&tmp5))[0] = ((messageObj.u1DataArr[6])) ;
       ((uint8_T *)(&tmp6))[0] = ((messageObj.u1DataArr[7])) ;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o2 = (boolean_T) tmp0;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o3 = ((real_T) tmp1) +
+      BaseEngineController_LS_B.s448_ReadCANMessage_o2 = (boolean_T) tmp0;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o3 = ((real_T) tmp1) +
         ((real_T) 2000);
-      BaseEngineController_LS_B.s447_ReadCANMessage_o4 = (real_T) tmp2;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o5 = (real_T) tmp3;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o6 = (real_T) tmp4;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o7 = (real_T) tmp5;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o8 = (real_T) tmp6;
-      BaseEngineController_LS_B.s447_ReadCANMessage_o1 = 0;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o4 = (real_T) tmp2;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o5 = (real_T) tmp3;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o6 = (real_T) tmp4;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o7 = (real_T) tmp5;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o8 = (real_T) tmp6;
+      BaseEngineController_LS_B.s448_ReadCANMessage_o1 = 0;
     }
   }
 
-  /* If: '<S449>/If' incorporates:
-   *  Inport: '<S462>/In1'
+  /* If: '<S450>/If' incorporates:
    *  Inport: '<S463>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S449>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S449>/override_enable'
+   *  Inport: '<S464>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S450>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S450>/override_enable'
    */
   if ((GPS_Valid_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S449>/NewValue' incorporates:
-     *  ActionPort: '<S462>/Action Port'
-     */
-    rtb_Merge_n2 = (GPS_Valid_Ovr_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S449>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S449>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S450>/NewValue' incorporates:
      *  ActionPort: '<S463>/Action Port'
      */
-    rtb_Merge_n2 = BaseEngineController_LS_B.s447_ReadCANMessage_o2;
+    rtb_RelOp_pu = (GPS_Valid_Ovr_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S449>/OldValue' */
+    /* End of Outputs for SubSystem: '<S450>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S450>/OldValue' incorporates:
+     *  ActionPort: '<S464>/Action Port'
+     */
+    rtb_RelOp_pu = BaseEngineController_LS_B.s448_ReadCANMessage_o2;
+
+    /* End of Outputs for SubSystem: '<S450>/OldValue' */
   }
 
-  /* End of If: '<S449>/If' */
+  /* End of If: '<S450>/If' */
 
-  /* Logic: '<S416>/Logical Operator' */
-  rtb_RelationalOperator3_bp = (rtb_Merge_n2 && rtb_LogicalOperator6_b &&
+  /* Logic: '<S417>/Logical Operator' */
+  rtb_RelationalOperator3_bp = (rtb_RelOp_pu && rtb_LogicalOperator6_b &&
     rtb_LogicalOperator1_al);
 
-  /* S-Function (motohawk_sfun_read_canmsg): '<S447>/Read CAN Message2' */
+  /* S-Function (motohawk_sfun_read_canmsg): '<S448>/Read CAN Message2' */
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
@@ -5331,9 +5327,9 @@ void BaseEngineController_LS_Foreground(void)
       messageObj);
     boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4604p0006,
       &messageObj);
-    if ((BaseEngineController_LS_B.s447_ReadCANMessage2_o1 + 1) >
-        BaseEngineController_LS_B.s447_ReadCANMessage2_o1)
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o1++;
+    if ((BaseEngineController_LS_B.s448_ReadCANMessage2_o1 + 1) >
+        BaseEngineController_LS_B.s448_ReadCANMessage2_o1)
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o1++;
     if (msg_valid) {
       uint16_T tmp0 = 0;
       int16_T tmp1 = 0;
@@ -5346,88 +5342,88 @@ void BaseEngineController_LS_Foreground(void)
       ((uint8_T *)(&tmp2))[0] = ((messageObj.u1DataArr[4])) ;
       ((uint8_T *)(&tmp2))[1] = ((messageObj.u1DataArr[5])) ;
       ((uint8_T *)(&tmp3))[0] = ((messageObj.u1DataArr[6])) ;
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o2 = ((real_T) tmp0) /
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o2 = ((real_T) tmp0) /
         ((real_T) 62.1373);
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o3 = ((real_T) tmp1) /
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o3 = ((real_T) tmp1) /
         ((real_T) 3.28084);
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o4 = ((real_T) tmp2) /
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o4 = ((real_T) tmp2) /
         ((real_T) 100);
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o5 = (real_T) tmp3;
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o1 = 0;
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o5 = (real_T) tmp3;
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o1 = 0;
     }
   }
 
-  /* If: '<S461>/If' incorporates:
-   *  Inport: '<S486>/In1'
+  /* If: '<S462>/If' incorporates:
    *  Inport: '<S487>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S461>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S461>/override_enable'
+   *  Inport: '<S488>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S462>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S462>/override_enable'
    */
   if ((GPS_Speed_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S461>/NewValue' incorporates:
-     *  ActionPort: '<S486>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S462>/NewValue' incorporates:
+     *  ActionPort: '<S487>/Action Port'
      */
     rtb_DataTypeConversion_b2 = (GPS_Speed_Ovr_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S461>/NewValue' */
+    /* End of Outputs for SubSystem: '<S462>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S461>/OldValue' incorporates:
-     *  ActionPort: '<S487>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S462>/OldValue' incorporates:
+     *  ActionPort: '<S488>/Action Port'
      */
     rtb_DataTypeConversion_b2 =
-      BaseEngineController_LS_B.s447_ReadCANMessage2_o2;
+      BaseEngineController_LS_B.s448_ReadCANMessage2_o2;
 
-    /* End of Outputs for SubSystem: '<S461>/OldValue' */
+    /* End of Outputs for SubSystem: '<S462>/OldValue' */
   }
 
-  /* End of If: '<S461>/If' */
+  /* End of If: '<S462>/If' */
 
-  /* Logic: '<S416>/Logical Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S416>/motohawk_calibration1'
+  /* Logic: '<S417>/Logical Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S417>/motohawk_calibration1'
    */
   rtb_RelOp_pu = ((VSPD_GPSPreferred_DataStore()) && rtb_RelationalOperator3_bp);
 
-  /* UnitDelay: '<S567>/Unit Delay' */
-  rtb_Switch_mq = BaseEngineController_LS_DWork.s567_UnitDelay_DSTATE;
+  /* UnitDelay: '<S568>/Unit Delay' */
+  rtb_Switch_mq = BaseEngineController_LS_DWork.s568_UnitDelay_DSTATE;
 
-  /* UnitDelay: '<S605>/Unit Delay' */
+  /* UnitDelay: '<S606>/Unit Delay' */
   rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s605_UnitDelay_DSTATE;
+    BaseEngineController_LS_DWork.s606_UnitDelay_DSTATE;
 
-  /* S-Function Block: <S596>/motohawk_delta_time */
+  /* S-Function Block: <S597>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s596_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s597_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_c4 = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S596>/Product' incorporates:
-   *  MinMax: '<S596>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S596>/motohawk_calibration'
+  /* Product: '<S597>/Product' incorporates:
+   *  MinMax: '<S597>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S597>/motohawk_calibration'
    */
   rtb_DataTypeConversion_c4 /= (rtb_DataTypeConversion_c4 >=
     (VSPDFiltConst_DataStore())) || rtIsNaN((VSPDFiltConst_DataStore())) ?
     rtb_DataTypeConversion_c4 : (VSPDFiltConst_DataStore());
 
-  /* Logic: '<S566>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S566>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S566>/motohawk_fault_status4'
+  /* Logic: '<S567>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S567>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S567>/motohawk_fault_status4'
    */
-  rtb_LogicalOperator1_cv = (IsFaultActive(122) || IsFaultActive(123));
+  rtb_LogicalOperator1_cv = (IsFaultActive(119) || IsFaultActive(120));
 
-  /* Logic: '<S566>/Logical Operator6' */
+  /* Logic: '<S567>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_LogicalOperator1_cv;
 
-  /* Logic: '<S566>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S566>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S566>/motohawk_fault_status3'
+  /* Logic: '<S567>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S567>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S567>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(122) || IsFaultSuspected(123));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(119) || IsFaultSuspected(120));
 
-  /* S-Function Block: <S442>/motohawk_frequency_in1 Frequency Input Get: VSPD_Pin */
+  /* S-Function Block: <S443>/motohawk_frequency_in1 Frequency Input Get: VSPD_Pin */
   {
     extern NativeError_S VSPD_Pin_FrequencyInput_Get(uint32_T *frequency,
       int16_T *duty_cycle);
@@ -5435,178 +5431,178 @@ void BaseEngineController_LS_Foreground(void)
       &rtb_DataTypeConversion2_pj);
   }
 
-  /* DataTypeConversion: '<S442>/Data Type Conversion1' */
+  /* DataTypeConversion: '<S443>/Data Type Conversion1' */
   rtb_DataTypeConversion_fq = (real_T)rtb_DataTypeConversion6;
 
-  /* Gain: '<S442>/Gain1' */
-  BaseEngineController_LS_B.s442_Gain1 = 0.01 * rtb_DataTypeConversion_fq;
+  /* Gain: '<S443>/Gain1' */
+  BaseEngineController_LS_B.s443_Gain1 = 0.01 * rtb_DataTypeConversion_fq;
 
-  /* S-Function Block: <S601>/motohawk_prelookup */
+  /* S-Function Block: <S602>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
     (VSPDIdx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s442_Gain1, (VSPDIdxArr_DataStore()), 13,
+      (BaseEngineController_LS_B.s443_Gain1, (VSPDIdxArr_DataStore()), 13,
        (VSPDIdx_DataStore()));
     rtb_motohawk_prelookup_n = (VSPDIdx_DataStore());
   }
 
-  /* S-Function Block: <S601>/motohawk_interpolation_1d */
+  /* S-Function Block: <S602>/motohawk_interpolation_1d */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
-    BaseEngineController_LS_B.s601_motohawk_interpolation_1d =
+    BaseEngineController_LS_B.s602_motohawk_interpolation_1d =
       TableInterpolation1D_real_T(rtb_motohawk_prelookup_n, (real_T *)
       ((VSPDTbl_DataStore())), 13);
   }
 
-  /* UnitDelay: '<S566>/Unit Delay' */
-  rtb_UnitDelay_jw = BaseEngineController_LS_DWork.s566_UnitDelay_DSTATE;
+  /* UnitDelay: '<S567>/Unit Delay' */
+  rtb_UnitDelay_jw = BaseEngineController_LS_DWork.s567_UnitDelay_DSTATE;
 
-  /* If: '<S566>/If' incorporates:
-   *  Logic: '<S566>/Logical Operator5'
+  /* If: '<S567>/If' incorporates:
+   *  Logic: '<S567>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S566>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S597>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S567>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S598>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay_jw, &rtb_Merge_j);
 
-    /* End of Outputs for SubSystem: '<S566>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S567>/If Action Subsystem' */
   } else if (rtb_LogicalOperator1_cv) {
-    /* Outputs for IfAction SubSystem: '<S566>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S598>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S567>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S599>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((VSPDDefault_DataStore()),
       &rtb_Merge_j);
 
-    /* End of Outputs for SubSystem: '<S566>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S567>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S566>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S599>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S567>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S600>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s601_motohawk_interpolation_1d, &rtb_Merge_j);
+      (BaseEngineController_LS_B.s602_motohawk_interpolation_1d, &rtb_Merge_j);
 
-    /* End of Outputs for SubSystem: '<S566>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S567>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S566>/If' */
+  /* End of If: '<S567>/If' */
 
-  /* Sum: '<S602>/Sum1' incorporates:
-   *  Constant: '<S602>/Constant'
-   *  Product: '<S602>/Product'
-   *  Product: '<S602>/Product1'
-   *  Sum: '<S602>/Sum'
-   *  UnitDelay: '<S602>/Unit Delay'
+  /* Sum: '<S603>/Sum1' incorporates:
+   *  Constant: '<S603>/Constant'
+   *  Product: '<S603>/Product'
+   *  Product: '<S603>/Product1'
+   *  Sum: '<S603>/Sum'
+   *  UnitDelay: '<S603>/Unit Delay'
    */
   rtb_Sum1_g3 = (1.0 - rtb_DataTypeConversion_c4) *
-    BaseEngineController_LS_DWork.s602_UnitDelay_DSTATE + rtb_Merge_j *
+    BaseEngineController_LS_DWork.s603_UnitDelay_DSTATE + rtb_Merge_j *
     rtb_DataTypeConversion_c4;
 
-  /* If: '<S600>/If' incorporates:
-   *  Inport: '<S603>/In1'
+  /* If: '<S601>/If' incorporates:
    *  Inport: '<S604>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S600>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S600>/override_enable'
+   *  Inport: '<S605>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S601>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S601>/override_enable'
    */
   if ((VSPD_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S600>/NewValue' incorporates:
-     *  ActionPort: '<S603>/Action Port'
-     */
-    BaseEngineController_LS_B.s600_Merge = (VSPD_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S600>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S600>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S601>/NewValue' incorporates:
      *  ActionPort: '<S604>/Action Port'
      */
-    BaseEngineController_LS_B.s600_Merge = rtb_Sum1_g3;
+    BaseEngineController_LS_B.s601_Merge = (VSPD_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S600>/OldValue' */
+    /* End of Outputs for SubSystem: '<S601>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S601>/OldValue' incorporates:
+     *  ActionPort: '<S605>/Action Port'
+     */
+    BaseEngineController_LS_B.s601_Merge = rtb_Sum1_g3;
+
+    /* End of Outputs for SubSystem: '<S601>/OldValue' */
   }
 
-  /* End of If: '<S600>/If' */
+  /* End of If: '<S601>/If' */
 
-  /* Sum: '<S605>/Sum2' */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s600_Merge -
+  /* Sum: '<S606>/Sum2' */
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s601_Merge -
     rtb_DataTypeConversion1_e;
 
-  /* S-Function Block: <S605>/motohawk_delta_time */
+  /* S-Function Block: <S606>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s605_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s606_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_o = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S605>/Product' incorporates:
-   *  S-Function (motohawk_sfun_delta_time): '<S605>/motohawk_delta_time'
+  /* Product: '<S606>/Product' incorporates:
+   *  S-Function (motohawk_sfun_delta_time): '<S606>/motohawk_delta_time'
    */
   rtb_DataTypeConversion_fq = rtb_DataTypeConversion1_e /
     rtb_motohawk_delta_time_o;
 
-  /* Abs: '<S567>/Abs' */
+  /* Abs: '<S568>/Abs' */
   rtb_DataTypeConversion_fq = fabs(rtb_DataTypeConversion_fq);
 
-  /* RelationalOperator: '<S567>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration2'
+  /* RelationalOperator: '<S568>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S568>/motohawk_calibration2'
    */
   rtb_LogicalOperator6_b = (rtb_DataTypeConversion_fq >=
     (VSPD_RateReject_DataStore()));
 
-  /* Logic: '<S567>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration1'
+  /* Logic: '<S568>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S568>/motohawk_calibration1'
    */
-  BaseEngineController_LS_B.s567_LogicalOperator = ((rtb_LogicalOperator6_b &&
+  BaseEngineController_LS_B.s568_LogicalOperator = ((rtb_LogicalOperator6_b &&
     (VSPD_RateReject_Enable_DataStore())));
 
-  /* Sum: '<S567>/Sum' incorporates:
-   *  UnitDelay: '<S567>/Unit Delay1'
+  /* Sum: '<S568>/Sum' incorporates:
+   *  UnitDelay: '<S568>/Unit Delay1'
    */
-  rtb_DataTypeConversion_fq = BaseEngineController_LS_B.s600_Merge -
-    BaseEngineController_LS_DWork.s567_UnitDelay1_DSTATE;
+  rtb_DataTypeConversion_fq = BaseEngineController_LS_B.s601_Merge -
+    BaseEngineController_LS_DWork.s568_UnitDelay1_DSTATE;
 
-  /* Abs: '<S567>/Abs2' */
+  /* Abs: '<S568>/Abs2' */
   rtb_DataTypeConversion_fq = fabs(rtb_DataTypeConversion_fq);
 
-  /* RelationalOperator: '<S567>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration4'
+  /* RelationalOperator: '<S568>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S568>/motohawk_calibration4'
    */
   rtb_LogicalOperator6_b = (rtb_DataTypeConversion_fq >=
     (VPSD_ChangeReject_DataStore()));
 
-  /* Abs: '<S567>/Abs1' */
-  rtb_DataTypeConversion_fq = fabs(BaseEngineController_LS_B.s600_Merge);
+  /* Abs: '<S568>/Abs1' */
+  rtb_DataTypeConversion_fq = fabs(BaseEngineController_LS_B.s601_Merge);
 
-  /* RelationalOperator: '<S567>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration3'
+  /* RelationalOperator: '<S568>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S568>/motohawk_calibration3'
    */
   rtb_LogicalOperator1_al = (rtb_DataTypeConversion_fq <=
     (VSPD_ZeroSpeed_DataStore()));
 
-  /* Logic: '<S567>/Logical Operator3' incorporates:
-   *  Logic: '<S567>/Logical Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration5'
+  /* Logic: '<S568>/Logical Operator3' incorporates:
+   *  Logic: '<S568>/Logical Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S568>/motohawk_calibration5'
    */
-  BaseEngineController_LS_B.s567_LogicalOperator3 = ((rtb_LogicalOperator6_b &&
+  BaseEngineController_LS_B.s568_LogicalOperator3 = ((rtb_LogicalOperator6_b &&
     rtb_LogicalOperator1_al && (VSPD_ChangeReject_Enable_DataStore())));
 
-  /* Logic: '<S567>/Logical Operator1' */
-  rtb_LogicalOperator1_cv = (BaseEngineController_LS_B.s567_LogicalOperator ||
-    BaseEngineController_LS_B.s567_LogicalOperator3);
+  /* Logic: '<S568>/Logical Operator1' */
+  rtb_LogicalOperator1_cv = (BaseEngineController_LS_B.s568_LogicalOperator ||
+    BaseEngineController_LS_B.s568_LogicalOperator3);
 
-  /* UnitDelay: '<S567>/Unit Delay2' */
+  /* UnitDelay: '<S568>/Unit Delay2' */
   rtb_RelationalOperator6_h =
-    BaseEngineController_LS_DWork.s567_UnitDelay2_DSTATE;
+    BaseEngineController_LS_DWork.s568_UnitDelay2_DSTATE;
 
-  /* Memory: '<S606>/Memory' */
+  /* Memory: '<S607>/Memory' */
   rtb_RelationalOperator5_fz =
-    BaseEngineController_LS_DWork.s606_Memory_PreviousInput;
+    BaseEngineController_LS_DWork.s607_Memory_PreviousInput;
 
-  /* CombinatorialLogic: '<S606>/Logic' */
+  /* CombinatorialLogic: '<S607>/Logic' */
   {
     uint_T rowidx= 0;
 
@@ -5620,75 +5616,75 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Logic_j[1] = BaseEngineController_LS_ConstP.pooled909[rowidx + 8];
   }
 
-  /* Switch: '<S567>/Switch' incorporates:
-   *  Logic: '<S567>/Logical Operator5'
-   *  UnitDelay: '<S567>/Unit Delay3'
+  /* Switch: '<S568>/Switch' incorporates:
+   *  Logic: '<S568>/Logical Operator5'
+   *  UnitDelay: '<S568>/Unit Delay3'
    */
   if (rtb_Logic_j[0] || rtb_LogicalOperator1_cv) {
-    BaseEngineController_LS_B.s567_Switch = rtb_Switch_mq;
+    BaseEngineController_LS_B.s568_Switch = rtb_Switch_mq;
   } else {
-    BaseEngineController_LS_B.s567_Switch =
-      BaseEngineController_LS_DWork.s567_UnitDelay3_DSTATE;
+    BaseEngineController_LS_B.s568_Switch =
+      BaseEngineController_LS_DWork.s568_UnitDelay3_DSTATE;
   }
 
-  /* End of Switch: '<S567>/Switch' */
+  /* End of Switch: '<S568>/Switch' */
 
-  /* Switch: '<S416>/Switch2' */
+  /* Switch: '<S417>/Switch2' */
   if (rtb_RelOp_pu) {
-    /* Switch: '<S416>/Switch1' incorporates:
-     *  Constant: '<S416>/Constant1'
+    /* Switch: '<S417>/Switch1' incorporates:
+     *  Constant: '<S417>/Constant1'
      */
     if (rtb_RelationalOperator3_bp) {
-      BaseEngineController_LS_B.s416_Switch2 = rtb_DataTypeConversion_b2;
+      BaseEngineController_LS_B.s417_Switch2 = rtb_DataTypeConversion_b2;
     } else {
-      BaseEngineController_LS_B.s416_Switch2 = 0.0;
+      BaseEngineController_LS_B.s417_Switch2 = 0.0;
     }
 
-    /* End of Switch: '<S416>/Switch1' */
+    /* End of Switch: '<S417>/Switch1' */
   } else {
-    /* Switch: '<S416>/Switch' incorporates:
-     *  Constant: '<S416>/Constant'
-     *  S-Function (motohawk_sfun_calibration): '<S416>/motohawk_calibration'
+    /* Switch: '<S417>/Switch' incorporates:
+     *  Constant: '<S417>/Constant'
+     *  S-Function (motohawk_sfun_calibration): '<S417>/motohawk_calibration'
      */
     if ((VSPD_DigitalPresent_DataStore())) {
-      BaseEngineController_LS_B.s416_Switch2 =
-        BaseEngineController_LS_B.s567_Switch;
+      BaseEngineController_LS_B.s417_Switch2 =
+        BaseEngineController_LS_B.s568_Switch;
     } else {
-      BaseEngineController_LS_B.s416_Switch2 = 0.0;
+      BaseEngineController_LS_B.s417_Switch2 = 0.0;
     }
 
-    /* End of Switch: '<S416>/Switch' */
+    /* End of Switch: '<S417>/Switch' */
   }
 
-  /* End of Switch: '<S416>/Switch2' */
-  /* S-Function Block: <S400>/motohawk_prelookup1 */
+  /* End of Switch: '<S417>/Switch2' */
+  /* S-Function Block: <S401>/motohawk_prelookup1 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (VSPD17In_DataStore()) = BaseEngineController_LS_B.s416_Switch2;
+    (VSPD17In_DataStore()) = BaseEngineController_LS_B.s417_Switch2;
     (VSPD17Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s416_Switch2, (VSPD17IdxArr_DataStore()), 17,
+      (BaseEngineController_LS_B.s417_Switch2, (VSPD17IdxArr_DataStore()), 17,
        (VSPD17Idx_DataStore()));
     rtb_motohawk_prelookup1_k = (VSPD17Idx_DataStore());
   }
 
-  /* Outputs for Atomic SubSystem: '<S361>/Base TPS Request' */
+  /* Outputs for Atomic SubSystem: '<S362>/Base TPS Request' */
 
-  /* UnitDelay: '<S402>/Unit Delay2' */
-  rtb_UnitDelay_gh = BaseEngineController_LS_DWork.s402_UnitDelay2_DSTATE;
+  /* UnitDelay: '<S403>/Unit Delay2' */
+  rtb_UnitDelay_gh = BaseEngineController_LS_DWork.s403_UnitDelay2_DSTATE;
 
-  /* S-Function Block: <S402>/motohawk_prelookup */
+  /* S-Function Block: <S403>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (APP17In_DataStore()) = BaseEngineController_LS_B.s405_Switch1;
+    (APP17In_DataStore()) = BaseEngineController_LS_B.s406_Switch1;
     (APP17Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s405_Switch1, (APP17IdxArr_DataStore()), 17,
+      (BaseEngineController_LS_B.s406_Switch1, (APP17IdxArr_DataStore()), 17,
        (APP17Idx_DataStore()));
     rtb_motohawk_prelookup_gv = (APP17Idx_DataStore());
   }
 
-  /* S-Function Block: <S402>/motohawk_interpolation_2d */
+  /* S-Function Block: <S403>/motohawk_interpolation_2d */
   {
     extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
       real_T *map_data, uint32_T row_sz, uint32_T col_sz);
@@ -5698,82 +5694,82 @@ void BaseEngineController_LS_Foreground(void)
     (ETCRequest_DataStore()) = rtb_motohawk_interpolation_2d_h;
   }
 
-  /* RelationalOperator: '<S402>/Relational Operator3' */
-  BaseEngineController_LS_B.s402_RelationalOperator3 = ((rtb_UnitDelay_gh <
+  /* RelationalOperator: '<S403>/Relational Operator3' */
+  BaseEngineController_LS_B.s403_RelationalOperator3 = ((rtb_UnitDelay_gh <
     rtb_motohawk_interpolation_2d_h));
 
-  /* Outputs for Enabled SubSystem: '<S402>/PassThrough1' */
+  /* Outputs for Enabled SubSystem: '<S403>/PassThrough1' */
   BaseEngineController_LS_PassThrough1
-    (BaseEngineController_LS_B.s402_RelationalOperator3,
-     (ETCReqIncFiltC_DataStore()), &BaseEngineController_LS_B.s402_Merge);
+    (BaseEngineController_LS_B.s403_RelationalOperator3,
+     (ETCReqIncFiltC_DataStore()), &BaseEngineController_LS_B.s403_Merge);
 
-  /* End of Outputs for SubSystem: '<S402>/PassThrough1' */
+  /* End of Outputs for SubSystem: '<S403>/PassThrough1' */
 
-  /* RelationalOperator: '<S402>/Relational Operator2' */
+  /* RelationalOperator: '<S403>/Relational Operator2' */
   rtb_RelationalOperator2_bw = (rtb_UnitDelay_gh >
     rtb_motohawk_interpolation_2d_h);
 
-  /* Outputs for Enabled SubSystem: '<S402>/PassThrough2' */
+  /* Outputs for Enabled SubSystem: '<S403>/PassThrough2' */
   BaseEngineController_LS_PassThrough1(rtb_RelationalOperator2_bw,
-    (ETCReqDecFiltC_DataStore()), &BaseEngineController_LS_B.s402_Merge);
+    (ETCReqDecFiltC_DataStore()), &BaseEngineController_LS_B.s403_Merge);
 
-  /* End of Outputs for SubSystem: '<S402>/PassThrough2' */
+  /* End of Outputs for SubSystem: '<S403>/PassThrough2' */
 
-  /* S-Function Block: <S420>/motohawk_delta_time */
+  /* S-Function Block: <S421>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s420_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s421_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_l0 = ((real_T) delta) * 0.000001;
   }
 
-  /* S-Function Block: <S402>/motohawk_delta_time */
+  /* S-Function Block: <S403>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s402_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s403_motohawk_delta_time_DWORK1, NULL);
     rtb_UnitDelay_gh = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S402>/Product' incorporates:
-   *  MinMax: '<S402>/MinMax'
+  /* Product: '<S403>/Product' incorporates:
+   *  MinMax: '<S403>/MinMax'
    */
-  rtb_UnitDelay_gh /= (rtb_UnitDelay_gh >= BaseEngineController_LS_B.s402_Merge)
-    || rtIsNaN(BaseEngineController_LS_B.s402_Merge) ? rtb_UnitDelay_gh :
-    BaseEngineController_LS_B.s402_Merge;
+  rtb_UnitDelay_gh /= (rtb_UnitDelay_gh >= BaseEngineController_LS_B.s403_Merge)
+    || rtIsNaN(BaseEngineController_LS_B.s403_Merge) ? rtb_UnitDelay_gh :
+    BaseEngineController_LS_B.s403_Merge;
 
-  /* Product: '<S417>/Product' */
+  /* Product: '<S418>/Product' */
   rtb_DataTypeConversion1_e = rtb_motohawk_interpolation_2d_h * rtb_UnitDelay_gh;
 
-  /* Sum: '<S417>/Sum' incorporates:
-   *  Constant: '<S417>/Constant'
+  /* Sum: '<S418>/Sum' incorporates:
+   *  Constant: '<S418>/Constant'
    */
   rtb_DataTypeConversion_b2 = 1.0 - rtb_UnitDelay_gh;
 
-  /* UnitDelay: '<S417>/Unit Delay' */
-  rtb_UnitDelay_gh = BaseEngineController_LS_DWork.s417_UnitDelay_DSTATE;
+  /* UnitDelay: '<S418>/Unit Delay' */
+  rtb_UnitDelay_gh = BaseEngineController_LS_DWork.s418_UnitDelay_DSTATE;
 
-  /* Sum: '<S417>/Sum1' incorporates:
-   *  Product: '<S417>/Product1'
+  /* Sum: '<S418>/Sum1' incorporates:
+   *  Product: '<S418>/Product1'
    */
   rtb_DataTypeConversion_b2 = rtb_DataTypeConversion_b2 * rtb_UnitDelay_gh +
     rtb_DataTypeConversion1_e;
 
-  /* UnitDelay: '<S420>/Unit Delay' */
-  rtb_UnitDelay_gh = BaseEngineController_LS_DWork.s420_UnitDelay_DSTATE;
+  /* UnitDelay: '<S421>/Unit Delay' */
+  rtb_UnitDelay_gh = BaseEngineController_LS_DWork.s421_UnitDelay_DSTATE;
 
-  /* Product: '<S420>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_delta_time): '<S420>/motohawk_delta_time'
-   *  Sum: '<S420>/Sum3'
+  /* Product: '<S421>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_delta_time): '<S421>/motohawk_delta_time'
+   *  Sum: '<S421>/Sum3'
    */
   rtb_DataTypeConversion1_e = 1.0 / rtb_motohawk_delta_time_l0 *
     (rtb_DataTypeConversion_b2 - rtb_UnitDelay_gh);
 
-  /* S-Function Block: <S402>/motohawk_interpolation_1d3 */
+  /* S-Function Block: <S403>/motohawk_interpolation_1d3 */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
@@ -5782,12 +5778,12 @@ void BaseEngineController_LS_Foreground(void)
     (ETCReqFallRate_DataStore()) = rtb_motohawk_interpolation_1d1_ku;
   }
 
-  /* MinMax: '<S421>/MinMax' */
+  /* MinMax: '<S422>/MinMax' */
   rtb_Abs_k = (rtb_DataTypeConversion1_e >= rtb_motohawk_interpolation_1d1_ku) ||
     rtIsNaN(rtb_motohawk_interpolation_1d1_ku) ? rtb_DataTypeConversion1_e :
     rtb_motohawk_interpolation_1d1_ku;
 
-  /* S-Function Block: <S402>/motohawk_interpolation_1d1 */
+  /* S-Function Block: <S403>/motohawk_interpolation_1d1 */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
@@ -5796,281 +5792,84 @@ void BaseEngineController_LS_Foreground(void)
     (ETCReqRiseRate_DataStore()) = rtb_motohawk_interpolation_1d1_ku;
   }
 
-  /* Sum: '<S420>/Sum2' incorporates:
-   *  MinMax: '<S421>/MinMax'
-   *  MinMax: '<S421>/MinMax1'
-   *  Product: '<S420>/Product'
-   *  S-Function (motohawk_sfun_delta_time): '<S420>/motohawk_delta_time'
+  /* Sum: '<S421>/Sum2' incorporates:
+   *  MinMax: '<S422>/MinMax'
+   *  MinMax: '<S422>/MinMax1'
+   *  Product: '<S421>/Product'
+   *  S-Function (motohawk_sfun_delta_time): '<S421>/motohawk_delta_time'
    */
-  BaseEngineController_LS_B.s420_Sum2 = ((rtb_Abs_k <=
+  BaseEngineController_LS_B.s421_Sum2 = ((rtb_Abs_k <=
     rtb_motohawk_interpolation_1d1_ku) || rtIsNaN
     (rtb_motohawk_interpolation_1d1_ku) ? rtb_Abs_k :
     rtb_motohawk_interpolation_1d1_ku) * rtb_motohawk_delta_time_l0 +
     rtb_UnitDelay_gh;
 
-  /* Update for UnitDelay: '<S402>/Unit Delay2' incorporates:
-   *  UnitDelay: '<S402>/Unit Delay1'
+  /* Update for UnitDelay: '<S403>/Unit Delay2' incorporates:
+   *  UnitDelay: '<S403>/Unit Delay1'
    */
-  BaseEngineController_LS_DWork.s402_UnitDelay2_DSTATE =
-    BaseEngineController_LS_DWork.s402_UnitDelay1_DSTATE;
+  BaseEngineController_LS_DWork.s403_UnitDelay2_DSTATE =
+    BaseEngineController_LS_DWork.s403_UnitDelay1_DSTATE;
 
-  /* Update for UnitDelay: '<S417>/Unit Delay' */
-  BaseEngineController_LS_DWork.s417_UnitDelay_DSTATE =
+  /* Update for UnitDelay: '<S418>/Unit Delay' */
+  BaseEngineController_LS_DWork.s418_UnitDelay_DSTATE =
     rtb_DataTypeConversion_b2;
 
-  /* Update for UnitDelay: '<S420>/Unit Delay' */
-  BaseEngineController_LS_DWork.s420_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s420_Sum2;
+  /* Update for UnitDelay: '<S421>/Unit Delay' */
+  BaseEngineController_LS_DWork.s421_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s421_Sum2;
 
-  /* Update for UnitDelay: '<S402>/Unit Delay1' incorporates:
-   *  UnitDelay: '<S402>/Unit Delay3'
+  /* Update for UnitDelay: '<S403>/Unit Delay1' incorporates:
+   *  UnitDelay: '<S403>/Unit Delay3'
    */
-  BaseEngineController_LS_DWork.s402_UnitDelay1_DSTATE =
-    BaseEngineController_LS_DWork.s402_UnitDelay3_DSTATE;
+  BaseEngineController_LS_DWork.s403_UnitDelay1_DSTATE =
+    BaseEngineController_LS_DWork.s403_UnitDelay3_DSTATE;
 
-  /* Update for UnitDelay: '<S402>/Unit Delay3' incorporates:
-   *  UnitDelay: '<S402>/Unit Delay4'
+  /* Update for UnitDelay: '<S403>/Unit Delay3' incorporates:
+   *  UnitDelay: '<S403>/Unit Delay4'
    */
-  BaseEngineController_LS_DWork.s402_UnitDelay3_DSTATE =
-    BaseEngineController_LS_DWork.s402_UnitDelay4_DSTATE;
+  BaseEngineController_LS_DWork.s403_UnitDelay3_DSTATE =
+    BaseEngineController_LS_DWork.s403_UnitDelay4_DSTATE;
 
-  /* Update for UnitDelay: '<S402>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s402_UnitDelay4_DSTATE =
+  /* Update for UnitDelay: '<S403>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s403_UnitDelay4_DSTATE =
     rtb_motohawk_interpolation_2d_h;
 
-  /* End of Outputs for SubSystem: '<S361>/Base TPS Request' */
+  /* End of Outputs for SubSystem: '<S362>/Base TPS Request' */
 
-  /* UnitDelay: '<S410>/Unit Delay' */
+  /* UnitDelay: '<S411>/Unit Delay' */
   rtb_DataTypeConversion_b2 =
-    BaseEngineController_LS_DWork.s410_UnitDelay_DSTATE;
+    BaseEngineController_LS_DWork.s411_UnitDelay_DSTATE;
 
-  /* Sum: '<S410>/Sum' incorporates:
-   *  Constant: '<S410>/Constant'
-   *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration'
+  /* Sum: '<S411>/Sum' incorporates:
+   *  Constant: '<S411>/Constant'
+   *  S-Function (motohawk_sfun_calibration): '<S411>/motohawk_calibration'
    */
   rtb_Switch_mq = 1.0 - (O2DelagFilterConst_DataStore());
 
-  /* S-Function Block: <S508>/motohawk_delta_time */
+  /* S-Function Block: <S509>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s508_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s509_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S508>/Product' incorporates:
-   *  MinMax: '<S508>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S508>/motohawk_calibration'
+  /* Product: '<S509>/Product' incorporates:
+   *  MinMax: '<S509>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S509>/motohawk_calibration'
    */
   rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
     (Bank1_EquivRatioFilterConst_DataStore())) || rtIsNaN
     ((Bank1_EquivRatioFilterConst_DataStore())) ? rtb_DataTypeConversion_fq :
     (Bank1_EquivRatioFilterConst_DataStore());
 
-  /* Logic: '<S488>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S488>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S488>/motohawk_fault_status4'
-   */
-  rtb_RelationalOperator5_fz = (IsFaultActive(21) || IsFaultActive(22));
-
-  /* Logic: '<S488>/Logical Operator6' */
-  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
-
-  /* Logic: '<S488>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S488>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S488>/motohawk_fault_status3'
-   */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(21) || IsFaultSuspected(22));
-
-  /* S-Function (motohawk_sfun_read_canmsg): '<S448>/Read CAN Message' */
-  /* MotoHawk Read CAN Message */
-  {
-    S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_4748p0007;
-    extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
-      messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4748p0007,
-      &messageObj);
-    if ((BaseEngineController_LS_B.s448_ReadCANMessage_o1 + 1) >
-        BaseEngineController_LS_B.s448_ReadCANMessage_o1)
-      BaseEngineController_LS_B.s448_ReadCANMessage_o1++;
-    if (msg_valid) {
-      uint16_T tmp0 = 0;
-      int16_T tmp1 = 0;
-      uint8_T tmp2 = 0;
-      uint8_T tmp3 = 0;
-      uint8_T tmp4 = 0;
-      uint8_T tmp5 = 0;
-      uint8_T tmp6 = 0;
-      uint8_T tmp7 = 0;
-      uint8_T tmp8 = 0;
-      ((uint8_T *)(&tmp0))[0] = ((messageObj.u1DataArr[0])) ;
-      ((uint8_T *)(&tmp0))[1] = ((messageObj.u1DataArr[1])) ;
-      ((uint8_T *)(&tmp1))[0] = ((messageObj.u1DataArr[2])) ;
-      ((uint8_T *)(&tmp1))[1] = ((messageObj.u1DataArr[3])) ;
-      ((uint8_T *)(&tmp2))[0] = ((messageObj.u1DataArr[4])) ;
-      ((uint8_T *)(&tmp3))[0] = ((messageObj.u1DataArr[5])) ;
-      ((uint8_T *)(&tmp4))[0] = ((messageObj.u1DataArr[6] & 0x00000002) >> 1) ;
-      ((uint8_T *)(&tmp5))[0] = ((messageObj.u1DataArr[6] & 0x00000020) >> 5) ;
-      ((uint8_T *)(&tmp6))[0] = ((messageObj.u1DataArr[6] & 0x00000080) >> 7) ;
-      ((uint8_T *)(&tmp7))[0] = ((messageObj.u1DataArr[7] & 0x0000001F)) ;
-      ((uint8_T *)(&tmp8))[0] = ((messageObj.u1DataArr[7] & 0x00000040) >> 6) ;
-      BaseEngineController_LS_B.s448_ReadCANMessage_o2 = ((real_T) tmp0) /
-        ((real_T) 10000);
-      BaseEngineController_LS_B.s448_ReadCANMessage_o3 = ((real_T) tmp1) /
-        ((real_T) 1000);
-      BaseEngineController_LS_B.s448_ReadCANMessage_o4 = ((real_T) tmp2) /
-        ((real_T) 10);
-      BaseEngineController_LS_B.s448_ReadCANMessage_o5 = ((real_T) tmp3) /
-        ((real_T) 10);
-      BaseEngineController_LS_B.s448_ReadCANMessage_o6 = (real_T) tmp4;
-      BaseEngineController_LS_B.s448_ReadCANMessage_o7 = (real_T) tmp5;
-      BaseEngineController_LS_B.s448_ReadCANMessage_o8 = (real_T) tmp6;
-      BaseEngineController_LS_B.s448_ReadCANMessage_o9 = (real_T) tmp7;
-      BaseEngineController_LS_B.s448_ReadCANMessage_o10 = (real_T) tmp8;
-      BaseEngineController_LS_B.s448_ReadCANMessage_o1 = 0;
-    }
-  }
-
-  /* If: '<S490>/If' incorporates:
-   *  Inport: '<S524>/In1'
-   *  Inport: '<S525>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S490>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S490>/override_enable'
-   */
-  if ((Bank1_Lambda_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S490>/NewValue' incorporates:
-     *  ActionPort: '<S524>/Action Port'
-     */
-    rtb_Merge_as = (Bank1_Lambda_Ovr_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S490>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S490>/OldValue' incorporates:
-     *  ActionPort: '<S525>/Action Port'
-     */
-    rtb_Merge_as = BaseEngineController_LS_B.s448_ReadCANMessage_o2;
-
-    /* End of Outputs for SubSystem: '<S490>/OldValue' */
-  }
-
-  /* End of If: '<S490>/If' */
-
-  /* Math: '<S448>/Math Function' incorporates:
-   *  Saturate: '<S448>/Saturation'
-   *
-   * About '<S448>/Math Function':
-   *  Operator: reciprocal
-   */
-  BaseEngineController_LS_B.s448_MathFunction = 1.0 / (rtb_Merge_as >= 0.1 ?
-    rtb_Merge_as : 0.1);
-
-  /* Product: '<S488>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S488>/motohawk_calibration4'
-   */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s448_MathFunction *
-    (Bank1_EquivRatioGain_DataStore());
-
-  /* Sum: '<S488>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S488>/motohawk_calibration5'
-   */
-  BaseEngineController_LS_B.s488_Sum1 = rtb_DataTypeConversion1_e +
-    (Bank1_EquivRatioOfst_DataStore());
-
-  /* UnitDelay: '<S488>/Unit Delay1' */
-  rtb_UnitDelay1_jn = BaseEngineController_LS_DWork.s488_UnitDelay1_DSTATE;
-
-  /* If: '<S488>/If' incorporates:
-   *  Logic: '<S488>/Logical Operator5'
-   */
-  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S488>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S509>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_jn, &rtb_Merge_ox);
-
-    /* End of Outputs for SubSystem: '<S488>/If Action Subsystem' */
-  } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S488>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S510>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem
-      ((Bank1_EquivRatioDfltValue_DataStore()), &rtb_Merge_ox);
-
-    /* End of Outputs for SubSystem: '<S488>/If Action Subsystem1' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S488>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S511>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s488_Sum1, &rtb_Merge_ox);
-
-    /* End of Outputs for SubSystem: '<S488>/If Action Subsystem2' */
-  }
-
-  /* End of If: '<S488>/If' */
-
-  /* Sum: '<S513>/Sum1' incorporates:
-   *  Constant: '<S513>/Constant'
-   *  Product: '<S513>/Product'
-   *  Product: '<S513>/Product1'
-   *  Sum: '<S513>/Sum'
-   *  UnitDelay: '<S513>/Unit Delay'
-   */
-  rtb_Sum1_ir = (1.0 - rtb_DataTypeConversion_fq) *
-    BaseEngineController_LS_DWork.s513_UnitDelay_DSTATE + rtb_Merge_ox *
-    rtb_DataTypeConversion_fq;
-
-  /* If: '<S512>/If' incorporates:
-   *  Inport: '<S514>/In1'
-   *  Inport: '<S515>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S512>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S512>/override_enable'
-   */
-  if ((Bank1_EquivRatio_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S512>/NewValue' incorporates:
-     *  ActionPort: '<S514>/Action Port'
-     */
-    BaseEngineController_LS_B.s512_Merge = (Bank1_EquivRatio_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S512>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S512>/OldValue' incorporates:
-     *  ActionPort: '<S515>/Action Port'
-     */
-    BaseEngineController_LS_B.s512_Merge = rtb_Sum1_ir;
-
-    /* End of Outputs for SubSystem: '<S512>/OldValue' */
-  }
-
-  /* End of If: '<S512>/If' */
-
-  /* S-Function Block: <S516>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s516_motohawk_delta_time_DWORK1, NULL);
-    rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
-  }
-
-  /* Product: '<S516>/Product' incorporates:
-   *  MinMax: '<S516>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S516>/motohawk_calibration'
-   */
-  rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
-    (Bank2_EquivRatioFilterConst_DataStore())) || rtIsNaN
-    ((Bank2_EquivRatioFilterConst_DataStore())) ? rtb_DataTypeConversion_fq :
-    (Bank2_EquivRatioFilterConst_DataStore());
-
   /* Logic: '<S489>/Logical Operator4' incorporates:
    *  S-Function (motohawk_sfun_fault_status): '<S489>/motohawk_fault_status1'
    *  S-Function (motohawk_sfun_fault_status): '<S489>/motohawk_fault_status4'
    */
-  rtb_RelationalOperator5_fz = (IsFaultActive(23) || IsFaultActive(24));
+  rtb_RelationalOperator5_fz = (IsFaultActive(21) || IsFaultActive(22));
 
   /* Logic: '<S489>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
@@ -6079,20 +5878,20 @@ void BaseEngineController_LS_Foreground(void)
    *  S-Function (motohawk_sfun_fault_status): '<S489>/motohawk_fault_status2'
    *  S-Function (motohawk_sfun_fault_status): '<S489>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(23) || IsFaultSuspected(24));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(21) || IsFaultSuspected(22));
 
-  /* S-Function (motohawk_sfun_read_canmsg): '<S448>/Read CAN Message1' */
+  /* S-Function (motohawk_sfun_read_canmsg): '<S449>/Read CAN Message' */
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
-    extern MHCAN_directslot MHCAN_directslot_RxSlot_4749p0006;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_4748p0007;
     extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
       messageObj);
-    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4749p0006,
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4748p0007,
       &messageObj);
-    if ((BaseEngineController_LS_B.s448_ReadCANMessage1_o1 + 1) >
-        BaseEngineController_LS_B.s448_ReadCANMessage1_o1)
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o1++;
+    if ((BaseEngineController_LS_B.s449_ReadCANMessage_o1 + 1) >
+        BaseEngineController_LS_B.s449_ReadCANMessage_o1)
+      BaseEngineController_LS_B.s449_ReadCANMessage_o1++;
     if (msg_valid) {
       uint16_T tmp0 = 0;
       int16_T tmp1 = 0;
@@ -6114,764 +5913,961 @@ void BaseEngineController_LS_Foreground(void)
       ((uint8_T *)(&tmp6))[0] = ((messageObj.u1DataArr[6] & 0x00000080) >> 7) ;
       ((uint8_T *)(&tmp7))[0] = ((messageObj.u1DataArr[7] & 0x0000001F)) ;
       ((uint8_T *)(&tmp8))[0] = ((messageObj.u1DataArr[7] & 0x00000040) >> 6) ;
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o2 = ((real_T) tmp0) /
+      BaseEngineController_LS_B.s449_ReadCANMessage_o2 = ((real_T) tmp0) /
         ((real_T) 10000);
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o3 = ((real_T) tmp1) /
+      BaseEngineController_LS_B.s449_ReadCANMessage_o3 = ((real_T) tmp1) /
         ((real_T) 1000);
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o4 = ((real_T) tmp2) /
+      BaseEngineController_LS_B.s449_ReadCANMessage_o4 = ((real_T) tmp2) /
         ((real_T) 10);
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o5 = ((real_T) tmp3) /
+      BaseEngineController_LS_B.s449_ReadCANMessage_o5 = ((real_T) tmp3) /
         ((real_T) 10);
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o6 = (real_T) tmp4;
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o7 = (real_T) tmp5;
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o8 = (real_T) tmp6;
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o9 = (real_T) tmp7;
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o10 = (real_T) tmp8;
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o1 = 0;
+      BaseEngineController_LS_B.s449_ReadCANMessage_o6 = (real_T) tmp4;
+      BaseEngineController_LS_B.s449_ReadCANMessage_o7 = (real_T) tmp5;
+      BaseEngineController_LS_B.s449_ReadCANMessage_o8 = (real_T) tmp6;
+      BaseEngineController_LS_B.s449_ReadCANMessage_o9 = (real_T) tmp7;
+      BaseEngineController_LS_B.s449_ReadCANMessage_o10 = (real_T) tmp8;
+      BaseEngineController_LS_B.s449_ReadCANMessage_o1 = 0;
     }
   }
 
-  /* If: '<S507>/If' incorporates:
-   *  Inport: '<S558>/In1'
-   *  Inport: '<S559>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S507>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S507>/override_enable'
+  /* If: '<S491>/If' incorporates:
+   *  Inport: '<S525>/In1'
+   *  Inport: '<S526>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S491>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S491>/override_enable'
    */
-  if ((Bank2_Lambda_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S507>/NewValue' incorporates:
-     *  ActionPort: '<S558>/Action Port'
+  if ((Bank1_Lambda_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S491>/NewValue' incorporates:
+     *  ActionPort: '<S525>/Action Port'
      */
-    rtb_DataTypeConversion1_e = (Bank2_Lambda_Ovr_new_DataStore());
+    rtb_Merge_as = (Bank1_Lambda_Ovr_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S507>/NewValue' */
+    /* End of Outputs for SubSystem: '<S491>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S507>/OldValue' incorporates:
-     *  ActionPort: '<S559>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S491>/OldValue' incorporates:
+     *  ActionPort: '<S526>/Action Port'
      */
-    rtb_DataTypeConversion1_e =
-      BaseEngineController_LS_B.s448_ReadCANMessage1_o2;
+    rtb_Merge_as = BaseEngineController_LS_B.s449_ReadCANMessage_o2;
 
-    /* End of Outputs for SubSystem: '<S507>/OldValue' */
+    /* End of Outputs for SubSystem: '<S491>/OldValue' */
   }
 
-  /* End of If: '<S507>/If' */
+  /* End of If: '<S491>/If' */
 
-  /* Math: '<S448>/Math Function1' incorporates:
-   *  Saturate: '<S448>/Saturation1'
+  /* Math: '<S449>/Math Function' incorporates:
+   *  Saturate: '<S449>/Saturation'
    *
-   * About '<S448>/Math Function1':
+   * About '<S449>/Math Function':
    *  Operator: reciprocal
    */
-  BaseEngineController_LS_B.s448_MathFunction1 = 1.0 /
-    (rtb_DataTypeConversion1_e >= 0.1 ? rtb_DataTypeConversion1_e : 0.1);
+  BaseEngineController_LS_B.s449_MathFunction = 1.0 / (rtb_Merge_as >= 0.1 ?
+    rtb_Merge_as : 0.1);
 
   /* Product: '<S489>/Product1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S489>/motohawk_calibration4'
    */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s448_MathFunction1 *
-    (Bank2_EquivRatioGain_DataStore());
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s449_MathFunction *
+    (Bank1_EquivRatioGain_DataStore());
 
   /* Sum: '<S489>/Sum1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S489>/motohawk_calibration5'
    */
   BaseEngineController_LS_B.s489_Sum1 = rtb_DataTypeConversion1_e +
-    (Bank2_EquivRatioOfst_DataStore());
+    (Bank1_EquivRatioOfst_DataStore());
 
   /* UnitDelay: '<S489>/Unit Delay1' */
-  rtb_UnitDelay1_m = BaseEngineController_LS_DWork.s489_UnitDelay1_DSTATE;
+  rtb_UnitDelay1_jn = BaseEngineController_LS_DWork.s489_UnitDelay1_DSTATE;
 
   /* If: '<S489>/If' incorporates:
    *  Logic: '<S489>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
     /* Outputs for IfAction SubSystem: '<S489>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S517>/Action Port'
+     *  ActionPort: '<S510>/Action Port'
      */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_m, &rtb_Merge_h);
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_jn, &rtb_Merge_ox);
 
     /* End of Outputs for SubSystem: '<S489>/If Action Subsystem' */
   } else if (rtb_RelationalOperator5_fz) {
     /* Outputs for IfAction SubSystem: '<S489>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S518>/Action Port'
+     *  ActionPort: '<S511>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      ((Bank2_EquivRatioDfltValue_DataStore()), &rtb_Merge_h);
+      ((Bank1_EquivRatioDfltValue_DataStore()), &rtb_Merge_ox);
 
     /* End of Outputs for SubSystem: '<S489>/If Action Subsystem1' */
   } else {
     /* Outputs for IfAction SubSystem: '<S489>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S519>/Action Port'
+     *  ActionPort: '<S512>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s489_Sum1, &rtb_Merge_h);
+      (BaseEngineController_LS_B.s489_Sum1, &rtb_Merge_ox);
 
     /* End of Outputs for SubSystem: '<S489>/If Action Subsystem2' */
   }
 
   /* End of If: '<S489>/If' */
 
-  /* Sum: '<S521>/Sum1' incorporates:
-   *  Constant: '<S521>/Constant'
-   *  Product: '<S521>/Product'
-   *  Product: '<S521>/Product1'
-   *  Sum: '<S521>/Sum'
-   *  UnitDelay: '<S521>/Unit Delay'
+  /* Sum: '<S514>/Sum1' incorporates:
+   *  Constant: '<S514>/Constant'
+   *  Product: '<S514>/Product'
+   *  Product: '<S514>/Product1'
+   *  Sum: '<S514>/Sum'
+   *  UnitDelay: '<S514>/Unit Delay'
    */
-  rtb_Sum1_du = (1.0 - rtb_DataTypeConversion_fq) *
-    BaseEngineController_LS_DWork.s521_UnitDelay_DSTATE + rtb_Merge_h *
+  rtb_Sum1_ir = (1.0 - rtb_DataTypeConversion_fq) *
+    BaseEngineController_LS_DWork.s514_UnitDelay_DSTATE + rtb_Merge_ox *
     rtb_DataTypeConversion_fq;
 
-  /* If: '<S520>/If' incorporates:
-   *  Inport: '<S522>/In1'
-   *  Inport: '<S523>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S520>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S520>/override_enable'
+  /* If: '<S513>/If' incorporates:
+   *  Inport: '<S515>/In1'
+   *  Inport: '<S516>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S513>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S513>/override_enable'
    */
-  if ((Bank2_EquivRatio_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S520>/NewValue' incorporates:
-     *  ActionPort: '<S522>/Action Port'
+  if ((Bank1_EquivRatio_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S513>/NewValue' incorporates:
+     *  ActionPort: '<S515>/Action Port'
      */
-    BaseEngineController_LS_B.s520_Merge = (Bank2_EquivRatio_new_DataStore());
+    BaseEngineController_LS_B.s513_Merge = (Bank1_EquivRatio_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S520>/NewValue' */
+    /* End of Outputs for SubSystem: '<S513>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S520>/OldValue' incorporates:
-     *  ActionPort: '<S523>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S513>/OldValue' incorporates:
+     *  ActionPort: '<S516>/Action Port'
      */
-    BaseEngineController_LS_B.s520_Merge = rtb_Sum1_du;
+    BaseEngineController_LS_B.s513_Merge = rtb_Sum1_ir;
 
-    /* End of Outputs for SubSystem: '<S520>/OldValue' */
+    /* End of Outputs for SubSystem: '<S513>/OldValue' */
   }
 
-  /* End of If: '<S520>/If' */
+  /* End of If: '<S513>/If' */
 
-  /* MultiPortSwitch: '<S448>/Multiport Switch' incorporates:
-   *  Gain: '<S448>/Gain'
-   *  S-Function (motohawk_sfun_calibration): '<S448>/motohawk_calibration2'
-   *  Sum: '<S448>/Add'
-   */
-  if (((uint8_T)(Bank2_Enable_DataStore())) == 0) {
-    BaseEngineController_LS_B.s448_MultiportSwitch =
-      BaseEngineController_LS_B.s512_Merge;
-  } else {
-    BaseEngineController_LS_B.s448_MultiportSwitch =
-      (BaseEngineController_LS_B.s512_Merge +
-       BaseEngineController_LS_B.s520_Merge) * 0.5;
-  }
-
-  /* End of MultiPortSwitch: '<S448>/Multiport Switch' */
-
-  /* Sum: '<S410>/Sum1' incorporates:
-   *  Product: '<S410>/Product'
-   *  Product: '<S410>/Product1'
-   *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration'
-   */
-  BaseEngineController_LS_B.s410_Sum1 = rtb_DataTypeConversion_b2 *
-    rtb_Switch_mq + (O2DelagFilterConst_DataStore()) *
-    BaseEngineController_LS_B.s448_MultiportSwitch;
-
-  /* S-Function Block: <S433>/motohawk_delta_time */
+  /* S-Function Block: <S517>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s433_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s517_motohawk_delta_time_DWORK1, NULL);
+    rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S517>/Product' incorporates:
+   *  MinMax: '<S517>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S517>/motohawk_calibration'
+   */
+  rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
+    (Bank2_EquivRatioFilterConst_DataStore())) || rtIsNaN
+    ((Bank2_EquivRatioFilterConst_DataStore())) ? rtb_DataTypeConversion_fq :
+    (Bank2_EquivRatioFilterConst_DataStore());
+
+  /* Logic: '<S490>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S490>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S490>/motohawk_fault_status4'
+   */
+  rtb_RelationalOperator5_fz = (IsFaultActive(23) || IsFaultActive(24));
+
+  /* Logic: '<S490>/Logical Operator6' */
+  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
+
+  /* Logic: '<S490>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S490>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S490>/motohawk_fault_status3'
+   */
+  rtb_LogicalOperator1_al = (IsFaultSuspected(23) || IsFaultSuspected(24));
+
+  /* S-Function (motohawk_sfun_read_canmsg): '<S449>/Read CAN Message1' */
+  /* MotoHawk Read CAN Message */
+  {
+    S_CANMessage messageObj;
+    extern MHCAN_directslot MHCAN_directslot_RxSlot_4749p0006;
+    extern boolean_T MHCAN_getdirect(MHCAN_directslot *directslot, S_CANMessage *
+      messageObj);
+    boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4749p0006,
+      &messageObj);
+    if ((BaseEngineController_LS_B.s449_ReadCANMessage1_o1 + 1) >
+        BaseEngineController_LS_B.s449_ReadCANMessage1_o1)
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o1++;
+    if (msg_valid) {
+      uint16_T tmp0 = 0;
+      int16_T tmp1 = 0;
+      uint8_T tmp2 = 0;
+      uint8_T tmp3 = 0;
+      uint8_T tmp4 = 0;
+      uint8_T tmp5 = 0;
+      uint8_T tmp6 = 0;
+      uint8_T tmp7 = 0;
+      uint8_T tmp8 = 0;
+      ((uint8_T *)(&tmp0))[0] = ((messageObj.u1DataArr[0])) ;
+      ((uint8_T *)(&tmp0))[1] = ((messageObj.u1DataArr[1])) ;
+      ((uint8_T *)(&tmp1))[0] = ((messageObj.u1DataArr[2])) ;
+      ((uint8_T *)(&tmp1))[1] = ((messageObj.u1DataArr[3])) ;
+      ((uint8_T *)(&tmp2))[0] = ((messageObj.u1DataArr[4])) ;
+      ((uint8_T *)(&tmp3))[0] = ((messageObj.u1DataArr[5])) ;
+      ((uint8_T *)(&tmp4))[0] = ((messageObj.u1DataArr[6] & 0x00000002) >> 1) ;
+      ((uint8_T *)(&tmp5))[0] = ((messageObj.u1DataArr[6] & 0x00000020) >> 5) ;
+      ((uint8_T *)(&tmp6))[0] = ((messageObj.u1DataArr[6] & 0x00000080) >> 7) ;
+      ((uint8_T *)(&tmp7))[0] = ((messageObj.u1DataArr[7] & 0x0000001F)) ;
+      ((uint8_T *)(&tmp8))[0] = ((messageObj.u1DataArr[7] & 0x00000040) >> 6) ;
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o2 = ((real_T) tmp0) /
+        ((real_T) 10000);
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o3 = ((real_T) tmp1) /
+        ((real_T) 1000);
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o4 = ((real_T) tmp2) /
+        ((real_T) 10);
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o5 = ((real_T) tmp3) /
+        ((real_T) 10);
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o6 = (real_T) tmp4;
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o7 = (real_T) tmp5;
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o8 = (real_T) tmp6;
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o9 = (real_T) tmp7;
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o10 = (real_T) tmp8;
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o1 = 0;
+    }
+  }
+
+  /* If: '<S508>/If' incorporates:
+   *  Inport: '<S559>/In1'
+   *  Inport: '<S560>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S508>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S508>/override_enable'
+   */
+  if ((Bank2_Lambda_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S508>/NewValue' incorporates:
+     *  ActionPort: '<S559>/Action Port'
+     */
+    rtb_DataTypeConversion1_e = (Bank2_Lambda_Ovr_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S508>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S508>/OldValue' incorporates:
+     *  ActionPort: '<S560>/Action Port'
+     */
+    rtb_DataTypeConversion1_e =
+      BaseEngineController_LS_B.s449_ReadCANMessage1_o2;
+
+    /* End of Outputs for SubSystem: '<S508>/OldValue' */
+  }
+
+  /* End of If: '<S508>/If' */
+
+  /* Math: '<S449>/Math Function1' incorporates:
+   *  Saturate: '<S449>/Saturation1'
+   *
+   * About '<S449>/Math Function1':
+   *  Operator: reciprocal
+   */
+  BaseEngineController_LS_B.s449_MathFunction1 = 1.0 /
+    (rtb_DataTypeConversion1_e >= 0.1 ? rtb_DataTypeConversion1_e : 0.1);
+
+  /* Product: '<S490>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S490>/motohawk_calibration4'
+   */
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s449_MathFunction1 *
+    (Bank2_EquivRatioGain_DataStore());
+
+  /* Sum: '<S490>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S490>/motohawk_calibration5'
+   */
+  BaseEngineController_LS_B.s490_Sum1 = rtb_DataTypeConversion1_e +
+    (Bank2_EquivRatioOfst_DataStore());
+
+  /* UnitDelay: '<S490>/Unit Delay1' */
+  rtb_UnitDelay1_m = BaseEngineController_LS_DWork.s490_UnitDelay1_DSTATE;
+
+  /* If: '<S490>/If' incorporates:
+   *  Logic: '<S490>/Logical Operator5'
+   */
+  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
+    /* Outputs for IfAction SubSystem: '<S490>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S518>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_m, &rtb_Merge_h);
+
+    /* End of Outputs for SubSystem: '<S490>/If Action Subsystem' */
+  } else if (rtb_RelationalOperator5_fz) {
+    /* Outputs for IfAction SubSystem: '<S490>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S519>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem
+      ((Bank2_EquivRatioDfltValue_DataStore()), &rtb_Merge_h);
+
+    /* End of Outputs for SubSystem: '<S490>/If Action Subsystem1' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S490>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S520>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem
+      (BaseEngineController_LS_B.s490_Sum1, &rtb_Merge_h);
+
+    /* End of Outputs for SubSystem: '<S490>/If Action Subsystem2' */
+  }
+
+  /* End of If: '<S490>/If' */
+
+  /* Sum: '<S522>/Sum1' incorporates:
+   *  Constant: '<S522>/Constant'
+   *  Product: '<S522>/Product'
+   *  Product: '<S522>/Product1'
+   *  Sum: '<S522>/Sum'
+   *  UnitDelay: '<S522>/Unit Delay'
+   */
+  rtb_Sum1_du = (1.0 - rtb_DataTypeConversion_fq) *
+    BaseEngineController_LS_DWork.s522_UnitDelay_DSTATE + rtb_Merge_h *
+    rtb_DataTypeConversion_fq;
+
+  /* If: '<S521>/If' incorporates:
+   *  Inport: '<S523>/In1'
+   *  Inport: '<S524>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S521>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S521>/override_enable'
+   */
+  if ((Bank2_EquivRatio_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S521>/NewValue' incorporates:
+     *  ActionPort: '<S523>/Action Port'
+     */
+    BaseEngineController_LS_B.s521_Merge = (Bank2_EquivRatio_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S521>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S521>/OldValue' incorporates:
+     *  ActionPort: '<S524>/Action Port'
+     */
+    BaseEngineController_LS_B.s521_Merge = rtb_Sum1_du;
+
+    /* End of Outputs for SubSystem: '<S521>/OldValue' */
+  }
+
+  /* End of If: '<S521>/If' */
+
+  /* MultiPortSwitch: '<S449>/Multiport Switch' incorporates:
+   *  Gain: '<S449>/Gain'
+   *  S-Function (motohawk_sfun_calibration): '<S449>/motohawk_calibration2'
+   *  Sum: '<S449>/Add'
+   */
+  if ((Bank2_Enable_DataStore()) == FALSE) {
+    BaseEngineController_LS_B.s449_MultiportSwitch =
+      BaseEngineController_LS_B.s513_Merge;
+  } else {
+    BaseEngineController_LS_B.s449_MultiportSwitch =
+      (BaseEngineController_LS_B.s513_Merge +
+       BaseEngineController_LS_B.s521_Merge) * 0.5;
+  }
+
+  /* End of MultiPortSwitch: '<S449>/Multiport Switch' */
+
+  /* Sum: '<S411>/Sum1' incorporates:
+   *  Product: '<S411>/Product'
+   *  Product: '<S411>/Product1'
+   *  S-Function (motohawk_sfun_calibration): '<S411>/motohawk_calibration'
+   */
+  BaseEngineController_LS_B.s411_Sum1 = rtb_DataTypeConversion_b2 *
+    rtb_Switch_mq + (O2DelagFilterConst_DataStore()) *
+    BaseEngineController_LS_B.s449_MultiportSwitch;
+
+  /* S-Function Block: <S434>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s434_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_f = ((real_T) delta) * 0.000001;
   }
 
-  /* Switch: '<S433>/Switch' incorporates:
-   *  Constant: '<S432>/Constant'
+  /* Switch: '<S434>/Switch' incorporates:
    *  Constant: '<S433>/Constant'
-   *  RelationalOperator: '<S432>/RelOp'
-   *  S-Function (motohawk_sfun_data_read): '<S414>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_data_read): '<S433>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S433>/motohawk_delta_time'
-   *  Sum: '<S433>/Sum'
+   *  Constant: '<S434>/Constant'
+   *  RelationalOperator: '<S433>/RelOp'
+   *  S-Function (motohawk_sfun_data_read): '<S415>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_data_read): '<S434>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S434>/motohawk_delta_time'
+   *  Sum: '<S434>/Sum'
    */
   if (((uint8_T)EngineState_DataStore()) == 3) {
-    BaseEngineController_LS_B.s433_Switch = rtb_motohawk_delta_time_f +
+    BaseEngineController_LS_B.s434_Switch = rtb_motohawk_delta_time_f +
       TimeSinceRunTimer_DataStore();
   } else {
-    BaseEngineController_LS_B.s433_Switch = 0.0;
+    BaseEngineController_LS_B.s434_Switch = 0.0;
   }
 
-  /* End of Switch: '<S433>/Switch' */
-  /* S-Function Block: <S397>/motohawk_prelookup1 */
+  /* End of Switch: '<S434>/Switch' */
+  /* S-Function Block: <S398>/motohawk_prelookup1 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (RPM09In_DataStore()) = BaseEngineController_LS_B.s616_Sum1;
+    (RPM09In_DataStore()) = BaseEngineController_LS_B.s617_Sum1;
     (RPM09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s616_Sum1, (RPM09IdxArr_DataStore()), 9,
+      (BaseEngineController_LS_B.s617_Sum1, (RPM09IdxArr_DataStore()), 9,
        (RPM09Idx_DataStore()));
-    BaseEngineController_LS_B.s397_motohawk_prelookup1 = (RPM09Idx_DataStore());
+    BaseEngineController_LS_B.s398_motohawk_prelookup1 = (RPM09Idx_DataStore());
   }
 
-  /* S-Function Block: <S397>/motohawk_prelookup5 */
+  /* S-Function Block: <S398>/motohawk_prelookup5 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (RPM17In_DataStore()) = BaseEngineController_LS_B.s616_Sum1;
+    (RPM17In_DataStore()) = BaseEngineController_LS_B.s617_Sum1;
     (RPM17Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s616_Sum1, (RPM17IdxArr_DataStore()), 17,
+      (BaseEngineController_LS_B.s617_Sum1, (RPM17IdxArr_DataStore()), 17,
        (RPM17Idx_DataStore()));
-    BaseEngineController_LS_B.s397_Indexes = (RPM17Idx_DataStore());
-  }
-
-  /* S-Function Block: <S393>/motohawk_prelookup */
-  {
-    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-      ordarr[], uint32_T sz, uint16_T prev);
-    (ECT05In_DataStore()) = BaseEngineController_LS_B.s726_Merge;
-    (ECT05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s726_Merge, (ECT05IdxArr_DataStore()), 5,
-       (ECT05Idx_DataStore()));
-    BaseEngineController_LS_B.s393_motohawk_prelookup = (ECT05Idx_DataStore());
-  }
-
-  /* S-Function Block: <S393>/motohawk_prelookup1 */
-  {
-    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-      ordarr[], uint32_T sz, uint16_T prev);
-    (ECT09In_DataStore()) = BaseEngineController_LS_B.s726_Merge;
-    (ECT09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s726_Merge, (ECT09IdxArr_DataStore()), 9,
-       (ECT09Idx_DataStore()));
-    rtb_motohawk_prelookup1_h = (ECT09Idx_DataStore());
+    BaseEngineController_LS_B.s398_Indexes = (RPM17Idx_DataStore());
   }
 
   /* S-Function Block: <S394>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (IAT05In_DataStore()) = BaseEngineController_LS_B.s744_Merge;
-    (IAT05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s744_Merge, (IAT05IdxArr_DataStore()), 5,
-       (IAT05Idx_DataStore()));
-    BaseEngineController_LS_B.s394_motohawk_prelookup = (IAT05Idx_DataStore());
+    (ECT05In_DataStore()) = BaseEngineController_LS_B.s727_Merge;
+    (ECT05Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s727_Merge, (ECT05IdxArr_DataStore()), 5,
+       (ECT05Idx_DataStore()));
+    BaseEngineController_LS_B.s394_motohawk_prelookup = (ECT05Idx_DataStore());
   }
 
-  /* S-Function Block: <S689>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s689_motohawk_delta_time_DWORK1, NULL);
-    rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
-  }
-
-  /* Product: '<S689>/Product' incorporates:
-   *  MinMax: '<S689>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S689>/motohawk_calibration'
-   */
-  rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
-    (SysVoltFilterConst_DataStore())) || rtIsNaN((SysVoltFilterConst_DataStore()))
-    ? rtb_DataTypeConversion_fq : (SysVoltFilterConst_DataStore());
-
-  /* Logic: '<S625>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status4'
-   */
-  rtb_RelationalOperator5_fz = (IsFaultActive(107) || IsFaultActive(108));
-
-  /* Logic: '<S625>/Logical Operator6' */
-  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
-
-  /* Logic: '<S625>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status3'
-   */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(107) || IsFaultSuspected(108));
-
-  /* S-Function Block: <S444>/motohawk_ain14 Resource: SysVoltage */
-  {
-    extern NativeError_S SysVoltage_AnalogInput_Get(uint16_T *adc, uint16_T
-      *status);
-    SysVoltage_AnalogInput_Get(&BaseEngineController_LS_B.s444_motohawk_ain14,
-      NULL);
-  }
-
-  /* DataTypeConversion: '<S625>/Data Type Conversion' */
-  rtb_DataTypeConversion_c4 = (real_T)
-    BaseEngineController_LS_B.s444_motohawk_ain14;
-
-  /* Product: '<S625>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S625>/motohawk_calibration4'
-   */
-  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_c4 * (SysVoltGain_DataStore
-    ());
-
-  /* Sum: '<S625>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S625>/motohawk_calibration5'
-   */
-  BaseEngineController_LS_B.s625_Sum1 = rtb_DataTypeConversion1_e +
-    (SysVoltOfst_DataStore());
-
-  /* UnitDelay: '<S625>/Unit Delay1' */
-  rtb_UnitDelay1_f4 = BaseEngineController_LS_DWork.s625_UnitDelay1_DSTATE;
-
-  /* If: '<S625>/If' incorporates:
-   *  Logic: '<S625>/Logical Operator5'
-   */
-  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S625>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S690>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_f4, &rtb_Merge_f);
-
-    /* End of Outputs for SubSystem: '<S625>/If Action Subsystem' */
-  } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S625>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S691>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem((SysVoltDfltValue_DataStore()),
-      &rtb_Merge_f);
-
-    /* End of Outputs for SubSystem: '<S625>/If Action Subsystem1' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S625>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S692>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s625_Sum1, &rtb_Merge_f);
-
-    /* End of Outputs for SubSystem: '<S625>/If Action Subsystem2' */
-  }
-
-  /* End of If: '<S625>/If' */
-
-  /* Sum: '<S694>/Sum1' incorporates:
-   *  Constant: '<S694>/Constant'
-   *  Product: '<S694>/Product'
-   *  Product: '<S694>/Product1'
-   *  Sum: '<S694>/Sum'
-   *  UnitDelay: '<S694>/Unit Delay'
-   */
-  rtb_Sum1_nl = (1.0 - rtb_DataTypeConversion_fq) *
-    BaseEngineController_LS_DWork.s694_UnitDelay_DSTATE + rtb_Merge_f *
-    rtb_DataTypeConversion_fq;
-
-  /* If: '<S693>/If' incorporates:
-   *  Inport: '<S695>/In1'
-   *  Inport: '<S696>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S693>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S693>/override_enable'
-   */
-  if ((SysVolt_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S693>/NewValue' incorporates:
-     *  ActionPort: '<S695>/Action Port'
-     */
-    BaseEngineController_LS_B.s693_Merge = (SysVolt_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S693>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S693>/OldValue' incorporates:
-     *  ActionPort: '<S696>/Action Port'
-     */
-    BaseEngineController_LS_B.s693_Merge = rtb_Sum1_nl;
-
-    /* End of Outputs for SubSystem: '<S693>/OldValue' */
-  }
-
-  /* End of If: '<S693>/If' */
-
-  /* S-Function Block: <S398>/motohawk_prelookup */
+  /* S-Function Block: <S394>/motohawk_prelookup1 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (SysVolt09In_DataStore()) = BaseEngineController_LS_B.s693_Merge;
-    (SysVolt09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s693_Merge, (SysVolt09IdxArr_DataStore()), 9,
-       (SysVolt09Idx_DataStore()));
-    BaseEngineController_LS_B.s398_motohawk_prelookup = (SysVolt09Idx_DataStore());
+    (ECT09In_DataStore()) = BaseEngineController_LS_B.s727_Merge;
+    (ECT09Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s727_Merge, (ECT09IdxArr_DataStore()), 9,
+       (ECT09Idx_DataStore()));
+    rtb_motohawk_prelookup1_h = (ECT09Idx_DataStore());
   }
-
-  /* S-Function Block: <S391>/motohawk_prelookup */
-  {
-    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-      ordarr[], uint32_T sz, uint16_T prev);
-    (ACPres05In_DataStore()) = BaseEngineController_LS_B.s630_Merge;
-    (ACPres05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s630_Merge, (ACPres05IdxArr_DataStore()), 5,
-       (ACPres05Idx_DataStore()));
-    BaseEngineController_LS_B.s391_motohawk_prelookup = (ACPres05Idx_DataStore());
-  }
-
-  /* S-Function Block: <S655>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s655_motohawk_delta_time_DWORK1, NULL);
-    rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
-  }
-
-  /* Product: '<S655>/Product' incorporates:
-   *  MinMax: '<S655>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S655>/motohawk_calibration'
-   */
-  rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
-    (MAPFilterConst_DataStore())) || rtIsNaN((MAPFilterConst_DataStore())) ?
-    rtb_DataTypeConversion_fq : (MAPFilterConst_DataStore());
-
-  /* Logic: '<S620>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status4'
-   */
-  rtb_RelationalOperator5_fz = (IsFaultActive(89) || IsFaultActive(90));
-
-  /* Logic: '<S620>/Logical Operator6' */
-  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
-
-  /* Logic: '<S620>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status3'
-   */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(89) || IsFaultSuspected(90));
-
-  /* S-Function (motohawk_sfun_trigger): '<S622>/motohawk_trigger5' */
-  /* Enable for Trigger_FGND_MID_TDC_EVENT_5428p0009 */
-  if (BaseEngineController_LS_DWork.s622_motohawk_trigger5_DWORK1 == 0) {
-    BaseEngineController_LS_DWork.s622_motohawk_trigger5_DWORK1 = 1;
-  }
-
-  /* Product: '<S620>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration4'
-   */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s622_Merge *
-    (MAPGain_DataStore());
-
-  /* Sum: '<S620>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration5'
-   */
-  BaseEngineController_LS_B.s620_Sum1 = rtb_DataTypeConversion1_e +
-    (MAPOfst_DataStore());
-
-  /* UnitDelay: '<S620>/Unit Delay1' */
-  rtb_UnitDelay1_a = BaseEngineController_LS_DWork.s620_UnitDelay1_DSTATE;
-
-  /* If: '<S620>/If' incorporates:
-   *  Logic: '<S620>/Logical Operator5'
-   */
-  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S620>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S656>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_a, &rtb_Merge_in);
-
-    /* End of Outputs for SubSystem: '<S620>/If Action Subsystem' */
-  } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S620>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S657>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem((MAPDfltValue_DataStore()),
-      &rtb_Merge_in);
-
-    /* End of Outputs for SubSystem: '<S620>/If Action Subsystem1' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S620>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S658>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s620_Sum1, &rtb_Merge_in);
-
-    /* End of Outputs for SubSystem: '<S620>/If Action Subsystem2' */
-  }
-
-  /* End of If: '<S620>/If' */
-
-  /* Sum: '<S660>/Sum1' incorporates:
-   *  Constant: '<S660>/Constant'
-   *  Product: '<S660>/Product'
-   *  Product: '<S660>/Product1'
-   *  Sum: '<S660>/Sum'
-   *  UnitDelay: '<S660>/Unit Delay'
-   */
-  rtb_Sum1_d4 = (1.0 - rtb_DataTypeConversion_fq) *
-    BaseEngineController_LS_DWork.s660_UnitDelay_DSTATE + rtb_Merge_in *
-    rtb_DataTypeConversion_fq;
-
-  /* If: '<S659>/If' incorporates:
-   *  Inport: '<S661>/In1'
-   *  Inport: '<S662>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S659>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S659>/override_enable'
-   */
-  if ((MAP_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S659>/NewValue' incorporates:
-     *  ActionPort: '<S661>/Action Port'
-     */
-    BaseEngineController_LS_B.s659_Merge = (MAP_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S659>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S659>/OldValue' incorporates:
-     *  ActionPort: '<S662>/Action Port'
-     */
-    BaseEngineController_LS_B.s659_Merge = rtb_Sum1_d4;
-
-    /* End of Outputs for SubSystem: '<S659>/OldValue' */
-  }
-
-  /* End of If: '<S659>/If' */
 
   /* S-Function Block: <S395>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (MAP05In_DataStore()) = BaseEngineController_LS_B.s659_Merge;
-    (MAP05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s659_Merge, (MAP05IdxArr_DataStore()), 5,
-       (MAP05Idx_DataStore()));
-    rtb_motohawk_prelookup_m = (MAP05Idx_DataStore());
+    (IAT05In_DataStore()) = BaseEngineController_LS_B.s745_Merge;
+    (IAT05Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s745_Merge, (IAT05IdxArr_DataStore()), 5,
+       (IAT05Idx_DataStore()));
+    BaseEngineController_LS_B.s395_motohawk_prelookup = (IAT05Idx_DataStore());
   }
 
-  /* S-Function Block: <S395>/motohawk_prelookup1 */
+  /* S-Function Block: <S690>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s690_motohawk_delta_time_DWORK1, NULL);
+    rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S690>/Product' incorporates:
+   *  MinMax: '<S690>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S690>/motohawk_calibration'
+   */
+  rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
+    (SysVoltFilterConst_DataStore())) || rtIsNaN((SysVoltFilterConst_DataStore()))
+    ? rtb_DataTypeConversion_fq : (SysVoltFilterConst_DataStore());
+
+  /* Logic: '<S626>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S626>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S626>/motohawk_fault_status4'
+   */
+  rtb_RelationalOperator5_fz = (IsFaultActive(104) || IsFaultActive(105));
+
+  /* Logic: '<S626>/Logical Operator6' */
+  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
+
+  /* Logic: '<S626>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S626>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S626>/motohawk_fault_status3'
+   */
+  rtb_LogicalOperator1_al = (IsFaultSuspected(104) || IsFaultSuspected(105));
+
+  /* S-Function Block: <S445>/motohawk_ain14 Resource: SysVoltage */
+  {
+    extern NativeError_S SysVoltage_AnalogInput_Get(uint16_T *adc, uint16_T
+      *status);
+    SysVoltage_AnalogInput_Get(&BaseEngineController_LS_B.s445_motohawk_ain14,
+      NULL);
+  }
+
+  /* DataTypeConversion: '<S626>/Data Type Conversion' */
+  rtb_DataTypeConversion_c4 = (real_T)
+    BaseEngineController_LS_B.s445_motohawk_ain14;
+
+  /* Product: '<S626>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S626>/motohawk_calibration4'
+   */
+  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_c4 * (SysVoltGain_DataStore
+    ());
+
+  /* Sum: '<S626>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S626>/motohawk_calibration5'
+   */
+  BaseEngineController_LS_B.s626_Sum1 = rtb_DataTypeConversion1_e +
+    (SysVoltOfst_DataStore());
+
+  /* UnitDelay: '<S626>/Unit Delay1' */
+  rtb_UnitDelay1_f4 = BaseEngineController_LS_DWork.s626_UnitDelay1_DSTATE;
+
+  /* If: '<S626>/If' incorporates:
+   *  Logic: '<S626>/Logical Operator5'
+   */
+  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
+    /* Outputs for IfAction SubSystem: '<S626>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S691>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_f4, &rtb_Merge_f);
+
+    /* End of Outputs for SubSystem: '<S626>/If Action Subsystem' */
+  } else if (rtb_RelationalOperator5_fz) {
+    /* Outputs for IfAction SubSystem: '<S626>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S692>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem((SysVoltDfltValue_DataStore()),
+      &rtb_Merge_f);
+
+    /* End of Outputs for SubSystem: '<S626>/If Action Subsystem1' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S626>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S693>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem
+      (BaseEngineController_LS_B.s626_Sum1, &rtb_Merge_f);
+
+    /* End of Outputs for SubSystem: '<S626>/If Action Subsystem2' */
+  }
+
+  /* End of If: '<S626>/If' */
+
+  /* Sum: '<S695>/Sum1' incorporates:
+   *  Constant: '<S695>/Constant'
+   *  Product: '<S695>/Product'
+   *  Product: '<S695>/Product1'
+   *  Sum: '<S695>/Sum'
+   *  UnitDelay: '<S695>/Unit Delay'
+   */
+  rtb_Sum1_nl = (1.0 - rtb_DataTypeConversion_fq) *
+    BaseEngineController_LS_DWork.s695_UnitDelay_DSTATE + rtb_Merge_f *
+    rtb_DataTypeConversion_fq;
+
+  /* If: '<S694>/If' incorporates:
+   *  Inport: '<S696>/In1'
+   *  Inport: '<S697>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S694>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S694>/override_enable'
+   */
+  if ((SysVolt_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S694>/NewValue' incorporates:
+     *  ActionPort: '<S696>/Action Port'
+     */
+    BaseEngineController_LS_B.s694_Merge = (SysVolt_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S694>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S694>/OldValue' incorporates:
+     *  ActionPort: '<S697>/Action Port'
+     */
+    BaseEngineController_LS_B.s694_Merge = rtb_Sum1_nl;
+
+    /* End of Outputs for SubSystem: '<S694>/OldValue' */
+  }
+
+  /* End of If: '<S694>/If' */
+
+  /* S-Function Block: <S399>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (MAP09In_DataStore()) = BaseEngineController_LS_B.s659_Merge;
-    (MAP09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s659_Merge, (MAP09IdxArr_DataStore()), 9,
-       (MAP09Idx_DataStore()));
-    BaseEngineController_LS_B.s395_motohawk_prelookup1 = (MAP09Idx_DataStore());
-  }
-
-  /* S-Function Block: <S395>/motohawk_prelookup5 */
-  {
-    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-      ordarr[], uint32_T sz, uint16_T prev);
-    (MAP17In_DataStore()) = BaseEngineController_LS_B.s659_Merge;
-    (MAP17Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s659_Merge, (MAP17IdxArr_DataStore()), 17,
-       (MAP17Idx_DataStore()));
-    BaseEngineController_LS_B.s395_Indexes = (MAP17Idx_DataStore());
-  }
-
-  /* S-Function Block: <S400>/motohawk_prelookup */
-  {
-    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-      ordarr[], uint32_T sz, uint16_T prev);
-    (VSPD09In_DataStore()) = BaseEngineController_LS_B.s416_Switch2;
-    (VSPD09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s416_Switch2, (VSPD09IdxArr_DataStore()), 9,
-       (VSPD09Idx_DataStore()));
-    rtb_motohawk_prelookup_i = (VSPD09Idx_DataStore());
+    (SysVolt09In_DataStore()) = BaseEngineController_LS_B.s694_Merge;
+    (SysVolt09Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s694_Merge, (SysVolt09IdxArr_DataStore()), 9,
+       (SysVolt09Idx_DataStore()));
+    BaseEngineController_LS_B.s399_motohawk_prelookup = (SysVolt09Idx_DataStore());
   }
 
   /* S-Function Block: <S392>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (CAT05In_DataStore()) = BaseEngineController_LS_B.s717_Merge;
-    (CAT05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s717_Merge, (CAT05IdxArr_DataStore()), 5,
-       (CAT05Idx_DataStore()));
-    BaseEngineController_LS_B.s392_motohawk_prelookup = (CAT05Idx_DataStore());
+    (ACPres05In_DataStore()) = BaseEngineController_LS_B.s631_Merge;
+    (ACPres05Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s631_Merge, (ACPres05IdxArr_DataStore()), 5,
+       (ACPres05Idx_DataStore()));
+    BaseEngineController_LS_B.s392_motohawk_prelookup = (ACPres05Idx_DataStore());
   }
 
-  /* S-Function Block: <S396>/motohawk_prelookup */
-  {
-    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
-      ordarr[], uint32_T sz, uint16_T prev);
-    (OXY05In_DataStore()) = BaseEngineController_LS_B.s638_Merge;
-    (OXY05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s638_Merge, (OXY05IdxArr_DataStore()), 5,
-       (OXY05Idx_DataStore()));
-    rtb_motohawk_prelookup_e = (OXY05Idx_DataStore());
-  }
-
-  /* S-Function (motohawk_sfun_data_read): '<S357>/motohawk_data_read1' */
-  BaseEngineController_LS_B.s357_motohawk_data_read1 = EngineState_DataStore();
-
-  /* S-Function Block: <S357>/motohawk_delta_time */
+  /* S-Function Block: <S656>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s357_motohawk_delta_time_DWORK1, NULL);
-    BaseEngineController_LS_B.s357_motohawk_delta_time = ((real_T) delta) *
-      0.000001;
+      (&BaseEngineController_LS_DWork.s656_motohawk_delta_time_DWORK1, NULL);
+    rtb_DataTypeConversion_fq = ((real_T) delta) * 0.000001;
   }
 
-  /* Stateflow: '<S357>/Baro Stall State Delay' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S357>/motohawk_calibration'
+  /* Product: '<S656>/Product' incorporates:
+   *  MinMax: '<S656>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S656>/motohawk_calibration'
    */
-
-  /* Gateway: Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay */
-  /* During: Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay */
-  switch (BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS) {
-   case BaseEngineController_LS_IN_CrankRun:
-    /* During 'CrankRun': '<S363>:2' */
-    if (BaseEngineController_LS_B.s357_motohawk_data_read1 == 1) {
-      /* Transition: '<S363>:6' */
-      BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS =
-        BaseEngineController_LS_IN_StallDelay;
-
-      /* Entry 'StallDelay': '<S363>:3' */
-      BaseEngineController_LS_B.s363_Enable = FALSE;
-      BaseEngineController_LS_B.s363_Timer = 0.0;
-      BaseEngineController_LS_DWork.s363_TOld = 0.0;
-    }
-    break;
-
-   case BaseEngineController_LS_IN_Stall:
-    /* During 'Stall': '<S363>:1' */
-    if (BaseEngineController_LS_B.s357_motohawk_data_read1 > 1) {
-      /* Transition: '<S363>:5' */
-      BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS =
-        BaseEngineController_LS_IN_CrankRun;
-
-      /* Entry 'CrankRun': '<S363>:2' */
-      BaseEngineController_LS_B.s363_Enable = FALSE;
-    }
-    break;
-
-   case BaseEngineController_LS_IN_StallDelay:
-    /* During 'StallDelay': '<S363>:3' */
-    if (BaseEngineController_LS_B.s357_motohawk_data_read1 > 1) {
-      /* Transition: '<S363>:8' */
-      BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS =
-        BaseEngineController_LS_IN_CrankRun;
-
-      /* Entry 'CrankRun': '<S363>:2' */
-      BaseEngineController_LS_B.s363_Enable = FALSE;
-    } else if (((BaseEngineController_LS_B.s357_motohawk_data_read1 == 1) &
-                (BaseEngineController_LS_B.s363_Timer >
-                 (BaroRunStallDelay_DataStore()))) != 0) {
-      /* Transition: '<S363>:7' */
-      BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS =
-        BaseEngineController_LS_IN_Stall;
-
-      /* Entry 'Stall': '<S363>:1' */
-      BaseEngineController_LS_B.s363_Enable = TRUE;
-    } else {
-      BaseEngineController_LS_B.s363_Timer =
-        BaseEngineController_LS_DWork.s363_TOld +
-        BaseEngineController_LS_B.s357_motohawk_delta_time;
-      BaseEngineController_LS_DWork.s363_TOld =
-        BaseEngineController_LS_B.s363_Timer;
-    }
-    break;
-
-   default:
-    /* Transition: '<S363>:4' */
-    BaseEngineController_LS_DWork.s363_is_c19_BaseEngineController_LS =
-      BaseEngineController_LS_IN_Stall;
-
-    /* Entry 'Stall': '<S363>:1' */
-    BaseEngineController_LS_B.s363_Enable = TRUE;
-    break;
-  }
-
-  /* End of Stateflow: '<S357>/Baro Stall State Delay' */
-  /* RelationalOperator: '<S365>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S365>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S365>/motohawk_data_read'
-   */
-  rtb_LogicalOperator6_b = (TPSFinal_DataStore() >= (BaroLearn_TPSPos_DataStore()));
+  rtb_DataTypeConversion_fq /= (rtb_DataTypeConversion_fq >=
+    (MAPFilterConst_DataStore())) || rtIsNaN((MAPFilterConst_DataStore())) ?
+    rtb_DataTypeConversion_fq : (MAPFilterConst_DataStore());
 
   /* Logic: '<S621>/Logical Operator4' incorporates:
    *  S-Function (motohawk_sfun_fault_status): '<S621>/motohawk_fault_status1'
    *  S-Function (motohawk_sfun_fault_status): '<S621>/motohawk_fault_status4'
    */
-  rtb_RelationalOperator5_fz = (IsFaultActive(91) || IsFaultActive(92));
+  rtb_RelationalOperator5_fz = (IsFaultActive(86) || IsFaultActive(87));
 
   /* Logic: '<S621>/Logical Operator6' */
-  rtb_LogicalOperator1_al = !rtb_RelationalOperator5_fz;
+  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
 
   /* Logic: '<S621>/Logical Operator1' incorporates:
    *  S-Function (motohawk_sfun_fault_status): '<S621>/motohawk_fault_status2'
    *  S-Function (motohawk_sfun_fault_status): '<S621>/motohawk_fault_status3'
    */
-  rtb_RelOp_pu = (IsFaultSuspected(91) || IsFaultSuspected(92));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(86) || IsFaultSuspected(87));
 
-  /* S-Function Block: <S444>/motohawk_ain_read1 Resource: MAPSensorPin */
-  {
-    extern NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T
-      *status);
-    MAPSensorPin_AnalogInput_Get
-      (&BaseEngineController_LS_B.s444_motohawk_ain_read1, NULL);
+  /* S-Function (motohawk_sfun_trigger): '<S623>/motohawk_trigger5' */
+  /* Enable for Trigger_FGND_MID_TDC_EVENT_5428p0009 */
+  if (BaseEngineController_LS_DWork.s623_motohawk_trigger5_DWORK1 == 0) {
+    BaseEngineController_LS_DWork.s623_motohawk_trigger5_DWORK1 = 1;
   }
-
-  /* DataTypeConversion: '<S621>/Data Type Conversion' */
-  rtb_DataTypeConversion_fq = (real_T)
-    BaseEngineController_LS_B.s444_motohawk_ain_read1;
 
   /* Product: '<S621>/Product1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S621>/motohawk_calibration4'
    */
-  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_fq * (MAPTimeGain_DataStore
-    ());
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s623_Merge *
+    (MAPGain_DataStore());
 
   /* Sum: '<S621>/Sum1' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S621>/motohawk_calibration5'
    */
   BaseEngineController_LS_B.s621_Sum1 = rtb_DataTypeConversion1_e +
-    (MAPTimeOfst_DataStore());
+    (MAPOfst_DataStore());
 
   /* UnitDelay: '<S621>/Unit Delay1' */
-  rtb_UnitDelay1_n = BaseEngineController_LS_DWork.s621_UnitDelay1_DSTATE;
+  rtb_UnitDelay1_a = BaseEngineController_LS_DWork.s621_UnitDelay1_DSTATE;
 
   /* If: '<S621>/If' incorporates:
    *  Logic: '<S621>/Logical Operator5'
    */
-  if (rtb_LogicalOperator1_al && rtb_RelOp_pu) {
+  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
     /* Outputs for IfAction SubSystem: '<S621>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S664>/Action Port'
+     *  ActionPort: '<S657>/Action Port'
      */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_n, &rtb_Merge_jq);
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_a, &rtb_Merge_in);
 
     /* End of Outputs for SubSystem: '<S621>/If Action Subsystem' */
   } else if (rtb_RelationalOperator5_fz) {
     /* Outputs for IfAction SubSystem: '<S621>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S665>/Action Port'
+     *  ActionPort: '<S658>/Action Port'
      */
-    BaseEngineController_LS_IfActionSubsystem((MAPTimeDfltValue_DataStore()),
-      &rtb_Merge_jq);
+    BaseEngineController_LS_IfActionSubsystem((MAPDfltValue_DataStore()),
+      &rtb_Merge_in);
 
     /* End of Outputs for SubSystem: '<S621>/If Action Subsystem1' */
   } else {
     /* Outputs for IfAction SubSystem: '<S621>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S666>/Action Port'
+     *  ActionPort: '<S659>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s621_Sum1, &rtb_Merge_jq);
+      (BaseEngineController_LS_B.s621_Sum1, &rtb_Merge_in);
 
     /* End of Outputs for SubSystem: '<S621>/If Action Subsystem2' */
   }
 
   /* End of If: '<S621>/If' */
 
-  /* Logic: '<S365>/Logical Operator' incorporates:
-   *  Constant: '<S369>/Constant'
-   *  RelationalOperator: '<S365>/Relational Operator1'
-   *  RelationalOperator: '<S369>/Compare'
-   *  S-Function (motohawk_sfun_calibration): '<S365>/motohawk_calibration2'
+  /* Sum: '<S661>/Sum1' incorporates:
+   *  Constant: '<S661>/Constant'
+   *  Product: '<S661>/Product'
+   *  Product: '<S661>/Product1'
+   *  Sum: '<S661>/Sum'
+   *  UnitDelay: '<S661>/Unit Delay'
    */
-  rtb_RelationalOperator5_fz = (rtb_LogicalOperator6_b && (rtb_Merge_jq >=
-    (BaroLearn_MAP_DataStore())) &&
-    (BaseEngineController_LS_B.s357_motohawk_data_read1 > 1));
+  rtb_Sum1_d4 = (1.0 - rtb_DataTypeConversion_fq) *
+    BaseEngineController_LS_DWork.s661_UnitDelay_DSTATE + rtb_Merge_in *
+    rtb_DataTypeConversion_fq;
 
-  /* S-Function Block: <S370>/motohawk_delta_time */
+  /* If: '<S660>/If' incorporates:
+   *  Inport: '<S662>/In1'
+   *  Inport: '<S663>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S660>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S660>/override_enable'
+   */
+  if ((MAP_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S660>/NewValue' incorporates:
+     *  ActionPort: '<S662>/Action Port'
+     */
+    BaseEngineController_LS_B.s660_Merge = (MAP_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S660>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S660>/OldValue' incorporates:
+     *  ActionPort: '<S663>/Action Port'
+     */
+    BaseEngineController_LS_B.s660_Merge = rtb_Sum1_d4;
+
+    /* End of Outputs for SubSystem: '<S660>/OldValue' */
+  }
+
+  /* End of If: '<S660>/If' */
+
+  /* S-Function Block: <S396>/motohawk_prelookup */
+  {
+    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+      ordarr[], uint32_T sz, uint16_T prev);
+    (MAP05In_DataStore()) = BaseEngineController_LS_B.s660_Merge;
+    (MAP05Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s660_Merge, (MAP05IdxArr_DataStore()), 5,
+       (MAP05Idx_DataStore()));
+    rtb_motohawk_prelookup_m = (MAP05Idx_DataStore());
+  }
+
+  /* S-Function Block: <S396>/motohawk_prelookup1 */
+  {
+    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+      ordarr[], uint32_T sz, uint16_T prev);
+    (MAP09In_DataStore()) = BaseEngineController_LS_B.s660_Merge;
+    (MAP09Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s660_Merge, (MAP09IdxArr_DataStore()), 9,
+       (MAP09Idx_DataStore()));
+    BaseEngineController_LS_B.s396_motohawk_prelookup1 = (MAP09Idx_DataStore());
+  }
+
+  /* S-Function Block: <S396>/motohawk_prelookup5 */
+  {
+    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+      ordarr[], uint32_T sz, uint16_T prev);
+    (MAP17In_DataStore()) = BaseEngineController_LS_B.s660_Merge;
+    (MAP17Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s660_Merge, (MAP17IdxArr_DataStore()), 17,
+       (MAP17Idx_DataStore()));
+    BaseEngineController_LS_B.s396_Indexes = (MAP17Idx_DataStore());
+  }
+
+  /* S-Function Block: <S401>/motohawk_prelookup */
+  {
+    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+      ordarr[], uint32_T sz, uint16_T prev);
+    (VSPD09In_DataStore()) = BaseEngineController_LS_B.s417_Switch2;
+    (VSPD09Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s417_Switch2, (VSPD09IdxArr_DataStore()), 9,
+       (VSPD09Idx_DataStore()));
+    rtb_motohawk_prelookup_i = (VSPD09Idx_DataStore());
+  }
+
+  /* S-Function Block: <S393>/motohawk_prelookup */
+  {
+    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+      ordarr[], uint32_T sz, uint16_T prev);
+    (CAT05In_DataStore()) = BaseEngineController_LS_B.s718_Merge;
+    (CAT05Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s718_Merge, (CAT05IdxArr_DataStore()), 5,
+       (CAT05Idx_DataStore()));
+    BaseEngineController_LS_B.s393_motohawk_prelookup = (CAT05Idx_DataStore());
+  }
+
+  /* S-Function Block: <S397>/motohawk_prelookup */
+  {
+    extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
+      ordarr[], uint32_T sz, uint16_T prev);
+    (OXY05In_DataStore()) = BaseEngineController_LS_B.s639_Merge;
+    (OXY05Idx_DataStore()) = TablePrelookup_real_T
+      (BaseEngineController_LS_B.s639_Merge, (OXY05IdxArr_DataStore()), 5,
+       (OXY05Idx_DataStore()));
+    rtb_motohawk_prelookup_e = (OXY05Idx_DataStore());
+  }
+
+  /* S-Function (motohawk_sfun_data_read): '<S358>/motohawk_data_read1' */
+  BaseEngineController_LS_B.s358_motohawk_data_read1 = EngineState_DataStore();
+
+  /* S-Function Block: <S358>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s370_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s358_motohawk_delta_time_DWORK1, NULL);
+    BaseEngineController_LS_B.s358_motohawk_delta_time = ((real_T) delta) *
+      0.000001;
+  }
+
+  /* Stateflow: '<S358>/Baro Stall State Delay' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S358>/motohawk_calibration'
+   */
+
+  /* Gateway: Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay */
+  /* During: Foreground/Control/VirtualSensors/AirCalcs/Baro Stall State Delay */
+  switch (BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS) {
+   case BaseEngineController_LS_IN_CrankRun:
+    /* During 'CrankRun': '<S364>:2' */
+    if (BaseEngineController_LS_B.s358_motohawk_data_read1 == 1) {
+      /* Transition: '<S364>:6' */
+      BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS =
+        BaseEngineController_LS_IN_StallDelay;
+
+      /* Entry 'StallDelay': '<S364>:3' */
+      BaseEngineController_LS_B.s364_Enable = FALSE;
+      BaseEngineController_LS_B.s364_Timer = 0.0;
+      BaseEngineController_LS_DWork.s364_TOld = 0.0;
+    }
+    break;
+
+   case BaseEngineController_LS_IN_Stall:
+    /* During 'Stall': '<S364>:1' */
+    if (BaseEngineController_LS_B.s358_motohawk_data_read1 > 1) {
+      /* Transition: '<S364>:5' */
+      BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS =
+        BaseEngineController_LS_IN_CrankRun;
+
+      /* Entry 'CrankRun': '<S364>:2' */
+      BaseEngineController_LS_B.s364_Enable = FALSE;
+    }
+    break;
+
+   case BaseEngineController_LS_IN_StallDelay:
+    /* During 'StallDelay': '<S364>:3' */
+    if (BaseEngineController_LS_B.s358_motohawk_data_read1 > 1) {
+      /* Transition: '<S364>:8' */
+      BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS =
+        BaseEngineController_LS_IN_CrankRun;
+
+      /* Entry 'CrankRun': '<S364>:2' */
+      BaseEngineController_LS_B.s364_Enable = FALSE;
+    } else if (((BaseEngineController_LS_B.s358_motohawk_data_read1 == 1) &
+                (BaseEngineController_LS_B.s364_Timer >
+                 (BaroRunStallDelay_DataStore()))) != 0) {
+      /* Transition: '<S364>:7' */
+      BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS =
+        BaseEngineController_LS_IN_Stall;
+
+      /* Entry 'Stall': '<S364>:1' */
+      BaseEngineController_LS_B.s364_Enable = TRUE;
+    } else {
+      BaseEngineController_LS_B.s364_Timer =
+        BaseEngineController_LS_DWork.s364_TOld +
+        BaseEngineController_LS_B.s358_motohawk_delta_time;
+      BaseEngineController_LS_DWork.s364_TOld =
+        BaseEngineController_LS_B.s364_Timer;
+    }
+    break;
+
+   default:
+    /* Transition: '<S364>:4' */
+    BaseEngineController_LS_DWork.s364_is_c19_BaseEngineController_LS =
+      BaseEngineController_LS_IN_Stall;
+
+    /* Entry 'Stall': '<S364>:1' */
+    BaseEngineController_LS_B.s364_Enable = TRUE;
+    break;
+  }
+
+  /* End of Stateflow: '<S358>/Baro Stall State Delay' */
+  /* RelationalOperator: '<S366>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S366>/motohawk_data_read'
+   */
+  rtb_LogicalOperator6_b = (TPSFinal_DataStore() >= (BaroLearn_TPSPos_DataStore()));
+
+  /* Logic: '<S622>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S622>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S622>/motohawk_fault_status4'
+   */
+  rtb_RelationalOperator5_fz = (IsFaultActive(88) || IsFaultActive(89));
+
+  /* Logic: '<S622>/Logical Operator6' */
+  rtb_LogicalOperator1_al = !rtb_RelationalOperator5_fz;
+
+  /* Logic: '<S622>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S622>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S622>/motohawk_fault_status3'
+   */
+  rtb_RelOp_pu = (IsFaultSuspected(88) || IsFaultSuspected(89));
+
+  /* S-Function Block: <S445>/motohawk_ain_read1 Resource: MAPSensorPin */
+  {
+    extern NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T
+      *status);
+    MAPSensorPin_AnalogInput_Get
+      (&BaseEngineController_LS_B.s445_motohawk_ain_read1, NULL);
+  }
+
+  /* DataTypeConversion: '<S622>/Data Type Conversion' */
+  rtb_DataTypeConversion_fq = (real_T)
+    BaseEngineController_LS_B.s445_motohawk_ain_read1;
+
+  /* Product: '<S622>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S622>/motohawk_calibration4'
+   */
+  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_fq * (MAPTimeGain_DataStore
+    ());
+
+  /* Sum: '<S622>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S622>/motohawk_calibration5'
+   */
+  BaseEngineController_LS_B.s622_Sum1 = rtb_DataTypeConversion1_e +
+    (MAPTimeOfst_DataStore());
+
+  /* UnitDelay: '<S622>/Unit Delay1' */
+  rtb_UnitDelay1_n = BaseEngineController_LS_DWork.s622_UnitDelay1_DSTATE;
+
+  /* If: '<S622>/If' incorporates:
+   *  Logic: '<S622>/Logical Operator5'
+   */
+  if (rtb_LogicalOperator1_al && rtb_RelOp_pu) {
+    /* Outputs for IfAction SubSystem: '<S622>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S665>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_n, &rtb_Merge_jq);
+
+    /* End of Outputs for SubSystem: '<S622>/If Action Subsystem' */
+  } else if (rtb_RelationalOperator5_fz) {
+    /* Outputs for IfAction SubSystem: '<S622>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S666>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem((MAPTimeDfltValue_DataStore()),
+      &rtb_Merge_jq);
+
+    /* End of Outputs for SubSystem: '<S622>/If Action Subsystem1' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S622>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S667>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem
+      (BaseEngineController_LS_B.s622_Sum1, &rtb_Merge_jq);
+
+    /* End of Outputs for SubSystem: '<S622>/If Action Subsystem2' */
+  }
+
+  /* End of If: '<S622>/If' */
+
+  /* Logic: '<S366>/Logical Operator' incorporates:
+   *  Constant: '<S370>/Constant'
+   *  RelationalOperator: '<S366>/Relational Operator1'
+   *  RelationalOperator: '<S370>/Compare'
+   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration2'
+   */
+  rtb_RelationalOperator5_fz = (rtb_LogicalOperator6_b && (rtb_Merge_jq >=
+    (BaroLearn_MAP_DataStore())) &&
+    (BaseEngineController_LS_B.s358_motohawk_data_read1 > 1));
+
+  /* S-Function Block: <S371>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s371_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_ok = ((real_T) delta) * 0.000001;
   }
 
-  /* Switch: '<S370>/Switch' incorporates:
-   *  Constant: '<S370>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S370>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S370>/motohawk_delta_time'
-   *  Sum: '<S370>/Sum'
+  /* Switch: '<S371>/Switch' incorporates:
+   *  Constant: '<S371>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S371>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S371>/motohawk_delta_time'
+   *  Sum: '<S371>/Sum'
    */
   if (rtb_RelationalOperator5_fz) {
     rtb_Switch_f = rtb_motohawk_delta_time_ok + BaroLearnTmr_DataStore();
@@ -6879,159 +6875,159 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Switch_f = 0.0;
   }
 
-  /* End of Switch: '<S370>/Switch' */
-  /* Product: '<S365>/Product' incorporates:
-   *  RelationalOperator: '<S365>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S365>/motohawk_calibration'
+  /* End of Switch: '<S371>/Switch' */
+  /* Product: '<S366>/Product' incorporates:
+   *  RelationalOperator: '<S366>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration'
    */
   rtb_Product_mp = (uint16_T)(rtb_RelationalOperator5_fz ? rtb_Switch_f >=
     (BaroLearn_Tm_DataStore()) : 0);
 
-  /* DataTypeConversion: '<S365>/Data Type Conversion' */
+  /* DataTypeConversion: '<S366>/Data Type Conversion' */
   rtb_RelationalOperator5_fz = (rtb_Product_mp != 0);
 
-  /* Outputs for Enabled SubSystem: '<S357>/Capture Signal At Startup' incorporates:
-   *  EnablePort: '<S364>/Enable'
+  /* Outputs for Enabled SubSystem: '<S358>/Capture Signal At Startup' incorporates:
+   *  EnablePort: '<S365>/Enable'
    */
-  /* Logic: '<S357>/Logical Operator' */
-  if (BaseEngineController_LS_B.s363_Enable || rtb_RelationalOperator5_fz) {
-    if (!BaseEngineController_LS_DWork.s357_CaptureSignalAtStartup_MODE) {
-      /* InitializeConditions for UnitDelay: '<S364>/Unit Delay' */
-      BaseEngineController_LS_DWork.s364_UnitDelay_DSTATE = 0;
-      BaseEngineController_LS_DWork.s357_CaptureSignalAtStartup_MODE = TRUE;
+  /* Logic: '<S358>/Logical Operator' */
+  if (BaseEngineController_LS_B.s364_Enable || rtb_RelationalOperator5_fz) {
+    if (!BaseEngineController_LS_DWork.s358_CaptureSignalAtStartup_MODE) {
+      /* InitializeConditions for UnitDelay: '<S365>/Unit Delay' */
+      BaseEngineController_LS_DWork.s365_UnitDelay_DSTATE = 0;
+      BaseEngineController_LS_DWork.s358_CaptureSignalAtStartup_MODE = TRUE;
     }
 
-    /* Sum: '<S364>/Add' incorporates:
-     *  Constant: '<S364>/TwoSampleBuffer ToIgnore'
-     *  S-Function (motohawk_sfun_calibration): '<S364>/motohawk_calibration'
+    /* Sum: '<S365>/Add' incorporates:
+     *  Constant: '<S365>/TwoSampleBuffer ToIgnore'
+     *  S-Function (motohawk_sfun_calibration): '<S365>/motohawk_calibration'
      */
     rtb_Add_k = (int8_T)(((int8_T)(BARO_Count_DataStore())) + 2);
 
-    /* Sum: '<S364>/Sum' incorporates:
-     *  Constant: '<S364>/Constant'
-     *  UnitDelay: '<S364>/Unit Delay'
+    /* Sum: '<S365>/Sum' incorporates:
+     *  Constant: '<S365>/Constant'
+     *  UnitDelay: '<S365>/Unit Delay'
      */
-    rtb_Sum_l3 = (int8_T)(BaseEngineController_LS_DWork.s364_UnitDelay_DSTATE +
+    rtb_Sum_l3 = (int8_T)(BaseEngineController_LS_DWork.s365_UnitDelay_DSTATE +
                           1);
 
-    /* RelationalOperator: '<S364>/Relational Operator' */
+    /* RelationalOperator: '<S365>/Relational Operator' */
     rtb_LogicalOperator6_b = (rtb_Sum_l3 <= rtb_Add_k);
 
-    /* Switch: '<S364>/Switch' */
+    /* Switch: '<S365>/Switch' */
     if (rtb_LogicalOperator6_b) {
       rtb_Add_k = rtb_Sum_l3;
     }
 
-    /* End of Switch: '<S364>/Switch' */
+    /* End of Switch: '<S365>/Switch' */
 
-    /* Sum: '<S364>/Add1' incorporates:
-     *  Constant: '<S364>/TwoSampleBuffer ToIgnore'
+    /* Sum: '<S365>/Add1' incorporates:
+     *  Constant: '<S365>/TwoSampleBuffer ToIgnore'
      */
     rtb_Add1_e = (int8_T)(rtb_Add_k - 2);
 
-    /* Logic: '<S364>/Logical Operator' incorporates:
-     *  Constant: '<S364>/TwoSampleBuffer ToIgnore'
-     *  RelationalOperator: '<S364>/Relational Operator1'
+    /* Logic: '<S365>/Logical Operator' incorporates:
+     *  Constant: '<S365>/TwoSampleBuffer ToIgnore'
+     *  RelationalOperator: '<S365>/Relational Operator1'
      */
     rtb_LogicalOperator_kz = (rtb_LogicalOperator6_b && (rtb_Sum_l3 > 2));
 
-    /* Outputs for Enabled SubSystem: '<S364>/Collect Average' */
+    /* Outputs for Enabled SubSystem: '<S365>/Collect Average' */
     BaseEngineController_LS_CollectAverage(rtb_LogicalOperator_kz, rtb_Add1_e,
-      rtb_Merge_jq, &BaseEngineController_LS_B.s364_CollectAverage,
-      &BaseEngineController_LS_DWork.s364_CollectAverage);
+      rtb_Merge_jq, &BaseEngineController_LS_B.s365_CollectAverage,
+      &BaseEngineController_LS_DWork.s365_CollectAverage);
 
-    /* End of Outputs for SubSystem: '<S364>/Collect Average' */
+    /* End of Outputs for SubSystem: '<S365>/Collect Average' */
 
-    /* Update for UnitDelay: '<S364>/Unit Delay' */
-    BaseEngineController_LS_DWork.s364_UnitDelay_DSTATE = rtb_Add_k;
+    /* Update for UnitDelay: '<S365>/Unit Delay' */
+    BaseEngineController_LS_DWork.s365_UnitDelay_DSTATE = rtb_Add_k;
   } else {
-    if (BaseEngineController_LS_DWork.s357_CaptureSignalAtStartup_MODE) {
-      /* Disable for Enabled SubSystem: '<S364>/Collect Average' */
+    if (BaseEngineController_LS_DWork.s358_CaptureSignalAtStartup_MODE) {
+      /* Disable for Enabled SubSystem: '<S365>/Collect Average' */
       BaseEngineController_LS_CollectAverage_Disable
-        (&BaseEngineController_LS_DWork.s364_CollectAverage);
+        (&BaseEngineController_LS_DWork.s365_CollectAverage);
 
-      /* End of Disable for SubSystem: '<S364>/Collect Average' */
-      BaseEngineController_LS_DWork.s357_CaptureSignalAtStartup_MODE = FALSE;
+      /* End of Disable for SubSystem: '<S365>/Collect Average' */
+      BaseEngineController_LS_DWork.s358_CaptureSignalAtStartup_MODE = FALSE;
     }
   }
 
-  /* End of Logic: '<S357>/Logical Operator' */
-  /* End of Outputs for SubSystem: '<S357>/Capture Signal At Startup' */
+  /* End of Logic: '<S358>/Logical Operator' */
+  /* End of Outputs for SubSystem: '<S358>/Capture Signal At Startup' */
 
-  /* If: '<S367>/If' incorporates:
-   *  Inport: '<S375>/In1'
+  /* If: '<S368>/If' incorporates:
    *  Inport: '<S376>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S367>/override_enable'
-   *  UnitDelay: '<S367>/Unit Delay'
+   *  Inport: '<S377>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S368>/override_enable'
+   *  UnitDelay: '<S368>/Unit Delay'
    */
   if ((BARO_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S367>/NewValue' incorporates:
-     *  ActionPort: '<S375>/Action Port'
-     */
-    rtb_Merge_b3 = BaseEngineController_LS_DWork.s367_UnitDelay_DSTATE;
-
-    /* End of Outputs for SubSystem: '<S367>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S367>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S368>/NewValue' incorporates:
      *  ActionPort: '<S376>/Action Port'
      */
-    rtb_Merge_b3 = BaseEngineController_LS_B.s364_CollectAverage.s368_Product;
+    rtb_Merge_b3 = BaseEngineController_LS_DWork.s368_UnitDelay_DSTATE;
 
-    /* End of Outputs for SubSystem: '<S367>/OldValue' */
+    /* End of Outputs for SubSystem: '<S368>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S368>/OldValue' incorporates:
+     *  ActionPort: '<S377>/Action Port'
+     */
+    rtb_Merge_b3 = BaseEngineController_LS_B.s365_CollectAverage.s369_Product;
+
+    /* End of Outputs for SubSystem: '<S368>/OldValue' */
   }
 
-  /* End of If: '<S367>/If' */
+  /* End of If: '<S368>/If' */
 
-  /* Sum: '<S367>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S367>/offset'
+  /* Sum: '<S368>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S368>/offset'
    */
-  BaseEngineController_LS_B.s367_Sum = rtb_Merge_b3 + (BARO_offset_DataStore());
+  BaseEngineController_LS_B.s368_Sum = rtb_Merge_b3 + (BARO_offset_DataStore());
 
-  /* S-Function Block: <S366>/motohawk_prelookup2 */
+  /* S-Function Block: <S367>/motohawk_prelookup2 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (VEMapIn_DataStore()) = BaseEngineController_LS_B.s659_Merge;
+    (VEMapIn_DataStore()) = BaseEngineController_LS_B.s660_Merge;
     (VEMapIdx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s659_Merge, (VEMapIdxArr_DataStore()), 17,
+      (BaseEngineController_LS_B.s660_Merge, (VEMapIdxArr_DataStore()), 17,
        (VEMapIdx_DataStore()));
     rtb_motohawk_prelookup2_c = (VEMapIdx_DataStore());
   }
 
-  /* S-Function Block: <S366>/motohawk_interpolation_2d */
+  /* S-Function Block: <S367>/motohawk_interpolation_2d */
   {
     extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
       real_T *map_data, uint32_T row_sz, uint32_T col_sz);
     rtb_motohawk_interpolation_2d = TableInterpolation2D_real_T
-      (rtb_motohawk_prelookup2_c, BaseEngineController_LS_B.s397_Indexes,
+      (rtb_motohawk_prelookup2_c, BaseEngineController_LS_B.s398_Indexes,
        (real_T *) ((VolEffMap_DataStore())), 17, 17);
     (VolEff_DataStore()) = rtb_motohawk_interpolation_2d;
   }
 
-  /* S-Function Block: <S366>/motohawk_interpolation_2d2 */
+  /* S-Function Block: <S367>/motohawk_interpolation_2d2 */
   {
     extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
       real_T *map_data, uint32_T row_sz, uint32_T col_sz);
-    BaseEngineController_LS_B.s366_motohawk_interpolation_2d2 =
+    BaseEngineController_LS_B.s367_motohawk_interpolation_2d2 =
       TableInterpolation2D_real_T(rtb_motohawk_prelookup2_c,
-      BaseEngineController_LS_B.s397_Indexes, (real_T *)
+      BaseEngineController_LS_B.s398_Indexes, (real_T *)
       ((VolEffAdaptMap_DataStore())), 17, 17);
     (VolEffAdapt_DataStore()) =
-      BaseEngineController_LS_B.s366_motohawk_interpolation_2d2;
+      BaseEngineController_LS_B.s367_motohawk_interpolation_2d2;
   }
 
-  /* Sum: '<S366>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_interpolation_2d): '<S366>/motohawk_interpolation_2d'
-   *  S-Function (motohawk_sfun_prelookup): '<S366>/motohawk_prelookup2'
+  /* Sum: '<S367>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_interpolation_2d): '<S367>/motohawk_interpolation_2d'
+   *  S-Function (motohawk_sfun_prelookup): '<S367>/motohawk_prelookup2'
    */
-  BaseEngineController_LS_B.s366_Sum = rtb_motohawk_interpolation_2d +
-    BaseEngineController_LS_B.s366_motohawk_interpolation_2d2;
+  BaseEngineController_LS_B.s367_Sum = rtb_motohawk_interpolation_2d +
+    BaseEngineController_LS_B.s367_motohawk_interpolation_2d2;
 
-  /* Saturate: '<S357>/Saturation1' */
-  rtb_Saturation1_c = BaseEngineController_LS_B.s367_Sum >= 1.0 ?
-    BaseEngineController_LS_B.s367_Sum : 1.0;
+  /* Saturate: '<S358>/Saturation1' */
+  rtb_Saturation1_c = BaseEngineController_LS_B.s368_Sum >= 1.0 ?
+    BaseEngineController_LS_B.s368_Sum : 1.0;
 
-  /* S-Function Block: <S366>/motohawk_prelookup1 */
+  /* S-Function Block: <S367>/motohawk_prelookup1 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
@@ -7040,7 +7036,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_prelookup1_c = (BARO09Idx_DataStore());
   }
 
-  /* S-Function Block: <S366>/motohawk_interpolation_1d1 */
+  /* S-Function Block: <S367>/motohawk_interpolation_1d1 */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
@@ -7049,18 +7045,18 @@ void BaseEngineController_LS_Foreground(void)
     (VEBaroCorr_DataStore()) = rtb_motohawk_interpolation_1d1_j;
   }
 
-  /* S-Function Block: <S394>/motohawk_prelookup2 */
+  /* S-Function Block: <S395>/motohawk_prelookup2 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (IAT17In_DataStore()) = BaseEngineController_LS_B.s744_Merge;
+    (IAT17In_DataStore()) = BaseEngineController_LS_B.s745_Merge;
     (IAT17Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s744_Merge, (IAT17IdxArr_DataStore()), 17,
+      (BaseEngineController_LS_B.s745_Merge, (IAT17IdxArr_DataStore()), 17,
        (IAT17Idx_DataStore()));
     rtb_motohawk_prelookup2_b = (IAT17Idx_DataStore());
   }
 
-  /* S-Function Block: <S366>/motohawk_interpolation_2d1 */
+  /* S-Function Block: <S367>/motohawk_interpolation_2d1 */
   {
     extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
       real_T *map_data, uint32_T row_sz, uint32_T col_sz);
@@ -7070,64 +7066,64 @@ void BaseEngineController_LS_Foreground(void)
     (VETempCorr_DataStore()) = rtb_motohawk_interpolation_2d1_n;
   }
 
-  /* Product: '<S366>/Nominal Air Flow Rate' incorporates:
-   *  Constant: '<S366>/Gas Const [J//kg-K]'
-   *  Constant: '<S366>/Units Equivalency Factor'
-   *  DataTypeConversion: '<S366>/Data Type Conversion'
-   *  Fcn: '<S372>/C to K'
-   *  S-Function (motohawk_sfun_data_read): '<S366>/Cylinder Swept Volume [cm3]'
-   *  S-Function (motohawk_sfun_data_read): '<S366>/Number of Combustion Events Per Revolution'
-   *  S-Function (motohawk_sfun_interpolation_1d): '<S366>/motohawk_interpolation_1d1'
-   *  S-Function (motohawk_sfun_interpolation_2d): '<S366>/motohawk_interpolation_2d1'
-   *  S-Function (motohawk_sfun_prelookup): '<S366>/motohawk_prelookup1'
-   *  S-Function (motohawk_sfun_prelookup): '<S393>/motohawk_prelookup1'
-   *  S-Function (motohawk_sfun_prelookup): '<S394>/motohawk_prelookup2'
-   *  Saturate: '<S357>/Saturation1'
+  /* Product: '<S367>/Nominal Air Flow Rate' incorporates:
+   *  Constant: '<S367>/Gas Const [J//kg-K]'
+   *  Constant: '<S367>/Units Equivalency Factor'
+   *  DataTypeConversion: '<S367>/Data Type Conversion'
+   *  Fcn: '<S373>/C to K'
+   *  S-Function (motohawk_sfun_data_read): '<S367>/Cylinder Swept Volume [cm3]'
+   *  S-Function (motohawk_sfun_data_read): '<S367>/Number of Combustion Events Per Revolution'
+   *  S-Function (motohawk_sfun_interpolation_1d): '<S367>/motohawk_interpolation_1d1'
+   *  S-Function (motohawk_sfun_interpolation_2d): '<S367>/motohawk_interpolation_2d1'
+   *  S-Function (motohawk_sfun_prelookup): '<S367>/motohawk_prelookup1'
+   *  S-Function (motohawk_sfun_prelookup): '<S394>/motohawk_prelookup1'
+   *  S-Function (motohawk_sfun_prelookup): '<S395>/motohawk_prelookup2'
+   *  Saturate: '<S358>/Saturation1'
    */
-  BaseEngineController_LS_B.s366_NominalAirFlowRate =
-    BaseEngineController_LS_B.s616_Sum1 * BaseEngineController_LS_B.s659_Merge *
+  BaseEngineController_LS_B.s367_NominalAirFlowRate =
+    BaseEngineController_LS_B.s617_Sum1 * BaseEngineController_LS_B.s660_Merge *
     rtb_motohawk_interpolation_1d1_j * rtb_motohawk_interpolation_2d1_n *
     CylSweptVol_DataStore() * (real_T)((uint8_T)CombEventsPerRev_DataStore()) /
-    (BaseEngineController_LS_B.s744_Merge + 273.2) / 60.0 / 287.0;
+    (BaseEngineController_LS_B.s745_Merge + 273.2) / 60.0 / 287.0;
 
-  /* Product: '<S366>/Model Air Mass Flow Rate' */
-  BaseEngineController_LS_B.s366_ModelAirMassFlowRate =
-    BaseEngineController_LS_B.s366_Sum *
-    BaseEngineController_LS_B.s366_NominalAirFlowRate;
+  /* Product: '<S367>/Model Air Mass Flow Rate' */
+  BaseEngineController_LS_B.s367_ModelAirMassFlowRate =
+    BaseEngineController_LS_B.s367_Sum *
+    BaseEngineController_LS_B.s367_NominalAirFlowRate;
 
-  /* S-Function Block: <S577>/motohawk_delta_time */
+  /* S-Function Block: <S578>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s577_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s578_motohawk_delta_time_DWORK1, NULL);
     rtb_Switch_m = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S577>/Product' incorporates:
-   *  MinMax: '<S577>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S577>/motohawk_calibration'
+  /* Product: '<S578>/Product' incorporates:
+   *  MinMax: '<S578>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S578>/motohawk_calibration'
    */
   rtb_Switch_m /= (rtb_Switch_m >= (MAFFiltConst_DataStore())) || rtIsNaN
     ((MAFFiltConst_DataStore())) ? rtb_Switch_m : (MAFFiltConst_DataStore());
 
-  /* Logic: '<S563>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S563>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S563>/motohawk_fault_status4'
+  /* Logic: '<S564>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S564>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S564>/motohawk_fault_status4'
    */
-  rtb_RelationalOperator5_fz = (IsFaultActive(87) || IsFaultActive(88));
+  rtb_RelationalOperator5_fz = (IsFaultActive(84) || IsFaultActive(85));
 
-  /* Logic: '<S563>/Logical Operator6' */
+  /* Logic: '<S564>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
 
-  /* Logic: '<S563>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S563>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S563>/motohawk_fault_status3'
+  /* Logic: '<S564>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S564>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S564>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(87) || IsFaultSuspected(88));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(84) || IsFaultSuspected(85));
 
-  /* S-Function Block: <S442>/motohawk_frequency_in2 Frequency Input Get: MAF_Pin */
+  /* S-Function Block: <S443>/motohawk_frequency_in2 Frequency Input Get: MAF_Pin */
   {
     extern NativeError_S MAF_Pin_FrequencyInput_Get(uint32_T *frequency, int16_T
       *duty_cycle);
@@ -7135,182 +7131,111 @@ void BaseEngineController_LS_Foreground(void)
       &rtb_DataTypeConversion2_pj);
   }
 
-  /* DataTypeConversion: '<S442>/Data Type Conversion' */
+  /* DataTypeConversion: '<S443>/Data Type Conversion' */
   rtb_Switch_bn = (real_T)rtb_DataTypeConversion6;
 
-  /* Gain: '<S442>/Gain' */
-  BaseEngineController_LS_B.s442_Gain = 0.01 * rtb_Switch_bn;
+  /* Gain: '<S443>/Gain' */
+  BaseEngineController_LS_B.s443_Gain = 0.01 * rtb_Switch_bn;
 
-  /* S-Function Block: <S582>/motohawk_prelookup */
+  /* S-Function Block: <S583>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
     (MAFIdx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s442_Gain, (MAFIdxArr_DataStore()), 13,
+      (BaseEngineController_LS_B.s443_Gain, (MAFIdxArr_DataStore()), 13,
        (MAFIdx_DataStore()));
     rtb_motohawk_prelookup_k = (MAFIdx_DataStore());
   }
 
-  /* S-Function Block: <S582>/motohawk_interpolation_1d */
+  /* S-Function Block: <S583>/motohawk_interpolation_1d */
   {
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
-    BaseEngineController_LS_B.s582_motohawk_interpolation_1d =
+    BaseEngineController_LS_B.s583_motohawk_interpolation_1d =
       TableInterpolation1D_real_T(rtb_motohawk_prelookup_k, (real_T *)
       ((MAFTbl_DataStore())), 13);
   }
 
-  /* UnitDelay: '<S563>/Unit Delay' */
-  rtb_UnitDelay_nr = BaseEngineController_LS_DWork.s563_UnitDelay_DSTATE;
+  /* UnitDelay: '<S564>/Unit Delay' */
+  rtb_UnitDelay_nr = BaseEngineController_LS_DWork.s564_UnitDelay_DSTATE;
 
-  /* If: '<S563>/If' incorporates:
-   *  Logic: '<S563>/Logical Operator5'
+  /* If: '<S564>/If' incorporates:
+   *  Logic: '<S564>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S563>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S578>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S564>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S579>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay_nr, &rtb_Merge_dv);
 
-    /* End of Outputs for SubSystem: '<S563>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S564>/If Action Subsystem' */
   } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S563>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S579>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S564>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S580>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((MAFDefault_DataStore()),
       &rtb_Merge_dv);
 
-    /* End of Outputs for SubSystem: '<S563>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S564>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S563>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S580>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S564>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S581>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s582_motohawk_interpolation_1d, &rtb_Merge_dv);
+      (BaseEngineController_LS_B.s583_motohawk_interpolation_1d, &rtb_Merge_dv);
 
-    /* End of Outputs for SubSystem: '<S563>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S564>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S563>/If' */
+  /* End of If: '<S564>/If' */
 
-  /* Sum: '<S583>/Sum1' incorporates:
-   *  Constant: '<S583>/Constant'
-   *  Product: '<S583>/Product'
-   *  Product: '<S583>/Product1'
-   *  Sum: '<S583>/Sum'
-   *  UnitDelay: '<S583>/Unit Delay'
+  /* Sum: '<S584>/Sum1' incorporates:
+   *  Constant: '<S584>/Constant'
+   *  Product: '<S584>/Product'
+   *  Product: '<S584>/Product1'
+   *  Sum: '<S584>/Sum'
+   *  UnitDelay: '<S584>/Unit Delay'
    */
   rtb_Sum1_fm = (1.0 - rtb_Switch_m) *
-    BaseEngineController_LS_DWork.s583_UnitDelay_DSTATE + rtb_Merge_dv *
+    BaseEngineController_LS_DWork.s584_UnitDelay_DSTATE + rtb_Merge_dv *
     rtb_Switch_m;
 
-  /* If: '<S581>/If' incorporates:
-   *  Inport: '<S584>/In1'
+  /* If: '<S582>/If' incorporates:
    *  Inport: '<S585>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S581>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S581>/override_enable'
+   *  Inport: '<S586>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S582>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S582>/override_enable'
    */
   if ((MAF_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S581>/NewValue' incorporates:
-     *  ActionPort: '<S584>/Action Port'
-     */
-    BaseEngineController_LS_B.s581_Merge = (MAF_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S581>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S581>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S582>/NewValue' incorporates:
      *  ActionPort: '<S585>/Action Port'
      */
-    BaseEngineController_LS_B.s581_Merge = rtb_Sum1_fm;
+    BaseEngineController_LS_B.s582_Merge = (MAF_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S581>/OldValue' */
+    /* End of Outputs for SubSystem: '<S582>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S582>/OldValue' incorporates:
+     *  ActionPort: '<S586>/Action Port'
+     */
+    BaseEngineController_LS_B.s582_Merge = rtb_Sum1_fm;
+
+    /* End of Outputs for SubSystem: '<S582>/OldValue' */
   }
 
-  /* End of If: '<S581>/If' */
+  /* End of If: '<S582>/If' */
 
-  /* MultiPortSwitch: '<S366>/Multiport Switch' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration1'
+  /* MultiPortSwitch: '<S367>/Multiport Switch' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S367>/motohawk_calibration1'
    */
   if (((uint8_T)(MAF_Source_DataStore())) == 0) {
-    BaseEngineController_LS_B.s366_MultiportSwitch =
-      BaseEngineController_LS_B.s366_ModelAirMassFlowRate;
+    BaseEngineController_LS_B.s367_MultiportSwitch =
+      BaseEngineController_LS_B.s367_ModelAirMassFlowRate;
   } else {
-    BaseEngineController_LS_B.s366_MultiportSwitch =
-      BaseEngineController_LS_B.s581_Merge;
+    BaseEngineController_LS_B.s367_MultiportSwitch =
+      BaseEngineController_LS_B.s582_Merge;
   }
 
-  /* End of MultiPortSwitch: '<S366>/Multiport Switch' */
-  /* S-Function Block: <S383>/motohawk_delta_time */
-  rtb_Switch_bn = 0.005;
-
-  /* UnitDelay: '<S383>/Unit Delay2' */
-  rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s383_UnitDelay2_DSTATE;
-
-  /* RelationalOperator: '<S383>/Relational Operator4' incorporates:
-   *  UnitDelay: '<S383>/Unit Delay2'
-   */
-  BaseEngineController_LS_B.s383_RelationalOperator4 =
-    ((BaseEngineController_LS_DWork.s383_UnitDelay2_DSTATE <
-      BaseEngineController_LS_B.s616_Sum1));
-
-  /* Outputs for Enabled SubSystem: '<S383>/IncreasingFilter' incorporates:
-   *  EnablePort: '<S387>/Enable'
-   */
-  if (BaseEngineController_LS_B.s383_RelationalOperator4) {
-    /* S-Function (motohawk_sfun_calibration): '<S387>/motohawk_calibration1' */
-    BaseEngineController_LS_B.s383_Merge = (SSRPMIncFiltC_DataStore());
-  }
-
-  /* End of Outputs for SubSystem: '<S383>/IncreasingFilter' */
-
-  /* Outputs for Enabled SubSystem: '<S383>/DecreasingFilter' incorporates:
-   *  EnablePort: '<S385>/Enable'
-   */
-  /* RelationalOperator: '<S383>/Relational Operator3' */
-  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s616_Sum1) {
-    /* S-Function (motohawk_sfun_calibration): '<S385>/motohawk_calibration2' */
-    BaseEngineController_LS_B.s383_Merge = (SSRPMDecFiltC_DataStore());
-  }
-
-  /* End of RelationalOperator: '<S383>/Relational Operator3' */
-  /* End of Outputs for SubSystem: '<S383>/DecreasingFilter' */
-
-  /* Product: '<S383>/Product' incorporates:
-   *  MinMax: '<S383>/MinMax'
-   */
-  rtb_Switch_bn /= (rtb_Switch_bn >= BaseEngineController_LS_B.s383_Merge) ||
-    rtIsNaN(BaseEngineController_LS_B.s383_Merge) ? rtb_Switch_bn :
-    BaseEngineController_LS_B.s383_Merge;
-
-  /* Sum: '<S386>/Sum1' incorporates:
-   *  Constant: '<S386>/Constant'
-   *  Product: '<S386>/Product'
-   *  Product: '<S386>/Product1'
-   *  Sum: '<S386>/Sum'
-   *  UnitDelay: '<S386>/Unit Delay'
-   */
-  BaseEngineController_LS_B.s386_Sum1 = (1.0 - rtb_Switch_bn) *
-    BaseEngineController_LS_DWork.s386_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s616_Sum1 * rtb_Switch_bn;
-
-  /* Sum: '<S382>/Sum1' */
-  rtb_Switch_bn = BaseEngineController_LS_B.s616_Sum1 -
-    BaseEngineController_LS_B.s386_Sum1;
-
-  /* Abs: '<S382>/Abs1' */
-  rtb_Switch_bn = fabs(rtb_Switch_bn);
-
-  /* RelationalOperator: '<S382>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S382>/Steady-state RPM Tolerance [RPM]'
-   */
-  rtb_LogicalOperator6_b = (rtb_Switch_bn <= (SSRPMTol_DataStore()));
-
-  /* RelationalOperator: '<S382>/Relational Operator2' incorporates:
-   *  Constant: '<S382>/Constant'
-   */
-  rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s616_Sum1 > 0.0);
-
+  /* End of MultiPortSwitch: '<S367>/Multiport Switch' */
   /* S-Function Block: <S384>/motohawk_delta_time */
   rtb_Switch_bn = 0.005;
 
@@ -7323,25 +7248,25 @@ void BaseEngineController_LS_Foreground(void)
    */
   BaseEngineController_LS_B.s384_RelationalOperator4 =
     ((BaseEngineController_LS_DWork.s384_UnitDelay2_DSTATE <
-      BaseEngineController_LS_B.s659_Merge));
+      BaseEngineController_LS_B.s617_Sum1));
 
   /* Outputs for Enabled SubSystem: '<S384>/IncreasingFilter' incorporates:
-   *  EnablePort: '<S390>/Enable'
+   *  EnablePort: '<S388>/Enable'
    */
   if (BaseEngineController_LS_B.s384_RelationalOperator4) {
-    /* S-Function (motohawk_sfun_calibration): '<S390>/motohawk_calibration1' */
-    BaseEngineController_LS_B.s384_Merge = (SSLoadIncFiltC_DataStore());
+    /* S-Function (motohawk_sfun_calibration): '<S388>/motohawk_calibration1' */
+    BaseEngineController_LS_B.s384_Merge = (SSRPMIncFiltC_DataStore());
   }
 
   /* End of Outputs for SubSystem: '<S384>/IncreasingFilter' */
 
   /* Outputs for Enabled SubSystem: '<S384>/DecreasingFilter' incorporates:
-   *  EnablePort: '<S388>/Enable'
+   *  EnablePort: '<S386>/Enable'
    */
   /* RelationalOperator: '<S384>/Relational Operator3' */
-  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s659_Merge) {
-    /* S-Function (motohawk_sfun_calibration): '<S388>/motohawk_calibration2' */
-    BaseEngineController_LS_B.s384_Merge = (SSLoadDecFiltC_DataStore());
+  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s617_Sum1) {
+    /* S-Function (motohawk_sfun_calibration): '<S386>/motohawk_calibration2' */
+    BaseEngineController_LS_B.s384_Merge = (SSRPMDecFiltC_DataStore());
   }
 
   /* End of RelationalOperator: '<S384>/Relational Operator3' */
@@ -7354,186 +7279,257 @@ void BaseEngineController_LS_Foreground(void)
     rtIsNaN(BaseEngineController_LS_B.s384_Merge) ? rtb_Switch_bn :
     BaseEngineController_LS_B.s384_Merge;
 
-  /* Sum: '<S389>/Sum1' incorporates:
-   *  Constant: '<S389>/Constant'
-   *  Product: '<S389>/Product'
-   *  Product: '<S389>/Product1'
-   *  Sum: '<S389>/Sum'
-   *  UnitDelay: '<S389>/Unit Delay'
+  /* Sum: '<S387>/Sum1' incorporates:
+   *  Constant: '<S387>/Constant'
+   *  Product: '<S387>/Product'
+   *  Product: '<S387>/Product1'
+   *  Sum: '<S387>/Sum'
+   *  UnitDelay: '<S387>/Unit Delay'
    */
-  BaseEngineController_LS_B.s389_Sum1 = (1.0 - rtb_Switch_bn) *
-    BaseEngineController_LS_DWork.s389_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s659_Merge * rtb_Switch_bn;
+  BaseEngineController_LS_B.s387_Sum1 = (1.0 - rtb_Switch_bn) *
+    BaseEngineController_LS_DWork.s387_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s617_Sum1 * rtb_Switch_bn;
 
-  /* Sum: '<S382>/Sum' */
-  rtb_Switch_bn = BaseEngineController_LS_B.s659_Merge -
-    BaseEngineController_LS_B.s389_Sum1;
+  /* Sum: '<S383>/Sum1' */
+  rtb_Switch_bn = BaseEngineController_LS_B.s617_Sum1 -
+    BaseEngineController_LS_B.s387_Sum1;
 
-  /* Abs: '<S382>/Abs' */
+  /* Abs: '<S383>/Abs1' */
   rtb_Switch_bn = fabs(rtb_Switch_bn);
 
-  /* Logic: '<S382>/Logical Operator' incorporates:
-   *  RelationalOperator: '<S382>/Relational Operator'
-   *  S-Function (motohawk_sfun_calibration): '<S382>/Steady-state Torque Tolerance [N.m]'
+  /* RelationalOperator: '<S383>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S383>/Steady-state RPM Tolerance [RPM]'
    */
-  BaseEngineController_LS_B.s382_LogicalOperator = ((rtb_LogicalOperator6_b &&
+  rtb_LogicalOperator6_b = (rtb_Switch_bn <= (SSRPMTol_DataStore()));
+
+  /* RelationalOperator: '<S383>/Relational Operator2' incorporates:
+   *  Constant: '<S383>/Constant'
+   */
+  rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s617_Sum1 > 0.0);
+
+  /* S-Function Block: <S385>/motohawk_delta_time */
+  rtb_Switch_bn = 0.005;
+
+  /* UnitDelay: '<S385>/Unit Delay2' */
+  rtb_DataTypeConversion1_e =
+    BaseEngineController_LS_DWork.s385_UnitDelay2_DSTATE;
+
+  /* RelationalOperator: '<S385>/Relational Operator4' incorporates:
+   *  UnitDelay: '<S385>/Unit Delay2'
+   */
+  BaseEngineController_LS_B.s385_RelationalOperator4 =
+    ((BaseEngineController_LS_DWork.s385_UnitDelay2_DSTATE <
+      BaseEngineController_LS_B.s660_Merge));
+
+  /* Outputs for Enabled SubSystem: '<S385>/IncreasingFilter' incorporates:
+   *  EnablePort: '<S391>/Enable'
+   */
+  if (BaseEngineController_LS_B.s385_RelationalOperator4) {
+    /* S-Function (motohawk_sfun_calibration): '<S391>/motohawk_calibration1' */
+    BaseEngineController_LS_B.s385_Merge = (SSLoadIncFiltC_DataStore());
+  }
+
+  /* End of Outputs for SubSystem: '<S385>/IncreasingFilter' */
+
+  /* Outputs for Enabled SubSystem: '<S385>/DecreasingFilter' incorporates:
+   *  EnablePort: '<S389>/Enable'
+   */
+  /* RelationalOperator: '<S385>/Relational Operator3' */
+  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s660_Merge) {
+    /* S-Function (motohawk_sfun_calibration): '<S389>/motohawk_calibration2' */
+    BaseEngineController_LS_B.s385_Merge = (SSLoadDecFiltC_DataStore());
+  }
+
+  /* End of RelationalOperator: '<S385>/Relational Operator3' */
+  /* End of Outputs for SubSystem: '<S385>/DecreasingFilter' */
+
+  /* Product: '<S385>/Product' incorporates:
+   *  MinMax: '<S385>/MinMax'
+   */
+  rtb_Switch_bn /= (rtb_Switch_bn >= BaseEngineController_LS_B.s385_Merge) ||
+    rtIsNaN(BaseEngineController_LS_B.s385_Merge) ? rtb_Switch_bn :
+    BaseEngineController_LS_B.s385_Merge;
+
+  /* Sum: '<S390>/Sum1' incorporates:
+   *  Constant: '<S390>/Constant'
+   *  Product: '<S390>/Product'
+   *  Product: '<S390>/Product1'
+   *  Sum: '<S390>/Sum'
+   *  UnitDelay: '<S390>/Unit Delay'
+   */
+  BaseEngineController_LS_B.s390_Sum1 = (1.0 - rtb_Switch_bn) *
+    BaseEngineController_LS_DWork.s390_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s660_Merge * rtb_Switch_bn;
+
+  /* Sum: '<S383>/Sum' */
+  rtb_Switch_bn = BaseEngineController_LS_B.s660_Merge -
+    BaseEngineController_LS_B.s390_Sum1;
+
+  /* Abs: '<S383>/Abs' */
+  rtb_Switch_bn = fabs(rtb_Switch_bn);
+
+  /* Logic: '<S383>/Logical Operator' incorporates:
+   *  RelationalOperator: '<S383>/Relational Operator'
+   *  S-Function (motohawk_sfun_calibration): '<S383>/Steady-state Torque Tolerance [N.m]'
+   */
+  BaseEngineController_LS_B.s383_LogicalOperator = ((rtb_LogicalOperator6_b &&
     rtb_LogicalOperator1_al && (rtb_Switch_bn <= (SSLoadTol_DataStore()))));
 
-  /* S-Function Block: <S438>/motohawk_prelookup */
+  /* S-Function Block: <S439>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (MAFPort05In_DataStore()) = BaseEngineController_LS_B.s366_MultiportSwitch;
+    (MAFPort05In_DataStore()) = BaseEngineController_LS_B.s367_MultiportSwitch;
     (MAFPort05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s366_MultiportSwitch,
+      (BaseEngineController_LS_B.s367_MultiportSwitch,
        (MAFPort05IdxArr_DataStore()), 5, (MAFPort05Idx_DataStore()));
     rtb_motohawk_prelookup_o = (MAFPort05Idx_DataStore());
   }
 
-  /* RelationalOperator: '<S411>/RelOp' incorporates:
-   *  Constant: '<S411>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S361>/motohawk_data_read'
+  /* RelationalOperator: '<S412>/RelOp' incorporates:
+   *  Constant: '<S412>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S362>/motohawk_data_read'
    */
   rtb_RelOp_d = (((uint8_T)EngineState_DataStore()) == 1);
 
-  /* Outputs for Enabled SubSystem: '<S361>/Capture ECT At Startup' incorporates:
-   *  EnablePort: '<S403>/Enable'
+  /* Outputs for Enabled SubSystem: '<S362>/Capture ECT At Startup' incorporates:
+   *  EnablePort: '<S404>/Enable'
    */
   if (rtb_RelOp_d) {
-    if (!BaseEngineController_LS_DWork.s361_CaptureECTAtStartup_MODE) {
-      /* InitializeConditions for UnitDelay: '<S403>/Unit Delay' */
-      BaseEngineController_LS_DWork.s403_UnitDelay_DSTATE = 0;
-      BaseEngineController_LS_DWork.s361_CaptureECTAtStartup_MODE = TRUE;
+    if (!BaseEngineController_LS_DWork.s362_CaptureECTAtStartup_MODE) {
+      /* InitializeConditions for UnitDelay: '<S404>/Unit Delay' */
+      BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE = 0;
+      BaseEngineController_LS_DWork.s362_CaptureECTAtStartup_MODE = TRUE;
     }
 
-    /* Sum: '<S403>/Sum' incorporates:
-     *  Constant: '<S403>/Constant'
-     *  UnitDelay: '<S403>/Unit Delay'
+    /* Sum: '<S404>/Sum' incorporates:
+     *  Constant: '<S404>/Constant'
+     *  UnitDelay: '<S404>/Unit Delay'
      */
-    rtb_Add_k = (int8_T)(BaseEngineController_LS_DWork.s403_UnitDelay_DSTATE + 1);
+    rtb_Add_k = (int8_T)(BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE + 1);
 
-    /* Sum: '<S403>/Add' incorporates:
-     *  Constant: '<S403>/TwoSampleBuffer ToIgnore'
-     *  S-Function (motohawk_sfun_calibration): '<S403>/motohawk_calibration'
+    /* Sum: '<S404>/Add' incorporates:
+     *  Constant: '<S404>/TwoSampleBuffer ToIgnore'
+     *  S-Function (motohawk_sfun_calibration): '<S404>/motohawk_calibration'
      */
     rtb_Sum_l3 = (int8_T)(((int8_T)(ECT_KeyUp_Count_DataStore())) + 2);
 
-    /* RelationalOperator: '<S403>/Relational Operator' */
+    /* RelationalOperator: '<S404>/Relational Operator' */
     rtb_LogicalOperator6_b = (rtb_Add_k <= rtb_Sum_l3);
 
-    /* Switch: '<S403>/Switch' */
+    /* Switch: '<S404>/Switch' */
     if (rtb_LogicalOperator6_b) {
       rtb_Sum_l3 = rtb_Add_k;
     }
 
-    /* End of Switch: '<S403>/Switch' */
+    /* End of Switch: '<S404>/Switch' */
 
-    /* Sum: '<S403>/Add1' incorporates:
-     *  Constant: '<S403>/TwoSampleBuffer ToIgnore'
+    /* Sum: '<S404>/Add1' incorporates:
+     *  Constant: '<S404>/TwoSampleBuffer ToIgnore'
      */
     rtb_Add1_k3 = (int8_T)(rtb_Sum_l3 - 2);
 
-    /* Logic: '<S403>/Logical Operator' incorporates:
-     *  Constant: '<S403>/TwoSampleBuffer ToIgnore'
-     *  RelationalOperator: '<S403>/Relational Operator1'
+    /* Logic: '<S404>/Logical Operator' incorporates:
+     *  Constant: '<S404>/TwoSampleBuffer ToIgnore'
+     *  RelationalOperator: '<S404>/Relational Operator1'
      */
     rtb_LogicalOperator_mr = (rtb_LogicalOperator6_b && (rtb_Add_k > 2));
 
-    /* Outputs for Enabled SubSystem: '<S403>/Collect Average' */
+    /* Outputs for Enabled SubSystem: '<S404>/Collect Average' */
     BaseEngineController_LS_CollectAverage(rtb_LogicalOperator_mr, rtb_Add1_k3,
-      BaseEngineController_LS_B.s710_Merge,
-      &BaseEngineController_LS_B.s403_CollectAverage,
-      &BaseEngineController_LS_DWork.s403_CollectAverage);
+      BaseEngineController_LS_B.s711_Merge,
+      &BaseEngineController_LS_B.s404_CollectAverage,
+      &BaseEngineController_LS_DWork.s404_CollectAverage);
 
-    /* End of Outputs for SubSystem: '<S403>/Collect Average' */
+    /* End of Outputs for SubSystem: '<S404>/Collect Average' */
 
-    /* Update for UnitDelay: '<S403>/Unit Delay' */
-    BaseEngineController_LS_DWork.s403_UnitDelay_DSTATE = rtb_Sum_l3;
+    /* Update for UnitDelay: '<S404>/Unit Delay' */
+    BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE = rtb_Sum_l3;
   } else {
-    if (BaseEngineController_LS_DWork.s361_CaptureECTAtStartup_MODE) {
-      /* Disable for Enabled SubSystem: '<S403>/Collect Average' */
+    if (BaseEngineController_LS_DWork.s362_CaptureECTAtStartup_MODE) {
+      /* Disable for Enabled SubSystem: '<S404>/Collect Average' */
       BaseEngineController_LS_CollectAverage_Disable
-        (&BaseEngineController_LS_DWork.s403_CollectAverage);
+        (&BaseEngineController_LS_DWork.s404_CollectAverage);
 
-      /* End of Disable for SubSystem: '<S403>/Collect Average' */
-      BaseEngineController_LS_DWork.s361_CaptureECTAtStartup_MODE = FALSE;
+      /* End of Disable for SubSystem: '<S404>/Collect Average' */
+      BaseEngineController_LS_DWork.s362_CaptureECTAtStartup_MODE = FALSE;
     }
   }
 
-  /* End of Outputs for SubSystem: '<S361>/Capture ECT At Startup' */
-  /* S-Function Block: <S436>/motohawk_prelookup */
+  /* End of Outputs for SubSystem: '<S362>/Capture ECT At Startup' */
+  /* S-Function Block: <S437>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
     (ECT_KeyUp09In_DataStore()) =
-      BaseEngineController_LS_B.s403_CollectAverage.s368_Product;
+      BaseEngineController_LS_B.s404_CollectAverage.s369_Product;
     (ECT_KeyUp09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s403_CollectAverage.s368_Product,
+      (BaseEngineController_LS_B.s404_CollectAverage.s369_Product,
        (ECT_KeyUp09IdxArr_DataStore()), 9, (ECT_KeyUp09Idx_DataStore()));
     rtb_motohawk_prelookup_j = (ECT_KeyUp09Idx_DataStore());
   }
 
-  /* Sum: '<S425>/Sum2' incorporates:
-   *  UnitDelay: '<S425>/Unit Delay'
+  /* Sum: '<S426>/Sum2' incorporates:
+   *  UnitDelay: '<S426>/Unit Delay'
    */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s616_Sum1 -
-    BaseEngineController_LS_DWork.s425_UnitDelay_DSTATE;
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s617_Sum1 -
+    BaseEngineController_LS_DWork.s426_UnitDelay_DSTATE;
 
-  /* S-Function Block: <S425>/motohawk_delta_time */
+  /* S-Function Block: <S426>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s425_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s426_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_ow = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S425>/Product' incorporates:
-   *  S-Function (motohawk_sfun_delta_time): '<S425>/motohawk_delta_time'
+  /* Product: '<S426>/Product' incorporates:
+   *  S-Function (motohawk_sfun_delta_time): '<S426>/motohawk_delta_time'
    */
   rtb_DataTypeConversion1_e /= rtb_motohawk_delta_time_ow;
 
-  /* S-Function Block: <S426>/motohawk_delta_time */
+  /* S-Function Block: <S427>/motohawk_delta_time */
   rtb_Switch_bn = 0.005;
 
-  /* Product: '<S426>/Product' incorporates:
-   *  MinMax: '<S426>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S426>/motohawk_calibration'
+  /* Product: '<S427>/Product' incorporates:
+   *  MinMax: '<S427>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S427>/motohawk_calibration'
    */
   rtb_Switch_bn /= (rtb_Switch_bn >= (EngineAccelFiltConst_DataStore())) ||
     rtIsNaN((EngineAccelFiltConst_DataStore())) ? rtb_Switch_bn :
     (EngineAccelFiltConst_DataStore());
 
-  /* Sum: '<S427>/Sum1' incorporates:
-   *  Constant: '<S427>/Constant'
-   *  Product: '<S427>/Product'
-   *  Product: '<S427>/Product1'
-   *  Sum: '<S427>/Sum'
-   *  UnitDelay: '<S427>/Unit Delay'
+  /* Sum: '<S428>/Sum1' incorporates:
+   *  Constant: '<S428>/Constant'
+   *  Product: '<S428>/Product'
+   *  Product: '<S428>/Product1'
+   *  Sum: '<S428>/Sum'
+   *  UnitDelay: '<S428>/Unit Delay'
    */
-  BaseEngineController_LS_B.s427_Sum1 = (1.0 - rtb_Switch_bn) *
-    BaseEngineController_LS_DWork.s427_UnitDelay_DSTATE +
+  BaseEngineController_LS_B.s428_Sum1 = (1.0 - rtb_Switch_bn) *
+    BaseEngineController_LS_DWork.s428_UnitDelay_DSTATE +
     rtb_DataTypeConversion1_e * rtb_Switch_bn;
 
-  /* S-Function Block: <S362>/motohawk_prelookup */
+  /* S-Function Block: <S363>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (RPMAccel17In_DataStore()) = BaseEngineController_LS_B.s427_Sum1;
+    (RPMAccel17In_DataStore()) = BaseEngineController_LS_B.s428_Sum1;
     (RPMAccel17Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s427_Sum1, (RPMAccel17IdxArr_DataStore()), 17,
+      (BaseEngineController_LS_B.s428_Sum1, (RPMAccel17IdxArr_DataStore()), 17,
        (RPMAccel17Idx_DataStore()));
-    BaseEngineController_LS_B.s362_RPMAccel17Idx = (RPMAccel17Idx_DataStore());
+    BaseEngineController_LS_B.s363_RPMAccel17Idx = (RPMAccel17Idx_DataStore());
   }
 
-  /* S-Function Block: <S362>/motohawk_prelookup2 */
+  /* S-Function Block: <S363>/motohawk_prelookup2 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (TimeSinceRun09In_DataStore()) = BaseEngineController_LS_B.s433_Switch;
+    (TimeSinceRun09In_DataStore()) = BaseEngineController_LS_B.s434_Switch;
     (TimeSinceRun09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s433_Switch, (TimeSinceRun09IdxArr_DataStore()),
+      (BaseEngineController_LS_B.s434_Switch, (TimeSinceRun09IdxArr_DataStore()),
        9, (TimeSinceRun09Idx_DataStore()));
     rtb_TimeSinceRun09 = (TimeSinceRun09Idx_DataStore());
   }
@@ -7541,95 +7537,151 @@ void BaseEngineController_LS_Foreground(void)
   /* RelationalOperator: '<S137>/RelOp' incorporates:
    *  Constant: '<S137>/Constant'
    */
-  rtb_RelOp_hf = (BaseEngineController_LS_B.s428_State == 3);
+  rtb_RelOp_hf = (BaseEngineController_LS_B.s429_State == 3);
 
-  /* S-Function Block: <S442>/motohawk_ain1 Resource: ClutchSw_Pin */
+  /* DataTypeConversion: '<S449>/Data Type Conversion6' */
+  BaseEngineController_LS_B.s449_DataTypeConversion6 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage1_o8 != 0.0));
+
+  /* If: '<S498>/If' incorporates:
+   *  Inport: '<S539>/In1'
+   *  Inport: '<S540>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S498>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S498>/override_enable'
+   */
+  if ((Bank2_DataValidState_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S498>/NewValue' incorporates:
+     *  ActionPort: '<S539>/Action Port'
+     */
+    rtb_Merge_oq = (Bank2_DataValidState_Ovr_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S498>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S498>/OldValue' incorporates:
+     *  ActionPort: '<S540>/Action Port'
+     */
+    rtb_Merge_oq = BaseEngineController_LS_B.s449_DataTypeConversion6;
+
+    /* End of Outputs for SubSystem: '<S498>/OldValue' */
+  }
+
+  /* End of If: '<S498>/If' */
+
+  /* DataTypeConversion: '<S449>/Data Type Conversion2' */
+  BaseEngineController_LS_B.s449_DataTypeConversion2 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage_o8 != 0.0));
+
+  /* If: '<S505>/If' incorporates:
+   *  Inport: '<S553>/In1'
+   *  Inport: '<S554>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S505>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S505>/override_enable'
+   */
+  if ((Bank1_DataValidState_Ovr_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S505>/NewValue' incorporates:
+     *  ActionPort: '<S553>/Action Port'
+     */
+    rtb_Merge_iz = (Bank1_DataValidState_Ovr_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S505>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S505>/OldValue' incorporates:
+     *  ActionPort: '<S554>/Action Port'
+     */
+    rtb_Merge_iz = BaseEngineController_LS_B.s449_DataTypeConversion2;
+
+    /* End of Outputs for SubSystem: '<S505>/OldValue' */
+  }
+
+  /* End of If: '<S505>/If' */
+
+  /* S-Function Block: <S443>/motohawk_ain1 Resource: ClutchSw_Pin */
   {
     extern NativeError_S ClutchSw_Pin_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
     ClutchSw_Pin_AnalogInput_Get(&rtb_motohawk_ain1, NULL);
   }
 
-  /* DataTypeConversion: '<S561>/Data Type Conversion' incorporates:
-   *  S-Function (motohawk_sfun_ain): '<S442>/motohawk_ain1'
+  /* DataTypeConversion: '<S562>/Data Type Conversion' incorporates:
+   *  S-Function (motohawk_sfun_ain): '<S443>/motohawk_ain1'
    */
-  BaseEngineController_LS_B.s561_DataTypeConversion = (real_T)rtb_motohawk_ain1;
+  BaseEngineController_LS_B.s562_DataTypeConversion = (real_T)rtb_motohawk_ain1;
 
-  /* RelationalOperator: '<S561>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S561>/SwitchPoint'
+  /* RelationalOperator: '<S562>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S562>/SwitchPoint'
    */
-  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s561_DataTypeConversion >
+  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s562_DataTypeConversion >
                             (ClutchSwSwitchPt_DataStore()));
 
-  /* Logic: '<S561>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S561>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S562>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S562>/0 = No Inversion 1 = Inversion'
    */
   rtb_LogicalOperator6_b ^= (ClutchSwPolarity_DataStore());
 
-  /* If: '<S571>/If' incorporates:
-   *  Inport: '<S572>/In1'
+  /* If: '<S572>/If' incorporates:
    *  Inport: '<S573>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S571>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S571>/override_enable'
+   *  Inport: '<S574>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S572>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S572>/override_enable'
    */
   if ((ClutchSw_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S571>/NewValue' incorporates:
-     *  ActionPort: '<S572>/Action Port'
-     */
-    BaseEngineController_LS_B.s571_Merge = (ClutchSw_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S571>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S571>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S572>/NewValue' incorporates:
      *  ActionPort: '<S573>/Action Port'
      */
-    BaseEngineController_LS_B.s571_Merge = rtb_LogicalOperator6_b;
+    BaseEngineController_LS_B.s572_Merge = (ClutchSw_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S571>/OldValue' */
+    /* End of Outputs for SubSystem: '<S572>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S572>/OldValue' incorporates:
+     *  ActionPort: '<S574>/Action Port'
+     */
+    BaseEngineController_LS_B.s572_Merge = rtb_LogicalOperator6_b;
+
+    /* End of Outputs for SubSystem: '<S572>/OldValue' */
   }
 
-  /* End of If: '<S571>/If' */
+  /* End of If: '<S572>/If' */
 
-  /* S-Function Block: <S442>/motohawk_ain6 Resource: ScramblePin */
+  /* S-Function Block: <S443>/motohawk_ain6 Resource: ScramblePin */
   {
     extern NativeError_S ScramblePin_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
     ScramblePin_AnalogInput_Get(&rtb_motohawk_ain6_k, NULL);
   }
 
-  /* DataTypeConversion: '<S564>/Data Type Conversion' incorporates:
-   *  S-Function (motohawk_sfun_ain): '<S442>/motohawk_ain6'
+  /* DataTypeConversion: '<S565>/Data Type Conversion' incorporates:
+   *  S-Function (motohawk_sfun_ain): '<S443>/motohawk_ain6'
    */
-  BaseEngineController_LS_B.s564_DataTypeConversion = (real_T)
+  BaseEngineController_LS_B.s565_DataTypeConversion = (real_T)
     rtb_motohawk_ain6_k;
 
-  /* RelationalOperator: '<S564>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S564>/SwitchPoint'
+  /* RelationalOperator: '<S565>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S565>/SwitchPoint'
    */
-  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s564_DataTypeConversion >
+  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s565_DataTypeConversion >
                             (ScrambleSwitchPt_DataStore()));
 
-  /* Logic: '<S564>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S564>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S565>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S565>/0 = No Inversion 1 = Inversion'
    */
   rtb_RelationalOperator5_fz = rtb_LogicalOperator6_b ^
     (ScramblePolarity_DataStore());
 
-  /* S-Function Block: <S588>/motohawk_delta_time */
+  /* S-Function Block: <S589>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s588_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s589_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_dd = ((real_T) delta) * 0.000001;
   }
 
-  /* Switch: '<S588>/Switch' incorporates:
-   *  Constant: '<S588>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S588>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S588>/motohawk_delta_time'
-   *  Sum: '<S588>/Sum'
+  /* Switch: '<S589>/Switch' incorporates:
+   *  Constant: '<S589>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S589>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S589>/motohawk_delta_time'
+   *  Sum: '<S589>/Sum'
    */
   if (rtb_RelationalOperator5_fz) {
     rtb_Switch_bn = rtb_motohawk_delta_time_dd + ScrambleDelay_DataStore();
@@ -7637,67 +7689,67 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Switch_bn = 0.0;
   }
 
-  /* End of Switch: '<S588>/Switch' */
-  /* Logic: '<S586>/Logical Operator' incorporates:
-   *  RelationalOperator: '<S586>/Relational Operator'
-   *  S-Function (motohawk_sfun_calibration): '<S564>/motohawk_calibration7'
+  /* End of Switch: '<S589>/Switch' */
+  /* Logic: '<S587>/Logical Operator' incorporates:
+   *  RelationalOperator: '<S587>/Relational Operator'
+   *  S-Function (motohawk_sfun_calibration): '<S565>/motohawk_calibration7'
    */
   rtb_LogicalOperator6_b = (rtb_RelationalOperator5_fz && (rtb_Switch_bn >=
     (ScrambleDebounceDelay_DataStore())));
 
-  /* If: '<S587>/If' incorporates:
-   *  Inport: '<S589>/In1'
+  /* If: '<S588>/If' incorporates:
    *  Inport: '<S590>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S587>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S587>/override_enable'
+   *  Inport: '<S591>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S588>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S588>/override_enable'
    */
   if ((Scramble_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S587>/NewValue' incorporates:
-     *  ActionPort: '<S589>/Action Port'
-     */
-    BaseEngineController_LS_B.s587_Merge = (Scramble_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S587>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S587>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S588>/NewValue' incorporates:
      *  ActionPort: '<S590>/Action Port'
      */
-    BaseEngineController_LS_B.s587_Merge = rtb_LogicalOperator6_b;
+    BaseEngineController_LS_B.s588_Merge = (Scramble_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S587>/OldValue' */
+    /* End of Outputs for SubSystem: '<S588>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S588>/OldValue' incorporates:
+     *  ActionPort: '<S591>/Action Port'
+     */
+    BaseEngineController_LS_B.s588_Merge = rtb_LogicalOperator6_b;
+
+    /* End of Outputs for SubSystem: '<S588>/OldValue' */
   }
 
-  /* End of If: '<S587>/If' */
+  /* End of If: '<S588>/If' */
 
-  /* S-Function Block: <S442>/motohawk_din2 Resource: TwoStepPin */
+  /* S-Function Block: <S443>/motohawk_din2 Resource: TwoStepPin */
   {
     extern NativeError_S TwoStepPin_DigitalInput_Get(boolean_T *out, uint16_T
       *status);
-    TwoStepPin_DigitalInput_Get(&BaseEngineController_LS_B.s442_motohawk_din2,
+    TwoStepPin_DigitalInput_Get(&BaseEngineController_LS_B.s443_motohawk_din2,
       NULL);
   }
 
-  /* Logic: '<S565>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S565>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S566>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S566>/0 = No Inversion 1 = Inversion'
    */
-  rtb_RelationalOperator5_fz = BaseEngineController_LS_B.s442_motohawk_din2 ^
+  rtb_RelationalOperator5_fz = BaseEngineController_LS_B.s443_motohawk_din2 ^
     (TwoStepPolarity_DataStore());
 
-  /* S-Function Block: <S593>/motohawk_delta_time */
+  /* S-Function Block: <S594>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s593_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s594_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_ge = ((real_T) delta) * 0.000001;
   }
 
-  /* Switch: '<S593>/Switch' incorporates:
-   *  Constant: '<S593>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S593>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S593>/motohawk_delta_time'
-   *  Sum: '<S593>/Sum'
+  /* Switch: '<S594>/Switch' incorporates:
+   *  Constant: '<S594>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S594>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S594>/motohawk_delta_time'
+   *  Sum: '<S594>/Sum'
    */
   if (rtb_RelationalOperator5_fz) {
     rtb_Switch_m = rtb_motohawk_delta_time_ge + TwoStepTimer_DataStore();
@@ -7705,90 +7757,90 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Switch_m = 0.0;
   }
 
-  /* End of Switch: '<S593>/Switch' */
-  /* Logic: '<S591>/Logical Operator' incorporates:
-   *  RelationalOperator: '<S591>/Relational Operator'
-   *  S-Function (motohawk_sfun_calibration): '<S565>/motohawk_calibration7'
+  /* End of Switch: '<S594>/Switch' */
+  /* Logic: '<S592>/Logical Operator' incorporates:
+   *  RelationalOperator: '<S592>/Relational Operator'
+   *  S-Function (motohawk_sfun_calibration): '<S566>/motohawk_calibration7'
    */
   rtb_LogicalOperator6_b = (rtb_RelationalOperator5_fz && (rtb_Switch_m >=
     (TwoStepDebounceDelay_DataStore())));
 
-  /* If: '<S592>/If' incorporates:
-   *  Inport: '<S594>/In1'
+  /* If: '<S593>/If' incorporates:
    *  Inport: '<S595>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S592>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S592>/override_enable'
+   *  Inport: '<S596>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S593>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S593>/override_enable'
    */
   if ((TwoStep_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S592>/NewValue' incorporates:
-     *  ActionPort: '<S594>/Action Port'
-     */
-    BaseEngineController_LS_B.s592_Merge = (TwoStep_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S592>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S592>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S593>/NewValue' incorporates:
      *  ActionPort: '<S595>/Action Port'
      */
-    BaseEngineController_LS_B.s592_Merge = rtb_LogicalOperator6_b;
+    BaseEngineController_LS_B.s593_Merge = (TwoStep_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S592>/OldValue' */
+    /* End of Outputs for SubSystem: '<S593>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S593>/OldValue' incorporates:
+     *  ActionPort: '<S596>/Action Port'
+     */
+    BaseEngineController_LS_B.s593_Merge = rtb_LogicalOperator6_b;
+
+    /* End of Outputs for SubSystem: '<S593>/OldValue' */
   }
 
-  /* End of If: '<S592>/If' */
+  /* End of If: '<S593>/If' */
 
-  /* S-Function Block: <S663>/motohawk_delta_time */
+  /* S-Function Block: <S664>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s663_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s664_motohawk_delta_time_DWORK1, NULL);
     rtb_DataTypeConversion_gx = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S663>/Product' incorporates:
-   *  MinMax: '<S663>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S663>/motohawk_calibration'
+  /* Product: '<S664>/Product' incorporates:
+   *  MinMax: '<S664>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S664>/motohawk_calibration'
    */
   rtb_DataTypeConversion_gx /= (rtb_DataTypeConversion_gx >=
     (MAPTimeFilterConst_DataStore())) || rtIsNaN((MAPTimeFilterConst_DataStore()))
     ? rtb_DataTypeConversion_gx : (MAPTimeFilterConst_DataStore());
 
-  /* Sum: '<S668>/Sum1' incorporates:
-   *  Constant: '<S668>/Constant'
-   *  Product: '<S668>/Product'
-   *  Product: '<S668>/Product1'
-   *  Sum: '<S668>/Sum'
-   *  UnitDelay: '<S668>/Unit Delay'
+  /* Sum: '<S669>/Sum1' incorporates:
+   *  Constant: '<S669>/Constant'
+   *  Product: '<S669>/Product'
+   *  Product: '<S669>/Product1'
+   *  Sum: '<S669>/Sum'
+   *  UnitDelay: '<S669>/Unit Delay'
    */
   rtb_Sum1_mzy = (1.0 - rtb_DataTypeConversion_gx) *
-    BaseEngineController_LS_DWork.s668_UnitDelay_DSTATE + rtb_Merge_jq *
+    BaseEngineController_LS_DWork.s669_UnitDelay_DSTATE + rtb_Merge_jq *
     rtb_DataTypeConversion_gx;
 
-  /* If: '<S667>/If' incorporates:
-   *  Inport: '<S669>/In1'
+  /* If: '<S668>/If' incorporates:
    *  Inport: '<S670>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S667>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S667>/override_enable'
+   *  Inport: '<S671>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S668>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S668>/override_enable'
    */
   if ((MAPTime_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S667>/NewValue' incorporates:
-     *  ActionPort: '<S669>/Action Port'
-     */
-    BaseEngineController_LS_B.s667_Merge = (MAPTime_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S667>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S667>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S668>/NewValue' incorporates:
      *  ActionPort: '<S670>/Action Port'
      */
-    BaseEngineController_LS_B.s667_Merge = rtb_Sum1_mzy;
+    BaseEngineController_LS_B.s668_Merge = (MAPTime_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S667>/OldValue' */
+    /* End of Outputs for SubSystem: '<S668>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S668>/OldValue' incorporates:
+     *  ActionPort: '<S671>/Action Port'
+     */
+    BaseEngineController_LS_B.s668_Merge = rtb_Sum1_mzy;
+
+    /* End of Outputs for SubSystem: '<S668>/OldValue' */
   }
 
-  /* End of If: '<S667>/If' */
+  /* End of If: '<S668>/If' */
 
   /* Outputs for Enabled SubSystem: '<S15>/Run' incorporates:
    *  EnablePort: '<S136>/Enable'
@@ -7934,8 +7986,8 @@ void BaseEngineController_LS_Foreground(void)
       if (rtmIsFirstInitCond(BaseEngineController_LS_M)) {
         /* Initial conditions for function-call system: '<S136>/Spark Manager' */
 
-        /* InitializeConditions for UnitDelay: '<S306>/Initial Condition is True' */
-        BaseEngineController_LS_DWork.s306_InitialConditionisTrue_DSTATE = TRUE;
+        /* InitializeConditions for UnitDelay: '<S307>/Initial Condition is True' */
+        BaseEngineController_LS_DWork.s307_InitialConditionisTrue_DSTATE = TRUE;
       }
 
       /* InitializeConditions for UnitDelay: '<S147>/Unit Delay' */
@@ -7986,16 +8038,16 @@ void BaseEngineController_LS_Foreground(void)
       /* InitializeConditions for Atomic SubSystem: '<S136>/O2 Control' */
 
       /* InitializeConditions for Atomic SubSystem: '<S154>/O2 PID Controller' */
-      /* InitializeConditions for UnitDelay: '<S297>/Unit Delay' */
-      BaseEngineController_LS_DWork.s297_UnitDelay_DSTATE = FALSE;
+      /* InitializeConditions for UnitDelay: '<S298>/Unit Delay' */
+      BaseEngineController_LS_DWork.s298_UnitDelay_DSTATE = FALSE;
+
+      /* InitializeConditions for UnitDelay: '<S295>/Unit Delay' */
+      BaseEngineController_LS_DWork.s295_UnitDelay_DSTATE = 0.0;
 
       /* InitializeConditions for UnitDelay: '<S294>/Unit Delay' */
       BaseEngineController_LS_DWork.s294_UnitDelay_DSTATE = 0.0;
 
-      /* InitializeConditions for UnitDelay: '<S293>/Unit Delay' */
-      BaseEngineController_LS_DWork.s293_UnitDelay_DSTATE = 0.0;
-
-      /* S-Function Block: <S294>/motohawk_delta_time */
+      /* S-Function Block: <S295>/motohawk_delta_time */
       {
         uint32_T now = 0;
         extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
@@ -8003,42 +8055,12 @@ void BaseEngineController_LS_Foreground(void)
         extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
           u32Time_us);
         Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-        BaseEngineController_LS_DWork.s294_motohawk_delta_time_DWORK1 = now -
+        BaseEngineController_LS_DWork.s295_motohawk_delta_time_DWORK1 = now -
           Timer_FreeRunningCounter_GetRawTicksFromTime(0.0);
       }
 
-      /* InitializeConditions for UnitDelay: '<S290>/Unit Delay1' */
-      BaseEngineController_LS_DWork.s290_UnitDelay1_DSTATE = 0.0;
-
-      /* S-Function Block: <S298>/motohawk_delta_time */
-      {
-        uint32_T now = 0;
-        extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-          (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-        extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-          u32Time_us);
-        Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-        BaseEngineController_LS_DWork.s298_motohawk_delta_time_DWORK1 = now -
-          Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-      }
-
-      /* InitializeConditions for UnitDelay: '<S290>/Unit Delay' */
-      BaseEngineController_LS_DWork.s290_UnitDelay_DSTATE = 0.0;
-
-      /* S-Function Block: <S300>/motohawk_delta_time */
-      {
-        uint32_T now = 0;
-        extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-          (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-        extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
-          u32Time_us);
-        Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
-        BaseEngineController_LS_DWork.s300_motohawk_delta_time_DWORK1 = now -
-          Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
-      }
-
-      /* InitializeConditions for UnitDelay: '<S290>/Unit Delay2' */
-      BaseEngineController_LS_DWork.s290_UnitDelay2_DSTATE = 0.0;
+      /* InitializeConditions for UnitDelay: '<S291>/Unit Delay1' */
+      BaseEngineController_LS_DWork.s291_UnitDelay1_DSTATE = 0.0;
 
       /* S-Function Block: <S299>/motohawk_delta_time */
       {
@@ -8049,6 +8071,36 @@ void BaseEngineController_LS_Foreground(void)
           u32Time_us);
         Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
         BaseEngineController_LS_DWork.s299_motohawk_delta_time_DWORK1 = now -
+          Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+      }
+
+      /* InitializeConditions for UnitDelay: '<S291>/Unit Delay' */
+      BaseEngineController_LS_DWork.s291_UnitDelay_DSTATE = 0.0;
+
+      /* S-Function Block: <S301>/motohawk_delta_time */
+      {
+        uint32_T now = 0;
+        extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+          (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+        extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+          u32Time_us);
+        Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+        BaseEngineController_LS_DWork.s301_motohawk_delta_time_DWORK1 = now -
+          Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
+      }
+
+      /* InitializeConditions for UnitDelay: '<S291>/Unit Delay2' */
+      BaseEngineController_LS_DWork.s291_UnitDelay2_DSTATE = 0.0;
+
+      /* S-Function Block: <S300>/motohawk_delta_time */
+      {
+        uint32_T now = 0;
+        extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+          (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+        extern uint32_T Timer_FreeRunningCounter_GetRawTicksFromTime(uint32_T
+          u32Time_us);
+        Timer_FreeRunningCounter_GetDeltaUpdateReference_us(&now, NULL);
+        BaseEngineController_LS_DWork.s300_motohawk_delta_time_DWORK1 = now -
           Timer_FreeRunningCounter_GetRawTicksFromTime(5000.0);
       }
 
@@ -8065,13 +8117,13 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S161>/LT' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S144>/motohawk_calibration'
      */
-    rtb_RelationalOperator8_o = (BaseEngineController_LS_B.s735_Merge >=
+    rtb_RelationalOperator8_o = (BaseEngineController_LS_B.s736_Merge >=
       (ACTempOn_DataStore()));
 
     /* RelationalOperator: '<S161>/LT1' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S144>/motohawk_calibration8'
      */
-    rtb_LogicalOperator2_l = (BaseEngineController_LS_B.s735_Merge <=
+    rtb_LogicalOperator2_l = (BaseEngineController_LS_B.s736_Merge <=
       (ACTempOff_DataStore()));
 
     /* CombinatorialLogic: '<S167>/Combinatorial  Logic' */
@@ -8102,11 +8154,11 @@ void BaseEngineController_LS_Foreground(void)
     /* End of Switch: '<S167>/Switch1' */
 
     /* DataTypeConversion: '<S144>/Data Type Conversion' */
-    if (rtIsNaN(BaseEngineController_LS_B.s616_Sum1) || rtIsInf
-        (BaseEngineController_LS_B.s616_Sum1)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s617_Sum1) || rtIsInf
+        (BaseEngineController_LS_B.s617_Sum1)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s616_Sum1),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s617_Sum1),
         65536.0);
     }
 
@@ -8196,11 +8248,11 @@ void BaseEngineController_LS_Foreground(void)
     BaseEngineController_LS_B.s144_LogicalOperator2 = !rtb_Switch1_n1;
 
     /* DataTypeConversion: '<S144>/Data Type Conversion2' */
-    if (rtIsNaN(BaseEngineController_LS_B.s412_Switch2) || rtIsInf
-        (BaseEngineController_LS_B.s412_Switch2)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s413_Switch2) || rtIsInf
+        (BaseEngineController_LS_B.s413_Switch2)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s412_Switch2),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s413_Switch2),
         65536.0);
     }
 
@@ -8255,11 +8307,11 @@ void BaseEngineController_LS_Foreground(void)
       BaseEngineController_LS_B.s144_LogicalOperator2);
 
     /* DataTypeConversion: '<S144>/Data Type Conversion1' */
-    if (rtIsNaN(BaseEngineController_LS_B.s630_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s630_Merge)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s631_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s631_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s630_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s631_Merge),
         65536.0);
     }
 
@@ -8350,7 +8402,7 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S144>/Relational Operator' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S144>/motohawk_calibration7'
      */
-    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s433_Switch >=
+    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s434_Switch >=
       (ACTimeFromStartDelay_DataStore()));
 
     /* Logic: '<S144>/Logical Operator' incorporates:
@@ -8358,7 +8410,7 @@ void BaseEngineController_LS_Foreground(void)
      *  S-Function (motohawk_sfun_fault_action): '<S144>/motohawk_fault_action'
      */
     BaseEngineController_LS_B.s144_LogicalOperator =
-      ((BaseEngineController_LS_B.s568_Merge &&
+      ((BaseEngineController_LS_B.s569_Merge &&
         BaseEngineController_LS_B.s167_Switch1 && rtb_LogicalOperator6_b &&
         BaseEngineController_LS_B.s144_LogicalOperator4 &&
         BaseEngineController_LS_B.s163_Switch1 &&
@@ -8399,7 +8451,7 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
       rtb_motohawk_interpolation_1d_fx = TableInterpolation1D_real_T
-        (BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
+        (BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
          ((Warmup_Time_HoldoffTbl_DataStore())), 5);
       (Warmup_Time_Holdoff_DataStore()) = rtb_motohawk_interpolation_1d_fx;
     }
@@ -8409,16 +8461,16 @@ void BaseEngineController_LS_Foreground(void)
      *  RelationalOperator: '<S170>/Relational Operator'
      *  S-Function (motohawk_sfun_interpolation_1d): '<S170>/motohawk_interpolation_1d'
      *  S-Function (motohawk_sfun_interpolation_2d): '<S146>/motohawk_interpolation_2d2'
-     *  S-Function (motohawk_sfun_prelookup): '<S362>/motohawk_prelookup2'
+     *  S-Function (motohawk_sfun_prelookup): '<S363>/motohawk_prelookup2'
      */
-    if (BaseEngineController_LS_B.s433_Switch >=
+    if (BaseEngineController_LS_B.s434_Switch >=
         rtb_motohawk_interpolation_1d_fx) {
       /* S-Function Block: <S146>/motohawk_interpolation_2d2 */
       {
         extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_WarmUptimeRatio = TableInterpolation2D_real_T(rtb_TimeSinceRun09,
-          BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
+          BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
           ((WarmUpTimeRatioMap_DataStore())), 9, 5);
         (WarmUpTimeRatio_DataStore()) = rtb_WarmUptimeRatio;
       }
@@ -8434,8 +8486,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_IATEnrichment = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s395_motohawk_prelookup, (real_T *)
          ((IntakeAirTempEnrichmentMap_DataStore())), 9, 5);
       (IntakeAirTempEnrichment_DataStore()) = rtb_IATEnrichment;
     }
@@ -8445,8 +8497,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_CATEnrichment = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s392_motohawk_prelookup, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
          ((ChargeAirTempEnrichmentMap_DataStore())), 9, 5);
       (ChargeAirTempEnrichment_DataStore()) = rtb_CATEnrichment;
     }
@@ -8456,8 +8508,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_motohawk_interpolation_2d3 = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_Indexes,
-         BaseEngineController_LS_B.s397_Indexes, (real_T *)
+        (BaseEngineController_LS_B.s396_Indexes,
+         BaseEngineController_LS_B.s398_Indexes, (real_T *)
          ((DesEquivRatioMap_DataStore())), 17, 17);
       (DesEquivRatio_DataStore()) = rtb_motohawk_interpolation_2d3;
     }
@@ -8498,11 +8550,11 @@ void BaseEngineController_LS_Foreground(void)
     /* End of Outputs for SubSystem: '<S136>/Base Equiv Ratio' */
 
     /* DataTypeConversion: '<S190>/Data Type Conversion' */
-    if (rtIsNaN(BaseEngineController_LS_B.s726_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s726_Merge)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s727_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s727_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s726_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s727_Merge),
         65536.0);
     }
 
@@ -8533,19 +8585,19 @@ void BaseEngineController_LS_Foreground(void)
     }
 
     /* RelationalOperator: '<S190>/Relational Operator' */
-    rtb_LogicalOperator2_l = (BaseEngineController_LS_B.s616_Sum1 >= (real_T)
+    rtb_LogicalOperator2_l = (BaseEngineController_LS_B.s617_Sum1 >= (real_T)
       rtb_motohawk_interpolation_1d_n0);
 
     /* RelationalOperator: '<S190>/Relational Operator1' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S190>/motohawk_calibration1'
      */
-    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s405_Switch1 <=
+    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s406_Switch1 <=
       (DFCOEntryAPP_DataStore()));
 
     /* RelationalOperator: '<S190>/Relational Operator2' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S190>/motohawk_calibration2'
      */
-    rtb_RelationalOperator8_o = (BaseEngineController_LS_B.s667_Merge <= (real_T)
+    rtb_RelationalOperator8_o = (BaseEngineController_LS_B.s668_Merge <= (real_T)
                                  ((uint8_T)(DFCOEntryMAP_DataStore())));
 
     /* S-Function (motohawk_sfun_fault_action): '<S190>/motohawk_fault_action'
@@ -8571,7 +8623,7 @@ void BaseEngineController_LS_Foreground(void)
     BaseEngineController_LS_B.s190_LogicalOperator = ((rtb_LogicalOperator2_l &&
       rtb_LogicalOperator6_b && rtb_RelationalOperator8_o &&
       rtb_LogicalOperator1_al && (DFCOEnable_DataStore()) &&
-      (BaseEngineController_LS_B.s616_Sum1 >= MinGovRPMSetPt_DataStore() +
+      (BaseEngineController_LS_B.s617_Sum1 >= MinGovRPMSetPt_DataStore() +
        (real_T)((int16_T)(DFCOEnterIdleSpeed_DataStore())))));
 
     /* S-Function Block: <S193>/motohawk_delta_time */
@@ -8609,7 +8661,7 @@ void BaseEngineController_LS_Foreground(void)
      *  S-Function (motohawk_sfun_data_read): '<S190>/motohawk_data_read'
      *  Sum: '<S190>/Sum'
      */
-    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s616_Sum1 <=
+    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s617_Sum1 <=
       MinGovRPMSetPt_DataStore() + (real_T)((int16_T)
       (DFCOExitIdleSpeed_DataStore())));
 
@@ -8635,19 +8687,19 @@ void BaseEngineController_LS_Foreground(void)
     }
 
     /* RelationalOperator: '<S190>/Relational Operator8' */
-    rtb_RelationalOperator8_o = (BaseEngineController_LS_B.s616_Sum1 <= (real_T)
+    rtb_RelationalOperator8_o = (BaseEngineController_LS_B.s617_Sum1 <= (real_T)
       rtb_motohawk_interpolation_1d_n0);
 
     /* RelationalOperator: '<S190>/Relational Operator6' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S190>/motohawk_calibration6'
      */
-    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s405_Switch1 >=
+    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s406_Switch1 >=
       (DFCOExitAPP_DataStore()));
 
     /* RelationalOperator: '<S190>/Relational Operator7' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S190>/motohawk_calibration7'
      */
-    rtb_motohawk_data_read13 = (BaseEngineController_LS_B.s667_Merge >= (real_T)
+    rtb_motohawk_data_read13 = (BaseEngineController_LS_B.s668_Merge >= (real_T)
                                 ((uint8_T)(DFCOExitMAP_DataStore())));
 
     /* Logic: '<S190>/Logical Operator4' incorporates:
@@ -8784,7 +8836,7 @@ void BaseEngineController_LS_Foreground(void)
           extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T
             *tbl_data, uint32_T sz);
           rtb_motohawk_interpolation_1d2_d = TableInterpolation1D_real_T
-            (BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+            (BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
              ((MaxETCSetPtLimitTbl_DataStore())), 9);
           (MaxETCSetPtLimit_DataStore()) = rtb_motohawk_interpolation_1d2_d;
         }
@@ -8794,7 +8846,7 @@ void BaseEngineController_LS_Foreground(void)
           extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T
             *tbl_data, uint32_T sz);
           rtb_motohawk_interpolation_1d1_c = TableInterpolation1D_real_T
-            (BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+            (BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
              ((MinETCSetPtLimitTbl_DataStore())), 9);
           (MinETCSetPtLimit_DataStore()) = rtb_motohawk_interpolation_1d1_c;
         }
@@ -8808,7 +8860,7 @@ void BaseEngineController_LS_Foreground(void)
            *  Sum: '<S145>/Sum1'
            */
           if (!BaseEngineController_LS_B.s266_RelOp) {
-            rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s420_Sum2 +
+            rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s421_Sum2 +
               BaseEngineController_LS_B.s256_DontallowsetpointtoeverdropbelowtheTargetRPM;
           }
 
@@ -8851,8 +8903,8 @@ void BaseEngineController_LS_Foreground(void)
     /* Gain: '<S147>/kPa to PSI' incorporates:
      *  Sum: '<S147>/Sum1'
      */
-    rtb_Switch_k = (BaseEngineController_LS_B.s667_Merge -
-                    BaseEngineController_LS_B.s367_Sum) * 0.145038;
+    rtb_Switch_k = (BaseEngineController_LS_B.s668_Merge -
+                    BaseEngineController_LS_B.s368_Sum) * 0.145038;
 
     /* RelationalOperator: '<S147>/Relational Operator' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S147>/motohawk_calibration2'
@@ -9073,13 +9125,13 @@ void BaseEngineController_LS_Foreground(void)
     /* Switch: '<S147>/Switch1' incorporates:
      *  S-Function (motohawk_sfun_interpolation_1d): '<S147>/motohawk_interpolation_1d1'
      */
-    if (BaseEngineController_LS_B.s592_Merge) {
+    if (BaseEngineController_LS_B.s593_Merge) {
       /* S-Function Block: <S147>/motohawk_interpolation_1d1 */
       {
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_motohawk_interpolation_1d1_g = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+          (BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
            ((BoostTarget_TwoStepTbl_DataStore())), 9);
         (BoostTarget_TwoStep_DataStore()) = rtb_motohawk_interpolation_1d1_g;
       }
@@ -9091,7 +9143,7 @@ void BaseEngineController_LS_Foreground(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_Sum2_d = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s395_motohawk_prelookup, (real_T *)
            ((BoostIATLimitTbl_DataStore())), 5);
         (BoostIATLimit_DataStore()) = rtb_Sum2_d;
       }
@@ -9101,7 +9153,7 @@ void BaseEngineController_LS_Foreground(void)
         extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
           uint32_T sz);
         rtb_MinMax_gy = TableInterpolation1D_real_T
-          (BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
+          (BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
            ((BoostECTLimitTbl_DataStore())), 5);
         (BoostECTLimit_DataStore()) = rtb_MinMax_gy;
       }
@@ -9113,7 +9165,7 @@ void BaseEngineController_LS_Foreground(void)
       /* Product: '<S147>/Product' incorporates:
        *  S-Function (motohawk_sfun_calibration): '<S147>/motohawk_calibration3'
        */
-      rtb_Sum2_d = (real_T)BaseEngineController_LS_B.s587_Merge *
+      rtb_Sum2_d = (real_T)BaseEngineController_LS_B.s588_Merge *
         (BoostScrambleAdder_DataStore());
 
       /* S-Function Block: <S147>/motohawk_interpolation_2d2 */
@@ -9122,14 +9174,14 @@ void BaseEngineController_LS_Foreground(void)
           col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
         rtb_motohawk_interpolation_2d2_f = TableInterpolation2D_real_T
           (rtb_motohawk_prelookup_i,
-           BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+           BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
            ((BoostTargetMap_DataStore())), 9, 9);
         (BoostTarget_DataStore()) = rtb_motohawk_interpolation_2d2_f;
       }
 
       /* Sum: '<S147>/Sum2' incorporates:
        *  S-Function (motohawk_sfun_interpolation_2d): '<S147>/motohawk_interpolation_2d2'
-       *  S-Function (motohawk_sfun_prelookup): '<S400>/motohawk_prelookup'
+       *  S-Function (motohawk_sfun_prelookup): '<S401>/motohawk_prelookup'
        */
       rtb_Sum2_d += rtb_motohawk_interpolation_2d2_f;
 
@@ -9293,7 +9345,7 @@ void BaseEngineController_LS_Foreground(void)
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_motohawk_interpolation_2d1_d = TableInterpolation2D_real_T
         (rtb_motohawk_prelookup_brx,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((BoostControlBase_AdaptMap_DataStore())), 9, 9);
       (BoostControlBase_Adapt_DataStore()) = rtb_motohawk_interpolation_2d1_d;
     }
@@ -9304,7 +9356,7 @@ void BaseEngineController_LS_Foreground(void)
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       BaseEngineController_LS_B.s147_motohawk_interpolation_2d =
         TableInterpolation2D_real_T(rtb_motohawk_prelookup_brx,
-        BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
         ((BoostControlBaseMap_DataStore())), 9, 9);
       (BoostControlBase_DataStore()) =
         BaseEngineController_LS_B.s147_motohawk_interpolation_2d;
@@ -9323,7 +9375,7 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
       rtb_motohawk_interpolation_1d2_n = TableInterpolation1D_real_T
-        (BaseEngineController_LS_B.s398_motohawk_prelookup, (real_T *)
+        (BaseEngineController_LS_B.s399_motohawk_prelookup, (real_T *)
          ((WGDeadTimeTbl_DataStore())), 9);
       (WGDeadTime_DataStore()) = rtb_motohawk_interpolation_1d2_n;
     }
@@ -9407,11 +9459,11 @@ void BaseEngineController_LS_Foreground(void)
     }
 
     /* DataTypeConversion: '<S149>/Data Type Conversion3' */
-    if (rtIsNaN(BaseEngineController_LS_B.s726_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s726_Merge)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s727_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s727_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s726_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s727_Merge),
         65536.0);
     }
 
@@ -9458,11 +9510,11 @@ void BaseEngineController_LS_Foreground(void)
 
     /* End of Switch: '<S203>/Switch1' */
     /* DataTypeConversion: '<S149>/Data Type Conversion4' */
-    if (rtIsNaN(BaseEngineController_LS_B.s416_Switch2) || rtIsInf
-        (BaseEngineController_LS_B.s416_Switch2)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s417_Switch2) || rtIsInf
+        (BaseEngineController_LS_B.s417_Switch2)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s416_Switch2),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s417_Switch2),
         256.0);
     }
 
@@ -9523,11 +9575,11 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Product_ln = (uint8_T)(Fan1ECT_DataStore() ? rtb_Switch_om : 0);
 
     /* DataTypeConversion: '<S149>/Data Type Conversion1' */
-    if (rtIsNaN(BaseEngineController_LS_B.s744_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s744_Merge)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s745_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s745_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s744_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s745_Merge),
         65536.0);
     }
 
@@ -9625,11 +9677,11 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Product5_j = (uint8_T)(Fan1IAT_DataStore() ? rtb_Product6_m : 0);
 
     /* DataTypeConversion: '<S149>/Data Type Conversion2' */
-    if (rtIsNaN(BaseEngineController_LS_B.s630_Merge) || rtIsInf
-        (BaseEngineController_LS_B.s630_Merge)) {
+    if (rtIsNaN(BaseEngineController_LS_B.s631_Merge) || rtIsInf
+        (BaseEngineController_LS_B.s631_Merge)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s630_Merge),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s631_Merge),
         65536.0);
     }
 
@@ -9727,7 +9779,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Product4_i = (uint8_T)(Fan1ACPres_DataStore() ? rtb_Switch2_a : 0);
 
     /* DataTypeConversion: '<S149>/Data Type Conversion' */
-    rtb_DataTypeConversion_b2 = (real_T)BaseEngineController_LS_B.s568_Merge;
+    rtb_DataTypeConversion_b2 = (real_T)BaseEngineController_LS_B.s569_Merge;
 
     /* Switch: '<S149>/Switch3' incorporates:
      *  Product: '<S149>/Product8'
@@ -9791,20 +9843,24 @@ void BaseEngineController_LS_Foreground(void)
 
     /* Outputs for Atomic SubSystem: '<S136>/O2 Control' */
 
-    /* S-Function (motohawk_sfun_fault_action): '<S154>/motohawk_fault_action'
-     *
-     * Regarding '<S154>/motohawk_fault_action':
-       Get Fault Action Status: DisableO2Ctrl
+    /* Logic: '<S287>/Logical Operator2' incorporates:
+     *  Logic: '<S287>/Logical Operator1'
+     *  S-Function (motohawk_sfun_data_read): '<S287>/motohawk_data_read'
      */
-    {
-      extern boolean_T GetFaultActionStatus(uint32_T action);
-      rtb_motohawk_fault_action_b = GetFaultActionStatus(4);
-    }
+    rtb_LogicalOperator6_b = ((!rtb_Merge_oq) && Bank2_Enable_DataStore());
+
+    /* Logic: '<S287>/Logical Operator3' incorporates:
+     *  Logic: '<S287>/Logical Operator'
+     *  S-Function (motohawk_sfun_fault_action): '<S287>/motohawk_fault_action'
+     */
+    BaseEngineController_LS_B.s287_LogicalOperator3 = (((!rtb_Merge_iz) ||
+      rtb_LogicalOperator6_b || GetFaultActionStatus(4)));
 
     /* S-Function (motohawk_sfun_data_write): '<S154>/motohawk_data_write' */
     /* Write to Data Storage as scalar: DisableO2FaultAction */
     {
-      DisableO2FaultAction_DataStore() = rtb_motohawk_fault_action_b;
+      DisableO2FaultAction_DataStore() =
+        BaseEngineController_LS_B.s287_LogicalOperator3;
     }
 
     /* Inport: '<S154>/Desired_Equiv' */
@@ -9826,7 +9882,7 @@ void BaseEngineController_LS_Foreground(void)
 
     /* Logic: '<S284>/Logical Operator3' */
     BaseEngineController_LS_B.s284_LogicalOperator3 =
-      !rtb_motohawk_fault_action_b;
+      !BaseEngineController_LS_B.s287_LogicalOperator3;
 
     /* S-Function Block: <S284>/motohawk_interpolation_1d */
     {
@@ -9840,16 +9896,16 @@ void BaseEngineController_LS_Foreground(void)
 
     /* RelationalOperator: '<S284>/Relational Operator5' incorporates:
      *  S-Function (motohawk_sfun_interpolation_1d): '<S284>/motohawk_interpolation_1d'
-     *  S-Function (motohawk_sfun_prelookup): '<S436>/motohawk_prelookup'
+     *  S-Function (motohawk_sfun_prelookup): '<S437>/motohawk_prelookup'
      */
     BaseEngineController_LS_B.s284_RelationalOperator5 =
-      ((BaseEngineController_LS_B.s433_Switch >= rtb_motohawk_interpolation_1d_f));
+      ((BaseEngineController_LS_B.s434_Switch >= rtb_motohawk_interpolation_1d_f));
 
     /* Logic: '<S284>/Logical Operator2' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S284>/motohawk_calibration2'
      */
     BaseEngineController_LS_B.s284_LogicalOperator2 =
-      ((BaseEngineController_LS_B.s382_LogicalOperator &&
+      ((BaseEngineController_LS_B.s383_LogicalOperator &&
         BaseEngineController_LS_B.s284_LogicalOperator &&
         BaseEngineController_LS_B.s284_LogicalOperator3 &&
         (O2ControlEnable_DataStore()) &&
@@ -9858,29 +9914,29 @@ void BaseEngineController_LS_Foreground(void)
     /* Logic: '<S154>/Logical Operator' */
     rtb_LogicalOperator6_b = !BaseEngineController_LS_B.s284_LogicalOperator2;
 
-    /* S-Function Block: <S288>/motohawk_interpolation_2d2 */
+    /* S-Function Block: <S289>/motohawk_interpolation_2d2 */
     {
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_RichEquivRatioSwPtDelta = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((RichSwPtDeltaMap_DataStore())), 9, 9);
       (RichSwPtDelta_DataStore()) = rtb_RichEquivRatioSwPtDelta;
     }
 
-    /* S-Function Block: <S288>/motohawk_interpolation_2d3 */
+    /* S-Function Block: <S289>/motohawk_interpolation_2d3 */
     {
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_LeanEquivRatioSwPtDelta = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((LeanSwPtDeltaMap_DataStore())), 9, 9);
       (LeanSwPtDelta_DataStore()) = rtb_LeanEquivRatioSwPtDelta;
     }
 
-    /* S-Function Block: <S287>/motohawk_interpolation_1d */
+    /* S-Function Block: <S288>/motohawk_interpolation_1d */
     {
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
@@ -9890,7 +9946,7 @@ void BaseEngineController_LS_Foreground(void)
       (O2NECCTErrGainMult_DataStore()) = rtb_motohawk_interpolation_1d_i;
     }
 
-    /* S-Function Block: <S287>/motohawk_interpolation_1d1 */
+    /* S-Function Block: <S288>/motohawk_interpolation_1d1 */
     {
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
@@ -9900,11 +9956,11 @@ void BaseEngineController_LS_Foreground(void)
       (O2MAFErrGainMult_DataStore()) = rtb_motohawk_interpolation_1d1_o0;
     }
 
-    /* Product: '<S287>/Product' incorporates:
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S287>/motohawk_interpolation_1d'
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S287>/motohawk_interpolation_1d1'
-     *  S-Function (motohawk_sfun_prelookup): '<S393>/motohawk_prelookup1'
-     *  S-Function (motohawk_sfun_prelookup): '<S438>/motohawk_prelookup'
+    /* Product: '<S288>/Product' incorporates:
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S288>/motohawk_interpolation_1d'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S288>/motohawk_interpolation_1d1'
+     *  S-Function (motohawk_sfun_prelookup): '<S394>/motohawk_prelookup1'
+     *  S-Function (motohawk_sfun_prelookup): '<S439>/motohawk_prelookup'
      */
     rtb_DataTypeConversion1_e = rtb_motohawk_interpolation_1d_i *
       rtb_motohawk_interpolation_1d1_o0;
@@ -9913,21 +9969,21 @@ void BaseEngineController_LS_Foreground(void)
     rtb_LogicalOperator1_al = !rtb_RelOp_hf;
 
     /* Outputs for Atomic SubSystem: '<S154>/O2 PID Controller' */
-    /* RelationalOperator: '<S290>/LT' incorporates:
-     *  S-Function (motohawk_sfun_interpolation_2d): '<S288>/motohawk_interpolation_2d2'
-     *  Sum: '<S290>/Sum3'
+    /* RelationalOperator: '<S291>/LT' incorporates:
+     *  S-Function (motohawk_sfun_interpolation_2d): '<S289>/motohawk_interpolation_2d2'
+     *  Sum: '<S291>/Sum3'
      */
-    rtb_AboveRich = (BaseEngineController_LS_B.s410_Sum1 >=
+    rtb_AboveRich = (BaseEngineController_LS_B.s411_Sum1 >=
                      rtb_DesiredLambda_idx + rtb_RichEquivRatioSwPtDelta);
 
-    /* RelationalOperator: '<S290>/LT1' incorporates:
-     *  S-Function (motohawk_sfun_interpolation_2d): '<S288>/motohawk_interpolation_2d3'
-     *  Sum: '<S290>/Sum4'
+    /* RelationalOperator: '<S291>/LT1' incorporates:
+     *  S-Function (motohawk_sfun_interpolation_2d): '<S289>/motohawk_interpolation_2d3'
+     *  Sum: '<S291>/Sum4'
      */
-    rtb_LogicalOperator2_ig = (BaseEngineController_LS_B.s410_Sum1 <=
+    rtb_LogicalOperator2_ig = (BaseEngineController_LS_B.s411_Sum1 <=
       rtb_DesiredLambda_idx - rtb_LeanEquivRatioSwPtDelta);
 
-    /* CombinatorialLogic: '<S297>/Combinatorial  Logic' */
+    /* CombinatorialLogic: '<S298>/Combinatorial  Logic' */
     {
       uint_T rowidx= 0;
 
@@ -9942,37 +9998,37 @@ void BaseEngineController_LS_Foreground(void)
         BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
     }
 
-    /* Switch: '<S297>/Switch1' incorporates:
-     *  UnitDelay: '<S297>/Unit Delay'
+    /* Switch: '<S298>/Switch1' incorporates:
+     *  UnitDelay: '<S298>/Unit Delay'
      */
     if (rtb_CombinatorialLogic[1]) {
       rtb_Switch1_mj = rtb_CombinatorialLogic[0];
     } else {
-      rtb_Switch1_mj = BaseEngineController_LS_DWork.s297_UnitDelay_DSTATE;
+      rtb_Switch1_mj = BaseEngineController_LS_DWork.s298_UnitDelay_DSTATE;
     }
 
-    /* End of Switch: '<S297>/Switch1' */
+    /* End of Switch: '<S298>/Switch1' */
 
     /* Switch: '<S286>/Switch' */
     if (rtb_LogicalOperator6_b) {
       BaseEngineController_LS_B.s286_Switch =
-        BaseEngineController_LS_B.s410_Sum1;
+        BaseEngineController_LS_B.s411_Sum1;
     } else {
-      /* Switch: '<S290>/Switch2' incorporates:
-       *  Logic: '<S290>/Logical Operator'
-       *  S-Function (motohawk_sfun_interpolation_2d): '<S288>/motohawk_interpolation_2d'
-       *  S-Function (motohawk_sfun_interpolation_2d): '<S288>/motohawk_interpolation_2d1'
-       *  Sum: '<S290>/Sum1'
-       *  Sum: '<S290>/Sum2'
+      /* Switch: '<S291>/Switch2' incorporates:
+       *  Logic: '<S291>/Logical Operator'
+       *  S-Function (motohawk_sfun_interpolation_2d): '<S289>/motohawk_interpolation_2d'
+       *  S-Function (motohawk_sfun_interpolation_2d): '<S289>/motohawk_interpolation_2d1'
+       *  Sum: '<S291>/Sum1'
+       *  Sum: '<S291>/Sum2'
        */
       if (!rtb_Switch1_mj) {
-        /* S-Function Block: <S288>/motohawk_interpolation_2d */
+        /* S-Function Block: <S289>/motohawk_interpolation_2d */
         {
           extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
             col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
           rtb_RichEquivRatioTargetDelta_p = TableInterpolation2D_real_T
-            (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-             BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+            (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+             BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
              ((RichTargetDeltaMap_DataStore())), 9, 9);
           (RichTargetDelta_DataStore()) = rtb_RichEquivRatioTargetDelta_p;
         }
@@ -9980,13 +10036,13 @@ void BaseEngineController_LS_Foreground(void)
         BaseEngineController_LS_B.s286_Switch = rtb_RichEquivRatioTargetDelta_p
           + rtb_DesiredLambda_idx;
       } else {
-        /* S-Function Block: <S288>/motohawk_interpolation_2d1 */
+        /* S-Function Block: <S289>/motohawk_interpolation_2d1 */
         {
           extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T
             col_in, real_T *map_data, uint32_T row_sz, uint32_T col_sz);
           rtb_LeanEquivRatioTargetDelta = TableInterpolation2D_real_T
-            (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-             BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+            (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+             BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
              ((LeanTargetDeltaMap_DataStore())), 9, 9);
           (LeanTargetDelta_DataStore()) = rtb_LeanEquivRatioTargetDelta;
         }
@@ -9995,249 +10051,120 @@ void BaseEngineController_LS_Foreground(void)
           rtb_LeanEquivRatioTargetDelta;
       }
 
-      /* End of Switch: '<S290>/Switch2' */
+      /* End of Switch: '<S291>/Switch2' */
     }
 
     /* End of Switch: '<S286>/Switch' */
 
-    /* Sum: '<S292>/Sum2' */
-    BaseEngineController_LS_B.s292_Sum2 = BaseEngineController_LS_B.s286_Switch
-      - BaseEngineController_LS_B.s410_Sum1;
+    /* Sum: '<S293>/Sum2' */
+    BaseEngineController_LS_B.s293_Sum2 = BaseEngineController_LS_B.s286_Switch
+      - BaseEngineController_LS_B.s411_Sum1;
 
-    /* Product: '<S292>/Product5' */
-    rtb_Switch_c = BaseEngineController_LS_B.s292_Sum2 *
+    /* Product: '<S293>/Product5' */
+    rtb_Switch_c = BaseEngineController_LS_B.s293_Sum2 *
       rtb_DataTypeConversion1_e;
 
-    /* Product: '<S292>/Product2' incorporates:
+    /* Product: '<S293>/Product2' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration5'
      */
-    BaseEngineController_LS_B.s292_Product2 = rtb_Switch_c *
+    BaseEngineController_LS_B.s293_Product2 = rtb_Switch_c *
       (O2CtrlPGain_DataStore());
 
-    /* Switch: '<S294>/Switch1' incorporates:
-     *  Constant: '<S289>/Constant'
-     *  UnitDelay: '<S294>/Unit Delay'
+    /* Switch: '<S295>/Switch1' incorporates:
+     *  Constant: '<S290>/Constant'
+     *  UnitDelay: '<S295>/Unit Delay'
      */
     if (rtb_LogicalOperator1_al) {
-      BaseEngineController_LS_B.s294_Switch1 = 0.0;
+      BaseEngineController_LS_B.s295_Switch1 = 0.0;
     } else {
-      BaseEngineController_LS_B.s294_Switch1 =
-        BaseEngineController_LS_DWork.s294_UnitDelay_DSTATE;
+      BaseEngineController_LS_B.s295_Switch1 =
+        BaseEngineController_LS_DWork.s295_UnitDelay_DSTATE;
     }
 
-    /* End of Switch: '<S294>/Switch1' */
+    /* End of Switch: '<S295>/Switch1' */
 
-    /* Product: '<S292>/Product4' incorporates:
+    /* Product: '<S293>/Product4' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration7'
      */
     rtb_Product4_o = rtb_Switch_c * (O2CtrlDGain_DataStore());
 
-    /* Sum: '<S293>/Sum2' incorporates:
-     *  UnitDelay: '<S293>/Unit Delay'
+    /* Sum: '<S294>/Sum2' incorporates:
+     *  UnitDelay: '<S294>/Unit Delay'
      */
     rtb_DataTypeConversion1_e = rtb_Product4_o -
-      BaseEngineController_LS_DWork.s293_UnitDelay_DSTATE;
+      BaseEngineController_LS_DWork.s294_UnitDelay_DSTATE;
 
-    /* S-Function Block: <S293>/motohawk_delta_time */
+    /* S-Function Block: <S294>/motohawk_delta_time */
     rtb_motohawk_delta_time_k = 0.005;
 
-    /* Product: '<S293>/Product' incorporates:
-     *  S-Function (motohawk_sfun_delta_time): '<S293>/motohawk_delta_time'
+    /* Product: '<S294>/Product' incorporates:
+     *  S-Function (motohawk_sfun_delta_time): '<S294>/motohawk_delta_time'
      */
-    BaseEngineController_LS_B.s293_Product = rtb_DataTypeConversion1_e /
+    BaseEngineController_LS_B.s294_Product = rtb_DataTypeConversion1_e /
       rtb_motohawk_delta_time_k;
 
-    /* MinMax: '<S291>/MinMax' incorporates:
-     *  Constant: '<S289>/Convert to Fuel Multiplier'
+    /* MinMax: '<S292>/MinMax' incorporates:
+     *  Constant: '<S290>/Convert to Fuel Multiplier'
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration11'
-     *  Sum: '<S289>/Sum'
-     *  Sum: '<S292>/Sum1'
+     *  Sum: '<S290>/Sum'
+     *  Sum: '<S293>/Sum1'
      */
-    rtb_UnitDelay4_b3 = ((BaseEngineController_LS_B.s292_Product2 +
-                          BaseEngineController_LS_B.s293_Product) +
-                         BaseEngineController_LS_B.s294_Switch1) + 1.0;
+    rtb_UnitDelay4_b3 = ((BaseEngineController_LS_B.s293_Product2 +
+                          BaseEngineController_LS_B.s294_Product) +
+                         BaseEngineController_LS_B.s295_Switch1) + 1.0;
     y = (rtb_UnitDelay4_b3 >= (O2CtrlPIDOutLowerLimit_DataStore())) || rtIsNaN
       ((O2CtrlPIDOutLowerLimit_DataStore())) ? rtb_UnitDelay4_b3 :
       (O2CtrlPIDOutLowerLimit_DataStore());
 
-    /* MinMax: '<S291>/MinMax1' incorporates:
-     *  MinMax: '<S291>/MinMax'
+    /* MinMax: '<S292>/MinMax1' incorporates:
+     *  MinMax: '<S292>/MinMax'
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration10'
      */
     rtb_Multiplyby10ifnotyetenabled = (y <= (O2CtrlPIDOutUpperLimit_DataStore()))
       || rtIsNaN((O2CtrlPIDOutUpperLimit_DataStore())) ? y :
       (O2CtrlPIDOutUpperLimit_DataStore());
 
-    /* Product: '<S292>/Product1' incorporates:
+    /* Product: '<S293>/Product1' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration6'
      */
     rtb_DataTypeConversion1_e = rtb_Switch_c * (O2CtrlIGain_DataStore());
 
-    /* S-Function Block: <S294>/motohawk_delta_time */
+    /* S-Function Block: <S295>/motohawk_delta_time */
     {
       uint32_T delta;
       extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
         (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
       delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (&BaseEngineController_LS_DWork.s294_motohawk_delta_time_DWORK1, NULL);
+        (&BaseEngineController_LS_DWork.s295_motohawk_delta_time_DWORK1, NULL);
       rtb_motohawk_delta_time_mn = ((real_T) delta) * 0.000001;
     }
 
-    /* MinMax: '<S296>/MinMax' incorporates:
-     *  Product: '<S294>/Product'
+    /* MinMax: '<S297>/MinMax' incorporates:
+     *  Product: '<S295>/Product'
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration8'
-     *  S-Function (motohawk_sfun_delta_time): '<S294>/motohawk_delta_time'
-     *  Sum: '<S294>/Sum'
+     *  S-Function (motohawk_sfun_delta_time): '<S295>/motohawk_delta_time'
+     *  Sum: '<S295>/Sum'
      */
     rtb_UnitDelay4_b3 = rtb_DataTypeConversion1_e * rtb_motohawk_delta_time_mn +
-      BaseEngineController_LS_B.s294_Switch1;
+      BaseEngineController_LS_B.s295_Switch1;
     y = (rtb_UnitDelay4_b3 >= (O2ITermLowerLimit_DataStore())) || rtIsNaN
       ((O2ITermLowerLimit_DataStore())) ? rtb_UnitDelay4_b3 :
       (O2ITermLowerLimit_DataStore());
 
-    /* MinMax: '<S296>/MinMax1' incorporates:
-     *  MinMax: '<S296>/MinMax'
+    /* MinMax: '<S297>/MinMax1' incorporates:
+     *  MinMax: '<S297>/MinMax'
      *  S-Function (motohawk_sfun_calibration): '<S285>/motohawk_calibration9'
      */
     y = (y <= (O2ITermUpperLimit_DataStore())) || rtIsNaN
       ((O2ITermUpperLimit_DataStore())) ? y : (O2ITermUpperLimit_DataStore());
 
-    /* UnitDelay: '<S290>/Unit Delay1' */
-    rtb_Switch_c = BaseEngineController_LS_DWork.s290_UnitDelay1_DSTATE;
+    /* UnitDelay: '<S291>/Unit Delay1' */
+    rtb_Switch_c = BaseEngineController_LS_DWork.s291_UnitDelay1_DSTATE;
 
-    /* Logic: '<S290>/Logical Operator10' incorporates:
-     *  S-Function (motohawk_sfun_data_read): '<S290>/motohawk_data_read'
+    /* Logic: '<S291>/Logical Operator10' incorporates:
+     *  S-Function (motohawk_sfun_data_read): '<S291>/motohawk_data_read'
      */
     rtb_RelationalOperator3_bp = (rtb_LogicalOperator2_ig &&
-      DisableO2FaultAction_DataStore());
-
-    /* S-Function Block: <S298>/motohawk_delta_time */
-    {
-      uint32_T delta;
-      extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-      delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (&BaseEngineController_LS_DWork.s298_motohawk_delta_time_DWORK1, NULL);
-      rtb_motohawk_delta_time_bm = ((real_T) delta) * 0.000001;
-    }
-
-    /* Logic: '<S290>/Logical Operator4' */
-    rtb_RelOp_pu = !rtb_LogicalOperator6_b;
-
-    /* Logic: '<S290>/Logical Operator6' */
-    rtb_LogicalOperator1_al = !rtb_LogicalOperator1_al;
-
-    /* Switch: '<S298>/Switch' incorporates:
-     *  Constant: '<S298>/Constant'
-     *  Logic: '<S290>/Logical Operator7'
-     *  S-Function (motohawk_sfun_data_read): '<S298>/motohawk_data_read'
-     *  S-Function (motohawk_sfun_delta_time): '<S298>/motohawk_delta_time'
-     *  Sum: '<S298>/Sum'
-     */
-    if (rtb_LogicalOperator2_ig && rtb_RelOp_pu && rtb_LogicalOperator1_al) {
-      rtb_DataTypeConversion1_e = rtb_motohawk_delta_time_bm +
-        O2LeanTimer_DataStore();
-    } else {
-      rtb_DataTypeConversion1_e = 0.0;
-    }
-
-    /* End of Switch: '<S298>/Switch' */
-
-    /* Switch: '<S290>/Switch3' */
-    if (rtb_RelationalOperator3_bp) {
-      BaseEngineController_LS_B.s290_Switch3 = rtb_Switch_c;
-    } else {
-      BaseEngineController_LS_B.s290_Switch3 = rtb_DataTypeConversion1_e;
-    }
-
-    /* End of Switch: '<S290>/Switch3' */
-    /* RelationalOperator: '<S290>/LT3' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S290>/motohawk_calibration2'
-     */
-    rtb_LT3 = ((BaseEngineController_LS_B.s290_Switch3 >=
-                (O2LeanTimeThresh_DataStore())));
-
-    /* S-Function (motohawk_sfun_fault_def): '<S290>/motohawk_fault_def' */
-
-    /* Set Fault Suspected Status: O2FailedLean */
-    {
-      extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-      extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(98, rtb_LT3);
-      UpdateFault(98);
-    }
-
-    /* UnitDelay: '<S290>/Unit Delay' */
-    rtb_Switch_c = BaseEngineController_LS_DWork.s290_UnitDelay_DSTATE;
-
-    /* Logic: '<S290>/Logical Operator9' incorporates:
-     *  S-Function (motohawk_sfun_data_read): '<S290>/motohawk_data_read'
-     */
-    rtb_LogicalOperator6_b = (rtb_AboveRich && DisableO2FaultAction_DataStore());
-
-    /* S-Function Block: <S300>/motohawk_delta_time */
-    {
-      uint32_T delta;
-      extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-      delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (&BaseEngineController_LS_DWork.s300_motohawk_delta_time_DWORK1, NULL);
-      rtb_motohawk_delta_time_oq = ((real_T) delta) * 0.000001;
-    }
-
-    /* Switch: '<S300>/Switch' incorporates:
-     *  Constant: '<S300>/Constant'
-     *  Logic: '<S290>/Logical Operator5'
-     *  S-Function (motohawk_sfun_data_read): '<S300>/motohawk_data_read'
-     *  S-Function (motohawk_sfun_delta_time): '<S300>/motohawk_delta_time'
-     *  Sum: '<S300>/Sum'
-     */
-    if (rtb_AboveRich && rtb_RelOp_pu && rtb_LogicalOperator1_al) {
-      rtb_DataTypeConversion_b2 = rtb_motohawk_delta_time_oq +
-        O2RichTimer_DataStore();
-    } else {
-      rtb_DataTypeConversion_b2 = 0.0;
-    }
-
-    /* End of Switch: '<S300>/Switch' */
-
-    /* Switch: '<S290>/Switch1' */
-    if (rtb_LogicalOperator6_b) {
-      BaseEngineController_LS_B.s290_Switch1 = rtb_Switch_c;
-    } else {
-      BaseEngineController_LS_B.s290_Switch1 = rtb_DataTypeConversion_b2;
-    }
-
-    /* End of Switch: '<S290>/Switch1' */
-    /* RelationalOperator: '<S290>/LT2' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S290>/motohawk_calibration1'
-     */
-    rtb_LT2 = ((BaseEngineController_LS_B.s290_Switch1 >=
-                (O2RichTimeThresh_DataStore())));
-
-    /* S-Function (motohawk_sfun_fault_def): '<S290>/motohawk_fault_def1' */
-
-    /* Set Fault Suspected Status: O2FailedRich */
-    {
-      extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-      extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(99, rtb_LT2);
-      UpdateFault(99);
-    }
-
-    /* UnitDelay: '<S290>/Unit Delay2' */
-    rtb_Switch_c = BaseEngineController_LS_DWork.s290_UnitDelay2_DSTATE;
-
-    /* Logic: '<S290>/Logical Operator2' incorporates:
-     *  Logic: '<S290>/Logical Operator1'
-     *  Logic: '<S290>/Logical Operator3'
-     */
-    rtb_LogicalOperator2_ig = ((!rtb_LogicalOperator2_ig) && (!rtb_AboveRich));
-
-    /* Logic: '<S290>/Logical Operator11' incorporates:
-     *  S-Function (motohawk_sfun_data_read): '<S290>/motohawk_data_read'
-     */
-    rtb_LogicalOperator6_b = (rtb_LogicalOperator2_ig &&
       DisableO2FaultAction_DataStore());
 
     /* S-Function Block: <S299>/motohawk_delta_time */
@@ -10247,15 +10174,144 @@ void BaseEngineController_LS_Foreground(void)
         (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
       delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
         (&BaseEngineController_LS_DWork.s299_motohawk_delta_time_DWORK1, NULL);
-      rtb_motohawk_delta_time_ad = ((real_T) delta) * 0.000001;
+      rtb_motohawk_delta_time_bm = ((real_T) delta) * 0.000001;
     }
+
+    /* Logic: '<S291>/Logical Operator4' */
+    rtb_RelOp_pu = !rtb_LogicalOperator6_b;
+
+    /* Logic: '<S291>/Logical Operator6' */
+    rtb_LogicalOperator1_al = !rtb_LogicalOperator1_al;
 
     /* Switch: '<S299>/Switch' incorporates:
      *  Constant: '<S299>/Constant'
-     *  Logic: '<S290>/Logical Operator8'
+     *  Logic: '<S291>/Logical Operator7'
      *  S-Function (motohawk_sfun_data_read): '<S299>/motohawk_data_read'
      *  S-Function (motohawk_sfun_delta_time): '<S299>/motohawk_delta_time'
      *  Sum: '<S299>/Sum'
+     */
+    if (rtb_LogicalOperator2_ig && rtb_RelOp_pu && rtb_LogicalOperator1_al) {
+      rtb_DataTypeConversion1_e = rtb_motohawk_delta_time_bm +
+        O2LeanTimer_DataStore();
+    } else {
+      rtb_DataTypeConversion1_e = 0.0;
+    }
+
+    /* End of Switch: '<S299>/Switch' */
+
+    /* Switch: '<S291>/Switch3' */
+    if (rtb_RelationalOperator3_bp) {
+      BaseEngineController_LS_B.s291_Switch3 = rtb_Switch_c;
+    } else {
+      BaseEngineController_LS_B.s291_Switch3 = rtb_DataTypeConversion1_e;
+    }
+
+    /* End of Switch: '<S291>/Switch3' */
+    /* RelationalOperator: '<S291>/LT3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S291>/motohawk_calibration2'
+     */
+    rtb_LT3 = ((BaseEngineController_LS_B.s291_Switch3 >=
+                (O2LeanTimeThresh_DataStore())));
+
+    /* S-Function (motohawk_sfun_fault_def): '<S291>/motohawk_fault_def' */
+
+    /* Set Fault Suspected Status: O2FailedLean */
+    {
+      extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+      extern void UpdateFault(uint32_T fault);
+      SetFaultSuspected(95, rtb_LT3);
+      UpdateFault(95);
+    }
+
+    /* UnitDelay: '<S291>/Unit Delay' */
+    rtb_Switch_c = BaseEngineController_LS_DWork.s291_UnitDelay_DSTATE;
+
+    /* Logic: '<S291>/Logical Operator9' incorporates:
+     *  S-Function (motohawk_sfun_data_read): '<S291>/motohawk_data_read'
+     */
+    rtb_LogicalOperator6_b = (rtb_AboveRich && DisableO2FaultAction_DataStore());
+
+    /* S-Function Block: <S301>/motohawk_delta_time */
+    {
+      uint32_T delta;
+      extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+        (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+      delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+        (&BaseEngineController_LS_DWork.s301_motohawk_delta_time_DWORK1, NULL);
+      rtb_motohawk_delta_time_oq = ((real_T) delta) * 0.000001;
+    }
+
+    /* Switch: '<S301>/Switch' incorporates:
+     *  Constant: '<S301>/Constant'
+     *  Logic: '<S291>/Logical Operator5'
+     *  S-Function (motohawk_sfun_data_read): '<S301>/motohawk_data_read'
+     *  S-Function (motohawk_sfun_delta_time): '<S301>/motohawk_delta_time'
+     *  Sum: '<S301>/Sum'
+     */
+    if (rtb_AboveRich && rtb_RelOp_pu && rtb_LogicalOperator1_al) {
+      rtb_DataTypeConversion_b2 = rtb_motohawk_delta_time_oq +
+        O2RichTimer_DataStore();
+    } else {
+      rtb_DataTypeConversion_b2 = 0.0;
+    }
+
+    /* End of Switch: '<S301>/Switch' */
+
+    /* Switch: '<S291>/Switch1' */
+    if (rtb_LogicalOperator6_b) {
+      BaseEngineController_LS_B.s291_Switch1 = rtb_Switch_c;
+    } else {
+      BaseEngineController_LS_B.s291_Switch1 = rtb_DataTypeConversion_b2;
+    }
+
+    /* End of Switch: '<S291>/Switch1' */
+    /* RelationalOperator: '<S291>/LT2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S291>/motohawk_calibration1'
+     */
+    rtb_LT2 = ((BaseEngineController_LS_B.s291_Switch1 >=
+                (O2RichTimeThresh_DataStore())));
+
+    /* S-Function (motohawk_sfun_fault_def): '<S291>/motohawk_fault_def1' */
+
+    /* Set Fault Suspected Status: O2FailedRich */
+    {
+      extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+      extern void UpdateFault(uint32_T fault);
+      SetFaultSuspected(96, rtb_LT2);
+      UpdateFault(96);
+    }
+
+    /* UnitDelay: '<S291>/Unit Delay2' */
+    rtb_Switch_c = BaseEngineController_LS_DWork.s291_UnitDelay2_DSTATE;
+
+    /* Logic: '<S291>/Logical Operator2' incorporates:
+     *  Logic: '<S291>/Logical Operator1'
+     *  Logic: '<S291>/Logical Operator3'
+     */
+    rtb_LogicalOperator2_ig = ((!rtb_LogicalOperator2_ig) && (!rtb_AboveRich));
+
+    /* Logic: '<S291>/Logical Operator11' incorporates:
+     *  S-Function (motohawk_sfun_data_read): '<S291>/motohawk_data_read'
+     */
+    rtb_LogicalOperator6_b = (rtb_LogicalOperator2_ig &&
+      DisableO2FaultAction_DataStore());
+
+    /* S-Function Block: <S300>/motohawk_delta_time */
+    {
+      uint32_T delta;
+      extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+        (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+      delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+        (&BaseEngineController_LS_DWork.s300_motohawk_delta_time_DWORK1, NULL);
+      rtb_motohawk_delta_time_ad = ((real_T) delta) * 0.000001;
+    }
+
+    /* Switch: '<S300>/Switch' incorporates:
+     *  Constant: '<S300>/Constant'
+     *  Logic: '<S291>/Logical Operator8'
+     *  S-Function (motohawk_sfun_data_read): '<S300>/motohawk_data_read'
+     *  S-Function (motohawk_sfun_delta_time): '<S300>/motohawk_delta_time'
+     *  Sum: '<S300>/Sum'
      */
     if (rtb_LogicalOperator2_ig && rtb_RelOp_pu && rtb_LogicalOperator1_al) {
       rtb_Switch_mq = rtb_motohawk_delta_time_ad + O2ActiveTimer_DataStore();
@@ -10263,57 +10319,57 @@ void BaseEngineController_LS_Foreground(void)
       rtb_Switch_mq = 0.0;
     }
 
-    /* End of Switch: '<S299>/Switch' */
+    /* End of Switch: '<S300>/Switch' */
 
-    /* Switch: '<S290>/Switch4' */
+    /* Switch: '<S291>/Switch4' */
     if (rtb_LogicalOperator6_b) {
-      BaseEngineController_LS_B.s290_Switch4 = rtb_Switch_c;
+      BaseEngineController_LS_B.s291_Switch4 = rtb_Switch_c;
     } else {
-      BaseEngineController_LS_B.s290_Switch4 = rtb_Switch_mq;
+      BaseEngineController_LS_B.s291_Switch4 = rtb_Switch_mq;
     }
 
-    /* End of Switch: '<S290>/Switch4' */
-    /* RelationalOperator: '<S290>/LT4' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S290>/motohawk_calibration3'
+    /* End of Switch: '<S291>/Switch4' */
+    /* RelationalOperator: '<S291>/LT4' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S291>/motohawk_calibration3'
      */
-    rtb_LT4 = ((BaseEngineController_LS_B.s290_Switch4 >=
+    rtb_LT4 = ((BaseEngineController_LS_B.s291_Switch4 >=
                 (O2ActiveTimeThresh_DataStore())));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S290>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S291>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: O2NotActive */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(100, rtb_LT4);
-      UpdateFault(100);
+      SetFaultSuspected(97, rtb_LT4);
+      UpdateFault(97);
     }
 
-    /* Saturate: '<S298>/Saturation' */
+    /* Saturate: '<S299>/Saturation' */
     rtb_Saturation_nb = rtb_DataTypeConversion1_e >= 16000.0 ? 16000.0 :
       rtb_DataTypeConversion1_e <= 0.0 ? 0.0 : rtb_DataTypeConversion1_e;
 
-    /* S-Function (motohawk_sfun_data_write): '<S298>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S299>/motohawk_data_write' */
     /* Write to Data Storage as scalar: O2LeanTimer */
     {
       O2LeanTimer_DataStore() = rtb_Saturation_nb;
     }
 
-    /* Saturate: '<S299>/Saturation' */
+    /* Saturate: '<S300>/Saturation' */
     rtb_Saturation_mr = rtb_Switch_mq >= 16000.0 ? 16000.0 : rtb_Switch_mq <=
       0.0 ? 0.0 : rtb_Switch_mq;
 
-    /* S-Function (motohawk_sfun_data_write): '<S299>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S300>/motohawk_data_write' */
     /* Write to Data Storage as scalar: O2ActiveTimer */
     {
       O2ActiveTimer_DataStore() = rtb_Saturation_mr;
     }
 
-    /* Saturate: '<S300>/Saturation' */
+    /* Saturate: '<S301>/Saturation' */
     rtb_Saturation_c3 = rtb_DataTypeConversion_b2 >= 16000.0 ? 16000.0 :
       rtb_DataTypeConversion_b2 <= 0.0 ? 0.0 : rtb_DataTypeConversion_b2;
 
-    /* S-Function (motohawk_sfun_data_write): '<S300>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S301>/motohawk_data_write' */
     /* Write to Data Storage as scalar: O2RichTimer */
     {
       O2RichTimer_DataStore() = rtb_Saturation_c3;
@@ -10329,37 +10385,35 @@ void BaseEngineController_LS_Foreground(void)
 
     /* End of InitialCondition: '<S286>/Multiply by 1.0 if not yet enabled' */
 
-    /* Update for UnitDelay: '<S297>/Unit Delay' */
-    BaseEngineController_LS_DWork.s297_UnitDelay_DSTATE = rtb_Switch1_mj;
+    /* Update for UnitDelay: '<S298>/Unit Delay' */
+    BaseEngineController_LS_DWork.s298_UnitDelay_DSTATE = rtb_Switch1_mj;
 
-    /* Update for UnitDelay: '<S294>/Unit Delay' incorporates:
-     *  MinMax: '<S296>/MinMax1'
+    /* Update for UnitDelay: '<S295>/Unit Delay' incorporates:
+     *  MinMax: '<S297>/MinMax1'
      */
-    BaseEngineController_LS_DWork.s294_UnitDelay_DSTATE = y;
+    BaseEngineController_LS_DWork.s295_UnitDelay_DSTATE = y;
 
-    /* Update for UnitDelay: '<S293>/Unit Delay' */
-    BaseEngineController_LS_DWork.s293_UnitDelay_DSTATE = rtb_Product4_o;
+    /* Update for UnitDelay: '<S294>/Unit Delay' */
+    BaseEngineController_LS_DWork.s294_UnitDelay_DSTATE = rtb_Product4_o;
 
-    /* Update for UnitDelay: '<S290>/Unit Delay1' */
-    BaseEngineController_LS_DWork.s290_UnitDelay1_DSTATE =
-      BaseEngineController_LS_B.s290_Switch3;
+    /* Update for UnitDelay: '<S291>/Unit Delay1' */
+    BaseEngineController_LS_DWork.s291_UnitDelay1_DSTATE =
+      BaseEngineController_LS_B.s291_Switch3;
 
-    /* Update for UnitDelay: '<S290>/Unit Delay' */
-    BaseEngineController_LS_DWork.s290_UnitDelay_DSTATE =
-      BaseEngineController_LS_B.s290_Switch1;
+    /* Update for UnitDelay: '<S291>/Unit Delay' */
+    BaseEngineController_LS_DWork.s291_UnitDelay_DSTATE =
+      BaseEngineController_LS_B.s291_Switch1;
 
-    /* Update for UnitDelay: '<S290>/Unit Delay2' */
-    BaseEngineController_LS_DWork.s290_UnitDelay2_DSTATE =
-      BaseEngineController_LS_B.s290_Switch4;
+    /* Update for UnitDelay: '<S291>/Unit Delay2' */
+    BaseEngineController_LS_DWork.s291_UnitDelay2_DSTATE =
+      BaseEngineController_LS_B.s291_Switch4;
 
     /* End of Outputs for SubSystem: '<S154>/O2 PID Controller' */
+
     /* Switch: '<S154>/Switch' incorporates:
      *  Constant: '<S154>/Constant'
-     *  Logic: '<S154>/Logical Operator2'
-     *  S-Function (motohawk_sfun_calibration): '<S154>/motohawk_calibration'
      */
-    if ((O2DisablmentMult_DataStore()) &&
-        BaseEngineController_LS_B.s284_LogicalOperator2) {
+    if (BaseEngineController_LS_B.s284_LogicalOperator2) {
       BaseEngineController_LS_B.s154_O2FuelMult =
         rtb_Multiplyby10ifnotyetenabled;
     } else {
@@ -10375,9 +10429,9 @@ void BaseEngineController_LS_Foreground(void)
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
-      (O2ITermIn_DataStore()) = BaseEngineController_LS_B.s294_Switch1;
+      (O2ITermIn_DataStore()) = BaseEngineController_LS_B.s295_Switch1;
       (O2ITermIdx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s294_Switch1, (O2ITermIdxArr_DataStore()), 9,
+        (BaseEngineController_LS_B.s295_Switch1, (O2ITermIdxArr_DataStore()), 9,
          (O2ITermIdx_DataStore()));
       rtb_ITermIdx = (O2ITermIdx_DataStore());
     }
@@ -10390,9 +10444,9 @@ void BaseEngineController_LS_Foreground(void)
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
-      (DesAFRatioIn_DataStore()) = BaseEngineController_LS_B.s638_Merge;
+      (DesAFRatioIn_DataStore()) = BaseEngineController_LS_B.s639_Merge;
       (DesAFRatioIdx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s638_Merge, (DesAFRatioIdxArr_DataStore()),
+        (BaseEngineController_LS_B.s639_Merge, (DesAFRatioIdxArr_DataStore()),
          11, (DesAFRatioIdx_DataStore()));
       rtb_motohawk_prelookup_hf = (DesAFRatioIdx_DataStore());
     }
@@ -10410,7 +10464,7 @@ void BaseEngineController_LS_Foreground(void)
 
     /* Product: '<S209>/Fuel Flow = Mass Airflow * Equivalence Ratio // Air-to-fuel Ratio' */
     BaseEngineController_LS_B.s209_FuelFlowMassAirflowEquivalenceRatioAirtofuelRatio
-      = BaseEngineController_LS_B.s366_MultiportSwitch * rtb_DesiredLambda_idx /
+      = BaseEngineController_LS_B.s367_MultiportSwitch * rtb_DesiredLambda_idx /
       BaseEngineController_LS_B.s211_motohawk_interpolation_1d;
 
     /* Product: '<S206>/Per-Cylinder Mass Flow Rate' incorporates:
@@ -10493,10 +10547,10 @@ void BaseEngineController_LS_Foreground(void)
        */
       BaseEngineController_LS_B.s221_Sum1 = (1.0 - rtb_Product_mq) *
         BaseEngineController_LS_DWork.s221_UnitDelay_DSTATE +
-        BaseEngineController_LS_B.s659_Merge * rtb_Product_mq;
+        BaseEngineController_LS_B.s660_Merge * rtb_Product_mq;
 
       /* Sum: '<S212>/Sum1' */
-      BaseEngineController_LS_B.s212_Sum1 = BaseEngineController_LS_B.s659_Merge
+      BaseEngineController_LS_B.s212_Sum1 = BaseEngineController_LS_B.s660_Merge
         - BaseEngineController_LS_B.s221_Sum1;
 
       /* S-Function Block: <S217>/motohawk_delta_time */
@@ -10526,20 +10580,20 @@ void BaseEngineController_LS_Foreground(void)
        */
       BaseEngineController_LS_B.s220_Sum1 = (1.0 - rtb_Product_mq) *
         BaseEngineController_LS_DWork.s220_UnitDelay_DSTATE +
-        BaseEngineController_LS_B.s412_Switch2 * rtb_Product_mq;
+        BaseEngineController_LS_B.s413_Switch2 * rtb_Product_mq;
 
       /* Sum: '<S212>/Sum' */
       BaseEngineController_LS_B.s212_Sum =
-        BaseEngineController_LS_B.s412_Switch2 -
+        BaseEngineController_LS_B.s413_Switch2 -
         BaseEngineController_LS_B.s220_Sum1;
 
       /* S-Function Block: <S212>/motohawk_prelookup */
       {
         extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
           ordarr[], uint32_T sz, uint16_T prev);
-        (MAF09In_DataStore()) = BaseEngineController_LS_B.s366_MultiportSwitch;
+        (MAF09In_DataStore()) = BaseEngineController_LS_B.s367_MultiportSwitch;
         (MAF09Idx_DataStore()) = TablePrelookup_real_T
-          (BaseEngineController_LS_B.s366_MultiportSwitch,
+          (BaseEngineController_LS_B.s367_MultiportSwitch,
            (MAF09IdxArr_DataStore()), 9, (MAF09Idx_DataStore()));
         rtb_motohawk_prelookup_ag = (MAF09Idx_DataStore());
       }
@@ -10618,7 +10672,7 @@ void BaseEngineController_LS_Foreground(void)
             *tbl_data, uint32_T sz);
           BaseEngineController_LS_B.s216_motohawk_interpolation_1d =
             TableInterpolation1D_real_T
-            (BaseEngineController_LS_B.s393_motohawk_prelookup, (real_T *)
+            (BaseEngineController_LS_B.s394_motohawk_prelookup, (real_T *)
              ((ECTTransFuelMultTbl_DataStore())), 5);
           (ECTTransFuelMult_DataStore()) =
             BaseEngineController_LS_B.s216_motohawk_interpolation_1d;
@@ -10714,8 +10768,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_EOI = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((MakeUpEOIMap_DataStore())), 9, 9);
       (MakeUpEOI_DataStore()) = rtb_EOI;
     }
@@ -10726,12 +10780,12 @@ void BaseEngineController_LS_Foreground(void)
     /* RelationalOperator: '<S223>/RelOp' incorporates:
      *  Constant: '<S223>/Constant'
      */
-    if (BaseEngineController_LS_B.s616_Sum1 != 0.0) {
+    if (BaseEngineController_LS_B.s617_Sum1 != 0.0) {
       /* Product: '<S222>/charge mass' incorporates:
        *  Constant: '<S213>/Units Equivalency Factor'
        */
       BaseEngineController_LS_B.s222_chargemass = rtb_DataTypeConversion1_e *
-        60000.0 / BaseEngineController_LS_B.s616_Sum1;
+        60000.0 / BaseEngineController_LS_B.s617_Sum1;
     }
 
     /* End of RelationalOperator: '<S223>/RelOp' */
@@ -10741,8 +10795,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_PrimaryPulseInjectionTiming = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((PrimarySOIMap_DataStore())), 9, 9);
       (PrimarySOI_DataStore()) = rtb_PrimaryPulseInjectionTiming;
     }
@@ -10764,7 +10818,7 @@ void BaseEngineController_LS_Foreground(void)
      *  S-Function (motohawk_sfun_interpolation_1d): '<S208>/motohawk_interpolation_1d1'
      *  S-Function (motohawk_sfun_prelookup): '<S154>/motohawk_prelookup13'
      */
-    rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s294_Switch1 *
+    rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s295_Switch1 *
       rtb_motohawk_interpolation_1d1_m;
 
     /* MinMax: '<S229>/MinMax' incorporates:
@@ -10788,8 +10842,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_motohawk_interpolation_2d2 = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((FuelFlowCompAdaptMap_DataStore())), 9, 9);
       (FuelFlowCompAdapt_DataStore()) = rtb_motohawk_interpolation_2d2;
     }
@@ -10846,7 +10900,7 @@ void BaseEngineController_LS_Foreground(void)
     /* End of Outputs for SubSystem: '<S208>/O2 Control Enable Delay' */
 
     /* Abs: '<S208>/Abs' */
-    rtb_DataTypeConversion1_e = fabs(BaseEngineController_LS_B.s294_Switch1);
+    rtb_DataTypeConversion1_e = fabs(BaseEngineController_LS_B.s295_Switch1);
 
     /* Logic: '<S208>/Logical Operator2' incorporates:
      *  RelationalOperator: '<S208>/Relational Operator'
@@ -10954,8 +11008,8 @@ void BaseEngineController_LS_Foreground(void)
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
       rtb_motohawk_interpolation_2d1_p = TableInterpolation2D_real_T
-        (BaseEngineController_LS_B.s395_motohawk_prelookup1,
-         BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s396_motohawk_prelookup1,
+         BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((FuelFlowCompMap_DataStore())), 9, 9);
       (FuelFlowComp_DataStore()) = rtb_motohawk_interpolation_2d1_p;
     }
@@ -11011,7 +11065,7 @@ void BaseEngineController_LS_Foreground(void)
 
     /* ZeroOrderHold: '<S136>/Zero-Order Hold12' */
     BaseEngineController_LS_B.s135_SparkAdv =
-      BaseEngineController_LS_B.s303_Switch;
+      BaseEngineController_LS_B.s304_Switch;
 
     /* ZeroOrderHold: '<S136>/Zero-Order Hold16' incorporates:
      *  Constant: '<S136>/ON1'
@@ -11094,132 +11148,132 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Outputs for SubSystem: '<S15>/Run' */
 
-  /* If: '<S860>/If' incorporates:
-   *  Inport: '<S861>/In1'
+  /* If: '<S861>/If' incorporates:
    *  Inport: '<S862>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S860>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S860>/override_enable'
+   *  Inport: '<S863>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S861>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S861>/override_enable'
    */
   if ((AC_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S860>/NewValue' incorporates:
-     *  ActionPort: '<S861>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S861>/NewValue' incorporates:
+     *  ActionPort: '<S862>/Action Port'
      */
     rtb_LogicalOperator6_b = (AC_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S860>/NewValue' */
+    /* End of Outputs for SubSystem: '<S861>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S860>/OldValue' incorporates:
-     *  ActionPort: '<S862>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S861>/OldValue' incorporates:
+     *  ActionPort: '<S863>/Action Port'
      */
     rtb_LogicalOperator6_b = BaseEngineController_LS_B.s135_AC;
 
-    /* End of Outputs for SubSystem: '<S860>/OldValue' */
+    /* End of Outputs for SubSystem: '<S861>/OldValue' */
   }
 
-  /* End of If: '<S860>/If' */
+  /* End of If: '<S861>/If' */
 
-  /* Logic: '<S859>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S859>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S860>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S860>/0 = No Inversion 1 = Inversion'
    */
-  BaseEngineController_LS_B.s859_LogicalOperator = rtb_LogicalOperator6_b ^
+  BaseEngineController_LS_B.s860_LogicalOperator = rtb_LogicalOperator6_b ^
     (AC_Polarity_DataStore());
 
-  /* S-Function (motohawk_sfun_trigger): '<S445>/motohawk_trigger1' */
+  /* S-Function (motohawk_sfun_trigger): '<S446>/motohawk_trigger1' */
   /* Enable for Trigger_FGND_5XRTI_PERIODIC_5523p0009 */
-  if (BaseEngineController_LS_DWork.s445_motohawk_trigger1_DWORK1 == 0) {
-    BaseEngineController_LS_DWork.s445_motohawk_trigger1_DWORK1 = 1;
+  if (BaseEngineController_LS_DWork.s446_motohawk_trigger1_DWORK1 == 0) {
+    BaseEngineController_LS_DWork.s446_motohawk_trigger1_DWORK1 = 1;
   }
 
-  /* RelationalOperator: '<S379>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S379>/motohawk_calibration10'
+  /* RelationalOperator: '<S380>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S380>/motohawk_calibration10'
    */
-  rtb_RelationalOperator_h = (BaseEngineController_LS_B.s431_Sum >=
+  rtb_RelationalOperator_h = (BaseEngineController_LS_B.s432_Sum >=
     (FuelLevel_KeyUpDelay_DataStore()));
 
-  /* S-Function (motohawk_sfun_data_read): '<S358>/motohawk_data_read' */
-  BaseEngineController_LS_B.s358_motohawk_data_read = FuelLvl_NVM_DataStore();
+  /* S-Function (motohawk_sfun_data_read): '<S359>/motohawk_data_read' */
+  BaseEngineController_LS_B.s359_motohawk_data_read = FuelLvl_NVM_DataStore();
 
-  /* Switch: '<S358>/Switch2' */
+  /* Switch: '<S359>/Switch2' */
   if (rtb_RelationalOperator_h) {
-    rtb_DataTypeConversion_gx = BaseEngineController_LS_B.s699_Merge;
+    rtb_DataTypeConversion_gx = BaseEngineController_LS_B.s700_Merge;
   } else {
     rtb_DataTypeConversion_gx =
-      BaseEngineController_LS_B.s358_motohawk_data_read;
+      BaseEngineController_LS_B.s359_motohawk_data_read;
   }
 
-  /* End of Switch: '<S358>/Switch2' */
+  /* End of Switch: '<S359>/Switch2' */
 
-  /* Sum: '<S379>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_data_read): '<S379>/motohawk_data_read'
+  /* Sum: '<S380>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_data_read): '<S380>/motohawk_data_read'
    */
-  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s699_Merge -
+  rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s700_Merge -
     FuelLvl_NVM_DataStore();
 
-  /* Logic: '<S379>/Logical Operator' incorporates:
-   *  RelationalOperator: '<S379>/Relational Operator1'
-   *  S-Function (motohawk_sfun_calibration): '<S379>/motohawk_calibration1'
+  /* Logic: '<S380>/Logical Operator' incorporates:
+   *  RelationalOperator: '<S380>/Relational Operator1'
+   *  S-Function (motohawk_sfun_calibration): '<S380>/motohawk_calibration1'
    */
   rtb_LogicalOperator_c = ((rtb_DataTypeConversion1_e >=
     (FuelLevl_KeyUpDiff_DataStore())) && rtb_RelationalOperator_h);
 
-  /* Logic: '<S381>/Logical Operator' incorporates:
-   *  Logic: '<S381>/Logical Operator1'
-   *  UnitDelay: '<S381>/Unit Delay'
+  /* Logic: '<S382>/Logical Operator' incorporates:
+   *  Logic: '<S382>/Logical Operator1'
+   *  UnitDelay: '<S382>/Unit Delay'
    */
-  BaseEngineController_LS_B.s381_LogicalOperator = ((rtb_LogicalOperator_c &&
-    (!BaseEngineController_LS_DWork.s381_UnitDelay_DSTATE)));
+  BaseEngineController_LS_B.s382_LogicalOperator = ((rtb_LogicalOperator_c &&
+    (!BaseEngineController_LS_DWork.s382_UnitDelay_DSTATE)));
 
-  /* Logic: '<S358>/Logical Operator1' incorporates:
-   *  Logic: '<S358>/Logical Operator'
+  /* Logic: '<S359>/Logical Operator1' incorporates:
+   *  Logic: '<S359>/Logical Operator'
    */
   rtb_LogicalOperator6_b = ((!rtb_RelationalOperator_h) ||
-    BaseEngineController_LS_B.s381_LogicalOperator);
+    BaseEngineController_LS_B.s382_LogicalOperator);
 
-  /* S-Function Block: <S358>/motohawk_delta_time */
+  /* S-Function Block: <S359>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s358_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s359_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_oz = ((real_T) delta) * 0.000001;
   }
 
-  /* Switch: '<S358>/Switch3' incorporates:
-   *  MinMax: '<S358>/MinMax'
-   *  Product: '<S358>/Product'
-   *  S-Function (motohawk_sfun_calibration): '<S358>/motohawk_calibration2'
+  /* Switch: '<S359>/Switch3' incorporates:
+   *  MinMax: '<S359>/MinMax'
+   *  Product: '<S359>/Product'
+   *  S-Function (motohawk_sfun_calibration): '<S359>/motohawk_calibration2'
    */
   if (rtb_LogicalOperator6_b) {
     rtb_Switch_h = (FuelLevel_FuelEevntAlpha_DataStore());
   } else {
-    /* S-Function Block: <S380>/motohawk_prelookup_col */
+    /* S-Function Block: <S381>/motohawk_prelookup_col */
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
       (FuelLevel_FiltConstColIn_DataStore()) =
-        BaseEngineController_LS_B.s416_Switch2;
+        BaseEngineController_LS_B.s417_Switch2;
       (FuelLevel_FiltConstColIdx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s416_Switch2,
+        (BaseEngineController_LS_B.s417_Switch2,
          (FuelLevel_FiltConstColIdxArr_DataStore()), 7,
          (FuelLevel_FiltConstColIdx_DataStore()));
       rtb_motohawk_prelookup_col = (FuelLevel_FiltConstColIdx_DataStore());
     }
 
-    /* S-Function Block: <S380>/motohawk_prelookup_row */
+    /* S-Function Block: <S381>/motohawk_prelookup_row */
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
       (FuelLevel_FiltConstRowIn_DataStore()) =
-        BaseEngineController_LS_B.s431_Sum;
+        BaseEngineController_LS_B.s432_Sum;
       (FuelLevel_FiltConstRowIdx_DataStore()) = TablePrelookup_real_T
-        (BaseEngineController_LS_B.s431_Sum,
+        (BaseEngineController_LS_B.s432_Sum,
          (FuelLevel_FiltConstRowIdxArr_DataStore()), 7,
          (FuelLevel_FiltConstRowIdx_DataStore()));
       rtb_motohawk_prelookup_row = (FuelLevel_FiltConstRowIdx_DataStore());
     }
 
-    /* S-Function Block: <S380>/motohawk_interpolation_2d */
+    /* S-Function Block: <S381>/motohawk_interpolation_2d */
     {
       extern real_T TableInterpolation2D_real_T(uint16_T row_in, uint16_T col_in,
         real_T *map_data, uint32_T row_sz, uint32_T col_sz);
@@ -11235,20 +11289,20 @@ void BaseEngineController_LS_Foreground(void)
       rtb_motohawk_interpolation_2d_gj);
   }
 
-  /* End of Switch: '<S358>/Switch3' */
+  /* End of Switch: '<S359>/Switch3' */
 
-  /* Sum: '<S377>/Sum1' incorporates:
-   *  Constant: '<S377>/Constant'
-   *  Product: '<S377>/Product'
-   *  Product: '<S377>/Product1'
-   *  Sum: '<S377>/Sum'
-   *  UnitDelay: '<S377>/Unit Delay'
+  /* Sum: '<S378>/Sum1' incorporates:
+   *  Constant: '<S378>/Constant'
+   *  Product: '<S378>/Product'
+   *  Product: '<S378>/Product1'
+   *  Sum: '<S378>/Sum'
+   *  UnitDelay: '<S378>/Unit Delay'
    */
-  BaseEngineController_LS_B.s377_Sum1 = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s377_UnitDelay_DSTATE +
+  BaseEngineController_LS_B.s378_Sum1 = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s378_UnitDelay_DSTATE +
     rtb_DataTypeConversion_gx * rtb_Switch_h;
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S863>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S864>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -11270,12 +11324,12 @@ void BaseEngineController_LS_Foreground(void)
           length, const uint8_T data[]);
         uint8_T msg_data[8];
         uint16_T tmp0;
-        if (BaseEngineController_LS_B.s377_Sum1 < 0.0000000000F) {
+        if (BaseEngineController_LS_B.s378_Sum1 < 0.0000000000F) {
           tmp0 = (uint16_T)(0U);
-        } else if (BaseEngineController_LS_B.s377_Sum1 > 99.9998565000F) {
+        } else if (BaseEngineController_LS_B.s378_Sum1 > 99.9998565000F) {
           tmp0 = (uint16_T)(65535U);
         } else {
-          tmp0 = (uint16_T)(BaseEngineController_LS_B.s377_Sum1 *
+          tmp0 = (uint16_T)(BaseEngineController_LS_B.s378_Sum1 *
                             (655.3509404286F));
         }
 
@@ -11294,84 +11348,84 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function Block: <S877>/motohawk_delta_time */
+  /* S-Function Block: <S878>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s877_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s878_motohawk_delta_time_DWORK1, NULL);
     rtb_Switch_h = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S877>/Product' incorporates:
-   *  MinMax: '<S877>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S877>/motohawk_calibration'
+  /* Product: '<S878>/Product' incorporates:
+   *  MinMax: '<S878>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S878>/motohawk_calibration'
    */
   rtb_Switch_h /= (rtb_Switch_h >= (RPMFilt_LowPass_DataStore())) || rtIsNaN
     ((RPMFilt_LowPass_DataStore())) ? rtb_Switch_h : (RPMFilt_LowPass_DataStore());
 
-  /* Sum: '<S878>/Sum1' incorporates:
-   *  Constant: '<S878>/Constant'
-   *  Product: '<S878>/Product'
-   *  Product: '<S878>/Product1'
-   *  Sum: '<S878>/Sum'
-   *  UnitDelay: '<S878>/Unit Delay'
+  /* Sum: '<S879>/Sum1' incorporates:
+   *  Constant: '<S879>/Constant'
+   *  Product: '<S879>/Product'
+   *  Product: '<S879>/Product1'
+   *  Sum: '<S879>/Sum'
+   *  UnitDelay: '<S879>/Unit Delay'
    */
-  BaseEngineController_LS_B.s878_Sum1 = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s878_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s616_Sum1 * rtb_Switch_h;
+  BaseEngineController_LS_B.s879_Sum1 = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s879_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s617_Sum1 * rtb_Switch_h;
 
-  /* Switch: '<S875>/Switch' incorporates:
-   *  MinMax: '<S875>/MinMax'
-   *  Product: '<S875>/Product'
-   *  Product: '<S875>/Product1'
-   *  Rounding: '<S875>/Rounding Function'
-   *  S-Function (motohawk_sfun_calibration): '<S875>/motohawk_calibration'
+  /* Switch: '<S876>/Switch' incorporates:
+   *  MinMax: '<S876>/MinMax'
+   *  Product: '<S876>/Product'
+   *  Product: '<S876>/Product1'
+   *  Rounding: '<S876>/Rounding Function'
+   *  S-Function (motohawk_sfun_calibration): '<S876>/motohawk_calibration'
    */
   if (((uint8_T)(RPMFilt_Enable_DataStore())) >= 1) {
-    /* MinMax: '<S875>/MinMax' incorporates:
-     *  Constant: '<S875>/Constant'
-     *  S-Function (motohawk_sfun_calibration): '<S875>/motohawk_calibration1'
+    /* MinMax: '<S876>/MinMax' incorporates:
+     *  Constant: '<S876>/Constant'
+     *  S-Function (motohawk_sfun_calibration): '<S876>/motohawk_calibration1'
      */
     rtb_UnitDelay4_b3 = (real_T)((uint16_T)(RPMFilt_RoundValue_DataStore()));
     rtb_Abs_k = rtb_UnitDelay4_b3 >= 1.0 ? rtb_UnitDelay4_b3 : 1.0;
-    BaseEngineController_LS_B.s875_Switch = rt_roundd_snf
-      (BaseEngineController_LS_B.s878_Sum1 / rtb_Abs_k) * rtb_Abs_k;
+    BaseEngineController_LS_B.s876_Switch = rt_roundd_snf
+      (BaseEngineController_LS_B.s879_Sum1 / rtb_Abs_k) * rtb_Abs_k;
   } else {
-    BaseEngineController_LS_B.s875_Switch = BaseEngineController_LS_B.s616_Sum1;
+    BaseEngineController_LS_B.s876_Switch = BaseEngineController_LS_B.s617_Sum1;
   }
 
-  /* End of Switch: '<S875>/Switch' */
-  /* S-Function Block: <S874>/motohawk_delta_time */
+  /* End of Switch: '<S876>/Switch' */
+  /* S-Function Block: <S875>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s874_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s875_motohawk_delta_time_DWORK1, NULL);
     rtb_Switch_h = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S874>/Product' incorporates:
-   *  MinMax: '<S874>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S874>/motohawk_calibration'
+  /* Product: '<S875>/Product' incorporates:
+   *  MinMax: '<S875>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S875>/motohawk_calibration'
    */
   rtb_Switch_h /= (rtb_Switch_h >= (TPS_Filt_DataStore())) || rtIsNaN
     ((TPS_Filt_DataStore())) ? rtb_Switch_h : (TPS_Filt_DataStore());
 
-  /* Sum: '<S876>/Sum1' incorporates:
-   *  Constant: '<S876>/Constant'
-   *  Product: '<S876>/Product'
-   *  Product: '<S876>/Product1'
-   *  Sum: '<S876>/Sum'
-   *  UnitDelay: '<S876>/Unit Delay'
+  /* Sum: '<S877>/Sum1' incorporates:
+   *  Constant: '<S877>/Constant'
+   *  Product: '<S877>/Product'
+   *  Product: '<S877>/Product1'
+   *  Sum: '<S877>/Sum'
+   *  UnitDelay: '<S877>/Unit Delay'
    */
   rtb_Sum1_hu = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s876_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s412_Switch2 * rtb_Switch_h;
+    BaseEngineController_LS_DWork.s877_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s413_Switch2 * rtb_Switch_h;
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S864>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S865>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -11396,12 +11450,12 @@ void BaseEngineController_LS_Foreground(void)
         int16_T tmp1;
         int8_T tmp2;
         int8_T tmp3;
-        if (BaseEngineController_LS_B.s875_Switch < 0.0000000000F) {
+        if (BaseEngineController_LS_B.s876_Switch < 0.0000000000F) {
           tmp0 = (uint16_T)(0U);
-        } else if (BaseEngineController_LS_B.s875_Switch > 25599.9370500000F) {
+        } else if (BaseEngineController_LS_B.s876_Switch > 25599.9370500000F) {
           tmp0 = (uint16_T)(65534U);
         } else {
-          tmp0 = (uint16_T)(BaseEngineController_LS_B.s875_Switch *
+          tmp0 = (uint16_T)(BaseEngineController_LS_B.s876_Switch *
                             (2.5599672324F));
         }
 
@@ -11413,20 +11467,20 @@ void BaseEngineController_LS_Foreground(void)
           tmp1 = (int16_T)(rtb_Sum1_hu * (655.3509404286F));
         }
 
-        if (BaseEngineController_LS_B.s744_Merge < -128.0000000000F) {
+        if (BaseEngineController_LS_B.s745_Merge < -128.0000000000F) {
           tmp2 = (int8_T)(-128);
-        } else if (BaseEngineController_LS_B.s744_Merge > 127.0000000000F) {
+        } else if (BaseEngineController_LS_B.s745_Merge > 127.0000000000F) {
           tmp2 = (int8_T)(127);
         } else {
-          tmp2 = (int8_T)(BaseEngineController_LS_B.s744_Merge);
+          tmp2 = (int8_T)(BaseEngineController_LS_B.s745_Merge);
         }
 
-        if (BaseEngineController_LS_B.s726_Merge < -128.0000000000F) {
+        if (BaseEngineController_LS_B.s727_Merge < -128.0000000000F) {
           tmp3 = (int8_T)(-128);
-        } else if (BaseEngineController_LS_B.s726_Merge > 127.0000000000F) {
+        } else if (BaseEngineController_LS_B.s727_Merge > 127.0000000000F) {
           tmp3 = (int8_T)(127);
         } else {
-          tmp3 = (int8_T)(BaseEngineController_LS_B.s726_Merge);
+          tmp3 = (int8_T)(BaseEngineController_LS_B.s727_Merge);
         }
 
         msg_data[0] = ((((uint8_T *)(&tmp0))[0])) ;
@@ -11444,109 +11498,35 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function Block: <S882>/motohawk_delta_time */
-  rtb_motohawk_delta_time_b3 = 0.005;
-
-  /* UnitDelay: '<S882>/Unit Delay2' */
-  rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s882_UnitDelay2_DSTATE;
-
-  /* Outputs for Enabled SubSystem: '<S882>/IncreasingFilter' incorporates:
-   *  EnablePort: '<S889>/Enable'
-   */
-  /* RelationalOperator: '<S882>/Relational Operator4' incorporates:
-   *  UnitDelay: '<S882>/Unit Delay2'
-   */
-  if (BaseEngineController_LS_DWork.s882_UnitDelay2_DSTATE <
-      BaseEngineController_LS_B.s448_MathFunction) {
-    /* S-Function (motohawk_sfun_calibration): '<S889>/motohawk_calibration1' */
-    BaseEngineController_LS_B.s882_Merge = (PH1_FiltIncConst_DataStore());
-  }
-
-  /* End of RelationalOperator: '<S882>/Relational Operator4' */
-  /* End of Outputs for SubSystem: '<S882>/IncreasingFilter' */
-
-  /* Outputs for Enabled SubSystem: '<S882>/DecreasingFilter' incorporates:
-   *  EnablePort: '<S887>/Enable'
-   */
-  /* RelationalOperator: '<S882>/Relational Operator3' */
-  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s448_MathFunction) {
-    /* S-Function (motohawk_sfun_calibration): '<S887>/motohawk_calibration2' */
-    BaseEngineController_LS_B.s882_Merge = (PH1_FiltDecConst_DataStore());
-  }
-
-  /* End of RelationalOperator: '<S882>/Relational Operator3' */
-  /* End of Outputs for SubSystem: '<S882>/DecreasingFilter' */
-
-  /* Switch: '<S882>/Switch1' incorporates:
-   *  Constant: '<S882>/Constant'
-   *  MinMax: '<S882>/MinMax'
-   *  Product: '<S882>/Product'
-   *  UnitDelay: '<S882>/Unit Delay5'
-   */
-  if (BaseEngineController_LS_DWork.s882_UnitDelay5_DSTATE) {
-    rtb_Switch_h = rtb_motohawk_delta_time_b3 / ((rtb_motohawk_delta_time_b3 >=
-      BaseEngineController_LS_B.s882_Merge) || rtIsNaN
-      (BaseEngineController_LS_B.s882_Merge) ? rtb_motohawk_delta_time_b3 :
-      BaseEngineController_LS_B.s882_Merge);
-  } else {
-    rtb_Switch_h = 1.0;
-  }
-
-  /* End of Switch: '<S882>/Switch1' */
-
-  /* Sum: '<S888>/Sum1' incorporates:
-   *  Constant: '<S888>/Constant'
-   *  Product: '<S888>/Product'
-   *  Product: '<S888>/Product1'
-   *  Sum: '<S888>/Sum'
-   *  UnitDelay: '<S888>/Unit Delay'
-   */
-  rtb_Sum1_c = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s888_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s448_MathFunction * rtb_Switch_h;
-
-  /* Switch: '<S882>/Switch' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S882>/motohawk_calibration'
-   *  UnitDelay: '<S882>/Unit Delay5'
-   */
-  if (BaseEngineController_LS_DWork.s882_UnitDelay5_DSTATE) {
-    BaseEngineController_LS_B.s882_Switch = rtb_Sum1_c;
-  } else {
-    BaseEngineController_LS_B.s882_Switch = (PHI1_DefaultVal_DataStore());
-  }
-
-  /* End of Switch: '<S882>/Switch' */
   /* S-Function Block: <S883>/motohawk_delta_time */
-  rtb_motohawk_delta_time_lc = 0.005;
+  rtb_motohawk_delta_time_b3 = 0.005;
 
   /* UnitDelay: '<S883>/Unit Delay2' */
   rtb_DataTypeConversion1_e =
     BaseEngineController_LS_DWork.s883_UnitDelay2_DSTATE;
 
   /* Outputs for Enabled SubSystem: '<S883>/IncreasingFilter' incorporates:
-   *  EnablePort: '<S892>/Enable'
+   *  EnablePort: '<S890>/Enable'
    */
   /* RelationalOperator: '<S883>/Relational Operator4' incorporates:
    *  UnitDelay: '<S883>/Unit Delay2'
    */
   if (BaseEngineController_LS_DWork.s883_UnitDelay2_DSTATE <
-      BaseEngineController_LS_B.s448_MathFunction1) {
-    /* S-Function (motohawk_sfun_calibration): '<S892>/motohawk_calibration1' */
-    BaseEngineController_LS_B.s883_Merge = (PH2_FiltIncConst_DataStore());
+      BaseEngineController_LS_B.s449_MathFunction) {
+    /* S-Function (motohawk_sfun_calibration): '<S890>/motohawk_calibration1' */
+    BaseEngineController_LS_B.s883_Merge = (PH1_FiltIncConst_DataStore());
   }
 
   /* End of RelationalOperator: '<S883>/Relational Operator4' */
   /* End of Outputs for SubSystem: '<S883>/IncreasingFilter' */
 
   /* Outputs for Enabled SubSystem: '<S883>/DecreasingFilter' incorporates:
-   *  EnablePort: '<S890>/Enable'
+   *  EnablePort: '<S888>/Enable'
    */
   /* RelationalOperator: '<S883>/Relational Operator3' */
-  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s448_MathFunction1)
-  {
-    /* S-Function (motohawk_sfun_calibration): '<S890>/motohawk_calibration2' */
-    BaseEngineController_LS_B.s883_Merge = (PH2_FiltDecConst_DataStore());
+  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s449_MathFunction) {
+    /* S-Function (motohawk_sfun_calibration): '<S888>/motohawk_calibration2' */
+    BaseEngineController_LS_B.s883_Merge = (PH1_FiltDecConst_DataStore());
   }
 
   /* End of RelationalOperator: '<S883>/Relational Operator3' */
@@ -11559,9 +11539,9 @@ void BaseEngineController_LS_Foreground(void)
    *  UnitDelay: '<S883>/Unit Delay5'
    */
   if (BaseEngineController_LS_DWork.s883_UnitDelay5_DSTATE) {
-    rtb_Switch_h = rtb_motohawk_delta_time_lc / ((rtb_motohawk_delta_time_lc >=
+    rtb_Switch_h = rtb_motohawk_delta_time_b3 / ((rtb_motohawk_delta_time_b3 >=
       BaseEngineController_LS_B.s883_Merge) || rtIsNaN
-      (BaseEngineController_LS_B.s883_Merge) ? rtb_motohawk_delta_time_lc :
+      (BaseEngineController_LS_B.s883_Merge) ? rtb_motohawk_delta_time_b3 :
       BaseEngineController_LS_B.s883_Merge);
   } else {
     rtb_Switch_h = 1.0;
@@ -11569,185 +11549,102 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Switch: '<S883>/Switch1' */
 
-  /* Sum: '<S891>/Sum1' incorporates:
-   *  Constant: '<S891>/Constant'
-   *  Product: '<S891>/Product'
-   *  Product: '<S891>/Product1'
-   *  Sum: '<S891>/Sum'
-   *  UnitDelay: '<S891>/Unit Delay'
+  /* Sum: '<S889>/Sum1' incorporates:
+   *  Constant: '<S889>/Constant'
+   *  Product: '<S889>/Product'
+   *  Product: '<S889>/Product1'
+   *  Sum: '<S889>/Sum'
+   *  UnitDelay: '<S889>/Unit Delay'
    */
-  rtb_Sum1_lm = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s891_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s448_MathFunction1 * rtb_Switch_h;
+  rtb_Sum1_c = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s889_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s449_MathFunction * rtb_Switch_h;
 
   /* Switch: '<S883>/Switch' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S883>/motohawk_calibration'
    *  UnitDelay: '<S883>/Unit Delay5'
    */
   if (BaseEngineController_LS_DWork.s883_UnitDelay5_DSTATE) {
-    BaseEngineController_LS_B.s883_Switch = rtb_Sum1_lm;
+    BaseEngineController_LS_B.s883_Switch = rtb_Sum1_c;
   } else {
-    BaseEngineController_LS_B.s883_Switch = (PHI2_DefaultVal_DataStore());
+    BaseEngineController_LS_B.s883_Switch = (PHI1_DefaultVal_DataStore());
   }
 
   /* End of Switch: '<S883>/Switch' */
-  /* S-Function Block: <S879>/motohawk_delta_time */
+  /* S-Function Block: <S884>/motohawk_delta_time */
+  rtb_motohawk_delta_time_lc = 0.005;
+
+  /* UnitDelay: '<S884>/Unit Delay2' */
+  rtb_DataTypeConversion1_e =
+    BaseEngineController_LS_DWork.s884_UnitDelay2_DSTATE;
+
+  /* Outputs for Enabled SubSystem: '<S884>/IncreasingFilter' incorporates:
+   *  EnablePort: '<S893>/Enable'
+   */
+  /* RelationalOperator: '<S884>/Relational Operator4' incorporates:
+   *  UnitDelay: '<S884>/Unit Delay2'
+   */
+  if (BaseEngineController_LS_DWork.s884_UnitDelay2_DSTATE <
+      BaseEngineController_LS_B.s449_MathFunction1) {
+    /* S-Function (motohawk_sfun_calibration): '<S893>/motohawk_calibration1' */
+    BaseEngineController_LS_B.s884_Merge = (PH2_FiltIncConst_DataStore());
+  }
+
+  /* End of RelationalOperator: '<S884>/Relational Operator4' */
+  /* End of Outputs for SubSystem: '<S884>/IncreasingFilter' */
+
+  /* Outputs for Enabled SubSystem: '<S884>/DecreasingFilter' incorporates:
+   *  EnablePort: '<S891>/Enable'
+   */
+  /* RelationalOperator: '<S884>/Relational Operator3' */
+  if (rtb_DataTypeConversion1_e > BaseEngineController_LS_B.s449_MathFunction1)
   {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s879_motohawk_delta_time_DWORK1, NULL);
-    rtb_Switch_h = ((real_T) delta) * 0.000001;
+    /* S-Function (motohawk_sfun_calibration): '<S891>/motohawk_calibration2' */
+    BaseEngineController_LS_B.s884_Merge = (PH2_FiltDecConst_DataStore());
   }
 
-  /* Product: '<S879>/Product' incorporates:
-   *  MinMax: '<S879>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S879>/motohawk_calibration'
-   */
-  rtb_Switch_h /= (rtb_Switch_h >= (VSPD_Filt_DataStore())) || rtIsNaN
-    ((VSPD_Filt_DataStore())) ? rtb_Switch_h : (VSPD_Filt_DataStore());
+  /* End of RelationalOperator: '<S884>/Relational Operator3' */
+  /* End of Outputs for SubSystem: '<S884>/DecreasingFilter' */
 
-  /* Sum: '<S884>/Sum1' incorporates:
+  /* Switch: '<S884>/Switch1' incorporates:
    *  Constant: '<S884>/Constant'
+   *  MinMax: '<S884>/MinMax'
    *  Product: '<S884>/Product'
-   *  Product: '<S884>/Product1'
-   *  Sum: '<S884>/Sum'
-   *  UnitDelay: '<S884>/Unit Delay'
+   *  UnitDelay: '<S884>/Unit Delay5'
    */
-  rtb_Sum1_p = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s884_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s416_Switch2 * rtb_Switch_h;
-
-  /* Gain: '<S865>/Gain' */
-  rtb_Gain = 1.60934 * rtb_Sum1_p;
-
-  /* MultiPortSwitch: '<S409>/Multiport Switch' incorporates:
-   *  Constant: '<S409>/Constant1'
-   *  MinMax: '<S409>/MinMax'
-   */
-  if (BaseEngineController_LS_B.s571_Merge == FALSE) {
-    /* Product: '<S409>/Product6' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration5'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration6'
-     */
-    rtb_DataTypeConversion1_e = (Gear6Ratio_DataStore()) * (FDR_DataStore());
-
-    /* Product: '<S409>/Product' incorporates:
-     *  Constant: '<S409>/Constant'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration7'
-     */
-    rtb_DataTypeConversion_b2 = (TireRadius_DataStore()) * 0.00595 *
-      BaseEngineController_LS_B.s616_Sum1;
-
-    /* Abs: '<S409>/Abs5' incorporates:
-     *  Product: '<S409>/Product12'
-     *  Sum: '<S409>/Sum5'
-     */
-    rtb_DataTypeConversion1_e = fabs(rtb_DataTypeConversion_b2 /
-      rtb_DataTypeConversion1_e - BaseEngineController_LS_B.s416_Switch2);
-
-    /* Gain: '<S409>/Gain5' incorporates:
-     *  RelationalOperator: '<S409>/M6'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration8'
-     */
-    rtb_Switch_om = (uint8_T)(rtb_DataTypeConversion1_e <=
-      (GearMatchHyst_DataStore()) ? 192 : 0);
-
-    /* Gain: '<S409>/Gain4' incorporates:
-     *  Abs: '<S409>/Abs4'
-     *  Product: '<S409>/Product11'
-     *  Product: '<S409>/Product5'
-     *  RelationalOperator: '<S409>/M5'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration4'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration6'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration8'
-     *  Sum: '<S409>/Sum4'
-     */
-    rtb_Product_ln = (uint8_T)(fabs(rtb_DataTypeConversion_b2 /
-      ((Gear5Ratio_DataStore()) * (FDR_DataStore())) -
-      BaseEngineController_LS_B.s416_Switch2) <= (GearMatchHyst_DataStore()) ?
-      160 : 0);
-
-    /* Gain: '<S409>/Gain3' incorporates:
-     *  Abs: '<S409>/Abs3'
-     *  Product: '<S409>/Product10'
-     *  Product: '<S409>/Product4'
-     *  RelationalOperator: '<S409>/M4'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration3'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration6'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration8'
-     *  Sum: '<S409>/Sum3'
-     */
-    rtb_Product6_m = (uint8_T)((fabs(rtb_DataTypeConversion_b2 /
-      ((Gear4Ratio_DataStore()) * (FDR_DataStore())) -
-      BaseEngineController_LS_B.s416_Switch2) <= (GearMatchHyst_DataStore())) <<
-      7);
-
-    /* Gain: '<S409>/Gain2' incorporates:
-     *  Abs: '<S409>/Abs2'
-     *  Product: '<S409>/Product3'
-     *  Product: '<S409>/Product9'
-     *  RelationalOperator: '<S409>/M3'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration2'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration6'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration8'
-     *  Sum: '<S409>/Sum2'
-     */
-    rtb_Product5_j = (uint8_T)(fabs(rtb_DataTypeConversion_b2 /
-      ((Gear3Ratio_DataStore()) * (FDR_DataStore())) -
-      BaseEngineController_LS_B.s416_Switch2) <= (GearMatchHyst_DataStore()) ?
-      192 : 0);
-
-    /* Gain: '<S409>/Gain1' incorporates:
-     *  Abs: '<S409>/Abs1'
-     *  Product: '<S409>/Product2'
-     *  Product: '<S409>/Product8'
-     *  RelationalOperator: '<S409>/M2'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration1'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration6'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration8'
-     *  Sum: '<S409>/Sum1'
-     */
-    rtb_Switch2_a = (uint8_T)((fabs(rtb_DataTypeConversion_b2 /
-      ((Gear2Ratio_DataStore()) * (FDR_DataStore())) -
-      BaseEngineController_LS_B.s416_Switch2) <= (GearMatchHyst_DataStore())) <<
-      7);
-
-    /* MinMax: '<S409>/MinMax' incorporates:
-     *  Abs: '<S409>/Abs'
-     *  Gain: '<S409>/Gain'
-     *  Product: '<S409>/Product1'
-     *  Product: '<S409>/Product7'
-     *  RelationalOperator: '<S409>/M1'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration6'
-     *  S-Function (motohawk_sfun_calibration): '<S409>/motohawk_calibration8'
-     *  Sum: '<S409>/Sum'
-     */
-    maxV = ((fabs(rtb_DataTypeConversion_b2 / ((Gear1Ratio_DataStore()) *
-               (FDR_DataStore())) - BaseEngineController_LS_B.s416_Switch2) <=
-             (GearMatchHyst_DataStore())) << 7) >> 2;
-    i = rtb_Switch2_a >> 1;
-    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
-                     i);
-    i = rtb_Product5_j >> 1;
-    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
-                     i);
-    i = rtb_Product6_m;
-    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
-                     i);
-    i = rtb_Product_ln;
-    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
-                     i);
-    i = rtb_Switch_om;
-    BaseEngineController_LS_B.s409_MultiportSwitch = ldexp((real_T)((uint32_T)
-      maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)i), -5);
+  if (BaseEngineController_LS_DWork.s884_UnitDelay5_DSTATE) {
+    rtb_Switch_h = rtb_motohawk_delta_time_lc / ((rtb_motohawk_delta_time_lc >=
+      BaseEngineController_LS_B.s884_Merge) || rtIsNaN
+      (BaseEngineController_LS_B.s884_Merge) ? rtb_motohawk_delta_time_lc :
+      BaseEngineController_LS_B.s884_Merge);
   } else {
-    BaseEngineController_LS_B.s409_MultiportSwitch = 0.0;
+    rtb_Switch_h = 1.0;
   }
 
-  /* End of MultiPortSwitch: '<S409>/Multiport Switch' */
+  /* End of Switch: '<S884>/Switch1' */
+
+  /* Sum: '<S892>/Sum1' incorporates:
+   *  Constant: '<S892>/Constant'
+   *  Product: '<S892>/Product'
+   *  Product: '<S892>/Product1'
+   *  Sum: '<S892>/Sum'
+   *  UnitDelay: '<S892>/Unit Delay'
+   */
+  rtb_Sum1_lm = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s892_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s449_MathFunction1 * rtb_Switch_h;
+
+  /* Switch: '<S884>/Switch' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S884>/motohawk_calibration'
+   *  UnitDelay: '<S884>/Unit Delay5'
+   */
+  if (BaseEngineController_LS_DWork.s884_UnitDelay5_DSTATE) {
+    BaseEngineController_LS_B.s884_Switch = rtb_Sum1_lm;
+  } else {
+    BaseEngineController_LS_B.s884_Switch = (PHI2_DefaultVal_DataStore());
+  }
+
+  /* End of Switch: '<S884>/Switch' */
   /* S-Function Block: <S880>/motohawk_delta_time */
   {
     uint32_T delta;
@@ -11762,8 +11659,8 @@ void BaseEngineController_LS_Foreground(void)
    *  MinMax: '<S880>/MinMax'
    *  S-Function (motohawk_sfun_calibration): '<S880>/motohawk_calibration'
    */
-  rtb_Switch_h /= (rtb_Switch_h >= (SparkAdv_Filt_DataStore())) || rtIsNaN
-    ((SparkAdv_Filt_DataStore())) ? rtb_Switch_h : (SparkAdv_Filt_DataStore());
+  rtb_Switch_h /= (rtb_Switch_h >= (VSPD_Filt_DataStore())) || rtIsNaN
+    ((VSPD_Filt_DataStore())) ? rtb_Switch_h : (VSPD_Filt_DataStore());
 
   /* Sum: '<S885>/Sum1' incorporates:
    *  Constant: '<S885>/Constant'
@@ -11772,10 +11669,139 @@ void BaseEngineController_LS_Foreground(void)
    *  Sum: '<S885>/Sum'
    *  UnitDelay: '<S885>/Unit Delay'
    */
-  rtb_Sum1_a = (1.0 - rtb_Switch_h) *
+  rtb_Sum1_p = (1.0 - rtb_Switch_h) *
     BaseEngineController_LS_DWork.s885_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s135_SparkAdv * rtb_Switch_h;
+    BaseEngineController_LS_B.s417_Switch2 * rtb_Switch_h;
 
+  /* Gain: '<S866>/Gain' */
+  rtb_Gain = 1.60934 * rtb_Sum1_p;
+
+  /* MultiPortSwitch: '<S410>/Multiport Switch' incorporates:
+   *  Constant: '<S410>/Constant1'
+   *  MinMax: '<S410>/MinMax'
+   */
+  if (BaseEngineController_LS_B.s572_Merge == FALSE) {
+    /* Product: '<S410>/Product6' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration5'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration6'
+     */
+    rtb_DataTypeConversion1_e = (Gear6Ratio_DataStore()) * (FDR_DataStore());
+
+    /* Product: '<S410>/Product' incorporates:
+     *  Constant: '<S410>/Constant'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration7'
+     */
+    rtb_DataTypeConversion_b2 = (TireRadius_DataStore()) * 0.00595 *
+      BaseEngineController_LS_B.s617_Sum1;
+
+    /* Abs: '<S410>/Abs5' incorporates:
+     *  Product: '<S410>/Product12'
+     *  Sum: '<S410>/Sum5'
+     */
+    rtb_DataTypeConversion1_e = fabs(rtb_DataTypeConversion_b2 /
+      rtb_DataTypeConversion1_e - BaseEngineController_LS_B.s417_Switch2);
+
+    /* Gain: '<S410>/Gain5' incorporates:
+     *  RelationalOperator: '<S410>/M6'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration8'
+     */
+    rtb_Switch_om = (uint8_T)(rtb_DataTypeConversion1_e <=
+      (GearMatchHyst_DataStore()) ? 192 : 0);
+
+    /* Gain: '<S410>/Gain4' incorporates:
+     *  Abs: '<S410>/Abs4'
+     *  Product: '<S410>/Product11'
+     *  Product: '<S410>/Product5'
+     *  RelationalOperator: '<S410>/M5'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration4'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration6'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration8'
+     *  Sum: '<S410>/Sum4'
+     */
+    rtb_Product_ln = (uint8_T)(fabs(rtb_DataTypeConversion_b2 /
+      ((Gear5Ratio_DataStore()) * (FDR_DataStore())) -
+      BaseEngineController_LS_B.s417_Switch2) <= (GearMatchHyst_DataStore()) ?
+      160 : 0);
+
+    /* Gain: '<S410>/Gain3' incorporates:
+     *  Abs: '<S410>/Abs3'
+     *  Product: '<S410>/Product10'
+     *  Product: '<S410>/Product4'
+     *  RelationalOperator: '<S410>/M4'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration3'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration6'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration8'
+     *  Sum: '<S410>/Sum3'
+     */
+    rtb_Product6_m = (uint8_T)((fabs(rtb_DataTypeConversion_b2 /
+      ((Gear4Ratio_DataStore()) * (FDR_DataStore())) -
+      BaseEngineController_LS_B.s417_Switch2) <= (GearMatchHyst_DataStore())) <<
+      7);
+
+    /* Gain: '<S410>/Gain2' incorporates:
+     *  Abs: '<S410>/Abs2'
+     *  Product: '<S410>/Product3'
+     *  Product: '<S410>/Product9'
+     *  RelationalOperator: '<S410>/M3'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration2'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration6'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration8'
+     *  Sum: '<S410>/Sum2'
+     */
+    rtb_Product5_j = (uint8_T)(fabs(rtb_DataTypeConversion_b2 /
+      ((Gear3Ratio_DataStore()) * (FDR_DataStore())) -
+      BaseEngineController_LS_B.s417_Switch2) <= (GearMatchHyst_DataStore()) ?
+      192 : 0);
+
+    /* Gain: '<S410>/Gain1' incorporates:
+     *  Abs: '<S410>/Abs1'
+     *  Product: '<S410>/Product2'
+     *  Product: '<S410>/Product8'
+     *  RelationalOperator: '<S410>/M2'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration1'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration6'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration8'
+     *  Sum: '<S410>/Sum1'
+     */
+    rtb_Switch2_a = (uint8_T)((fabs(rtb_DataTypeConversion_b2 /
+      ((Gear2Ratio_DataStore()) * (FDR_DataStore())) -
+      BaseEngineController_LS_B.s417_Switch2) <= (GearMatchHyst_DataStore())) <<
+      7);
+
+    /* MinMax: '<S410>/MinMax' incorporates:
+     *  Abs: '<S410>/Abs'
+     *  Gain: '<S410>/Gain'
+     *  Product: '<S410>/Product1'
+     *  Product: '<S410>/Product7'
+     *  RelationalOperator: '<S410>/M1'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration6'
+     *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration8'
+     *  Sum: '<S410>/Sum'
+     */
+    maxV = ((fabs(rtb_DataTypeConversion_b2 / ((Gear1Ratio_DataStore()) *
+               (FDR_DataStore())) - BaseEngineController_LS_B.s417_Switch2) <=
+             (GearMatchHyst_DataStore())) << 7) >> 2;
+    i = rtb_Switch2_a >> 1;
+    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
+                     i);
+    i = rtb_Product5_j >> 1;
+    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
+                     i);
+    i = rtb_Product6_m;
+    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
+                     i);
+    i = rtb_Product_ln;
+    maxV = (int32_T)((uint32_T)maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)
+                     i);
+    i = rtb_Switch_om;
+    BaseEngineController_LS_B.s410_MultiportSwitch = ldexp((real_T)((uint32_T)
+      maxV >= (uint32_T)i ? (uint32_T)maxV : (uint32_T)i), -5);
+  } else {
+    BaseEngineController_LS_B.s410_MultiportSwitch = 0.0;
+  }
+
+  /* End of MultiPortSwitch: '<S410>/Multiport Switch' */
   /* S-Function Block: <S881>/motohawk_delta_time */
   {
     uint32_T delta;
@@ -11790,8 +11816,8 @@ void BaseEngineController_LS_Foreground(void)
    *  MinMax: '<S881>/MinMax'
    *  S-Function (motohawk_sfun_calibration): '<S881>/motohawk_calibration'
    */
-  rtb_Switch_h /= (rtb_Switch_h >= (ECUVolt_Filt_DataStore())) || rtIsNaN
-    ((ECUVolt_Filt_DataStore())) ? rtb_Switch_h : (ECUVolt_Filt_DataStore());
+  rtb_Switch_h /= (rtb_Switch_h >= (SparkAdv_Filt_DataStore())) || rtIsNaN
+    ((SparkAdv_Filt_DataStore())) ? rtb_Switch_h : (SparkAdv_Filt_DataStore());
 
   /* Sum: '<S886>/Sum1' incorporates:
    *  Constant: '<S886>/Constant'
@@ -11800,11 +11826,39 @@ void BaseEngineController_LS_Foreground(void)
    *  Sum: '<S886>/Sum'
    *  UnitDelay: '<S886>/Unit Delay'
    */
-  rtb_Sum1_j2 = (1.0 - rtb_Switch_h) *
+  rtb_Sum1_a = (1.0 - rtb_Switch_h) *
     BaseEngineController_LS_DWork.s886_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s693_Merge * rtb_Switch_h;
+    BaseEngineController_LS_B.s135_SparkAdv * rtb_Switch_h;
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S865>/Send CAN Messages' */
+  /* S-Function Block: <S882>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s882_motohawk_delta_time_DWORK1, NULL);
+    rtb_Switch_h = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S882>/Product' incorporates:
+   *  MinMax: '<S882>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S882>/motohawk_calibration'
+   */
+  rtb_Switch_h /= (rtb_Switch_h >= (ECUVolt_Filt_DataStore())) || rtIsNaN
+    ((ECUVolt_Filt_DataStore())) ? rtb_Switch_h : (ECUVolt_Filt_DataStore());
+
+  /* Sum: '<S887>/Sum1' incorporates:
+   *  Constant: '<S887>/Constant'
+   *  Product: '<S887>/Product'
+   *  Product: '<S887>/Product1'
+   *  Sum: '<S887>/Sum'
+   *  UnitDelay: '<S887>/Unit Delay'
+   */
+  rtb_Sum1_j2 = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s887_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s694_Merge * rtb_Switch_h;
+
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S866>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -11831,21 +11885,21 @@ void BaseEngineController_LS_Foreground(void)
         uint8_T tmp3;
         uint8_T tmp4;
         uint16_T tmp5;
-        if (BaseEngineController_LS_B.s882_Switch < 0.5000000000F) {
+        if (BaseEngineController_LS_B.s883_Switch < 0.5000000000F) {
           tmp0 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s882_Switch > 1.4960937500F) {
+        } else if (BaseEngineController_LS_B.s883_Switch > 1.4960937500F) {
           tmp0 = (uint8_T)(255U);
         } else {
-          tmp0 = (uint8_T)((BaseEngineController_LS_B.s882_Switch -
+          tmp0 = (uint8_T)((BaseEngineController_LS_B.s883_Switch -
                             (0.5000000000F)) * (256.0000000000F));
         }
 
-        if (BaseEngineController_LS_B.s883_Switch < 0.5000000000F) {
+        if (BaseEngineController_LS_B.s884_Switch < 0.5000000000F) {
           tmp1 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s883_Switch > 1.4960937500F) {
+        } else if (BaseEngineController_LS_B.s884_Switch > 1.4960937500F) {
           tmp1 = (uint8_T)(255U);
         } else {
-          tmp1 = (uint8_T)((BaseEngineController_LS_B.s883_Switch -
+          tmp1 = (uint8_T)((BaseEngineController_LS_B.s884_Switch -
                             (0.5000000000F)) * (256.0000000000F));
         }
 
@@ -11857,13 +11911,13 @@ void BaseEngineController_LS_Foreground(void)
           tmp2 = (uint16_T)(rtb_Gain * (159.0710252128F));
         }
 
-        if (BaseEngineController_LS_B.s409_MultiportSwitch < 0.0000000000F) {
+        if (BaseEngineController_LS_B.s410_MultiportSwitch < 0.0000000000F) {
           tmp3 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s409_MultiportSwitch >
+        } else if (BaseEngineController_LS_B.s410_MultiportSwitch >
                    255.0000000000F) {
           tmp3 = (uint8_T)(255U);
         } else {
-          tmp3 = (uint8_T)(BaseEngineController_LS_B.s409_MultiportSwitch);
+          tmp3 = (uint8_T)(BaseEngineController_LS_B.s410_MultiportSwitch);
         }
 
         if (rtb_Sum1_a < -17.0000000000F) {
@@ -11897,182 +11951,23 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* UnitDelay: '<S882>/Unit Delay1' */
-  rtb_UnitDelay1_ad = BaseEngineController_LS_DWork.s882_UnitDelay1_DSTATE;
-
-  /* UnitDelay: '<S882>/Unit Delay3' */
-  rtb_UnitDelay3_m = BaseEngineController_LS_DWork.s882_UnitDelay3_DSTATE;
-
-  /* UnitDelay: '<S882>/Unit Delay4' */
-  rtb_UnitDelay4_b = BaseEngineController_LS_DWork.s882_UnitDelay4_DSTATE;
-
   /* UnitDelay: '<S883>/Unit Delay1' */
-  rtb_UnitDelay1_pn = BaseEngineController_LS_DWork.s883_UnitDelay1_DSTATE;
+  rtb_UnitDelay1_ad = BaseEngineController_LS_DWork.s883_UnitDelay1_DSTATE;
 
   /* UnitDelay: '<S883>/Unit Delay3' */
-  rtb_UnitDelay3_p = BaseEngineController_LS_DWork.s883_UnitDelay3_DSTATE;
+  rtb_UnitDelay3_m = BaseEngineController_LS_DWork.s883_UnitDelay3_DSTATE;
 
   /* UnitDelay: '<S883>/Unit Delay4' */
-  rtb_UnitDelay4_a = BaseEngineController_LS_DWork.s883_UnitDelay4_DSTATE;
+  rtb_UnitDelay4_b = BaseEngineController_LS_DWork.s883_UnitDelay4_DSTATE;
 
-  /* S-Function Block: <S896>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s896_motohawk_delta_time_DWORK1, NULL);
-    rtb_Switch_h = ((real_T) delta) * 0.000001;
-  }
+  /* UnitDelay: '<S884>/Unit Delay1' */
+  rtb_UnitDelay1_pn = BaseEngineController_LS_DWork.s884_UnitDelay1_DSTATE;
 
-  /* Product: '<S896>/Product' incorporates:
-   *  MinMax: '<S896>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S896>/motohawk_calibration'
-   */
-  rtb_Switch_h /= (rtb_Switch_h >= (MAP_filt_DataStore())) || rtIsNaN
-    ((MAP_filt_DataStore())) ? rtb_Switch_h : (MAP_filt_DataStore());
+  /* UnitDelay: '<S884>/Unit Delay3' */
+  rtb_UnitDelay3_p = BaseEngineController_LS_DWork.s884_UnitDelay3_DSTATE;
 
-  /* Sum: '<S899>/Sum1' incorporates:
-   *  Constant: '<S899>/Constant'
-   *  Product: '<S899>/Product'
-   *  Product: '<S899>/Product1'
-   *  Sum: '<S899>/Sum'
-   *  UnitDelay: '<S899>/Unit Delay'
-   */
-  rtb_Sum1_cn = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s899_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s659_Merge * rtb_Switch_h;
-
-  /* S-Function (motohawk_sfun_data_read): '<S866>/motohawk_data_read' */
-  rtb_motohawk_data_read_i4 = VEFin_DataStore();
-
-  /* S-Function Block: <S647>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s647_motohawk_delta_time_DWORK1, NULL);
-    rtb_Switch_h = ((real_T) delta) * 0.000001;
-  }
-
-  /* Product: '<S647>/Product' incorporates:
-   *  MinMax: '<S647>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S647>/motohawk_calibration'
-   */
-  rtb_Switch_h /= (rtb_Switch_h >= (FuelPresFilterConst_DataStore())) || rtIsNaN
-    ((FuelPresFilterConst_DataStore())) ? rtb_Switch_h :
-    (FuelPresFilterConst_DataStore());
-
-  /* Logic: '<S619>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status4'
-   */
-  rtb_RelationalOperator5_fz = (IsFaultActive(60) || IsFaultActive(61));
-
-  /* Logic: '<S619>/Logical Operator6' */
-  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
-
-  /* Logic: '<S619>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S619>/motohawk_fault_status3'
-   */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(60) || IsFaultSuspected(61));
-
-  /* S-Function Block: <S444>/motohawk_ain2 Resource: FuelPresPin */
-  {
-    extern NativeError_S FuelPresPin_AnalogInput_Get(uint16_T *adc, uint16_T
-      *status);
-    FuelPresPin_AnalogInput_Get(&BaseEngineController_LS_B.s444_motohawk_ain2,
-      NULL);
-  }
-
-  /* DataTypeConversion: '<S619>/Data Type Conversion' */
-  rtb_DataTypeConversion_gx = (real_T)
-    BaseEngineController_LS_B.s444_motohawk_ain2;
-
-  /* Product: '<S619>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration4'
-   */
-  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_gx *
-    (FuelPresGain_DataStore());
-
-  /* Sum: '<S619>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration5'
-   */
-  BaseEngineController_LS_B.s619_Sum1 = rtb_DataTypeConversion1_e +
-    (FuelPresOfst_DataStore());
-
-  /* UnitDelay: '<S619>/Unit Delay1' */
-  rtb_UnitDelay1_pd = BaseEngineController_LS_DWork.s619_UnitDelay1_DSTATE;
-
-  /* If: '<S619>/If' incorporates:
-   *  Logic: '<S619>/Logical Operator5'
-   */
-  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S619>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S648>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_pd, &rtb_Merge_b3f);
-
-    /* End of Outputs for SubSystem: '<S619>/If Action Subsystem' */
-  } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S619>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S649>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem((FuelPresDfltValue_DataStore()),
-      &rtb_Merge_b3f);
-
-    /* End of Outputs for SubSystem: '<S619>/If Action Subsystem1' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S619>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S650>/Action Port'
-     */
-    BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s619_Sum1, &rtb_Merge_b3f);
-
-    /* End of Outputs for SubSystem: '<S619>/If Action Subsystem2' */
-  }
-
-  /* End of If: '<S619>/If' */
-
-  /* Sum: '<S652>/Sum1' incorporates:
-   *  Constant: '<S652>/Constant'
-   *  Product: '<S652>/Product'
-   *  Product: '<S652>/Product1'
-   *  Sum: '<S652>/Sum'
-   *  UnitDelay: '<S652>/Unit Delay'
-   */
-  rtb_Sum1_cs = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s652_UnitDelay_DSTATE + rtb_Merge_b3f *
-    rtb_Switch_h;
-
-  /* If: '<S651>/If' incorporates:
-   *  Inport: '<S653>/In1'
-   *  Inport: '<S654>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S651>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S651>/override_enable'
-   */
-  if ((FuelPres_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S651>/NewValue' incorporates:
-     *  ActionPort: '<S653>/Action Port'
-     */
-    BaseEngineController_LS_B.s651_Merge = (FuelPres_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S651>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S651>/OldValue' incorporates:
-     *  ActionPort: '<S654>/Action Port'
-     */
-    BaseEngineController_LS_B.s651_Merge = rtb_Sum1_cs;
-
-    /* End of Outputs for SubSystem: '<S651>/OldValue' */
-  }
-
-  /* End of If: '<S651>/If' */
-
-  /* Gain: '<S866>/Gain' */
-  rtb_DataTypeConversion1_e = 0.01 * BaseEngineController_LS_B.s651_Merge;
+  /* UnitDelay: '<S884>/Unit Delay4' */
+  rtb_UnitDelay4_a = BaseEngineController_LS_DWork.s884_UnitDelay4_DSTATE;
 
   /* S-Function Block: <S897>/motohawk_delta_time */
   {
@@ -12088,8 +11983,8 @@ void BaseEngineController_LS_Foreground(void)
    *  MinMax: '<S897>/MinMax'
    *  S-Function (motohawk_sfun_calibration): '<S897>/motohawk_calibration'
    */
-  rtb_Switch_h /= (rtb_Switch_h >= (FuelPres_Filt_DataStore())) || rtIsNaN
-    ((FuelPres_Filt_DataStore())) ? rtb_Switch_h : (FuelPres_Filt_DataStore());
+  rtb_Switch_h /= (rtb_Switch_h >= (MAP_filt_DataStore())) || rtIsNaN
+    ((MAP_filt_DataStore())) ? rtb_Switch_h : (MAP_filt_DataStore());
 
   /* Sum: '<S900>/Sum1' incorporates:
    *  Constant: '<S900>/Constant'
@@ -12098,137 +11993,140 @@ void BaseEngineController_LS_Foreground(void)
    *  Sum: '<S900>/Sum'
    *  UnitDelay: '<S900>/Unit Delay'
    */
-  rtb_Sum1_ay = (1.0 - rtb_Switch_h) *
+  rtb_Sum1_cn = (1.0 - rtb_Switch_h) *
     BaseEngineController_LS_DWork.s900_UnitDelay_DSTATE +
-    rtb_DataTypeConversion1_e * rtb_Switch_h;
+    BaseEngineController_LS_B.s660_Merge * rtb_Switch_h;
 
-  /* S-Function Block: <S673>/motohawk_delta_time */
+  /* S-Function (motohawk_sfun_data_read): '<S867>/motohawk_data_read' */
+  rtb_motohawk_data_read_i4 = VEFin_DataStore();
+
+  /* S-Function Block: <S648>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s673_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s648_motohawk_delta_time_DWORK1, NULL);
     rtb_Switch_h = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S673>/Product' incorporates:
-   *  MinMax: '<S673>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S673>/motohawk_calibration'
+  /* Product: '<S648>/Product' incorporates:
+   *  MinMax: '<S648>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S648>/motohawk_calibration'
    */
-  rtb_Switch_h /= (rtb_Switch_h >= (OilPresFilterConst_DataStore())) || rtIsNaN
-    ((OilPresFilterConst_DataStore())) ? rtb_Switch_h :
-    (OilPresFilterConst_DataStore());
+  rtb_Switch_h /= (rtb_Switch_h >= (FuelPresFilterConst_DataStore())) || rtIsNaN
+    ((FuelPresFilterConst_DataStore())) ? rtb_Switch_h :
+    (FuelPresFilterConst_DataStore());
 
-  /* Logic: '<S623>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S623>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S623>/motohawk_fault_status4'
+  /* Logic: '<S620>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status4'
    */
-  rtb_RelationalOperator5_fz = (IsFaultActive(101) || IsFaultActive(102));
+  rtb_RelationalOperator5_fz = (IsFaultActive(60) || IsFaultActive(61));
 
-  /* Logic: '<S623>/Logical Operator6' */
+  /* Logic: '<S620>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
 
-  /* Logic: '<S623>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S623>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S623>/motohawk_fault_status3'
+  /* Logic: '<S620>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S620>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(101) || IsFaultSuspected(102));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(60) || IsFaultSuspected(61));
 
-  /* S-Function Block: <S444>/motohawk_ain1 Resource: OilPresPin */
+  /* S-Function Block: <S445>/motohawk_ain2 Resource: FuelPresPin */
   {
-    extern NativeError_S OilPresPin_AnalogInput_Get(uint16_T *adc, uint16_T
+    extern NativeError_S FuelPresPin_AnalogInput_Get(uint16_T *adc, uint16_T
       *status);
-    OilPresPin_AnalogInput_Get(&BaseEngineController_LS_B.s444_motohawk_ain1,
+    FuelPresPin_AnalogInput_Get(&BaseEngineController_LS_B.s445_motohawk_ain2,
       NULL);
   }
 
-  /* DataTypeConversion: '<S623>/Data Type Conversion' */
-  rtb_DataTypeConversion_m0 = (real_T)
-    BaseEngineController_LS_B.s444_motohawk_ain1;
+  /* DataTypeConversion: '<S620>/Data Type Conversion' */
+  rtb_DataTypeConversion_gx = (real_T)
+    BaseEngineController_LS_B.s445_motohawk_ain2;
 
-  /* Product: '<S623>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S623>/motohawk_calibration4'
+  /* Product: '<S620>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration4'
    */
-  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_m0 * (OilPresGain_DataStore
-    ());
+  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_gx *
+    (FuelPresGain_DataStore());
 
-  /* Sum: '<S623>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S623>/motohawk_calibration5'
+  /* Sum: '<S620>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration5'
    */
-  BaseEngineController_LS_B.s623_Sum1 = rtb_DataTypeConversion1_e +
-    (OilPresOfst_DataStore());
+  BaseEngineController_LS_B.s620_Sum1 = rtb_DataTypeConversion1_e +
+    (FuelPresOfst_DataStore());
 
-  /* UnitDelay: '<S623>/Unit Delay1' */
-  rtb_UnitDelay1_aa = BaseEngineController_LS_DWork.s623_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S620>/Unit Delay1' */
+  rtb_UnitDelay1_pd = BaseEngineController_LS_DWork.s620_UnitDelay1_DSTATE;
 
-  /* If: '<S623>/If' incorporates:
-   *  Logic: '<S623>/Logical Operator5'
+  /* If: '<S620>/If' incorporates:
+   *  Logic: '<S620>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S623>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S674>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S620>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S649>/Action Port'
      */
-    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_aa, &rtb_Merge_ol);
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_pd, &rtb_Merge_b3f);
 
-    /* End of Outputs for SubSystem: '<S623>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S620>/If Action Subsystem' */
   } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S623>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S675>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S620>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S650>/Action Port'
      */
-    BaseEngineController_LS_IfActionSubsystem((OilPresDfltValue_DataStore()),
-      &rtb_Merge_ol);
+    BaseEngineController_LS_IfActionSubsystem((FuelPresDfltValue_DataStore()),
+      &rtb_Merge_b3f);
 
-    /* End of Outputs for SubSystem: '<S623>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S620>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S623>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S676>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S620>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S651>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s623_Sum1, &rtb_Merge_ol);
+      (BaseEngineController_LS_B.s620_Sum1, &rtb_Merge_b3f);
 
-    /* End of Outputs for SubSystem: '<S623>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S620>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S623>/If' */
+  /* End of If: '<S620>/If' */
 
-  /* Sum: '<S678>/Sum1' incorporates:
-   *  Constant: '<S678>/Constant'
-   *  Product: '<S678>/Product'
-   *  Product: '<S678>/Product1'
-   *  Sum: '<S678>/Sum'
-   *  UnitDelay: '<S678>/Unit Delay'
+  /* Sum: '<S653>/Sum1' incorporates:
+   *  Constant: '<S653>/Constant'
+   *  Product: '<S653>/Product'
+   *  Product: '<S653>/Product1'
+   *  Sum: '<S653>/Sum'
+   *  UnitDelay: '<S653>/Unit Delay'
    */
-  rtb_Sum1_o = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s678_UnitDelay_DSTATE + rtb_Merge_ol *
+  rtb_Sum1_cs = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s653_UnitDelay_DSTATE + rtb_Merge_b3f *
     rtb_Switch_h;
 
-  /* If: '<S677>/If' incorporates:
-   *  Inport: '<S679>/In1'
-   *  Inport: '<S680>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S677>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S677>/override_enable'
+  /* If: '<S652>/If' incorporates:
+   *  Inport: '<S654>/In1'
+   *  Inport: '<S655>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S652>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S652>/override_enable'
    */
-  if ((OilPres_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S677>/NewValue' incorporates:
-     *  ActionPort: '<S679>/Action Port'
+  if ((FuelPres_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S652>/NewValue' incorporates:
+     *  ActionPort: '<S654>/Action Port'
      */
-    BaseEngineController_LS_B.s677_Merge = (OilPres_new_DataStore());
+    BaseEngineController_LS_B.s652_Merge = (FuelPres_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S677>/NewValue' */
+    /* End of Outputs for SubSystem: '<S652>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S677>/OldValue' incorporates:
-     *  ActionPort: '<S680>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S652>/OldValue' incorporates:
+     *  ActionPort: '<S655>/Action Port'
      */
-    BaseEngineController_LS_B.s677_Merge = rtb_Sum1_o;
+    BaseEngineController_LS_B.s652_Merge = rtb_Sum1_cs;
 
-    /* End of Outputs for SubSystem: '<S677>/OldValue' */
+    /* End of Outputs for SubSystem: '<S652>/OldValue' */
   }
 
-  /* End of If: '<S677>/If' */
+  /* End of If: '<S652>/If' */
 
-  /* Gain: '<S866>/Gain1' */
-  rtb_DataTypeConversion1_e = 0.068948 * BaseEngineController_LS_B.s677_Merge;
+  /* Gain: '<S867>/Gain' */
+  rtb_DataTypeConversion1_e = 0.01 * BaseEngineController_LS_B.s652_Merge;
 
   /* S-Function Block: <S898>/motohawk_delta_time */
   {
@@ -12244,8 +12142,8 @@ void BaseEngineController_LS_Foreground(void)
    *  MinMax: '<S898>/MinMax'
    *  S-Function (motohawk_sfun_calibration): '<S898>/motohawk_calibration'
    */
-  rtb_Switch_h /= (rtb_Switch_h >= (OilPres_Filt_DataStore())) || rtIsNaN
-    ((OilPres_Filt_DataStore())) ? rtb_Switch_h : (OilPres_Filt_DataStore());
+  rtb_Switch_h /= (rtb_Switch_h >= (FuelPres_Filt_DataStore())) || rtIsNaN
+    ((FuelPres_Filt_DataStore())) ? rtb_Switch_h : (FuelPres_Filt_DataStore());
 
   /* Sum: '<S901>/Sum1' incorporates:
    *  Constant: '<S901>/Constant'
@@ -12254,17 +12152,173 @@ void BaseEngineController_LS_Foreground(void)
    *  Sum: '<S901>/Sum'
    *  UnitDelay: '<S901>/Unit Delay'
    */
-  rtb_Sum1_co = (1.0 - rtb_Switch_h) *
+  rtb_Sum1_ay = (1.0 - rtb_Switch_h) *
     BaseEngineController_LS_DWork.s901_UnitDelay_DSTATE +
     rtb_DataTypeConversion1_e * rtb_Switch_h;
 
-  /* S-Function (motohawk_sfun_data_read): '<S866>/motohawk_data_read1' */
+  /* S-Function Block: <S674>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s674_motohawk_delta_time_DWORK1, NULL);
+    rtb_Switch_h = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S674>/Product' incorporates:
+   *  MinMax: '<S674>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S674>/motohawk_calibration'
+   */
+  rtb_Switch_h /= (rtb_Switch_h >= (OilPresFilterConst_DataStore())) || rtIsNaN
+    ((OilPresFilterConst_DataStore())) ? rtb_Switch_h :
+    (OilPresFilterConst_DataStore());
+
+  /* Logic: '<S624>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status4'
+   */
+  rtb_RelationalOperator5_fz = (IsFaultActive(98) || IsFaultActive(99));
+
+  /* Logic: '<S624>/Logical Operator6' */
+  rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
+
+  /* Logic: '<S624>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status3'
+   */
+  rtb_LogicalOperator1_al = (IsFaultSuspected(98) || IsFaultSuspected(99));
+
+  /* S-Function Block: <S445>/motohawk_ain1 Resource: OilPresPin */
+  {
+    extern NativeError_S OilPresPin_AnalogInput_Get(uint16_T *adc, uint16_T
+      *status);
+    OilPresPin_AnalogInput_Get(&BaseEngineController_LS_B.s445_motohawk_ain1,
+      NULL);
+  }
+
+  /* DataTypeConversion: '<S624>/Data Type Conversion' */
+  rtb_DataTypeConversion_m0 = (real_T)
+    BaseEngineController_LS_B.s445_motohawk_ain1;
+
+  /* Product: '<S624>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S624>/motohawk_calibration4'
+   */
+  rtb_DataTypeConversion1_e = rtb_DataTypeConversion_m0 * (OilPresGain_DataStore
+    ());
+
+  /* Sum: '<S624>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S624>/motohawk_calibration5'
+   */
+  BaseEngineController_LS_B.s624_Sum1 = rtb_DataTypeConversion1_e +
+    (OilPresOfst_DataStore());
+
+  /* UnitDelay: '<S624>/Unit Delay1' */
+  rtb_UnitDelay1_aa = BaseEngineController_LS_DWork.s624_UnitDelay1_DSTATE;
+
+  /* If: '<S624>/If' incorporates:
+   *  Logic: '<S624>/Logical Operator5'
+   */
+  if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
+    /* Outputs for IfAction SubSystem: '<S624>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S675>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_aa, &rtb_Merge_ol);
+
+    /* End of Outputs for SubSystem: '<S624>/If Action Subsystem' */
+  } else if (rtb_RelationalOperator5_fz) {
+    /* Outputs for IfAction SubSystem: '<S624>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S676>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem((OilPresDfltValue_DataStore()),
+      &rtb_Merge_ol);
+
+    /* End of Outputs for SubSystem: '<S624>/If Action Subsystem1' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S624>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S677>/Action Port'
+     */
+    BaseEngineController_LS_IfActionSubsystem
+      (BaseEngineController_LS_B.s624_Sum1, &rtb_Merge_ol);
+
+    /* End of Outputs for SubSystem: '<S624>/If Action Subsystem2' */
+  }
+
+  /* End of If: '<S624>/If' */
+
+  /* Sum: '<S679>/Sum1' incorporates:
+   *  Constant: '<S679>/Constant'
+   *  Product: '<S679>/Product'
+   *  Product: '<S679>/Product1'
+   *  Sum: '<S679>/Sum'
+   *  UnitDelay: '<S679>/Unit Delay'
+   */
+  rtb_Sum1_o = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s679_UnitDelay_DSTATE + rtb_Merge_ol *
+    rtb_Switch_h;
+
+  /* If: '<S678>/If' incorporates:
+   *  Inport: '<S680>/In1'
+   *  Inport: '<S681>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S678>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S678>/override_enable'
+   */
+  if ((OilPres_ovr_DataStore())) {
+    /* Outputs for IfAction SubSystem: '<S678>/NewValue' incorporates:
+     *  ActionPort: '<S680>/Action Port'
+     */
+    BaseEngineController_LS_B.s678_Merge = (OilPres_new_DataStore());
+
+    /* End of Outputs for SubSystem: '<S678>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S678>/OldValue' incorporates:
+     *  ActionPort: '<S681>/Action Port'
+     */
+    BaseEngineController_LS_B.s678_Merge = rtb_Sum1_o;
+
+    /* End of Outputs for SubSystem: '<S678>/OldValue' */
+  }
+
+  /* End of If: '<S678>/If' */
+
+  /* Gain: '<S867>/Gain1' */
+  rtb_DataTypeConversion1_e = 0.068948 * BaseEngineController_LS_B.s678_Merge;
+
+  /* S-Function Block: <S899>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s899_motohawk_delta_time_DWORK1, NULL);
+    rtb_Switch_h = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S899>/Product' incorporates:
+   *  MinMax: '<S899>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S899>/motohawk_calibration'
+   */
+  rtb_Switch_h /= (rtb_Switch_h >= (OilPres_Filt_DataStore())) || rtIsNaN
+    ((OilPres_Filt_DataStore())) ? rtb_Switch_h : (OilPres_Filt_DataStore());
+
+  /* Sum: '<S902>/Sum1' incorporates:
+   *  Constant: '<S902>/Constant'
+   *  Product: '<S902>/Product'
+   *  Product: '<S902>/Product1'
+   *  Sum: '<S902>/Sum'
+   *  UnitDelay: '<S902>/Unit Delay'
+   */
+  rtb_Sum1_co = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s902_UnitDelay_DSTATE +
+    rtb_DataTypeConversion1_e * rtb_Switch_h;
+
+  /* S-Function (motohawk_sfun_data_read): '<S867>/motohawk_data_read1' */
   rtb_Switch_h = BaseEquivRatio_DataStore();
 
-  /* Math: '<S866>/Math Function' incorporates:
-   *  Saturate: '<S866>/Saturation'
+  /* Math: '<S867>/Math Function' incorporates:
+   *  Saturate: '<S867>/Saturation'
    *
-   * About '<S866>/Math Function':
+   * About '<S867>/Math Function':
    *  Operator: reciprocal
    */
   rtb_MathFunction = 1.0 / (rtb_Switch_h >= 0.01 ? rtb_Switch_h : 0.01);
@@ -12284,12 +12338,12 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Switch: '<S143>/Switch' */
 
-  /* S-Function (motohawk_sfun_data_read): '<S866>/motohawk_data_read2' */
+  /* S-Function (motohawk_sfun_data_read): '<S867>/motohawk_data_read2' */
   rtb_motohawk_data_read2_l = O2CtrlMode_DataStore();
 
-  /* S-Function (motohawk_sfun_fault_action): '<S866>/motohawk_fault_action'
+  /* S-Function (motohawk_sfun_fault_action): '<S867>/motohawk_fault_action'
    *
-   * Regarding '<S866>/motohawk_fault_action':
+   * Regarding '<S867>/motohawk_fault_action':
      Get Fault Action Status: EngineProtectLED
    */
   {
@@ -12297,9 +12351,9 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_fault_action_o = GetFaultActionStatus(7);
   }
 
-  /* S-Function (motohawk_sfun_fault_action): '<S866>/motohawk_fault_action1'
+  /* S-Function (motohawk_sfun_fault_action): '<S867>/motohawk_fault_action1'
    *
-   * Regarding '<S866>/motohawk_fault_action1':
+   * Regarding '<S867>/motohawk_fault_action1':
      Get Fault Action Status: MIL_LED
    */
   {
@@ -12307,24 +12361,24 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_fault_action1_a = GetFaultActionStatus(10);
   }
 
-  /* S-Function (motohawk_sfun_fault_status): '<S866>/motohawk_fault_status2'
+  /* S-Function (motohawk_sfun_fault_status): '<S867>/motohawk_fault_status2'
    *
-   * Regarding '<S866>/motohawk_fault_status2':
+   * Regarding '<S867>/motohawk_fault_status2':
      Status : "Active"
    */
   {
     extern boolean_T IsFaultActive(uint32_T fault);
-    rtb_motohawk_fault_status2_f2 = IsFaultActive(86);
+    rtb_motohawk_fault_status2_f2 = IsFaultActive(83);
   }
 
-  /* S-Function (motohawk_sfun_fault_status): '<S866>/motohawk_fault_status1'
+  /* S-Function (motohawk_sfun_fault_status): '<S867>/motohawk_fault_status1'
    *
-   * Regarding '<S866>/motohawk_fault_status1':
+   * Regarding '<S867>/motohawk_fault_status1':
      Status : "Active"
    */
   {
     extern boolean_T IsFaultActive(uint32_T fault);
-    rtb_motohawk_fault_status1_i = IsFaultActive(97);
+    rtb_motohawk_fault_status1_i = IsFaultActive(94);
   }
 
   /* S-Function (motohawk_sfun_fault_action): '<S22>/motohawk_fault_action1'
@@ -12362,7 +12416,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_fault_action2 || rtb_motohawk_fault_action3);
 
   /* Logic: '<S22>/Logical Operator5' */
-  rtb_RelationalOperator6_h = !BaseEngineController_LS_B.s592_Merge;
+  rtb_RelationalOperator6_h = !BaseEngineController_LS_B.s593_Merge;
 
   /* Switch: '<S22>/Switch' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S122>/motohawk_calibration10'
@@ -12969,19 +13023,19 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Logic: '<S22>/Logical Operator3' */
 
-  /* Sum: '<S866>/    ' incorporates:
-   *  Sum: '<S866>/      '
+  /* Sum: '<S867>/    ' incorporates:
+   *  Sum: '<S867>/      '
    */
   rtb_Switch_kj = rtb_AND1[0];
   for (i = 0; i < 7; i++) {
     rtb_Switch_kj += (uint32_T)rtb_AND1[1 + i];
   }
 
-  /* End of Sum: '<S866>/    ' */
+  /* End of Sum: '<S867>/    ' */
 
-  /* RelationalOperator: '<S893>/Compare' incorporates:
-   *  Constant: '<S893>/Constant'
-   *  Sum: '<S866>/    '
+  /* RelationalOperator: '<S894>/Compare' incorporates:
+   *  Constant: '<S894>/Constant'
+   *  Sum: '<S867>/    '
    */
   rtb_Compare_b = (((uint8_T)rtb_Switch_kj >= 1));
 
@@ -13031,8 +13085,8 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Logic: '<S22>/Logical Operator2' */
 
-  /* Sum: '<S866>/      ' incorporates:
-   *  Sum: '<S866>/    '
+  /* Sum: '<S867>/      ' incorporates:
+   *  Sum: '<S867>/    '
    */
   rtb_Switch_kj = BaseEngineController_LS_B.s22_LogicalOperator2[0];
   for (i = 0; i < 7; i++) {
@@ -13040,33 +13094,33 @@ void BaseEngineController_LS_Foreground(void)
       + i];
   }
 
-  /* End of Sum: '<S866>/      ' */
-
-  /* RelationalOperator: '<S894>/Compare' incorporates:
-   *  Constant: '<S894>/Constant'
-   *  Sum: '<S866>/      '
-   */
-  rtb_Compare_d = (((uint8_T)rtb_Switch_kj >= 1));
+  /* End of Sum: '<S867>/      ' */
 
   /* RelationalOperator: '<S895>/Compare' incorporates:
    *  Constant: '<S895>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S866>/motohawk_data_read3'
+   *  Sum: '<S867>/      '
+   */
+  rtb_Compare_d = (((uint8_T)rtb_Switch_kj >= 1));
+
+  /* RelationalOperator: '<S896>/Compare' incorporates:
+   *  Constant: '<S896>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S867>/motohawk_data_read3'
    */
   rtb_Compare_g = ((((uint8_T)EncoderState_DataStore()) >= 3));
 
-  /* S-Function (motohawk_sfun_fault_status): '<S866>/motohawk_fault_status3'
+  /* S-Function (motohawk_sfun_fault_status): '<S867>/motohawk_fault_status3'
    *
-   * Regarding '<S866>/motohawk_fault_status3':
+   * Regarding '<S867>/motohawk_fault_status3':
      Status : "Active"
    */
   {
     extern boolean_T IsFaultActive(uint32_T fault);
-    rtb_motohawk_fault_status3_g = IsFaultActive(105);
+    rtb_motohawk_fault_status3_g = IsFaultActive(102);
   }
 
-  /* S-Function (motohawk_sfun_fault_status): '<S866>/motohawk_fault_status4'
+  /* S-Function (motohawk_sfun_fault_status): '<S867>/motohawk_fault_status4'
    *
-   * Regarding '<S866>/motohawk_fault_status4':
+   * Regarding '<S867>/motohawk_fault_status4':
      Status : "Active"
    */
   {
@@ -13074,7 +13128,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_fault_status4_gd3 = IsFaultActive(31);
   }
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S866>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S867>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -13227,15 +13281,15 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* Product: '<S867>/Product' incorporates:
-   *  Constant: '<S867>/Constant1'
-   *  Saturate: '<S867>/Saturation'
+  /* Product: '<S868>/Product' incorporates:
+   *  Constant: '<S868>/Constant1'
+   *  Saturate: '<S868>/Saturation'
    */
-  rtb_Product_hd = BaseEngineController_LS_B.s366_MultiportSwitch * 60.0 /
-    (BaseEngineController_LS_B.s616_Sum1 >= 0.01 ?
-     BaseEngineController_LS_B.s616_Sum1 : 0.01);
+  rtb_Product_hd = BaseEngineController_LS_B.s367_MultiportSwitch * 60.0 /
+    (BaseEngineController_LS_B.s617_Sum1 >= 0.01 ?
+     BaseEngineController_LS_B.s617_Sum1 : 0.01);
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S867>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S868>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -13265,13 +13319,13 @@ void BaseEngineController_LS_Foreground(void)
         uint8_T tmp6;
         uint8_T tmp7;
         tmp0 = (uint16_T)(0U);
-        if (BaseEngineController_LS_B.s366_MultiportSwitch < 0.0000000000F) {
+        if (BaseEngineController_LS_B.s367_MultiportSwitch < 0.0000000000F) {
           tmp1 = (uint16_T)(0U);
-        } else if (BaseEngineController_LS_B.s366_MultiportSwitch >
+        } else if (BaseEngineController_LS_B.s367_MultiportSwitch >
                    3276.7500000000F) {
           tmp1 = (uint16_T)(65535U);
         } else {
-          tmp1 = (uint16_T)(BaseEngineController_LS_B.s366_MultiportSwitch *
+          tmp1 = (uint16_T)(BaseEngineController_LS_B.s367_MultiportSwitch *
                             (20.0000000000F));
         }
 
@@ -13285,7 +13339,7 @@ void BaseEngineController_LS_Foreground(void)
 
         tmp3 = (uint8_T)(0U);
         tmp4 = (uint8_T)(0U);
-        tmp5 = (uint8_T)(BaseEngineController_LS_B.s571_Merge != 0);
+        tmp5 = (uint8_T)(BaseEngineController_LS_B.s572_Merge != 0);
         tmp6 = (uint8_T)(0U);
         tmp7 = (uint8_T)(0U);
         msg_data[0] = ((((uint8_T *)(&tmp0))[0])) ;
@@ -13305,17 +13359,17 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function (motohawk_sfun_data_read): '<S868>/motohawk_data_read2' incorporates:
-   *  Constant: '<S868>/Constant5'
+  /* S-Function (motohawk_sfun_data_read): '<S869>/motohawk_data_read2' incorporates:
+   *  Constant: '<S869>/Constant5'
    */
   rtb_motohawk_data_read2_m = InjMPW_DataStore()[(uint32_T)1.0];
 
-  /* S-Function (motohawk_sfun_data_read): '<S868>/motohawk_data_read1' incorporates:
-   *  Constant: '<S868>/Constant4'
+  /* S-Function (motohawk_sfun_data_read): '<S869>/motohawk_data_read1' incorporates:
+   *  Constant: '<S869>/Constant4'
    */
   rtb_motohawk_data_read1_ka = InjDC_DataStore()[(uint32_T)1.0];
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S868>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S869>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -13386,104 +13440,104 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function (motohawk_sfun_data_read): '<S869>/motohawk_data_read' */
+  /* S-Function (motohawk_sfun_data_read): '<S870>/motohawk_data_read' */
   rtb_motohawk_data_read_bv = BARO_DataStore();
 
-  /* S-Function Block: <S902>/motohawk_delta_time */
+  /* S-Function Block: <S903>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s902_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s903_motohawk_delta_time_DWORK1, NULL);
     rtb_Switch_h = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S902>/Product' incorporates:
-   *  MinMax: '<S902>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S902>/motohawk_calibration'
+  /* Product: '<S903>/Product' incorporates:
+   *  MinMax: '<S903>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S903>/motohawk_calibration'
    */
   rtb_Switch_h /= (rtb_Switch_h >= (Flex_Filt_DataStore())) || rtIsNaN
     ((Flex_Filt_DataStore())) ? rtb_Switch_h : (Flex_Filt_DataStore());
 
-  /* Sum: '<S903>/Sum1' incorporates:
-   *  Constant: '<S903>/Constant'
-   *  Product: '<S903>/Product'
-   *  Product: '<S903>/Product1'
-   *  Sum: '<S903>/Sum'
-   *  UnitDelay: '<S903>/Unit Delay'
+  /* Sum: '<S904>/Sum1' incorporates:
+   *  Constant: '<S904>/Constant'
+   *  Product: '<S904>/Product'
+   *  Product: '<S904>/Product1'
+   *  Sum: '<S904>/Sum'
+   *  UnitDelay: '<S904>/Unit Delay'
    */
   rtb_Sum1_kv = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s903_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s638_Merge * rtb_Switch_h;
+    BaseEngineController_LS_DWork.s904_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s639_Merge * rtb_Switch_h;
 
-  /* Outputs for Enabled SubSystem: '<S361>/Capture IAT At Startup' incorporates:
-   *  EnablePort: '<S404>/Enable'
+  /* Outputs for Enabled SubSystem: '<S362>/Capture IAT At Startup' incorporates:
+   *  EnablePort: '<S405>/Enable'
    */
   if (rtb_RelOp_d) {
-    if (!BaseEngineController_LS_DWork.s361_CaptureIATAtStartup_MODE) {
-      /* InitializeConditions for UnitDelay: '<S404>/Unit Delay' */
-      BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE = 0;
-      BaseEngineController_LS_DWork.s361_CaptureIATAtStartup_MODE = TRUE;
+    if (!BaseEngineController_LS_DWork.s362_CaptureIATAtStartup_MODE) {
+      /* InitializeConditions for UnitDelay: '<S405>/Unit Delay' */
+      BaseEngineController_LS_DWork.s405_UnitDelay_DSTATE = 0;
+      BaseEngineController_LS_DWork.s362_CaptureIATAtStartup_MODE = TRUE;
     }
 
-    /* Sum: '<S404>/Sum' incorporates:
-     *  Constant: '<S404>/Constant'
-     *  UnitDelay: '<S404>/Unit Delay'
+    /* Sum: '<S405>/Sum' incorporates:
+     *  Constant: '<S405>/Constant'
+     *  UnitDelay: '<S405>/Unit Delay'
      */
-    rtb_Add_k = (int8_T)(BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE + 1);
+    rtb_Add_k = (int8_T)(BaseEngineController_LS_DWork.s405_UnitDelay_DSTATE + 1);
 
-    /* Sum: '<S404>/Add' incorporates:
-     *  Constant: '<S404>/TwoSampleBuffer ToIgnore'
-     *  S-Function (motohawk_sfun_calibration): '<S404>/motohawk_calibration'
+    /* Sum: '<S405>/Add' incorporates:
+     *  Constant: '<S405>/TwoSampleBuffer ToIgnore'
+     *  S-Function (motohawk_sfun_calibration): '<S405>/motohawk_calibration'
      */
     rtb_Sum_l3 = (int8_T)(((int8_T)(IAT_KeyUp_Count_DataStore())) + 2);
 
-    /* RelationalOperator: '<S404>/Relational Operator' */
+    /* RelationalOperator: '<S405>/Relational Operator' */
     rtb_LogicalOperator6_b = (rtb_Add_k <= rtb_Sum_l3);
 
-    /* Switch: '<S404>/Switch' */
+    /* Switch: '<S405>/Switch' */
     if (rtb_LogicalOperator6_b) {
       rtb_Sum_l3 = rtb_Add_k;
     }
 
-    /* End of Switch: '<S404>/Switch' */
+    /* End of Switch: '<S405>/Switch' */
 
-    /* Sum: '<S404>/Add1' incorporates:
-     *  Constant: '<S404>/TwoSampleBuffer ToIgnore'
+    /* Sum: '<S405>/Add1' incorporates:
+     *  Constant: '<S405>/TwoSampleBuffer ToIgnore'
      */
     rtb_Add1_k = (int8_T)(rtb_Sum_l3 - 2);
 
-    /* Logic: '<S404>/Logical Operator' incorporates:
-     *  Constant: '<S404>/TwoSampleBuffer ToIgnore'
-     *  RelationalOperator: '<S404>/Relational Operator1'
+    /* Logic: '<S405>/Logical Operator' incorporates:
+     *  Constant: '<S405>/TwoSampleBuffer ToIgnore'
+     *  RelationalOperator: '<S405>/Relational Operator1'
      */
     rtb_LogicalOperator_g5 = (rtb_LogicalOperator6_b && (rtb_Add_k > 2));
 
-    /* Outputs for Enabled SubSystem: '<S404>/Collect Average' */
+    /* Outputs for Enabled SubSystem: '<S405>/Collect Average' */
     BaseEngineController_LS_CollectAverage(rtb_LogicalOperator_g5, rtb_Add1_k,
-      BaseEngineController_LS_B.s712_Merge,
-      &BaseEngineController_LS_B.s404_CollectAverage,
-      &BaseEngineController_LS_DWork.s404_CollectAverage);
+      BaseEngineController_LS_B.s713_Merge,
+      &BaseEngineController_LS_B.s405_CollectAverage,
+      &BaseEngineController_LS_DWork.s405_CollectAverage);
 
-    /* End of Outputs for SubSystem: '<S404>/Collect Average' */
+    /* End of Outputs for SubSystem: '<S405>/Collect Average' */
 
-    /* Update for UnitDelay: '<S404>/Unit Delay' */
-    BaseEngineController_LS_DWork.s404_UnitDelay_DSTATE = rtb_Sum_l3;
+    /* Update for UnitDelay: '<S405>/Unit Delay' */
+    BaseEngineController_LS_DWork.s405_UnitDelay_DSTATE = rtb_Sum_l3;
   } else {
-    if (BaseEngineController_LS_DWork.s361_CaptureIATAtStartup_MODE) {
-      /* Disable for Enabled SubSystem: '<S404>/Collect Average' */
+    if (BaseEngineController_LS_DWork.s362_CaptureIATAtStartup_MODE) {
+      /* Disable for Enabled SubSystem: '<S405>/Collect Average' */
       BaseEngineController_LS_CollectAverage_Disable
-        (&BaseEngineController_LS_DWork.s404_CollectAverage);
+        (&BaseEngineController_LS_DWork.s405_CollectAverage);
 
-      /* End of Disable for SubSystem: '<S404>/Collect Average' */
-      BaseEngineController_LS_DWork.s361_CaptureIATAtStartup_MODE = FALSE;
+      /* End of Disable for SubSystem: '<S405>/Collect Average' */
+      BaseEngineController_LS_DWork.s362_CaptureIATAtStartup_MODE = FALSE;
     }
   }
 
-  /* End of Outputs for SubSystem: '<S361>/Capture IAT At Startup' */
+  /* End of Outputs for SubSystem: '<S362>/Capture IAT At Startup' */
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S869>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S870>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -13537,15 +13591,15 @@ void BaseEngineController_LS_Foreground(void)
           tmp4 = (uint8_T)(rtb_Sum1_kv * (2.5499991075F));
         }
 
-        if (BaseEngineController_LS_B.s404_CollectAverage.s368_Product <
+        if (BaseEngineController_LS_B.s405_CollectAverage.s369_Product <
             -50.0000000000F) {
           tmp5 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s404_CollectAverage.s368_Product >
+        } else if (BaseEngineController_LS_B.s405_CollectAverage.s369_Product >
                    205.0000000000F) {
           tmp5 = (uint8_T)(255U);
         } else {
           tmp5 = (uint8_T)
-            (BaseEngineController_LS_B.s404_CollectAverage.s368_Product -
+            (BaseEngineController_LS_B.s405_CollectAverage.s369_Product -
              (-50.0000000000F));
         }
 
@@ -13575,16 +13629,16 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function (motohawk_sfun_data_read): '<S872>/motohawk_data_read' */
+  /* S-Function (motohawk_sfun_data_read): '<S873>/motohawk_data_read' */
   rtb_motohawk_data_read_ki = BoostControlTarget_DataStore();
 
-  /* S-Function (motohawk_sfun_data_read): '<S872>/motohawk_data_read1' */
+  /* S-Function (motohawk_sfun_data_read): '<S873>/motohawk_data_read1' */
   rtb_motohawk_data_read1_bz = BoostControlDutyCycleFF_DataStore();
 
-  /* S-Function (motohawk_sfun_data_read): '<S872>/motohawk_data_read2' */
+  /* S-Function (motohawk_sfun_data_read): '<S873>/motohawk_data_read2' */
   rtb_motohawk_data_read2_h = BoostControlPID_DataStore();
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S872>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S873>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -13636,12 +13690,12 @@ void BaseEngineController_LS_Foreground(void)
           tmp3 = (uint8_T)(rtb_motohawk_data_read2_h * (2.5499991075F));
         }
 
-        if (BaseEngineController_LS_B.s717_Merge < -50.0000000000F) {
+        if (BaseEngineController_LS_B.s718_Merge < -50.0000000000F) {
           tmp4 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s717_Merge > 205.0000000000F) {
+        } else if (BaseEngineController_LS_B.s718_Merge > 205.0000000000F) {
           tmp4 = (uint8_T)(255U);
         } else {
-          tmp4 = (uint8_T)(BaseEngineController_LS_B.s717_Merge -
+          tmp4 = (uint8_T)(BaseEngineController_LS_B.s718_Merge -
                            (-50.0000000000F));
         }
 
@@ -13661,6 +13715,34 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
+  /* S-Function Block: <S906>/motohawk_delta_time */
+  {
+    uint32_T delta;
+    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
+      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
+    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
+      (&BaseEngineController_LS_DWork.s906_motohawk_delta_time_DWORK1, NULL);
+    rtb_Switch_h = ((real_T) delta) * 0.000001;
+  }
+
+  /* Product: '<S906>/Product' incorporates:
+   *  MinMax: '<S906>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S906>/motohawk_calibration'
+   */
+  rtb_Switch_h /= (rtb_Switch_h >= (APP_Filt_DataStore())) || rtIsNaN
+    ((APP_Filt_DataStore())) ? rtb_Switch_h : (APP_Filt_DataStore());
+
+  /* Sum: '<S908>/Sum1' incorporates:
+   *  Constant: '<S908>/Constant'
+   *  Product: '<S908>/Product'
+   *  Product: '<S908>/Product1'
+   *  Sum: '<S908>/Sum'
+   *  UnitDelay: '<S908>/Unit Delay'
+   */
+  rtb_Sum1_mn = (1.0 - rtb_Switch_h) *
+    BaseEngineController_LS_DWork.s908_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s406_Switch1 * rtb_Switch_h;
+
   /* S-Function Block: <S905>/motohawk_delta_time */
   {
     uint32_T delta;
@@ -13675,8 +13757,8 @@ void BaseEngineController_LS_Foreground(void)
    *  MinMax: '<S905>/MinMax'
    *  S-Function (motohawk_sfun_calibration): '<S905>/motohawk_calibration'
    */
-  rtb_Switch_h /= (rtb_Switch_h >= (APP_Filt_DataStore())) || rtIsNaN
-    ((APP_Filt_DataStore())) ? rtb_Switch_h : (APP_Filt_DataStore());
+  rtb_Switch_h /= (rtb_Switch_h >= (ETCReq_Filt_DataStore())) || rtIsNaN
+    ((ETCReq_Filt_DataStore())) ? rtb_Switch_h : (ETCReq_Filt_DataStore());
 
   /* Sum: '<S907>/Sum1' incorporates:
    *  Constant: '<S907>/Constant'
@@ -13685,41 +13767,13 @@ void BaseEngineController_LS_Foreground(void)
    *  Sum: '<S907>/Sum'
    *  UnitDelay: '<S907>/Unit Delay'
    */
-  rtb_Sum1_mn = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s907_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s405_Switch1 * rtb_Switch_h;
-
-  /* S-Function Block: <S904>/motohawk_delta_time */
-  {
-    uint32_T delta;
-    extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
-      * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
-    delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s904_motohawk_delta_time_DWORK1, NULL);
-    rtb_Switch_h = ((real_T) delta) * 0.000001;
-  }
-
-  /* Product: '<S904>/Product' incorporates:
-   *  MinMax: '<S904>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S904>/motohawk_calibration'
-   */
-  rtb_Switch_h /= (rtb_Switch_h >= (ETCReq_Filt_DataStore())) || rtIsNaN
-    ((ETCReq_Filt_DataStore())) ? rtb_Switch_h : (ETCReq_Filt_DataStore());
-
-  /* Sum: '<S906>/Sum1' incorporates:
-   *  Constant: '<S906>/Constant'
-   *  Product: '<S906>/Product'
-   *  Product: '<S906>/Product1'
-   *  Sum: '<S906>/Sum'
-   *  UnitDelay: '<S906>/Unit Delay'
-   */
   rtb_Sum1_mw = (1.0 - rtb_Switch_h) *
-    BaseEngineController_LS_DWork.s906_UnitDelay_DSTATE +
-    BaseEngineController_LS_B.s420_Sum2 * rtb_Switch_h;
+    BaseEngineController_LS_DWork.s907_UnitDelay_DSTATE +
+    BaseEngineController_LS_B.s421_Sum2 * rtb_Switch_h;
 
-  /* S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status9'
+  /* S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status9'
    *
-   * Regarding '<S873>/motohawk_fault_status9':
+   * Regarding '<S874>/motohawk_fault_status9':
      Status : "Active"
    */
   {
@@ -13727,50 +13781,50 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_fault_status9 = IsFaultActive(20);
   }
 
-  /* Logic: '<S873>/Logical Operator3' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status10'
+  /* Logic: '<S874>/Logical Operator3' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status10'
    */
   rtb_LogicalOperator3_m = ((IsFaultActive(5) || IsFaultActive(4)));
 
-  /* Logic: '<S873>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status3'
+  /* Logic: '<S874>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status3'
    */
   rtb_LogicalOperator1_d1 = ((IsFaultActive(13) || IsFaultActive(12)));
 
-  /* Logic: '<S873>/Logical Operator2' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status5'
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status6'
+  /* Logic: '<S874>/Logical Operator2' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status5'
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status6'
    */
   rtb_LogicalOperator2_p1 = ((IsFaultActive(52) || IsFaultActive(53)));
 
-  /* Logic: '<S873>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status4'
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status7'
+  /* Logic: '<S874>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status4'
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status7'
    */
-  rtb_LogicalOperator4_c = ((IsFaultActive(114) || IsFaultActive(113)));
+  rtb_LogicalOperator4_c = ((IsFaultActive(111) || IsFaultActive(110)));
 
-  /* Logic: '<S873>/Logical Operator5' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status11'
-   *  S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status8'
+  /* Logic: '<S874>/Logical Operator5' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status11'
+   *  S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status8'
    */
-  rtb_LogicalOperator5_g = ((IsFaultActive(120) || IsFaultActive(119)));
+  rtb_LogicalOperator5_g = ((IsFaultActive(117) || IsFaultActive(116)));
 
-  /* S-Function (motohawk_sfun_data_read): '<S873>/motohawk_data_read1' */
+  /* S-Function (motohawk_sfun_data_read): '<S874>/motohawk_data_read1' */
   rtb_motohawk_data_read1_pg = ETB_Curr_Flt_DataStore();
 
-  /* S-Function (motohawk_sfun_fault_status): '<S873>/motohawk_fault_status12'
+  /* S-Function (motohawk_sfun_fault_status): '<S874>/motohawk_fault_status12'
    *
-   * Regarding '<S873>/motohawk_fault_status12':
+   * Regarding '<S874>/motohawk_fault_status12':
      Status : "Active"
    */
   {
     extern boolean_T IsFaultActive(uint32_T fault);
-    rtb_motohawk_fault_status12 = IsFaultActive(121);
+    rtb_motohawk_fault_status12 = IsFaultActive(118);
   }
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S873>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S874>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -13827,20 +13881,20 @@ void BaseEngineController_LS_Foreground(void)
           tmp1 = (uint8_T)(rtb_Sum1_mw * (2.5499991075F));
         }
 
-        if (BaseEngineController_LS_B.s829_Merge < 0.0000000000F) {
+        if (BaseEngineController_LS_B.s830_Merge < 0.0000000000F) {
           tmp2 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s829_Merge > 100.0000350000F) {
+        } else if (BaseEngineController_LS_B.s830_Merge > 100.0000350000F) {
           tmp2 = (uint8_T)(255U);
         } else {
-          tmp2 = (uint8_T)(BaseEngineController_LS_B.s829_Merge * (2.5499991075F));
+          tmp2 = (uint8_T)(BaseEngineController_LS_B.s830_Merge * (2.5499991075F));
         }
 
-        if (BaseEngineController_LS_B.s846_Merge < 0.0000000000F) {
+        if (BaseEngineController_LS_B.s847_Merge < 0.0000000000F) {
           tmp3 = (uint8_T)(0U);
-        } else if (BaseEngineController_LS_B.s846_Merge > 100.0000350000F) {
+        } else if (BaseEngineController_LS_B.s847_Merge > 100.0000350000F) {
           tmp3 = (uint8_T)(255U);
         } else {
-          tmp3 = (uint8_T)(BaseEngineController_LS_B.s846_Merge * (2.5499991075F));
+          tmp3 = (uint8_T)(BaseEngineController_LS_B.s847_Merge * (2.5499991075F));
         }
 
         tmp4 = (uint8_T)(rtb_motohawk_fault_status9 != 0);
@@ -13884,52 +13938,52 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function (motohawk_sfun_data_read): '<S870>/motohawk_data_read' */
+  /* S-Function (motohawk_sfun_data_read): '<S871>/motohawk_data_read' */
   rtb_motohawk_data_read_l = BaseRevLimit_DataStore();
 
-  /* S-Function (motohawk_sfun_data_read): '<S870>/motohawk_data_read1' */
+  /* S-Function (motohawk_sfun_data_read): '<S871>/motohawk_data_read1' */
   rtb_motohawk_data_read1_b3 = TwoStepRevLimit_DataStore();
 
-  /* Logic: '<S870>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status3'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status4'
+  /* Logic: '<S871>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status3'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status4'
    */
-  rtb_LogicalOperator_bi = ((IsFaultActive(114) || IsFaultActive(113) ||
-    IsFaultActive(120) || IsFaultActive(119)));
+  rtb_LogicalOperator_bi = ((IsFaultActive(111) || IsFaultActive(110) ||
+    IsFaultActive(117) || IsFaultActive(116)));
 
-  /* Logic: '<S870>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status5'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status7'
+  /* Logic: '<S871>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status5'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status7'
    */
   rtb_LogicalOperator1_jx = ((IsFaultActive(33) || IsFaultActive(32)));
 
-  /* Logic: '<S870>/Logical Operator2' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status6'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status8'
+  /* Logic: '<S871>/Logical Operator2' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status6'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status8'
    */
   rtb_LogicalOperator2_ps = ((IsFaultActive(61) || IsFaultActive(60)));
 
-  /* Logic: '<S870>/Logical Operator3' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status10'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status9'
+  /* Logic: '<S871>/Logical Operator3' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status10'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status9'
    */
-  rtb_LogicalOperator3_n = ((IsFaultActive(102) || IsFaultActive(101)));
+  rtb_LogicalOperator3_n = ((IsFaultActive(99) || IsFaultActive(98)));
 
-  /* Logic: '<S870>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status11'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status12'
+  /* Logic: '<S871>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status11'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status12'
    */
-  rtb_LogicalOperator4_n = ((IsFaultActive(90) || IsFaultActive(89)));
+  rtb_LogicalOperator4_n = ((IsFaultActive(87) || IsFaultActive(86)));
 
-  /* Logic: '<S870>/Logical Operator5' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status13'
-   *  S-Function (motohawk_sfun_fault_status): '<S870>/motohawk_fault_status14'
+  /* Logic: '<S871>/Logical Operator5' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status13'
+   *  S-Function (motohawk_sfun_fault_status): '<S871>/motohawk_fault_status14'
    */
-  rtb_LogicalOperator5_cx = ((IsFaultActive(73) || IsFaultActive(72)));
+  rtb_LogicalOperator5_cx = ((IsFaultActive(72) || IsFaultActive(71)));
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S870>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S871>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -14024,7 +14078,7 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* S-Function (motohawk_sfun_send_canmsgs): '<S871>/Send CAN Messages' */
+  /* S-Function (motohawk_sfun_send_canmsgs): '<S872>/Send CAN Messages' */
   /* Send CAN Message(s) */
   {
     static uint32_T LastTxtime32 = 0;
@@ -14083,95 +14137,95 @@ void BaseEngineController_LS_Foreground(void)
   if (BaseEngineController_LS_DWork.s13_motohawk_trigger_DWORK1 == 0) {
     /* Enable for function-call system: '<S13>/Coil Control' */
 
-    /* Enable for Atomic SubSystem: '<S908>/EST Enable TDC Counter' */
+    /* Enable for Atomic SubSystem: '<S909>/EST Enable TDC Counter' */
 
-    /* Level2 S-Function Block: '<S913>/motohawk_trigger1' (motohawk_sfun_trigger) */
+    /* Level2 S-Function Block: '<S914>/motohawk_trigger1' (motohawk_sfun_trigger) */
 
     /* Enable for Trigger_FGND_TDC_EVENT_6487p001 */
-    BaseEngineController_LS_DWork.s913_motohawk_trigger1_DWORK1 = 1;
+    BaseEngineController_LS_DWork.s914_motohawk_trigger1_DWORK1 = 1;
 
-    /* End of Enable for SubSystem: '<S908>/EST Enable TDC Counter' */
+    /* End of Enable for SubSystem: '<S909>/EST Enable TDC Counter' */
     BaseEngineController_LS_DWork.s13_motohawk_trigger_DWORK1 = 1;
   }
 
-  /* DataTypeConversion: '<S853>/Data Type Conversion' */
+  /* DataTypeConversion: '<S854>/Data Type Conversion' */
   rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s135_FAN1 != 0.0);
 
-  /* If: '<S940>/If' incorporates:
-   *  Inport: '<S941>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S940>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S940>/override_enable'
+  /* If: '<S941>/If' incorporates:
+   *  Inport: '<S942>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S941>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S941>/override_enable'
    */
   if ((FAN1_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S940>/NewValue' incorporates:
-     *  ActionPort: '<S941>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S941>/NewValue' incorporates:
+     *  ActionPort: '<S942>/Action Port'
      */
     rtb_LogicalOperator6_b = (FAN1_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S940>/NewValue' */
+    /* End of Outputs for SubSystem: '<S941>/NewValue' */
   } else {
   }
 
-  /* End of If: '<S940>/If' */
+  /* End of If: '<S941>/If' */
 
-  /* Logic: '<S936>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S936>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S937>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S937>/0 = No Inversion 1 = Inversion'
    */
-  BaseEngineController_LS_B.s936_LogicalOperator = rtb_LogicalOperator6_b ^
+  BaseEngineController_LS_B.s937_LogicalOperator = rtb_LogicalOperator6_b ^
     (FAN1_Polarity_DataStore());
 
-  /* If: '<S947>/If' incorporates:
-   *  Inport: '<S948>/In1'
+  /* If: '<S948>/If' incorporates:
    *  Inport: '<S949>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S947>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S947>/override_enable'
+   *  Inport: '<S950>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S948>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S948>/override_enable'
    */
   if ((FAN1_PWM_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S947>/NewValue' incorporates:
-     *  ActionPort: '<S948>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S948>/NewValue' incorporates:
+     *  ActionPort: '<S949>/Action Port'
      */
     rtb_DataTypeConversion1_e = (FAN1_PWM_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S947>/NewValue' */
+    /* End of Outputs for SubSystem: '<S948>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S947>/OldValue' incorporates:
-     *  ActionPort: '<S949>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S948>/OldValue' incorporates:
+     *  ActionPort: '<S950>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_FAN1;
 
-    /* End of Outputs for SubSystem: '<S947>/OldValue' */
+    /* End of Outputs for SubSystem: '<S948>/OldValue' */
   }
 
-  /* End of If: '<S947>/If' */
+  /* End of If: '<S948>/If' */
 
-  /* Product: '<S938>/Product' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S938>/motohawk_calibration'
+  /* Product: '<S939>/Product' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration'
    */
   rtb_DataTypeConversion1_e *= (FAN1_PWMGain_DataStore());
 
-  /* Sum: '<S938>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S938>/motohawk_calibration1'
+  /* Sum: '<S939>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration1'
    */
   rtb_Switch_h = rtb_DataTypeConversion1_e + (FAN1_PWMOffset_DataStore());
 
-  /* MinMax: '<S946>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S938>/motohawk_calibration2'
+  /* MinMax: '<S947>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration2'
    */
   rtb_Switch_h = (rtb_Switch_h >= (FAN1_PWMMinLimit_DataStore())) || rtIsNaN
     ((FAN1_PWMMinLimit_DataStore())) ? rtb_Switch_h :
     (FAN1_PWMMinLimit_DataStore());
 
-  /* MinMax: '<S946>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S938>/motohawk_calibration3'
+  /* MinMax: '<S947>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration3'
    */
-  BaseEngineController_LS_B.s946_MinMax1 = (rtb_Switch_h <=
+  BaseEngineController_LS_B.s947_MinMax1 = (rtb_Switch_h <=
     (FAN1_PWMMaxLimit_DataStore())) || rtIsNaN((FAN1_PWMMaxLimit_DataStore())) ?
     rtb_Switch_h : (FAN1_PWMMaxLimit_DataStore());
 
-  /* Gain: '<S938>/Convert to integer 14-bit PWM resolution' */
-  rtb_Switch_h = 40.95 * BaseEngineController_LS_B.s946_MinMax1;
+  /* Gain: '<S939>/Convert to integer 14-bit PWM resolution' */
+  rtb_Switch_h = 40.95 * BaseEngineController_LS_B.s947_MinMax1;
 
-  /* DataTypeConversion: '<S938>/Data Type Conversion3' */
+  /* DataTypeConversion: '<S939>/Data Type Conversion3' */
   if (rtb_Switch_h < 32768.0) {
     if (rtb_Switch_h >= -32768.0) {
       rtb_DataTypeConversion3_c = (int16_T)rtb_Switch_h;
@@ -14182,13 +14236,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion3_c = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S938>/Data Type Conversion3' */
-  /* Gain: '<S938>/Convert to integer 0.01Hz resolution' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S938>/motohawk_calibration4'
+  /* End of DataTypeConversion: '<S939>/Data Type Conversion3' */
+  /* Gain: '<S939>/Convert to integer 0.01Hz resolution' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration4'
    */
   rtb_Switch_h = 100.0 * (FAN1_PWMFrequency_DataStore());
 
-  /* DataTypeConversion: '<S938>/Data Type Conversion2' */
+  /* DataTypeConversion: '<S939>/Data Type Conversion2' */
   if (rtb_Switch_h < 4.294967296E+9) {
     if (rtb_Switch_h >= 0.0) {
       rtb_DataTypeConversion2_j = (uint32_T)rtb_Switch_h;
@@ -14199,86 +14253,86 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion2_j = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S938>/Data Type Conversion2' */
+  /* End of DataTypeConversion: '<S939>/Data Type Conversion2' */
 
-  /* DataTypeConversion: '<S853>/Data Type Conversion1' */
+  /* DataTypeConversion: '<S854>/Data Type Conversion1' */
   rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s135_FAN2 != 0.0);
 
-  /* If: '<S943>/If' incorporates:
-   *  Inport: '<S944>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S943>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S943>/override_enable'
+  /* If: '<S944>/If' incorporates:
+   *  Inport: '<S945>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S944>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S944>/override_enable'
    */
   if ((FAN2_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S943>/NewValue' incorporates:
-     *  ActionPort: '<S944>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S944>/NewValue' incorporates:
+     *  ActionPort: '<S945>/Action Port'
      */
     rtb_LogicalOperator6_b = (FAN2_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S943>/NewValue' */
+    /* End of Outputs for SubSystem: '<S944>/NewValue' */
   } else {
   }
 
-  /* End of If: '<S943>/If' */
+  /* End of If: '<S944>/If' */
 
-  /* Logic: '<S937>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S937>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S938>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S938>/0 = No Inversion 1 = Inversion'
    */
-  BaseEngineController_LS_B.s937_LogicalOperator = rtb_LogicalOperator6_b ^
+  BaseEngineController_LS_B.s938_LogicalOperator = rtb_LogicalOperator6_b ^
     (FAN2_Polarity_DataStore());
 
-  /* If: '<S951>/If' incorporates:
-   *  Inport: '<S952>/In1'
+  /* If: '<S952>/If' incorporates:
    *  Inport: '<S953>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S951>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S951>/override_enable'
+   *  Inport: '<S954>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S952>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S952>/override_enable'
    */
   if ((FAN2_PWM_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S951>/NewValue' incorporates:
-     *  ActionPort: '<S952>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S952>/NewValue' incorporates:
+     *  ActionPort: '<S953>/Action Port'
      */
     rtb_DataTypeConversion1_e = (FAN2_PWM_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S951>/NewValue' */
+    /* End of Outputs for SubSystem: '<S952>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S951>/OldValue' incorporates:
-     *  ActionPort: '<S953>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S952>/OldValue' incorporates:
+     *  ActionPort: '<S954>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_FAN2;
 
-    /* End of Outputs for SubSystem: '<S951>/OldValue' */
+    /* End of Outputs for SubSystem: '<S952>/OldValue' */
   }
 
-  /* End of If: '<S951>/If' */
+  /* End of If: '<S952>/If' */
 
-  /* Product: '<S939>/Product' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration'
+  /* Product: '<S940>/Product' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S940>/motohawk_calibration'
    */
   rtb_DataTypeConversion1_e *= (FAN2_PWMGain_DataStore());
 
-  /* Sum: '<S939>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration1'
+  /* Sum: '<S940>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S940>/motohawk_calibration1'
    */
   rtb_Switch_h = rtb_DataTypeConversion1_e + (FAN2_PWMOffset_DataStore());
 
-  /* MinMax: '<S950>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration2'
+  /* MinMax: '<S951>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S940>/motohawk_calibration2'
    */
   rtb_Switch_h = (rtb_Switch_h >= (FAN2_PWMMinLimit_DataStore())) || rtIsNaN
     ((FAN2_PWMMinLimit_DataStore())) ? rtb_Switch_h :
     (FAN2_PWMMinLimit_DataStore());
 
-  /* MinMax: '<S950>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration3'
+  /* MinMax: '<S951>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S940>/motohawk_calibration3'
    */
-  BaseEngineController_LS_B.s950_MinMax1 = (rtb_Switch_h <=
+  BaseEngineController_LS_B.s951_MinMax1 = (rtb_Switch_h <=
     (FAN2_PWMMaxLimit_DataStore())) || rtIsNaN((FAN2_PWMMaxLimit_DataStore())) ?
     rtb_Switch_h : (FAN2_PWMMaxLimit_DataStore());
 
-  /* Gain: '<S939>/Convert to integer 14-bit PWM resolution' */
-  rtb_Switch_h = 40.95 * BaseEngineController_LS_B.s950_MinMax1;
+  /* Gain: '<S940>/Convert to integer 14-bit PWM resolution' */
+  rtb_Switch_h = 40.95 * BaseEngineController_LS_B.s951_MinMax1;
 
-  /* DataTypeConversion: '<S939>/Data Type Conversion3' */
+  /* DataTypeConversion: '<S940>/Data Type Conversion3' */
   if (rtb_Switch_h < 32768.0) {
     if (rtb_Switch_h >= -32768.0) {
       rtb_DataTypeConversion3_k = (int16_T)rtb_Switch_h;
@@ -14289,13 +14343,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion3_k = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S939>/Data Type Conversion3' */
-  /* Gain: '<S939>/Convert to integer 0.01Hz resolution' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S939>/motohawk_calibration4'
+  /* End of DataTypeConversion: '<S940>/Data Type Conversion3' */
+  /* Gain: '<S940>/Convert to integer 0.01Hz resolution' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S940>/motohawk_calibration4'
    */
   rtb_Switch_h = 100.0 * (FAN2_PWMFrequency_DataStore());
 
-  /* DataTypeConversion: '<S939>/Data Type Conversion2' */
+  /* DataTypeConversion: '<S940>/Data Type Conversion2' */
   if (rtb_Switch_h < 4.294967296E+9) {
     if (rtb_Switch_h >= 0.0) {
       rtb_DataTypeConversion2_e = (uint32_T)rtb_Switch_h;
@@ -14306,128 +14360,128 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion2_e = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S939>/Data Type Conversion2' */
+  /* End of DataTypeConversion: '<S940>/Data Type Conversion2' */
 
-  /* S-Function Block: <S442>/motohawk_din Resource: ESTOPPin */
+  /* S-Function Block: <S443>/motohawk_din Resource: ESTOPPin */
   {
     extern NativeError_S ESTOPPin_DigitalInput_Get(boolean_T *out, uint16_T
       *status);
-    ESTOPPin_DigitalInput_Get(&BaseEngineController_LS_B.s442_motohawk_din, NULL);
+    ESTOPPin_DigitalInput_Get(&BaseEngineController_LS_B.s443_motohawk_din, NULL);
   }
 
-  /* Logic: '<S562>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S562>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S563>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S563>/0 = No Inversion 1 = Inversion'
    */
-  rtb_LogicalOperator6_b = BaseEngineController_LS_B.s442_motohawk_din ^
+  rtb_LogicalOperator6_b = BaseEngineController_LS_B.s443_motohawk_din ^
     (ESTOPPolarity_DataStore());
 
-  /* If: '<S574>/If' incorporates:
-   *  Inport: '<S575>/In1'
+  /* If: '<S575>/If' incorporates:
    *  Inport: '<S576>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S574>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S574>/override_enable'
+   *  Inport: '<S577>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S575>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S575>/override_enable'
    */
   if ((ESTOP_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S574>/NewValue' incorporates:
-     *  ActionPort: '<S575>/Action Port'
-     */
-    BaseEngineController_LS_B.s574_Merge = (ESTOP_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S574>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S574>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S575>/NewValue' incorporates:
      *  ActionPort: '<S576>/Action Port'
      */
-    BaseEngineController_LS_B.s574_Merge = rtb_LogicalOperator6_b;
+    BaseEngineController_LS_B.s575_Merge = (ESTOP_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S574>/OldValue' */
+    /* End of Outputs for SubSystem: '<S575>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S575>/OldValue' incorporates:
+     *  ActionPort: '<S577>/Action Port'
+     */
+    BaseEngineController_LS_B.s575_Merge = rtb_LogicalOperator6_b;
+
+    /* End of Outputs for SubSystem: '<S575>/OldValue' */
   }
 
-  /* End of If: '<S574>/If' */
+  /* End of If: '<S575>/If' */
 
   /* Logic: '<S13>/Logical Operator5' incorporates:
    *  Logic: '<S13>/Logical Operator4'
    */
   rtb_LogicalOperator6_b = (rtb_RelationalOperator5_fz &&
-    (!BaseEngineController_LS_B.s574_Merge));
+    (!BaseEngineController_LS_B.s575_Merge));
 
-  /* If: '<S955>/If' incorporates:
-   *  Inport: '<S956>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S955>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S955>/override_enable'
+  /* If: '<S956>/If' incorporates:
+   *  Inport: '<S957>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S956>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S956>/override_enable'
    */
   if ((FUELP_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S955>/NewValue' incorporates:
-     *  ActionPort: '<S956>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S956>/NewValue' incorporates:
+     *  ActionPort: '<S957>/Action Port'
      */
     rtb_LogicalOperator6_b = (FUELP_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S955>/NewValue' */
+    /* End of Outputs for SubSystem: '<S956>/NewValue' */
   } else {
   }
 
-  /* End of If: '<S955>/If' */
+  /* End of If: '<S956>/If' */
 
-  /* Logic: '<S954>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S954>/0 = No Inversion 1 = Inversion'
+  /* Logic: '<S955>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S955>/0 = No Inversion 1 = Inversion'
    */
-  BaseEngineController_LS_B.s954_LogicalOperator = rtb_LogicalOperator6_b ^
+  BaseEngineController_LS_B.s955_LogicalOperator = rtb_LogicalOperator6_b ^
     (FUELP_Polarity_DataStore());
 
-  /* S-Function Block: <S958>/motohawk_delta_time */
+  /* S-Function Block: <S959>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s958_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s959_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_oe = ((real_T) delta) * 0.000001;
   }
 
-  /* S-Function Block: <S435>/motohawk_delta_time */
+  /* S-Function Block: <S436>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s435_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s436_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_ds = ((real_T) delta) * 0.000001;
   }
 
-  /* RelationalOperator: '<S434>/RelOp' incorporates:
-   *  Constant: '<S434>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S415>/motohawk_data_read'
+  /* RelationalOperator: '<S435>/RelOp' incorporates:
+   *  Constant: '<S435>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S416>/motohawk_data_read'
    */
   rtb_LogicalOperator6_b = (((uint8_T)EngineState_DataStore()) == 1);
 
-  /* S-Function Block: <S415>/motohawk_ain_read Resource: ECUP */
+  /* S-Function Block: <S416>/motohawk_ain_read Resource: ECUP */
   {
     extern NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status);
     ECUP_AnalogInput_Get(&rtb_motohawk_ain_read_o, NULL);
   }
 
-  /* Switch: '<S435>/Switch' incorporates:
-   *  Constant: '<S415>/Constant1'
-   *  Constant: '<S435>/Constant'
-   *  Logic: '<S415>/Logical Operator'
-   *  RelationalOperator: '<S415>/Relational Operator'
-   *  S-Function (motohawk_sfun_ain_read): '<S415>/motohawk_ain_read'
-   *  S-Function (motohawk_sfun_data_read): '<S435>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S435>/motohawk_delta_time'
-   *  Sum: '<S435>/Sum'
+  /* Switch: '<S436>/Switch' incorporates:
+   *  Constant: '<S416>/Constant1'
+   *  Constant: '<S436>/Constant'
+   *  Logic: '<S416>/Logical Operator'
+   *  RelationalOperator: '<S416>/Relational Operator'
+   *  S-Function (motohawk_sfun_ain_read): '<S416>/motohawk_ain_read'
+   *  S-Function (motohawk_sfun_data_read): '<S436>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S436>/motohawk_delta_time'
+   *  Sum: '<S436>/Sum'
    */
   if (rtb_LogicalOperator6_b && (rtb_motohawk_ain_read_o > 150)) {
-    BaseEngineController_LS_B.s435_Switch = rtb_motohawk_delta_time_ds +
+    BaseEngineController_LS_B.s436_Switch = rtb_motohawk_delta_time_ds +
       TimeSinceStallTimer_DataStore();
   } else {
-    BaseEngineController_LS_B.s435_Switch = 0.0;
+    BaseEngineController_LS_B.s436_Switch = 0.0;
   }
 
-  /* End of Switch: '<S435>/Switch' */
-  /* RelationalOperator: '<S852>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S852>/motohawk_calibration3'
+  /* End of Switch: '<S436>/Switch' */
+  /* RelationalOperator: '<S853>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S853>/motohawk_calibration3'
    */
-  rtb_RelationalOperator3_bp = (BaseEngineController_LS_B.s435_Switch >
+  rtb_RelationalOperator3_bp = (BaseEngineController_LS_B.s436_Switch >
     (ETC_CutPower_StallTime_DataStore()));
 
   /* Outputs for Enabled SubSystem: '<S14>/Electronic Throttle Controller' incorporates:
@@ -14514,14 +14568,14 @@ void BaseEngineController_LS_Foreground(void)
      *  S-Function (motohawk_sfun_calibration): '<S20>/motohawk_calibration5'
      */
     BaseEngineController_LS_B.s20_RelationalOperator2 =
-      ((BaseEngineController_LS_B.s412_Switch2 >
+      ((BaseEngineController_LS_B.s413_Switch2 >
         (ETC_SpringTestHiThresh_DataStore())));
 
     /* RelationalOperator: '<S20>/Relational Operator3' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S20>/motohawk_calibration6'
      */
     BaseEngineController_LS_B.s20_RelationalOperator3 =
-      ((BaseEngineController_LS_B.s412_Switch2 <
+      ((BaseEngineController_LS_B.s413_Switch2 <
         (ETC_SpringTestLoThresh_DataStore())));
 
     /* Stateflow: '<S20>/ETC Test  Manager' */
@@ -14863,7 +14917,7 @@ void BaseEngineController_LS_Foreground(void)
     /* Sum: '<S31>/Add' */
     rtb_Multiplyby10ifnotyetenabled =
       BaseEngineController_LS_B.s31_MultiportSwitch -
-      BaseEngineController_LS_B.s412_Switch2;
+      BaseEngineController_LS_B.s413_Switch2;
 
     /* Logic: '<S25>/Logical Operator' incorporates:
      *  Constant: '<S25>/Constant1'
@@ -15028,7 +15082,7 @@ void BaseEngineController_LS_Foreground(void)
      */
     rtb_Product4_o = (1.0 - rtb_Product5_o) *
       BaseEngineController_LS_DWork.s44_UnitDelay_DSTATE +
-      BaseEngineController_LS_B.s412_Switch2 * rtb_Product5_o;
+      BaseEngineController_LS_B.s413_Switch2 * rtb_Product5_o;
 
     /* S-Function Block: <S42>/motohawk_delta_time */
     rtb_motohawk_delta_time_hc = 0.005;
@@ -15113,7 +15167,7 @@ void BaseEngineController_LS_Foreground(void)
     /* End of Switch: '<S38>/Switch' */
 
     /* Product: '<S38>/Product3' */
-    rtb_Switch_mq = rtb_Product5_o * BaseEngineController_LS_B.s412_Switch2;
+    rtb_Switch_mq = rtb_Product5_o * BaseEngineController_LS_B.s413_Switch2;
 
     /* S-Function Block: <S46>/motohawk_delta_time */
     rtb_motohawk_delta_time_oy = 0.005;
@@ -15132,7 +15186,7 @@ void BaseEngineController_LS_Foreground(void)
     /* Sum: '<S38>/Sum2' */
     BaseEngineController_LS_B.s38_Sum2 =
       BaseEngineController_LS_B.s31_MultiportSwitch -
-      BaseEngineController_LS_B.s412_Switch2;
+      BaseEngineController_LS_B.s413_Switch2;
 
     /* Product: '<S38>/Product5' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S29>/motohawk_calibration6'
@@ -15157,7 +15211,7 @@ void BaseEngineController_LS_Foreground(void)
 
     /* Sum: '<S29>/Add' */
     rtb_Add_g1 = BaseEngineController_LS_B.s31_MultiportSwitch -
-      BaseEngineController_LS_B.s412_Switch2;
+      BaseEngineController_LS_B.s413_Switch2;
 
     /* S-Function Block: <S29>/motohawk_prelookup */
     {
@@ -15375,60 +15429,60 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of RelationalOperator: '<S19>/RelOp' */
   /* End of Outputs for SubSystem: '<S14>/Electronic Throttle Controller' */
-  /* Logic: '<S855>/Logical Operator1' incorporates:
-   *  Logic: '<S852>/Logical Operator'
-   *  Logic: '<S852>/Logical Operator9'
-   *  RelationalOperator: '<S852>/Relational Operator'
-   *  S-Function (motohawk_sfun_calibration): '<S852>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_calibration): '<S855>/motohawk_calibration5'
+  /* Logic: '<S856>/Logical Operator1' incorporates:
+   *  Logic: '<S853>/Logical Operator'
+   *  Logic: '<S853>/Logical Operator9'
+   *  RelationalOperator: '<S853>/Relational Operator'
+   *  S-Function (motohawk_sfun_calibration): '<S853>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_calibration): '<S856>/motohawk_calibration5'
    */
   rtb_RelationalOperator5_fz = ((ETC_CutPower_Permitted_DataStore()) &&
-    (BaseEngineController_LS_B.s574_Merge || (rtb_RelationalOperator3_bp &&
+    (BaseEngineController_LS_B.s575_Merge || (rtb_RelationalOperator3_bp &&
     (BaseEngineController_LS_B.s20_Switch < (ETC_CutPower_ETC_DataStore())))));
 
-  /* Logic: '<S855>/Logical Operator' */
+  /* Logic: '<S856>/Logical Operator' */
   rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
 
-  /* If: '<S959>/If' incorporates:
-   *  Inport: '<S960>/In1'
+  /* If: '<S960>/If' incorporates:
    *  Inport: '<S961>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S959>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S959>/override_enable'
+   *  Inport: '<S962>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S960>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S960>/override_enable'
    */
   if ((ETC_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S959>/NewValue' incorporates:
-     *  ActionPort: '<S960>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S960>/NewValue' incorporates:
+     *  ActionPort: '<S961>/Action Port'
      */
     rtb_DataTypeConversion1_e = (ETC_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S959>/NewValue' */
+    /* End of Outputs for SubSystem: '<S960>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S959>/OldValue' incorporates:
-     *  ActionPort: '<S961>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S960>/OldValue' incorporates:
+     *  ActionPort: '<S962>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s20_Switch;
 
-    /* End of Outputs for SubSystem: '<S959>/OldValue' */
+    /* End of Outputs for SubSystem: '<S960>/OldValue' */
   }
 
-  /* End of If: '<S959>/If' */
+  /* End of If: '<S960>/If' */
 
-  /* Switch: '<S855>/Switch' incorporates:
-   *  Constant: '<S855>/Constant2'
-   *  Product: '<S855>/Product'
-   *  S-Function (motohawk_sfun_calibration): '<S855>/motohawk_calibration2'
-   *  S-Function (motohawk_sfun_interpolation_1d): '<S855>/motohawk_interpolation_1d'
-   *  Sum: '<S855>/Sum'
+  /* Switch: '<S856>/Switch' incorporates:
+   *  Constant: '<S856>/Constant2'
+   *  Product: '<S856>/Product'
+   *  S-Function (motohawk_sfun_calibration): '<S856>/motohawk_calibration2'
+   *  S-Function (motohawk_sfun_interpolation_1d): '<S856>/motohawk_interpolation_1d'
+   *  Sum: '<S856>/Sum'
    */
   if (rtb_RelationalOperator5_fz) {
     rtb_Switch_h = 0.0;
   } else {
-    /* S-Function Block: <S855>/motohawk_interpolation_1d */
+    /* S-Function Block: <S856>/motohawk_interpolation_1d */
     {
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
       rtb_motohawk_interpolation_1d_hr = TableInterpolation1D_real_T
-        (BaseEngineController_LS_B.s398_motohawk_prelookup, (real_T *)
+        (BaseEngineController_LS_B.s399_motohawk_prelookup, (real_T *)
          ((ETC_VoltageCompTbl_DataStore())), 9);
       (ETC_VoltageComp_DataStore()) = rtb_motohawk_interpolation_1d_hr;
     }
@@ -15437,58 +15491,58 @@ void BaseEngineController_LS_Foreground(void)
       + (ETC_Offset_DataStore());
   }
 
-  /* End of Switch: '<S855>/Switch' */
+  /* End of Switch: '<S856>/Switch' */
 
-  /* Saturate: '<S855>/Saturation' */
-  BaseEngineController_LS_B.s855_ETC = rtb_Switch_h >= 100.0 ? 100.0 :
+  /* Saturate: '<S856>/Saturation' */
+  BaseEngineController_LS_B.s856_ETC = rtb_Switch_h >= 100.0 ? 100.0 :
     rtb_Switch_h <= -100.0 ? -100.0 : rtb_Switch_h;
 
-  /* Abs: '<S855>/Abs' */
-  rtb_Switch_h = fabs(BaseEngineController_LS_B.s855_ETC);
+  /* Abs: '<S856>/Abs' */
+  rtb_Switch_h = fabs(BaseEngineController_LS_B.s856_ETC);
 
-  /* RelationalOperator: '<S855>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S855>/motohawk_calibration3'
+  /* RelationalOperator: '<S856>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S856>/motohawk_calibration3'
    */
   rtb_LogicalOperator1_al = (rtb_Switch_h > (ETC_OC_MIN_DataStore()));
 
-  /* S-Function (motohawk_sfun_pwm): '<S855>/motohawk_pwm1' */
+  /* S-Function (motohawk_sfun_pwm): '<S856>/motohawk_pwm1' */
   ETCPin_PWMOutput_PWMOutput_Outputs(NULL,
-    &BaseEngineController_LS_B.s855_motohawk_pwm1);
+    &BaseEngineController_LS_B.s856_motohawk_pwm1);
 
-  /* Abs: '<S855>/Abs1' */
+  /* Abs: '<S856>/Abs1' */
   rtb_DataTypeConversion2_pj = (int16_T)
-    (BaseEngineController_LS_B.s855_motohawk_pwm1 < 0 ? (int16_T)
-     -BaseEngineController_LS_B.s855_motohawk_pwm1 :
-     BaseEngineController_LS_B.s855_motohawk_pwm1);
+    (BaseEngineController_LS_B.s856_motohawk_pwm1 < 0 ? (int16_T)
+     -BaseEngineController_LS_B.s856_motohawk_pwm1 :
+     BaseEngineController_LS_B.s856_motohawk_pwm1);
 
-  /* RelationalOperator: '<S855>/Relational Operator4' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S855>/motohawk_calibration1'
+  /* RelationalOperator: '<S856>/Relational Operator4' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S856>/motohawk_calibration1'
    */
-  BaseEngineController_LS_B.s855_RelationalOperator4 = (((real_T)
+  BaseEngineController_LS_B.s856_RelationalOperator4 = (((real_T)
     rtb_DataTypeConversion2_pj < (ETC_I_MIN_DataStore())));
 
-  /* Switch: '<S958>/Switch' incorporates:
-   *  Constant: '<S958>/Constant'
-   *  Logic: '<S855>/Logical Operator4'
-   *  S-Function (motohawk_sfun_data_read): '<S958>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S958>/motohawk_delta_time'
-   *  Sum: '<S958>/Sum'
+  /* Switch: '<S959>/Switch' incorporates:
+   *  Constant: '<S959>/Constant'
+   *  Logic: '<S856>/Logical Operator4'
+   *  S-Function (motohawk_sfun_data_read): '<S959>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S959>/motohawk_delta_time'
+   *  Sum: '<S959>/Sum'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al &&
-      BaseEngineController_LS_B.s855_RelationalOperator4) {
+      BaseEngineController_LS_B.s856_RelationalOperator4) {
     rtb_Switch_h = rtb_motohawk_delta_time_oe + ETCOpenFaultTimer_DataStore();
   } else {
     rtb_Switch_h = 0.0;
   }
 
-  /* End of Switch: '<S958>/Switch' */
+  /* End of Switch: '<S959>/Switch' */
 
-  /* RelationalOperator: '<S855>/Relational Operator5' incorporates:
-   *  Constant: '<S855>/Constant'
+  /* RelationalOperator: '<S856>/Relational Operator5' incorporates:
+   *  Constant: '<S856>/Constant'
    */
   rtb_RelationalOperator5 = ((rtb_Switch_h > 5.0));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S855>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S856>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: ETC_Open_Fault */
   {
@@ -15498,12 +15552,12 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(52);
   }
 
-  /* Gain: '<S855>/Convert to integer 14-bit PWM resolution' */
-  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s855_ETC;
+  /* Gain: '<S856>/Convert to integer 14-bit PWM resolution' */
+  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s856_ETC;
 
-  /* DataTypeConversion: '<S855>/Data Type Conversion3' incorporates:
-   *  Gain: '<S855>/Convert to integer 0.01Hz resolution'
-   *  S-Function (motohawk_sfun_calibration): '<S855>/motohawk_calibration4'
+  /* DataTypeConversion: '<S856>/Data Type Conversion3' incorporates:
+   *  Gain: '<S856>/Convert to integer 0.01Hz resolution'
+   *  S-Function (motohawk_sfun_calibration): '<S856>/motohawk_calibration4'
    */
   rtb_UnitDelay4_b3 = 100.0 * (ETC_Frequency_DataStore());
   if (rtb_UnitDelay4_b3 < 4.294967296E+9) {
@@ -15516,9 +15570,9 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion3_j = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S855>/Data Type Conversion3' */
+  /* End of DataTypeConversion: '<S856>/Data Type Conversion3' */
 
-  /* DataTypeConversion: '<S855>/Data Type Conversion4' */
+  /* DataTypeConversion: '<S856>/Data Type Conversion4' */
   if (rtb_Abs_co < 32768.0) {
     if (rtb_Abs_co >= -32768.0) {
       rtb_DataTypeConversion4_m = (int16_T)rtb_Abs_co;
@@ -15529,69 +15583,69 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion4_m = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S855>/Data Type Conversion4' */
+  /* End of DataTypeConversion: '<S856>/Data Type Conversion4' */
 
-  /* Saturate: '<S958>/Saturation' */
+  /* Saturate: '<S959>/Saturation' */
   rtb_Saturation_no = rtb_Switch_h >= 16000.0 ? 16000.0 : rtb_Switch_h <= 0.0 ?
     0.0 : rtb_Switch_h;
 
-  /* S-Function (motohawk_sfun_data_write): '<S958>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S959>/motohawk_data_write' */
   /* Write to Data Storage as scalar: ETCOpenFaultTimer */
   {
     ETCOpenFaultTimer_DataStore() = rtb_Saturation_no;
   }
 
-  /* If: '<S965>/If' incorporates:
-   *  Inport: '<S966>/In1'
+  /* If: '<S966>/If' incorporates:
    *  Inport: '<S967>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S965>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S965>/override_enable'
+   *  Inport: '<S968>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S966>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S966>/override_enable'
    */
   if ((IAC_P_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S965>/NewValue' incorporates:
-     *  ActionPort: '<S966>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S966>/NewValue' incorporates:
+     *  ActionPort: '<S967>/Action Port'
      */
     rtb_DataTypeConversion1_e = (IAC_P_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S965>/NewValue' */
+    /* End of Outputs for SubSystem: '<S966>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S965>/OldValue' incorporates:
-     *  ActionPort: '<S967>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S966>/OldValue' incorporates:
+     *  ActionPort: '<S968>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_IACP;
 
-    /* End of Outputs for SubSystem: '<S965>/OldValue' */
+    /* End of Outputs for SubSystem: '<S966>/OldValue' */
   }
 
-  /* End of If: '<S965>/If' */
+  /* End of If: '<S966>/If' */
 
-  /* Product: '<S962>/Product' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S962>/motohawk_calibration'
+  /* Product: '<S963>/Product' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration'
    */
   rtb_DataTypeConversion1_e *= (IAC_PGain_DataStore());
 
-  /* Sum: '<S962>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S962>/motohawk_calibration1'
+  /* Sum: '<S963>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration1'
    */
   rtb_Abs_co = rtb_DataTypeConversion1_e + (IAC_POffset_DataStore());
 
-  /* MinMax: '<S964>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S962>/motohawk_calibration2'
+  /* MinMax: '<S965>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration2'
    */
   rtb_Abs_co = (rtb_Abs_co >= (IAC_PMinLimit_DataStore())) || rtIsNaN
     ((IAC_PMinLimit_DataStore())) ? rtb_Abs_co : (IAC_PMinLimit_DataStore());
 
-  /* MinMax: '<S964>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S962>/motohawk_calibration3'
+  /* MinMax: '<S965>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration3'
    */
-  BaseEngineController_LS_B.s964_MinMax1 = (rtb_Abs_co <=
+  BaseEngineController_LS_B.s965_MinMax1 = (rtb_Abs_co <=
     (IAC_PMaxLimit_DataStore())) || rtIsNaN((IAC_PMaxLimit_DataStore())) ?
     rtb_Abs_co : (IAC_PMaxLimit_DataStore());
 
-  /* Gain: '<S962>/Convert to integer 14-bit PWM resolution' */
-  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s964_MinMax1;
+  /* Gain: '<S963>/Convert to integer 14-bit PWM resolution' */
+  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s965_MinMax1;
 
-  /* DataTypeConversion: '<S962>/Data Type Conversion3' */
+  /* DataTypeConversion: '<S963>/Data Type Conversion3' */
   if (rtb_Abs_co < 32768.0) {
     if (rtb_Abs_co >= -32768.0) {
       rtb_DataTypeConversion3_p = (int16_T)rtb_Abs_co;
@@ -15602,13 +15656,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion3_p = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S962>/Data Type Conversion3' */
-  /* Gain: '<S962>/Convert to integer 0.01Hz resolution' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S962>/motohawk_calibration4'
+  /* End of DataTypeConversion: '<S963>/Data Type Conversion3' */
+  /* Gain: '<S963>/Convert to integer 0.01Hz resolution' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration4'
    */
   rtb_Abs_co = 100.0 * (IAC_PFrequency_DataStore());
 
-  /* DataTypeConversion: '<S962>/Data Type Conversion2' */
+  /* DataTypeConversion: '<S963>/Data Type Conversion2' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_DataTypeConversion2_l = (uint32_T)rtb_Abs_co;
@@ -15619,59 +15673,59 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion2_l = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S962>/Data Type Conversion2' */
+  /* End of DataTypeConversion: '<S963>/Data Type Conversion2' */
 
-  /* If: '<S969>/If' incorporates:
-   *  Inport: '<S970>/In1'
+  /* If: '<S970>/If' incorporates:
    *  Inport: '<S971>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S969>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S969>/override_enable'
+   *  Inport: '<S972>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S970>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S970>/override_enable'
    */
   if ((IAC_S_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S969>/NewValue' incorporates:
-     *  ActionPort: '<S970>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S970>/NewValue' incorporates:
+     *  ActionPort: '<S971>/Action Port'
      */
     rtb_DataTypeConversion1_e = (IAC_S_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S969>/NewValue' */
+    /* End of Outputs for SubSystem: '<S970>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S969>/OldValue' incorporates:
-     *  ActionPort: '<S971>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S970>/OldValue' incorporates:
+     *  ActionPort: '<S972>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_IACS;
 
-    /* End of Outputs for SubSystem: '<S969>/OldValue' */
+    /* End of Outputs for SubSystem: '<S970>/OldValue' */
   }
 
-  /* End of If: '<S969>/If' */
+  /* End of If: '<S970>/If' */
 
-  /* Product: '<S963>/Product' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration'
+  /* Product: '<S964>/Product' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S964>/motohawk_calibration'
    */
   rtb_DataTypeConversion1_e *= (IAC_SGain_DataStore());
 
-  /* Sum: '<S963>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration1'
+  /* Sum: '<S964>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S964>/motohawk_calibration1'
    */
   rtb_Abs_co = rtb_DataTypeConversion1_e + (IAC_SOffset_DataStore());
 
-  /* MinMax: '<S968>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration2'
+  /* MinMax: '<S969>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S964>/motohawk_calibration2'
    */
   rtb_Abs_co = (rtb_Abs_co >= (IAC_SMinLimit_DataStore())) || rtIsNaN
     ((IAC_SMinLimit_DataStore())) ? rtb_Abs_co : (IAC_SMinLimit_DataStore());
 
-  /* MinMax: '<S968>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration3'
+  /* MinMax: '<S969>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S964>/motohawk_calibration3'
    */
-  BaseEngineController_LS_B.s968_MinMax1 = (rtb_Abs_co <=
+  BaseEngineController_LS_B.s969_MinMax1 = (rtb_Abs_co <=
     (IAC_SMaxLimit_DataStore())) || rtIsNaN((IAC_SMaxLimit_DataStore())) ?
     rtb_Abs_co : (IAC_SMaxLimit_DataStore());
 
-  /* Gain: '<S963>/Convert to integer 14-bit PWM resolution' */
-  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s968_MinMax1;
+  /* Gain: '<S964>/Convert to integer 14-bit PWM resolution' */
+  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s969_MinMax1;
 
-  /* DataTypeConversion: '<S963>/Data Type Conversion3' */
+  /* DataTypeConversion: '<S964>/Data Type Conversion3' */
   if (rtb_Abs_co < 32768.0) {
     if (rtb_Abs_co >= -32768.0) {
       rtb_DataTypeConversion3_d = (int16_T)rtb_Abs_co;
@@ -15682,13 +15736,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion3_d = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S963>/Data Type Conversion3' */
-  /* Gain: '<S963>/Convert to integer 0.01Hz resolution' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S963>/motohawk_calibration4'
+  /* End of DataTypeConversion: '<S964>/Data Type Conversion3' */
+  /* Gain: '<S964>/Convert to integer 0.01Hz resolution' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S964>/motohawk_calibration4'
    */
   rtb_Abs_co = 100.0 * (IAC_SFrequency_DataStore());
 
-  /* DataTypeConversion: '<S963>/Data Type Conversion2' */
+  /* DataTypeConversion: '<S964>/Data Type Conversion2' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_DataTypeConversion2_i = (uint32_T)rtb_Abs_co;
@@ -15699,35 +15753,35 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion2_i = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S963>/Data Type Conversion2' */
-  /* If: '<S976>/If' incorporates:
-   *  Inport: '<S986>/In1'
+  /* End of DataTypeConversion: '<S964>/Data Type Conversion2' */
+  /* If: '<S977>/If' incorporates:
    *  Inport: '<S987>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S976>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S976>/override_enable'
+   *  Inport: '<S988>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S977>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S977>/override_enable'
    */
   if ((SOI_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S976>/NewValue' incorporates:
-     *  ActionPort: '<S986>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S977>/NewValue' incorporates:
+     *  ActionPort: '<S987>/Action Port'
      */
     rtb_DataTypeConversion1_e = (SOI_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S976>/NewValue' */
+    /* End of Outputs for SubSystem: '<S977>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S976>/OldValue' incorporates:
-     *  ActionPort: '<S987>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S977>/OldValue' incorporates:
+     *  ActionPort: '<S988>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_SOI;
 
-    /* End of Outputs for SubSystem: '<S976>/OldValue' */
+    /* End of Outputs for SubSystem: '<S977>/OldValue' */
   }
 
-  /* End of If: '<S976>/If' */
+  /* End of If: '<S977>/If' */
 
-  /* Gain: '<S857>/Gain2' */
+  /* Gain: '<S858>/Gain2' */
   rtb_Abs_co = 16.0 * rtb_DataTypeConversion1_e;
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion2' */
+  /* DataTypeConversion: '<S858>/Data Type Conversion2' */
   if (rtb_Abs_co < 32768.0) {
     if (rtb_Abs_co >= -32768.0) {
       rtb_DataTypeConversion2_pj = (int16_T)rtb_Abs_co;
@@ -15738,7 +15792,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion2_pj = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion2' */
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion2' */
   /* If: '<S74>/If' incorporates:
    *  Inport: '<S91>/In1'
    *  Inport: '<S92>/In1'
@@ -16030,8 +16084,8 @@ void BaseEngineController_LS_Foreground(void)
 
   /* Fcn: '<S64>/const ref to atm' */
   BaseEngineController_LS_B.s64_constreftoatm =
-    (BaseEngineController_LS_B.s651_Merge + BaseEngineController_LS_B.s367_Sum)
-    - BaseEngineController_LS_B.s659_Merge;
+    (BaseEngineController_LS_B.s652_Merge + BaseEngineController_LS_B.s368_Sum)
+    - BaseEngineController_LS_B.s660_Merge;
 
   /* S-Function Block: <S64>/motohawk_prelookup1 */
   {
@@ -16066,8 +16120,8 @@ void BaseEngineController_LS_Foreground(void)
   /* End of Product: '<S21>/Product3' */
 
   /* Saturate: '<S21>/Saturation' */
-  y = BaseEngineController_LS_B.s616_Sum1 >= 0.01 ?
-    BaseEngineController_LS_B.s616_Sum1 : 0.01;
+  y = BaseEngineController_LS_B.s617_Sum1 >= 0.01 ?
+    BaseEngineController_LS_B.s617_Sum1 : 0.01;
 
   /* S-Function Block: <S21>/motohawk_interpolation_1d4 */
   {
@@ -16083,7 +16137,7 @@ void BaseEngineController_LS_Foreground(void)
     extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
       uint32_T sz);
     rtb_motohawk_interpolation_1d1_oh = TableInterpolation1D_real_T
-      (BaseEngineController_LS_B.s398_motohawk_prelookup, (real_T *)
+      (BaseEngineController_LS_B.s399_motohawk_prelookup, (real_T *)
        ((InjTurnOnTbl_DataStore())), 9);
     (InjTurnOn_DataStore()) = rtb_motohawk_interpolation_1d1_oh;
   }
@@ -16113,35 +16167,35 @@ void BaseEngineController_LS_Foreground(void)
   }
 
   /* End of MinMax: '<S21>/MinMax' */
-  /* If: '<S977>/If' incorporates:
-   *  Inport: '<S988>/In1'
+  /* If: '<S978>/If' incorporates:
    *  Inport: '<S989>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S977>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S977>/override_enable'
+   *  Inport: '<S990>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S978>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S978>/override_enable'
    */
   if ((Mech_PW_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S977>/NewValue' incorporates:
-     *  ActionPort: '<S988>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S978>/NewValue' incorporates:
+     *  ActionPort: '<S989>/Action Port'
      */
     for (i = 0; i < 8; i++) {
       rtb_Product2_aa[i] = (Mech_PW_new_DataStore())[i];
     }
 
-    /* End of Outputs for SubSystem: '<S977>/NewValue' */
+    /* End of Outputs for SubSystem: '<S978>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S977>/OldValue' incorporates:
-     *  ActionPort: '<S989>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S978>/OldValue' incorporates:
+     *  ActionPort: '<S990>/Action Port'
      */
     memcpy((void *)&rtb_Product2_aa[0], (void *)
            (&BaseEngineController_LS_B.s21_MinMax[0]), sizeof(real_T) << 3U);
 
-    /* End of Outputs for SubSystem: '<S977>/OldValue' */
+    /* End of Outputs for SubSystem: '<S978>/OldValue' */
   }
 
-  /* End of If: '<S977>/If' */
+  /* End of If: '<S978>/If' */
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion3' incorporates:
-   *  Gain: '<S857>/Gain3'
+  /* DataTypeConversion: '<S858>/Data Type Conversion3' incorporates:
+   *  Gain: '<S858>/Gain3'
    */
   for (i = 0; i < 8; i++) {
     rtb_UnitDelay4_b3 = 1000.0 * rtb_Product2_aa[i];
@@ -16158,13 +16212,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_InjectorSequence_o2[i] = rtb_Switch_kj;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion3' */
-  /* Gain: '<S857>/Gain5' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S857>/motohawk_calibration9'
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion3' */
+  /* Gain: '<S858>/Gain5' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S858>/motohawk_calibration9'
    */
   rtb_Abs_co = 1000.0 * (InjectorMaxDuration_DataStore());
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion6' */
+  /* DataTypeConversion: '<S858>/Data Type Conversion6' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_DataTypeConversion6 = (uint32_T)rtb_Abs_co;
@@ -16175,35 +16229,35 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion6 = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion6' */
-  /* If: '<S974>/If' incorporates:
-   *  Inport: '<S982>/In1'
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion6' */
+  /* If: '<S975>/If' incorporates:
    *  Inport: '<S983>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S974>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S974>/override_enable'
+   *  Inport: '<S984>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S975>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S975>/override_enable'
    */
   if ((Elec_PW_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S974>/NewValue' incorporates:
-     *  ActionPort: '<S982>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S975>/NewValue' incorporates:
+     *  ActionPort: '<S983>/Action Port'
      */
     rtb_DataTypeConversion1_e = (Elec_PW_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S974>/NewValue' */
+    /* End of Outputs for SubSystem: '<S975>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S974>/OldValue' incorporates:
-     *  ActionPort: '<S983>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S975>/OldValue' incorporates:
+     *  ActionPort: '<S984>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s21_Sum2;
 
-    /* End of Outputs for SubSystem: '<S974>/OldValue' */
+    /* End of Outputs for SubSystem: '<S975>/OldValue' */
   }
 
-  /* End of If: '<S974>/If' */
+  /* End of If: '<S975>/If' */
 
-  /* Gain: '<S857>/Gain1' */
+  /* Gain: '<S858>/Gain1' */
   rtb_Abs_co = 1000.0 * rtb_DataTypeConversion1_e;
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion1' */
+  /* DataTypeConversion: '<S858>/Data Type Conversion1' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_DataTypeConversion1_p = (uint32_T)rtb_Abs_co;
@@ -16214,35 +16268,35 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion1_p = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion1' */
-  /* If: '<S975>/If' incorporates:
-   *  Inport: '<S984>/In1'
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion1' */
+  /* If: '<S976>/If' incorporates:
    *  Inport: '<S985>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S975>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S975>/override_enable'
+   *  Inport: '<S986>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S976>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S976>/override_enable'
    */
   if ((MakeUp_EOI_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S975>/NewValue' incorporates:
-     *  ActionPort: '<S984>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S976>/NewValue' incorporates:
+     *  ActionPort: '<S985>/Action Port'
      */
     rtb_DataTypeConversion1_e = (MakeUp_EOI_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S975>/NewValue' */
+    /* End of Outputs for SubSystem: '<S976>/NewValue' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S975>/OldValue' incorporates:
-     *  ActionPort: '<S985>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S976>/OldValue' incorporates:
+     *  ActionPort: '<S986>/Action Port'
      */
     rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_MakeUpEOI;
 
-    /* End of Outputs for SubSystem: '<S975>/OldValue' */
+    /* End of Outputs for SubSystem: '<S976>/OldValue' */
   }
 
-  /* End of If: '<S975>/If' */
+  /* End of If: '<S976>/If' */
 
-  /* Gain: '<S857>/Gain6' */
+  /* Gain: '<S858>/Gain6' */
   rtb_Abs_co = 16.0 * rtb_DataTypeConversion1_e;
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion7' */
+  /* DataTypeConversion: '<S858>/Data Type Conversion7' */
   if (rtb_Abs_co < 32768.0) {
     if (rtb_Abs_co >= -32768.0) {
       rtb_DataTypeConversion7 = (int16_T)rtb_Abs_co;
@@ -16253,13 +16307,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion7 = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion7' */
-  /* Gain: '<S857>/Gain7' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S857>/motohawk_calibration6'
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion7' */
+  /* Gain: '<S858>/Gain7' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S858>/motohawk_calibration6'
    */
   rtb_Abs_co = 1000.0 * (MinMakeUpPW_DataStore());
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion8' */
+  /* DataTypeConversion: '<S858>/Data Type Conversion8' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_Sum_hh = (uint32_T)rtb_Abs_co;
@@ -16270,13 +16324,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Sum_hh = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion8' */
-  /* Gain: '<S857>/Gain8' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S857>/motohawk_calibration1'
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion8' */
+  /* Gain: '<S858>/Gain8' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S858>/motohawk_calibration1'
    */
   rtb_Abs_co = 1000.0 * (InjectiorMinDuration_DataStore());
 
-  /* DataTypeConversion: '<S857>/Data Type Conversion9' */
+  /* DataTypeConversion: '<S858>/Data Type Conversion9' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_UnitDelay_lk = (uint32_T)rtb_Abs_co;
@@ -16287,18 +16341,18 @@ void BaseEngineController_LS_Foreground(void)
     rtb_UnitDelay_lk = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S857>/Data Type Conversion9' */
-  /* Outputs for Atomic SubSystem: '<S857>/Injector Enable Manager' */
+  /* End of DataTypeConversion: '<S858>/Data Type Conversion9' */
+  /* Outputs for Atomic SubSystem: '<S858>/Injector Enable Manager' */
 
-  /* S-Function Block: <S981>/motohawk_delta_time */
+  /* S-Function Block: <S982>/motohawk_delta_time */
   rtb_motohawk_delta_time_i = 0.005;
 
-  /* Switch: '<S981>/Switch' incorporates:
-   *  Constant: '<S981>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S981>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S981>/motohawk_delta_time'
-   *  S-Function (motohawk_sfun_fault_action): '<S973>/motohawk_fault_action'
-   *  Sum: '<S981>/Sum'
+  /* Switch: '<S982>/Switch' incorporates:
+   *  Constant: '<S982>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S982>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S982>/motohawk_delta_time'
+   *  S-Function (motohawk_sfun_fault_action): '<S974>/motohawk_fault_action'
+   *  Sum: '<S982>/Sum'
    */
   if (GetFaultActionStatus(2)) {
     rtb_DataTypeConversion1_e = rtb_motohawk_delta_time_i +
@@ -16307,70 +16361,70 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion1_e = 0.0;
   }
 
-  /* End of Switch: '<S981>/Switch' */
-  /* RelationalOperator: '<S973>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration1'
+  /* End of Switch: '<S982>/Switch' */
+  /* RelationalOperator: '<S974>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration1'
    */
   rtb_LogicalOperator_iy = (rtb_DataTypeConversion1_e >
     (EngineShutdownDelayTime_DataStore()));
 
-  /* S-Function (motohawk_sfun_data_write): '<S973>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S974>/motohawk_data_write' */
   /* Write to Data Storage as scalar: DelayedEngineShutdownAction */
   {
     DelayedEngineShutdownAction_DataStore() = rtb_LogicalOperator_iy;
   }
 
-  /* RelationalOperator: '<S973>/Relational Operator1' incorporates:
-   *  Gain: '<S973>/Gain'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration1'
+  /* RelationalOperator: '<S974>/Relational Operator1' incorporates:
+   *  Gain: '<S974>/Gain'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration1'
    */
   rtb_RelationalOperator1_cf = ((rtb_DataTypeConversion1_e > 0.5 *
     (EngineShutdownDelayTime_DataStore())));
 
-  /* S-Function (motohawk_sfun_data_write): '<S973>/motohawk_data_write1' */
+  /* S-Function (motohawk_sfun_data_write): '<S974>/motohawk_data_write1' */
   /* Write to Data Storage as scalar: DelayedEngineShutdownWarning */
   {
     DelayedEngineShutdownWarning_DataStore() = rtb_RelationalOperator1_cf;
   }
 
-  /* RelationalOperator: '<S973>/Relational Operator2' incorporates:
-   *  Constant: '<S973>/Constant'
+  /* RelationalOperator: '<S974>/Relational Operator2' incorporates:
+   *  Constant: '<S974>/Constant'
    */
   rtb_RelationalOperator2_cd = ((rtb_DataTypeConversion1_e > 0.0));
 
-  /* S-Function (motohawk_sfun_data_write): '<S973>/motohawk_data_write2' */
+  /* S-Function (motohawk_sfun_data_write): '<S974>/motohawk_data_write2' */
   /* Write to Data Storage as scalar: EngineShutdownTimerState */
   {
     EngineShutdownTimerState_DataStore() = rtb_RelationalOperator2_cd;
   }
 
-  /* Logic: '<S973>/Logical Operator' */
+  /* Logic: '<S974>/Logical Operator' */
   rtb_LogicalOperator_iy = !rtb_LogicalOperator_iy;
 
-  /* Logic: '<S973>/Logical Operator2' incorporates:
-   *  S-Function (motohawk_sfun_data_read): '<S973>/motohawk_data_read'
+  /* Logic: '<S974>/Logical Operator2' incorporates:
+   *  S-Function (motohawk_sfun_data_read): '<S974>/motohawk_data_read'
    */
   rtb_LogicalOperator6_b = !EngineShutdownAction_DataStore();
 
-  /* S-Function (motohawk_sfun_data_read): '<S973>/motohawk_data_read1' */
+  /* S-Function (motohawk_sfun_data_read): '<S974>/motohawk_data_read1' */
   rtb_motohawk_data_read1_iz = ECUP_Enabled_DataStore();
 
-  /* Logic: '<S973>/Logical Operator4' incorporates:
-   *  Constant: '<S980>/Constant'
-   *  RelationalOperator: '<S980>/RelOp'
-   *  S-Function (motohawk_sfun_data_read): '<S973>/motohawk_data_read2'
+  /* Logic: '<S974>/Logical Operator4' incorporates:
+   *  Constant: '<S981>/Constant'
+   *  RelationalOperator: '<S981>/RelOp'
+   *  S-Function (motohawk_sfun_data_read): '<S974>/motohawk_data_read2'
    */
   rtb_LogicalOperator1_al = !(((uint8_T)EngineState_DataStore()) == 1);
 
-  /* Logic: '<S973>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration10'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration11'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration12'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration2'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration3'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration4'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration7'
-   *  S-Function (motohawk_sfun_calibration): '<S973>/motohawk_calibration8'
+  /* Logic: '<S974>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration10'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration11'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration12'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration2'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration3'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration4'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration7'
+   *  S-Function (motohawk_sfun_calibration): '<S974>/motohawk_calibration8'
    */
   rtb_LogicalOperator1_aj[0] = (rtb_LogicalOperator_iy && rtb_LogicalOperator6_b
     && rtb_motohawk_data_read1_iz && rtb_LogicalOperator1_al &&
@@ -16397,75 +16451,75 @@ void BaseEngineController_LS_Foreground(void)
     && rtb_motohawk_data_read1_iz && rtb_LogicalOperator1_al &&
     (Injector8Enable_DataStore()));
 
-  /* Saturate: '<S981>/Saturation' */
+  /* Saturate: '<S982>/Saturation' */
   rtb_Saturation_k4 = rtb_DataTypeConversion1_e >= 16000.0 ? 16000.0 :
     rtb_DataTypeConversion1_e <= 0.0 ? 0.0 : rtb_DataTypeConversion1_e;
 
-  /* S-Function (motohawk_sfun_data_write): '<S981>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S982>/motohawk_data_write' */
   /* Write to Data Storage as scalar: DelayedEngineShutdownTimer */
   {
     DelayedEngineShutdownTimer_DataStore() = rtb_Saturation_k4;
   }
 
-  /* End of Outputs for SubSystem: '<S857>/Injector Enable Manager' */
-  /* Logic: '<S857>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_data_read): '<S857>/motohawk_data_read'
+  /* End of Outputs for SubSystem: '<S858>/Injector Enable Manager' */
+  /* Logic: '<S858>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_data_read): '<S858>/motohawk_data_read'
    */
   rtb_LogicalOperator6_b = !ESTOP_DataStore();
 
-  /* If: '<S979>/If' incorporates:
-   *  Inport: '<S992>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S979>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S979>/override_enable'
+  /* If: '<S980>/If' incorporates:
+   *  Inport: '<S993>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S980>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S980>/override_enable'
    */
   if ((ESTOP_FuelInj_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S979>/NewValue' incorporates:
-     *  ActionPort: '<S992>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S980>/NewValue' incorporates:
+     *  ActionPort: '<S993>/Action Port'
      */
     rtb_LogicalOperator6_b = (ESTOP_FuelInj_Ovr_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S979>/NewValue' */
+    /* End of Outputs for SubSystem: '<S980>/NewValue' */
   } else {
   }
 
-  /* End of If: '<S979>/If' */
+  /* End of If: '<S980>/If' */
 
-  /* Logic: '<S857>/Logical Operator' */
+  /* Logic: '<S858>/Logical Operator' */
   for (i = 0; i < 8; i++) {
     rtb_LogicalOperator1_aj[i] = (rtb_LogicalOperator6_b && rtb_AND1[i] &&
       rtb_LogicalOperator1_aj[i]);
   }
 
-  /* End of Logic: '<S857>/Logical Operator' */
-  /* If: '<S978>/If' incorporates:
-   *  Inport: '<S990>/In1'
+  /* End of Logic: '<S858>/Logical Operator' */
+  /* If: '<S979>/If' incorporates:
    *  Inport: '<S991>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S978>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S978>/override_enable'
+   *  Inport: '<S992>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S979>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S979>/override_enable'
    */
   if ((InjEnable_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S978>/NewValue' incorporates:
-     *  ActionPort: '<S990>/Action Port'
-     */
-    for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s978_Merge[i] = (InjEnable_new_DataStore())[i];
-    }
-
-    /* End of Outputs for SubSystem: '<S978>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S978>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S979>/NewValue' incorporates:
      *  ActionPort: '<S991>/Action Port'
      */
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s978_Merge[i] = rtb_LogicalOperator1_aj[i];
+      BaseEngineController_LS_B.s979_Merge[i] = (InjEnable_new_DataStore())[i];
     }
 
-    /* End of Outputs for SubSystem: '<S978>/OldValue' */
+    /* End of Outputs for SubSystem: '<S979>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S979>/OldValue' incorporates:
+     *  ActionPort: '<S992>/Action Port'
+     */
+    for (i = 0; i < 8; i++) {
+      BaseEngineController_LS_B.s979_Merge[i] = rtb_LogicalOperator1_aj[i];
+    }
+
+    /* End of Outputs for SubSystem: '<S979>/OldValue' */
   }
 
-  /* End of If: '<S978>/If' */
+  /* End of If: '<S979>/If' */
 
-  /* S-Function Block: <S857>/Injector Sequence */
+  /* S-Function Block: <S858>/Injector Sequence */
   {
     extern TransientInjectorSeqInfo_T TransientInjectorSeqInfo_39[8];
     uint32_T makeup_duration;
@@ -16532,11 +16586,11 @@ void BaseEngineController_LS_Foreground(void)
     pulse_scheduling_allowed = (motohawk_encoder_status >= (uint8_T)
       ENC_SYNC_CAM_UNKNOWN) && (GetEncoderResourceInstantRPM() > 10);
     for (j=0; j < (EncoderNumCylinders_DataStore()); j++) {
-      enable = ((BaseEngineController_LS_B.s978_Merge)[index] &&
+      enable = ((BaseEngineController_LS_B.s979_Merge)[index] &&
                 pulse_scheduling_allowed);
       if ((INJ_SequenceType_DataStore()) == 0) {
         if ((enable) !=
-            ((&BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0])
+            ((&BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0])
              [index])) {
           seq_enable = (enable) ? SEQ_ENABLED : SEQ_DISNEXT;
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
@@ -16544,14 +16598,14 @@ void BaseEngineController_LS_Foreground(void)
           if ((INJ_Behavior_DataStore()) == 1)
             SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) +
               index), 1, (enable && 1) ? SEQ_ENABLED : SEQ_DISNEXT);
-          (&BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0])[index]
             = enable;
         }
 
-        if ((BaseEngineController_LS_ConstB.s857_DataTypeConversion5) !=
-            (BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK2)) {
+        if ((BaseEngineController_LS_ConstB.s858_DataTypeConversion5) !=
+            (BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK2)) {
           SetSeqOutInjPeakTime((E_ModuleResource) ((INJ_InitialPin_DataStore())
-            + index), BaseEngineController_LS_ConstB.s857_DataTypeConversion5);
+            + index), BaseEngineController_LS_ConstB.s858_DataTypeConversion5);
         }
 
         elec_duration = ((rtb_InjectorSequence_o2)[index]) +
@@ -16606,22 +16660,22 @@ void BaseEngineController_LS_Foreground(void)
         if (index < half_cylinders) {
           S_SeqOutPulseTiming TimingObj;
           if ((enable) !=
-              ((&BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0])
+              ((&BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0])
                [index])) {
             seq_enable = (enable) ? SEQ_ENABLED : SEQ_DISNEXT;
             SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) +
               index), 0, seq_enable);
             SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) +
               index), 1, seq_enable);
-            (&BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0])
+            (&BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0])
               [index] = enable;
           }
 
           /* Update peak time only on primary Pulse */
-          if ((BaseEngineController_LS_ConstB.s857_DataTypeConversion5) !=
-              (BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK2)) {
+          if ((BaseEngineController_LS_ConstB.s858_DataTypeConversion5) !=
+              (BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK2)) {
             SetSeqOutInjPeakTime((E_ModuleResource) ((INJ_InitialPin_DataStore())
-              + index), BaseEngineController_LS_ConstB.s857_DataTypeConversion5);
+              + index), BaseEngineController_LS_ConstB.s858_DataTypeConversion5);
           }
 
           elec_duration = ((rtb_InjectorSequence_o2)[index]) / 2 +
@@ -16640,21 +16694,21 @@ void BaseEngineController_LS_Foreground(void)
       } else if ((INJ_SequenceType_DataStore()) == 2) {
         S_SeqOutPulseTiming TimingObj_pulse1;
         if ((enable) !=
-            ((&BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0])
+            ((&BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0])
              [index])) {
           seq_enable = (enable) ? SEQ_ENABLED : SEQ_DISNEXT;
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, seq_enable);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, seq_enable);
-          (&BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK1[0])[index]
             = enable;
         }
 
-        if ((BaseEngineController_LS_ConstB.s857_DataTypeConversion5) !=
-            (BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK2)) {
+        if ((BaseEngineController_LS_ConstB.s858_DataTypeConversion5) !=
+            (BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK2)) {
           SetSeqOutInjPeakTime((E_ModuleResource) ((INJ_InitialPin_DataStore())
-            + index), BaseEngineController_LS_ConstB.s857_DataTypeConversion5);
+            + index), BaseEngineController_LS_ConstB.s858_DataTypeConversion5);
         }
 
         elec_duration = ((rtb_InjectorSequence_o2)[index])/2 +
@@ -16677,13 +16731,13 @@ void BaseEngineController_LS_Foreground(void)
       }
     }
 
-    BaseEngineController_LS_DWork.s857_InjectorSequence_DWORK2 =
-      BaseEngineController_LS_ConstB.s857_DataTypeConversion5;
+    BaseEngineController_LS_DWork.s858_InjectorSequence_DWORK2 =
+      BaseEngineController_LS_ConstB.s858_DataTypeConversion5;
 
     /* Output per-cylinder diagnostics */
     {
       for (i=0; i < (EncoderNumCylinders_DataStore()); i++) {
-        (BaseEngineController_LS_B.s857_InjectorSequence_o1)[i] =
+        (BaseEngineController_LS_B.s858_InjectorSequence_o1)[i] =
           InjectorSeqDiagInfo_39[i].u1TXCnt;
       }
 
@@ -16694,168 +16748,168 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* RelationalOperator: '<S972>/==' incorporates:
-   *  Constant: '<S972>/Zero'
+  /* RelationalOperator: '<S973>/==' incorporates:
+   *  Constant: '<S973>/Zero'
    */
   for (i = 0; i < 8; i++) {
     rtb_LogicalOperator1_aj[i] =
-      (BaseEngineController_LS_B.s857_InjectorSequence_o1[i] == 0);
+      (BaseEngineController_LS_B.s858_InjectorSequence_o1[i] == 0);
   }
 
-  /* End of RelationalOperator: '<S972>/==' */
-  /* S-Function Block: <S972>/motohawk_encoder_average_rpm */
+  /* End of RelationalOperator: '<S973>/==' */
+  /* S-Function Block: <S973>/motohawk_encoder_average_rpm */
   {
     rtb_motohawk_encoder_average_rpm = GetEncoderResourceAverageRPM();
   }
 
-  /* RelationalOperator: '<S972>/<1' incorporates:
-   *  Constant: '<S972>/Zero1'
-   *  S-Function (motohawk_sfun_encoder_average_rpm): '<S972>/motohawk_encoder_average_rpm'
+  /* RelationalOperator: '<S973>/<1' incorporates:
+   *  Constant: '<S973>/Zero1'
+   *  S-Function (motohawk_sfun_encoder_average_rpm): '<S973>/motohawk_encoder_average_rpm'
    */
   rtb_LogicalOperator6_b = (rtb_motohawk_encoder_average_rpm > 100);
 
-  /* Logic: '<S972>/AND1' */
+  /* Logic: '<S973>/AND1' */
   for (i = 0; i < 8; i++) {
     rtb_AND1[i] = (rtb_LogicalOperator1_aj[i] && rtb_LogicalOperator6_b &&
-                   BaseEngineController_LS_B.s978_Merge[i]);
+                   BaseEngineController_LS_B.s979_Merge[i]);
   }
 
-  /* End of Logic: '<S972>/AND1' */
+  /* End of Logic: '<S973>/AND1' */
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def' */
 
   /* Set Fault Suspected Status: Inj1Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(74, rtb_AND1[0]);
-    UpdateFault(74);
+    SetFaultSuspected(73, rtb_AND1[0]);
+    UpdateFault(73);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: Inj2Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(75, rtb_AND1[1]);
-    UpdateFault(75);
+    SetFaultSuspected(74, rtb_AND1[1]);
+    UpdateFault(74);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: Inj3Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(76, rtb_AND1[2]);
-    UpdateFault(76);
+    SetFaultSuspected(75, rtb_AND1[2]);
+    UpdateFault(75);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: Inj4Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(77, rtb_AND1[3]);
-    UpdateFault(77);
+    SetFaultSuspected(76, rtb_AND1[3]);
+    UpdateFault(76);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def4' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def4' */
 
   /* Set Fault Suspected Status: Inj5Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(78, rtb_AND1[4]);
-    UpdateFault(78);
+    SetFaultSuspected(77, rtb_AND1[4]);
+    UpdateFault(77);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def5' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def5' */
 
   /* Set Fault Suspected Status: Inj6Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(79, rtb_AND1[5]);
-    UpdateFault(79);
+    SetFaultSuspected(78, rtb_AND1[5]);
+    UpdateFault(78);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def6' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def6' */
 
   /* Set Fault Suspected Status: Inj7Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(80, rtb_AND1[6]);
-    UpdateFault(80);
+    SetFaultSuspected(79, rtb_AND1[6]);
+    UpdateFault(79);
   }
 
-  /* S-Function (motohawk_sfun_fault_def): '<S972>/motohawk_fault_def7' */
+  /* S-Function (motohawk_sfun_fault_def): '<S973>/motohawk_fault_def7' */
 
   /* Set Fault Suspected Status: Inj8Open */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(81, rtb_AND1[7]);
-    UpdateFault(81);
+    SetFaultSuspected(80, rtb_AND1[7]);
+    UpdateFault(80);
   }
 
-  /* Logic: '<S858>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_fault_action): '<S858>/motohawk_fault_action'
+  /* Logic: '<S859>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_fault_action): '<S859>/motohawk_fault_action'
    */
   rtb_RelationalOperator5_fz = !GetFaultActionStatus(6);
 
-  /* Product: '<S858>/Product' */
+  /* Product: '<S859>/Product' */
   rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s135_WASTEGATE * (real_T)
     rtb_RelationalOperator5_fz;
 
-  /* If: '<S996>/If' incorporates:
-   *  Inport: '<S997>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S996>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S996>/override_enable'
+  /* If: '<S997>/If' incorporates:
+   *  Inport: '<S998>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S997>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S997>/override_enable'
    */
   if ((WASTEGATE_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S996>/NewValue' incorporates:
-     *  ActionPort: '<S997>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S997>/NewValue' incorporates:
+     *  ActionPort: '<S998>/Action Port'
      */
     rtb_DataTypeConversion1_e = (WASTEGATE_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S996>/NewValue' */
+    /* End of Outputs for SubSystem: '<S997>/NewValue' */
   } else {
   }
 
-  /* End of If: '<S996>/If' */
+  /* End of If: '<S997>/If' */
 
-  /* Product: '<S994>/Product' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S994>/motohawk_calibration'
+  /* Product: '<S995>/Product' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S995>/motohawk_calibration'
    */
   rtb_DataTypeConversion1_e *= (WASTEGATEGain_DataStore());
 
-  /* Sum: '<S994>/Sum' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S994>/motohawk_calibration1'
+  /* Sum: '<S995>/Sum' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S995>/motohawk_calibration1'
    */
   rtb_Abs_co = rtb_DataTypeConversion1_e + (WASTEGATEOffset_DataStore());
 
-  /* MinMax: '<S995>/MinMax' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S994>/motohawk_calibration2'
+  /* MinMax: '<S996>/MinMax' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S995>/motohawk_calibration2'
    */
   rtb_Abs_co = (rtb_Abs_co >= (WASTEGATEMinLimit_DataStore())) || rtIsNaN
     ((WASTEGATEMinLimit_DataStore())) ? rtb_Abs_co :
     (WASTEGATEMinLimit_DataStore());
 
-  /* MinMax: '<S995>/MinMax1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S994>/motohawk_calibration3'
+  /* MinMax: '<S996>/MinMax1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S995>/motohawk_calibration3'
    */
-  BaseEngineController_LS_B.s995_MinMax1 = (rtb_Abs_co <=
+  BaseEngineController_LS_B.s996_MinMax1 = (rtb_Abs_co <=
     (WASTEGATEMaxLimit_DataStore())) || rtIsNaN((WASTEGATEMaxLimit_DataStore()))
     ? rtb_Abs_co : (WASTEGATEMaxLimit_DataStore());
 
-  /* Gain: '<S994>/Convert to integer 14-bit PWM resolution' */
-  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s995_MinMax1;
+  /* Gain: '<S995>/Convert to integer 14-bit PWM resolution' */
+  rtb_Abs_co = 40.95 * BaseEngineController_LS_B.s996_MinMax1;
 
-  /* DataTypeConversion: '<S994>/Data Type Conversion3' */
+  /* DataTypeConversion: '<S995>/Data Type Conversion3' */
   if (rtb_Abs_co < 32768.0) {
     if (rtb_Abs_co >= -32768.0) {
       rtb_DataTypeConversion3_e = (int16_T)rtb_Abs_co;
@@ -16866,13 +16920,13 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion3_e = MAX_int16_T;
   }
 
-  /* End of DataTypeConversion: '<S994>/Data Type Conversion3' */
-  /* Gain: '<S994>/Convert to integer 0.01Hz resolution' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S994>/motohawk_calibration4'
+  /* End of DataTypeConversion: '<S995>/Data Type Conversion3' */
+  /* Gain: '<S995>/Convert to integer 0.01Hz resolution' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S995>/motohawk_calibration4'
    */
   rtb_Abs_co = 100.0 * (WASTEGATEFrequency_DataStore());
 
-  /* DataTypeConversion: '<S994>/Data Type Conversion2' */
+  /* DataTypeConversion: '<S995>/Data Type Conversion2' */
   if (rtb_Abs_co < 4.294967296E+9) {
     if (rtb_Abs_co >= 0.0) {
       rtb_DataTypeConversion2_p = (uint32_T)rtb_Abs_co;
@@ -16883,7 +16937,7 @@ void BaseEngineController_LS_Foreground(void)
     rtb_DataTypeConversion2_p = MAX_uint32_T;
   }
 
-  /* End of DataTypeConversion: '<S994>/Data Type Conversion2' */
+  /* End of DataTypeConversion: '<S995>/Data Type Conversion2' */
 
   /* Gain: '<S21>/Gain' incorporates:
    *  Product: '<S21>/Product'
@@ -16920,11 +16974,11 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of DataTypeConversion: '<S22>/Data Type Conversion5' */
 
-  /* UnitDelay: '<S439>/Unit Delay' */
-  rtb_UnitDelay_lk = BaseEngineController_LS_DWork.s439_UnitDelay_DSTATE;
+  /* UnitDelay: '<S440>/Unit Delay' */
+  rtb_UnitDelay_lk = BaseEngineController_LS_DWork.s440_UnitDelay_DSTATE;
 
-  /* Sum: '<S439>/Sum' incorporates:
-   *  Constant: '<S439>/Constant1'
+  /* Sum: '<S440>/Sum' incorporates:
+   *  Constant: '<S440>/Constant1'
    */
   rtb_Switch_kj = 1U + rtb_UnitDelay_lk;
   if (rtb_Switch_kj < 1U) {
@@ -16933,26 +16987,26 @@ void BaseEngineController_LS_Foreground(void)
 
   rtb_Sum_hh = rtb_Switch_kj;
 
-  /* End of Sum: '<S439>/Sum' */
+  /* End of Sum: '<S440>/Sum' */
 
-  /* RelationalOperator: '<S439>/Relational Operator' incorporates:
+  /* RelationalOperator: '<S440>/Relational Operator' incorporates:
    *  Constant: '<S18>/Count'
    */
   rtb_RelationalOperator_jv = (rtb_Sum_hh >= 5U);
 
-  /* S-Function Block: <S437>/motohawk_prelookup */
+  /* S-Function Block: <S438>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
     (IAT_KeyUp09In_DataStore()) =
-      BaseEngineController_LS_B.s404_CollectAverage.s368_Product;
+      BaseEngineController_LS_B.s405_CollectAverage.s369_Product;
     (IAT_KeyUp09Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s404_CollectAverage.s368_Product,
+      (BaseEngineController_LS_B.s405_CollectAverage.s369_Product,
        (IAT_KeyUp09IdxArr_DataStore()), 9, (IAT_KeyUp09Idx_DataStore()));
     rtb_motohawk_prelookup_b2 = (IAT_KeyUp09Idx_DataStore());
   }
 
-  /* S-Function Block: <S362>/motohawk_prelookup1 */
+  /* S-Function Block: <S363>/motohawk_prelookup1 */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
@@ -16962,65 +17016,56 @@ void BaseEngineController_LS_Foreground(void)
     rtb_motohawk_prelookup_b2 = (App05Idx_DataStore());
   }
 
-  /* S-Function Block: <S397>/motohawk_prelookup */
+  /* S-Function Block: <S398>/motohawk_prelookup */
   {
     extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
       ordarr[], uint32_T sz, uint16_T prev);
-    (RPM05In_DataStore()) = BaseEngineController_LS_B.s616_Sum1;
+    (RPM05In_DataStore()) = BaseEngineController_LS_B.s617_Sum1;
     (RPM05Idx_DataStore()) = TablePrelookup_real_T
-      (BaseEngineController_LS_B.s616_Sum1, (RPM05IdxArr_DataStore()), 5,
+      (BaseEngineController_LS_B.s617_Sum1, (RPM05IdxArr_DataStore()), 5,
        (RPM05Idx_DataStore()));
     rtb_motohawk_prelookup_b2 = (RPM05Idx_DataStore());
   }
 
-  /* UnitDelay: '<S410>/Unit Delay1' */
+  /* UnitDelay: '<S411>/Unit Delay1' */
   rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s410_UnitDelay1_DSTATE;
+    BaseEngineController_LS_DWork.s411_UnitDelay1_DSTATE;
 
-  /* Sum: '<S410>/Sum3' incorporates:
-   *  Constant: '<S410>/Constant1'
-   *  Product: '<S410>/Product2'
-   *  Product: '<S410>/Product3'
-   *  S-Function (motohawk_sfun_calibration): '<S410>/motohawk_calibration1'
-   *  Sum: '<S410>/Sum2'
+  /* Sum: '<S411>/Sum3' incorporates:
+   *  Constant: '<S411>/Constant1'
+   *  Product: '<S411>/Product2'
+   *  Product: '<S411>/Product3'
+   *  S-Function (motohawk_sfun_calibration): '<S411>/motohawk_calibration1'
+   *  Sum: '<S411>/Sum2'
    */
-  BaseEngineController_LS_B.s410_Sum3 = (1.0 - (PostO2DelagFiltConst_DataStore()))
+  BaseEngineController_LS_B.s411_Sum3 = (1.0 - (PostO2DelagFiltConst_DataStore()))
     * rtb_DataTypeConversion1_e + (PostO2DelagFiltConst_DataStore()) *
-    BaseEngineController_LS_B.s448_MultiportSwitch;
+    BaseEngineController_LS_B.s449_MultiportSwitch;
 
-  /* Sum: '<S408>/Sum3' incorporates:
-   *  Constant: '<S408>/kPa Gauge to kPa absolute'
+  /* Sum: '<S409>/Sum3' incorporates:
+   *  Constant: '<S409>/kPa Gauge to kPa absolute'
    */
-  BaseEngineController_LS_B.s408_Sum3 = (BaseEngineController_LS_B.s651_Merge +
-    100.0) - BaseEngineController_LS_B.s667_Merge;
+  BaseEngineController_LS_B.s409_Sum3 = (BaseEngineController_LS_B.s652_Merge +
+    100.0) - BaseEngineController_LS_B.s668_Merge;
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage_o3) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o3)) {
+  /* DataTypeConversion: '<S448>/Data Type Conversion' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o3) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o3)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o3), 256.0);
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o3), 256.0);
   }
 
-  BaseEngineController_LS_B.s447_DataTypeConversion = (uint8_T)
+  BaseEngineController_LS_B.s448_DataTypeConversion = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion' */
-  /* If: '<S450>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S450>/override_enable'
-   */
-  if ((GPS_YearUTC_Ovr_ovr_DataStore())) {
-  } else {
-  }
-
-  /* End of If: '<S450>/If' */
-
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion' */
   /* If: '<S451>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S451>/override_enable'
    */
-  if ((GPS_Altitude_Ovr_ovr_DataStore())) {
+  if ((GPS_YearUTC_Ovr_ovr_DataStore())) {
   } else {
   }
 
@@ -17029,151 +17074,160 @@ void BaseEngineController_LS_Foreground(void)
   /* If: '<S452>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S452>/override_enable'
    */
-  if ((GPS_Course_Ovr_ovr_DataStore())) {
+  if ((GPS_Altitude_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S452>/If' */
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion8' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage2_o5) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage2_o5)) {
-    rtb_UnitDelay4_b3 = 0.0;
-  } else {
-    rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage2_o5), 256.0);
-  }
-
-  BaseEngineController_LS_B.s447_DataTypeConversion8 = (uint8_T)
-    (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
-     -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
-
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion8' */
   /* If: '<S453>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S453>/override_enable'
    */
-  if ((GPS_SatelliteCount_Ovr_ovr_DataStore())) {
+  if ((GPS_Course_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S453>/If' */
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion1' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage_o4) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o4)) {
+  /* DataTypeConversion: '<S448>/Data Type Conversion8' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage2_o5) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage2_o5)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o4), 256.0);
+      (BaseEngineController_LS_B.s448_ReadCANMessage2_o5), 256.0);
   }
 
-  BaseEngineController_LS_B.s447_DataTypeConversion1 = (uint8_T)
+  BaseEngineController_LS_B.s448_DataTypeConversion8 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion1' */
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion8' */
   /* If: '<S454>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S454>/override_enable'
    */
-  if ((GPS_MonthUTC_Ovr_ovr_DataStore())) {
+  if ((GPS_SatelliteCount_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S454>/If' */
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion2' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage_o5) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o5)) {
+  /* DataTypeConversion: '<S448>/Data Type Conversion1' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o4) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o4)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o5), 256.0);
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o4), 256.0);
   }
 
-  BaseEngineController_LS_B.s447_DataTypeConversion2 = (uint8_T)
+  BaseEngineController_LS_B.s448_DataTypeConversion1 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion2' */
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion1' */
   /* If: '<S455>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S455>/override_enable'
    */
-  if ((GPS_DayUTC_Ovr_ovr_DataStore())) {
+  if ((GPS_MonthUTC_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S455>/If' */
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion3' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage_o6) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o6)) {
+  /* DataTypeConversion: '<S448>/Data Type Conversion2' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o5) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o5)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o6), 256.0);
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o5), 256.0);
   }
 
-  BaseEngineController_LS_B.s447_DataTypeConversion3 = (uint8_T)
+  BaseEngineController_LS_B.s448_DataTypeConversion2 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion3' */
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion2' */
   /* If: '<S456>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S456>/override_enable'
    */
-  if ((GPS_HoursUTC_Ovr_ovr_DataStore())) {
+  if ((GPS_DayUTC_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S456>/If' */
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion4' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage_o7) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o7)) {
+  /* DataTypeConversion: '<S448>/Data Type Conversion3' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o6) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o6)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o7), 256.0);
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o6), 256.0);
   }
 
-  BaseEngineController_LS_B.s447_DataTypeConversion4 = (uint8_T)
+  BaseEngineController_LS_B.s448_DataTypeConversion3 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion4' */
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion3' */
   /* If: '<S457>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S457>/override_enable'
    */
-  if ((GPS_MinutesUTC_Ovr_ovr_DataStore())) {
+  if ((GPS_HoursUTC_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S457>/If' */
 
-  /* DataTypeConversion: '<S447>/Data Type Conversion5' */
-  if (rtIsNaN(BaseEngineController_LS_B.s447_ReadCANMessage_o8) || rtIsInf
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o8)) {
+  /* DataTypeConversion: '<S448>/Data Type Conversion4' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o7) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o7)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s447_ReadCANMessage_o8), 256.0);
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o7), 256.0);
   }
 
-  BaseEngineController_LS_B.s447_DataTypeConversion5 = (uint8_T)
+  BaseEngineController_LS_B.s448_DataTypeConversion4 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S447>/Data Type Conversion5' */
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion4' */
   /* If: '<S458>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S458>/override_enable'
    */
-  if ((GPS_SecondsUTC_Ovr_ovr_DataStore())) {
+  if ((GPS_MinutesUTC_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S458>/If' */
 
-  /* S-Function (motohawk_sfun_read_canmsg): '<S447>/Read CAN Message1' */
+  /* DataTypeConversion: '<S448>/Data Type Conversion5' */
+  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o8) || rtIsInf
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o8)) {
+    rtb_UnitDelay4_b3 = 0.0;
+  } else {
+    rtb_UnitDelay4_b3 = fmod(floor
+      (BaseEngineController_LS_B.s448_ReadCANMessage_o8), 256.0);
+  }
+
+  BaseEngineController_LS_B.s448_DataTypeConversion5 = (uint8_T)
+    (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
+     -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
+
+  /* End of DataTypeConversion: '<S448>/Data Type Conversion5' */
+  /* If: '<S459>/If' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S459>/override_enable'
+   */
+  if ((GPS_SecondsUTC_Ovr_ovr_DataStore())) {
+  } else {
+  }
+
+  /* End of If: '<S459>/If' */
+
+  /* S-Function (motohawk_sfun_read_canmsg): '<S448>/Read CAN Message1' */
   /* MotoHawk Read CAN Message */
   {
     S_CANMessage messageObj;
@@ -17182,9 +17236,9 @@ void BaseEngineController_LS_Foreground(void)
       messageObj);
     boolean_T msg_valid = MHCAN_getdirect(&MHCAN_directslot_RxSlot_4603p0006,
       &messageObj);
-    if ((BaseEngineController_LS_B.s447_ReadCANMessage1_o1 + 1) >
-        BaseEngineController_LS_B.s447_ReadCANMessage1_o1)
-      BaseEngineController_LS_B.s447_ReadCANMessage1_o1++;
+    if ((BaseEngineController_LS_B.s448_ReadCANMessage1_o1 + 1) >
+        BaseEngineController_LS_B.s448_ReadCANMessage1_o1)
+      BaseEngineController_LS_B.s448_ReadCANMessage1_o1++;
     if (msg_valid) {
       real32_T tmp0 = 0;
       real32_T tmp1 = 0;
@@ -17196,43 +17250,34 @@ void BaseEngineController_LS_Foreground(void)
       ((uint8_T *)(&tmp1))[1] = ((messageObj.u1DataArr[5])) ;
       ((uint8_T *)(&tmp1))[2] = ((messageObj.u1DataArr[6])) ;
       ((uint8_T *)(&tmp1))[3] = ((messageObj.u1DataArr[7])) ;
-      BaseEngineController_LS_B.s447_ReadCANMessage1_o2 = (real_T) tmp0;
-      BaseEngineController_LS_B.s447_ReadCANMessage1_o3 = (real_T) tmp1;
-      BaseEngineController_LS_B.s447_ReadCANMessage1_o1 = 0;
+      BaseEngineController_LS_B.s448_ReadCANMessage1_o2 = (real_T) tmp0;
+      BaseEngineController_LS_B.s448_ReadCANMessage1_o3 = (real_T) tmp1;
+      BaseEngineController_LS_B.s448_ReadCANMessage1_o1 = 0;
     }
   }
 
-  /* If: '<S459>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S459>/override_enable'
+  /* If: '<S460>/If' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S460>/override_enable'
    */
   if ((GPS_Latitude_Ovr_ovr_DataStore())) {
   } else {
   }
 
-  /* End of If: '<S459>/If' */
+  /* End of If: '<S460>/If' */
 
-  /* If: '<S460>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S460>/override_enable'
+  /* If: '<S461>/If' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S461>/override_enable'
    */
   if ((GPS_Longitude_Ovr_ovr_DataStore())) {
   } else {
   }
 
-  /* End of If: '<S460>/If' */
-
-  /* If: '<S491>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S491>/override_enable'
-   */
-  if ((Bank1_OxygenConcentration_Ovr_ovr_DataStore())) {
-  } else {
-  }
-
-  /* End of If: '<S491>/If' */
+  /* End of If: '<S461>/If' */
 
   /* If: '<S492>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S492>/override_enable'
    */
-  if ((Bank2_OxygenConcentration_Ovr_ovr_DataStore())) {
+  if ((Bank1_OxygenConcentration_Ovr_ovr_DataStore())) {
   } else {
   }
 
@@ -17241,7 +17286,7 @@ void BaseEngineController_LS_Foreground(void)
   /* If: '<S493>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S493>/override_enable'
    */
-  if ((Bank2_SystemVolts_Ovr_ovr_DataStore())) {
+  if ((Bank2_OxygenConcentration_Ovr_ovr_DataStore())) {
   } else {
   }
 
@@ -17250,106 +17295,78 @@ void BaseEngineController_LS_Foreground(void)
   /* If: '<S494>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S494>/override_enable'
    */
-  if ((Bank2_HeaterVolts_Ovr_ovr_DataStore())) {
+  if ((Bank2_SystemVolts_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S494>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion8' */
-  BaseEngineController_LS_B.s448_DataTypeConversion8 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage1_o6 != 0.0));
-
   /* If: '<S495>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S495>/override_enable'
    */
-  if ((Bank2_SensorDetectedStatus_Ovr_ovr_DataStore())) {
+  if ((Bank2_HeaterVolts_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S495>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion7' */
-  BaseEngineController_LS_B.s448_DataTypeConversion7 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage1_o7 != 0.0));
+  /* DataTypeConversion: '<S449>/Data Type Conversion8' */
+  BaseEngineController_LS_B.s449_DataTypeConversion8 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage1_o6 != 0.0));
 
   /* If: '<S496>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S496>/override_enable'
    */
-  if ((Bank2_UsingFreeAreCalState_Ovr_ovr_DataStore())) {
+  if ((Bank2_SensorDetectedStatus_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S496>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion6' */
-  BaseEngineController_LS_B.s448_DataTypeConversion6 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage1_o8 != 0.0));
+  /* DataTypeConversion: '<S449>/Data Type Conversion7' */
+  BaseEngineController_LS_B.s449_DataTypeConversion7 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage1_o7 != 0.0));
 
   /* If: '<S497>/If' incorporates:
-   *  Inport: '<S538>/In1'
-   *  Inport: '<S539>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S497>/new_value'
    *  S-Function (motohawk_sfun_calibration): '<S497>/override_enable'
    */
-  if ((Bank2_DataValidState_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S497>/NewValue' incorporates:
-     *  ActionPort: '<S538>/Action Port'
-     */
-    rtb_Merge_oq = (Bank2_DataValidState_Ovr_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S497>/NewValue' */
+  if ((Bank2_UsingFreeAreCalState_Ovr_ovr_DataStore())) {
   } else {
-    /* Outputs for IfAction SubSystem: '<S497>/OldValue' incorporates:
-     *  ActionPort: '<S539>/Action Port'
-     */
-    rtb_Merge_oq = BaseEngineController_LS_B.s448_DataTypeConversion6;
-
-    /* End of Outputs for SubSystem: '<S497>/OldValue' */
   }
 
   /* End of If: '<S497>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion9' */
-  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage1_o9) || rtIsInf
-      (BaseEngineController_LS_B.s448_ReadCANMessage1_o9)) {
+  /* DataTypeConversion: '<S449>/Data Type Conversion9' */
+  if (rtIsNaN(BaseEngineController_LS_B.s449_ReadCANMessage1_o9) || rtIsInf
+      (BaseEngineController_LS_B.s449_ReadCANMessage1_o9)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s448_ReadCANMessage1_o9), 256.0);
+      (BaseEngineController_LS_B.s449_ReadCANMessage1_o9), 256.0);
   }
 
-  BaseEngineController_LS_B.s448_DataTypeConversion9 = (uint8_T)
+  BaseEngineController_LS_B.s449_DataTypeConversion9 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S448>/Data Type Conversion9' */
-  /* If: '<S498>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S498>/override_enable'
+  /* End of DataTypeConversion: '<S449>/Data Type Conversion9' */
+  /* If: '<S499>/If' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S499>/override_enable'
    */
   if ((Bank2_SensorStatus_Ovr_ovr_DataStore())) {
   } else {
   }
 
-  /* End of If: '<S498>/If' */
-
-  /* DataTypeConversion: '<S448>/Data Type Conversion5' */
-  BaseEngineController_LS_B.s448_DataTypeConversion5 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage1_o10 != 0.0));
-
-  /* If: '<S499>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S499>/override_enable'
-   */
-  if ((Bank2_SensorFaultState_Ovr_ovr_DataStore())) {
-  } else {
-  }
-
   /* End of If: '<S499>/If' */
+
+  /* DataTypeConversion: '<S449>/Data Type Conversion5' */
+  BaseEngineController_LS_B.s449_DataTypeConversion5 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage1_o10 != 0.0));
 
   /* If: '<S500>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S500>/override_enable'
    */
-  if ((Bank1_SystemVolts_Ovr_ovr_DataStore())) {
+  if ((Bank2_SensorFaultState_Ovr_ovr_DataStore())) {
   } else {
   }
 
@@ -17358,247 +17375,228 @@ void BaseEngineController_LS_Foreground(void)
   /* If: '<S501>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S501>/override_enable'
    */
-  if ((Bank1_HeaterVolts_Ovr_ovr_DataStore())) {
+  if ((Bank1_SystemVolts_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S501>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion' */
-  BaseEngineController_LS_B.s448_DataTypeConversion =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage_o6 != 0.0));
-
   /* If: '<S502>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S502>/override_enable'
    */
-  if ((Bank1_SensorDetectedStatus_Ovr_ovr_DataStore())) {
+  if ((Bank1_HeaterVolts_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S502>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion1' */
-  BaseEngineController_LS_B.s448_DataTypeConversion1 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage_o7 != 0.0));
+  /* DataTypeConversion: '<S449>/Data Type Conversion' */
+  BaseEngineController_LS_B.s449_DataTypeConversion =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage_o6 != 0.0));
 
   /* If: '<S503>/If' incorporates:
    *  S-Function (motohawk_sfun_calibration): '<S503>/override_enable'
    */
-  if ((Bank1_UsingFreeAreCalState_Ovr_ovr_DataStore())) {
+  if ((Bank1_SensorDetectedStatus_Ovr_ovr_DataStore())) {
   } else {
   }
 
   /* End of If: '<S503>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion2' */
-  BaseEngineController_LS_B.s448_DataTypeConversion2 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage_o8 != 0.0));
+  /* DataTypeConversion: '<S449>/Data Type Conversion1' */
+  BaseEngineController_LS_B.s449_DataTypeConversion1 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage_o7 != 0.0));
 
   /* If: '<S504>/If' incorporates:
-   *  Inport: '<S552>/In1'
-   *  Inport: '<S553>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S504>/new_value'
    *  S-Function (motohawk_sfun_calibration): '<S504>/override_enable'
    */
-  if ((Bank1_DataValidState_Ovr_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S504>/NewValue' incorporates:
-     *  ActionPort: '<S552>/Action Port'
-     */
-    rtb_Merge_iz = (Bank1_DataValidState_Ovr_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S504>/NewValue' */
+  if ((Bank1_UsingFreeAreCalState_Ovr_ovr_DataStore())) {
   } else {
-    /* Outputs for IfAction SubSystem: '<S504>/OldValue' incorporates:
-     *  ActionPort: '<S553>/Action Port'
-     */
-    rtb_Merge_iz = BaseEngineController_LS_B.s448_DataTypeConversion2;
-
-    /* End of Outputs for SubSystem: '<S504>/OldValue' */
   }
 
   /* End of If: '<S504>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion3' */
-  if (rtIsNaN(BaseEngineController_LS_B.s448_ReadCANMessage_o9) || rtIsInf
-      (BaseEngineController_LS_B.s448_ReadCANMessage_o9)) {
+  /* DataTypeConversion: '<S449>/Data Type Conversion3' */
+  if (rtIsNaN(BaseEngineController_LS_B.s449_ReadCANMessage_o9) || rtIsInf
+      (BaseEngineController_LS_B.s449_ReadCANMessage_o9)) {
     rtb_UnitDelay4_b3 = 0.0;
   } else {
     rtb_UnitDelay4_b3 = fmod(floor
-      (BaseEngineController_LS_B.s448_ReadCANMessage_o9), 256.0);
+      (BaseEngineController_LS_B.s449_ReadCANMessage_o9), 256.0);
   }
 
-  BaseEngineController_LS_B.s448_DataTypeConversion3 = (uint8_T)
+  BaseEngineController_LS_B.s449_DataTypeConversion3 = (uint8_T)
     (rtb_UnitDelay4_b3 < 0.0 ? (uint8_T)(int32_T)(int8_T)-(int8_T)(uint8_T)
      -rtb_UnitDelay4_b3 : (uint8_T)rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S448>/Data Type Conversion3' */
-  /* If: '<S505>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S505>/override_enable'
+  /* End of DataTypeConversion: '<S449>/Data Type Conversion3' */
+  /* If: '<S506>/If' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S506>/override_enable'
    */
   if ((Bank1_SensorStatus_Ovr_ovr_DataStore())) {
   } else {
   }
 
-  /* End of If: '<S505>/If' */
+  /* End of If: '<S506>/If' */
 
-  /* DataTypeConversion: '<S448>/Data Type Conversion4' */
-  BaseEngineController_LS_B.s448_DataTypeConversion4 =
-    ((BaseEngineController_LS_B.s448_ReadCANMessage_o10 != 0.0));
+  /* DataTypeConversion: '<S449>/Data Type Conversion4' */
+  BaseEngineController_LS_B.s449_DataTypeConversion4 =
+    ((BaseEngineController_LS_B.s449_ReadCANMessage_o10 != 0.0));
 
-  /* If: '<S506>/If' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S506>/override_enable'
+  /* If: '<S507>/If' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S507>/override_enable'
    */
   if ((Bank1_SensorFaultState_Ovr_ovr_DataStore())) {
   } else {
   }
 
-  /* End of If: '<S506>/If' */
+  /* End of If: '<S507>/If' */
 
-  /* S-Function Block: <S681>/motohawk_delta_time */
+  /* S-Function Block: <S682>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s681_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s682_motohawk_delta_time_DWORK1, NULL);
     rtb_Abs_co = ((real_T) delta) * 0.000001;
   }
 
-  /* Product: '<S681>/Product' incorporates:
-   *  MinMax: '<S681>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S681>/motohawk_calibration'
+  /* Product: '<S682>/Product' incorporates:
+   *  MinMax: '<S682>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S682>/motohawk_calibration'
    */
   rtb_Abs_co /= (rtb_Abs_co >= (SensVoltFilterConst_DataStore())) || rtIsNaN
     ((SensVoltFilterConst_DataStore())) ? rtb_Abs_co :
     (SensVoltFilterConst_DataStore());
 
-  /* Logic: '<S624>/Logical Operator4' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status1'
-   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status4'
+  /* Logic: '<S625>/Logical Operator4' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status1'
+   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status4'
    */
-  rtb_RelationalOperator5_fz = (IsFaultActive(103) || IsFaultActive(104));
+  rtb_RelationalOperator5_fz = (IsFaultActive(100) || IsFaultActive(101));
 
-  /* Logic: '<S624>/Logical Operator6' */
+  /* Logic: '<S625>/Logical Operator6' */
   rtb_LogicalOperator6_b = !rtb_RelationalOperator5_fz;
 
-  /* Logic: '<S624>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status2'
-   *  S-Function (motohawk_sfun_fault_status): '<S624>/motohawk_fault_status3'
+  /* Logic: '<S625>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status2'
+   *  S-Function (motohawk_sfun_fault_status): '<S625>/motohawk_fault_status3'
    */
-  rtb_LogicalOperator1_al = (IsFaultSuspected(103) || IsFaultSuspected(104));
+  rtb_LogicalOperator1_al = (IsFaultSuspected(100) || IsFaultSuspected(101));
 
-  /* S-Function Block: <S444>/motohawk_ain3 Resource: SensVoltSensorPin */
+  /* S-Function Block: <S445>/motohawk_ain3 Resource: SensVoltSensorPin */
   {
     extern NativeError_S SensVoltSensorPin_AnalogInput_Get(uint16_T *adc,
       uint16_T *status);
     SensVoltSensorPin_AnalogInput_Get
-      (&BaseEngineController_LS_B.s444_motohawk_ain3, NULL);
+      (&BaseEngineController_LS_B.s445_motohawk_ain3, NULL);
   }
 
-  /* DataTypeConversion: '<S624>/Data Type Conversion' */
-  rtb_Abs_k = (real_T)BaseEngineController_LS_B.s444_motohawk_ain3;
+  /* DataTypeConversion: '<S625>/Data Type Conversion' */
+  rtb_Abs_k = (real_T)BaseEngineController_LS_B.s445_motohawk_ain3;
 
-  /* Product: '<S624>/Product1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S624>/motohawk_calibration4'
+  /* Product: '<S625>/Product1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S625>/motohawk_calibration4'
    */
   rtb_DataTypeConversion1_e = rtb_Abs_k * (SensVoltGain_DataStore());
 
-  /* Sum: '<S624>/Sum1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S624>/motohawk_calibration5'
+  /* Sum: '<S625>/Sum1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S625>/motohawk_calibration5'
    */
-  BaseEngineController_LS_B.s624_Sum1 = rtb_DataTypeConversion1_e +
+  BaseEngineController_LS_B.s625_Sum1 = rtb_DataTypeConversion1_e +
     (SensVoltOfst_DataStore());
 
-  /* UnitDelay: '<S624>/Unit Delay1' */
-  rtb_UnitDelay1_c = BaseEngineController_LS_DWork.s624_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S625>/Unit Delay1' */
+  rtb_UnitDelay1_c = BaseEngineController_LS_DWork.s625_UnitDelay1_DSTATE;
 
-  /* If: '<S624>/If' incorporates:
-   *  Logic: '<S624>/Logical Operator5'
+  /* If: '<S625>/If' incorporates:
+   *  Logic: '<S625>/Logical Operator5'
    */
   if (rtb_LogicalOperator6_b && rtb_LogicalOperator1_al) {
-    /* Outputs for IfAction SubSystem: '<S624>/If Action Subsystem' incorporates:
-     *  ActionPort: '<S682>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S625>/If Action Subsystem' incorporates:
+     *  ActionPort: '<S683>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem(rtb_UnitDelay1_c, &rtb_Merge_ht);
 
-    /* End of Outputs for SubSystem: '<S624>/If Action Subsystem' */
+    /* End of Outputs for SubSystem: '<S625>/If Action Subsystem' */
   } else if (rtb_RelationalOperator5_fz) {
-    /* Outputs for IfAction SubSystem: '<S624>/If Action Subsystem1' incorporates:
-     *  ActionPort: '<S683>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S625>/If Action Subsystem1' incorporates:
+     *  ActionPort: '<S684>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem((SensVoltDfltValue_DataStore()),
       &rtb_Merge_ht);
 
-    /* End of Outputs for SubSystem: '<S624>/If Action Subsystem1' */
+    /* End of Outputs for SubSystem: '<S625>/If Action Subsystem1' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S624>/If Action Subsystem2' incorporates:
-     *  ActionPort: '<S684>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S625>/If Action Subsystem2' incorporates:
+     *  ActionPort: '<S685>/Action Port'
      */
     BaseEngineController_LS_IfActionSubsystem
-      (BaseEngineController_LS_B.s624_Sum1, &rtb_Merge_ht);
+      (BaseEngineController_LS_B.s625_Sum1, &rtb_Merge_ht);
 
-    /* End of Outputs for SubSystem: '<S624>/If Action Subsystem2' */
+    /* End of Outputs for SubSystem: '<S625>/If Action Subsystem2' */
   }
 
-  /* End of If: '<S624>/If' */
+  /* End of If: '<S625>/If' */
 
-  /* Sum: '<S686>/Sum1' incorporates:
-   *  Constant: '<S686>/Constant'
-   *  Product: '<S686>/Product'
-   *  Product: '<S686>/Product1'
-   *  Sum: '<S686>/Sum'
-   *  UnitDelay: '<S686>/Unit Delay'
+  /* Sum: '<S687>/Sum1' incorporates:
+   *  Constant: '<S687>/Constant'
+   *  Product: '<S687>/Product'
+   *  Product: '<S687>/Product1'
+   *  Sum: '<S687>/Sum'
+   *  UnitDelay: '<S687>/Unit Delay'
    */
   rtb_Sum1_m3 = (1.0 - rtb_Abs_co) *
-    BaseEngineController_LS_DWork.s686_UnitDelay_DSTATE + rtb_Merge_ht *
+    BaseEngineController_LS_DWork.s687_UnitDelay_DSTATE + rtb_Merge_ht *
     rtb_Abs_co;
 
-  /* If: '<S685>/If' incorporates:
-   *  Inport: '<S687>/In1'
+  /* If: '<S686>/If' incorporates:
    *  Inport: '<S688>/In1'
-   *  S-Function (motohawk_sfun_calibration): '<S685>/new_value'
-   *  S-Function (motohawk_sfun_calibration): '<S685>/override_enable'
+   *  Inport: '<S689>/In1'
+   *  S-Function (motohawk_sfun_calibration): '<S686>/new_value'
+   *  S-Function (motohawk_sfun_calibration): '<S686>/override_enable'
    */
   if ((SensVolt_ovr_DataStore())) {
-    /* Outputs for IfAction SubSystem: '<S685>/NewValue' incorporates:
-     *  ActionPort: '<S687>/Action Port'
-     */
-    BaseEngineController_LS_B.s685_Merge = (SensVolt_new_DataStore());
-
-    /* End of Outputs for SubSystem: '<S685>/NewValue' */
-  } else {
-    /* Outputs for IfAction SubSystem: '<S685>/OldValue' incorporates:
+    /* Outputs for IfAction SubSystem: '<S686>/NewValue' incorporates:
      *  ActionPort: '<S688>/Action Port'
      */
-    BaseEngineController_LS_B.s685_Merge = rtb_Sum1_m3;
+    BaseEngineController_LS_B.s686_Merge = (SensVolt_new_DataStore());
 
-    /* End of Outputs for SubSystem: '<S685>/OldValue' */
+    /* End of Outputs for SubSystem: '<S686>/NewValue' */
+  } else {
+    /* Outputs for IfAction SubSystem: '<S686>/OldValue' incorporates:
+     *  ActionPort: '<S689>/Action Port'
+     */
+    BaseEngineController_LS_B.s686_Merge = rtb_Sum1_m3;
+
+    /* End of Outputs for SubSystem: '<S686>/OldValue' */
   }
 
-  /* End of If: '<S685>/If' */
+  /* End of If: '<S686>/If' */
 
-  /* Outputs for Enabled SubSystem: '<S439>/Triggered Subsystem' incorporates:
-   *  EnablePort: '<S440>/Enable'
+  /* Outputs for Enabled SubSystem: '<S440>/Triggered Subsystem' incorporates:
+   *  EnablePort: '<S441>/Enable'
    */
   if (rtb_RelationalOperator_jv) {
     /* Outputs for Function Call SubSystem: '<S11>/Diagnostics' */
 
-    /* RelationalOperator: '<S333>/RelOp' incorporates:
-     *  Constant: '<S333>/Constant'
-     *  S-Function (motohawk_sfun_data_read): '<S324>/motohawk_data_read'
+    /* RelationalOperator: '<S334>/RelOp' incorporates:
+     *  Constant: '<S334>/Constant'
+     *  S-Function (motohawk_sfun_data_read): '<S325>/motohawk_data_read'
      */
     rtb_BelowLoTarget_j = (((uint8_T)EngineState_DataStore()) == 3);
 
-    /* RelationalOperator: '<S324>/Relational Operator' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S324>/motohawk_calibration'
+    /* RelationalOperator: '<S325>/Relational Operator' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration'
      */
-    rtb_RelOp_mp = (BaseEngineController_LS_B.s630_Merge >= (real_T)((uint16_T)
+    rtb_RelOp_mp = (BaseEngineController_LS_B.s631_Merge >= (real_T)((uint16_T)
       (ACHighPressureDisable_DataStore())));
 
-    /* Logic: '<S324>/Logical Operator' */
+    /* Logic: '<S325>/Logical Operator' */
     rtb_LogicalOperator_ct = ((rtb_BelowLoTarget_j && rtb_RelOp_mp));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S324>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: ACChargeHigh_Fault */
     {
@@ -17608,17 +17606,17 @@ void BaseEngineController_LS_Foreground(void)
       UpdateFault(0);
     }
 
-    /* RelationalOperator: '<S324>/Relational Operator1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S324>/motohawk_calibration2'
+    /* RelationalOperator: '<S325>/Relational Operator1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration2'
      */
-    rtb_RelOp_mp = (BaseEngineController_LS_B.s630_Merge <= (real_T)((uint16_T)
+    rtb_RelOp_mp = (BaseEngineController_LS_B.s631_Merge <= (real_T)((uint16_T)
       (ACLowPressureDisable_DataStore())));
 
-    /* Logic: '<S324>/Logical Operator1' */
+    /* Logic: '<S325>/Logical Operator1' */
     rtb_LogicalOperator1_o = ((rtb_BelowLoTarget_j && rtb_RelOp_mp &&
       BaseEngineController_LS_B.s135_AC));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S324>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: ACChargeLow_Fault */
     {
@@ -17628,215 +17626,214 @@ void BaseEngineController_LS_Foreground(void)
       UpdateFault(1);
     }
 
-    /* RelationalOperator: '<S334>/RelOp' incorporates:
-     *  Constant: '<S334>/Constant'
-     *  S-Function (motohawk_sfun_data_read): '<S325>/motohawk_data_read'
+    /* RelationalOperator: '<S335>/RelOp' incorporates:
+     *  Constant: '<S335>/Constant'
+     *  S-Function (motohawk_sfun_data_read): '<S326>/motohawk_data_read'
      */
     rtb_RelOp_mp = (((uint8_T)EngineState_DataStore()) == 3);
 
-    /* Gain: '<S325>/kPa to PSI' */
+    /* Gain: '<S326>/kPa to PSI' */
     rtb_motohawk_interpolation_1d3_a = 0.145038 *
-      BaseEngineController_LS_B.s659_Merge;
+      BaseEngineController_LS_B.s660_Merge;
 
-    /* Logic: '<S325>/Logical Operator' incorporates:
-     *  RelationalOperator: '<S325>/Relational Operator'
-     *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration'
+    /* Logic: '<S326>/Logical Operator' incorporates:
+     *  RelationalOperator: '<S326>/Relational Operator'
+     *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration'
      */
     rtb_LogicalOperator_bx = ((rtb_RelOp_mp && (rtb_motohawk_interpolation_1d3_a
       >= (SoftOverBoostLimit_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: SoftOverBoost_Fault */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(105, rtb_LogicalOperator_bx);
-      UpdateFault(105);
+      SetFaultSuspected(102, rtb_LogicalOperator_bx);
+      UpdateFault(102);
     }
 
-    /* Logic: '<S325>/Logical Operator1' incorporates:
-     *  RelationalOperator: '<S325>/Relational Operator1'
-     *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration1'
+    /* Logic: '<S326>/Logical Operator1' incorporates:
+     *  RelationalOperator: '<S326>/Relational Operator1'
+     *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration1'
      */
     rtb_LogicalOperator1_joj = ((rtb_RelOp_mp &&
       (rtb_motohawk_interpolation_1d3_a >= (HardOverBoostLimit_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: HardOverBoost_Fault */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(70, rtb_LogicalOperator1_joj);
-      UpdateFault(70);
+      SetFaultSuspected(69, rtb_LogicalOperator1_joj);
+      UpdateFault(69);
     }
 
-    /* Logic: '<S325>/Logical Operator2' incorporates:
-     *  RelationalOperator: '<S325>/Relational Operator2'
-     *  S-Function (motohawk_sfun_calibration): '<S325>/motohawk_calibration2'
+    /* Logic: '<S326>/Logical Operator2' incorporates:
+     *  RelationalOperator: '<S326>/Relational Operator2'
+     *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration2'
      */
     rtb_LogicalOperator2_bv = ((rtb_RelOp_mp &&
       (BaseEngineController_LS_B.s135_WASTEGATE >=
        (WastegateLossOfControl_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S325>/motohawk_fault_def3' */
+    /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def3' */
 
     /* Set Fault Suspected Status: Wastegate_Fault */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(124, rtb_LogicalOperator2_bv);
-      UpdateFault(124);
+      SetFaultSuspected(121, rtb_LogicalOperator2_bv);
+      UpdateFault(121);
     }
 
-    /* Product: '<S328>/Product' incorporates:
-     *  S-Function (motohawk_sfun_data_read): '<S328>/motohawk_data_read'
-     *  S-Function (motohawk_sfun_fault_status): '<S328>/motohawk_fault_status2'
+    /* Product: '<S329>/Product' incorporates:
+     *  S-Function (motohawk_sfun_data_read): '<S329>/motohawk_data_read'
+     *  S-Function (motohawk_sfun_fault_status): '<S329>/motohawk_fault_status2'
      */
-    rtb_Switch_om = (uint8_T)(IsFaultActive(23) ? ((uint8_T)
-      Bank2_Enable_DataStore()) : 0);
+    rtb_Product2_o = (uint16_T)(Bank2_Enable_DataStore() ? IsFaultActive(23) : 0);
 
-    /* Product: '<S328>/Product1' incorporates:
-     *  S-Function (motohawk_sfun_data_read): '<S328>/motohawk_data_read'
-     *  S-Function (motohawk_sfun_fault_status): '<S328>/motohawk_fault_status3'
+    /* Product: '<S329>/Product1' incorporates:
+     *  S-Function (motohawk_sfun_data_read): '<S329>/motohawk_data_read'
+     *  S-Function (motohawk_sfun_fault_status): '<S329>/motohawk_fault_status3'
      */
-    rtb_Product_ln = (uint8_T)(IsFaultActive(24) ? ((uint8_T)
-      Bank2_Enable_DataStore()) : 0);
+    rtb_Product1_mc = (uint16_T)(Bank2_Enable_DataStore() ? IsFaultActive(24) :
+      0);
 
-    /* Logic: '<S328>/Logical Operator1' incorporates:
-     *  S-Function (motohawk_sfun_fault_status): '<S328>/motohawk_fault_status'
-     *  S-Function (motohawk_sfun_fault_status): '<S328>/motohawk_fault_status1'
+    /* Logic: '<S329>/Logical Operator1' incorporates:
+     *  S-Function (motohawk_sfun_fault_status): '<S329>/motohawk_fault_status'
+     *  S-Function (motohawk_sfun_fault_status): '<S329>/motohawk_fault_status1'
      */
-    rtb_LogicalOperator6_b = ((rtb_Switch_om != 0) || (rtb_Product_ln != 0) ||
+    rtb_LogicalOperator6_b = ((rtb_Product2_o != 0) || (rtb_Product1_mc != 0) ||
       IsFaultActive(21) || IsFaultActive(22) ||
-      BaseEngineController_LS_B.s574_Merge);
+      BaseEngineController_LS_B.s575_Merge);
 
-    /* RelationalOperator: '<S328>/Relational Operator1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S328>/motohawk_calibration3'
+    /* RelationalOperator: '<S329>/Relational Operator1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S329>/motohawk_calibration3'
      */
-    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s448_MultiportSwitch <
+    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s449_MultiportSwitch <
                                (LeanProtect_Threshold_DataStore()));
 
-    /* Logic: '<S328>/Logical Operator4' incorporates:
-     *  Constant: '<S340>/Constant'
-     *  Logic: '<S328>/Logical Operator3'
-     *  RelationalOperator: '<S340>/RelOp'
-     *  S-Function (motohawk_sfun_data_read): '<S328>/motohawk_data_read1'
+    /* Logic: '<S329>/Logical Operator4' incorporates:
+     *  Constant: '<S341>/Constant'
+     *  Logic: '<S329>/Logical Operator3'
+     *  RelationalOperator: '<S341>/RelOp'
+     *  S-Function (motohawk_sfun_data_read): '<S329>/motohawk_data_read1'
      */
     rtb_LogicalOperator4_l = (((!rtb_LogicalOperator6_b) &&
       rtb_LogicalOperator1_al && (((uint8_T)EngineState_DataStore()) == 3)));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S328>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S329>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: LeanProtect_Fault */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(86, rtb_LogicalOperator4_l);
-      UpdateFault(86);
+      SetFaultSuspected(83, rtb_LogicalOperator4_l);
+      UpdateFault(83);
     }
 
-    /* Logic: '<S330>/Logical Operator3' incorporates:
-     *  Logic: '<S330>/Logical Operator1'
-     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status'
-     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status1'
-     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status2'
-     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status3'
-     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status4'
-     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status5'
+    /* Logic: '<S331>/Logical Operator3' incorporates:
+     *  Logic: '<S331>/Logical Operator1'
+     *  S-Function (motohawk_sfun_fault_status): '<S331>/motohawk_fault_status'
+     *  S-Function (motohawk_sfun_fault_status): '<S331>/motohawk_fault_status1'
+     *  S-Function (motohawk_sfun_fault_status): '<S331>/motohawk_fault_status2'
+     *  S-Function (motohawk_sfun_fault_status): '<S331>/motohawk_fault_status3'
+     *  S-Function (motohawk_sfun_fault_status): '<S331>/motohawk_fault_status4'
+     *  S-Function (motohawk_sfun_fault_status): '<S331>/motohawk_fault_status5'
      */
-    rtb_RelOp_mp = !(IsFaultActive(113) || IsFaultActive(119) || IsFaultActive
-                     (114) || IsFaultActive(120) || IsFaultActive(89) ||
-                     IsFaultActive(90));
+    rtb_RelOp_mp = !(IsFaultActive(110) || IsFaultActive(116) || IsFaultActive
+                     (111) || IsFaultActive(117) || IsFaultActive(86) ||
+                     IsFaultActive(87));
 
-    /* RelationalOperator: '<S342>/RelOp' incorporates:
-     *  Constant: '<S342>/Constant'
+    /* RelationalOperator: '<S343>/RelOp' incorporates:
+     *  Constant: '<S343>/Constant'
      */
-    rtb_BelowLoTarget_j = (BaseEngineController_LS_B.s428_State == 3);
+    rtb_BelowLoTarget_j = (BaseEngineController_LS_B.s429_State == 3);
 
-    /* RelationalOperator: '<S330>/Relational Operator3' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S330>/motohawk_calibration2'
+    /* RelationalOperator: '<S331>/Relational Operator3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration2'
      */
-    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s412_Switch2 <
+    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s413_Switch2 <
       (MAP_IR_TPS_CL_DataStore()));
 
-    /* Logic: '<S330>/Logical Operator4' incorporates:
-     *  RelationalOperator: '<S330>/Relational Operator4'
-     *  S-Function (motohawk_sfun_calibration): '<S330>/motohawk_calibration4'
+    /* Logic: '<S331>/Logical Operator4' incorporates:
+     *  RelationalOperator: '<S331>/Relational Operator4'
+     *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration4'
      */
     rtb_LogicalOperator4_k = ((rtb_RelOp_mp && rtb_BelowLoTarget_j &&
-      rtb_LogicalOperator6_b && (BaseEngineController_LS_B.s659_Merge >
+      rtb_LogicalOperator6_b && (BaseEngineController_LS_B.s660_Merge >
       (MAP_IR_HI_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S330>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S331>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: MAP_IR_HI */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(93, rtb_LogicalOperator4_k);
-      UpdateFault(93);
+      SetFaultSuspected(90, rtb_LogicalOperator4_k);
+      UpdateFault(90);
     }
 
-    /* RelationalOperator: '<S330>/Relational Operator1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S330>/motohawk_calibration6'
+    /* RelationalOperator: '<S331>/Relational Operator1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration6'
      */
-    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s412_Switch2 >
+    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s413_Switch2 >
       (MAP_IR_TPS_OP_DataStore()));
 
-    /* Logic: '<S330>/Logical Operator2' incorporates:
-     *  RelationalOperator: '<S330>/Relational Operator2'
-     *  S-Function (motohawk_sfun_calibration): '<S330>/motohawk_calibration5'
+    /* Logic: '<S331>/Logical Operator2' incorporates:
+     *  RelationalOperator: '<S331>/Relational Operator2'
+     *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration5'
      */
     rtb_LogicalOperator2_ip = ((rtb_RelOp_mp && rtb_BelowLoTarget_j &&
-      rtb_LogicalOperator6_b && (BaseEngineController_LS_B.s659_Merge <
+      rtb_LogicalOperator6_b && (BaseEngineController_LS_B.s660_Merge <
       (MAP_IR_LO_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S330>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S331>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: MAP_IR_LO */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(94, rtb_LogicalOperator2_ip);
-      UpdateFault(94);
+      SetFaultSuspected(91, rtb_LogicalOperator2_ip);
+      UpdateFault(91);
     }
 
-    /* RelationalOperator: '<S330>/Relational Operator7' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S330>/motohawk_calibration8'
+    /* RelationalOperator: '<S331>/Relational Operator7' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration8'
      */
-    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s412_Switch2 <
+    rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s413_Switch2 <
       (MAP_TPS_STUCK_DataStore()));
 
-    /* Sum: '<S330>/Add' */
-    rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s367_Sum -
-      BaseEngineController_LS_B.s659_Merge;
+    /* Sum: '<S331>/Add' */
+    rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s368_Sum -
+      BaseEngineController_LS_B.s660_Merge;
 
-    /* Logic: '<S330>/Logical Operator5' incorporates:
-     *  RelationalOperator: '<S330>/Relational Operator8'
-     *  S-Function (motohawk_sfun_calibration): '<S330>/motohawk_calibration7'
+    /* Logic: '<S331>/Logical Operator5' incorporates:
+     *  RelationalOperator: '<S331>/Relational Operator8'
+     *  S-Function (motohawk_sfun_calibration): '<S331>/motohawk_calibration7'
      */
     rtb_LogicalOperator5_oa = ((rtb_RelOp_mp && rtb_BelowLoTarget_j &&
       rtb_LogicalOperator6_b && (rtb_DataTypeConversion1_e <
       (MAP_STUCK_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S330>/motohawk_fault_def3' */
+    /* S-Function (motohawk_sfun_fault_def): '<S331>/motohawk_fault_def3' */
 
     /* Set Fault Suspected Status: MAP_STICKING */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(95, rtb_LogicalOperator5_oa);
-      UpdateFault(95);
+      SetFaultSuspected(92, rtb_LogicalOperator5_oa);
+      UpdateFault(92);
     }
 
-    /* DataTypeConversion: '<S331>/Data Type Conversion' */
-    if (rtIsNaN(BaseEngineController_LS_B.s443_RPMInst) || rtIsInf
-        (BaseEngineController_LS_B.s443_RPMInst)) {
+    /* DataTypeConversion: '<S332>/Data Type Conversion' */
+    if (rtIsNaN(BaseEngineController_LS_B.s444_RPMInst) || rtIsInf
+        (BaseEngineController_LS_B.s444_RPMInst)) {
       rtb_UnitDelay4_b3 = 0.0;
     } else {
-      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s443_RPMInst),
+      rtb_UnitDelay4_b3 = fmod(floor(BaseEngineController_LS_B.s444_RPMInst),
         65536.0);
     }
 
@@ -17844,16 +17841,16 @@ void BaseEngineController_LS_Foreground(void)
       -(int16_T)(uint16_T)-rtb_UnitDelay4_b3 : (int16_T)(uint16_T)
       rtb_UnitDelay4_b3);
 
-    /* End of DataTypeConversion: '<S331>/Data Type Conversion' */
-    /* RelationalOperator: '<S345>/LT' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration'
+    /* End of DataTypeConversion: '<S332>/Data Type Conversion' */
+    /* RelationalOperator: '<S346>/LT' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
      */
     rtb_RelOp_mp = (rtb_DataTypeConversion_ol >= ((int16_T)
       (BaseRevLimit_DataStore())));
 
-    /* Sum: '<S343>/Sum2' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration1'
+    /* Sum: '<S344>/Sum2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration1'
      */
     i = ((int16_T)(BaseRevLimit_DataStore())) - ((int16_T)
       (RevLimitHyst_DataStore()));
@@ -17867,75 +17864,10 @@ void BaseEngineController_LS_Foreground(void)
 
     rtb_Sum2_lt = (int16_T)i;
 
-    /* End of Sum: '<S343>/Sum2' */
-
-    /* RelationalOperator: '<S345>/LT1' */
-    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum2_lt);
-
-    /* CombinatorialLogic: '<S348>/Combinatorial  Logic' */
-    {
-      uint_T rowidx= 0;
-
-      /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_RelOp_mp != 0);
-      rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
-
-      /* Copy the appropriate row of the table into the block output vector */
-      rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
-      rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
-    }
-
-    /* Switch: '<S348>/Switch1' incorporates:
-     *  UnitDelay: '<S348>/Unit Delay'
-     */
-    if (rtb_CombinatorialLogic_l[1]) {
-      rtb_Switch1_mj = rtb_CombinatorialLogic_l[0];
-    } else {
-      rtb_Switch1_mj = BaseEngineController_LS_DWork.s348_UnitDelay_DSTATE;
-    }
-
-    /* End of Switch: '<S348>/Switch1' */
-    /* Sum: '<S343>/Sum3' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration2'
-     */
-    i = ((int16_T)(BaseRevLimit_DataStore())) + ((int16_T)
-      (MediumRevOffset_DataStore()));
-    if (i > 32767) {
-      i = 32767;
-    } else {
-      if (i <= -32768) {
-        i = -32768;
-      }
-    }
-
-    rtb_Sum4_e = (int16_T)i;
-
-    /* End of Sum: '<S343>/Sum3' */
-
-    /* RelationalOperator: '<S346>/LT' */
-    rtb_RelOp_mp = (rtb_DataTypeConversion_ol >= rtb_Sum4_e);
-
-    /* Sum: '<S343>/Sum1' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration1'
-     */
-    i = rtb_Sum4_e - ((int16_T)(RevLimitHyst_DataStore()));
-    if (i > 32767) {
-      i = 32767;
-    } else {
-      if (i <= -32768) {
-        i = -32768;
-      }
-    }
-
-    rtb_Switch2_m = (int16_T)i;
-
-    /* End of Sum: '<S343>/Sum1' */
+    /* End of Sum: '<S344>/Sum2' */
 
     /* RelationalOperator: '<S346>/LT1' */
-    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Switch2_m);
+    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum2_lt);
 
     /* CombinatorialLogic: '<S349>/Combinatorial  Logic' */
     {
@@ -17956,86 +17888,18 @@ void BaseEngineController_LS_Foreground(void)
      *  UnitDelay: '<S349>/Unit Delay'
      */
     if (rtb_CombinatorialLogic_l[1]) {
-      rtb_RelOp_d = rtb_CombinatorialLogic_l[0];
+      rtb_Switch1_mj = rtb_CombinatorialLogic_l[0];
     } else {
-      rtb_RelOp_d = BaseEngineController_LS_DWork.s349_UnitDelay_DSTATE;
+      rtb_Switch1_mj = BaseEngineController_LS_DWork.s349_UnitDelay_DSTATE;
     }
 
     /* End of Switch: '<S349>/Switch1' */
-
-    /* Switch: '<S346>/Switch2' incorporates:
-     *  Logic: '<S346>/Logical Operator'
-     */
-    if (rtb_RelOp_d) {
-      rtb_Sum4_e = rtb_Switch2_m;
-    }
-
-    /* End of Switch: '<S346>/Switch2' */
-
-    /* RelationalOperator: '<S343>/Overspeed1' */
-    rtb_LogicalOperator6_b = (rtb_DataTypeConversion_ol > rtb_Sum4_e);
-
-    /* Logic: '<S331>/Logical Operator' */
-    rtb_RelOp_mp = !BaseEngineController_LS_B.s592_Merge;
-
-    /* RelationalOperator: '<S351>/LT' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
-     */
-    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol >= ((int16_T)
-      (TwoStepRevLimit_DataStore())));
-
-    /* Sum: '<S344>/Sum2' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration1'
-     */
-    i = ((int16_T)(TwoStepRevLimit_DataStore())) - ((int16_T)
-      (TwoStepRevLimitHyst_DataStore()));
-    if (i > 32767) {
-      i = 32767;
-    } else {
-      if (i <= -32768) {
-        i = -32768;
-      }
-    }
-
-    rtb_Sum2_b5 = (int16_T)i;
-
-    /* End of Sum: '<S344>/Sum2' */
-
-    /* RelationalOperator: '<S351>/LT1' */
-    rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol <= rtb_Sum2_b5);
-
-    /* CombinatorialLogic: '<S354>/Combinatorial  Logic' */
-    {
-      uint_T rowidx= 0;
-
-      /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
-      rowidx = (rowidx << 1) + (uint_T)(rtb_LogicalOperator3_cj != 0);
-
-      /* Copy the appropriate row of the table into the block output vector */
-      rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
-      rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
-    }
-
-    /* Switch: '<S354>/Switch1' incorporates:
-     *  UnitDelay: '<S354>/Unit Delay'
-     */
-    if (rtb_CombinatorialLogic_l[1]) {
-      rtb_Switch1_l = rtb_CombinatorialLogic_l[0];
-    } else {
-      rtb_Switch1_l = BaseEngineController_LS_DWork.s354_UnitDelay_DSTATE;
-    }
-
-    /* End of Switch: '<S354>/Switch1' */
     /* Sum: '<S344>/Sum3' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
      *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration2'
      */
-    i = ((int16_T)(TwoStepRevLimit_DataStore())) + ((int16_T)
-      (TwoStepMediumRevOffset_DataStore()));
+    i = ((int16_T)(BaseRevLimit_DataStore())) + ((int16_T)
+      (MediumRevOffset_DataStore()));
     if (i > 32767) {
       i = 32767;
     } else {
@@ -18044,122 +17908,17 @@ void BaseEngineController_LS_Foreground(void)
       }
     }
 
-    rtb_Switch2_m = (int16_T)i;
+    rtb_Sum4_e = (int16_T)i;
 
     /* End of Sum: '<S344>/Sum3' */
 
-    /* RelationalOperator: '<S352>/LT' */
-    rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol >= rtb_Switch2_m);
+    /* RelationalOperator: '<S347>/LT' */
+    rtb_RelOp_mp = (rtb_DataTypeConversion_ol >= rtb_Sum4_e);
 
     /* Sum: '<S344>/Sum1' incorporates:
      *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration1'
      */
-    i = rtb_Switch2_m - ((int16_T)(TwoStepRevLimitHyst_DataStore()));
-    if (i > 32767) {
-      i = 32767;
-    } else {
-      if (i <= -32768) {
-        i = -32768;
-      }
-    }
-
-    rtb_Sum4_e = (int16_T)i;
-
-    /* End of Sum: '<S344>/Sum1' */
-
-    /* RelationalOperator: '<S352>/LT1' */
-    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum4_e);
-
-    /* CombinatorialLogic: '<S355>/Combinatorial  Logic' */
-    {
-      uint_T rowidx= 0;
-
-      /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_LogicalOperator3_cj != 0);
-      rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
-
-      /* Copy the appropriate row of the table into the block output vector */
-      rtb_CombinatorialLogic_l[0] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx];
-      rtb_CombinatorialLogic_l[1] =
-        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
-    }
-
-    /* Switch: '<S355>/Switch1' incorporates:
-     *  UnitDelay: '<S355>/Unit Delay'
-     */
-    if (rtb_CombinatorialLogic_l[1]) {
-      rtb_Switch1_o = rtb_CombinatorialLogic_l[0];
-    } else {
-      rtb_Switch1_o = BaseEngineController_LS_DWork.s355_UnitDelay_DSTATE;
-    }
-
-    /* End of Switch: '<S355>/Switch1' */
-
-    /* Switch: '<S352>/Switch2' incorporates:
-     *  Logic: '<S352>/Logical Operator'
-     */
-    if (rtb_Switch1_o) {
-      rtb_Switch2_m = rtb_Sum4_e;
-    }
-
-    /* End of Switch: '<S352>/Switch2' */
-
-    /* RelationalOperator: '<S344>/Overspeed1' */
-    rtb_LogicalOperator1_al = (rtb_DataTypeConversion_ol > rtb_Switch2_m);
-
-    /* Switch: '<S331>/Switch' incorporates:
-     *  Logic: '<S343>/Logical Operator3'
-     *  Logic: '<S343>/Logical Operator4'
-     *  Logic: '<S344>/Logical Operator3'
-     *  Logic: '<S344>/Logical Operator4'
-     *  RelationalOperator: '<S343>/Overspeed'
-     *  RelationalOperator: '<S344>/Overspeed'
-     */
-    if (rtb_RelOp_mp) {
-      /* Switch: '<S345>/Switch2' incorporates:
-       *  Logic: '<S345>/Logical Operator'
-       *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration'
-       */
-      if (!rtb_Switch1_mj) {
-        rtb_Sum2_lt = ((int16_T)(BaseRevLimit_DataStore()));
-      }
-
-      /* End of Switch: '<S345>/Switch2' */
-      rtb_LogicalOperator3_cj = ((rtb_DataTypeConversion_ol > rtb_Sum2_lt) &&
-        (!rtb_LogicalOperator6_b));
-    } else {
-      /* Switch: '<S351>/Switch2' incorporates:
-       *  Logic: '<S351>/Logical Operator'
-       *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
-       */
-      if (!rtb_Switch1_l) {
-        rtb_Sum2_b5 = ((int16_T)(TwoStepRevLimit_DataStore()));
-      }
-
-      /* End of Switch: '<S351>/Switch2' */
-      rtb_LogicalOperator3_cj = ((rtb_DataTypeConversion_ol > rtb_Sum2_b5) &&
-        (!rtb_LogicalOperator1_al));
-    }
-
-    /* End of Switch: '<S331>/Switch' */
-
-    /* S-Function (motohawk_sfun_fault_def): '<S331>/motohawk_fault_def1' */
-
-    /* Set Fault Suspected Status: SoftOverspeed */
-    {
-      extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-      extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(106, rtb_LogicalOperator3_cj);
-      UpdateFault(106);
-    }
-
-    /* Sum: '<S343>/Sum5' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration4'
-     */
-    i = ((int16_T)(BaseRevLimit_DataStore())) + ((int16_T)
-      (HardRevOffset_DataStore()));
+    i = rtb_Sum4_e - ((int16_T)(RevLimitHyst_DataStore()));
     if (i > 32767) {
       i = 32767;
     } else {
@@ -18170,36 +17929,17 @@ void BaseEngineController_LS_Foreground(void)
 
     rtb_Switch2_m = (int16_T)i;
 
-    /* End of Sum: '<S343>/Sum5' */
-
-    /* RelationalOperator: '<S347>/LT' */
-    rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol >= rtb_Switch2_m);
-
-    /* Sum: '<S343>/Sum4' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S343>/motohawk_calibration1'
-     */
-    i = rtb_Switch2_m - ((int16_T)(RevLimitHyst_DataStore()));
-    if (i > 32767) {
-      i = 32767;
-    } else {
-      if (i <= -32768) {
-        i = -32768;
-      }
-    }
-
-    rtb_Sum4_e = (int16_T)i;
-
-    /* End of Sum: '<S343>/Sum4' */
+    /* End of Sum: '<S344>/Sum1' */
 
     /* RelationalOperator: '<S347>/LT1' */
-    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum4_e);
+    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Switch2_m);
 
     /* CombinatorialLogic: '<S350>/Combinatorial  Logic' */
     {
       uint_T rowidx= 0;
 
       /* Compute the truth table row index corresponding to the input */
-      rowidx = (rowidx << 1) + (uint_T)(rtb_LogicalOperator3_cj != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_RelOp_mp != 0);
       rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
 
       /* Copy the appropriate row of the table into the block output vector */
@@ -18213,9 +17953,9 @@ void BaseEngineController_LS_Foreground(void)
      *  UnitDelay: '<S350>/Unit Delay'
      */
     if (rtb_CombinatorialLogic_l[1]) {
-      rtb_Switch1_l3 = rtb_CombinatorialLogic_l[0];
+      rtb_RelOp_d = rtb_CombinatorialLogic_l[0];
     } else {
-      rtb_Switch1_l3 = BaseEngineController_LS_DWork.s350_UnitDelay_DSTATE;
+      rtb_RelOp_d = BaseEngineController_LS_DWork.s350_UnitDelay_DSTATE;
     }
 
     /* End of Switch: '<S350>/Switch1' */
@@ -18223,21 +17963,76 @@ void BaseEngineController_LS_Foreground(void)
     /* Switch: '<S347>/Switch2' incorporates:
      *  Logic: '<S347>/Logical Operator'
      */
-    if (rtb_Switch1_l3) {
-      rtb_Switch2_m = rtb_Sum4_e;
+    if (rtb_RelOp_d) {
+      rtb_Sum4_e = rtb_Switch2_m;
     }
 
     /* End of Switch: '<S347>/Switch2' */
 
-    /* RelationalOperator: '<S343>/Overspeed2' */
-    rtb_RelationalOperator3_bp = (rtb_DataTypeConversion_ol > rtb_Switch2_m);
+    /* RelationalOperator: '<S344>/Overspeed1' */
+    rtb_LogicalOperator6_b = (rtb_DataTypeConversion_ol > rtb_Sum4_e);
 
-    /* Sum: '<S344>/Sum5' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
-     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration4'
+    /* Logic: '<S332>/Logical Operator' */
+    rtb_RelOp_mp = !BaseEngineController_LS_B.s593_Merge;
+
+    /* RelationalOperator: '<S352>/LT' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration'
+     */
+    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol >= ((int16_T)
+      (TwoStepRevLimit_DataStore())));
+
+    /* Sum: '<S345>/Sum2' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration1'
+     */
+    i = ((int16_T)(TwoStepRevLimit_DataStore())) - ((int16_T)
+      (TwoStepRevLimitHyst_DataStore()));
+    if (i > 32767) {
+      i = 32767;
+    } else {
+      if (i <= -32768) {
+        i = -32768;
+      }
+    }
+
+    rtb_Sum2_b5 = (int16_T)i;
+
+    /* End of Sum: '<S345>/Sum2' */
+
+    /* RelationalOperator: '<S352>/LT1' */
+    rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol <= rtb_Sum2_b5);
+
+    /* CombinatorialLogic: '<S355>/Combinatorial  Logic' */
+    {
+      uint_T rowidx= 0;
+
+      /* Compute the truth table row index corresponding to the input */
+      rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_LogicalOperator3_cj != 0);
+
+      /* Copy the appropriate row of the table into the block output vector */
+      rtb_CombinatorialLogic_l[0] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx];
+      rtb_CombinatorialLogic_l[1] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+    }
+
+    /* Switch: '<S355>/Switch1' incorporates:
+     *  UnitDelay: '<S355>/Unit Delay'
+     */
+    if (rtb_CombinatorialLogic_l[1]) {
+      rtb_Switch1_l = rtb_CombinatorialLogic_l[0];
+    } else {
+      rtb_Switch1_l = BaseEngineController_LS_DWork.s355_UnitDelay_DSTATE;
+    }
+
+    /* End of Switch: '<S355>/Switch1' */
+    /* Sum: '<S345>/Sum3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration2'
      */
     i = ((int16_T)(TwoStepRevLimit_DataStore())) + ((int16_T)
-      (TwoStepHardRevOffset_DataStore()));
+      (TwoStepMediumRevOffset_DataStore()));
     if (i > 32767) {
       i = 32767;
     } else {
@@ -18248,13 +18043,13 @@ void BaseEngineController_LS_Foreground(void)
 
     rtb_Switch2_m = (int16_T)i;
 
-    /* End of Sum: '<S344>/Sum5' */
+    /* End of Sum: '<S345>/Sum3' */
 
     /* RelationalOperator: '<S353>/LT' */
     rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol >= rtb_Switch2_m);
 
-    /* Sum: '<S344>/Sum4' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration1'
+    /* Sum: '<S345>/Sum1' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration1'
      */
     i = rtb_Switch2_m - ((int16_T)(TwoStepRevLimitHyst_DataStore()));
     if (i > 32767) {
@@ -18267,7 +18062,7 @@ void BaseEngineController_LS_Foreground(void)
 
     rtb_Sum4_e = (int16_T)i;
 
-    /* End of Sum: '<S344>/Sum4' */
+    /* End of Sum: '<S345>/Sum1' */
 
     /* RelationalOperator: '<S353>/LT1' */
     rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum4_e);
@@ -18291,9 +18086,9 @@ void BaseEngineController_LS_Foreground(void)
      *  UnitDelay: '<S356>/Unit Delay'
      */
     if (rtb_CombinatorialLogic_l[1]) {
-      rtb_Switch1_bv = rtb_CombinatorialLogic_l[0];
+      rtb_Switch1_o = rtb_CombinatorialLogic_l[0];
     } else {
-      rtb_Switch1_bv = BaseEngineController_LS_DWork.s356_UnitDelay_DSTATE;
+      rtb_Switch1_o = BaseEngineController_LS_DWork.s356_UnitDelay_DSTATE;
     }
 
     /* End of Switch: '<S356>/Switch1' */
@@ -18301,20 +18096,222 @@ void BaseEngineController_LS_Foreground(void)
     /* Switch: '<S353>/Switch2' incorporates:
      *  Logic: '<S353>/Logical Operator'
      */
-    if (rtb_Switch1_bv) {
+    if (rtb_Switch1_o) {
       rtb_Switch2_m = rtb_Sum4_e;
     }
 
     /* End of Switch: '<S353>/Switch2' */
 
+    /* RelationalOperator: '<S345>/Overspeed1' */
+    rtb_LogicalOperator1_al = (rtb_DataTypeConversion_ol > rtb_Switch2_m);
+
+    /* Switch: '<S332>/Switch' incorporates:
+     *  Logic: '<S344>/Logical Operator3'
+     *  Logic: '<S344>/Logical Operator4'
+     *  Logic: '<S345>/Logical Operator3'
+     *  Logic: '<S345>/Logical Operator4'
+     *  RelationalOperator: '<S344>/Overspeed'
+     *  RelationalOperator: '<S345>/Overspeed'
+     */
+    if (rtb_RelOp_mp) {
+      /* Switch: '<S346>/Switch2' incorporates:
+       *  Logic: '<S346>/Logical Operator'
+       *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
+       */
+      if (!rtb_Switch1_mj) {
+        rtb_Sum2_lt = ((int16_T)(BaseRevLimit_DataStore()));
+      }
+
+      /* End of Switch: '<S346>/Switch2' */
+      rtb_LogicalOperator3_cj = ((rtb_DataTypeConversion_ol > rtb_Sum2_lt) &&
+        (!rtb_LogicalOperator6_b));
+    } else {
+      /* Switch: '<S352>/Switch2' incorporates:
+       *  Logic: '<S352>/Logical Operator'
+       *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration'
+       */
+      if (!rtb_Switch1_l) {
+        rtb_Sum2_b5 = ((int16_T)(TwoStepRevLimit_DataStore()));
+      }
+
+      /* End of Switch: '<S352>/Switch2' */
+      rtb_LogicalOperator3_cj = ((rtb_DataTypeConversion_ol > rtb_Sum2_b5) &&
+        (!rtb_LogicalOperator1_al));
+    }
+
+    /* End of Switch: '<S332>/Switch' */
+
+    /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def1' */
+
+    /* Set Fault Suspected Status: SoftOverspeed */
+    {
+      extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+      extern void UpdateFault(uint32_T fault);
+      SetFaultSuspected(103, rtb_LogicalOperator3_cj);
+      UpdateFault(103);
+    }
+
+    /* Sum: '<S344>/Sum5' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration4'
+     */
+    i = ((int16_T)(BaseRevLimit_DataStore())) + ((int16_T)
+      (HardRevOffset_DataStore()));
+    if (i > 32767) {
+      i = 32767;
+    } else {
+      if (i <= -32768) {
+        i = -32768;
+      }
+    }
+
+    rtb_Switch2_m = (int16_T)i;
+
+    /* End of Sum: '<S344>/Sum5' */
+
+    /* RelationalOperator: '<S348>/LT' */
+    rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol >= rtb_Switch2_m);
+
+    /* Sum: '<S344>/Sum4' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S344>/motohawk_calibration1'
+     */
+    i = rtb_Switch2_m - ((int16_T)(RevLimitHyst_DataStore()));
+    if (i > 32767) {
+      i = 32767;
+    } else {
+      if (i <= -32768) {
+        i = -32768;
+      }
+    }
+
+    rtb_Sum4_e = (int16_T)i;
+
+    /* End of Sum: '<S344>/Sum4' */
+
+    /* RelationalOperator: '<S348>/LT1' */
+    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum4_e);
+
+    /* CombinatorialLogic: '<S351>/Combinatorial  Logic' */
+    {
+      uint_T rowidx= 0;
+
+      /* Compute the truth table row index corresponding to the input */
+      rowidx = (rowidx << 1) + (uint_T)(rtb_LogicalOperator3_cj != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
+
+      /* Copy the appropriate row of the table into the block output vector */
+      rtb_CombinatorialLogic_l[0] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx];
+      rtb_CombinatorialLogic_l[1] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+    }
+
+    /* Switch: '<S351>/Switch1' incorporates:
+     *  UnitDelay: '<S351>/Unit Delay'
+     */
+    if (rtb_CombinatorialLogic_l[1]) {
+      rtb_Switch1_l3 = rtb_CombinatorialLogic_l[0];
+    } else {
+      rtb_Switch1_l3 = BaseEngineController_LS_DWork.s351_UnitDelay_DSTATE;
+    }
+
+    /* End of Switch: '<S351>/Switch1' */
+
+    /* Switch: '<S348>/Switch2' incorporates:
+     *  Logic: '<S348>/Logical Operator'
+     */
+    if (rtb_Switch1_l3) {
+      rtb_Switch2_m = rtb_Sum4_e;
+    }
+
+    /* End of Switch: '<S348>/Switch2' */
+
     /* RelationalOperator: '<S344>/Overspeed2' */
+    rtb_RelationalOperator3_bp = (rtb_DataTypeConversion_ol > rtb_Switch2_m);
+
+    /* Sum: '<S345>/Sum5' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration'
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration4'
+     */
+    i = ((int16_T)(TwoStepRevLimit_DataStore())) + ((int16_T)
+      (TwoStepHardRevOffset_DataStore()));
+    if (i > 32767) {
+      i = 32767;
+    } else {
+      if (i <= -32768) {
+        i = -32768;
+      }
+    }
+
+    rtb_Switch2_m = (int16_T)i;
+
+    /* End of Sum: '<S345>/Sum5' */
+
+    /* RelationalOperator: '<S354>/LT' */
+    rtb_LogicalOperator3_cj = (rtb_DataTypeConversion_ol >= rtb_Switch2_m);
+
+    /* Sum: '<S345>/Sum4' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S345>/motohawk_calibration1'
+     */
+    i = rtb_Switch2_m - ((int16_T)(TwoStepRevLimitHyst_DataStore()));
+    if (i > 32767) {
+      i = 32767;
+    } else {
+      if (i <= -32768) {
+        i = -32768;
+      }
+    }
+
+    rtb_Sum4_e = (int16_T)i;
+
+    /* End of Sum: '<S345>/Sum4' */
+
+    /* RelationalOperator: '<S354>/LT1' */
+    rtb_BelowLoTarget_j = (rtb_DataTypeConversion_ol <= rtb_Sum4_e);
+
+    /* CombinatorialLogic: '<S357>/Combinatorial  Logic' */
+    {
+      uint_T rowidx= 0;
+
+      /* Compute the truth table row index corresponding to the input */
+      rowidx = (rowidx << 1) + (uint_T)(rtb_LogicalOperator3_cj != 0);
+      rowidx = (rowidx << 1) + (uint_T)(rtb_BelowLoTarget_j != 0);
+
+      /* Copy the appropriate row of the table into the block output vector */
+      rtb_CombinatorialLogic_l[0] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx];
+      rtb_CombinatorialLogic_l[1] =
+        BaseEngineController_LS_ConstP.pooled908[rowidx + 4];
+    }
+
+    /* Switch: '<S357>/Switch1' incorporates:
+     *  UnitDelay: '<S357>/Unit Delay'
+     */
+    if (rtb_CombinatorialLogic_l[1]) {
+      rtb_Switch1_bv = rtb_CombinatorialLogic_l[0];
+    } else {
+      rtb_Switch1_bv = BaseEngineController_LS_DWork.s357_UnitDelay_DSTATE;
+    }
+
+    /* End of Switch: '<S357>/Switch1' */
+
+    /* Switch: '<S354>/Switch2' incorporates:
+     *  Logic: '<S354>/Logical Operator'
+     */
+    if (rtb_Switch1_bv) {
+      rtb_Switch2_m = rtb_Sum4_e;
+    }
+
+    /* End of Switch: '<S354>/Switch2' */
+
+    /* RelationalOperator: '<S345>/Overspeed2' */
     rtb_RelOp_pu = (rtb_DataTypeConversion_ol > rtb_Switch2_m);
 
-    /* Switch: '<S331>/Switch1' incorporates:
-     *  Logic: '<S343>/Logical Operator5'
-     *  Logic: '<S343>/Logical Operator6'
+    /* Switch: '<S332>/Switch1' incorporates:
      *  Logic: '<S344>/Logical Operator5'
      *  Logic: '<S344>/Logical Operator6'
+     *  Logic: '<S345>/Logical Operator5'
+     *  Logic: '<S345>/Logical Operator6'
      */
     if (rtb_RelOp_mp) {
       rtb_LogicalOperator3_cj = (rtb_LogicalOperator6_b &&
@@ -18323,60 +18320,60 @@ void BaseEngineController_LS_Foreground(void)
       rtb_LogicalOperator3_cj = (rtb_LogicalOperator1_al && (!rtb_RelOp_pu));
     }
 
-    /* End of Switch: '<S331>/Switch1' */
+    /* End of Switch: '<S332>/Switch1' */
 
-    /* S-Function (motohawk_sfun_fault_def): '<S331>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: MediumOverspeed */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(96, rtb_LogicalOperator3_cj);
-      UpdateFault(96);
+      SetFaultSuspected(93, rtb_LogicalOperator3_cj);
+      UpdateFault(93);
     }
 
-    /* Switch: '<S331>/Switch2' */
+    /* Switch: '<S332>/Switch2' */
     if (rtb_RelOp_mp) {
       rtb_RelOp_mp = rtb_RelationalOperator3_bp;
     } else {
       rtb_RelOp_mp = rtb_RelOp_pu;
     }
 
-    /* End of Switch: '<S331>/Switch2' */
+    /* End of Switch: '<S332>/Switch2' */
 
-    /* S-Function (motohawk_sfun_fault_def): '<S331>/motohawk_fault_def3' */
+    /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def3' */
 
     /* Set Fault Suspected Status: HardOverspeed */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(71, rtb_RelOp_mp);
-      UpdateFault(71);
+      SetFaultSuspected(70, rtb_RelOp_mp);
+      UpdateFault(70);
     }
 
-    /* Logic: '<S332>/Logical Operator3' incorporates:
-     *  Logic: '<S332>/Logical Operator1'
-     *  S-Function (motohawk_sfun_fault_status): '<S332>/motohawk_fault_status'
-     *  S-Function (motohawk_sfun_fault_status): '<S332>/motohawk_fault_status1'
+    /* Logic: '<S333>/Logical Operator3' incorporates:
+     *  Logic: '<S333>/Logical Operator1'
+     *  S-Function (motohawk_sfun_fault_status): '<S333>/motohawk_fault_status'
+     *  S-Function (motohawk_sfun_fault_status): '<S333>/motohawk_fault_status1'
      */
     rtb_LogicalOperator3_cj = !(IsFaultActive(60) || IsFaultActive(61) ||
-      BaseEngineController_LS_B.s574_Merge);
+      BaseEngineController_LS_B.s575_Merge);
 
-    /* Sum: '<S332>/Sum3' incorporates:
-     *  S-Function (motohawk_sfun_calibration): '<S332>/motohawk_calibration2'
+    /* Sum: '<S333>/Sum3' incorporates:
+     *  S-Function (motohawk_sfun_calibration): '<S333>/motohawk_calibration2'
      */
-    rtb_motohawk_interpolation_1d3_a = BaseEngineController_LS_B.s408_Sum3 -
+    rtb_motohawk_interpolation_1d3_a = BaseEngineController_LS_B.s409_Sum3 -
       (FuelPres_DeltaTarget_DataStore());
 
-    /* Logic: '<S332>/Logical Operator4' incorporates:
-     *  Gain: '<S332>/invert'
-     *  RelationalOperator: '<S332>/Relational Operator1'
-     *  S-Function (motohawk_sfun_calibration): '<S332>/motohawk_calibration3'
+    /* Logic: '<S333>/Logical Operator4' incorporates:
+     *  Gain: '<S333>/invert'
+     *  RelationalOperator: '<S333>/Relational Operator1'
+     *  S-Function (motohawk_sfun_calibration): '<S333>/motohawk_calibration3'
      */
     rtb_LogicalOperator4_j = ((rtb_LogicalOperator3_cj &&
       (rtb_motohawk_interpolation_1d3_a < -(FuelPres_DeltaTolerance_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S333>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: FuelPresLow_Fault */
     {
@@ -18386,14 +18383,14 @@ void BaseEngineController_LS_Foreground(void)
       UpdateFault(59);
     }
 
-    /* Logic: '<S332>/Logical Operator2' incorporates:
-     *  RelationalOperator: '<S332>/Relational Operator3'
-     *  S-Function (motohawk_sfun_calibration): '<S332>/motohawk_calibration3'
+    /* Logic: '<S333>/Logical Operator2' incorporates:
+     *  RelationalOperator: '<S333>/Relational Operator3'
+     *  S-Function (motohawk_sfun_calibration): '<S333>/motohawk_calibration3'
      */
     rtb_LogicalOperator2_o4 = ((rtb_LogicalOperator3_cj &&
       (rtb_motohawk_interpolation_1d3_a > (FuelPres_DeltaTolerance_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S332>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S333>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: FuelPresHigh_Fault */
     {
@@ -18403,27 +18400,27 @@ void BaseEngineController_LS_Foreground(void)
       UpdateFault(58);
     }
 
-    /* Logic: '<S326>/Logical Operator3' incorporates:
-     *  Logic: '<S326>/Logical Operator1'
-     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status'
-     *  S-Function (motohawk_sfun_fault_status): '<S326>/motohawk_fault_status1'
+    /* Logic: '<S327>/Logical Operator3' incorporates:
+     *  Logic: '<S327>/Logical Operator1'
+     *  S-Function (motohawk_sfun_fault_status): '<S327>/motohawk_fault_status'
+     *  S-Function (motohawk_sfun_fault_status): '<S327>/motohawk_fault_status1'
      */
     rtb_LogicalOperator3_cj = !(IsFaultActive(32) || IsFaultActive(33));
 
-    /* RelationalOperator: '<S335>/RelOp' incorporates:
-     *  Constant: '<S335>/Constant'
-     *  S-Function (motohawk_sfun_data_read): '<S326>/motohawk_data_read'
+    /* RelationalOperator: '<S336>/RelOp' incorporates:
+     *  Constant: '<S336>/Constant'
+     *  S-Function (motohawk_sfun_data_read): '<S327>/motohawk_data_read'
      */
     rtb_RelOp_mp = (((uint8_T)EngineState_DataStore()) == 3);
 
-    /* Logic: '<S326>/Logical Operator2' incorporates:
-     *  RelationalOperator: '<S326>/Relational Operator3'
-     *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration2'
+    /* Logic: '<S327>/Logical Operator2' incorporates:
+     *  RelationalOperator: '<S327>/Relational Operator3'
+     *  S-Function (motohawk_sfun_calibration): '<S327>/motohawk_calibration2'
      */
     rtb_LogicalOperator2_ie = ((rtb_LogicalOperator3_cj && rtb_RelOp_mp &&
-      (BaseEngineController_LS_B.s726_Merge >= (TempOverheat_Fault_DataStore()))));
+      (BaseEngineController_LS_B.s727_Merge >= (TempOverheat_Fault_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S327>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: ECTOverTempFault */
     {
@@ -18433,15 +18430,15 @@ void BaseEngineController_LS_Foreground(void)
       UpdateFault(31);
     }
 
-    /* Logic: '<S326>/Logical Operator4' incorporates:
-     *  RelationalOperator: '<S326>/Relational Operator2'
-     *  S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration3'
+    /* Logic: '<S327>/Logical Operator4' incorporates:
+     *  RelationalOperator: '<S327>/Relational Operator2'
+     *  S-Function (motohawk_sfun_calibration): '<S327>/motohawk_calibration3'
      */
     rtb_LogicalOperator4_jz = ((rtb_LogicalOperator3_cj && rtb_RelOp_mp &&
-      (BaseEngineController_LS_B.s726_Merge >=
+      (BaseEngineController_LS_B.s727_Merge >=
        (TempOverheatSevere_Fault_DataStore()))));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S326>/motohawk_fault_def2' */
+    /* S-Function (motohawk_sfun_fault_def): '<S327>/motohawk_fault_def2' */
 
     /* Set Fault Suspected Status: ECTSevereOverTempFault */
     {
@@ -18451,246 +18448,246 @@ void BaseEngineController_LS_Foreground(void)
       UpdateFault(34);
     }
 
-    /* S-Function (motohawk_sfun_calibration): '<S326>/motohawk_calibration1' */
+    /* S-Function (motohawk_sfun_calibration): '<S327>/motohawk_calibration1' */
     rtb_motohawk_interpolation_1d3_a = (TempOverheat_Warn_DataStore());
 
-    /* Gain: '<S327>/inj//min to inj//hr' incorporates:
-     *  DataTypeConversion: '<S327>/Data Type Conversion'
-     *  Product: '<S327>/RPM to inj//min'
-     *  S-Function (motohawk_sfun_data_read): '<S327>/Number of Combustion Events Per Revolution'
+    /* Gain: '<S328>/inj//min to inj//hr' incorporates:
+     *  DataTypeConversion: '<S328>/Data Type Conversion'
+     *  Product: '<S328>/RPM to inj//min'
+     *  S-Function (motohawk_sfun_data_read): '<S328>/Number of Combustion Events Per Revolution'
      */
-    rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s616_Sum1 * (real_T)
+    rtb_DataTypeConversion1_e = BaseEngineController_LS_B.s617_Sum1 * (real_T)
       ((uint8_T)CombEventsPerRev_DataStore()) * 60.0;
 
-    /* Gain: '<S336>/Gain' */
+    /* Gain: '<S337>/Gain' */
     rtb_motohawk_interpolation_1d3_a = 0.01 *
-      BaseEngineController_LS_B.s638_Merge;
+      BaseEngineController_LS_B.s639_Merge;
 
-    /* Gain: '<S327>/g to mg' incorporates:
-     *  Constant: '<S336>/ '
-     *  Constant: '<S336>/ Ethanol density (g//ml)'
-     *  Constant: '<S336>/ Gasoline density (g//ml)'
-     *  Product: '<S336>/Product1'
-     *  Product: '<S336>/Product2'
-     *  Sum: '<S336>/Add'
-     *  Sum: '<S336>/Add1'
+    /* Gain: '<S328>/g to mg' incorporates:
+     *  Constant: '<S337>/ '
+     *  Constant: '<S337>/ Ethanol density (g//ml)'
+     *  Constant: '<S337>/ Gasoline density (g//ml)'
+     *  Product: '<S337>/Product1'
+     *  Product: '<S337>/Product2'
+     *  Sum: '<S337>/Add'
+     *  Sum: '<S337>/Add1'
      */
     rtb_DataTypeConversion_b2 = ((1.0 - rtb_motohawk_interpolation_1d3_a) *
       0.737 + 0.789 * rtb_motohawk_interpolation_1d3_a) * 1000.0;
     for (i = 0; i < 8; i++) {
-      /* Gain: '<S327>/ml//hr to gal//hr' incorporates:
-       *  Product: '<S327>/Mass flow to Volume flow mg//hr to ml//hr'
-       *  Product: '<S327>/inj//hr to mg//hr'
+      /* Gain: '<S328>/ml//hr to gal//hr' incorporates:
+       *  Product: '<S328>/Mass flow to Volume flow mg//hr to ml//hr'
+       *  Product: '<S328>/inj//hr to mg//hr'
        */
       rtb_UnitDelay4_b3 = rtb_DataTypeConversion1_e *
         BaseEngineController_LS_B.s135_FPC[i] / rtb_DataTypeConversion_b2 *
         0.00026417205263729591;
 
-      /* RelationalOperator: '<S327>/Relational Operator7' incorporates:
-       *  Constant: '<S327>/Min fuel flow  for calc'
+      /* RelationalOperator: '<S328>/Relational Operator7' incorporates:
+       *  Constant: '<S328>/Min fuel flow  for calc'
        */
       rtb_LogicalOperator1_aj[i] = (rtb_UnitDelay4_b3 > 0.1);
 
-      /* Gain: '<S327>/ml//hr to gal//hr' */
+      /* Gain: '<S328>/ml//hr to gal//hr' */
       rtb_Product2_aa[i] = rtb_UnitDelay4_b3;
     }
 
-    /* Outputs for Enabled SubSystem: '<S327>/Multiply and Divide, avoiding divde by zero1' incorporates:
-     *  EnablePort: '<S338>/Enable'
+    /* Outputs for Enabled SubSystem: '<S328>/Multiply and Divide, avoiding divde by zero1' incorporates:
+     *  EnablePort: '<S339>/Enable'
      */
     if (rtb_LogicalOperator1_aj[0] || rtb_LogicalOperator1_aj[1] ||
         rtb_LogicalOperator1_aj[2] || rtb_LogicalOperator1_aj[3] ||
         rtb_LogicalOperator1_aj[4] || rtb_LogicalOperator1_aj[5] ||
         rtb_LogicalOperator1_aj[6] || rtb_LogicalOperator1_aj[7]) {
-      /* Product: '<S338>/charge mass' */
+      /* Product: '<S339>/charge mass' */
       for (i = 0; i < 8; i++) {
-        BaseEngineController_LS_B.s338_chargemass[i] =
-          BaseEngineController_LS_B.s416_Switch2 / rtb_Product2_aa[i];
+        BaseEngineController_LS_B.s339_chargemass[i] =
+          BaseEngineController_LS_B.s417_Switch2 / rtb_Product2_aa[i];
       }
 
-      /* End of Product: '<S338>/charge mass' */
+      /* End of Product: '<S339>/charge mass' */
     }
 
-    /* End of Outputs for SubSystem: '<S327>/Multiply and Divide, avoiding divde by zero1' */
+    /* End of Outputs for SubSystem: '<S328>/Multiply and Divide, avoiding divde by zero1' */
 
-    /* Switch: '<S327>/Default (if no flow)' incorporates:
-     *  Constant: '<S327>/Default value'
+    /* Switch: '<S328>/Default (if no flow)' incorporates:
+     *  Constant: '<S328>/Default value'
      */
     for (i = 0; i < 8; i++) {
       if (rtb_LogicalOperator1_aj[i]) {
-        BaseEngineController_LS_B.s327_Defaultifnoflow[i] =
-          BaseEngineController_LS_B.s338_chargemass[i];
+        BaseEngineController_LS_B.s328_Defaultifnoflow[i] =
+          BaseEngineController_LS_B.s339_chargemass[i];
       } else {
-        BaseEngineController_LS_B.s327_Defaultifnoflow[i] = 0.0;
+        BaseEngineController_LS_B.s328_Defaultifnoflow[i] = 0.0;
       }
     }
 
-    /* End of Switch: '<S327>/Default (if no flow)' */
+    /* End of Switch: '<S328>/Default (if no flow)' */
 
-    /* S-Function Block: <S337>/motohawk_delta_time */
+    /* S-Function Block: <S338>/motohawk_delta_time */
     {
       uint32_T delta;
       extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us
         (uint32_T * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
       delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-        (&BaseEngineController_LS_DWork.s337_motohawk_delta_time_DWORK1, NULL);
+        (&BaseEngineController_LS_DWork.s338_motohawk_delta_time_DWORK1, NULL);
       rtb_motohawk_interpolation_1d3_a = ((real_T) delta) * 0.000001;
     }
 
-    /* Product: '<S337>/Product' incorporates:
-     *  MinMax: '<S337>/MinMax'
-     *  S-Function (motohawk_sfun_calibration): '<S337>/motohawk_calibration2'
+    /* Product: '<S338>/Product' incorporates:
+     *  MinMax: '<S338>/MinMax'
+     *  S-Function (motohawk_sfun_calibration): '<S338>/motohawk_calibration2'
      */
     rtb_motohawk_interpolation_1d3_a /= (rtb_motohawk_interpolation_1d3_a >=
       (FuelEconomy_FilterC_DataStore())) || rtIsNaN
       ((FuelEconomy_FilterC_DataStore())) ? rtb_motohawk_interpolation_1d3_a :
       (FuelEconomy_FilterC_DataStore());
 
-    /* Sum: '<S339>/Sum' incorporates:
-     *  Constant: '<S339>/Constant'
+    /* Sum: '<S340>/Sum' incorporates:
+     *  Constant: '<S340>/Constant'
      */
     rtb_DataTypeConversion1_e = 1.0 - rtb_motohawk_interpolation_1d3_a;
 
-    /* Sum: '<S339>/Sum1' incorporates:
-     *  Product: '<S339>/Product'
-     *  Product: '<S339>/Product1'
-     *  UnitDelay: '<S339>/Unit Delay'
+    /* Sum: '<S340>/Sum1' incorporates:
+     *  Product: '<S340>/Product'
+     *  Product: '<S340>/Product1'
+     *  UnitDelay: '<S340>/Unit Delay'
      */
     for (i = 0; i < 8; i++) {
-      BaseEngineController_LS_B.s339_Sum1[i] =
-        BaseEngineController_LS_B.s327_Defaultifnoflow[i] *
+      BaseEngineController_LS_B.s340_Sum1[i] =
+        BaseEngineController_LS_B.s328_Defaultifnoflow[i] *
         rtb_motohawk_interpolation_1d3_a + rtb_DataTypeConversion1_e *
-        BaseEngineController_LS_DWork.s339_UnitDelay_DSTATE[i];
+        BaseEngineController_LS_DWork.s340_UnitDelay_DSTATE[i];
     }
 
-    /* End of Sum: '<S339>/Sum1' */
+    /* End of Sum: '<S340>/Sum1' */
 
-    /* Logic: '<S329>/Logical Operator1' incorporates:
-     *  S-Function (motohawk_sfun_fault_status): '<S329>/motohawk_fault_status'
-     *  S-Function (motohawk_sfun_fault_status): '<S329>/motohawk_fault_status1'
+    /* Logic: '<S330>/Logical Operator1' incorporates:
+     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status'
+     *  S-Function (motohawk_sfun_fault_status): '<S330>/motohawk_fault_status1'
      */
-    rtb_LogicalOperator6_b = (IsFaultActive(101) || IsFaultActive(102));
+    rtb_LogicalOperator6_b = (IsFaultActive(98) || IsFaultActive(99));
 
-    /* RelationalOperator: '<S341>/RelOp' incorporates:
-     *  Constant: '<S341>/Constant'
+    /* RelationalOperator: '<S342>/RelOp' incorporates:
+     *  Constant: '<S342>/Constant'
      */
-    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s428_State == 3);
+    rtb_LogicalOperator1_al = (BaseEngineController_LS_B.s429_State == 3);
 
-    /* S-Function Block: <S329>/motohawk_interpolation_1d */
+    /* S-Function Block: <S330>/motohawk_interpolation_1d */
     {
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
       rtb_motohawk_interpolation_1d_n = TableInterpolation1D_real_T
-        (BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((MinOilPressure_FaultTbl_DataStore())), 9);
       (MinOilPressure_Fault_DataStore()) = rtb_motohawk_interpolation_1d_n;
     }
 
-    /* Logic: '<S329>/Logical Operator4' incorporates:
-     *  Logic: '<S329>/Logical Operator3'
-     *  RelationalOperator: '<S329>/Relational Operator2'
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S329>/motohawk_interpolation_1d'
+    /* Logic: '<S330>/Logical Operator4' incorporates:
+     *  Logic: '<S330>/Logical Operator3'
+     *  RelationalOperator: '<S330>/Relational Operator2'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S330>/motohawk_interpolation_1d'
      */
     rtb_LogicalOperator4_mv = (((!rtb_LogicalOperator6_b) &&
-      rtb_LogicalOperator1_al && (BaseEngineController_LS_B.s677_Merge <
+      rtb_LogicalOperator1_al && (BaseEngineController_LS_B.s678_Merge <
       rtb_motohawk_interpolation_1d_n)));
 
-    /* S-Function (motohawk_sfun_fault_def): '<S329>/motohawk_fault_def1' */
+    /* S-Function (motohawk_sfun_fault_def): '<S330>/motohawk_fault_def1' */
 
     /* Set Fault Suspected Status: NoOil_Fault */
     {
       extern void SetFaultSuspected(uint32_T fault, boolean_T val);
       extern void UpdateFault(uint32_T fault);
-      SetFaultSuspected(97, rtb_LogicalOperator4_mv);
-      UpdateFault(97);
+      SetFaultSuspected(94, rtb_LogicalOperator4_mv);
+      UpdateFault(94);
     }
 
-    /* S-Function Block: <S329>/motohawk_interpolation_1d3 */
+    /* S-Function Block: <S330>/motohawk_interpolation_1d3 */
     {
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
       rtb_motohawk_interpolation_1d3_a = TableInterpolation1D_real_T
-        (BaseEngineController_LS_B.s397_motohawk_prelookup1, (real_T *)
+        (BaseEngineController_LS_B.s398_motohawk_prelookup1, (real_T *)
          ((MinOilPressure_WarnTbl_DataStore())), 9);
       (MinOilPressure_Warn_DataStore()) = rtb_motohawk_interpolation_1d3_a;
     }
 
-    /* Update for UnitDelay: '<S348>/Unit Delay' */
-    BaseEngineController_LS_DWork.s348_UnitDelay_DSTATE = rtb_Switch1_mj;
-
     /* Update for UnitDelay: '<S349>/Unit Delay' */
-    BaseEngineController_LS_DWork.s349_UnitDelay_DSTATE = rtb_RelOp_d;
-
-    /* Update for UnitDelay: '<S354>/Unit Delay' */
-    BaseEngineController_LS_DWork.s354_UnitDelay_DSTATE = rtb_Switch1_l;
-
-    /* Update for UnitDelay: '<S355>/Unit Delay' */
-    BaseEngineController_LS_DWork.s355_UnitDelay_DSTATE = rtb_Switch1_o;
+    BaseEngineController_LS_DWork.s349_UnitDelay_DSTATE = rtb_Switch1_mj;
 
     /* Update for UnitDelay: '<S350>/Unit Delay' */
-    BaseEngineController_LS_DWork.s350_UnitDelay_DSTATE = rtb_Switch1_l3;
+    BaseEngineController_LS_DWork.s350_UnitDelay_DSTATE = rtb_RelOp_d;
+
+    /* Update for UnitDelay: '<S355>/Unit Delay' */
+    BaseEngineController_LS_DWork.s355_UnitDelay_DSTATE = rtb_Switch1_l;
 
     /* Update for UnitDelay: '<S356>/Unit Delay' */
-    BaseEngineController_LS_DWork.s356_UnitDelay_DSTATE = rtb_Switch1_bv;
+    BaseEngineController_LS_DWork.s356_UnitDelay_DSTATE = rtb_Switch1_o;
 
-    /* Update for UnitDelay: '<S339>/Unit Delay' */
-    memcpy((void *)BaseEngineController_LS_DWork.s339_UnitDelay_DSTATE, (void *)
-           (&BaseEngineController_LS_B.s339_Sum1[0]), sizeof(real_T) << 3U);
+    /* Update for UnitDelay: '<S351>/Unit Delay' */
+    BaseEngineController_LS_DWork.s351_UnitDelay_DSTATE = rtb_Switch1_l3;
+
+    /* Update for UnitDelay: '<S357>/Unit Delay' */
+    BaseEngineController_LS_DWork.s357_UnitDelay_DSTATE = rtb_Switch1_bv;
+
+    /* Update for UnitDelay: '<S340>/Unit Delay' */
+    memcpy((void *)BaseEngineController_LS_DWork.s340_UnitDelay_DSTATE, (void *)
+           (&BaseEngineController_LS_B.s340_Sum1[0]), sizeof(real_T) << 3U);
 
     /* End of Outputs for SubSystem: '<S11>/Diagnostics' */
   }
 
-  /* Saturate: '<S370>/Saturation' */
+  /* Saturate: '<S371>/Saturation' */
   rtb_Saturation_k2 = rtb_Switch_f >= 16000.0 ? 16000.0 : rtb_Switch_f <= 0.0 ?
     0.0 : rtb_Switch_f;
 
-  /* S-Function (motohawk_sfun_data_write): '<S370>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S371>/motohawk_data_write' */
   /* Write to Data Storage as scalar: BaroLearnTmr */
   {
     BaroLearnTmr_DataStore() = rtb_Saturation_k2;
   }
 
-  /* RelationalOperator: '<S373>/Compare' incorporates:
-   *  Constant: '<S373>/Constant'
+  /* RelationalOperator: '<S374>/Compare' incorporates:
+   *  Constant: '<S374>/Constant'
    */
-  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s428_State == 3);
+  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s429_State == 3);
 
-  /* Logic: '<S366>/Logical Operator1' incorporates:
-   *  S-Function (motohawk_sfun_fault_action): '<S366>/motohawk_fault_action1'
+  /* Logic: '<S367>/Logical Operator1' incorporates:
+   *  S-Function (motohawk_sfun_fault_action): '<S367>/motohawk_fault_action1'
    */
   rtb_LogicalOperator1_al = !GetFaultActionStatus(5);
 
-  /* RelationalOperator: '<S366>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration2'
+  /* RelationalOperator: '<S367>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S367>/motohawk_calibration2'
    */
-  rtb_RelationalOperator3_bp = (BaseEngineController_LS_B.s726_Merge >=
+  rtb_RelationalOperator3_bp = (BaseEngineController_LS_B.s727_Merge >=
     (VEAdaptTemp_DataStore()));
 
-  /* RelationalOperator: '<S366>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration3'
+  /* RelationalOperator: '<S367>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S367>/motohawk_calibration3'
    */
-  rtb_RelOp_pu = (BaseEngineController_LS_B.s433_Switch >=
+  rtb_RelOp_pu = (BaseEngineController_LS_B.s434_Switch >=
                   (VEAdaptTime_DataStore()));
 
-  /* Logic: '<S366>/Logical Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S366>/motohawk_calibration'
+  /* Logic: '<S367>/Logical Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S367>/motohawk_calibration'
    */
-  BaseEngineController_LS_B.s366_LogicalOperator = ((rtb_LogicalOperator6_b &&
-    rtb_LogicalOperator1_al && BaseEngineController_LS_B.s382_LogicalOperator &&
+  BaseEngineController_LS_B.s367_LogicalOperator = ((rtb_LogicalOperator6_b &&
+    rtb_LogicalOperator1_al && BaseEngineController_LS_B.s383_LogicalOperator &&
     rtb_RelationalOperator3_bp && rtb_RelOp_pu && (VEAdaptEnable_DataStore())));
 
-  /* Outputs for Enabled SubSystem: '<S366>/Adapt VolEff Map' incorporates:
-   *  EnablePort: '<S371>/Enable'
+  /* Outputs for Enabled SubSystem: '<S367>/Adapt VolEff Map' incorporates:
+   *  EnablePort: '<S372>/Enable'
    */
-  if (BaseEngineController_LS_B.s366_LogicalOperator) {
-    /* Product: '<S371>/Divide' incorporates:
-     *  Sum: '<S371>/Add'
+  if (BaseEngineController_LS_B.s367_LogicalOperator) {
+    /* Product: '<S372>/Divide' incorporates:
+     *  Sum: '<S372>/Add'
      */
-    rtb_Divide_p = (BaseEngineController_LS_B.s581_Merge -
-                    BaseEngineController_LS_B.s366_ModelAirMassFlowRate) /
-      BaseEngineController_LS_B.s366_ModelAirMassFlowRate;
+    rtb_Divide_p = (BaseEngineController_LS_B.s582_Merge -
+                    BaseEngineController_LS_B.s367_ModelAirMassFlowRate) /
+      BaseEngineController_LS_B.s367_ModelAirMassFlowRate;
 
-    /* S-Function Block: <S374>/motohawk_prelookup */
+    /* S-Function Block: <S375>/motohawk_prelookup */
     {
       extern uint16_T TablePrelookup_real_T(real_T in, const volatile real_T
         ordarr[], uint32_T sz, uint16_T prev);
@@ -18701,7 +18698,7 @@ void BaseEngineController_LS_Foreground(void)
       rtb_motohawk_prelookup_jn = (VE_AdaptErrorIdxArrIdx_DataStore());
     }
 
-    /* S-Function Block: <S374>/motohawk_interpolation_1d */
+    /* S-Function Block: <S375>/motohawk_interpolation_1d */
     {
       extern real_T TableInterpolation1D_real_T(uint16_T idx, real_T *tbl_data,
         uint32_T sz);
@@ -18711,15 +18708,15 @@ void BaseEngineController_LS_Foreground(void)
       (VEAdaptGainTbl_DataStore()) = rtb_motohawk_interpolation_1d_kd;
     }
 
-    /* Product: '<S371>/Divide1' incorporates:
-     *  Product: '<S371>/Divide2'
-     *  S-Function (motohawk_sfun_interpolation_1d): '<S374>/motohawk_interpolation_1d'
-     *  S-Function (motohawk_sfun_prelookup): '<S374>/motohawk_prelookup'
+    /* Product: '<S372>/Divide1' incorporates:
+     *  Product: '<S372>/Divide2'
+     *  S-Function (motohawk_sfun_interpolation_1d): '<S375>/motohawk_interpolation_1d'
+     *  S-Function (motohawk_sfun_prelookup): '<S375>/motohawk_prelookup'
      */
-    rtb_Divide1 = BaseEngineController_LS_B.s366_Sum * rtb_Divide_p *
+    rtb_Divide1 = BaseEngineController_LS_B.s367_Sum * rtb_Divide_p *
       rtb_motohawk_interpolation_1d_kd;
 
-    /* S-Function Block: <S371>/motohawk_adapt_table */
+    /* S-Function Block: <S372>/motohawk_adapt_table */
     /* Adapt 2-D Table */
     {
       uint32_T _row = ((VEMapIdx_DataStore())) >> 9;
@@ -18823,51 +18820,51 @@ void BaseEngineController_LS_Foreground(void)
     }
   }
 
-  /* End of Outputs for SubSystem: '<S366>/Adapt VolEff Map' */
+  /* End of Outputs for SubSystem: '<S367>/Adapt VolEff Map' */
 
-  /* Outputs for Enabled SubSystem: '<S358>/FuelLevelWrite' incorporates:
-   *  EnablePort: '<S378>/Enable'
+  /* Outputs for Enabled SubSystem: '<S359>/FuelLevelWrite' incorporates:
+   *  EnablePort: '<S379>/Enable'
    */
   if (rtb_RelationalOperator_h) {
-    /* S-Function (motohawk_sfun_data_write): '<S378>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S379>/motohawk_data_write' */
     /* Write to Data Storage as scalar: FuelLvl_NVM */
     {
-      FuelLvl_NVM_DataStore() = BaseEngineController_LS_B.s377_Sum1;
+      FuelLvl_NVM_DataStore() = BaseEngineController_LS_B.s378_Sum1;
     }
   }
 
-  /* End of Outputs for SubSystem: '<S358>/FuelLevelWrite' */
-
-  /* UnitDelay: '<S383>/Unit Delay1' */
-  rtb_DesiredLambda_idx = BaseEngineController_LS_DWork.s383_UnitDelay1_DSTATE;
-
-  /* UnitDelay: '<S383>/Unit Delay3' */
-  rtb_DesiredLambda_idx_0 = BaseEngineController_LS_DWork.s383_UnitDelay3_DSTATE;
-
-  /* UnitDelay: '<S383>/Unit Delay4' */
-  rtb_DesiredLambda_idx_1 = BaseEngineController_LS_DWork.s383_UnitDelay4_DSTATE;
+  /* End of Outputs for SubSystem: '<S359>/FuelLevelWrite' */
 
   /* UnitDelay: '<S384>/Unit Delay1' */
-  rtb_UnitDelay1_k = BaseEngineController_LS_DWork.s384_UnitDelay1_DSTATE;
+  rtb_DesiredLambda_idx = BaseEngineController_LS_DWork.s384_UnitDelay1_DSTATE;
 
   /* UnitDelay: '<S384>/Unit Delay3' */
-  rtb_UnitDelay3_j = BaseEngineController_LS_DWork.s384_UnitDelay3_DSTATE;
+  rtb_DesiredLambda_idx_0 = BaseEngineController_LS_DWork.s384_UnitDelay3_DSTATE;
 
   /* UnitDelay: '<S384>/Unit Delay4' */
-  rtb_UnitDelay4_ie = BaseEngineController_LS_DWork.s384_UnitDelay4_DSTATE;
+  rtb_DesiredLambda_idx_1 = BaseEngineController_LS_DWork.s384_UnitDelay4_DSTATE;
 
-  /* Sum: '<S401>/Sum' */
+  /* UnitDelay: '<S385>/Unit Delay1' */
+  rtb_UnitDelay1_k = BaseEngineController_LS_DWork.s385_UnitDelay1_DSTATE;
+
+  /* UnitDelay: '<S385>/Unit Delay3' */
+  rtb_UnitDelay3_j = BaseEngineController_LS_DWork.s385_UnitDelay3_DSTATE;
+
+  /* UnitDelay: '<S385>/Unit Delay4' */
+  rtb_UnitDelay4_ie = BaseEngineController_LS_DWork.s385_UnitDelay4_DSTATE;
+
+  /* Sum: '<S402>/Sum' */
   rtb_Abs_co = rtb_APP1 - rtb_APP2;
 
-  /* Abs: '<S401>/Abs' */
+  /* Abs: '<S402>/Abs' */
   rtb_Abs_co = fabs(rtb_Abs_co);
 
-  /* RelationalOperator: '<S401>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S401>/motohawk_calibration2'
+  /* RelationalOperator: '<S402>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S402>/motohawk_calibration2'
    */
   rtb_RelationalOperator3_h = ((rtb_Abs_co > (APP1_APP2_Max_Deviation_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S401>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S402>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: APP_Sensors_Conflict */
   {
@@ -18877,70 +18874,70 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(20);
   }
 
-  /* S-Function (motohawk_sfun_data_write): '<S407>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S408>/motohawk_data_write' */
   /* Write to Data Storage as scalar: EngineState */
   {
-    EngineState_DataStore() = BaseEngineController_LS_B.s428_State;
+    EngineState_DataStore() = BaseEngineController_LS_B.s429_State;
   }
 
-  /* Sum: '<S412>/Sum' */
-  rtb_Abs_co = BaseEngineController_LS_B.s829_Merge -
-    BaseEngineController_LS_B.s846_Merge;
+  /* Sum: '<S413>/Sum' */
+  rtb_Abs_co = BaseEngineController_LS_B.s830_Merge -
+    BaseEngineController_LS_B.s847_Merge;
 
-  /* Abs: '<S412>/Abs' */
+  /* Abs: '<S413>/Abs' */
   rtb_Abs_co = fabs(rtb_Abs_co);
 
-  /* RelationalOperator: '<S412>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S412>/motohawk_calibration2'
+  /* RelationalOperator: '<S413>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S413>/motohawk_calibration2'
    */
   rtb_RelationalOperator3_or = ((rtb_Abs_co > (TPS1_TPS2_Max_Deviation_DataStore
                                   ())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S412>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S413>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: TPS_Sensors_Conflict */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(121, rtb_RelationalOperator3_or);
-    UpdateFault(121);
+    SetFaultSuspected(118, rtb_RelationalOperator3_or);
+    UpdateFault(118);
   }
 
-  /* Saturate: '<S431>/Saturation' */
-  rtb_Saturation_ah = BaseEngineController_LS_B.s431_Sum >= 16000.0 ? 16000.0 :
-    BaseEngineController_LS_B.s431_Sum <= 0.0 ? 0.0 :
-    BaseEngineController_LS_B.s431_Sum;
+  /* Saturate: '<S432>/Saturation' */
+  rtb_Saturation_ah = BaseEngineController_LS_B.s432_Sum >= 16000.0 ? 16000.0 :
+    BaseEngineController_LS_B.s432_Sum <= 0.0 ? 0.0 :
+    BaseEngineController_LS_B.s432_Sum;
 
-  /* S-Function (motohawk_sfun_data_write): '<S431>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S432>/motohawk_data_write' */
   /* Write to Data Storage as scalar: TimeSinceKeyOnTimer */
   {
     TimeSinceKeyOnTimer_DataStore() = rtb_Saturation_ah;
   }
 
-  /* Saturate: '<S433>/Saturation' */
-  rtb_Saturation_m = BaseEngineController_LS_B.s433_Switch >= 16000.0 ? 16000.0 :
-    BaseEngineController_LS_B.s433_Switch <= 0.0 ? 0.0 :
-    BaseEngineController_LS_B.s433_Switch;
+  /* Saturate: '<S434>/Saturation' */
+  rtb_Saturation_m = BaseEngineController_LS_B.s434_Switch >= 16000.0 ? 16000.0 :
+    BaseEngineController_LS_B.s434_Switch <= 0.0 ? 0.0 :
+    BaseEngineController_LS_B.s434_Switch;
 
-  /* S-Function (motohawk_sfun_data_write): '<S433>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S434>/motohawk_data_write' */
   /* Write to Data Storage as scalar: TimeSinceRunTimer */
   {
     TimeSinceRunTimer_DataStore() = rtb_Saturation_m;
   }
 
-  /* Saturate: '<S435>/Saturation' */
-  rtb_Saturation_kf = BaseEngineController_LS_B.s435_Switch >= 16000.0 ? 16000.0
-    : BaseEngineController_LS_B.s435_Switch <= 0.0 ? 0.0 :
-    BaseEngineController_LS_B.s435_Switch;
+  /* Saturate: '<S436>/Saturation' */
+  rtb_Saturation_kf = BaseEngineController_LS_B.s436_Switch >= 16000.0 ? 16000.0
+    : BaseEngineController_LS_B.s436_Switch <= 0.0 ? 0.0 :
+    BaseEngineController_LS_B.s436_Switch;
 
-  /* S-Function (motohawk_sfun_data_write): '<S435>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S436>/motohawk_data_write' */
   /* Write to Data Storage as scalar: TimeSinceStallTimer */
   {
     TimeSinceStallTimer_DataStore() = rtb_Saturation_kf;
   }
 
-  /* Switch: '<S439>/Switch' incorporates:
-   *  Constant: '<S439>/Constant2'
+  /* Switch: '<S440>/Switch' incorporates:
+   *  Constant: '<S440>/Constant2'
    */
   if (rtb_RelationalOperator_jv) {
     rtb_Switch_kj = 0U;
@@ -18948,15 +18945,15 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Switch_kj = rtb_Sum_hh;
   }
 
-  /* End of Switch: '<S439>/Switch' */
-  /* RelationalOperator: '<S447>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S447>/motohawk_calibration1'
+  /* End of Switch: '<S440>/Switch' */
+  /* RelationalOperator: '<S448>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S448>/motohawk_calibration1'
    */
   rtb_RelationalOperator5_fz =
-    (BaseEngineController_LS_B.s447_ReadCANMessage1_o1 >= (uint32_T)((uint16_T)
+    (BaseEngineController_LS_B.s448_ReadCANMessage1_o1 >= (uint32_T)((uint16_T)
       (GPS_LatLong_Timeout_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S447>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: GPS_LatLong_Timeout */
   {
@@ -18966,13 +18963,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(67);
   }
 
-  /* RelationalOperator: '<S447>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S447>/motohawk_calibration'
+  /* RelationalOperator: '<S448>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S448>/motohawk_calibration'
    */
-  rtb_RelationalOperator5_fz = (BaseEngineController_LS_B.s447_ReadCANMessage_o1
+  rtb_RelationalOperator5_fz = (BaseEngineController_LS_B.s448_ReadCANMessage_o1
     >= (uint32_T)((uint16_T)(GPS_DateTime_Timeout_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S447>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: GPS_DateTime_Timeout */
   {
@@ -18982,105 +18979,66 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(66);
   }
 
-  /* Logic: '<S447>/Logical Operator' */
-  rtb_LogicalOperator_ay = !rtb_Merge_n2;
-
-  /* S-Function (motohawk_sfun_fault_def): '<S447>/motohawk_fault_def3' */
-
-  /* Set Fault Suspected Status: GPS_NotReady */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(68, rtb_LogicalOperator_ay);
-    UpdateFault(68);
-  }
-
-  /* RelationalOperator: '<S447>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S447>/motohawk_calibration2'
+  /* RelationalOperator: '<S448>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S448>/motohawk_calibration2'
    */
   rtb_RelationalOperator5_fz =
-    (BaseEngineController_LS_B.s447_ReadCANMessage2_o1 >= (uint32_T)((uint16_T)
+    (BaseEngineController_LS_B.s448_ReadCANMessage2_o1 >= (uint32_T)((uint16_T)
       (GPS_SpeedDir_Timeout_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S447>/motohawk_fault_def4' */
+  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def4' */
 
   /* Set Fault Suspected Status: GPS_SpeedDir_Timeout */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(69, rtb_RelationalOperator5_fz);
-    UpdateFault(69);
+    SetFaultSuspected(68, rtb_RelationalOperator5_fz);
+    UpdateFault(68);
   }
 
-  /* RelationalOperator: '<S448>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S448>/motohawk_calibration1'
+  /* RelationalOperator: '<S449>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S449>/motohawk_calibration1'
    */
   rtb_RelationalOperator5_fz =
-    (BaseEngineController_LS_B.s448_ReadCANMessage1_o1 >= (uint32_T)((uint16_T)
+    (BaseEngineController_LS_B.s449_ReadCANMessage1_o1 >= (uint32_T)((uint16_T)
       (Lambda_2_Timeout_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S449>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: Lambda_2_Timeout */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(85, rtb_RelationalOperator5_fz);
-    UpdateFault(85);
+    SetFaultSuspected(82, rtb_RelationalOperator5_fz);
+    UpdateFault(82);
   }
 
-  /* RelationalOperator: '<S448>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S448>/motohawk_calibration'
+  /* RelationalOperator: '<S449>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S449>/motohawk_calibration'
    */
-  rtb_RelationalOperator5_fz = (BaseEngineController_LS_B.s448_ReadCANMessage_o1
+  rtb_RelationalOperator5_fz = (BaseEngineController_LS_B.s449_ReadCANMessage_o1
     >= (uint32_T)((uint16_T)(Lambda_1_Timeout_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S449>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: Lambda_1_Timeout */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(83, rtb_RelationalOperator5_fz);
-    UpdateFault(83);
+    SetFaultSuspected(81, rtb_RelationalOperator5_fz);
+    UpdateFault(81);
   }
 
-  /* Logic: '<S448>/Logical Operator' */
-  rtb_LogicalOperator_f0 = !rtb_Merge_iz;
-
-  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def3' */
-
-  /* Set Fault Suspected Status: Lambda_1_NotReady */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(82, rtb_LogicalOperator_f0);
-    UpdateFault(82);
-  }
-
-  /* Logic: '<S448>/Logical Operator1' */
-  rtb_LogicalOperator1_a5 = !rtb_Merge_oq;
-
-  /* S-Function (motohawk_sfun_fault_def): '<S448>/motohawk_fault_def4' */
-
-  /* Set Fault Suspected Status: Lambda_2_NotReady */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(84, rtb_LogicalOperator1_a5);
-    UpdateFault(84);
-  }
-
-  /* Logic: '<S488>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S488>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S488>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S488>/motohawk_data_read1'
+  /* Logic: '<S489>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S489>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S489>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S489>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_n = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s448_MathFunction >
+    (BaseEngineController_LS_B.s449_MathFunction >
      (Bank1_EquivRatioInputHiFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S488>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S489>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: Bank1_EquivRatioRangeHigh */
   {
@@ -19090,16 +19048,16 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(21);
   }
 
-  /* Logic: '<S488>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S488>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S488>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S488>/motohawk_data_read1'
+  /* Logic: '<S489>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S489>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S489>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S489>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_hv = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s448_MathFunction <
+    (BaseEngineController_LS_B.s449_MathFunction <
      (Bank1_EquivRatioInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S488>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S489>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: Bank1_EquivRatioRangeLow */
   {
@@ -19109,16 +19067,16 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(22);
   }
 
-  /* Logic: '<S489>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S489>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S489>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S489>/motohawk_data_read1'
+  /* Logic: '<S490>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S490>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S490>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S490>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_b = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s448_MathFunction1 >
+    (BaseEngineController_LS_B.s449_MathFunction1 >
      (Bank2_EquivRatioInputHiFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S489>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S490>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: Bank2_EquivRatioRangeHigh */
   {
@@ -19128,16 +19086,16 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(23);
   }
 
-  /* Logic: '<S489>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S489>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S489>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S489>/motohawk_data_read1'
+  /* Logic: '<S490>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S490>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S490>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S490>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_o = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s448_MathFunction1 <
+    (BaseEngineController_LS_B.s449_MathFunction1 <
      (Bank2_EquivRatioInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S489>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S490>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: Bank2_EquivRatioRangeLow */
   {
@@ -19147,113 +19105,113 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(24);
   }
 
-  /* Logic: '<S563>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S563>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S563>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S563>/motohawk_data_read1'
+  /* Logic: '<S564>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S564>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S564>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S564>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_p5 = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s442_Gain > (MAFMax_DataStore()))));
+    (BaseEngineController_LS_B.s443_Gain > (MAFMax_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S563>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S564>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: MAFRangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(87, rtb_LogicalOperator2_p5);
-    UpdateFault(87);
+    SetFaultSuspected(84, rtb_LogicalOperator2_p5);
+    UpdateFault(84);
   }
 
-  /* Logic: '<S563>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S563>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S563>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S563>/motohawk_data_read1'
+  /* Logic: '<S564>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S564>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S564>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S564>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_k = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s442_Gain < (MAFMin_DataStore()))));
+    (BaseEngineController_LS_B.s443_Gain < (MAFMin_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S563>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S564>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: MAFRangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(88, rtb_LogicalOperator3_k);
-    UpdateFault(88);
+    SetFaultSuspected(85, rtb_LogicalOperator3_k);
+    UpdateFault(85);
   }
 
-  /* Saturate: '<S588>/Saturation' */
+  /* Saturate: '<S589>/Saturation' */
   rtb_Saturation_b = rtb_Switch_bn >= 86400.0 ? 86400.0 : rtb_Switch_bn <= 0.0 ?
     0.0 : rtb_Switch_bn;
 
-  /* S-Function (motohawk_sfun_data_write): '<S588>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S589>/motohawk_data_write' */
   /* Write to Data Storage as scalar: ScrambleDelay */
   {
     ScrambleDelay_DataStore() = rtb_Saturation_b;
   }
 
-  /* Saturate: '<S593>/Saturation' */
+  /* Saturate: '<S594>/Saturation' */
   rtb_Saturation_e = rtb_Switch_m >= 86400.0 ? 86400.0 : rtb_Switch_m <= 0.0 ?
     0.0 : rtb_Switch_m;
 
-  /* S-Function (motohawk_sfun_data_write): '<S593>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S594>/motohawk_data_write' */
   /* Write to Data Storage as scalar: TwoStepTimer */
   {
     TwoStepTimer_DataStore() = rtb_Saturation_e;
   }
 
-  /* Logic: '<S566>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S566>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S566>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S566>/motohawk_data_read1'
+  /* Logic: '<S567>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S567>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S567>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_m = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s442_Gain1 > (VSPDMax_DataStore()))));
+    (BaseEngineController_LS_B.s443_Gain1 > (VSPDMax_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S566>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S567>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: VSPDRangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(122, rtb_LogicalOperator2_m);
-    UpdateFault(122);
+    SetFaultSuspected(119, rtb_LogicalOperator2_m);
+    UpdateFault(119);
   }
 
-  /* Logic: '<S566>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S566>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S566>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S566>/motohawk_data_read1'
+  /* Logic: '<S567>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S567>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S567>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_jn = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s442_Gain1 < (VSPDMin_DataStore()))));
+    (BaseEngineController_LS_B.s443_Gain1 < (VSPDMin_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S566>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S567>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: VSPDRangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(123, rtb_LogicalOperator3_jn);
-    UpdateFault(123);
+    SetFaultSuspected(120, rtb_LogicalOperator3_jn);
+    UpdateFault(120);
   }
 
-  /* S-Function Block: <S607>/motohawk_delta_time */
+  /* S-Function Block: <S608>/motohawk_delta_time */
   {
     uint32_T delta;
     extern uint32_T Timer_FreeRunningCounter_GetDeltaUpdateReference_us(uint32_T
       * pReference_lower32Bits, uint32_T *pReference_upper32Bits);
     delta = Timer_FreeRunningCounter_GetDeltaUpdateReference_us
-      (&BaseEngineController_LS_DWork.s607_motohawk_delta_time_DWORK1, NULL);
+      (&BaseEngineController_LS_DWork.s608_motohawk_delta_time_DWORK1, NULL);
     rtb_motohawk_delta_time_ec = ((real_T) delta) * 0.000001;
   }
 
-  /* Switch: '<S607>/Switch' incorporates:
-   *  Constant: '<S607>/Constant'
-   *  S-Function (motohawk_sfun_data_read): '<S607>/motohawk_data_read'
-   *  S-Function (motohawk_sfun_delta_time): '<S607>/motohawk_delta_time'
-   *  Sum: '<S607>/Sum'
+  /* Switch: '<S608>/Switch' incorporates:
+   *  Constant: '<S608>/Constant'
+   *  S-Function (motohawk_sfun_data_read): '<S608>/motohawk_data_read'
+   *  S-Function (motohawk_sfun_delta_time): '<S608>/motohawk_delta_time'
+   *  Sum: '<S608>/Sum'
    */
   if (rtb_Logic_j[0]) {
     rtb_Abs_co = rtb_motohawk_delta_time_ec + TimeSinceVSPDReject_DataStore();
@@ -19261,29 +19219,29 @@ void BaseEngineController_LS_Foreground(void)
     rtb_Abs_co = 0.0;
   }
 
-  /* End of Switch: '<S607>/Switch' */
-  /* RelationalOperator: '<S567>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S567>/motohawk_calibration6'
+  /* End of Switch: '<S608>/Switch' */
+  /* RelationalOperator: '<S568>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S568>/motohawk_calibration6'
    */
   rtb_RelOp_d = (rtb_Abs_co >= (real_T)((uint8_T)(VSPD_RejectHoldTime_DataStore())));
 
-  /* Saturate: '<S607>/Saturation' */
+  /* Saturate: '<S608>/Saturation' */
   rtb_Saturation_l = rtb_Abs_co >= 16000.0 ? 16000.0 : rtb_Abs_co <= 0.0 ? 0.0 :
     rtb_Abs_co;
 
-  /* S-Function (motohawk_sfun_data_write): '<S607>/motohawk_data_write' */
+  /* S-Function (motohawk_sfun_data_write): '<S608>/motohawk_data_write' */
   /* Write to Data Storage as scalar: TimeSinceVSPDReject */
   {
     TimeSinceVSPDReject_DataStore() = rtb_Saturation_l;
   }
 
-  /* RelationalOperator: '<S443>/Relational Operator' incorporates:
-   *  Constant: '<S443>/Constant'
-   *  S-Function (motohawk_sfun_calibration): '<S443>/motohawk_calibration'
+  /* RelationalOperator: '<S444>/Relational Operator' incorporates:
+   *  Constant: '<S444>/Constant'
+   *  S-Function (motohawk_sfun_calibration): '<S444>/motohawk_calibration'
    */
   rtb_RelationalOperator_l = ((0 != ((uint16_T)(PseudoRPM_DataStore()))));
 
-  /* S-Function Block: <S443>/motohawk_encoder_pseudo */
+  /* S-Function Block: <S444>/motohawk_encoder_pseudo */
   {
     S_EncoderResourceAttributes EncoderAttribsObj;
     EncoderAttribsObj.uValidAttributesMask = USE_ENC_CONDITION;
@@ -19298,9 +19256,9 @@ void BaseEngineController_LS_Foreground(void)
     SetResourceAttributes(RES_ENCODER, &EncoderAttribsObj, BEHAVIOUR_ENCODER);
   }
 
-  /* DataTypeConversion: '<S443>/Data Type Conversion3' incorporates:
-   *  Gain: '<S443>/Gain'
-   *  S-Function (motohawk_sfun_calibration): '<S443>/motohawk_calibration1'
+  /* DataTypeConversion: '<S444>/Data Type Conversion3' incorporates:
+   *  Gain: '<S444>/Gain'
+   *  S-Function (motohawk_sfun_calibration): '<S444>/motohawk_calibration1'
    */
   rtb_UnitDelay4_b3 = 16.0 * (EngineToEncoderOffset_DataStore());
   if (rtIsNaN(rtb_UnitDelay4_b3) || rtIsInf(rtb_UnitDelay4_b3)) {
@@ -19315,8 +19273,8 @@ void BaseEngineController_LS_Foreground(void)
     -(int16_T)(uint16_T)-rtb_UnitDelay4_b3 : (int16_T)(uint16_T)
     rtb_UnitDelay4_b3);
 
-  /* End of DataTypeConversion: '<S443>/Data Type Conversion3' */
-  /* S-Function Block: <S443>/motohawk_encoder_offset */
+  /* End of DataTypeConversion: '<S444>/Data Type Conversion3' */
+  /* S-Function Block: <S444>/motohawk_encoder_offset */
   {
     S_EncoderResourceAttributes encoder_attributes;
     encoder_attributes.uValidAttributesMask = USE_ENC_TDC_OFFSET;
@@ -19324,43 +19282,43 @@ void BaseEngineController_LS_Foreground(void)
     SetResourceAttributes(RES_ENCODER, &encoder_attributes, BEHAVIOUR_ENCODER);
   }
 
-  /* RelationalOperator: '<S612>/RelOp' incorporates:
-   *  Constant: '<S612>/Constant'
+  /* RelationalOperator: '<S613>/RelOp' incorporates:
+   *  Constant: '<S613>/Constant'
    */
-  rtb_RelationalOperator5_fz = (BaseEngineController_LS_B.s615_Sum > 100U);
+  rtb_RelationalOperator5_fz = (BaseEngineController_LS_B.s616_Sum > 100U);
 
-  /* S-Function Block: <S443>/motohawk_encoder_fault */
+  /* S-Function Block: <S444>/motohawk_encoder_fault */
   {
     extern uint8_T motohawk_encoder_fault;
-    BaseEngineController_LS_B.s443_motohawk_encoder_fault =
+    BaseEngineController_LS_B.s444_motohawk_encoder_fault =
       motohawk_encoder_fault;
   }
 
-  /* Logic: '<S608>/Logical Operator' incorporates:
-   *  Constant: '<S614>/Constant'
-   *  RelationalOperator: '<S614>/RelOp'
+  /* Logic: '<S609>/Logical Operator' incorporates:
+   *  Constant: '<S615>/Constant'
+   *  RelationalOperator: '<S615>/RelOp'
    */
-  rtb_LogicalOperator_f0c = ((rtb_RelationalOperator5_fz &&
-    (BaseEngineController_LS_B.s443_motohawk_encoder_fault == 1)));
+  rtb_LogicalOperator_f0 = ((rtb_RelationalOperator5_fz &&
+    (BaseEngineController_LS_B.s444_motohawk_encoder_fault == 1)));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S608>/motohawk_fault_def' */
+  /* S-Function (motohawk_sfun_fault_def): '<S609>/motohawk_fault_def' */
 
   /* Set Fault Suspected Status: CrankSyncFault */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(30, rtb_LogicalOperator_f0c);
+    SetFaultSuspected(30, rtb_LogicalOperator_f0);
     UpdateFault(30);
   }
 
-  /* Logic: '<S608>/Logical Operator1' incorporates:
-   *  Constant: '<S613>/Constant'
-   *  RelationalOperator: '<S613>/RelOp'
+  /* Logic: '<S609>/Logical Operator1' incorporates:
+   *  Constant: '<S614>/Constant'
+   *  RelationalOperator: '<S614>/RelOp'
    */
   rtb_LogicalOperator1_dw = ((rtb_RelationalOperator5_fz &&
-    (BaseEngineController_LS_B.s443_motohawk_encoder_fault == 3)));
+    (BaseEngineController_LS_B.s444_motohawk_encoder_fault == 3)));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S608>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S609>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: CrankEdgesFault */
   {
@@ -19370,14 +19328,14 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(29);
   }
 
-  /* Logic: '<S608>/Logical Operator2' incorporates:
-   *  Constant: '<S610>/Constant'
-   *  RelationalOperator: '<S610>/RelOp'
+  /* Logic: '<S609>/Logical Operator2' incorporates:
+   *  Constant: '<S611>/Constant'
+   *  RelationalOperator: '<S611>/RelOp'
    */
   rtb_LogicalOperator2_g = ((rtb_RelationalOperator5_fz &&
-    (BaseEngineController_LS_B.s443_motohawk_encoder_fault == 4)));
+    (BaseEngineController_LS_B.s444_motohawk_encoder_fault == 4)));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S608>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S609>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: CamEdgesFault */
   {
@@ -19387,14 +19345,14 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(27);
   }
 
-  /* Logic: '<S608>/Logical Operator3' incorporates:
-   *  Constant: '<S611>/Constant'
-   *  RelationalOperator: '<S611>/RelOp'
+  /* Logic: '<S609>/Logical Operator3' incorporates:
+   *  Constant: '<S612>/Constant'
+   *  RelationalOperator: '<S612>/RelOp'
    */
   rtb_LogicalOperator3_nz = ((rtb_RelationalOperator5_fz &&
-    (BaseEngineController_LS_B.s443_motohawk_encoder_fault == 5)));
+    (BaseEngineController_LS_B.s444_motohawk_encoder_fault == 5)));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S608>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S609>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: CamSyncFault */
   {
@@ -19404,22 +19362,22 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(28);
   }
 
-  /* S-Function Block: <S443>/motohawk_encoder_state */
+  /* S-Function Block: <S444>/motohawk_encoder_state */
   {
     extern uint8_T motohawk_encoder_status;
-    BaseEngineController_LS_B.s443_motohawk_encoder_state =
+    BaseEngineController_LS_B.s444_motohawk_encoder_state =
       motohawk_encoder_status;
   }
 
-  /* Logic: '<S617>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S617>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S617>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S617>/motohawk_data_read1'
+  /* Logic: '<S618>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S618>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S618>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_kx = ((MPRD_DataStore() && (rtb_DataTypeConversion_ik >
     (ACPresInputHiFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S617>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S618>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: ACPresRangeHigh */
   {
@@ -19429,15 +19387,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(2);
   }
 
-  /* Logic: '<S617>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S617>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S617>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S617>/motohawk_data_read1'
+  /* Logic: '<S618>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S618>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S618>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_mz = ((MPRD_DataStore() && (rtb_DataTypeConversion_ik <
     (ACPresInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S617>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S618>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: ACPresRangeLow */
   {
@@ -19447,15 +19405,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(3);
   }
 
-  /* Logic: '<S618>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S618>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S618>/motohawk_data_read1'
+  /* Logic: '<S619>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S619>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S619>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_j = ((MPRD_DataStore() && (rtb_DataTypeConversion_e >
     (FuelSensInputHiFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S618>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S619>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: FuelSensRangeHigh */
   {
@@ -19465,15 +19423,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(62);
   }
 
-  /* Logic: '<S618>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S618>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S618>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S618>/motohawk_data_read1'
+  /* Logic: '<S619>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S619>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S619>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_ij = ((MPRD_DataStore() && (rtb_DataTypeConversion_e <
     (FuelSensInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S618>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S619>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: FuelSensRangeLow */
   {
@@ -19483,15 +19441,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(63);
   }
 
-  /* Logic: '<S619>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S619>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S619>/motohawk_data_read1'
+  /* Logic: '<S620>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S620>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S620>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_f4 = ((MPRD_DataStore() && (rtb_DataTypeConversion_gx >
     (FuelPresInputHiFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S619>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S620>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: FuelPresRangeHigh */
   {
@@ -19501,15 +19459,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(60);
   }
 
-  /* Logic: '<S619>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S619>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S619>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S619>/motohawk_data_read1'
+  /* Logic: '<S620>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S620>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S620>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_ns = ((MPRD_DataStore() && (rtb_DataTypeConversion_gx <
     (FuelPresInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S619>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S620>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: FuelPresRangeLow */
   {
@@ -19519,58 +19477,22 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(61);
   }
 
-  /* Logic: '<S620>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S620>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S620>/motohawk_data_read1'
-   */
-  rtb_LogicalOperator2_fw = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s622_Merge > (MAPInputHiFltPos_DataStore()))));
-
-  /* S-Function (motohawk_sfun_fault_def): '<S620>/motohawk_fault_def2' */
-
-  /* Set Fault Suspected Status: MAPRangeHigh */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(89, rtb_LogicalOperator2_fw);
-    UpdateFault(89);
-  }
-
-  /* Logic: '<S620>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S620>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S620>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S620>/motohawk_data_read1'
-   */
-  rtb_LogicalOperator3_l = ((MPRD_DataStore() &&
-    (BaseEngineController_LS_B.s622_Merge < (MAPInputLoFltPos_DataStore()))));
-
-  /* S-Function (motohawk_sfun_fault_def): '<S620>/motohawk_fault_def3' */
-
-  /* Set Fault Suspected Status: MAPRangeLow */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(90, rtb_LogicalOperator3_l);
-    UpdateFault(90);
-  }
-
   /* Logic: '<S621>/Logical Operator2' incorporates:
    *  RelationalOperator: '<S621>/Relational Operator2'
    *  S-Function (motohawk_sfun_calibration): '<S621>/motohawk_calibration1'
    *  S-Function (motohawk_sfun_data_read): '<S621>/motohawk_data_read1'
    */
-  rtb_LogicalOperator2_a = ((MPRD_DataStore() && (rtb_DataTypeConversion_fq >
-    (MAPTimeInputHiFltPos_DataStore()))));
+  rtb_LogicalOperator2_fw = ((MPRD_DataStore() &&
+    (BaseEngineController_LS_B.s623_Merge > (MAPInputHiFltPos_DataStore()))));
 
   /* S-Function (motohawk_sfun_fault_def): '<S621>/motohawk_fault_def2' */
 
-  /* Set Fault Suspected Status: MAPTimeRangeHigh */
+  /* Set Fault Suspected Status: MAPRangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(91, rtb_LogicalOperator2_a);
-    UpdateFault(91);
+    SetFaultSuspected(86, rtb_LogicalOperator2_fw);
+    UpdateFault(86);
   }
 
   /* Logic: '<S621>/Logical Operator3' incorporates:
@@ -19578,53 +19500,53 @@ void BaseEngineController_LS_Foreground(void)
    *  S-Function (motohawk_sfun_calibration): '<S621>/motohawk_calibration6'
    *  S-Function (motohawk_sfun_data_read): '<S621>/motohawk_data_read1'
    */
+  rtb_LogicalOperator3_l = ((MPRD_DataStore() &&
+    (BaseEngineController_LS_B.s623_Merge < (MAPInputLoFltPos_DataStore()))));
+
+  /* S-Function (motohawk_sfun_fault_def): '<S621>/motohawk_fault_def3' */
+
+  /* Set Fault Suspected Status: MAPRangeLow */
+  {
+    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+    extern void UpdateFault(uint32_T fault);
+    SetFaultSuspected(87, rtb_LogicalOperator3_l);
+    UpdateFault(87);
+  }
+
+  /* Logic: '<S622>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S622>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S622>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S622>/motohawk_data_read1'
+   */
+  rtb_LogicalOperator2_a = ((MPRD_DataStore() && (rtb_DataTypeConversion_fq >
+    (MAPTimeInputHiFltPos_DataStore()))));
+
+  /* S-Function (motohawk_sfun_fault_def): '<S622>/motohawk_fault_def2' */
+
+  /* Set Fault Suspected Status: MAPTimeRangeHigh */
+  {
+    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+    extern void UpdateFault(uint32_T fault);
+    SetFaultSuspected(88, rtb_LogicalOperator2_a);
+    UpdateFault(88);
+  }
+
+  /* Logic: '<S622>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S622>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S622>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S622>/motohawk_data_read1'
+   */
   rtb_LogicalOperator3_d = ((MPRD_DataStore() && (rtb_DataTypeConversion_fq <
     (MAPTimeInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S621>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S622>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: MAPTimeRangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(92, rtb_LogicalOperator3_d);
-    UpdateFault(92);
-  }
-
-  /* Logic: '<S623>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S623>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S623>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S623>/motohawk_data_read1'
-   */
-  rtb_LogicalOperator2_fm = ((MPRD_DataStore() && (rtb_DataTypeConversion_m0 >
-    (OilPresInputHiFltPos_DataStore()))));
-
-  /* S-Function (motohawk_sfun_fault_def): '<S623>/motohawk_fault_def2' */
-
-  /* Set Fault Suspected Status: OilPresRangeHigh */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(101, rtb_LogicalOperator2_fm);
-    UpdateFault(101);
-  }
-
-  /* Logic: '<S623>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S623>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S623>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S623>/motohawk_data_read1'
-   */
-  rtb_LogicalOperator3_a = ((MPRD_DataStore() && (rtb_DataTypeConversion_m0 <
-    (OilPresInputLoFltPos_DataStore()))));
-
-  /* S-Function (motohawk_sfun_fault_def): '<S623>/motohawk_fault_def3' */
-
-  /* Set Fault Suspected Status: OilPresRangeLow */
-  {
-    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
-    extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(102, rtb_LogicalOperator3_a);
-    UpdateFault(102);
+    SetFaultSuspected(89, rtb_LogicalOperator3_d);
+    UpdateFault(89);
   }
 
   /* Logic: '<S624>/Logical Operator2' incorporates:
@@ -19632,17 +19554,17 @@ void BaseEngineController_LS_Foreground(void)
    *  S-Function (motohawk_sfun_calibration): '<S624>/motohawk_calibration1'
    *  S-Function (motohawk_sfun_data_read): '<S624>/motohawk_data_read1'
    */
-  rtb_LogicalOperator2_gc = ((MPRD_DataStore() && (rtb_Abs_k >
-    (SensVoltInputHiFltPos_DataStore()))));
+  rtb_LogicalOperator2_fm = ((MPRD_DataStore() && (rtb_DataTypeConversion_m0 >
+    (OilPresInputHiFltPos_DataStore()))));
 
   /* S-Function (motohawk_sfun_fault_def): '<S624>/motohawk_fault_def2' */
 
-  /* Set Fault Suspected Status: SensVoltRangeHigh */
+  /* Set Fault Suspected Status: OilPresRangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(103, rtb_LogicalOperator2_gc);
-    UpdateFault(103);
+    SetFaultSuspected(98, rtb_LogicalOperator2_fm);
+    UpdateFault(98);
   }
 
   /* Logic: '<S624>/Logical Operator3' incorporates:
@@ -19650,17 +19572,17 @@ void BaseEngineController_LS_Foreground(void)
    *  S-Function (motohawk_sfun_calibration): '<S624>/motohawk_calibration6'
    *  S-Function (motohawk_sfun_data_read): '<S624>/motohawk_data_read1'
    */
-  rtb_LogicalOperator3_e = ((MPRD_DataStore() && (rtb_Abs_k <
-    (SensVoltInputLoFltPos_DataStore()))));
+  rtb_LogicalOperator3_a = ((MPRD_DataStore() && (rtb_DataTypeConversion_m0 <
+    (OilPresInputLoFltPos_DataStore()))));
 
   /* S-Function (motohawk_sfun_fault_def): '<S624>/motohawk_fault_def3' */
 
-  /* Set Fault Suspected Status: SensVoltRangeLow */
+  /* Set Fault Suspected Status: OilPresRangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(104, rtb_LogicalOperator3_e);
-    UpdateFault(104);
+    SetFaultSuspected(99, rtb_LogicalOperator3_a);
+    UpdateFault(99);
   }
 
   /* Logic: '<S625>/Logical Operator2' incorporates:
@@ -19668,17 +19590,17 @@ void BaseEngineController_LS_Foreground(void)
    *  S-Function (motohawk_sfun_calibration): '<S625>/motohawk_calibration1'
    *  S-Function (motohawk_sfun_data_read): '<S625>/motohawk_data_read1'
    */
-  rtb_LogicalOperator2_bm = ((MPRD_DataStore() && (rtb_DataTypeConversion_c4 >
-    (SysVoltInputHiFltPos_DataStore()))));
+  rtb_LogicalOperator2_gc = ((MPRD_DataStore() && (rtb_Abs_k >
+    (SensVoltInputHiFltPos_DataStore()))));
 
   /* S-Function (motohawk_sfun_fault_def): '<S625>/motohawk_fault_def2' */
 
-  /* Set Fault Suspected Status: SysVoltRangeHigh */
+  /* Set Fault Suspected Status: SensVoltRangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(107, rtb_LogicalOperator2_bm);
-    UpdateFault(107);
+    SetFaultSuspected(100, rtb_LogicalOperator2_gc);
+    UpdateFault(100);
   }
 
   /* Logic: '<S625>/Logical Operator3' incorporates:
@@ -19686,28 +19608,64 @@ void BaseEngineController_LS_Foreground(void)
    *  S-Function (motohawk_sfun_calibration): '<S625>/motohawk_calibration6'
    *  S-Function (motohawk_sfun_data_read): '<S625>/motohawk_data_read1'
    */
+  rtb_LogicalOperator3_e = ((MPRD_DataStore() && (rtb_Abs_k <
+    (SensVoltInputLoFltPos_DataStore()))));
+
+  /* S-Function (motohawk_sfun_fault_def): '<S625>/motohawk_fault_def3' */
+
+  /* Set Fault Suspected Status: SensVoltRangeLow */
+  {
+    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+    extern void UpdateFault(uint32_T fault);
+    SetFaultSuspected(101, rtb_LogicalOperator3_e);
+    UpdateFault(101);
+  }
+
+  /* Logic: '<S626>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S626>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S626>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S626>/motohawk_data_read1'
+   */
+  rtb_LogicalOperator2_bm = ((MPRD_DataStore() && (rtb_DataTypeConversion_c4 >
+    (SysVoltInputHiFltPos_DataStore()))));
+
+  /* S-Function (motohawk_sfun_fault_def): '<S626>/motohawk_fault_def2' */
+
+  /* Set Fault Suspected Status: SysVoltRangeHigh */
+  {
+    extern void SetFaultSuspected(uint32_T fault, boolean_T val);
+    extern void UpdateFault(uint32_T fault);
+    SetFaultSuspected(104, rtb_LogicalOperator2_bm);
+    UpdateFault(104);
+  }
+
+  /* Logic: '<S626>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S626>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S626>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S626>/motohawk_data_read1'
+   */
   rtb_LogicalOperator3_g = ((MPRD_DataStore() && (rtb_DataTypeConversion_c4 <
     (SysVoltInputLoFltPos_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S625>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S626>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: SysVoltRangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(108, rtb_LogicalOperator3_g);
-    UpdateFault(108);
+    SetFaultSuspected(105, rtb_LogicalOperator3_g);
+    UpdateFault(105);
   }
 
-  /* Logic: '<S749>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S749>/Relational Operator2'
-   *  S-Function (motohawk_sfun_calibration): '<S749>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S749>/motohawk_data_read1'
+  /* Logic: '<S750>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S750>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S750>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S750>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_ob = ((MPRD_DataStore() && (rtb_DataTypeConversion_hd >
     (APP1Max_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S749>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S750>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: APP1RangeHigh */
   {
@@ -19717,15 +19675,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(4);
   }
 
-  /* Logic: '<S749>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S749>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S749>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S749>/motohawk_data_read1'
+  /* Logic: '<S750>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S750>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S750>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S750>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_in = ((MPRD_DataStore() && (rtb_DataTypeConversion_hd <
     (APP1Min_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S749>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S750>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: APP1RangeLow */
   {
@@ -19735,38 +19693,38 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(5);
   }
 
-  /* S-Function (motohawk_sfun_trigger): '<S750>/motohawk_trigger' */
+  /* S-Function (motohawk_sfun_trigger): '<S751>/motohawk_trigger' */
   /* Enable for Trigger_FGND_20XRTI_PERIODIC_5658p001 */
-  if (BaseEngineController_LS_DWork.s750_motohawk_trigger_DWORK1 == 0) {
-    BaseEngineController_LS_DWork.s750_motohawk_trigger_DWORK1 = 1;
+  if (BaseEngineController_LS_DWork.s751_motohawk_trigger_DWORK1 == 0) {
+    BaseEngineController_LS_DWork.s751_motohawk_trigger_DWORK1 = 1;
   }
 
-  /* Logic: '<S750>/Logical Operator' incorporates:
-   *  RelationalOperator: '<S750>/Relational Operator'
-   *  S-Function (motohawk_sfun_calibration): '<S750>/motohawk_calibration'
-   *  S-Function (motohawk_sfun_data_read): '<S750>/motohawk_data_read1'
+  /* Logic: '<S751>/Logical Operator' incorporates:
+   *  RelationalOperator: '<S751>/Relational Operator'
+   *  S-Function (motohawk_sfun_calibration): '<S751>/motohawk_calibration'
+   *  S-Function (motohawk_sfun_data_read): '<S751>/motohawk_data_read1'
    */
-  rtb_RelationalOperator3_bp = (BaseEngineController_LS_B.s767_LogicalOperator &&
+  rtb_RelationalOperator3_bp = (BaseEngineController_LS_B.s768_LogicalOperator &&
                                 (APP1_AdaptADC_DataStore() <
     (APP1LowAdaptADCThresh_DataStore())));
 
-  /* Logic: '<S750>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S750>/Relational Operator1'
-   *  S-Function (motohawk_sfun_calibration): '<S750>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S750>/motohawk_data_read1'
-   */
-  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s767_LogicalOperator &&
-    (APP1_AdaptADC_DataStore() > (APP1HiAdaptADCThresh_DataStore())));
-
-  /* Logic: '<S751>/Logical Operator2' incorporates:
-   *  RelationalOperator: '<S751>/Relational Operator2'
+  /* Logic: '<S751>/Logical Operator1' incorporates:
+   *  RelationalOperator: '<S751>/Relational Operator1'
    *  S-Function (motohawk_sfun_calibration): '<S751>/motohawk_calibration1'
    *  S-Function (motohawk_sfun_data_read): '<S751>/motohawk_data_read1'
+   */
+  rtb_LogicalOperator6_b = (BaseEngineController_LS_B.s768_LogicalOperator &&
+    (APP1_AdaptADC_DataStore() > (APP1HiAdaptADCThresh_DataStore())));
+
+  /* Logic: '<S752>/Logical Operator2' incorporates:
+   *  RelationalOperator: '<S752>/Relational Operator2'
+   *  S-Function (motohawk_sfun_calibration): '<S752>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S752>/motohawk_data_read1'
    */
   rtb_LogicalOperator2_il = ((MPRD_DataStore() && (rtb_DataTypeConversion_fc >
     (APP2Max_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S751>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S752>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: APP2RangeHigh */
   {
@@ -19776,15 +19734,15 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(12);
   }
 
-  /* Logic: '<S751>/Logical Operator3' incorporates:
-   *  RelationalOperator: '<S751>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S751>/motohawk_calibration6'
-   *  S-Function (motohawk_sfun_data_read): '<S751>/motohawk_data_read1'
+  /* Logic: '<S752>/Logical Operator3' incorporates:
+   *  RelationalOperator: '<S752>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S752>/motohawk_calibration6'
+   *  S-Function (motohawk_sfun_data_read): '<S752>/motohawk_data_read1'
    */
   rtb_LogicalOperator3_dk = ((MPRD_DataStore() && (rtb_DataTypeConversion_fc <
     (APP2Min_DataStore()))));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S751>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S752>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: APP2RangeLow */
   {
@@ -19794,36 +19752,36 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(13);
   }
 
-  /* S-Function (motohawk_sfun_trigger): '<S752>/motohawk_trigger' */
+  /* S-Function (motohawk_sfun_trigger): '<S753>/motohawk_trigger' */
   /* Enable for Trigger_FGND_20XRTI_PERIODIC_5792p001 */
-  if (BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1 == 0) {
-    BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1 = 1;
+  if (BaseEngineController_LS_DWork.s753_motohawk_trigger_DWORK1 == 0) {
+    BaseEngineController_LS_DWork.s753_motohawk_trigger_DWORK1 = 1;
   }
 
-  /* Logic: '<S752>/Logical Operator' incorporates:
-   *  RelationalOperator: '<S752>/Relational Operator'
-   *  S-Function (motohawk_sfun_calibration): '<S752>/motohawk_calibration'
-   *  S-Function (motohawk_sfun_data_read): '<S752>/motohawk_data_read1'
+  /* Logic: '<S753>/Logical Operator' incorporates:
+   *  RelationalOperator: '<S753>/Relational Operator'
+   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration'
+   *  S-Function (motohawk_sfun_data_read): '<S753>/motohawk_data_read1'
    */
-  rtb_Switch1_mj = (BaseEngineController_LS_B.s779_LogicalOperator &&
+  rtb_Switch1_mj = (BaseEngineController_LS_B.s780_LogicalOperator &&
                     (APP2_AdaptADC_DataStore() <
                      (APP2LowAdaptADCThresh_DataStore())));
 
-  /* Logic: '<S752>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S752>/Relational Operator1'
-   *  S-Function (motohawk_sfun_calibration): '<S752>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S752>/motohawk_data_read1'
+  /* Logic: '<S753>/Logical Operator1' incorporates:
+   *  RelationalOperator: '<S753>/Relational Operator1'
+   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S753>/motohawk_data_read1'
    */
-  rtb_RelOp_pu = (BaseEngineController_LS_B.s779_LogicalOperator &&
+  rtb_RelOp_pu = (BaseEngineController_LS_B.s780_LogicalOperator &&
                   (APP2_AdaptADC_DataStore() > (APP2HiAdaptADCThresh_DataStore())));
 
-  /* RelationalOperator: '<S782>/Relational Operator5' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S782>/motohawk_calibration5'
+  /* RelationalOperator: '<S783>/Relational Operator5' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S783>/motohawk_calibration5'
    */
-  rtb_RelationalOperator5_l = ((BaseEngineController_LS_B.s753_Switch >
+  rtb_RelationalOperator5_l = ((BaseEngineController_LS_B.s754_Switch >
     (APP1_AdaptInputHiFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S782>/motohawk_fault_def4' */
+  /* S-Function (motohawk_sfun_fault_def): '<S783>/motohawk_fault_def4' */
 
   /* Set Fault Suspected Status: APP1_AdaptRangeHigh */
   {
@@ -19833,13 +19791,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(10);
   }
 
-  /* RelationalOperator: '<S782>/Relational Operator4' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S782>/motohawk_calibration6'
+  /* RelationalOperator: '<S783>/Relational Operator4' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S783>/motohawk_calibration6'
    */
-  rtb_RelationalOperator4_bl = ((BaseEngineController_LS_B.s753_Switch <
+  rtb_RelationalOperator4_bl = ((BaseEngineController_LS_B.s754_Switch <
     (APP1_AdaptInputLoFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S782>/motohawk_fault_def5' */
+  /* S-Function (motohawk_sfun_fault_def): '<S783>/motohawk_fault_def5' */
 
   /* Set Fault Suspected Status: APP1_AdaptRangeLow */
   {
@@ -19849,13 +19807,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(11);
   }
 
-  /* RelationalOperator: '<S782>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration9'
+  /* RelationalOperator: '<S783>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration9'
    */
-  rtb_RelationalOperator_c1 = ((BaseEngineController_LS_B.s781_MinMax >
+  rtb_RelationalOperator_c1 = ((BaseEngineController_LS_B.s782_MinMax >
     (APP1_AdaptAdapt_Low_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S782>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S783>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: APP1_AdaptAdaptLoMax */
   {
@@ -19865,13 +19823,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(8);
   }
 
-  /* RelationalOperator: '<S782>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration12'
+  /* RelationalOperator: '<S783>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration12'
    */
-  rtb_RelationalOperator3_p4 = ((BaseEngineController_LS_B.s781_MinMax1 >
+  rtb_RelationalOperator3_p4 = ((BaseEngineController_LS_B.s782_MinMax1 >
     (APP1_AdaptAdapt_Hi_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S782>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S783>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: APP1_AdaptAdaptHiMax */
   {
@@ -19881,13 +19839,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(6);
   }
 
-  /* RelationalOperator: '<S782>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration11'
+  /* RelationalOperator: '<S783>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration11'
    */
-  rtb_RelationalOperator2_k2 = ((BaseEngineController_LS_B.s781_MinMax1 <
+  rtb_RelationalOperator2_k2 = ((BaseEngineController_LS_B.s782_MinMax1 <
     (APP1_AdaptAdapt_Hi_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S782>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S783>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: APP1_AdaptAdaptHiMin */
   {
@@ -19897,13 +19855,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(7);
   }
 
-  /* RelationalOperator: '<S782>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration10'
+  /* RelationalOperator: '<S783>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration10'
    */
-  rtb_RelationalOperator1_n = ((BaseEngineController_LS_B.s781_MinMax <
+  rtb_RelationalOperator1_n = ((BaseEngineController_LS_B.s782_MinMax <
     (APP1_AdaptAdapt_Low_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S782>/motohawk_fault_def8' */
+  /* S-Function (motohawk_sfun_fault_def): '<S783>/motohawk_fault_def8' */
 
   /* Set Fault Suspected Status: APP1_AdaptAdaptLoMin */
   {
@@ -19913,80 +19871,80 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(9);
   }
 
-  /* UnitDelay: '<S788>/Unit Delay1' */
-  rtb_Abs_co = BaseEngineController_LS_DWork.s788_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S789>/Unit Delay1' */
+  rtb_Abs_co = BaseEngineController_LS_DWork.s789_UnitDelay1_DSTATE;
 
-  /* UnitDelay: '<S788>/Unit Delay' */
+  /* UnitDelay: '<S789>/Unit Delay' */
   rtb_DataTypeConversion1_e =
-    BaseEngineController_LS_DWork.s788_UnitDelay_DSTATE;
+    BaseEngineController_LS_DWork.s789_UnitDelay_DSTATE;
 
-  /* UnitDelay: '<S788>/Unit Delay3' */
+  /* UnitDelay: '<S789>/Unit Delay3' */
   rtb_DataTypeConversion_b2 =
-    BaseEngineController_LS_DWork.s788_UnitDelay3_DSTATE;
+    BaseEngineController_LS_DWork.s789_UnitDelay3_DSTATE;
 
-  /* UnitDelay: '<S788>/Unit Delay4' */
-  rtb_Switch_mq = BaseEngineController_LS_DWork.s788_UnitDelay4_DSTATE;
+  /* UnitDelay: '<S789>/Unit Delay4' */
+  rtb_Switch_mq = BaseEngineController_LS_DWork.s789_UnitDelay4_DSTATE;
 
-  /* MinMax: '<S788>/MinMax1' incorporates:
-   *  UnitDelay: '<S788>/Unit Delay'
-   *  UnitDelay: '<S788>/Unit Delay3'
-   *  UnitDelay: '<S788>/Unit Delay4'
+  /* MinMax: '<S789>/MinMax1' incorporates:
+   *  UnitDelay: '<S789>/Unit Delay'
+   *  UnitDelay: '<S789>/Unit Delay3'
+   *  UnitDelay: '<S789>/Unit Delay4'
    */
-  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s788_UnitDelay_DSTATE) ||
-    rtIsNaN(BaseEngineController_LS_DWork.s788_UnitDelay_DSTATE) ? rtb_Abs_co :
-    BaseEngineController_LS_DWork.s788_UnitDelay_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s788_UnitDelay3_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s788_UnitDelay3_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s788_UnitDelay3_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s788_UnitDelay4_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s788_UnitDelay4_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s788_UnitDelay4_DSTATE;
-  y = (y <= BaseEngineController_LS_B.s753_Switch) || rtIsNaN
-    (BaseEngineController_LS_B.s753_Switch) ? y :
-    BaseEngineController_LS_B.s753_Switch;
+  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s789_UnitDelay_DSTATE) ||
+    rtIsNaN(BaseEngineController_LS_DWork.s789_UnitDelay_DSTATE) ? rtb_Abs_co :
+    BaseEngineController_LS_DWork.s789_UnitDelay_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s789_UnitDelay3_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s789_UnitDelay3_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s789_UnitDelay3_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s789_UnitDelay4_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s789_UnitDelay4_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s789_UnitDelay4_DSTATE;
+  y = (y <= BaseEngineController_LS_B.s754_Switch) || rtIsNaN
+    (BaseEngineController_LS_B.s754_Switch) ? y :
+    BaseEngineController_LS_B.s754_Switch;
 
-  /* RelationalOperator: '<S786>/Relational Operator9' incorporates:
-   *  MinMax: '<S788>/MinMax1'
+  /* RelationalOperator: '<S787>/Relational Operator9' incorporates:
+   *  MinMax: '<S789>/MinMax1'
    */
-  rtb_LogicalOperator1_al = (y > BaseEngineController_LS_B.s781_MinMax1);
+  rtb_LogicalOperator1_al = (y > BaseEngineController_LS_B.s782_MinMax1);
 
-  /* RelationalOperator: '<S786>/Relational Operator5' incorporates:
-   *  MinMax: '<S788>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration12'
+  /* RelationalOperator: '<S787>/Relational Operator5' incorporates:
+   *  MinMax: '<S789>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration12'
    */
   rtb_RelationalOperator5_fz = (y <= (APP1_AdaptAdapt_Hi_Max_DataStore()));
 
-  /* RelationalOperator: '<S786>/Relational Operator6' incorporates:
-   *  MinMax: '<S788>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration11'
+  /* RelationalOperator: '<S787>/Relational Operator6' incorporates:
+   *  MinMax: '<S789>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration11'
    */
   rtb_RelationalOperator6_h = (y >= (APP1_AdaptAdapt_Hi_Min_DataStore()));
 
-  /* Sum: '<S786>/Sum2' incorporates:
-   *  MinMax: '<S788>/MinMax1'
+  /* Sum: '<S787>/Sum2' incorporates:
+   *  MinMax: '<S789>/MinMax1'
    */
-  rtb_Abs_k = y - BaseEngineController_LS_B.s781_MinMax1;
+  rtb_Abs_k = y - BaseEngineController_LS_B.s782_MinMax1;
 
-  /* Abs: '<S786>/Abs' */
+  /* Abs: '<S787>/Abs' */
   rtb_Abs_k = fabs(rtb_Abs_k);
 
-  /* Outputs for Enabled SubSystem: '<S786>/Store Current Position' incorporates:
-   *  EnablePort: '<S789>/Enable'
+  /* Outputs for Enabled SubSystem: '<S787>/Store Current Position' incorporates:
+   *  EnablePort: '<S790>/Enable'
    */
-  /* Logic: '<S786>/Logical Operator2' incorporates:
-   *  Logic: '<S786>/Logical Operator1'
-   *  Logic: '<S786>/Logical Operator4'
-   *  RelationalOperator: '<S786>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S781>/motohawk_calibration14'
-   *  S-Function (motohawk_sfun_calibration): '<S781>/motohawk_calibration2'
+  /* Logic: '<S787>/Logical Operator2' incorporates:
+   *  Logic: '<S787>/Logical Operator1'
+   *  Logic: '<S787>/Logical Operator4'
+   *  RelationalOperator: '<S787>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S782>/motohawk_calibration14'
+   *  S-Function (motohawk_sfun_calibration): '<S782>/motohawk_calibration2'
    */
   if ((rtb_LogicalOperator1_al && rtb_RelationalOperator5_fz &&
        rtb_RelationalOperator6_h && (APP1_AdaptAdaptHiEnable_DataStore()) &&
        (rtb_Abs_k > (APP1_AdaptAdapt_Delta_DataStore()))) ||
       (rtb_RelationalOperator5_fz && rtb_RelationalOperator6_h &&
        (APP1_AdaptAdaptHiEnable_DataStore()) && rtb_LogicalOperator6_b)) {
-    /* DataTypeConversion: '<S789>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S788>/MinMax1'
+    /* DataTypeConversion: '<S790>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S789>/MinMax1'
      */
     if (y < 65536.0) {
       if (y >= 0.0) {
@@ -19998,69 +19956,69 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_d = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S789>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S790>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S789>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S790>/motohawk_data_write' */
     /* Write to Data Storage as scalar: APP1_AdaptRaw_Adpt_Hi */
     {
       APP1_AdaptRaw_Adpt_Hi_DataStore() = rtb_DataTypeConversion2_d;
     }
   }
 
-  /* End of Logic: '<S786>/Logical Operator2' */
-  /* End of Outputs for SubSystem: '<S786>/Store Current Position' */
+  /* End of Logic: '<S787>/Logical Operator2' */
+  /* End of Outputs for SubSystem: '<S787>/Store Current Position' */
 
-  /* MinMax: '<S788>/MinMax' */
-  y = (BaseEngineController_LS_B.s753_Switch >= rtb_Switch_mq) || rtIsNaN
-    (rtb_Switch_mq) ? BaseEngineController_LS_B.s753_Switch : rtb_Switch_mq;
+  /* MinMax: '<S789>/MinMax' */
+  y = (BaseEngineController_LS_B.s754_Switch >= rtb_Switch_mq) || rtIsNaN
+    (rtb_Switch_mq) ? BaseEngineController_LS_B.s754_Switch : rtb_Switch_mq;
   y = (y >= rtb_DataTypeConversion_b2) || rtIsNaN(rtb_DataTypeConversion_b2) ? y
     : rtb_DataTypeConversion_b2;
   y = (y >= rtb_DataTypeConversion1_e) || rtIsNaN(rtb_DataTypeConversion1_e) ? y
     : rtb_DataTypeConversion1_e;
   rtb_Abs_k = (y >= rtb_Abs_co) || rtIsNaN(rtb_Abs_co) ? y : rtb_Abs_co;
 
-  /* RelationalOperator: '<S787>/Relational Operator9' incorporates:
-   *  MinMax: '<S788>/MinMax'
+  /* RelationalOperator: '<S788>/Relational Operator9' incorporates:
+   *  MinMax: '<S789>/MinMax'
    */
-  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s781_MinMax);
+  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s782_MinMax);
 
-  /* RelationalOperator: '<S787>/Relational Operator5' incorporates:
-   *  MinMax: '<S788>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration9'
+  /* RelationalOperator: '<S788>/Relational Operator5' incorporates:
+   *  MinMax: '<S789>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration9'
    */
   rtb_RelationalOperator5_fz = (rtb_Abs_k <= (APP1_AdaptAdapt_Low_Max_DataStore()));
 
-  /* RelationalOperator: '<S787>/Relational Operator6' incorporates:
-   *  MinMax: '<S788>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S753>/motohawk_calibration10'
+  /* RelationalOperator: '<S788>/Relational Operator6' incorporates:
+   *  MinMax: '<S789>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration10'
    */
   rtb_RelationalOperator6_h = (rtb_Abs_k >= (APP1_AdaptAdapt_Low_Min_DataStore()));
 
-  /* Sum: '<S787>/Sum2' incorporates:
-   *  MinMax: '<S788>/MinMax'
+  /* Sum: '<S788>/Sum2' incorporates:
+   *  MinMax: '<S789>/MinMax'
    */
-  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s781_MinMax;
+  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s782_MinMax;
 
-  /* Abs: '<S787>/Abs' */
+  /* Abs: '<S788>/Abs' */
   rtb_Abs_co = fabs(rtb_Abs_co);
 
-  /* Outputs for Enabled SubSystem: '<S787>/Store Current Position' incorporates:
-   *  EnablePort: '<S790>/Enable'
+  /* Outputs for Enabled SubSystem: '<S788>/Store Current Position' incorporates:
+   *  EnablePort: '<S791>/Enable'
    */
-  /* Logic: '<S787>/Logical Operator2' incorporates:
-   *  Logic: '<S787>/Logical Operator1'
-   *  Logic: '<S787>/Logical Operator4'
-   *  RelationalOperator: '<S787>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S781>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_calibration): '<S781>/motohawk_calibration14'
+  /* Logic: '<S788>/Logical Operator2' incorporates:
+   *  Logic: '<S788>/Logical Operator1'
+   *  Logic: '<S788>/Logical Operator4'
+   *  RelationalOperator: '<S788>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S782>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_calibration): '<S782>/motohawk_calibration14'
    */
   if ((rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz &&
        rtb_RelationalOperator6_h && (APP1_AdaptAdaptLoEnable_DataStore()) &&
        (rtb_Abs_co > (APP1_AdaptAdapt_Delta_DataStore()))) ||
       (rtb_RelationalOperator5_fz && rtb_RelationalOperator6_h &&
        (APP1_AdaptAdaptLoEnable_DataStore()) && rtb_RelationalOperator3_bp)) {
-    /* DataTypeConversion: '<S790>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S788>/MinMax'
+    /* DataTypeConversion: '<S791>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S789>/MinMax'
      */
     if (rtb_Abs_k < 65536.0) {
       if (rtb_Abs_k >= 0.0) {
@@ -20072,25 +20030,25 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_hr = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S790>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S791>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S790>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S791>/motohawk_data_write' */
     /* Write to Data Storage as scalar: APP1_AdaptRaw_Adpt_Low */
     {
       APP1_AdaptRaw_Adpt_Low_DataStore() = rtb_DataTypeConversion2_hr;
     }
   }
 
-  /* End of Logic: '<S787>/Logical Operator2' */
-  /* End of Outputs for SubSystem: '<S787>/Store Current Position' */
+  /* End of Logic: '<S788>/Logical Operator2' */
+  /* End of Outputs for SubSystem: '<S788>/Store Current Position' */
 
-  /* RelationalOperator: '<S799>/Relational Operator5' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S799>/motohawk_calibration5'
+  /* RelationalOperator: '<S800>/Relational Operator5' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S800>/motohawk_calibration5'
    */
-  rtb_RelationalOperator5_a = ((BaseEngineController_LS_B.s754_Switch >
+  rtb_RelationalOperator5_a = ((BaseEngineController_LS_B.s755_Switch >
     (APP2_AdaptInputHiFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S799>/motohawk_fault_def4' */
+  /* S-Function (motohawk_sfun_fault_def): '<S800>/motohawk_fault_def4' */
 
   /* Set Fault Suspected Status: APP2_AdaptRangeHigh */
   {
@@ -20100,13 +20058,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(18);
   }
 
-  /* RelationalOperator: '<S799>/Relational Operator4' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S799>/motohawk_calibration6'
+  /* RelationalOperator: '<S800>/Relational Operator4' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S800>/motohawk_calibration6'
    */
-  rtb_RelationalOperator4_d = ((BaseEngineController_LS_B.s754_Switch <
+  rtb_RelationalOperator4_d = ((BaseEngineController_LS_B.s755_Switch <
     (APP2_AdaptInputLoFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S799>/motohawk_fault_def5' */
+  /* S-Function (motohawk_sfun_fault_def): '<S800>/motohawk_fault_def5' */
 
   /* Set Fault Suspected Status: APP2_AdaptRangeLow */
   {
@@ -20116,13 +20074,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(19);
   }
 
-  /* RelationalOperator: '<S799>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration9'
+  /* RelationalOperator: '<S800>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration9'
    */
-  rtb_RelationalOperator_f = ((BaseEngineController_LS_B.s798_MinMax >
+  rtb_RelationalOperator_f = ((BaseEngineController_LS_B.s799_MinMax >
     (APP2_AdaptAdapt_Low_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S799>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S800>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: APP2_AdaptAdaptLoMax */
   {
@@ -20132,13 +20090,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(16);
   }
 
-  /* RelationalOperator: '<S799>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration12'
+  /* RelationalOperator: '<S800>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration12'
    */
-  rtb_RelationalOperator3_n3 = ((BaseEngineController_LS_B.s798_MinMax1 >
+  rtb_RelationalOperator3_n3 = ((BaseEngineController_LS_B.s799_MinMax1 >
     (APP2_AdaptAdapt_Hi_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S799>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S800>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: APP2_AdaptAdaptHiMax */
   {
@@ -20148,13 +20106,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(14);
   }
 
-  /* RelationalOperator: '<S799>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration11'
+  /* RelationalOperator: '<S800>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration11'
    */
-  rtb_RelationalOperator2_ma = ((BaseEngineController_LS_B.s798_MinMax1 <
+  rtb_RelationalOperator2_ma = ((BaseEngineController_LS_B.s799_MinMax1 <
     (APP2_AdaptAdapt_Hi_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S799>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S800>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: APP2_AdaptAdaptHiMin */
   {
@@ -20164,13 +20122,13 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(15);
   }
 
-  /* RelationalOperator: '<S799>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration10'
+  /* RelationalOperator: '<S800>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration10'
    */
-  rtb_RelationalOperator1_gr = ((BaseEngineController_LS_B.s798_MinMax <
+  rtb_RelationalOperator1_gr = ((BaseEngineController_LS_B.s799_MinMax <
     (APP2_AdaptAdapt_Low_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S799>/motohawk_fault_def8' */
+  /* S-Function (motohawk_sfun_fault_def): '<S800>/motohawk_fault_def8' */
 
   /* Set Fault Suspected Status: APP2_AdaptAdaptLoMin */
   {
@@ -20180,79 +20138,79 @@ void BaseEngineController_LS_Foreground(void)
     UpdateFault(17);
   }
 
-  /* UnitDelay: '<S805>/Unit Delay1' */
-  rtb_Abs_co = BaseEngineController_LS_DWork.s805_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S806>/Unit Delay1' */
+  rtb_Abs_co = BaseEngineController_LS_DWork.s806_UnitDelay1_DSTATE;
 
-  /* UnitDelay: '<S805>/Unit Delay' */
+  /* UnitDelay: '<S806>/Unit Delay' */
   rtb_Multiplyby10ifnotyetenabled =
-    BaseEngineController_LS_DWork.s805_UnitDelay_DSTATE;
+    BaseEngineController_LS_DWork.s806_UnitDelay_DSTATE;
 
-  /* UnitDelay: '<S805>/Unit Delay3' */
-  rtb_Product4_o = BaseEngineController_LS_DWork.s805_UnitDelay3_DSTATE;
+  /* UnitDelay: '<S806>/Unit Delay3' */
+  rtb_Product4_o = BaseEngineController_LS_DWork.s806_UnitDelay3_DSTATE;
 
-  /* UnitDelay: '<S805>/Unit Delay4' */
-  rtb_Switch_c = BaseEngineController_LS_DWork.s805_UnitDelay4_DSTATE;
+  /* UnitDelay: '<S806>/Unit Delay4' */
+  rtb_Switch_c = BaseEngineController_LS_DWork.s806_UnitDelay4_DSTATE;
 
-  /* MinMax: '<S805>/MinMax1' incorporates:
-   *  UnitDelay: '<S805>/Unit Delay'
-   *  UnitDelay: '<S805>/Unit Delay3'
-   *  UnitDelay: '<S805>/Unit Delay4'
+  /* MinMax: '<S806>/MinMax1' incorporates:
+   *  UnitDelay: '<S806>/Unit Delay'
+   *  UnitDelay: '<S806>/Unit Delay3'
+   *  UnitDelay: '<S806>/Unit Delay4'
    */
-  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s805_UnitDelay_DSTATE) ||
-    rtIsNaN(BaseEngineController_LS_DWork.s805_UnitDelay_DSTATE) ? rtb_Abs_co :
-    BaseEngineController_LS_DWork.s805_UnitDelay_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s805_UnitDelay3_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s805_UnitDelay3_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s805_UnitDelay3_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s805_UnitDelay4_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s805_UnitDelay4_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s805_UnitDelay4_DSTATE;
-  y = (y <= BaseEngineController_LS_B.s754_Switch) || rtIsNaN
-    (BaseEngineController_LS_B.s754_Switch) ? y :
-    BaseEngineController_LS_B.s754_Switch;
+  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s806_UnitDelay_DSTATE) ||
+    rtIsNaN(BaseEngineController_LS_DWork.s806_UnitDelay_DSTATE) ? rtb_Abs_co :
+    BaseEngineController_LS_DWork.s806_UnitDelay_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s806_UnitDelay3_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s806_UnitDelay3_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s806_UnitDelay3_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s806_UnitDelay4_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s806_UnitDelay4_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s806_UnitDelay4_DSTATE;
+  y = (y <= BaseEngineController_LS_B.s755_Switch) || rtIsNaN
+    (BaseEngineController_LS_B.s755_Switch) ? y :
+    BaseEngineController_LS_B.s755_Switch;
 
-  /* RelationalOperator: '<S803>/Relational Operator9' incorporates:
-   *  MinMax: '<S805>/MinMax1'
+  /* RelationalOperator: '<S804>/Relational Operator9' incorporates:
+   *  MinMax: '<S806>/MinMax1'
    */
-  rtb_LogicalOperator6_b = (y > BaseEngineController_LS_B.s798_MinMax1);
+  rtb_LogicalOperator6_b = (y > BaseEngineController_LS_B.s799_MinMax1);
 
-  /* RelationalOperator: '<S803>/Relational Operator5' incorporates:
-   *  MinMax: '<S805>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration12'
+  /* RelationalOperator: '<S804>/Relational Operator5' incorporates:
+   *  MinMax: '<S806>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration12'
    */
   rtb_RelationalOperator5_fz = (y <= (APP2_AdaptAdapt_Hi_Max_DataStore()));
 
-  /* RelationalOperator: '<S803>/Relational Operator6' incorporates:
-   *  MinMax: '<S805>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration11'
+  /* RelationalOperator: '<S804>/Relational Operator6' incorporates:
+   *  MinMax: '<S806>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration11'
    */
   rtb_RelationalOperator6_h = (y >= (APP2_AdaptAdapt_Hi_Min_DataStore()));
 
-  /* Sum: '<S803>/Sum2' incorporates:
-   *  MinMax: '<S805>/MinMax1'
+  /* Sum: '<S804>/Sum2' incorporates:
+   *  MinMax: '<S806>/MinMax1'
    */
-  rtb_Abs_k = y - BaseEngineController_LS_B.s798_MinMax1;
+  rtb_Abs_k = y - BaseEngineController_LS_B.s799_MinMax1;
 
-  /* Abs: '<S803>/Abs' */
+  /* Abs: '<S804>/Abs' */
   rtb_Abs_k = fabs(rtb_Abs_k);
 
-  /* Outputs for Enabled SubSystem: '<S803>/Store Current Position' incorporates:
-   *  EnablePort: '<S806>/Enable'
+  /* Outputs for Enabled SubSystem: '<S804>/Store Current Position' incorporates:
+   *  EnablePort: '<S807>/Enable'
    */
-  /* Logic: '<S803>/Logical Operator2' incorporates:
-   *  Logic: '<S803>/Logical Operator1'
-   *  Logic: '<S803>/Logical Operator4'
-   *  RelationalOperator: '<S803>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S798>/motohawk_calibration14'
-   *  S-Function (motohawk_sfun_calibration): '<S798>/motohawk_calibration2'
+  /* Logic: '<S804>/Logical Operator2' incorporates:
+   *  Logic: '<S804>/Logical Operator1'
+   *  Logic: '<S804>/Logical Operator4'
+   *  RelationalOperator: '<S804>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S799>/motohawk_calibration14'
+   *  S-Function (motohawk_sfun_calibration): '<S799>/motohawk_calibration2'
    */
   if ((rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz &&
        rtb_RelationalOperator6_h && (APP2_AdaptAdaptHiEnable_DataStore()) &&
        (rtb_Abs_k > (APP2_AdaptAdapt_Delta_DataStore()))) ||
       (rtb_RelationalOperator5_fz && rtb_RelationalOperator6_h &&
        (APP2_AdaptAdaptHiEnable_DataStore()) && rtb_RelOp_pu)) {
-    /* DataTypeConversion: '<S806>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S805>/MinMax1'
+    /* DataTypeConversion: '<S807>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S806>/MinMax1'
      */
     if (y < 65536.0) {
       if (y >= 0.0) {
@@ -20264,68 +20222,68 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_h = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S806>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S807>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S806>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S807>/motohawk_data_write' */
     /* Write to Data Storage as scalar: APP2_AdaptRaw_Adpt_Hi */
     {
       APP2_AdaptRaw_Adpt_Hi_DataStore() = rtb_DataTypeConversion2_h;
     }
   }
 
-  /* End of Logic: '<S803>/Logical Operator2' */
-  /* End of Outputs for SubSystem: '<S803>/Store Current Position' */
+  /* End of Logic: '<S804>/Logical Operator2' */
+  /* End of Outputs for SubSystem: '<S804>/Store Current Position' */
 
-  /* MinMax: '<S805>/MinMax' */
-  y = (BaseEngineController_LS_B.s754_Switch >= rtb_Switch_c) || rtIsNaN
-    (rtb_Switch_c) ? BaseEngineController_LS_B.s754_Switch : rtb_Switch_c;
+  /* MinMax: '<S806>/MinMax' */
+  y = (BaseEngineController_LS_B.s755_Switch >= rtb_Switch_c) || rtIsNaN
+    (rtb_Switch_c) ? BaseEngineController_LS_B.s755_Switch : rtb_Switch_c;
   y = (y >= rtb_Product4_o) || rtIsNaN(rtb_Product4_o) ? y : rtb_Product4_o;
   y = (y >= rtb_Multiplyby10ifnotyetenabled) || rtIsNaN
     (rtb_Multiplyby10ifnotyetenabled) ? y : rtb_Multiplyby10ifnotyetenabled;
   rtb_Abs_k = (y >= rtb_Abs_co) || rtIsNaN(rtb_Abs_co) ? y : rtb_Abs_co;
 
-  /* RelationalOperator: '<S804>/Relational Operator9' incorporates:
-   *  MinMax: '<S805>/MinMax'
+  /* RelationalOperator: '<S805>/Relational Operator9' incorporates:
+   *  MinMax: '<S806>/MinMax'
    */
-  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s798_MinMax);
+  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s799_MinMax);
 
-  /* RelationalOperator: '<S804>/Relational Operator5' incorporates:
-   *  MinMax: '<S805>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration9'
+  /* RelationalOperator: '<S805>/Relational Operator5' incorporates:
+   *  MinMax: '<S806>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration9'
    */
   rtb_RelationalOperator5_fz = (rtb_Abs_k <= (APP2_AdaptAdapt_Low_Max_DataStore()));
 
-  /* RelationalOperator: '<S804>/Relational Operator6' incorporates:
-   *  MinMax: '<S805>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S754>/motohawk_calibration10'
+  /* RelationalOperator: '<S805>/Relational Operator6' incorporates:
+   *  MinMax: '<S806>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration10'
    */
   rtb_RelationalOperator6_h = (rtb_Abs_k >= (APP2_AdaptAdapt_Low_Min_DataStore()));
 
-  /* Sum: '<S804>/Sum2' incorporates:
-   *  MinMax: '<S805>/MinMax'
+  /* Sum: '<S805>/Sum2' incorporates:
+   *  MinMax: '<S806>/MinMax'
    */
-  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s798_MinMax;
+  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s799_MinMax;
 
-  /* Abs: '<S804>/Abs' */
+  /* Abs: '<S805>/Abs' */
   rtb_Abs_co = fabs(rtb_Abs_co);
 
-  /* Outputs for Enabled SubSystem: '<S804>/Store Current Position' incorporates:
-   *  EnablePort: '<S807>/Enable'
+  /* Outputs for Enabled SubSystem: '<S805>/Store Current Position' incorporates:
+   *  EnablePort: '<S808>/Enable'
    */
-  /* Logic: '<S804>/Logical Operator2' incorporates:
-   *  Logic: '<S804>/Logical Operator1'
-   *  Logic: '<S804>/Logical Operator4'
-   *  RelationalOperator: '<S804>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S798>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_calibration): '<S798>/motohawk_calibration14'
+  /* Logic: '<S805>/Logical Operator2' incorporates:
+   *  Logic: '<S805>/Logical Operator1'
+   *  Logic: '<S805>/Logical Operator4'
+   *  RelationalOperator: '<S805>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S799>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_calibration): '<S799>/motohawk_calibration14'
    */
   if ((rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz &&
        rtb_RelationalOperator6_h && (APP2_AdaptAdaptLoEnable_DataStore()) &&
        (rtb_Abs_co > (APP2_AdaptAdapt_Delta_DataStore()))) ||
       (rtb_RelationalOperator5_fz && rtb_RelationalOperator6_h &&
        (APP2_AdaptAdaptLoEnable_DataStore()) && rtb_Switch1_mj)) {
-    /* DataTypeConversion: '<S807>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S805>/MinMax'
+    /* DataTypeConversion: '<S808>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S806>/MinMax'
      */
     if (rtb_Abs_k < 65536.0) {
       if (rtb_Abs_k >= 0.0) {
@@ -20337,183 +20295,183 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_p2 = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S807>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S808>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S807>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S808>/motohawk_data_write' */
     /* Write to Data Storage as scalar: APP2_AdaptRaw_Adpt_Low */
     {
       APP2_AdaptRaw_Adpt_Low_DataStore() = rtb_DataTypeConversion2_p2;
     }
   }
 
-  /* End of Logic: '<S804>/Logical Operator2' */
-  /* End of Outputs for SubSystem: '<S804>/Store Current Position' */
+  /* End of Logic: '<S805>/Logical Operator2' */
+  /* End of Outputs for SubSystem: '<S805>/Store Current Position' */
 
-  /* RelationalOperator: '<S816>/Relational Operator5' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration5'
+  /* RelationalOperator: '<S817>/Relational Operator5' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S817>/motohawk_calibration5'
    */
-  rtb_RelationalOperator5_k = ((BaseEngineController_LS_B.s755_Switch >
+  rtb_RelationalOperator5_k = ((BaseEngineController_LS_B.s756_Switch >
     (TPS1InputHiFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S816>/motohawk_fault_def4' */
+  /* S-Function (motohawk_sfun_fault_def): '<S817>/motohawk_fault_def4' */
 
   /* Set Fault Suspected Status: TPS1RangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(113, rtb_RelationalOperator5_k);
-    UpdateFault(113);
+    SetFaultSuspected(110, rtb_RelationalOperator5_k);
+    UpdateFault(110);
   }
 
-  /* RelationalOperator: '<S816>/Relational Operator4' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration6'
+  /* RelationalOperator: '<S817>/Relational Operator4' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S817>/motohawk_calibration6'
    */
-  rtb_RelationalOperator4_p = ((BaseEngineController_LS_B.s755_Switch <
+  rtb_RelationalOperator4_p = ((BaseEngineController_LS_B.s756_Switch <
     (TPS1InputLoFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S816>/motohawk_fault_def5' */
+  /* S-Function (motohawk_sfun_fault_def): '<S817>/motohawk_fault_def5' */
 
   /* Set Fault Suspected Status: TPS1RangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(114, rtb_RelationalOperator4_p);
-    UpdateFault(114);
+    SetFaultSuspected(111, rtb_RelationalOperator4_p);
+    UpdateFault(111);
   }
 
-  /* RelationalOperator: '<S816>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration9'
+  /* RelationalOperator: '<S817>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration9'
    */
-  rtb_RelationalOperator_cz = ((BaseEngineController_LS_B.s815_MinMax >
+  rtb_RelationalOperator_cz = ((BaseEngineController_LS_B.s816_MinMax >
     (TPS1Adapt_Low_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S816>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S817>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: TPS1AdaptLoMax */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(111, rtb_RelationalOperator_cz);
-    UpdateFault(111);
+    SetFaultSuspected(108, rtb_RelationalOperator_cz);
+    UpdateFault(108);
   }
 
-  /* RelationalOperator: '<S816>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration12'
+  /* RelationalOperator: '<S817>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration12'
    */
-  rtb_RelationalOperator3_kn = ((BaseEngineController_LS_B.s815_MinMax1 >
+  rtb_RelationalOperator3_kn = ((BaseEngineController_LS_B.s816_MinMax1 >
     (TPS1Adapt_Hi_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S816>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S817>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: TPS1AdaptHiMax */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(109, rtb_RelationalOperator3_kn);
-    UpdateFault(109);
+    SetFaultSuspected(106, rtb_RelationalOperator3_kn);
+    UpdateFault(106);
   }
 
-  /* RelationalOperator: '<S816>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration11'
+  /* RelationalOperator: '<S817>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration11'
    */
-  rtb_RelationalOperator2_id = ((BaseEngineController_LS_B.s815_MinMax1 <
+  rtb_RelationalOperator2_id = ((BaseEngineController_LS_B.s816_MinMax1 <
     (TPS1Adapt_Hi_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S816>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S817>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: TPS1AdaptHiMin */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(110, rtb_RelationalOperator2_id);
-    UpdateFault(110);
+    SetFaultSuspected(107, rtb_RelationalOperator2_id);
+    UpdateFault(107);
   }
 
-  /* RelationalOperator: '<S816>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration10'
+  /* RelationalOperator: '<S817>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration10'
    */
-  rtb_RelationalOperator1_px = ((BaseEngineController_LS_B.s815_MinMax <
+  rtb_RelationalOperator1_px = ((BaseEngineController_LS_B.s816_MinMax <
     (TPS1Adapt_Low_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S816>/motohawk_fault_def8' */
+  /* S-Function (motohawk_sfun_fault_def): '<S817>/motohawk_fault_def8' */
 
   /* Set Fault Suspected Status: TPS1AdaptLoMin */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(112, rtb_RelationalOperator1_px);
-    UpdateFault(112);
+    SetFaultSuspected(109, rtb_RelationalOperator1_px);
+    UpdateFault(109);
   }
 
-  /* UnitDelay: '<S822>/Unit Delay1' */
-  rtb_Abs_co = BaseEngineController_LS_DWork.s822_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S823>/Unit Delay1' */
+  rtb_Abs_co = BaseEngineController_LS_DWork.s823_UnitDelay1_DSTATE;
 
-  /* UnitDelay: '<S822>/Unit Delay' */
-  rtb_Switch_k = BaseEngineController_LS_DWork.s822_UnitDelay_DSTATE;
+  /* UnitDelay: '<S823>/Unit Delay' */
+  rtb_Switch_k = BaseEngineController_LS_DWork.s823_UnitDelay_DSTATE;
 
-  /* UnitDelay: '<S822>/Unit Delay3' */
+  /* UnitDelay: '<S823>/Unit Delay3' */
   rtb_DataTypeConversion_m0 =
-    BaseEngineController_LS_DWork.s822_UnitDelay3_DSTATE;
+    BaseEngineController_LS_DWork.s823_UnitDelay3_DSTATE;
 
-  /* UnitDelay: '<S822>/Unit Delay4' */
-  rtb_Switch_f = BaseEngineController_LS_DWork.s822_UnitDelay4_DSTATE;
+  /* UnitDelay: '<S823>/Unit Delay4' */
+  rtb_Switch_f = BaseEngineController_LS_DWork.s823_UnitDelay4_DSTATE;
 
-  /* MinMax: '<S822>/MinMax1' incorporates:
-   *  UnitDelay: '<S822>/Unit Delay'
-   *  UnitDelay: '<S822>/Unit Delay3'
-   *  UnitDelay: '<S822>/Unit Delay4'
+  /* MinMax: '<S823>/MinMax1' incorporates:
+   *  UnitDelay: '<S823>/Unit Delay'
+   *  UnitDelay: '<S823>/Unit Delay3'
+   *  UnitDelay: '<S823>/Unit Delay4'
    */
-  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s822_UnitDelay_DSTATE) ||
-    rtIsNaN(BaseEngineController_LS_DWork.s822_UnitDelay_DSTATE) ? rtb_Abs_co :
-    BaseEngineController_LS_DWork.s822_UnitDelay_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s822_UnitDelay3_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s822_UnitDelay3_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s822_UnitDelay3_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s822_UnitDelay4_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s822_UnitDelay4_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s822_UnitDelay4_DSTATE;
-  y = (y <= BaseEngineController_LS_B.s755_Switch) || rtIsNaN
-    (BaseEngineController_LS_B.s755_Switch) ? y :
-    BaseEngineController_LS_B.s755_Switch;
+  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s823_UnitDelay_DSTATE) ||
+    rtIsNaN(BaseEngineController_LS_DWork.s823_UnitDelay_DSTATE) ? rtb_Abs_co :
+    BaseEngineController_LS_DWork.s823_UnitDelay_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s823_UnitDelay3_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s823_UnitDelay3_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s823_UnitDelay3_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s823_UnitDelay4_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s823_UnitDelay4_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s823_UnitDelay4_DSTATE;
+  y = (y <= BaseEngineController_LS_B.s756_Switch) || rtIsNaN
+    (BaseEngineController_LS_B.s756_Switch) ? y :
+    BaseEngineController_LS_B.s756_Switch;
 
-  /* RelationalOperator: '<S820>/Relational Operator9' incorporates:
-   *  MinMax: '<S822>/MinMax1'
+  /* RelationalOperator: '<S821>/Relational Operator9' incorporates:
+   *  MinMax: '<S823>/MinMax1'
    */
-  rtb_LogicalOperator6_b = (y > BaseEngineController_LS_B.s815_MinMax1);
+  rtb_LogicalOperator6_b = (y > BaseEngineController_LS_B.s816_MinMax1);
 
-  /* RelationalOperator: '<S820>/Relational Operator5' incorporates:
-   *  MinMax: '<S822>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration12'
+  /* RelationalOperator: '<S821>/Relational Operator5' incorporates:
+   *  MinMax: '<S823>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration12'
    */
   rtb_RelationalOperator5_fz = (y <= (TPS1Adapt_Hi_Max_DataStore()));
 
-  /* RelationalOperator: '<S820>/Relational Operator6' incorporates:
-   *  MinMax: '<S822>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration11'
+  /* RelationalOperator: '<S821>/Relational Operator6' incorporates:
+   *  MinMax: '<S823>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration11'
    */
   rtb_RelationalOperator6_h = (y >= (TPS1Adapt_Hi_Min_DataStore()));
 
-  /* Sum: '<S820>/Sum2' incorporates:
-   *  MinMax: '<S822>/MinMax1'
+  /* Sum: '<S821>/Sum2' incorporates:
+   *  MinMax: '<S823>/MinMax1'
    */
-  rtb_Abs_k = y - BaseEngineController_LS_B.s815_MinMax1;
+  rtb_Abs_k = y - BaseEngineController_LS_B.s816_MinMax1;
 
-  /* Abs: '<S820>/Abs' */
+  /* Abs: '<S821>/Abs' */
   rtb_Abs_k = fabs(rtb_Abs_k);
 
-  /* Outputs for Enabled SubSystem: '<S820>/Store Current Position' incorporates:
-   *  EnablePort: '<S823>/Enable'
+  /* Outputs for Enabled SubSystem: '<S821>/Store Current Position' incorporates:
+   *  EnablePort: '<S824>/Enable'
    */
-  /* Logic: '<S820>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S820>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S815>/motohawk_calibration14'
-   *  S-Function (motohawk_sfun_calibration): '<S815>/motohawk_calibration2'
+  /* Logic: '<S821>/Logical Operator1' incorporates:
+   *  RelationalOperator: '<S821>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration14'
+   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration2'
    */
   if (rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz &&
       rtb_RelationalOperator6_h && (TPS1AdaptHiEnable_DataStore()) && (rtb_Abs_k
        > (TPS1Adapt_Delta_DataStore()))) {
-    /* DataTypeConversion: '<S823>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S822>/MinMax1'
+    /* DataTypeConversion: '<S824>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S823>/MinMax1'
      */
     if (y < 65536.0) {
       if (y >= 0.0) {
@@ -20525,73 +20483,73 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_k = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S823>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S824>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S823>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S824>/motohawk_data_write' */
     /* Write to Data Storage as scalar: TPS1Raw_Adpt_Hi */
     {
       TPS1Raw_Adpt_Hi_DataStore() = rtb_DataTypeConversion2_k;
     }
   }
 
-  /* End of Logic: '<S820>/Logical Operator1' */
-  /* End of Outputs for SubSystem: '<S820>/Store Current Position' */
+  /* End of Logic: '<S821>/Logical Operator1' */
+  /* End of Outputs for SubSystem: '<S821>/Store Current Position' */
 
-  /* MinMax: '<S822>/MinMax' */
-  y = (BaseEngineController_LS_B.s755_Switch >= rtb_Switch_f) || rtIsNaN
-    (rtb_Switch_f) ? BaseEngineController_LS_B.s755_Switch : rtb_Switch_f;
+  /* MinMax: '<S823>/MinMax' */
+  y = (BaseEngineController_LS_B.s756_Switch >= rtb_Switch_f) || rtIsNaN
+    (rtb_Switch_f) ? BaseEngineController_LS_B.s756_Switch : rtb_Switch_f;
   y = (y >= rtb_DataTypeConversion_m0) || rtIsNaN(rtb_DataTypeConversion_m0) ? y
     : rtb_DataTypeConversion_m0;
   y = (y >= rtb_Switch_k) || rtIsNaN(rtb_Switch_k) ? y : rtb_Switch_k;
   rtb_Abs_k = (y >= rtb_Abs_co) || rtIsNaN(rtb_Abs_co) ? y : rtb_Abs_co;
 
-  /* RelationalOperator: '<S821>/Relational Operator9' incorporates:
-   *  MinMax: '<S822>/MinMax'
+  /* RelationalOperator: '<S822>/Relational Operator9' incorporates:
+   *  MinMax: '<S823>/MinMax'
    */
-  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s815_MinMax);
+  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s816_MinMax);
 
-  /* RelationalOperator: '<S821>/Relational Operator5' incorporates:
-   *  MinMax: '<S822>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration9'
+  /* RelationalOperator: '<S822>/Relational Operator5' incorporates:
+   *  MinMax: '<S823>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration9'
    */
   rtb_RelationalOperator5_fz = (rtb_Abs_k <= (TPS1Adapt_Low_Max_DataStore()));
 
-  /* RelationalOperator: '<S821>/Relational Operator6' incorporates:
-   *  MinMax: '<S822>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S755>/motohawk_calibration10'
+  /* RelationalOperator: '<S822>/Relational Operator6' incorporates:
+   *  MinMax: '<S823>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration10'
    */
   rtb_RelationalOperator6_h = (rtb_Abs_k >= (TPS1Adapt_Low_Min_DataStore()));
 
-  /* Sum: '<S821>/Sum2' incorporates:
-   *  MinMax: '<S822>/MinMax'
+  /* Sum: '<S822>/Sum2' incorporates:
+   *  MinMax: '<S823>/MinMax'
    */
-  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s815_MinMax;
+  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s816_MinMax;
 
-  /* Abs: '<S821>/Abs' */
+  /* Abs: '<S822>/Abs' */
   rtb_Abs_co = fabs(rtb_Abs_co);
 
-  /* Logic: '<S821>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S821>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S815>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_calibration): '<S815>/motohawk_calibration14'
+  /* Logic: '<S822>/Logical Operator1' incorporates:
+   *  RelationalOperator: '<S822>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration14'
    */
   rtb_LogicalOperator6_b = (rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz
     && rtb_RelationalOperator6_h && (TPS1AdaptLoEnable_DataStore()) &&
     (rtb_Abs_co > (TPS1Adapt_Delta_DataStore())));
 
-  /* Outputs for Enabled SubSystem: '<S821>/Store Current Position' incorporates:
-   *  EnablePort: '<S824>/Enable'
+  /* Outputs for Enabled SubSystem: '<S822>/Store Current Position' incorporates:
+   *  EnablePort: '<S825>/Enable'
    */
-  /* Logic: '<S821>/Logical Operator2' incorporates:
-   *  Logic: '<S821>/Logical Operator4'
-   *  S-Function (motohawk_sfun_calibration): '<S815>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_data_read): '<S446>/motohawk_data_read'
+  /* Logic: '<S822>/Logical Operator2' incorporates:
+   *  Logic: '<S822>/Logical Operator4'
+   *  S-Function (motohawk_sfun_calibration): '<S816>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_data_read): '<S447>/motohawk_data_read'
    */
   if (rtb_LogicalOperator6_b || (rtb_RelationalOperator5_fz &&
        rtb_RelationalOperator6_h && (TPS1AdaptLoEnable_DataStore()) &&
        TPSAdaptLoRequest_DataStore())) {
-    /* DataTypeConversion: '<S824>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S822>/MinMax'
+    /* DataTypeConversion: '<S825>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S823>/MinMax'
      */
     if (rtb_Abs_k < 65536.0) {
       if (rtb_Abs_k >= 0.0) {
@@ -20603,183 +20561,183 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_n = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S824>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S825>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S824>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S825>/motohawk_data_write' */
     /* Write to Data Storage as scalar: TPS1Raw_Adpt_Low */
     {
       TPS1Raw_Adpt_Low_DataStore() = rtb_DataTypeConversion2_n;
     }
   }
 
-  /* End of Logic: '<S821>/Logical Operator2' */
-  /* End of Outputs for SubSystem: '<S821>/Store Current Position' */
+  /* End of Logic: '<S822>/Logical Operator2' */
+  /* End of Outputs for SubSystem: '<S822>/Store Current Position' */
 
-  /* RelationalOperator: '<S833>/Relational Operator5' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S833>/motohawk_calibration5'
+  /* RelationalOperator: '<S834>/Relational Operator5' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S834>/motohawk_calibration5'
    */
-  rtb_RelationalOperator5_g = ((BaseEngineController_LS_B.s756_Switch >
+  rtb_RelationalOperator5_g = ((BaseEngineController_LS_B.s757_Switch >
     (TPS2InputHiFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S833>/motohawk_fault_def4' */
+  /* S-Function (motohawk_sfun_fault_def): '<S834>/motohawk_fault_def4' */
 
   /* Set Fault Suspected Status: TPS2RangeHigh */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(119, rtb_RelationalOperator5_g);
-    UpdateFault(119);
+    SetFaultSuspected(116, rtb_RelationalOperator5_g);
+    UpdateFault(116);
   }
 
-  /* RelationalOperator: '<S833>/Relational Operator4' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S833>/motohawk_calibration6'
+  /* RelationalOperator: '<S834>/Relational Operator4' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S834>/motohawk_calibration6'
    */
-  rtb_RelationalOperator4_d1 = ((BaseEngineController_LS_B.s756_Switch <
+  rtb_RelationalOperator4_d1 = ((BaseEngineController_LS_B.s757_Switch <
     (TPS2InputLoFltPos_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S833>/motohawk_fault_def5' */
+  /* S-Function (motohawk_sfun_fault_def): '<S834>/motohawk_fault_def5' */
 
   /* Set Fault Suspected Status: TPS2RangeLow */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(120, rtb_RelationalOperator4_d1);
-    UpdateFault(120);
+    SetFaultSuspected(117, rtb_RelationalOperator4_d1);
+    UpdateFault(117);
   }
 
-  /* RelationalOperator: '<S833>/Relational Operator' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration9'
+  /* RelationalOperator: '<S834>/Relational Operator' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration9'
    */
-  rtb_RelationalOperator_fa = ((BaseEngineController_LS_B.s832_MinMax >
+  rtb_RelationalOperator_fa = ((BaseEngineController_LS_B.s833_MinMax >
     (TPS2Adapt_Low_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S833>/motohawk_fault_def1' */
+  /* S-Function (motohawk_sfun_fault_def): '<S834>/motohawk_fault_def1' */
 
   /* Set Fault Suspected Status: TPS2AdaptLoMax */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(117, rtb_RelationalOperator_fa);
-    UpdateFault(117);
+    SetFaultSuspected(114, rtb_RelationalOperator_fa);
+    UpdateFault(114);
   }
 
-  /* RelationalOperator: '<S833>/Relational Operator3' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration12'
+  /* RelationalOperator: '<S834>/Relational Operator3' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration12'
    */
-  rtb_RelationalOperator3_jk = ((BaseEngineController_LS_B.s832_MinMax1 >
+  rtb_RelationalOperator3_jk = ((BaseEngineController_LS_B.s833_MinMax1 >
     (TPS2Adapt_Hi_Max_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S833>/motohawk_fault_def2' */
+  /* S-Function (motohawk_sfun_fault_def): '<S834>/motohawk_fault_def2' */
 
   /* Set Fault Suspected Status: TPS2AdaptHiMax */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(115, rtb_RelationalOperator3_jk);
-    UpdateFault(115);
+    SetFaultSuspected(112, rtb_RelationalOperator3_jk);
+    UpdateFault(112);
   }
 
-  /* RelationalOperator: '<S833>/Relational Operator2' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration11'
+  /* RelationalOperator: '<S834>/Relational Operator2' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration11'
    */
-  rtb_RelationalOperator2_or = ((BaseEngineController_LS_B.s832_MinMax1 <
+  rtb_RelationalOperator2_or = ((BaseEngineController_LS_B.s833_MinMax1 <
     (TPS2Adapt_Hi_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S833>/motohawk_fault_def3' */
+  /* S-Function (motohawk_sfun_fault_def): '<S834>/motohawk_fault_def3' */
 
   /* Set Fault Suspected Status: TPS2AdaptHiMin */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(116, rtb_RelationalOperator2_or);
-    UpdateFault(116);
+    SetFaultSuspected(113, rtb_RelationalOperator2_or);
+    UpdateFault(113);
   }
 
-  /* RelationalOperator: '<S833>/Relational Operator1' incorporates:
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration10'
+  /* RelationalOperator: '<S834>/Relational Operator1' incorporates:
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration10'
    */
-  rtb_RelationalOperator1_d = ((BaseEngineController_LS_B.s832_MinMax <
+  rtb_RelationalOperator1_d = ((BaseEngineController_LS_B.s833_MinMax <
     (TPS2Adapt_Low_Min_DataStore())));
 
-  /* S-Function (motohawk_sfun_fault_def): '<S833>/motohawk_fault_def8' */
+  /* S-Function (motohawk_sfun_fault_def): '<S834>/motohawk_fault_def8' */
 
   /* Set Fault Suspected Status: TPS2AdaptLoMin */
   {
     extern void SetFaultSuspected(uint32_T fault, boolean_T val);
     extern void UpdateFault(uint32_T fault);
-    SetFaultSuspected(118, rtb_RelationalOperator1_d);
-    UpdateFault(118);
+    SetFaultSuspected(115, rtb_RelationalOperator1_d);
+    UpdateFault(115);
   }
 
-  /* UnitDelay: '<S839>/Unit Delay1' */
-  rtb_Abs_co = BaseEngineController_LS_DWork.s839_UnitDelay1_DSTATE;
+  /* UnitDelay: '<S840>/Unit Delay1' */
+  rtb_Abs_co = BaseEngineController_LS_DWork.s840_UnitDelay1_DSTATE;
 
-  /* UnitDelay: '<S839>/Unit Delay' */
+  /* UnitDelay: '<S840>/Unit Delay' */
   rtb_DataTypeConversion_ik =
-    BaseEngineController_LS_DWork.s839_UnitDelay_DSTATE;
+    BaseEngineController_LS_DWork.s840_UnitDelay_DSTATE;
 
-  /* UnitDelay: '<S839>/Unit Delay3' */
-  rtb_APP2 = BaseEngineController_LS_DWork.s839_UnitDelay3_DSTATE;
+  /* UnitDelay: '<S840>/Unit Delay3' */
+  rtb_APP2 = BaseEngineController_LS_DWork.s840_UnitDelay3_DSTATE;
 
-  /* UnitDelay: '<S839>/Unit Delay4' */
-  rtb_UnitDelay4_b3 = BaseEngineController_LS_DWork.s839_UnitDelay4_DSTATE;
+  /* UnitDelay: '<S840>/Unit Delay4' */
+  rtb_UnitDelay4_b3 = BaseEngineController_LS_DWork.s840_UnitDelay4_DSTATE;
 
-  /* MinMax: '<S839>/MinMax1' incorporates:
-   *  UnitDelay: '<S839>/Unit Delay'
-   *  UnitDelay: '<S839>/Unit Delay3'
-   *  UnitDelay: '<S839>/Unit Delay4'
+  /* MinMax: '<S840>/MinMax1' incorporates:
+   *  UnitDelay: '<S840>/Unit Delay'
+   *  UnitDelay: '<S840>/Unit Delay3'
+   *  UnitDelay: '<S840>/Unit Delay4'
    */
-  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s839_UnitDelay_DSTATE) ||
-    rtIsNaN(BaseEngineController_LS_DWork.s839_UnitDelay_DSTATE) ? rtb_Abs_co :
-    BaseEngineController_LS_DWork.s839_UnitDelay_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s839_UnitDelay3_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s839_UnitDelay3_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s839_UnitDelay3_DSTATE;
-  y = (y <= BaseEngineController_LS_DWork.s839_UnitDelay4_DSTATE) || rtIsNaN
-    (BaseEngineController_LS_DWork.s839_UnitDelay4_DSTATE) ? y :
-    BaseEngineController_LS_DWork.s839_UnitDelay4_DSTATE;
-  y = (y <= BaseEngineController_LS_B.s756_Switch) || rtIsNaN
-    (BaseEngineController_LS_B.s756_Switch) ? y :
-    BaseEngineController_LS_B.s756_Switch;
+  y = (rtb_Abs_co <= BaseEngineController_LS_DWork.s840_UnitDelay_DSTATE) ||
+    rtIsNaN(BaseEngineController_LS_DWork.s840_UnitDelay_DSTATE) ? rtb_Abs_co :
+    BaseEngineController_LS_DWork.s840_UnitDelay_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s840_UnitDelay3_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s840_UnitDelay3_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s840_UnitDelay3_DSTATE;
+  y = (y <= BaseEngineController_LS_DWork.s840_UnitDelay4_DSTATE) || rtIsNaN
+    (BaseEngineController_LS_DWork.s840_UnitDelay4_DSTATE) ? y :
+    BaseEngineController_LS_DWork.s840_UnitDelay4_DSTATE;
+  y = (y <= BaseEngineController_LS_B.s757_Switch) || rtIsNaN
+    (BaseEngineController_LS_B.s757_Switch) ? y :
+    BaseEngineController_LS_B.s757_Switch;
 
-  /* RelationalOperator: '<S837>/Relational Operator9' incorporates:
-   *  MinMax: '<S839>/MinMax1'
+  /* RelationalOperator: '<S838>/Relational Operator9' incorporates:
+   *  MinMax: '<S840>/MinMax1'
    */
-  rtb_LogicalOperator6_b = (y > BaseEngineController_LS_B.s832_MinMax1);
+  rtb_LogicalOperator6_b = (y > BaseEngineController_LS_B.s833_MinMax1);
 
-  /* RelationalOperator: '<S837>/Relational Operator5' incorporates:
-   *  MinMax: '<S839>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration12'
+  /* RelationalOperator: '<S838>/Relational Operator5' incorporates:
+   *  MinMax: '<S840>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration12'
    */
   rtb_RelationalOperator5_fz = (y <= (TPS2Adapt_Hi_Max_DataStore()));
 
-  /* RelationalOperator: '<S837>/Relational Operator6' incorporates:
-   *  MinMax: '<S839>/MinMax1'
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration11'
+  /* RelationalOperator: '<S838>/Relational Operator6' incorporates:
+   *  MinMax: '<S840>/MinMax1'
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration11'
    */
   rtb_RelationalOperator6_h = (y >= (TPS2Adapt_Hi_Min_DataStore()));
 
-  /* Sum: '<S837>/Sum2' incorporates:
-   *  MinMax: '<S839>/MinMax1'
+  /* Sum: '<S838>/Sum2' incorporates:
+   *  MinMax: '<S840>/MinMax1'
    */
-  rtb_Abs_k = y - BaseEngineController_LS_B.s832_MinMax1;
+  rtb_Abs_k = y - BaseEngineController_LS_B.s833_MinMax1;
 
-  /* Abs: '<S837>/Abs' */
+  /* Abs: '<S838>/Abs' */
   rtb_Abs_k = fabs(rtb_Abs_k);
 
-  /* Outputs for Enabled SubSystem: '<S837>/Store Current Position' incorporates:
-   *  EnablePort: '<S840>/Enable'
+  /* Outputs for Enabled SubSystem: '<S838>/Store Current Position' incorporates:
+   *  EnablePort: '<S841>/Enable'
    */
-  /* Logic: '<S837>/Logical Operator1' incorporates:
-   *  RelationalOperator: '<S837>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S832>/motohawk_calibration14'
-   *  S-Function (motohawk_sfun_calibration): '<S832>/motohawk_calibration2'
+  /* Logic: '<S838>/Logical Operator1' incorporates:
+   *  RelationalOperator: '<S838>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S833>/motohawk_calibration14'
+   *  S-Function (motohawk_sfun_calibration): '<S833>/motohawk_calibration2'
    */
   if (rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz &&
       rtb_RelationalOperator6_h && (TPS2AdaptHiEnable_DataStore()) && (rtb_Abs_k
        > (TPS2Adapt_Delta_DataStore()))) {
-    /* DataTypeConversion: '<S840>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S839>/MinMax1'
+    /* DataTypeConversion: '<S841>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S840>/MinMax1'
      */
     if (y < 65536.0) {
       if (y >= 0.0) {
@@ -20791,70 +20749,70 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_jn = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S840>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S841>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S840>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S841>/motohawk_data_write' */
     /* Write to Data Storage as scalar: TPS2Raw_Adpt_Hi */
     {
       TPS2Raw_Adpt_Hi_DataStore() = rtb_DataTypeConversion2_jn;
     }
   }
 
-  /* End of Logic: '<S837>/Logical Operator1' */
-  /* End of Outputs for SubSystem: '<S837>/Store Current Position' */
+  /* End of Logic: '<S838>/Logical Operator1' */
+  /* End of Outputs for SubSystem: '<S838>/Store Current Position' */
 
-  /* MinMax: '<S839>/MinMax' */
-  y = (BaseEngineController_LS_B.s756_Switch >= rtb_UnitDelay4_b3) || rtIsNaN
-    (rtb_UnitDelay4_b3) ? BaseEngineController_LS_B.s756_Switch :
+  /* MinMax: '<S840>/MinMax' */
+  y = (BaseEngineController_LS_B.s757_Switch >= rtb_UnitDelay4_b3) || rtIsNaN
+    (rtb_UnitDelay4_b3) ? BaseEngineController_LS_B.s757_Switch :
     rtb_UnitDelay4_b3;
   y = (y >= rtb_APP2) || rtIsNaN(rtb_APP2) ? y : rtb_APP2;
   y = (y >= rtb_DataTypeConversion_ik) || rtIsNaN(rtb_DataTypeConversion_ik) ? y
     : rtb_DataTypeConversion_ik;
   rtb_Abs_k = (y >= rtb_Abs_co) || rtIsNaN(rtb_Abs_co) ? y : rtb_Abs_co;
 
-  /* RelationalOperator: '<S838>/Relational Operator9' incorporates:
-   *  MinMax: '<S839>/MinMax'
+  /* RelationalOperator: '<S839>/Relational Operator9' incorporates:
+   *  MinMax: '<S840>/MinMax'
    */
-  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s832_MinMax);
+  rtb_LogicalOperator6_b = (rtb_Abs_k < BaseEngineController_LS_B.s833_MinMax);
 
-  /* RelationalOperator: '<S838>/Relational Operator5' incorporates:
-   *  MinMax: '<S839>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration9'
+  /* RelationalOperator: '<S839>/Relational Operator5' incorporates:
+   *  MinMax: '<S840>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration9'
    */
   rtb_RelationalOperator5_fz = (rtb_Abs_k <= (TPS2Adapt_Low_Max_DataStore()));
 
-  /* RelationalOperator: '<S838>/Relational Operator6' incorporates:
-   *  MinMax: '<S839>/MinMax'
-   *  S-Function (motohawk_sfun_calibration): '<S756>/motohawk_calibration10'
+  /* RelationalOperator: '<S839>/Relational Operator6' incorporates:
+   *  MinMax: '<S840>/MinMax'
+   *  S-Function (motohawk_sfun_calibration): '<S757>/motohawk_calibration10'
    */
   rtb_RelationalOperator6_h = (rtb_Abs_k >= (TPS2Adapt_Low_Min_DataStore()));
 
-  /* Sum: '<S838>/Sum2' incorporates:
-   *  MinMax: '<S839>/MinMax'
+  /* Sum: '<S839>/Sum2' incorporates:
+   *  MinMax: '<S840>/MinMax'
    */
-  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s832_MinMax;
+  rtb_Abs_co = rtb_Abs_k - BaseEngineController_LS_B.s833_MinMax;
 
-  /* Abs: '<S838>/Abs' */
+  /* Abs: '<S839>/Abs' */
   rtb_Abs_co = fabs(rtb_Abs_co);
 
-  /* Outputs for Enabled SubSystem: '<S838>/Store Current Position' incorporates:
-   *  EnablePort: '<S841>/Enable'
+  /* Outputs for Enabled SubSystem: '<S839>/Store Current Position' incorporates:
+   *  EnablePort: '<S842>/Enable'
    */
-  /* Logic: '<S838>/Logical Operator2' incorporates:
-   *  Logic: '<S838>/Logical Operator1'
-   *  Logic: '<S838>/Logical Operator4'
-   *  RelationalOperator: '<S838>/Relational Operator3'
-   *  S-Function (motohawk_sfun_calibration): '<S832>/motohawk_calibration1'
-   *  S-Function (motohawk_sfun_calibration): '<S832>/motohawk_calibration14'
-   *  S-Function (motohawk_sfun_data_read): '<S446>/motohawk_data_read'
+  /* Logic: '<S839>/Logical Operator2' incorporates:
+   *  Logic: '<S839>/Logical Operator1'
+   *  Logic: '<S839>/Logical Operator4'
+   *  RelationalOperator: '<S839>/Relational Operator3'
+   *  S-Function (motohawk_sfun_calibration): '<S833>/motohawk_calibration1'
+   *  S-Function (motohawk_sfun_calibration): '<S833>/motohawk_calibration14'
+   *  S-Function (motohawk_sfun_data_read): '<S447>/motohawk_data_read'
    */
   if ((rtb_LogicalOperator6_b && rtb_RelationalOperator5_fz &&
        rtb_RelationalOperator6_h && (TPS2AdaptLoEnable_DataStore()) &&
        (rtb_Abs_co > (TPS2Adapt_Delta_DataStore()))) ||
       (rtb_RelationalOperator5_fz && rtb_RelationalOperator6_h &&
        (TPS2AdaptLoEnable_DataStore()) && TPSAdaptLoRequest_DataStore())) {
-    /* DataTypeConversion: '<S841>/Data Type Conversion2' incorporates:
-     *  MinMax: '<S839>/MinMax'
+    /* DataTypeConversion: '<S842>/Data Type Conversion2' incorporates:
+     *  MinMax: '<S840>/MinMax'
      */
     if (rtb_Abs_k < 65536.0) {
       if (rtb_Abs_k >= 0.0) {
@@ -20866,190 +20824,190 @@ void BaseEngineController_LS_Foreground(void)
       rtb_DataTypeConversion2_o = MAX_uint16_T;
     }
 
-    /* End of DataTypeConversion: '<S841>/Data Type Conversion2' */
+    /* End of DataTypeConversion: '<S842>/Data Type Conversion2' */
 
-    /* S-Function (motohawk_sfun_data_write): '<S841>/motohawk_data_write' */
+    /* S-Function (motohawk_sfun_data_write): '<S842>/motohawk_data_write' */
     /* Write to Data Storage as scalar: TPS2Raw_Adpt_Low */
     {
       TPS2Raw_Adpt_Low_DataStore() = rtb_DataTypeConversion2_o;
     }
   }
 
-  /* End of Logic: '<S838>/Logical Operator2' */
-  /* End of Outputs for SubSystem: '<S838>/Store Current Position' */
+  /* End of Logic: '<S839>/Logical Operator2' */
+  /* End of Outputs for SubSystem: '<S839>/Store Current Position' */
 
-  /* Update for S-Function (motohawk_sfun_dout): '<S849>/motohawk_dout' */
+  /* Update for S-Function (motohawk_sfun_dout): '<S850>/motohawk_dout' */
 
   /* S-Function Block: DOut5883p001 */
   {
     DOut5883p001_DiscreteOutput_Set
-      (BaseEngineController_LS_B.s859_LogicalOperator);
+      (BaseEngineController_LS_B.s860_LogicalOperator);
   }
 
-  /* Update for UnitDelay: '<S751>/Unit Delay' incorporates:
-   *  MinMax: '<S774>/MinMax1'
+  /* Update for UnitDelay: '<S752>/Unit Delay' incorporates:
+   *  MinMax: '<S775>/MinMax1'
    */
-  BaseEngineController_LS_DWork.s751_UnitDelay_DSTATE = minV;
+  BaseEngineController_LS_DWork.s752_UnitDelay_DSTATE = minV;
 
-  /* Update for UnitDelay: '<S776>/Unit Delay' */
-  BaseEngineController_LS_DWork.s776_UnitDelay_DSTATE = rtb_Sum1_nb;
+  /* Update for UnitDelay: '<S777>/Unit Delay' */
+  BaseEngineController_LS_DWork.s777_UnitDelay_DSTATE = rtb_Sum1_nb;
 
-  /* Update for UnitDelay: '<S808>/Unit Delay' */
-  BaseEngineController_LS_DWork.s808_UnitDelay_DSTATE = rtb_Sum1_b4;
+  /* Update for UnitDelay: '<S809>/Unit Delay' */
+  BaseEngineController_LS_DWork.s809_UnitDelay_DSTATE = rtb_Sum1_b4;
 
-  /* Update for UnitDelay: '<S801>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s801_UnitDelay1_DSTATE = rtb_Merge_m;
+  /* Update for UnitDelay: '<S802>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s802_UnitDelay1_DSTATE = rtb_Merge_m;
 
-  /* Update for UnitDelay: '<S749>/Unit Delay' incorporates:
-   *  MinMax: '<S762>/MinMax1'
+  /* Update for UnitDelay: '<S750>/Unit Delay' incorporates:
+   *  MinMax: '<S763>/MinMax1'
    */
-  BaseEngineController_LS_DWork.s749_UnitDelay_DSTATE = minV_0;
+  BaseEngineController_LS_DWork.s750_UnitDelay_DSTATE = minV_0;
 
-  /* Update for UnitDelay: '<S764>/Unit Delay' */
-  BaseEngineController_LS_DWork.s764_UnitDelay_DSTATE = rtb_Sum1_m;
+  /* Update for UnitDelay: '<S765>/Unit Delay' */
+  BaseEngineController_LS_DWork.s765_UnitDelay_DSTATE = rtb_Sum1_m;
 
-  /* Update for UnitDelay: '<S791>/Unit Delay' */
-  BaseEngineController_LS_DWork.s791_UnitDelay_DSTATE = rtb_Sum1_h1;
+  /* Update for UnitDelay: '<S792>/Unit Delay' */
+  BaseEngineController_LS_DWork.s792_UnitDelay_DSTATE = rtb_Sum1_h1;
 
-  /* Update for UnitDelay: '<S784>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s784_UnitDelay1_DSTATE = rtb_Merge_ao;
+  /* Update for UnitDelay: '<S785>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s785_UnitDelay1_DSTATE = rtb_Merge_ao;
 
-  /* Update for UnitDelay: '<S407>/Unit Delay' */
-  BaseEngineController_LS_DWork.s407_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s428_State;
-
-  /* Update for UnitDelay: '<S617>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s617_UnitDelay1_DSTATE = rtb_Merge_b;
-
-  /* Update for UnitDelay: '<S631>/Unit Delay' */
-  BaseEngineController_LS_DWork.s631_UnitDelay_DSTATE = rtb_Sum1_li;
-
-  /* Update for UnitDelay: '<S616>/Unit Delay' */
-  BaseEngineController_LS_DWork.s616_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s616_Sum1;
-
-  /* Update for UnitDelay: '<S825>/Unit Delay' */
-  BaseEngineController_LS_DWork.s825_UnitDelay_DSTATE = rtb_Sum1_hw;
-
-  /* Update for UnitDelay: '<S818>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s818_UnitDelay1_DSTATE = rtb_Merge_li;
-
-  /* Update for UnitDelay: '<S842>/Unit Delay' */
-  BaseEngineController_LS_DWork.s842_UnitDelay_DSTATE = rtb_Sum1_lp;
-
-  /* Update for UnitDelay: '<S835>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s835_UnitDelay1_DSTATE = rtb_Merge_mv;
-
-  /* Update for UnitDelay: '<S643>/Unit Delay' */
-  BaseEngineController_LS_DWork.s643_UnitDelay_DSTATE = rtb_Sum2_gr;
+  /* Update for UnitDelay: '<S408>/Unit Delay' */
+  BaseEngineController_LS_DWork.s408_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s429_State;
 
   /* Update for UnitDelay: '<S618>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s618_UnitDelay1_DSTATE = rtb_Merge_i;
+  BaseEngineController_LS_DWork.s618_UnitDelay1_DSTATE = rtb_Merge_b;
 
-  /* Update for UnitDelay: '<S642>/Unit Delay' */
-  BaseEngineController_LS_DWork.s642_UnitDelay_DSTATE = rtb_Sum1_mz;
+  /* Update for UnitDelay: '<S632>/Unit Delay' */
+  BaseEngineController_LS_DWork.s632_UnitDelay_DSTATE = rtb_Sum1_li;
 
-  /* Update for UnitDelay: '<S640>/Unit Delay' */
-  BaseEngineController_LS_DWork.s640_UnitDelay_DSTATE = rtb_Merge_i;
+  /* Update for UnitDelay: '<S617>/Unit Delay' */
+  BaseEngineController_LS_DWork.s617_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s617_Sum1;
 
-  /* Update for UnitDelay: '<S640>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s640_UnitDelay1_DSTATE = rtb_UnitDelay_n;
+  /* Update for UnitDelay: '<S826>/Unit Delay' */
+  BaseEngineController_LS_DWork.s826_UnitDelay_DSTATE = rtb_Sum1_hw;
 
-  /* Update for UnitDelay: '<S640>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s640_UnitDelay2_DSTATE = rtb_UnitDelay1_h;
+  /* Update for UnitDelay: '<S819>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s819_UnitDelay1_DSTATE = rtb_Merge_li;
+
+  /* Update for UnitDelay: '<S843>/Unit Delay' */
+  BaseEngineController_LS_DWork.s843_UnitDelay_DSTATE = rtb_Sum1_lp;
+
+  /* Update for UnitDelay: '<S836>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s836_UnitDelay1_DSTATE = rtb_Merge_mv;
+
+  /* Update for UnitDelay: '<S644>/Unit Delay' */
+  BaseEngineController_LS_DWork.s644_UnitDelay_DSTATE = rtb_Sum2_gr;
+
+  /* Update for UnitDelay: '<S619>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s619_UnitDelay1_DSTATE = rtb_Merge_i;
+
+  /* Update for UnitDelay: '<S643>/Unit Delay' */
+  BaseEngineController_LS_DWork.s643_UnitDelay_DSTATE = rtb_Sum1_mz;
+
+  /* Update for UnitDelay: '<S641>/Unit Delay' */
+  BaseEngineController_LS_DWork.s641_UnitDelay_DSTATE = rtb_Merge_i;
+
+  /* Update for UnitDelay: '<S641>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s641_UnitDelay1_DSTATE = rtb_UnitDelay_n;
+
+  /* Update for UnitDelay: '<S641>/Unit Delay2' */
+  BaseEngineController_LS_DWork.s641_UnitDelay2_DSTATE = rtb_UnitDelay1_h;
+
+  /* Update for UnitDelay: '<S568>/Unit Delay' */
+  BaseEngineController_LS_DWork.s568_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s568_Switch;
+
+  /* Update for UnitDelay: '<S606>/Unit Delay' */
+  BaseEngineController_LS_DWork.s606_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s601_Merge;
 
   /* Update for UnitDelay: '<S567>/Unit Delay' */
-  BaseEngineController_LS_DWork.s567_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s567_Switch;
+  BaseEngineController_LS_DWork.s567_UnitDelay_DSTATE = rtb_Merge_j;
 
-  /* Update for UnitDelay: '<S605>/Unit Delay' */
-  BaseEngineController_LS_DWork.s605_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s600_Merge;
+  /* Update for UnitDelay: '<S603>/Unit Delay' */
+  BaseEngineController_LS_DWork.s603_UnitDelay_DSTATE = rtb_Sum1_g3;
 
-  /* Update for UnitDelay: '<S566>/Unit Delay' */
-  BaseEngineController_LS_DWork.s566_UnitDelay_DSTATE = rtb_Merge_j;
+  /* Update for UnitDelay: '<S568>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s568_UnitDelay1_DSTATE =
+    BaseEngineController_LS_B.s601_Merge;
 
-  /* Update for UnitDelay: '<S602>/Unit Delay' */
-  BaseEngineController_LS_DWork.s602_UnitDelay_DSTATE = rtb_Sum1_g3;
+  /* Update for UnitDelay: '<S568>/Unit Delay2' */
+  BaseEngineController_LS_DWork.s568_UnitDelay2_DSTATE = rtb_RelOp_d;
 
-  /* Update for UnitDelay: '<S567>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s567_UnitDelay1_DSTATE =
-    BaseEngineController_LS_B.s600_Merge;
+  /* Update for Memory: '<S607>/Memory' */
+  BaseEngineController_LS_DWork.s607_Memory_PreviousInput = rtb_Logic_j[0];
 
-  /* Update for UnitDelay: '<S567>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s567_UnitDelay2_DSTATE = rtb_RelOp_d;
+  /* Update for UnitDelay: '<S568>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s568_UnitDelay3_DSTATE =
+    BaseEngineController_LS_B.s601_Merge;
 
-  /* Update for Memory: '<S606>/Memory' */
-  BaseEngineController_LS_DWork.s606_Memory_PreviousInput = rtb_Logic_j[0];
-
-  /* Update for UnitDelay: '<S567>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s567_UnitDelay3_DSTATE =
-    BaseEngineController_LS_B.s600_Merge;
-
-  /* Update for UnitDelay: '<S410>/Unit Delay' */
-  BaseEngineController_LS_DWork.s410_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s448_MultiportSwitch;
-
-  /* Update for UnitDelay: '<S488>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s488_UnitDelay1_DSTATE = rtb_Merge_ox;
-
-  /* Update for UnitDelay: '<S513>/Unit Delay' */
-  BaseEngineController_LS_DWork.s513_UnitDelay_DSTATE = rtb_Sum1_ir;
+  /* Update for UnitDelay: '<S411>/Unit Delay' */
+  BaseEngineController_LS_DWork.s411_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s449_MultiportSwitch;
 
   /* Update for UnitDelay: '<S489>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s489_UnitDelay1_DSTATE = rtb_Merge_h;
+  BaseEngineController_LS_DWork.s489_UnitDelay1_DSTATE = rtb_Merge_ox;
 
-  /* Update for UnitDelay: '<S521>/Unit Delay' */
-  BaseEngineController_LS_DWork.s521_UnitDelay_DSTATE = rtb_Sum1_du;
+  /* Update for UnitDelay: '<S514>/Unit Delay' */
+  BaseEngineController_LS_DWork.s514_UnitDelay_DSTATE = rtb_Sum1_ir;
 
-  /* Update for UnitDelay: '<S625>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s625_UnitDelay1_DSTATE = rtb_Merge_f;
+  /* Update for UnitDelay: '<S490>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s490_UnitDelay1_DSTATE = rtb_Merge_h;
 
-  /* Update for UnitDelay: '<S694>/Unit Delay' */
-  BaseEngineController_LS_DWork.s694_UnitDelay_DSTATE = rtb_Sum1_nl;
+  /* Update for UnitDelay: '<S522>/Unit Delay' */
+  BaseEngineController_LS_DWork.s522_UnitDelay_DSTATE = rtb_Sum1_du;
 
-  /* Update for UnitDelay: '<S620>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s620_UnitDelay1_DSTATE = rtb_Merge_in;
+  /* Update for UnitDelay: '<S626>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s626_UnitDelay1_DSTATE = rtb_Merge_f;
 
-  /* Update for UnitDelay: '<S660>/Unit Delay' */
-  BaseEngineController_LS_DWork.s660_UnitDelay_DSTATE = rtb_Sum1_d4;
+  /* Update for UnitDelay: '<S695>/Unit Delay' */
+  BaseEngineController_LS_DWork.s695_UnitDelay_DSTATE = rtb_Sum1_nl;
 
   /* Update for UnitDelay: '<S621>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s621_UnitDelay1_DSTATE = rtb_Merge_jq;
+  BaseEngineController_LS_DWork.s621_UnitDelay1_DSTATE = rtb_Merge_in;
 
-  /* Update for UnitDelay: '<S367>/Unit Delay' */
-  BaseEngineController_LS_DWork.s367_UnitDelay_DSTATE = rtb_Merge_b3;
+  /* Update for UnitDelay: '<S661>/Unit Delay' */
+  BaseEngineController_LS_DWork.s661_UnitDelay_DSTATE = rtb_Sum1_d4;
 
-  /* Update for UnitDelay: '<S563>/Unit Delay' */
-  BaseEngineController_LS_DWork.s563_UnitDelay_DSTATE = rtb_Merge_dv;
+  /* Update for UnitDelay: '<S622>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s622_UnitDelay1_DSTATE = rtb_Merge_jq;
 
-  /* Update for UnitDelay: '<S583>/Unit Delay' */
-  BaseEngineController_LS_DWork.s583_UnitDelay_DSTATE = rtb_Sum1_fm;
+  /* Update for UnitDelay: '<S368>/Unit Delay' */
+  BaseEngineController_LS_DWork.s368_UnitDelay_DSTATE = rtb_Merge_b3;
 
-  /* Update for UnitDelay: '<S383>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s383_UnitDelay2_DSTATE = rtb_DesiredLambda_idx;
+  /* Update for UnitDelay: '<S564>/Unit Delay' */
+  BaseEngineController_LS_DWork.s564_UnitDelay_DSTATE = rtb_Merge_dv;
 
-  /* Update for UnitDelay: '<S386>/Unit Delay' */
-  BaseEngineController_LS_DWork.s386_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s386_Sum1;
+  /* Update for UnitDelay: '<S584>/Unit Delay' */
+  BaseEngineController_LS_DWork.s584_UnitDelay_DSTATE = rtb_Sum1_fm;
 
   /* Update for UnitDelay: '<S384>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s384_UnitDelay2_DSTATE = rtb_UnitDelay1_k;
+  BaseEngineController_LS_DWork.s384_UnitDelay2_DSTATE = rtb_DesiredLambda_idx;
 
-  /* Update for UnitDelay: '<S389>/Unit Delay' */
-  BaseEngineController_LS_DWork.s389_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s389_Sum1;
+  /* Update for UnitDelay: '<S387>/Unit Delay' */
+  BaseEngineController_LS_DWork.s387_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s387_Sum1;
 
-  /* Update for UnitDelay: '<S425>/Unit Delay' */
-  BaseEngineController_LS_DWork.s425_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s616_Sum1;
+  /* Update for UnitDelay: '<S385>/Unit Delay2' */
+  BaseEngineController_LS_DWork.s385_UnitDelay2_DSTATE = rtb_UnitDelay1_k;
 
-  /* Update for UnitDelay: '<S427>/Unit Delay' */
-  BaseEngineController_LS_DWork.s427_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s427_Sum1;
+  /* Update for UnitDelay: '<S390>/Unit Delay' */
+  BaseEngineController_LS_DWork.s390_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s390_Sum1;
 
-  /* Update for UnitDelay: '<S668>/Unit Delay' */
-  BaseEngineController_LS_DWork.s668_UnitDelay_DSTATE = rtb_Sum1_mzy;
+  /* Update for UnitDelay: '<S426>/Unit Delay' */
+  BaseEngineController_LS_DWork.s426_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s617_Sum1;
+
+  /* Update for UnitDelay: '<S428>/Unit Delay' */
+  BaseEngineController_LS_DWork.s428_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s428_Sum1;
+
+  /* Update for UnitDelay: '<S669>/Unit Delay' */
+  BaseEngineController_LS_DWork.s669_UnitDelay_DSTATE = rtb_Sum1_mzy;
 
   /* Update for Enabled SubSystem: '<S15>/Run' incorporates:
    *  Update for EnablePort: '<S136>/Enable'
@@ -21108,146 +21066,146 @@ void BaseEngineController_LS_Foreground(void)
 
   /* End of Update for SubSystem: '<S15>/Run' */
 
-  /* Update for UnitDelay: '<S381>/Unit Delay' */
-  BaseEngineController_LS_DWork.s381_UnitDelay_DSTATE = rtb_LogicalOperator_c;
+  /* Update for UnitDelay: '<S382>/Unit Delay' */
+  BaseEngineController_LS_DWork.s382_UnitDelay_DSTATE = rtb_LogicalOperator_c;
 
-  /* Update for UnitDelay: '<S377>/Unit Delay' */
-  BaseEngineController_LS_DWork.s377_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s377_Sum1;
+  /* Update for UnitDelay: '<S378>/Unit Delay' */
+  BaseEngineController_LS_DWork.s378_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s378_Sum1;
 
-  /* Update for UnitDelay: '<S878>/Unit Delay' */
-  BaseEngineController_LS_DWork.s878_UnitDelay_DSTATE =
-    BaseEngineController_LS_B.s878_Sum1;
+  /* Update for UnitDelay: '<S879>/Unit Delay' */
+  BaseEngineController_LS_DWork.s879_UnitDelay_DSTATE =
+    BaseEngineController_LS_B.s879_Sum1;
 
-  /* Update for UnitDelay: '<S876>/Unit Delay' */
-  BaseEngineController_LS_DWork.s876_UnitDelay_DSTATE = rtb_Sum1_hu;
-
-  /* Update for UnitDelay: '<S882>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s882_UnitDelay2_DSTATE = rtb_UnitDelay1_ad;
-
-  /* Update for UnitDelay: '<S882>/Unit Delay5' */
-  BaseEngineController_LS_DWork.s882_UnitDelay5_DSTATE = rtb_Merge_iz;
-
-  /* Update for UnitDelay: '<S888>/Unit Delay' */
-  BaseEngineController_LS_DWork.s888_UnitDelay_DSTATE = rtb_Sum1_c;
+  /* Update for UnitDelay: '<S877>/Unit Delay' */
+  BaseEngineController_LS_DWork.s877_UnitDelay_DSTATE = rtb_Sum1_hu;
 
   /* Update for UnitDelay: '<S883>/Unit Delay2' */
-  BaseEngineController_LS_DWork.s883_UnitDelay2_DSTATE = rtb_UnitDelay1_pn;
+  BaseEngineController_LS_DWork.s883_UnitDelay2_DSTATE = rtb_UnitDelay1_ad;
 
   /* Update for UnitDelay: '<S883>/Unit Delay5' */
-  BaseEngineController_LS_DWork.s883_UnitDelay5_DSTATE = rtb_Merge_oq;
+  BaseEngineController_LS_DWork.s883_UnitDelay5_DSTATE = rtb_Merge_iz;
 
-  /* Update for UnitDelay: '<S891>/Unit Delay' */
-  BaseEngineController_LS_DWork.s891_UnitDelay_DSTATE = rtb_Sum1_lm;
+  /* Update for UnitDelay: '<S889>/Unit Delay' */
+  BaseEngineController_LS_DWork.s889_UnitDelay_DSTATE = rtb_Sum1_c;
 
-  /* Update for UnitDelay: '<S884>/Unit Delay' */
-  BaseEngineController_LS_DWork.s884_UnitDelay_DSTATE = rtb_Sum1_p;
+  /* Update for UnitDelay: '<S884>/Unit Delay2' */
+  BaseEngineController_LS_DWork.s884_UnitDelay2_DSTATE = rtb_UnitDelay1_pn;
+
+  /* Update for UnitDelay: '<S884>/Unit Delay5' */
+  BaseEngineController_LS_DWork.s884_UnitDelay5_DSTATE = rtb_Merge_oq;
+
+  /* Update for UnitDelay: '<S892>/Unit Delay' */
+  BaseEngineController_LS_DWork.s892_UnitDelay_DSTATE = rtb_Sum1_lm;
 
   /* Update for UnitDelay: '<S885>/Unit Delay' */
-  BaseEngineController_LS_DWork.s885_UnitDelay_DSTATE = rtb_Sum1_a;
+  BaseEngineController_LS_DWork.s885_UnitDelay_DSTATE = rtb_Sum1_p;
 
   /* Update for UnitDelay: '<S886>/Unit Delay' */
-  BaseEngineController_LS_DWork.s886_UnitDelay_DSTATE = rtb_Sum1_j2;
+  BaseEngineController_LS_DWork.s886_UnitDelay_DSTATE = rtb_Sum1_a;
 
-  /* Update for UnitDelay: '<S882>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s882_UnitDelay1_DSTATE = rtb_UnitDelay3_m;
-
-  /* Update for UnitDelay: '<S882>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s882_UnitDelay3_DSTATE = rtb_UnitDelay4_b;
-
-  /* Update for UnitDelay: '<S882>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s882_UnitDelay4_DSTATE =
-    BaseEngineController_LS_B.s448_MathFunction;
+  /* Update for UnitDelay: '<S887>/Unit Delay' */
+  BaseEngineController_LS_DWork.s887_UnitDelay_DSTATE = rtb_Sum1_j2;
 
   /* Update for UnitDelay: '<S883>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s883_UnitDelay1_DSTATE = rtb_UnitDelay3_p;
+  BaseEngineController_LS_DWork.s883_UnitDelay1_DSTATE = rtb_UnitDelay3_m;
 
   /* Update for UnitDelay: '<S883>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s883_UnitDelay3_DSTATE = rtb_UnitDelay4_a;
+  BaseEngineController_LS_DWork.s883_UnitDelay3_DSTATE = rtb_UnitDelay4_b;
 
   /* Update for UnitDelay: '<S883>/Unit Delay4' */
   BaseEngineController_LS_DWork.s883_UnitDelay4_DSTATE =
-    BaseEngineController_LS_B.s448_MathFunction1;
+    BaseEngineController_LS_B.s449_MathFunction;
 
-  /* Update for UnitDelay: '<S899>/Unit Delay' */
-  BaseEngineController_LS_DWork.s899_UnitDelay_DSTATE = rtb_Sum1_cn;
+  /* Update for UnitDelay: '<S884>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s884_UnitDelay1_DSTATE = rtb_UnitDelay3_p;
 
-  /* Update for UnitDelay: '<S619>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s619_UnitDelay1_DSTATE = rtb_Merge_b3f;
+  /* Update for UnitDelay: '<S884>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s884_UnitDelay3_DSTATE = rtb_UnitDelay4_a;
 
-  /* Update for UnitDelay: '<S652>/Unit Delay' */
-  BaseEngineController_LS_DWork.s652_UnitDelay_DSTATE = rtb_Sum1_cs;
+  /* Update for UnitDelay: '<S884>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s884_UnitDelay4_DSTATE =
+    BaseEngineController_LS_B.s449_MathFunction1;
 
   /* Update for UnitDelay: '<S900>/Unit Delay' */
-  BaseEngineController_LS_DWork.s900_UnitDelay_DSTATE = rtb_Sum1_ay;
+  BaseEngineController_LS_DWork.s900_UnitDelay_DSTATE = rtb_Sum1_cn;
 
-  /* Update for UnitDelay: '<S623>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s623_UnitDelay1_DSTATE = rtb_Merge_ol;
+  /* Update for UnitDelay: '<S620>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s620_UnitDelay1_DSTATE = rtb_Merge_b3f;
 
-  /* Update for UnitDelay: '<S678>/Unit Delay' */
-  BaseEngineController_LS_DWork.s678_UnitDelay_DSTATE = rtb_Sum1_o;
+  /* Update for UnitDelay: '<S653>/Unit Delay' */
+  BaseEngineController_LS_DWork.s653_UnitDelay_DSTATE = rtb_Sum1_cs;
 
   /* Update for UnitDelay: '<S901>/Unit Delay' */
-  BaseEngineController_LS_DWork.s901_UnitDelay_DSTATE = rtb_Sum1_co;
+  BaseEngineController_LS_DWork.s901_UnitDelay_DSTATE = rtb_Sum1_ay;
 
-  /* Update for UnitDelay: '<S903>/Unit Delay' */
-  BaseEngineController_LS_DWork.s903_UnitDelay_DSTATE = rtb_Sum1_kv;
+  /* Update for UnitDelay: '<S624>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s624_UnitDelay1_DSTATE = rtb_Merge_ol;
+
+  /* Update for UnitDelay: '<S679>/Unit Delay' */
+  BaseEngineController_LS_DWork.s679_UnitDelay_DSTATE = rtb_Sum1_o;
+
+  /* Update for UnitDelay: '<S902>/Unit Delay' */
+  BaseEngineController_LS_DWork.s902_UnitDelay_DSTATE = rtb_Sum1_co;
+
+  /* Update for UnitDelay: '<S904>/Unit Delay' */
+  BaseEngineController_LS_DWork.s904_UnitDelay_DSTATE = rtb_Sum1_kv;
+
+  /* Update for UnitDelay: '<S908>/Unit Delay' */
+  BaseEngineController_LS_DWork.s908_UnitDelay_DSTATE = rtb_Sum1_mn;
 
   /* Update for UnitDelay: '<S907>/Unit Delay' */
-  BaseEngineController_LS_DWork.s907_UnitDelay_DSTATE = rtb_Sum1_mn;
+  BaseEngineController_LS_DWork.s907_UnitDelay_DSTATE = rtb_Sum1_mw;
 
-  /* Update for UnitDelay: '<S906>/Unit Delay' */
-  BaseEngineController_LS_DWork.s906_UnitDelay_DSTATE = rtb_Sum1_mw;
-
-  /* Update for S-Function (motohawk_sfun_dout): '<S853>/motohawk_dout' */
+  /* Update for S-Function (motohawk_sfun_dout): '<S854>/motohawk_dout' */
 
   /* S-Function Block: DOut6701p001 */
   {
     DOut6701p001_DiscreteOutput_Set
-      (BaseEngineController_LS_B.s936_LogicalOperator);
+      (BaseEngineController_LS_B.s937_LogicalOperator);
   }
 
-  /* Update for S-Function (motohawk_sfun_pwm): '<S853>/motohawk_pwm' */
+  /* Update for S-Function (motohawk_sfun_pwm): '<S854>/motohawk_pwm' */
 
   /* S-Function Block: FAN1Pin_PWM_PWMOutput */
   FAN1Pin_PWM_PWMOutput_PWMOutput_Set(rtb_DataTypeConversion2_j,
     rtb_DataTypeConversion3_c, 0, 1);
 
-  /* Update for S-Function (motohawk_sfun_dout): '<S853>/motohawk_dout1' */
+  /* Update for S-Function (motohawk_sfun_dout): '<S854>/motohawk_dout1' */
 
   /* S-Function Block: DOut6702p001 */
   {
     DOut6702p001_DiscreteOutput_Set
-      (BaseEngineController_LS_B.s937_LogicalOperator);
+      (BaseEngineController_LS_B.s938_LogicalOperator);
   }
 
-  /* Update for S-Function (motohawk_sfun_pwm): '<S853>/motohawk_pwm1' */
+  /* Update for S-Function (motohawk_sfun_pwm): '<S854>/motohawk_pwm1' */
 
   /* S-Function Block: FAN2Pin_PWM_PWMOutput */
   FAN2Pin_PWM_PWMOutput_PWMOutput_Set(rtb_DataTypeConversion2_e,
     rtb_DataTypeConversion3_k, 0, 1);
 
-  /* Update for S-Function (motohawk_sfun_dout): '<S854>/motohawk_dout' */
+  /* Update for S-Function (motohawk_sfun_dout): '<S855>/motohawk_dout' */
 
   /* S-Function Block: DOut6722p001 */
   {
     DOut6722p001_DiscreteOutput_Set
-      (BaseEngineController_LS_B.s954_LogicalOperator);
+      (BaseEngineController_LS_B.s955_LogicalOperator);
   }
 
-  /* Update for S-Function (motohawk_sfun_pwm): '<S855>/motohawk_pwm1' */
+  /* Update for S-Function (motohawk_sfun_pwm): '<S856>/motohawk_pwm1' */
 
   /* S-Function Block: ETCPin_PWMOutput */
   ETCPin_PWMOutput_PWMOutput_Set(rtb_DataTypeConversion3_j,
     rtb_DataTypeConversion4_m, 0, 1);
 
-  /* Update for S-Function (motohawk_sfun_pwm): '<S856>/motohawk_pwm' */
+  /* Update for S-Function (motohawk_sfun_pwm): '<S857>/motohawk_pwm' */
 
   /* S-Function Block: IAC_PPin_PWMOutput */
   IAC_PPin_PWMOutput_PWMOutput_Set(rtb_DataTypeConversion2_l,
     rtb_DataTypeConversion3_p, 0, 1);
 
-  /* Update for S-Function (motohawk_sfun_pwm): '<S856>/motohawk_pwm1' */
+  /* Update for S-Function (motohawk_sfun_pwm): '<S857>/motohawk_pwm1' */
 
   /* S-Function Block: IAC_SPin_PWMOutput */
   IAC_SPin_PWMOutput_PWMOutput_Set(rtb_DataTypeConversion2_i,
@@ -21281,101 +21239,101 @@ void BaseEngineController_LS_Foreground(void)
   memcpy((void *)BaseEngineController_LS_DWork.s72_UnitDelay_DSTATE, (void *)
          &rtb_Merge_bv[0], sizeof(real_T) << 3U);
 
-  /* Update for S-Function (motohawk_sfun_pwm): '<S858>/motohawk_pwm' */
+  /* Update for S-Function (motohawk_sfun_pwm): '<S859>/motohawk_pwm' */
 
   /* S-Function Block: WASTEGATE_PWMOutput */
   WASTEGATE_PWMOutput_PWMOutput_Set(rtb_DataTypeConversion2_p,
     rtb_DataTypeConversion3_e, 0, 1);
 
-  /* Update for UnitDelay: '<S439>/Unit Delay' */
-  BaseEngineController_LS_DWork.s439_UnitDelay_DSTATE = rtb_Switch_kj;
+  /* Update for UnitDelay: '<S440>/Unit Delay' */
+  BaseEngineController_LS_DWork.s440_UnitDelay_DSTATE = rtb_Switch_kj;
 
-  /* Update for UnitDelay: '<S410>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s410_UnitDelay1_DSTATE =
-    BaseEngineController_LS_B.s448_MultiportSwitch;
+  /* Update for UnitDelay: '<S411>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s411_UnitDelay1_DSTATE =
+    BaseEngineController_LS_B.s449_MultiportSwitch;
 
-  /* Update for UnitDelay: '<S624>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s624_UnitDelay1_DSTATE = rtb_Merge_ht;
+  /* Update for UnitDelay: '<S625>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s625_UnitDelay1_DSTATE = rtb_Merge_ht;
 
-  /* Update for UnitDelay: '<S686>/Unit Delay' */
-  BaseEngineController_LS_DWork.s686_UnitDelay_DSTATE = rtb_Sum1_m3;
-
-  /* Update for UnitDelay: '<S383>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s383_UnitDelay1_DSTATE = rtb_DesiredLambda_idx_0;
-
-  /* Update for UnitDelay: '<S383>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s383_UnitDelay3_DSTATE = rtb_DesiredLambda_idx_1;
-
-  /* Update for UnitDelay: '<S383>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s383_UnitDelay4_DSTATE =
-    BaseEngineController_LS_B.s616_Sum1;
+  /* Update for UnitDelay: '<S687>/Unit Delay' */
+  BaseEngineController_LS_DWork.s687_UnitDelay_DSTATE = rtb_Sum1_m3;
 
   /* Update for UnitDelay: '<S384>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s384_UnitDelay1_DSTATE = rtb_UnitDelay3_j;
+  BaseEngineController_LS_DWork.s384_UnitDelay1_DSTATE = rtb_DesiredLambda_idx_0;
 
   /* Update for UnitDelay: '<S384>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s384_UnitDelay3_DSTATE = rtb_UnitDelay4_ie;
+  BaseEngineController_LS_DWork.s384_UnitDelay3_DSTATE = rtb_DesiredLambda_idx_1;
 
   /* Update for UnitDelay: '<S384>/Unit Delay4' */
   BaseEngineController_LS_DWork.s384_UnitDelay4_DSTATE =
-    BaseEngineController_LS_B.s659_Merge;
+    BaseEngineController_LS_B.s617_Sum1;
 
-  /* Update for UnitDelay: '<S788>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s788_UnitDelay1_DSTATE =
+  /* Update for UnitDelay: '<S385>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s385_UnitDelay1_DSTATE = rtb_UnitDelay3_j;
+
+  /* Update for UnitDelay: '<S385>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s385_UnitDelay3_DSTATE = rtb_UnitDelay4_ie;
+
+  /* Update for UnitDelay: '<S385>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s385_UnitDelay4_DSTATE =
+    BaseEngineController_LS_B.s660_Merge;
+
+  /* Update for UnitDelay: '<S789>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s789_UnitDelay1_DSTATE =
     rtb_DataTypeConversion1_e;
 
-  /* Update for UnitDelay: '<S788>/Unit Delay' */
-  BaseEngineController_LS_DWork.s788_UnitDelay_DSTATE =
+  /* Update for UnitDelay: '<S789>/Unit Delay' */
+  BaseEngineController_LS_DWork.s789_UnitDelay_DSTATE =
     rtb_DataTypeConversion_b2;
 
-  /* Update for UnitDelay: '<S788>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s788_UnitDelay3_DSTATE = rtb_Switch_mq;
+  /* Update for UnitDelay: '<S789>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s789_UnitDelay3_DSTATE = rtb_Switch_mq;
 
-  /* Update for UnitDelay: '<S788>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s788_UnitDelay4_DSTATE =
-    BaseEngineController_LS_B.s753_Switch;
-
-  /* Update for UnitDelay: '<S805>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s805_UnitDelay1_DSTATE =
-    rtb_Multiplyby10ifnotyetenabled;
-
-  /* Update for UnitDelay: '<S805>/Unit Delay' */
-  BaseEngineController_LS_DWork.s805_UnitDelay_DSTATE = rtb_Product4_o;
-
-  /* Update for UnitDelay: '<S805>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s805_UnitDelay3_DSTATE = rtb_Switch_c;
-
-  /* Update for UnitDelay: '<S805>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s805_UnitDelay4_DSTATE =
+  /* Update for UnitDelay: '<S789>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s789_UnitDelay4_DSTATE =
     BaseEngineController_LS_B.s754_Switch;
 
-  /* Update for UnitDelay: '<S822>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s822_UnitDelay1_DSTATE = rtb_Switch_k;
+  /* Update for UnitDelay: '<S806>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s806_UnitDelay1_DSTATE =
+    rtb_Multiplyby10ifnotyetenabled;
 
-  /* Update for UnitDelay: '<S822>/Unit Delay' */
-  BaseEngineController_LS_DWork.s822_UnitDelay_DSTATE =
-    rtb_DataTypeConversion_m0;
+  /* Update for UnitDelay: '<S806>/Unit Delay' */
+  BaseEngineController_LS_DWork.s806_UnitDelay_DSTATE = rtb_Product4_o;
 
-  /* Update for UnitDelay: '<S822>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s822_UnitDelay3_DSTATE = rtb_Switch_f;
+  /* Update for UnitDelay: '<S806>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s806_UnitDelay3_DSTATE = rtb_Switch_c;
 
-  /* Update for UnitDelay: '<S822>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s822_UnitDelay4_DSTATE =
+  /* Update for UnitDelay: '<S806>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s806_UnitDelay4_DSTATE =
     BaseEngineController_LS_B.s755_Switch;
 
-  /* Update for UnitDelay: '<S839>/Unit Delay1' */
-  BaseEngineController_LS_DWork.s839_UnitDelay1_DSTATE =
+  /* Update for UnitDelay: '<S823>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s823_UnitDelay1_DSTATE = rtb_Switch_k;
+
+  /* Update for UnitDelay: '<S823>/Unit Delay' */
+  BaseEngineController_LS_DWork.s823_UnitDelay_DSTATE =
+    rtb_DataTypeConversion_m0;
+
+  /* Update for UnitDelay: '<S823>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s823_UnitDelay3_DSTATE = rtb_Switch_f;
+
+  /* Update for UnitDelay: '<S823>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s823_UnitDelay4_DSTATE =
+    BaseEngineController_LS_B.s756_Switch;
+
+  /* Update for UnitDelay: '<S840>/Unit Delay1' */
+  BaseEngineController_LS_DWork.s840_UnitDelay1_DSTATE =
     rtb_DataTypeConversion_ik;
 
-  /* Update for UnitDelay: '<S839>/Unit Delay' */
-  BaseEngineController_LS_DWork.s839_UnitDelay_DSTATE = rtb_APP2;
+  /* Update for UnitDelay: '<S840>/Unit Delay' */
+  BaseEngineController_LS_DWork.s840_UnitDelay_DSTATE = rtb_APP2;
 
-  /* Update for UnitDelay: '<S839>/Unit Delay3' */
-  BaseEngineController_LS_DWork.s839_UnitDelay3_DSTATE = rtb_UnitDelay4_b3;
+  /* Update for UnitDelay: '<S840>/Unit Delay3' */
+  BaseEngineController_LS_DWork.s840_UnitDelay3_DSTATE = rtb_UnitDelay4_b3;
 
-  /* Update for UnitDelay: '<S839>/Unit Delay4' */
-  BaseEngineController_LS_DWork.s839_UnitDelay4_DSTATE =
-    BaseEngineController_LS_B.s756_Switch;
+  /* Update for UnitDelay: '<S840>/Unit Delay4' */
+  BaseEngineController_LS_DWork.s840_UnitDelay4_DSTATE =
+    BaseEngineController_LS_B.s757_Switch;
 }
 
 /*

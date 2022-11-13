@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2098
+ * Model version              : 1.2103
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Nov 12 20:07:34 2022
+ * C source code generated on : Sat Nov 12 20:28:28 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -15,7 +15,7 @@
 
 #include "MotoHawk_IO.h"
 
-/* S-Function Block: <S999>/motohawk_ain5 Resource: ECUP */
+/* S-Function Block: <S1000>/motohawk_ain5 Resource: ECUP */
 NativeError_S ECUP_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -73,7 +73,7 @@ NativeError_S ECUP_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S999>/motohawk_dout Resource: DOut7250p0009 */
+/* S-Function Block: <S1000>/motohawk_dout Resource: DOut7250p0009 */
 NativeError_S DOut7250p0009_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -124,7 +124,7 @@ NativeError_S DOut7250p0009_DiscreteOutputPushPull_Set(int8_T in)
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S672>/motohawk_ain Resource: MAPSensorPin */
+/* S-Function Block: <S673>/motohawk_ain Resource: MAPSensorPin */
 NativeError_S MAPSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -186,7 +186,7 @@ NativeError_S MAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S698>/motohawk_ain Resource: ECTSensorPin */
+/* S-Function Block: <S699>/motohawk_ain Resource: ECTSensorPin */
 NativeError_S ECTSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -248,7 +248,7 @@ NativeError_S ECTSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S698>/motohawk_ain1 Resource: IATSensorPin */
+/* S-Function Block: <S699>/motohawk_ain1 Resource: IATSensorPin */
 NativeError_S IATSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -310,7 +310,7 @@ NativeError_S IATSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S698>/motohawk_ain2 Resource: EVAPSensorPin */
+/* S-Function Block: <S699>/motohawk_ain2 Resource: EVAPSensorPin */
 NativeError_S EVAPSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -373,7 +373,7 @@ NativeError_S EVAPSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S698>/motohawk_ain3 Resource: CATSensorPin */
+/* S-Function Block: <S699>/motohawk_ain3 Resource: CATSensorPin */
 NativeError_S CATSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -435,7 +435,7 @@ NativeError_S CATSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S697>/motohawk_ain Resource: FuelLvlSensorPin */
+/* S-Function Block: <S698>/motohawk_ain Resource: FuelLvlSensorPin */
 NativeError_S FuelLvlSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -499,7 +499,7 @@ NativeError_S FuelLvlSensorPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S849>/motohawk_dout Resource: DOut5883p001 */
+/* S-Function Block: <S850>/motohawk_dout Resource: DOut5883p001 */
 NativeError_S DOut5883p001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -554,7 +554,7 @@ NativeError_S DOut5883p001_DiscreteOutputPushPull_Set(int8_T in)
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S446>/motohawk_ain2 Resource: APP2AnalogInput */
+/* S-Function Block: <S447>/motohawk_ain2 Resource: APP2AnalogInput */
 NativeError_S APP2AnalogInput_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -617,7 +617,7 @@ NativeError_S APP2AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S446>/motohawk_ain1 Resource: APP1AnalogInput */
+/* S-Function Block: <S447>/motohawk_ain1 Resource: APP1AnalogInput */
 NativeError_S APP1AnalogInput_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -680,7 +680,7 @@ NativeError_S APP1AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S442>/motohawk_ain5 Resource: ACSwPin */
+/* S-Function Block: <S443>/motohawk_ain5 Resource: ACSwPin */
 NativeError_S ACSwPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -742,7 +742,7 @@ NativeError_S ACSwPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S444>/motohawk_ain4 Resource: ACPresPin */
+/* S-Function Block: <S445>/motohawk_ain4 Resource: ACPresPin */
 NativeError_S ACPresPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -804,7 +804,7 @@ NativeError_S ACPresPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S446>/motohawk_ain6 Resource: TPS1AnalogInput */
+/* S-Function Block: <S447>/motohawk_ain6 Resource: TPS1AnalogInput */
 NativeError_S TPS1AnalogInput_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -867,7 +867,7 @@ NativeError_S TPS1AnalogInput_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S446>/motohawk_ain9 Resource: TPS2AnalogInput */
+/* S-Function Block: <S447>/motohawk_ain9 Resource: TPS2AnalogInput */
 NativeError_S TPS2AnalogInput_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1127,7 +1127,7 @@ void VSPD_Pin_FrequencyInput_TriggerOnPulseCnt_Set(uint8_T uDesiredPulseCnt)
     ((init_resource_VSPD_Pin_DataStore())), &setInfo);
 }
 
-/* S-Function Block: <S444>/motohawk_ain14 Resource: SysVoltage */
+/* S-Function Block: <S445>/motohawk_ain14 Resource: SysVoltage */
 NativeError_S SysVoltage_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1290,7 +1290,7 @@ void MAF_Pin_FrequencyInput_TriggerOnPulseCnt_Set(uint8_T uDesiredPulseCnt)
     ((init_resource_MAF_Pin_DataStore())), &setInfo);
 }
 
-/* S-Function Block: <S442>/motohawk_ain1 Resource: ClutchSw_Pin */
+/* S-Function Block: <S443>/motohawk_ain1 Resource: ClutchSw_Pin */
 NativeError_S ClutchSw_Pin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1352,7 +1352,7 @@ NativeError_S ClutchSw_Pin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S442>/motohawk_ain6 Resource: ScramblePin */
+/* S-Function Block: <S443>/motohawk_ain6 Resource: ScramblePin */
 NativeError_S ScramblePin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1414,7 +1414,7 @@ NativeError_S ScramblePin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S442>/motohawk_din2 Resource: TwoStepPin */
+/* S-Function Block: <S443>/motohawk_din2 Resource: TwoStepPin */
 NativeError_S TwoStepPin_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1477,7 +1477,7 @@ NativeError_S TwoStepPin_DigitalInput_Get(boolean_T *out, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S444>/motohawk_ain2 Resource: FuelPresPin */
+/* S-Function Block: <S445>/motohawk_ain2 Resource: FuelPresPin */
 NativeError_S FuelPresPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1539,7 +1539,7 @@ NativeError_S FuelPresPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S444>/motohawk_ain1 Resource: OilPresPin */
+/* S-Function Block: <S445>/motohawk_ain1 Resource: OilPresPin */
 NativeError_S OilPresPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -1601,7 +1601,7 @@ NativeError_S OilPresPin_AnalogInput_Get(uint16_T *adc, uint16_T *status)
   return sErrorResult;
 }
 
-/* S-Function Block: <S853>/motohawk_dout Resource: DOut6701p001 */
+/* S-Function Block: <S854>/motohawk_dout Resource: DOut6701p001 */
 NativeError_S DOut6701p001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -1728,7 +1728,7 @@ void FAN1Pin_PWM_PWMOutput_PWMOutput_Create()
   (init_resource_FAN1Pin_PWM_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S853>/motohawk_dout1 Resource: DOut6702p001 */
+/* S-Function Block: <S854>/motohawk_dout1 Resource: DOut6702p001 */
 NativeError_S DOut6702p001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -1855,7 +1855,7 @@ void FAN2Pin_PWM_PWMOutput_PWMOutput_Create()
   (init_resource_FAN2Pin_PWM_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S854>/motohawk_dout Resource: DOut6722p001 */
+/* S-Function Block: <S855>/motohawk_dout Resource: DOut6722p001 */
 NativeError_S DOut6722p001_DiscreteOutput_Create(void)
 {
   NativeError_S sErrorResult;
@@ -1910,7 +1910,7 @@ NativeError_S DOut6722p001_DiscreteOutputPushPull_Set(int8_T in)
   return ERROR_FAIL;                   /* Return an error */
 }
 
-/* S-Function Block: <S442>/motohawk_din Resource: ESTOPPin */
+/* S-Function Block: <S443>/motohawk_din Resource: ESTOPPin */
 NativeError_S ESTOPPin_DigitalInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;
@@ -2274,7 +2274,7 @@ void WASTEGATE_PWMOutput_PWMOutput_Create()
   (init_resource_WASTEGATE_PWMOutput_DataStore()) = -1;
 }
 
-/* S-Function Block: <S444>/motohawk_ain3 Resource: SensVoltSensorPin */
+/* S-Function Block: <S445>/motohawk_ain3 Resource: SensVoltSensorPin */
 NativeError_S SensVoltSensorPin_AnalogInput_Create(void)
 {
   NativeError_S sErrorResult = ERROR_RESOURCE_NOT_CREATED;

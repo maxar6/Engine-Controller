@@ -3,9 +3,9 @@
  *
  * Code generation for model "BaseEngineController_LS.mdl".
  *
- * Model version              : 1.2098
+ * Model version              : 1.2103
  * Simulink Coder version : 8.0 (R2011a) 09-Mar-2011
- * C source code generated on : Sat Nov 12 20:07:34 2022
+ * C source code generated on : Sat Nov 12 20:28:28 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -18,7 +18,7 @@
 
 void Trigger_FGND_20XRTI_PERIODIC_5792p001(void)
 {
-  /* Named constants for Stateflow: '<S999>/ECUP Latch' */
+  /* Named constants for Stateflow: '<S1000>/ECUP Latch' */
 #define BaseEngineController_LS_IN_PowerDown (1U)
 #define BaseEngineController_LS_IN_PowerUp (2U)
 
@@ -32,25 +32,25 @@ void Trigger_FGND_20XRTI_PERIODIC_5792p001(void)
     BaseEngineController_LS_M->Timing.clockTickH0 = upper32Bits;
   }
 
-  if (BaseEngineController_LS_DWork.s752_motohawk_trigger_DWORK1) {
-    /* Output and update for function-call system: '<S752>/Function-Call Subsystem' */
+  if (BaseEngineController_LS_DWork.s753_motohawk_trigger_DWORK1) {
+    /* Output and update for function-call system: '<S753>/Function-Call Subsystem' */
     {
       boolean_T rtb_InitialConditionisTrue_d;
 
-      /* UnitDelay: '<S780>/Initial Condition is True' */
+      /* UnitDelay: '<S781>/Initial Condition is True' */
       rtb_InitialConditionisTrue_d =
-        BaseEngineController_LS_DWork.s780_InitialConditionisTrue_DSTATE;
+        BaseEngineController_LS_DWork.s781_InitialConditionisTrue_DSTATE;
 
-      /* Logic: '<S779>/Logical Operator' incorporates:
-       *  S-Function (motohawk_sfun_calibration): '<S779>/motohawk_calibration'
+      /* Logic: '<S780>/Logical Operator' incorporates:
+       *  S-Function (motohawk_sfun_calibration): '<S780>/motohawk_calibration'
        */
-      BaseEngineController_LS_B.s779_LogicalOperator =
+      BaseEngineController_LS_B.s780_LogicalOperator =
         ((rtb_InitialConditionisTrue_d || (APP2_AlwaysAdapt_DataStore())));
 
-      /* Update for UnitDelay: '<S780>/Initial Condition is True' incorporates:
-       *  Constant: '<S780>/False After First Sample'
+      /* Update for UnitDelay: '<S781>/Initial Condition is True' incorporates:
+       *  Constant: '<S781>/False After First Sample'
        */
-      BaseEngineController_LS_DWork.s780_InitialConditionisTrue_DSTATE = FALSE;
+      BaseEngineController_LS_DWork.s781_InitialConditionisTrue_DSTATE = FALSE;
     }
   }
 }

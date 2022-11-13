@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2093"
+    ComputedModelVersion    "1.2103"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,33 +26,33 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildGUID;MotoHawkBuildInfo;RegisteredStructs"
-  MotoHawkBuildVersion	  "026"
+  MotoHawkBuildVersion	  "029"
   MotoHawkBuildStats	  "struct('TotalFLASH',{373552},'TotalEEPROM',{1254},'TotalRAM',{26040},'AppFLASH',{154160},'AppE"
-  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{39},'BuildErrorCount',{74},'OSRAM',{4962},'Stack"
+  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{42},'BuildErrorCount',{74},'OSRAM',{4962},'Stack"
   "RAM',{9216},'FgndTimeStackSize',{4096},'FgndAngleStackSize',{1024},'BgndStackSize',{2048},'IdleStackSize',{1024},'In"
   "terruptStackSize',{1024},'RTWBlockIOSize',{2192},'RTWDWorkSize',{1776},'RTWPrevZCSize',{0},'VolatileSize',{1668},'No"
   "nVolatileSize',{1080},'ConstantSize',{18616},'NonVolatileFormatID',{32179})"
   MotoHawkModelSavedName  "BaseEngineController_LS"
   MotoHawkModelGUID	  "12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9"
   MotoHawkModelOpenTime	  "2022 11 8 21 53 59.299 "
-  MotoHawkModelElapsedTime "-3903965169.386"
-  MotoHawkBuildGUID	  "e1a6df35-4980-47b4-97-b1-f1-c5-56-00-97"
+  MotoHawkModelElapsedTime "-3901245073.219"
+  MotoHawkBuildGUID	  "79d21bc5-a922-460c-a0-25-f8-c2-8e-0c-2f"
   MotoHawkBuildInfo	  "struct('model_name',{'BaseEngineController_LS'},'motohawk_version',{'2011a_sp0.184'},'motohawk_"
-  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'025'},'module_type',{'ECU555-80'},'layout"
+  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'028'},'module_type',{'ECU555-80'},'layout"
   "_type',{'DEV'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolc"
   "hain_version',{'4.4.0'},'component',{0},'archive_file',{'PCM.a'},'enable_build',{1},'fptype',{0},'flash_size',{36864"
   "0},'ee_size',{8192},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_8KEE_Dev'},'eri_t"
   "able0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5}"
   ",'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Engine-Controller\\EngineControl"
   "ler_Rev2'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Engine-Controller\\EngineController_Rev2\\BaseEngineCo"
-  "ntroller_LS_Build'},'dll_name',{'BaseEngin_025'},'srz_name',{'BaseEngineController_LS_025'},'fgnd_stack_size',{4096}"
+  "ntroller_LS_Build'},'dll_name',{'BaseEngin_028'},'srz_name',{'BaseEngineController_LS_028'},'fgnd_stack_size',{4096}"
   ",'fgnd_angle_stack_size',{0},'bgnd_stack_size',{2048},'idle_stack_size',{1024},'irq_stack_size',{1280},'heap_size',{"
   "4096},'heap_margin',{409},'install_dll_dir',{'c:\\ecufiles\\tdbdll'},'install_srz_dir',{'C:\\ECUFiles\\Programs\\'},"
   "'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\G"
   "CC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\"
   "Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'E:\\MATLAB"
-  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'e1a6df35-4980-47b4-97-b1-f1-c5-56-"
-  "00-97'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'79d21bc5-a922-460c-a0-25-f8-c2-8e-"
+  "0c-2f'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
   RegisteredStructs	  "struct('Name',{'FreezeFrame','FreezeFrames'},'Data',{struct('Name',{int32(0)},'Code',{int32(0)}"
   ",'Var1',{int32(0)},'Var2',{int32(0)},'Var3',{int32(0)},'Var4',{int32(0)},'Var5',{int32(0)},'Var6',{int32(0)},'Var7',"
   "{int32(0)},'Var8',{int32(0)},'Var9',{int32(0)},'Var10',{int32(0)}),struct('Name',{int32(0)},'Code',{int32(0)},'Var1'"
@@ -84,9 +84,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Nov 08 22:13:51 2022"
+  LastModifiedDate	  "Sat Nov 12 20:26:46 2022"
   RTWModifiedTimeStamp	  589845301
-  ModelVersionFormat	  "1.%<AutoIncrement:2093>"
+  ModelVersionFormat	  "1.%<AutoIncrement:2103>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2141,7 +2141,7 @@ Model {
     Location		    [366, 75, 1918, 1019]
     Open		    on
     ModelBrowserVisibility  on
-    ModelBrowserWidth	    342
+    ModelBrowserWidth	    364
     ScreenColor		    "white"
     PaperOrientation	    "landscape"
     PaperPositionMode	    "auto"
@@ -2152,7 +2152,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "90"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1579"
+    SIDHighWatermark	    "1580"
     Block {
       BlockType		      Reference
       Name		      "CAN Definition"
@@ -2510,7 +2510,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "144"
-	    SIDHighWatermark	    "6180"
+	    SIDHighWatermark	    "6225"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Sensors"
@@ -5043,8 +5043,8 @@ Model {
 		    Frame		    "on"
 		    DisplayStringWithTags   "Model Info:\nAuthor: Suhre, Poorman\n%<Created>\n%<ModifiedDate>\nVersion: %<ModelVersi"
 		    "on>\nMotoTron Confidential\nand Propietary\n"
-		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nTue Nov 08 22:13:55 202"
-		    "2\\nVersion: 1.2093\\nMotoTron Confidential\\nand Propietary\\n"
+		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nSat Nov 12 20:26:46 202"
+		    "2\\nVersion: 1.2103\\nMotoTron Confidential\\nand Propietary\\n"
 		    HorizontalTextAlignment "Center"
 		    LeftAlignmentValue	    "0.5"
 		    SourceBlockDiagram	    "BaseEngineController_LS"
@@ -54788,7 +54788,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Reset"
 		    SID			    "914:4621"
-		    Position		    [40, 668, 70, 682]
+		    Position		    [55, 668, 85, 682]
 		    BackgroundColor	    "lightBlue"
 		    IconDisplay		    "Port number"
 		    }
@@ -54796,7 +54796,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Sensors"
 		    SID			    "914:4622"
-		    Position		    [45, 573, 75, 587]
+		    Position		    [60, 573, 90, 587]
 		    BackgroundColor	    "lightBlue"
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -54805,7 +54805,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Desired_Equiv"
 		    SID			    "914:4623"
-		    Position		    [40, 438, 70, 452]
+		    Position		    [55, 438, 85, 452]
 		    BackgroundColor	    "lightBlue"
 		    Port		    "3"
 		    IconDisplay		    "Port number"
@@ -54822,7 +54822,7 @@ Model {
 		    Name		    "Bus\nCreator"
 		    SID			    "914:4624"
 		    Ports		    [4, 1]
-		    Position		    [965, 305, 970, 690]
+		    Position		    [1245, 305, 1250, 690]
 		    ShowName		    off
 		    DisplayOption	    "bar"
 		    Port {
@@ -54838,7 +54838,7 @@ Model {
 		    Name		    "Bus\nCreator1"
 		    SID			    "914:4625"
 		    Ports		    [2, 1]
-		    Position		    [925, 582, 930, 693]
+		    Position		    [1155, 582, 1160, 693]
 		    ShowName		    off
 		    Inputs		    "2"
 		    DisplayOption	    "bar"
@@ -54855,7 +54855,7 @@ Model {
 		    Name		    "Bus\nCreator2"
 		    SID			    "914:4626"
 		    Ports		    [1, 1]
-		    Position		    [770, 306, 775, 344]
+		    Position		    [900, 306, 905, 344]
 		    ShowName		    off
 		    Inputs		    "1"
 		    DisplayOption	    "bar"
@@ -54872,7 +54872,7 @@ Model {
 		    Name		    "Bus\nSelector1"
 		    SID			    "914:4627"
 		    Ports		    [1, 1]
-		    Position		    [165, 424, 170, 466]
+		    Position		    [270, 424, 275, 466]
 		    ShowName		    off
 		    OutputSignals	    "DesEquivRatio"
 		    Port {
@@ -54887,7 +54887,7 @@ Model {
 		    Name		    "Bus\nSelector2"
 		    SID			    "914:4628"
 		    Ports		    [1, 1]
-		    Position		    [170, 536, 175, 574]
+		    Position		    [275, 536, 280, 574]
 		    ShowName		    off
 		    OutputSignals	    "RawProcessed.O2Delagged.PreO2Delag"
 		    Port {
@@ -54899,10 +54899,31 @@ Model {
 		    }
 		    Block {
 		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector3"
+		    SID			    "914:6213"
+		    Ports		    [1, 2]
+		    Position		    [275, 133, 290, 222]
+		    ShowName		    off
+		    OutputSignals	    "Raw.CAN.O2_BUS.BANK1.DataValidState,Raw.CAN.O2_BUS.BANK2.DataValidState"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<DataValidState>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<DataValidState>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector4"
 		    SID			    "914:4629"
 		    Ports		    [1, 3]
-		    Position		    [165, 264, 170, 386]
+		    Position		    [270, 264, 275, 386]
 		    ShowName		    off
 		    OutputSignals	    "SSEng,VirtualIndexes.ECTKeyUp09Idx,RawProcessed.TimeSinceRun"
 		    Port {
@@ -54928,14 +54949,14 @@ Model {
 		    BlockType		    Constant
 		    Name		    "Constant"
 		    SID			    "914:2784"
-		    Position		    [620, 570, 650, 600]
+		    Position		    [850, 570, 880, 600]
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
 		    SID			    "914:4634"
 		    Ports		    [1, 1]
-		    Position		    [290, 503, 310, 527]
+		    Position		    [520, 503, 540, 527]
 		    ShowName		    off
 		    Operator		    "NOT"
 		    AllPortsSameDT	    off
@@ -54946,18 +54967,9 @@ Model {
 		    Name		    "Logical\nOperator1"
 		    SID			    "914:4635"
 		    Ports		    [1, 1]
-		    Position		    [95, 663, 115, 687]
+		    Position		    [110, 663, 130, 687]
 		    ShowName		    off
 		    Operator		    "NOT"
-		    AllPortsSameDT	    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    Logic
-		    Name		    "Logical\nOperator2"
-		    SID			    "914:2782"
-		    Ports		    [2, 1]
-		    Position		    [620, 442, 650, 473]
 		    AllPortsSameDT	    off
 		    OutDataTypeStr	    "boolean"
 		    }
@@ -54966,7 +54978,7 @@ Model {
 		    Name		    "O2 Control State Determination"
 		    SID			    "914:4636"
 		    Ports		    [5, 1]
-		    Position		    [390, 220, 515, 430]
+		    Position		    [620, 220, 745, 430]
 		    BackgroundColor	    "green"
 		    MinAlgLoopOccurrences   off
 		    PropExecContextOutsideSubsystem off
@@ -55652,7 +55664,7 @@ Model {
 		    Name		    "O2 PID Calibrations"
 		    SID			    "914:4667"
 		    Ports		    [1, 1]
-		    Position		    [190, 609, 300, 661]
+		    Position		    [345, 609, 455, 661]
 		    BackgroundColor	    "[0.862745, 0.882353, 0.615686]"
 		    MinAlgLoopOccurrences   off
 		    PropExecContextOutsideSubsystem off
@@ -56707,7 +56719,7 @@ Model {
 		    Name		    "O2 PID Controller"
 		    SID			    "914:4708"
 		    Ports		    [5, 2]
-		    Position		    [350, 490, 595, 700]
+		    Position		    [580, 490, 825, 700]
 		    BackgroundColor	    "[0.862745, 0.882353, 0.615686]"
 		    AncestorBlock	    "motohawk_engine_lib/O2A"
 		    TreatAsAtomicUnit	    on
@@ -59103,10 +59115,225 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "O2Disable"
+		    SID			    "914:6215"
+		    Ports		    [2, 1]
+		    Position		    [390, 133, 520, 222]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "O2Disable"
+		    Location		    [433, 403, 931, 703]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Bank1Valid"
+		    SID			    "914:6216"
+		    Position		    [110, 103, 140, 117]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Bank2Valid"
+		    SID			    "914:6220"
+		    Position		    [110, 188, 140, 202]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator"
+		    SID			    "914:6221"
+		    Ports		    [1, 1]
+		    Position		    [185, 94, 215, 126]
+		    Operator		    "NOT"
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator1"
+		    SID			    "914:6222"
+		    Ports		    [1, 1]
+		    Position		    [185, 179, 215, 211]
+		    Operator		    "NOT"
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator2"
+		    SID			    "914:6223"
+		    Ports		    [2, 1]
+		    Position		    [285, 155, 320, 315]
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator3"
+		    SID			    "914:6224"
+		    Ports		    [3, 1]
+		    Position		    [425, 48, 465, 422]
+		    Operator		    "OR"
+		    Inputs		    "3"
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_read"
+		    SID			    "914:6219"
+		    Ports		    [0, 1]
+		    Position		    [75, 254, 215, 296]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "boolean"
+		    nam			    "'Bank2_Enable'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_fault_action"
+		    SID			    "914:6218"
+		    Ports		    [0, 1]
+		    Position		    [150, 345, 320, 375]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_action"
+		    SourceType		    "MotoHawk Fault Action"
+		    nam			    "'DisableO2Ctrl'"
+		    output_status	    on
+		    eval_nam		    "DisableO2Ctrl"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe"
+		    SID			    "914:6225"
+		    Ports		    [1]
+		    Position		    [590, 177, 740, 203]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'O2FaultDisable'"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "914:6217"
+		    Position		    [590, 228, 620, 242]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Bank1Valid"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Bank2Valid"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator1"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator2"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_fault_action"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator3"
+		    SrcPort		    1
+		    Points		    [85, 0]
+		    Branch {
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -45]
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    }
+		    Block {
 		    BlockType		    Switch
 		    Name		    "Switch"
 		    SID			    "914:2781"
-		    Position		    [700, 534, 745, 596]
+		    Position		    [930, 534, 975, 596]
 		    Threshold		    "1"
 		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
@@ -59119,50 +59346,10 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
-		    Name		    "motohawk_calibration"
-		    SID			    "914:2783"
-		    Ports		    [0, 1]
-		    Position		    [685, 386, 855, 424]
-		    BlockMirror		    on
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
-		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'O2DisablmentMult'"
-		    val			    "1"
-		    storage		    "Calibration"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    data_type		    "boolean"
-		    read_level		    "1"
-		    write_level		    "1"
-		    ovr_cals		    on
-		    view_as		    "Enumeration"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    off
-		    help		    "''"
-		    units		    "''"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_min_max		    off
-		    min_val		    "-inf"
-		    max_val		    "inf"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
 		    Name		    "motohawk_data_def"
 		    SID			    "914:4709"
 		    Ports		    []
-		    Position		    [550, 146, 685, 206]
+		    Position		    [30, 16, 165, 76]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_def"
@@ -59208,7 +59395,7 @@ Model {
 		    Name		    "motohawk_data_write"
 		    SID			    "914:4710"
 		    Ports		    [1]
-		    Position		    [385, 145, 545, 205]
+		    Position		    [620, 145, 780, 205]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_write"
@@ -59228,24 +59415,10 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
-		    Name		    "motohawk_fault_action"
-		    SID			    "914:4711"
-		    Ports		    [0, 1]
-		    Position		    [145, 230, 315, 260]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_action"
-		    SourceType		    "MotoHawk Fault Action"
-		    nam			    "'DisableO2Ctrl'"
-		    output_status	    on
-		    eval_nam		    "DisableO2Ctrl"
-		    }
-		    Block {
-		    BlockType		    Reference
 		    Name		    "motohawk_prelookup13"
 		    SID			    "914:4712"
 		    Ports		    [1, 1]
-		    Position		    [730, 638, 855, 692]
+		    Position		    [960, 638, 1085, 692]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_prelookup"
@@ -59285,7 +59458,7 @@ Model {
 		    Name		    "motohawk_probe4"
 		    SID			    "914:4713"
 		    Ports		    [1]
-		    Position		    [790, 523, 915, 547]
+		    Position		    [1020, 523, 1145, 547]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -59315,7 +59488,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "O2_Info"
 		    SID			    "914:4714"
-		    Position		    [1025, 493, 1055, 507]
+		    Position		    [1305, 493, 1335, 507]
 		    BackgroundColor	    "orange"
 		    IconDisplay		    "Port number"
 		    }
@@ -59350,10 +59523,10 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Desired_Equiv"
 		    SrcPort		    1
-		    Points		    [0, 0; 45, 0]
+		    Points		    [45, 0]
 		    Branch {
 		    Labels		    [3, 1]
-		    Points		    [0, -335; 800, 0; 0, 245]
+		    Points		    [0, -330; 945, 0; 0, 240]
 		    DstBlock		    "Bus\nCreator"
 		    DstPort		    1
 		    }
@@ -59365,7 +59538,7 @@ Model {
 		    Line {
 		    SrcBlock		    "Sensors"
 		    SrcPort		    1
-		    Points		    [0, 0; 55, 0]
+		    Points		    [55, 0]
 		    Branch {
 		    Points		    [0, -25]
 		    Branch {
@@ -59380,8 +59553,15 @@ Model {
 		    }
 		    Branch {
 		    Points		    [0, -255]
+		    Branch {
 		    DstBlock		    "Bus\nSelector4"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -145]
+		    DstBlock		    "Bus\nSelector3"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    Line {
@@ -59403,7 +59583,8 @@ Model {
 		    DstPort		    1
 		    }
 		    Branch {
-		    DstBlock		    "Logical\nOperator2"
+		    Points		    [85, 0; 0, 100]
+		    DstBlock		    "Switch"
 		    DstPort		    2
 		    }
 		    }
@@ -59421,7 +59602,7 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Bus\nCreator2"
 		    SrcPort		    1
-		    Points		    [120, 0; 0, 125]
+		    Points		    [115, 0; 0, 125]
 		    DstBlock		    "Bus\nCreator"
 		    DstPort		    2
 		    }
@@ -59436,7 +59617,7 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "Bus\nSelector1"
 		    SrcPort		    1
-		    Points		    [0, 0; 85, 0]
+		    Points		    [85, 0]
 		    Branch {
 		    Points		    [0, -40]
 		    DstBlock		    "O2 Control State Determination"
@@ -59455,20 +59636,6 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "O2 PID Controller"
 		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_fault_action"
-		    SrcPort		    1
-		    Points		    [20, 0]
-		    Branch {
-		    DstBlock		    "O2 Control State Determination"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -70]
-		    DstBlock		    "motohawk_data_write"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    Name		    "<SSEng>"
@@ -59536,20 +59703,6 @@ Model {
 		    }
 		    }
 		    Line {
-		    SrcBlock		    "motohawk_calibration"
-		    SrcPort		    1
-		    Points		    [-75, 0]
-		    DstBlock		    "Logical\nOperator2"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Logical\nOperator2"
-		    SrcPort		    1
-		    Points		    [20, 0; 0, 105]
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    Line {
 		    Name		    "O2FuelMult"
 		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    "O2 PID Controller"
@@ -59562,6 +59715,36 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "Switch"
 		    DstPort		    3
+		    }
+		    Line {
+		    Name		    "<DataValidState>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector3"
+		    SrcPort		    1
+		    DstBlock		    "O2Disable"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<DataValidState>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector3"
+		    SrcPort		    2
+		    DstBlock		    "O2Disable"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "O2Disable"
+		    SrcPort		    1
+		    Points		    [65, 0]
+		    Branch {
+		    DstBlock		    "motohawk_data_write"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "O2 Control State Determination"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    }
@@ -69630,7 +69813,7 @@ Model {
 		    sz_vec		    "4"
 		    sz_row		    "2"
 		    sz_col		    "3"
-		    typ			    "uint8"
+		    typ			    "boolean"
 		    nam			    "'Bank2_Enable'"
 		    checkNull		    on
 		    struct_inst_name	    "'MyData'"
@@ -77207,7 +77390,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "80"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Sensors"
@@ -77219,16 +77402,9 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Raw Processed"
 		    SID			    "914:6072"
-		    Position		    [55, 398, 85, 412]
+		    Position		    [55, 368, 85, 382]
 		    Port		    "2"
 		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Abs
-		    Name		    "Abs"
-		    SID			    "914:6097"
-		    Position		    [520, 200, 550, 230]
-		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
 		    BlockType		    BusSelector
@@ -77237,10 +77413,10 @@ Model {
 		    Ports		    [1, 1]
 		    Position		    [115, 196, 120, 234]
 		    ShowName		    off
-		    OutputSignals	    "NonLinearSensors.Fuel_Lvl"
+		    OutputSignals	    "NonLinearSensors.Fuel_Lvl_Raw"
 		    Port {
 		    PortNumber		    1
-		    Name		    "<Fuel_Lvl>"
+		    Name		    "<Fuel_Lvl_Raw>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -77250,7 +77426,7 @@ Model {
 		    Name		    "Bus\nSelector1"
 		    SID			    "914:6074"
 		    Ports		    [1, 2]
-		    Position		    [120, 386, 125, 424]
+		    Position		    [120, 332, 130, 423]
 		    ShowName		    off
 		    OutputSignals	    "TimeSinceKeyOn,VSPD_Final"
 		    Port {
@@ -77267,17 +77443,11 @@ Model {
 		    }
 		    }
 		    Block {
-		    BlockType		    Constant
-		    Name		    "Constant"
-		    SID			    "914:6142"
-		    Position		    [1225, 355, 1255, 385]
-		    }
-		    Block {
 		    BlockType		    Reference
 		    Name		    "First Order Low Pass"
 		    SID			    "914:6101"
 		    Ports		    [2, 1]
-		    Position		    [1420, 190, 1505, 505]
+		    Position		    [1150, 210, 1235, 525]
 		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
 		    LibraryVersion	    "1.490"
 		    SourceBlock		    "motohawk_control_primitives_lib/First Order Low Pass"
@@ -77293,31 +77463,148 @@ Model {
 		    GeneratePreprocessorConditionals off
 		    }
 		    Block {
-		    BlockType		    Reference
-		    Name		    "First Time"
-		    SID			    "914:6140"
-		    Ports		    [0, 1]
-		    Position		    [1220, 413, 1270, 437]
-		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
-		    LibraryVersion	    "1.490"
-		    SourceBlock		    "motohawk_control_primitives_lib/First Time"
-		    SourceType		    ""
-		    ShowPortLabels	    "FromPortIcon"
-		    SystemSampleTime	    "-1"
+		    BlockType		    From
+		    Name		    "From"
+		    SID			    "914:6198"
+		    Position		    [610, 201, 705, 229]
+		    GotoTag		    "FuelLevel"
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From1"
+		    SID			    "914:6200"
+		    Position		    [515, 517, 605, 543]
+		    GotoTag		    "FuelLevelDR"
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From2"
+		    SID			    "914:6202"
+		    Position		    [515, 572, 605, 598]
+		    GotoTag		    "RefuelEvent"
+		    }
+		    Block {
+		    BlockType		    From
+		    Name		    "From3"
+		    SID			    "914:6212"
+		    Position		    [1255, 207, 1345, 233]
+		    GotoTag		    "FuelLevelDR"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "FuelLevelWrite"
+		    SID			    "914:6207"
+		    Ports		    [1, 0, 1]
+		    Position		    [1340, 254, 1440, 296]
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
 		    FunctionWithSeparateData off
-		    RTWMemSecFuncInitTerm   "Inherit from model"
-		    RTWMemSecFuncExecute    "Inherit from model"
-		    RTWMemSecDataConstants  "Inherit from model"
-		    RTWMemSecDataInternal   "Inherit from model"
-		    RTWMemSecDataParameters "Inherit from model"
-		    GeneratePreprocessorConditionals off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "FuelLevelWrite"
+		    Location		    [421, 301, 919, 601]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FuelLevelFilt"
+		    SID			    "914:6208"
+		    Position		    [170, 138, 200, 152]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "914:6209"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_write"
+		    SID			    "914:6211"
+		    Ports		    [1]
+		    Position		    [310, 115, 445, 175]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_write"
+		    SourceType		    "MotoHawk Data Write"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Write entire data structure at once"
+		    sz_vec		    "9"
+		    sz_row		    "2"
+		    sz_col		    "9"
+		    typ			    "double"
+		    nam			    "'FuelLvl_NVM'"
+		    checkNull		    on
+		    write_read_only	    off
+		    struct_inst_name	    "''"
+		    struct_name		    "'MyStruct'"
+		    }
+		    Line {
+		    SrcBlock		    "FuelLevelFilt"
+		    SrcPort		    1
+		    DstBlock		    "motohawk_data_write"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto"
+		    SID			    "914:6197"
+		    Position		    [245, 115, 355, 145]
+		    GotoTag		    "FuelLevel"
+		    TagVisibility	    "local"
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto1"
+		    SID			    "914:6199"
+		    Position		    [475, 245, 585, 275]
+		    GotoTag		    "FuelLevelDR"
+		    TagVisibility	    "local"
+		    }
+		    Block {
+		    BlockType		    Goto
+		    Name		    "Goto2"
+		    SID			    "914:6201"
+		    Position		    [475, 200, 585, 230]
+		    GotoTag		    "RefuelEvent"
+		    TagVisibility	    "local"
 		    }
 		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
-		    SID			    "914:6099"
+		    SID			    "914:6203"
+		    Ports		    [1, 1]
+		    Position		    [650, 514, 680, 546]
+		    Operator		    "NOT"
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator1"
+		    SID			    "914:6204"
 		    Ports		    [2, 1]
-		    Position		    [780, 221, 810, 319]
+		    Position		    [715, 502, 745, 613]
+		    Operator		    "OR"
 		    AllPortsSameDT	    off
 		    OutDataTypeStr	    "boolean"
 		    }
@@ -77326,7 +77613,7 @@ Model {
 		    Name		    "MinMax"
 		    SID			    "914:6104"
 		    Ports		    [2, 1]
-		    Position		    [1010, 547, 1040, 578]
+		    Position		    [620, 732, 650, 763]
 		    ShowName		    off
 		    Function		    "max"
 		    Inputs		    "2"
@@ -77336,36 +77623,88 @@ Model {
 		    Name		    "Product"
 		    SID			    "914:6105"
 		    Ports		    [2, 1]
-		    Position		    [1070, 484, 1090, 591]
+		    Position		    [680, 669, 700, 776]
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
 		    Inputs		    "*/"
 		    RndMeth		    "Floor"
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "RefuelEvent"
+		    SID			    "914:6181"
+		    Ports		    [2, 2]
+		    Position		    [230, 176, 420, 329]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "RefuelEvent"
+		    Location		    [433, 403, 931, 703]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FuelRaw"
+		    SID			    "914:6182"
+		    Position		    [295, 63, 325, 77]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "TimeSinceKeyOn"
+		    SID			    "914:6184"
+		    Position		    [300, 253, 330, 267]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator"
+		    SID			    "914:6193"
+		    Ports		    [2, 1]
+		    Position		    [730, 51, 765, 264]
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator"
-		    SID			    "914:6090"
+		    SID			    "914:6187"
 		    Ports		    [2, 1]
-		    Position		    [535, 371, 570, 469]
+		    Position		    [395, 225, 425, 360]
 		    InputSameDT		    off
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator1"
-		    SID			    "914:6096"
+		    SID			    "914:6192"
 		    Ports		    [2, 1]
-		    Position		    [675, 184, 705, 311]
+		    Position		    [615, 35, 645, 170]
 		    InputSameDT		    off
 		    OutDataTypeStr	    "boolean"
 		    }
 		    Block {
 		    BlockType		    Reference
 		    Name		    "Rising Edge"
-		    SID			    "914:6093"
+		    SID			    "914:6194"
 		    Ports		    [1, 1]
-		    Position		    [645, 404, 705, 436]
+		    Position		    [840, 139, 900, 171]
 		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
 		    LibraryVersion	    "1.490"
 		    SourceBlock		    "motohawk_control_primitives_lib/Rising Edge"
@@ -77382,10 +77721,10 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Sum
-		    Name		    "Sum1"
-		    SID			    "914:6094"
+		    Name		    "Sum"
+		    SID			    "914:6190"
 		    Ports		    [2, 1]
-		    Position		    [470, 205, 490, 225]
+		    Position		    [370, 60, 390, 80]
 		    ShowName		    off
 		    IconShape		    "round"
 		    Inputs		    "|+-"
@@ -77394,47 +77733,11 @@ Model {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch"
-		    SID			    "914:6088"
-		    Position		    [855, 114, 895, 426]
-		    Criteria		    "u2 ~= 0"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch1"
-		    SID			    "914:6100"
-		    Position		    [695, 482, 740, 628]
-		    Criteria		    "u2 ~= 0"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch2"
-		    SID			    "914:6102"
-		    Position		    [1160, 386, 1200, 574]
-		    Criteria		    "u2 ~= 0"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Switch
-		    Name		    "Switch3"
-		    SID			    "914:6141"
-		    Position		    [1310, 342, 1355, 508]
-		    Criteria		    "u2 ~= 0"
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration1"
-		    SID			    "914:6098"
+		    SID			    "914:6191"
 		    Ports		    [0, 1]
-		    Position		    [495, 255, 645, 295]
+		    Position		    [425, 115, 575, 155]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -77471,9 +77774,9 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration10"
-		    SID			    "914:6091"
+		    SID			    "914:6186"
 		    Ports		    [0, 1]
-		    Position		    [315, 425, 465, 465]
+		    Position		    [200, 305, 350, 345]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -77509,10 +77812,176 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "motohawk_data_read"
+		    SID			    "914:6188"
+		    Ports		    [0, 1]
+		    Position		    [190, 105, 325, 165]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "double"
+		    nam			    "'FuelLvl_NVM'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_probe"
+		    SID			    "914:6195"
+		    Ports		    [1]
+		    Position		    [1000, 97, 1150, 123]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'FuelLevel_RefuelEvent'"
+		    show_more		    off
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "RefuelEvent"
+		    SID			    "914:6183"
+		    Position		    [1000, 148, 1030, 162]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "RefuelEventDR"
+		    SID			    "914:6185"
+		    Position		    [555, 283, 585, 297]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "TimeSinceKeyOn"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration10"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator"
+		    SrcPort		    1
+		    Points		    [100, 0]
+		    Branch {
+		    DstBlock		    "RefuelEventDR"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -80]
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "FuelRaw"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    Points		    [50, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator1"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    Points		    [0, -5]
+		    DstBlock		    "Rising Edge"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Rising Edge"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
+		    DstBlock		    "RefuelEvent"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -45]
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch2"
+		    SID			    "914:6102"
+		    Position		    [750, 175, 805, 405]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch3"
+		    SID			    "914:6141"
+		    Position		    [995, 476, 1055, 644]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "motohawk_calibration2"
 		    SID			    "914:6103"
 		    Ports		    [0, 1]
-		    Position		    [935, 400, 1085, 440]
+		    Position		    [790, 485, 940, 525]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -77595,9 +78064,9 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_data_read"
-		    SID			    "914:6085"
+		    SID			    "914:6196"
 		    Ports		    [0, 1]
-		    Position		    [260, 260, 395, 320]
+		    Position		    [555, 335, 690, 395]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
@@ -77616,33 +78085,10 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
-		    Name		    "motohawk_data_write"
-		    SID			    "914:6086"
-		    Ports		    [1]
-		    Position		    [1600, 385, 1735, 445]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_write"
-		    SourceType		    "MotoHawk Data Write"
-		    source		    "Lookup By Name"
-		    structure		    "Scalar"
-		    operation		    "Write entire data structure at once"
-		    sz_vec		    "9"
-		    sz_row		    "2"
-		    sz_col		    "9"
-		    typ			    "double"
-		    nam			    "'FuelLvl_NVM'"
-		    checkNull		    on
-		    write_read_only	    off
-		    struct_inst_name	    "''"
-		    struct_name		    "'MyStruct'"
-		    }
-		    Block {
-		    BlockType		    Reference
 		    Name		    "motohawk_delta_time"
 		    SID			    "914:6107"
 		    Ports		    [0, 1]
-		    Position		    [910, 496, 955, 524]
+		    Position		    [520, 681, 565, 709]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Extra Development Blocks/motohawk_delta_time"
@@ -77656,7 +78102,7 @@ Model {
 		    Name		    "motohawk_probe"
 		    SID			    "914:6095"
 		    Ports		    [1]
-		    Position		    [245, 327, 395, 353]
+		    Position		    [535, 412, 685, 438]
 		    BlockMirror		    on
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
@@ -77688,7 +78134,7 @@ Model {
 		    Name		    "motohawk_probe1"
 		    SID			    "914:6111"
 		    Ports		    [1]
-		    Position		    [1600, 262, 1750, 288]
+		    Position		    [1340, 317, 1490, 343]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -77719,7 +78165,7 @@ Model {
 		    Name		    "motohawk_table_2d"
 		    SID			    "914:6109"
 		    Ports		    [2, 1]
-		    Position		    [590, 662, 760, 738]
+		    Position		    [325, 717, 495, 793]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_table_2d"
@@ -77787,7 +78233,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "Fuel Lvl Final"
 		    SID			    "914:6071"
-		    Position		    [1600, 343, 1630, 357]
+		    Position		    [1340, 363, 1370, 377]
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
@@ -77803,168 +78249,25 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    Name		    "<TimeSinceKeyOn>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector1"
-		    SrcPort		    1
-		    Points		    [100, 0]
-		    Branch {
-		    DstBlock		    "Relational\nOperator"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 285]
-		    DstBlock		    "motohawk_table_2d"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration10"
-		    SrcPort		    1
-		    DstBlock		    "Relational\nOperator"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Relational\nOperator"
-		    SrcPort		    1
-		    Points		    [25, 0]
-		    Branch {
-		    DstBlock		    "Rising Edge"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 135]
-		    DstBlock		    "Switch1"
-		    DstPort		    2
-		    }
-		    }
-		    Line {
-		    Name		    "<Fuel_Lvl>"
-		    Labels		    [0, 0; 0, 0]
-		    SrcBlock		    "Bus\nSelector"
-		    SrcPort		    1
-		    Points		    [110, 0]
-		    Branch {
-		    Points		    [110, 0]
-		    Branch {
-		    DstBlock		    "Sum1"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -50]
-		    DstBlock		    "Switch"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    Points		    [0, 290]
-		    DstBlock		    "Switch1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_data_read"
-		    SrcPort		    1
-		    Points		    [80, 0]
-		    Branch {
-		    DstBlock		    "Sum1"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 50]
-		    Branch {
-		    DstBlock		    "motohawk_probe"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 265]
-		    DstBlock		    "Switch1"
-		    DstPort		    3
-		    }
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Sum1"
-		    SrcPort		    1
-		    DstBlock		    "Abs"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Abs"
-		    SrcPort		    1
-		    DstBlock		    "Relational\nOperator1"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration1"
-		    SrcPort		    1
-		    DstBlock		    "Relational\nOperator1"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Relational\nOperator1"
-		    SrcPort		    1
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Rising Edge"
-		    SrcPort		    1
-		    Points		    [35, 0; 0, -125]
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Logical\nOperator"
-		    SrcPort		    1
-		    Points		    [15, 0]
-		    Branch {
-		    DstBlock		    "Switch"
-		    DstPort		    2
-		    }
-		    Branch {
-		    Points		    [0, 210]
-		    DstBlock		    "Switch2"
-		    DstPort		    2
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "Switch1"
-		    SrcPort		    1
-		    Points		    [45, 0; 0, -180]
-		    DstBlock		    "Switch"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    DstBlock		    "First Order Low Pass"
-		    DstPort		    1
-		    }
-		    Line {
 		    SrcBlock		    "First Order Low Pass"
 		    SrcPort		    1
-		    Points		    [60, 0]
+		    Points		    [70, 0]
 		    Branch {
 		    DstBlock		    "Fuel Lvl Final"
 		    DstPort		    1
 		    }
 		    Branch {
-		    Points		    [0, 65]
-		    DstBlock		    "motohawk_data_write"
-		    DstPort		    1
-		    }
+		    Points		    [0, -40]
 		    Branch {
-		    Points		    [0, -75]
 		    DstBlock		    "motohawk_probe1"
 		    DstPort		    1
 		    }
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration2"
-		    SrcPort		    1
-		    DstBlock		    "Switch2"
+		    Branch {
+		    Points		    [0, -55]
+		    DstBlock		    "FuelLevelWrite"
 		    DstPort		    1
+		    }
+		    }
 		    }
 		    Line {
 		    SrcBlock		    "motohawk_delta_time"
@@ -77989,48 +78292,146 @@ Model {
 		    Line {
 		    SrcBlock		    "motohawk_table_2d"
 		    SrcPort		    1
-		    Points		    [215, 0; 0, -130]
 		    DstBlock		    "MinMax"
 		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Product"
-		    SrcPort		    1
-		    DstBlock		    "Switch2"
-		    DstPort		    3
 		    }
 		    Line {
 		    Name		    "<VSPD_Final>"
 		    Labels		    [0, 0; 0, 0]
 		    SrcBlock		    "Bus\nSelector1"
 		    SrcPort		    2
-		    Points		    [90, 0; 0, 305]
+		    Points		    [100, 0; 0, 375]
 		    DstBlock		    "motohawk_table_2d"
 		    DstPort		    2
 		    }
 		    Line {
-		    SrcBlock		    "Switch3"
+		    Name		    "<Fuel_Lvl_Raw>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector"
 		    SrcPort		    1
-		    DstBlock		    "First Order Low Pass"
+		    Points		    [80, 0]
+		    Branch {
+		    DstBlock		    "RefuelEvent"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -85]
+		    DstBlock		    "Goto"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    Name		    "<TimeSinceKeyOn>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector1"
+		    SrcPort		    1
+		    Points		    [35, 0]
+		    Branch {
+		    Points		    [0, -65]
+		    DstBlock		    "RefuelEvent"
 		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [110, 0; 0, 380]
+		    DstBlock		    "motohawk_table_2d"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "RefuelEvent"
+		    SrcPort		    2
+		    Points		    [35, 0]
+		    Branch {
+		    DstBlock		    "Switch2"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Goto1"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    DstBlock		    "Switch2"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 60]
+		    DstBlock		    "motohawk_probe"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "From"
+		    SrcPort		    1
+		    DstBlock		    "Switch2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "RefuelEvent"
+		    SrcPort		    1
+		    DstBlock		    "Goto2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "From1"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "From2"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator1"
+		    SrcPort		    1
+		    DstBlock		    "Switch3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    DstBlock		    "Switch3"
+		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "Switch2"
 		    SrcPort		    1
+		    DstBlock		    "First Order Low Pass"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [135, 0; 0, -110]
 		    DstBlock		    "Switch3"
 		    DstPort		    3
 		    }
 		    Line {
-		    SrcBlock		    "First Time"
+		    SrcBlock		    "Switch3"
 		    SrcPort		    1
-		    DstBlock		    "Switch3"
+		    Points		    [30, 0; 0, -115]
+		    DstBlock		    "First Order Low Pass"
 		    DstPort		    2
 		    }
 		    Line {
-		    SrcBlock		    "Constant"
+		    SrcBlock		    "From3"
 		    SrcPort		    1
-		    DstBlock		    "Switch3"
-		    DstPort		    1
+		    Points		    [40, 0]
+		    DstBlock		    "FuelLevelWrite"
+		    DstPort		    enable
 		    }
 		    Annotation {
 		    Name		    "Fuel Level Processed\n- Detect Refuel Event and immediatly go to new refuled value\n- If not a refuel"
@@ -91601,16 +92002,6 @@ Model {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    Logic
-		    Name		    "Logical\nOperator"
-		    SID			    "919:1411"
-		    Ports		    [1, 1]
-		    Position		    [1350, 124, 1380, 156]
-		    Operator		    "NOT"
-		    AllPortsSameDT	    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
 		    BlockType		    Reference
 		    Name		    "Read CAN Message"
 		    SID			    "919:1340"
@@ -91853,37 +92244,6 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
 		    SourceType		    "MotoHawk Fault Definition"
 		    nam			    "'GPS_DateTime_Timeout'"
-		    mode		    "Enabled"
-		    id			    "[]"
-		    x			    "1"
-		    y			    "2"
-		    input_suspected	    on
-		    indeterminate	    off
-		    increment_xy	    on
-		    downsample_count	    "1"
-		    ovr_cals		    on
-		    ovr_actions		    on
-		    show_actions	    on
-		    action1_name	    "''"
-		    action1_cond	    "(None)"
-		    action2_name	    "''"
-		    action2_cond	    "(None)"
-		    action3_name	    "''"
-		    action3_cond	    "(None)"
-		    action4_name	    "''"
-		    action4_cond	    "(None)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_fault_def3"
-		    SID			    "919:1412"
-		    Ports		    [1]
-		    Position		    [1410, 119, 1580, 161]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
-		    SourceType		    "MotoHawk Fault Definition"
-		    nam			    "'GPS_NotReady'"
 		    mode		    "Enabled"
 		    id			    "[]"
 		    x			    "1"
@@ -93029,16 +93389,8 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "motohawk_override_abs"
 		    SrcPort		    1
-		    Points		    [80, 0]
-		    Branch {
 		    DstBlock		    "Bus\nCreator"
 		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -55]
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    Name		    "GPS_YearUTC"
@@ -93087,12 +93439,6 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "Bus\nCreator"
 		    DstPort		    7
-		    }
-		    Line {
-		    SrcBlock		    "Logical\nOperator"
-		    SrcPort		    1
-		    DstBlock		    "motohawk_fault_def3"
-		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "Read CAN Message1"
@@ -93702,26 +94048,6 @@ Model {
 		    samp_time		    "-1"
 		    }
 		    Block {
-		    BlockType		    Logic
-		    Name		    "Logical\nOperator"
-		    SID			    "919:1234"
-		    Ports		    [1, 1]
-		    Position		    [1310, 494, 1340, 526]
-		    Operator		    "NOT"
-		    AllPortsSameDT	    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
-		    BlockType		    Logic
-		    Name		    "Logical\nOperator1"
-		    SID			    "919:1235"
-		    Ports		    [1, 1]
-		    Position		    [1325, 1169, 1355, 1201]
-		    Operator		    "NOT"
-		    AllPortsSameDT	    off
-		    OutDataTypeStr	    "boolean"
-		    }
-		    Block {
 		    BlockType		    Math
 		    Name		    "Math\nFunction"
 		    SID			    "919:1236"
@@ -93930,7 +94256,7 @@ Model {
 		    storage		    "Calibration"
 		    show_more		    on
 		    name_source		    "Use Parameter"
-		    data_type		    "uint8"
+		    data_type		    "boolean"
 		    read_level		    "1"
 		    write_level		    "1"
 		    ovr_cals		    on
@@ -93996,68 +94322,6 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
 		    SourceType		    "MotoHawk Fault Definition"
 		    nam			    "'Lambda_1_Timeout'"
-		    mode		    "Enabled"
-		    id			    "[]"
-		    x			    "1"
-		    y			    "2"
-		    input_suspected	    on
-		    indeterminate	    off
-		    increment_xy	    on
-		    downsample_count	    "1"
-		    ovr_cals		    on
-		    ovr_actions		    on
-		    show_actions	    on
-		    action1_name	    "''"
-		    action1_cond	    "(None)"
-		    action2_name	    "''"
-		    action2_cond	    "(None)"
-		    action3_name	    "''"
-		    action3_cond	    "(None)"
-		    action4_name	    "''"
-		    action4_cond	    "(None)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_fault_def3"
-		    SID			    "919:1252"
-		    Ports		    [1]
-		    Position		    [1370, 489, 1540, 531]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
-		    SourceType		    "MotoHawk Fault Definition"
-		    nam			    "'Lambda_1_NotReady'"
-		    mode		    "Enabled"
-		    id			    "[]"
-		    x			    "1"
-		    y			    "2"
-		    input_suspected	    on
-		    indeterminate	    off
-		    increment_xy	    on
-		    downsample_count	    "1"
-		    ovr_cals		    on
-		    ovr_actions		    on
-		    show_actions	    on
-		    action1_name	    "''"
-		    action1_cond	    "(None)"
-		    action2_name	    "''"
-		    action2_cond	    "(None)"
-		    action3_name	    "''"
-		    action3_cond	    "(None)"
-		    action4_name	    "''"
-		    action4_cond	    "(None)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_fault_def4"
-		    SID			    "919:1253"
-		    Ports		    [1]
-		    Position		    [1385, 1164, 1555, 1206]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Fault Management Blocks/motohawk_fault_def"
-		    SourceType		    "MotoHawk Fault Definition"
-		    nam			    "'Lambda_2_NotReady'"
 		    mode		    "Enabled"
 		    id			    "[]"
 		    x			    "1"
@@ -95693,16 +95957,8 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "motohawk_override_abs6"
 		    SrcPort		    1
-		    Points		    [100, 0]
-		    Branch {
 		    DstBlock		    "Bus\nCreator"
 		    DstPort		    7
-		    }
-		    Branch {
-		    Points		    [0, -20]
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    Name		    "SensorStatus"
@@ -95885,16 +96141,8 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "motohawk_override_abs15"
 		    SrcPort		    1
-		    Points		    [95, 0]
-		    Branch {
 		    DstBlock		    "Bus\nCreator1"
 		    DstPort		    7
-		    }
-		    Branch {
-		    Points		    [0, -20]
-		    DstBlock		    "Logical\nOperator1"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    Name		    "SensorStatus"
@@ -95933,18 +96181,6 @@ Model {
 		    SrcBlock		    "Bus\nCreator2"
 		    SrcPort		    1
 		    DstBlock		    "O2_BUS"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Logical\nOperator"
-		    SrcPort		    1
-		    DstBlock		    "motohawk_fault_def3"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Logical\nOperator1"
-		    SrcPort		    1
-		    DstBlock		    "motohawk_fault_def4"
 		    DstPort		    1
 		    }
 		    Line {
@@ -107210,18 +107446,6 @@ Model {
 		    DstPort		    trigger
 		    }
 		    Line {
-		    Points		    [415, 400; 0, 0; 105, 0]
-		    Branch {
-		    DstBlock		    "Logical\nOperator"
-		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, 90]
-		    DstBlock		    "Logical\nOperator1"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
 		    SrcBlock		    "motohawk_data_read1"
 		    SrcPort		    1
 		    Points		    [0, 0; 25, 0]
@@ -107275,6 +107499,20 @@ Model {
 		    Points		    [0, 0]
 		    DstBlock		    "HiSide Request"
 		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Function-Call\nSubsystem"
+		    SrcPort		    1
+		    Points		    [105, 0]
+		    Branch {
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 90]
+		    DstBlock		    "Logical\nOperator1"
+		    DstPort		    1
+		    }
 		    }
 		  }
 		}
@@ -112034,7 +112272,7 @@ Model {
 		  MaskHideContents	  off
 		  System {
 		    Name		    "Dash Message 7"
-		    Location		    [282, 75, 1918, 1019]
+		    Location		    [282, 83, 1918, 1027]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -112161,7 +112399,7 @@ Model {
 		    sz_vec		    "4"
 		    sz_row		    "2"
 		    sz_col		    "3"
-		    typ			    "double"
+		    typ			    "int16"
 		    nam			    "'BaseRevLimit'"
 		    checkNull		    on
 		    struct_inst_name	    "'MyData'"
@@ -112183,7 +112421,7 @@ Model {
 		    sz_vec		    "4"
 		    sz_row		    "2"
 		    sz_col		    "3"
-		    typ			    "double"
+		    typ			    "int16"
 		    nam			    "'TwoStepRevLimit'"
 		    checkNull		    on
 		    struct_inst_name	    "'MyData'"

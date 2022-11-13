@@ -2170,11 +2170,6 @@
                <Default>-10.0</Default>
                <Name>O2CtrlPIDOutLowerLimit</Name>
              </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>1</Default>
-               <Name>O2DisablmentMult</Name>
-             </DataStore>
             <DataStore ref="Volatile">
                <DataType>boolean</DataType>
                <Default>0U</Default>
@@ -4686,8 +4681,8 @@
                <Name>O2DelagFilterConst</Name>
              </DataStore>
             <DataStore ref="Constant">
-               <DataType>uint8</DataType>
-               <Default>1U</Default>
+               <DataType>boolean</DataType>
+               <Default>1</Default>
                <Name>Bank2_Enable</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -5264,6 +5259,26 @@
                <DataType>uint16</DataType>
                <Default>0U</Default>
                <Name>TimeSinceRun09Idx</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Bank2_DataValidState_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Bank2_DataValidState_Ovr_new</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>Bank1_DataValidState_Ovr_ovr</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0.0</Default>
+               <Name>Bank1_DataValidState_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
@@ -6203,16 +6218,6 @@
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
                <Default>0</Default>
-               <Name>Bank2_DataValidState_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0.0</Default>
-               <Name>Bank2_DataValidState_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
                <Name>Bank2_SensorStatus_Ovr_ovr</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -6269,16 +6274,6 @@
                <DataType>boolean</DataType>
                <Default>0.0</Default>
                <Name>Bank1_UsingFreeAreCalState_Ovr_new</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0</Default>
-               <Name>Bank1_DataValidState_Ovr_ovr</Name>
-             </DataStore>
-            <DataStore ref="Constant">
-               <DataType>boolean</DataType>
-               <Default>0.0</Default>
-               <Name>Bank1_DataValidState_Ovr_new</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>boolean</DataType>
@@ -6867,12 +6862,12 @@
              </DataStore>
             <DataStore ref="Constant">
                <DataType>S_ConstFault</DataType>
-               <Default>ACChargeHigh_Fault ACChargeLow_Fault ACPresRangeHigh ACPresRangeLow APP1RangeHigh APP1RangeLow APP1_AdaptAdaptHiMax APP1_AdaptAdaptHiMin APP1_AdaptAdaptLoMax APP1_AdaptAdaptLoMin APP1_AdaptRangeHigh APP1_AdaptRangeLow APP2RangeHigh APP2RangeLow APP2_AdaptAdaptHiMax APP2_AdaptAdaptHiMin APP2_AdaptAdaptLoMax APP2_AdaptAdaptLoMin APP2_AdaptRangeHigh APP2_AdaptRangeLow APP_Sensors_Conflict Bank1_EquivRatioRangeHigh Bank1_EquivRatioRangeLow Bank2_EquivRatioRangeHigh Bank2_EquivRatioRangeLow CATRangeHigh CATRangeLow CamEdgesFault CamSyncFault CrankEdgesFault CrankSyncFault ECTOverTempFault ECTRangeHigh ECTRangeLow ECTSevereOverTempFault EST1_Open EST1_Short EST2_Open EST2_Short EST3_Open EST3_Short EST4_Open EST4_Short EST5_Open EST5_Short EST6_Open EST6_Short EST7_Open EST7_Short EST8_Open EST8_Short ETCSpringTest ETC_Open_Fault ETC_Sticking EVAPRangeHigh EVAPRangeLow FuelAdaptRangeHi FuelAdaptRangeLow FuelPresHigh_Fault FuelPresLow_Fault FuelPresRangeHigh FuelPresRangeLow FuelSensRangeHigh FuelSensRangeLow Fuel_LvlRangeHigh Fuel_LvlRangeLow GPS_DateTime_Timeout GPS_LatLong_Timeout GPS_NotReady GPS_SpeedDir_Timeout HardOverBoost_Fault HardOverspeed IATRangeHigh IATRangeLow Inj1Open Inj2Open Inj3Open Inj4Open Inj5Open Inj6Open Inj7Open Inj8Open Lambda_1_NotReady Lambda_1_Timeout Lambda_2_NotReady Lambda_2_Timeout LeanProtect_Fault MAFRangeHigh MAFRangeLow MAPRangeHigh MAPRangeLow MAPTimeRangeHigh MAPTimeRangeLow MAP_IR_HI MAP_IR_LO MAP_STICKING MediumOverspeed NoOil_Fault O2FailedLean O2FailedRich O2NotActive OilPresRangeHigh OilPresRangeLow SensVoltRangeHigh SensVoltRangeLow SoftOverBoost_Fault SoftOverspeed SysVoltRangeHigh SysVoltRangeLow TPS1AdaptHiMax TPS1AdaptHiMin TPS1AdaptLoMax TPS1AdaptLoMin TPS1RangeHigh TPS1RangeLow TPS2AdaptHiMax TPS2AdaptHiMin TPS2AdaptLoMax TPS2AdaptLoMin TPS2RangeHigh TPS2RangeLow TPS_Sensors_Conflict VSPDRangeHigh VSPDRangeLow Wastegate_Fault </Default>
+               <Default>ACChargeHigh_Fault ACChargeLow_Fault ACPresRangeHigh ACPresRangeLow APP1RangeHigh APP1RangeLow APP1_AdaptAdaptHiMax APP1_AdaptAdaptHiMin APP1_AdaptAdaptLoMax APP1_AdaptAdaptLoMin APP1_AdaptRangeHigh APP1_AdaptRangeLow APP2RangeHigh APP2RangeLow APP2_AdaptAdaptHiMax APP2_AdaptAdaptHiMin APP2_AdaptAdaptLoMax APP2_AdaptAdaptLoMin APP2_AdaptRangeHigh APP2_AdaptRangeLow APP_Sensors_Conflict Bank1_EquivRatioRangeHigh Bank1_EquivRatioRangeLow Bank2_EquivRatioRangeHigh Bank2_EquivRatioRangeLow CATRangeHigh CATRangeLow CamEdgesFault CamSyncFault CrankEdgesFault CrankSyncFault ECTOverTempFault ECTRangeHigh ECTRangeLow ECTSevereOverTempFault EST1_Open EST1_Short EST2_Open EST2_Short EST3_Open EST3_Short EST4_Open EST4_Short EST5_Open EST5_Short EST6_Open EST6_Short EST7_Open EST7_Short EST8_Open EST8_Short ETCSpringTest ETC_Open_Fault ETC_Sticking EVAPRangeHigh EVAPRangeLow FuelAdaptRangeHi FuelAdaptRangeLow FuelPresHigh_Fault FuelPresLow_Fault FuelPresRangeHigh FuelPresRangeLow FuelSensRangeHigh FuelSensRangeLow Fuel_LvlRangeHigh Fuel_LvlRangeLow GPS_DateTime_Timeout GPS_LatLong_Timeout GPS_SpeedDir_Timeout HardOverBoost_Fault HardOverspeed IATRangeHigh IATRangeLow Inj1Open Inj2Open Inj3Open Inj4Open Inj5Open Inj6Open Inj7Open Inj8Open Lambda_1_Timeout Lambda_2_Timeout LeanProtect_Fault MAFRangeHigh MAFRangeLow MAPRangeHigh MAPRangeLow MAPTimeRangeHigh MAPTimeRangeLow MAP_IR_HI MAP_IR_LO MAP_STICKING MediumOverspeed NoOil_Fault O2FailedLean O2FailedRich O2NotActive OilPresRangeHigh OilPresRangeLow SensVoltRangeHigh SensVoltRangeLow SoftOverBoost_Fault SoftOverspeed SysVoltRangeHigh SysVoltRangeLow TPS1AdaptHiMax TPS1AdaptHiMin TPS1AdaptLoMax TPS1AdaptLoMin TPS1RangeHigh TPS1RangeLow TPS2AdaptHiMax TPS2AdaptHiMin TPS2AdaptLoMax TPS2AdaptLoMin TPS2RangeHigh TPS2RangeLow TPS_Sensors_Conflict VSPDRangeHigh VSPDRangeLow Wastegate_Fault </Default>
                <Name>FaultManager</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>S_Fault</DataType>
-               <Default>ACChargeHigh_FaultVol ACChargeLow_FaultVol ACPresRangeHighVol ACPresRangeLowVol APP1RangeHighVol APP1RangeLowVol APP1_AdaptAdaptHiMaxVol APP1_AdaptAdaptHiMinVol APP1_AdaptAdaptLoMaxVol APP1_AdaptAdaptLoMinVol APP1_AdaptRangeHighVol APP1_AdaptRangeLowVol APP2RangeHighVol APP2RangeLowVol APP2_AdaptAdaptHiMaxVol APP2_AdaptAdaptHiMinVol APP2_AdaptAdaptLoMaxVol APP2_AdaptAdaptLoMinVol APP2_AdaptRangeHighVol APP2_AdaptRangeLowVol APP_Sensors_ConflictVol Bank1_EquivRatioRangeHighVol Bank1_EquivRatioRangeLowVol Bank2_EquivRatioRangeHighVol Bank2_EquivRatioRangeLowVol CATRangeHighVol CATRangeLowVol CamEdgesFaultVol CamSyncFaultVol CrankEdgesFaultVol CrankSyncFaultVol ECTOverTempFaultVol ECTRangeHighVol ECTRangeLowVol ECTSevereOverTempFaultVol EST1_OpenVol EST1_ShortVol EST2_OpenVol EST2_ShortVol EST3_OpenVol EST3_ShortVol EST4_OpenVol EST4_ShortVol EST5_OpenVol EST5_ShortVol EST6_OpenVol EST6_ShortVol EST7_OpenVol EST7_ShortVol EST8_OpenVol EST8_ShortVol ETCSpringTestVol ETC_Open_FaultVol ETC_StickingVol EVAPRangeHighVol EVAPRangeLowVol FuelAdaptRangeHiVol FuelAdaptRangeLowVol FuelPresHigh_FaultVol FuelPresLow_FaultVol FuelPresRangeHighVol FuelPresRangeLowVol FuelSensRangeHighVol FuelSensRangeLowVol Fuel_LvlRangeHighVol Fuel_LvlRangeLowVol GPS_DateTime_TimeoutVol GPS_LatLong_TimeoutVol GPS_NotReadyVol GPS_SpeedDir_TimeoutVol HardOverBoost_FaultVol HardOverspeedVol IATRangeHighVol IATRangeLowVol Inj1OpenVol Inj2OpenVol Inj3OpenVol Inj4OpenVol Inj5OpenVol Inj6OpenVol Inj7OpenVol Inj8OpenVol Lambda_1_NotReadyVol Lambda_1_TimeoutVol Lambda_2_NotReadyVol Lambda_2_TimeoutVol LeanProtect_FaultVol MAFRangeHighVol MAFRangeLowVol MAPRangeHighVol MAPRangeLowVol MAPTimeRangeHighVol MAPTimeRangeLowVol MAP_IR_HIVol MAP_IR_LOVol MAP_STICKINGVol MediumOverspeedVol NoOil_FaultVol O2FailedLeanVol O2FailedRichVol O2NotActiveVol OilPresRangeHighVol OilPresRangeLowVol SensVoltRangeHighVol SensVoltRangeLowVol SoftOverBoost_FaultVol SoftOverspeedVol SysVoltRangeHighVol SysVoltRangeLowVol TPS1AdaptHiMaxVol TPS1AdaptHiMinVol TPS1AdaptLoMaxVol TPS1AdaptLoMinVol TPS1RangeHighVol TPS1RangeLowVol TPS2AdaptHiMaxVol TPS2AdaptHiMinVol TPS2AdaptLoMaxVol TPS2AdaptLoMinVol TPS2RangeHighVol TPS2RangeLowVol TPS_Sensors_ConflictVol VSPDRangeHighVol VSPDRangeLowVol Wastegate_FaultVol </Default>
+               <Default>ACChargeHigh_FaultVol ACChargeLow_FaultVol ACPresRangeHighVol ACPresRangeLowVol APP1RangeHighVol APP1RangeLowVol APP1_AdaptAdaptHiMaxVol APP1_AdaptAdaptHiMinVol APP1_AdaptAdaptLoMaxVol APP1_AdaptAdaptLoMinVol APP1_AdaptRangeHighVol APP1_AdaptRangeLowVol APP2RangeHighVol APP2RangeLowVol APP2_AdaptAdaptHiMaxVol APP2_AdaptAdaptHiMinVol APP2_AdaptAdaptLoMaxVol APP2_AdaptAdaptLoMinVol APP2_AdaptRangeHighVol APP2_AdaptRangeLowVol APP_Sensors_ConflictVol Bank1_EquivRatioRangeHighVol Bank1_EquivRatioRangeLowVol Bank2_EquivRatioRangeHighVol Bank2_EquivRatioRangeLowVol CATRangeHighVol CATRangeLowVol CamEdgesFaultVol CamSyncFaultVol CrankEdgesFaultVol CrankSyncFaultVol ECTOverTempFaultVol ECTRangeHighVol ECTRangeLowVol ECTSevereOverTempFaultVol EST1_OpenVol EST1_ShortVol EST2_OpenVol EST2_ShortVol EST3_OpenVol EST3_ShortVol EST4_OpenVol EST4_ShortVol EST5_OpenVol EST5_ShortVol EST6_OpenVol EST6_ShortVol EST7_OpenVol EST7_ShortVol EST8_OpenVol EST8_ShortVol ETCSpringTestVol ETC_Open_FaultVol ETC_StickingVol EVAPRangeHighVol EVAPRangeLowVol FuelAdaptRangeHiVol FuelAdaptRangeLowVol FuelPresHigh_FaultVol FuelPresLow_FaultVol FuelPresRangeHighVol FuelPresRangeLowVol FuelSensRangeHighVol FuelSensRangeLowVol Fuel_LvlRangeHighVol Fuel_LvlRangeLowVol GPS_DateTime_TimeoutVol GPS_LatLong_TimeoutVol GPS_SpeedDir_TimeoutVol HardOverBoost_FaultVol HardOverspeedVol IATRangeHighVol IATRangeLowVol Inj1OpenVol Inj2OpenVol Inj3OpenVol Inj4OpenVol Inj5OpenVol Inj6OpenVol Inj7OpenVol Inj8OpenVol Lambda_1_TimeoutVol Lambda_2_TimeoutVol LeanProtect_FaultVol MAFRangeHighVol MAFRangeLowVol MAPRangeHighVol MAPRangeLowVol MAPTimeRangeHighVol MAPTimeRangeLowVol MAP_IR_HIVol MAP_IR_LOVol MAP_STICKINGVol MediumOverspeedVol NoOil_FaultVol O2FailedLeanVol O2FailedRichVol O2NotActiveVol OilPresRangeHighVol OilPresRangeLowVol SensVoltRangeHighVol SensVoltRangeLowVol SoftOverBoost_FaultVol SoftOverspeedVol SysVoltRangeHighVol SysVoltRangeLowVol TPS1AdaptHiMaxVol TPS1AdaptHiMinVol TPS1AdaptLoMaxVol TPS1AdaptLoMinVol TPS1RangeHighVol TPS1RangeLowVol TPS2AdaptHiMaxVol TPS2AdaptHiMinVol TPS2AdaptLoMaxVol TPS2AdaptLoMinVol TPS2RangeHighVol TPS2RangeLowVol TPS_Sensors_ConflictVol VSPDRangeHighVol VSPDRangeLowVol Wastegate_FaultVol </Default>
                <Name>VolFaults</Name>
              </DataStore>
             <DataStore ref="Volatile">
@@ -6882,7 +6877,7 @@
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>uint8</DataType>
-               <Default>125 125 125 125 125 125 125 125 125 125 125 125 125 </Default>
+               <Default>122 122 122 122 122 122 122 122 122 122 122 122 122 </Default>
                <Name>FaultActionReason</Name>
              </DataStore>
             <DataStore ref="Constant">
@@ -9797,42 +9792,6 @@
        		        <Default>2</Default>
        		        <Name>ylim</Name>
        			</Field>
-           		<Name>GPS_NotReady</Name>
-     		</StructInstance>
-			<StructInstance>
-           		<Container>VolFaults</Container>
-           		<Name>GPS_NotReadyVol</Name>
-     		</StructInstance>
-			<StructInstance>
-           		<Container>FaultManager</Container>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action1_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action2_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action3_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action4_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>1</Default>
-       		        <Name>mode</Name>
-       			</Field>
-				<Field>
-       		        <Default>1</Default>
-       		        <Name>xlim</Name>
-       			</Field>
-				<Field>
-       		        <Default>2</Default>
-       		        <Name>ylim</Name>
-       			</Field>
            		<Name>GPS_SpeedDir_Timeout</Name>
      		</StructInstance>
 			<StructInstance>
@@ -9910,78 +9869,6 @@
 			<StructInstance>
            		<Container>VolFaults</Container>
            		<Name>Lambda_1_TimeoutVol</Name>
-     		</StructInstance>
-			<StructInstance>
-           		<Container>FaultManager</Container>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action1_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action2_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action3_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action4_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>1</Default>
-       		        <Name>mode</Name>
-       			</Field>
-				<Field>
-       		        <Default>1</Default>
-       		        <Name>xlim</Name>
-       			</Field>
-				<Field>
-       		        <Default>2</Default>
-       		        <Name>ylim</Name>
-       			</Field>
-           		<Name>Lambda_1_NotReady</Name>
-     		</StructInstance>
-			<StructInstance>
-           		<Container>VolFaults</Container>
-           		<Name>Lambda_1_NotReadyVol</Name>
-     		</StructInstance>
-			<StructInstance>
-           		<Container>FaultManager</Container>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action1_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action2_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action3_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>0</Default>
-       		        <Name>action4_condition</Name>
-       			</Field>
-				<Field>
-       		        <Default>1</Default>
-       		        <Name>mode</Name>
-       			</Field>
-				<Field>
-       		        <Default>1</Default>
-       		        <Name>xlim</Name>
-       			</Field>
-				<Field>
-       		        <Default>2</Default>
-       		        <Name>ylim</Name>
-       			</Field>
-           		<Name>Lambda_2_NotReady</Name>
-     		</StructInstance>
-			<StructInstance>
-           		<Container>VolFaults</Container>
-           		<Name>Lambda_2_NotReadyVol</Name>
      		</StructInstance>
 			<StructInstance>
            		<Container>FaultManager</Container>
@@ -11827,7 +11714,7 @@
         			</Field>
 				    <Field>
         		        <DataType>uint8</DataType>
-        		        <Default>125</Default>
+        		        <Default>122</Default>
         		        <Name>num_faults</Name>
         		        <Order>0</Order>
         			</Field>
@@ -11916,34 +11803,31 @@
                     <Item name="ACChargeHigh_Fault" value="0" symbol="FAULTS_ACCHARGEHIGH_FAULT"/>
                     <Item name="ACChargeLow_Fault" value="1" symbol="FAULTS_ACCHARGELOW_FAULT"/>
                     <Item name="APP1_AdaptRangeHigh" value="10" symbol="FAULTS_APP1_ADAPTRANGEHIGH"/>
-                    <Item name="O2NotActive" value="100" symbol="FAULTS_O2NOTACTIVE"/>
-                    <Item name="OilPresRangeHigh" value="101" symbol="FAULTS_OILPRESRANGEHIGH"/>
-                    <Item name="OilPresRangeLow" value="102" symbol="FAULTS_OILPRESRANGELOW"/>
-                    <Item name="SensVoltRangeHigh" value="103" symbol="FAULTS_SENSVOLTRANGEHIGH"/>
-                    <Item name="SensVoltRangeLow" value="104" symbol="FAULTS_SENSVOLTRANGELOW"/>
-                    <Item name="SoftOverBoost_Fault" value="105" symbol="FAULTS_SOFTOVERBOOST_FAULT"/>
-                    <Item name="SoftOverspeed" value="106" symbol="FAULTS_SOFTOVERSPEED"/>
-                    <Item name="SysVoltRangeHigh" value="107" symbol="FAULTS_SYSVOLTRANGEHIGH"/>
-                    <Item name="SysVoltRangeLow" value="108" symbol="FAULTS_SYSVOLTRANGELOW"/>
-                    <Item name="TPS1AdaptHiMax" value="109" symbol="FAULTS_TPS1ADAPTHIMAX"/>
+                    <Item name="SensVoltRangeHigh" value="100" symbol="FAULTS_SENSVOLTRANGEHIGH"/>
+                    <Item name="SensVoltRangeLow" value="101" symbol="FAULTS_SENSVOLTRANGELOW"/>
+                    <Item name="SoftOverBoost_Fault" value="102" symbol="FAULTS_SOFTOVERBOOST_FAULT"/>
+                    <Item name="SoftOverspeed" value="103" symbol="FAULTS_SOFTOVERSPEED"/>
+                    <Item name="SysVoltRangeHigh" value="104" symbol="FAULTS_SYSVOLTRANGEHIGH"/>
+                    <Item name="SysVoltRangeLow" value="105" symbol="FAULTS_SYSVOLTRANGELOW"/>
+                    <Item name="TPS1AdaptHiMax" value="106" symbol="FAULTS_TPS1ADAPTHIMAX"/>
+                    <Item name="TPS1AdaptHiMin" value="107" symbol="FAULTS_TPS1ADAPTHIMIN"/>
+                    <Item name="TPS1AdaptLoMax" value="108" symbol="FAULTS_TPS1ADAPTLOMAX"/>
+                    <Item name="TPS1AdaptLoMin" value="109" symbol="FAULTS_TPS1ADAPTLOMIN"/>
                     <Item name="APP1_AdaptRangeLow" value="11" symbol="FAULTS_APP1_ADAPTRANGELOW"/>
-                    <Item name="TPS1AdaptHiMin" value="110" symbol="FAULTS_TPS1ADAPTHIMIN"/>
-                    <Item name="TPS1AdaptLoMax" value="111" symbol="FAULTS_TPS1ADAPTLOMAX"/>
-                    <Item name="TPS1AdaptLoMin" value="112" symbol="FAULTS_TPS1ADAPTLOMIN"/>
-                    <Item name="TPS1RangeHigh" value="113" symbol="FAULTS_TPS1RANGEHIGH"/>
-                    <Item name="TPS1RangeLow" value="114" symbol="FAULTS_TPS1RANGELOW"/>
-                    <Item name="TPS2AdaptHiMax" value="115" symbol="FAULTS_TPS2ADAPTHIMAX"/>
-                    <Item name="TPS2AdaptHiMin" value="116" symbol="FAULTS_TPS2ADAPTHIMIN"/>
-                    <Item name="TPS2AdaptLoMax" value="117" symbol="FAULTS_TPS2ADAPTLOMAX"/>
-                    <Item name="TPS2AdaptLoMin" value="118" symbol="FAULTS_TPS2ADAPTLOMIN"/>
-                    <Item name="TPS2RangeHigh" value="119" symbol="FAULTS_TPS2RANGEHIGH"/>
+                    <Item name="TPS1RangeHigh" value="110" symbol="FAULTS_TPS1RANGEHIGH"/>
+                    <Item name="TPS1RangeLow" value="111" symbol="FAULTS_TPS1RANGELOW"/>
+                    <Item name="TPS2AdaptHiMax" value="112" symbol="FAULTS_TPS2ADAPTHIMAX"/>
+                    <Item name="TPS2AdaptHiMin" value="113" symbol="FAULTS_TPS2ADAPTHIMIN"/>
+                    <Item name="TPS2AdaptLoMax" value="114" symbol="FAULTS_TPS2ADAPTLOMAX"/>
+                    <Item name="TPS2AdaptLoMin" value="115" symbol="FAULTS_TPS2ADAPTLOMIN"/>
+                    <Item name="TPS2RangeHigh" value="116" symbol="FAULTS_TPS2RANGEHIGH"/>
+                    <Item name="TPS2RangeLow" value="117" symbol="FAULTS_TPS2RANGELOW"/>
+                    <Item name="TPS_Sensors_Conflict" value="118" symbol="FAULTS_TPS_SENSORS_CONFLICT"/>
+                    <Item name="VSPDRangeHigh" value="119" symbol="FAULTS_VSPDRANGEHIGH"/>
                     <Item name="APP2RangeHigh" value="12" symbol="FAULTS_APP2RANGEHIGH"/>
-                    <Item name="TPS2RangeLow" value="120" symbol="FAULTS_TPS2RANGELOW"/>
-                    <Item name="TPS_Sensors_Conflict" value="121" symbol="FAULTS_TPS_SENSORS_CONFLICT"/>
-                    <Item name="VSPDRangeHigh" value="122" symbol="FAULTS_VSPDRANGEHIGH"/>
-                    <Item name="VSPDRangeLow" value="123" symbol="FAULTS_VSPDRANGELOW"/>
-                    <Item name="Wastegate_Fault" value="124" symbol="FAULTS_WASTEGATE_FAULT"/>
-                    <Item name="(None)" value="125" symbol="FAULTS_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="VSPDRangeLow" value="120" symbol="FAULTS_VSPDRANGELOW"/>
+                    <Item name="Wastegate_Fault" value="121" symbol="FAULTS_WASTEGATE_FAULT"/>
+                    <Item name="(None)" value="122" symbol="FAULTS_OPENPARENNONECLOSEPAREN"/>
                     <Item name="APP2RangeLow" value="13" symbol="FAULTS_APP2RANGELOW"/>
                     <Item name="APP2_AdaptAdaptHiMax" value="14" symbol="FAULTS_APP2_ADAPTADAPTHIMAX"/>
                     <Item name="APP2_AdaptAdaptHiMin" value="15" symbol="FAULTS_APP2_ADAPTADAPTHIMIN"/>
@@ -12004,41 +11888,41 @@
                     <Item name="Fuel_LvlRangeLow" value="65" symbol="FAULTS_FUEL_LVLRANGELOW"/>
                     <Item name="GPS_DateTime_Timeout" value="66" symbol="FAULTS_GPS_DATETIME_TIMEOUT"/>
                     <Item name="GPS_LatLong_Timeout" value="67" symbol="FAULTS_GPS_LATLONG_TIMEOUT"/>
-                    <Item name="GPS_NotReady" value="68" symbol="FAULTS_GPS_NOTREADY"/>
-                    <Item name="GPS_SpeedDir_Timeout" value="69" symbol="FAULTS_GPS_SPEEDDIR_TIMEOUT"/>
+                    <Item name="GPS_SpeedDir_Timeout" value="68" symbol="FAULTS_GPS_SPEEDDIR_TIMEOUT"/>
+                    <Item name="HardOverBoost_Fault" value="69" symbol="FAULTS_HARDOVERBOOST_FAULT"/>
                     <Item name="APP1_AdaptAdaptHiMin" value="7" symbol="FAULTS_APP1_ADAPTADAPTHIMIN"/>
-                    <Item name="HardOverBoost_Fault" value="70" symbol="FAULTS_HARDOVERBOOST_FAULT"/>
-                    <Item name="HardOverspeed" value="71" symbol="FAULTS_HARDOVERSPEED"/>
-                    <Item name="IATRangeHigh" value="72" symbol="FAULTS_IATRANGEHIGH"/>
-                    <Item name="IATRangeLow" value="73" symbol="FAULTS_IATRANGELOW"/>
-                    <Item name="Inj1Open" value="74" symbol="FAULTS_INJ1OPEN"/>
-                    <Item name="Inj2Open" value="75" symbol="FAULTS_INJ2OPEN"/>
-                    <Item name="Inj3Open" value="76" symbol="FAULTS_INJ3OPEN"/>
-                    <Item name="Inj4Open" value="77" symbol="FAULTS_INJ4OPEN"/>
-                    <Item name="Inj5Open" value="78" symbol="FAULTS_INJ5OPEN"/>
-                    <Item name="Inj6Open" value="79" symbol="FAULTS_INJ6OPEN"/>
+                    <Item name="HardOverspeed" value="70" symbol="FAULTS_HARDOVERSPEED"/>
+                    <Item name="IATRangeHigh" value="71" symbol="FAULTS_IATRANGEHIGH"/>
+                    <Item name="IATRangeLow" value="72" symbol="FAULTS_IATRANGELOW"/>
+                    <Item name="Inj1Open" value="73" symbol="FAULTS_INJ1OPEN"/>
+                    <Item name="Inj2Open" value="74" symbol="FAULTS_INJ2OPEN"/>
+                    <Item name="Inj3Open" value="75" symbol="FAULTS_INJ3OPEN"/>
+                    <Item name="Inj4Open" value="76" symbol="FAULTS_INJ4OPEN"/>
+                    <Item name="Inj5Open" value="77" symbol="FAULTS_INJ5OPEN"/>
+                    <Item name="Inj6Open" value="78" symbol="FAULTS_INJ6OPEN"/>
+                    <Item name="Inj7Open" value="79" symbol="FAULTS_INJ7OPEN"/>
                     <Item name="APP1_AdaptAdaptLoMax" value="8" symbol="FAULTS_APP1_ADAPTADAPTLOMAX"/>
-                    <Item name="Inj7Open" value="80" symbol="FAULTS_INJ7OPEN"/>
-                    <Item name="Inj8Open" value="81" symbol="FAULTS_INJ8OPEN"/>
-                    <Item name="Lambda_1_NotReady" value="82" symbol="FAULTS_LAMBDA_1_NOTREADY"/>
-                    <Item name="Lambda_1_Timeout" value="83" symbol="FAULTS_LAMBDA_1_TIMEOUT"/>
-                    <Item name="Lambda_2_NotReady" value="84" symbol="FAULTS_LAMBDA_2_NOTREADY"/>
-                    <Item name="Lambda_2_Timeout" value="85" symbol="FAULTS_LAMBDA_2_TIMEOUT"/>
-                    <Item name="LeanProtect_Fault" value="86" symbol="FAULTS_LEANPROTECT_FAULT"/>
-                    <Item name="MAFRangeHigh" value="87" symbol="FAULTS_MAFRANGEHIGH"/>
-                    <Item name="MAFRangeLow" value="88" symbol="FAULTS_MAFRANGELOW"/>
-                    <Item name="MAPRangeHigh" value="89" symbol="FAULTS_MAPRANGEHIGH"/>
+                    <Item name="Inj8Open" value="80" symbol="FAULTS_INJ8OPEN"/>
+                    <Item name="Lambda_1_Timeout" value="81" symbol="FAULTS_LAMBDA_1_TIMEOUT"/>
+                    <Item name="Lambda_2_Timeout" value="82" symbol="FAULTS_LAMBDA_2_TIMEOUT"/>
+                    <Item name="LeanProtect_Fault" value="83" symbol="FAULTS_LEANPROTECT_FAULT"/>
+                    <Item name="MAFRangeHigh" value="84" symbol="FAULTS_MAFRANGEHIGH"/>
+                    <Item name="MAFRangeLow" value="85" symbol="FAULTS_MAFRANGELOW"/>
+                    <Item name="MAPRangeHigh" value="86" symbol="FAULTS_MAPRANGEHIGH"/>
+                    <Item name="MAPRangeLow" value="87" symbol="FAULTS_MAPRANGELOW"/>
+                    <Item name="MAPTimeRangeHigh" value="88" symbol="FAULTS_MAPTIMERANGEHIGH"/>
+                    <Item name="MAPTimeRangeLow" value="89" symbol="FAULTS_MAPTIMERANGELOW"/>
                     <Item name="APP1_AdaptAdaptLoMin" value="9" symbol="FAULTS_APP1_ADAPTADAPTLOMIN"/>
-                    <Item name="MAPRangeLow" value="90" symbol="FAULTS_MAPRANGELOW"/>
-                    <Item name="MAPTimeRangeHigh" value="91" symbol="FAULTS_MAPTIMERANGEHIGH"/>
-                    <Item name="MAPTimeRangeLow" value="92" symbol="FAULTS_MAPTIMERANGELOW"/>
-                    <Item name="MAP_IR_HI" value="93" symbol="FAULTS_MAP_IR_HI"/>
-                    <Item name="MAP_IR_LO" value="94" symbol="FAULTS_MAP_IR_LO"/>
-                    <Item name="MAP_STICKING" value="95" symbol="FAULTS_MAP_STICKING"/>
-                    <Item name="MediumOverspeed" value="96" symbol="FAULTS_MEDIUMOVERSPEED"/>
-                    <Item name="NoOil_Fault" value="97" symbol="FAULTS_NOOIL_FAULT"/>
-                    <Item name="O2FailedLean" value="98" symbol="FAULTS_O2FAILEDLEAN"/>
-                    <Item name="O2FailedRich" value="99" symbol="FAULTS_O2FAILEDRICH"/>
+                    <Item name="MAP_IR_HI" value="90" symbol="FAULTS_MAP_IR_HI"/>
+                    <Item name="MAP_IR_LO" value="91" symbol="FAULTS_MAP_IR_LO"/>
+                    <Item name="MAP_STICKING" value="92" symbol="FAULTS_MAP_STICKING"/>
+                    <Item name="MediumOverspeed" value="93" symbol="FAULTS_MEDIUMOVERSPEED"/>
+                    <Item name="NoOil_Fault" value="94" symbol="FAULTS_NOOIL_FAULT"/>
+                    <Item name="O2FailedLean" value="95" symbol="FAULTS_O2FAILEDLEAN"/>
+                    <Item name="O2FailedRich" value="96" symbol="FAULTS_O2FAILEDRICH"/>
+                    <Item name="O2NotActive" value="97" symbol="FAULTS_O2NOTACTIVE"/>
+                    <Item name="OilPresRangeHigh" value="98" symbol="FAULTS_OILPRESRANGEHIGH"/>
+                    <Item name="OilPresRangeLow" value="99" symbol="FAULTS_OILPRESRANGELOW"/>
                 </Enum>
                 
                 <Enum>
@@ -16856,22 +16740,6 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>mult</units>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="O2DisablmentMult">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_4</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Run|O2 Control</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>O2DisablmentMult</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -22188,10 +22056,10 @@
         		                <class>ENUM</class>
         		                <enum_name>VarDecEnum_4</enum_name>
         		                <exp>1.0</exp>
-        		                <format>3.0</format>
+        		                <format>1.0</format>
         		                <gain>1.0</gain>
         		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda</group>
-        		                <max>255.000000</max>
+        		                <max>1.000000</max>
         		                <min>0.000000</min>
         		                <name>Bank2_Enable</name>
         		                <offset>0.0</offset>
@@ -22947,6 +22815,68 @@
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>sec</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank2_DataValidState_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank2_DataValidState_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_ovr">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_1</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank1_DataValidState_Ovr_ovr</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_new">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>Bank1_DataValidState_Ovr_new</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -25728,37 +25658,6 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank2_DataValidState_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank2_DataValidState_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank2_DataValidState_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank2_DataValidState_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="Bank2_SensorStatus_Ovr_ovr">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
@@ -25940,37 +25839,6 @@
         		                <max>1.000000</max>
         		                <min>0.000000</min>
         		                <name>Bank1_UsingFreeAreCalState_Ovr_new</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_ovr">
-        		                <access>RW RW RW RW</access>
-        		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_1</enum_name>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank1_DataValidState_Ovr_ovr</name>
-        		                <offset>0.0</offset>
-        		                <storage>FLASH</storage>
-        		                <update>BACKGND</update>
-        		                <vector_style>wide</vector_style>
-			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="Bank1_DataValidState_Ovr_new">
-        		                <access>RW RW RW RW</access>
-        		                <class>VAR</class>
-        		                <exp>1.0</exp>
-        		                <format>1.0</format>
-        		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Inputs|CAN|AEM X Lambda | Bank1_DataValidState_Ovr Override</group>
-        		                <max>1.000000</max>
-        		                <min>0.000000</min>
-        		                <name>Bank1_DataValidState_Ovr_new</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <update>BACKGND</update>
@@ -36121,17 +35989,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in c:\ecufiles\tdbdll</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_028.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_029.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
                 </Command>
         </Add>
     

@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2107
+ * Model version                  : 1.2185
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Nov 12 21:04:35 2022
+ * C/C++ source code generated on : Mon Nov 21 23:22:06 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,48 +20,56 @@
 /* Invariant block signals (auto storage) */
 const ConstBlockIO_BaseEngineController_LS BaseEngineController_LS_ConstB = {
   0.0
-  ,                                    /* '<S858>/Gain4' */
+  ,                                    /* '<S798>/Gain4' */
   0.0
-  ,                                    /* '<S138>/motohawk_replicate2' */
+  ,                                    /* '<S95>/motohawk_replicate2' */
 
   { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
-  ,                                    /* '<S138>/motohawk_replicate' */
+  ,                                    /* '<S95>/motohawk_replicate' */
   0U
-  /* '<S858>/Data Type Conversion5' */
+  /* '<S798>/Data Type Conversion5' */
 };
 
 /* Constant parameters (auto storage) */
 const ConstParam_BaseEngineController_LS BaseEngineController_LS_ConstP = {
+  /* Pooled Parameter (Expression: [1,2,3,4,5,6,7,8])
+   * Referenced by:
+   *   '<S330>/Constant'
+   *   '<S341>/Constant'
+   *   '<S342>/Constant'
+   */
+  { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 },
+
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S162>/Combinatorial  Logic'
-   *   '<S163>/Combinatorial  Logic'
-   *   '<S164>/Combinatorial  Logic'
-   *   '<S165>/Combinatorial  Logic'
-   *   '<S166>/Combinatorial  Logic'
-   *   '<S167>/Combinatorial  Logic'
-   *   '<S192>/Combinatorial  Logic'
-   *   '<S203>/Combinatorial  Logic'
-   *   '<S204>/Combinatorial  Logic'
-   *   '<S205>/Combinatorial  Logic'
-   *   '<S319>/Combinatorial  Logic'
-   *   '<S320>/Combinatorial  Logic'
-   *   '<S321>/Combinatorial  Logic'
-   *   '<S349>/Combinatorial  Logic'
-   *   '<S350>/Combinatorial  Logic'
-   *   '<S351>/Combinatorial  Logic'
-   *   '<S355>/Combinatorial  Logic'
-   *   '<S356>/Combinatorial  Logic'
-   *   '<S357>/Combinatorial  Logic'
+   *   '<S119>/Combinatorial  Logic'
+   *   '<S120>/Combinatorial  Logic'
+   *   '<S121>/Combinatorial  Logic'
+   *   '<S122>/Combinatorial  Logic'
+   *   '<S123>/Combinatorial  Logic'
+   *   '<S124>/Combinatorial  Logic'
+   *   '<S149>/Combinatorial  Logic'
+   *   '<S155>/Combinatorial  Logic'
+   *   '<S156>/Combinatorial  Logic'
+   *   '<S157>/Combinatorial  Logic'
+   *   '<S287>/Combinatorial  Logic'
+   *   '<S288>/Combinatorial  Logic'
+   *   '<S289>/Combinatorial  Logic'
+   *   '<S394>/Combinatorial  Logic'
+   *   '<S395>/Combinatorial  Logic'
+   *   '<S396>/Combinatorial  Logic'
    *   '<S45>/Combinatorial  Logic'
-   *   '<S298>/Combinatorial  Logic'
+   *   '<S257>/Combinatorial  Logic'
+   *   '<S269>/Combinatorial  Logic'
    */
   { 0, 0, 1, 0, 0, 1, 1, 0 },
 
   /* Pooled Parameter (Expression: )
    * Referenced by:
-   *   '<S1021>/Logic'
-   *   '<S607>/Logic'
+   *   '<S953>/Logic'
+   *   '<S547>/Logic'
+   *   '<S353>/Logic'
+   *   '<S356>/Logic'
    */
   { 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0 }
 };

@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2107
+ * Model version                  : 1.2185
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Nov 12 21:04:35 2022
+ * C/C++ source code generated on : Mon Nov 21 23:22:06 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -20,98 +20,98 @@
 #include "BaseEngineController_LS.h"
 #include "BaseEngineController_LS_private.h"
 
-/* Named constants for Stateflow: '<S250>/IdleStateMachine' */
+/* Named constants for Stateflow: '<S206>/IdleStateMachine' */
 #define BaseEngineController_LS_IN_Flaring (1U)
 #define BaseEngineController_LS_IN_OffIdle (2U)
 #define BaseEngineController_LS_IN_OnIdle (3U)
 
-/* Initial conditions for atomic system: '<S250>/IdleStateMachine' */
+/* Initial conditions for atomic system: '<S206>/IdleStateMachine' */
 void BaseEngineController_LS_IdleStateMachine_Init(void)
 {
-  BaseEngineController_LS_DWork.s265_is_active_c12_BaseEngineController_LS = 0U;
-  BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS = 0U;
-  BaseEngineController_LS_B.s265_IdleState = 0U;
+  BaseEngineController_LS_DWork.s221_is_active_c12_BaseEngineController_LS = 0U;
+  BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS = 0U;
+  BaseEngineController_LS_B.s221_IdleState = 0U;
 }
 
-/* Output and update for atomic system: '<S250>/IdleStateMachine' */
+/* Output and update for atomic system: '<S206>/IdleStateMachine' */
 void BaseEngineController_LS_IdleStateMachine(void)
 {
   /* Gateway: Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine */
   /* During: Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine */
-  if (BaseEngineController_LS_DWork.s265_is_active_c12_BaseEngineController_LS ==
+  if (BaseEngineController_LS_DWork.s221_is_active_c12_BaseEngineController_LS ==
       0) {
     /* Entry: Foreground/Control/Controller/Run/MinGovernor/Idle State Determination/IdleStateMachine */
-    BaseEngineController_LS_DWork.s265_is_active_c12_BaseEngineController_LS =
+    BaseEngineController_LS_DWork.s221_is_active_c12_BaseEngineController_LS =
       1U;
 
-    /* Transition: '<S265>:4' */
-    BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS =
+    /* Transition: '<S221>:4' */
+    BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS =
       BaseEngineController_LS_IN_Flaring;
 
-    /* Entry 'Flaring': '<S265>:2' */
-    BaseEngineController_LS_B.s265_IdleState = 1U;
+    /* Entry 'Flaring': '<S221>:2' */
+    BaseEngineController_LS_B.s221_IdleState = 1U;
   } else {
-    switch (BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS) {
+    switch (BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS) {
      case BaseEngineController_LS_IN_Flaring:
-      /* During 'Flaring': '<S265>:2' */
-      if (BaseEngineController_LS_B.s250_LogicalOperator ||
+      /* During 'Flaring': '<S221>:2' */
+      if (BaseEngineController_LS_B.s206_LogicalOperator ||
           (!(EnableRPMFalling_DataStore()))) {
-        /* Transition: '<S265>:5' */
-        BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS =
+        /* Transition: '<S221>:5' */
+        BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS =
           BaseEngineController_LS_IN_OffIdle;
 
-        /* Entry 'OffIdle': '<S265>:1' */
-        BaseEngineController_LS_B.s265_IdleState = 3U;
+        /* Entry 'OffIdle': '<S221>:1' */
+        BaseEngineController_LS_B.s221_IdleState = 3U;
       } else {
-        if (BaseEngineController_LS_B.s264_RelationalOperator &&
-            BaseEngineController_LS_B.s250_RelationalOperator1) {
-          /* Transition: '<S265>:7' */
-          BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS =
+        if (BaseEngineController_LS_B.s220_RelationalOperator &&
+            BaseEngineController_LS_B.s206_RelationalOperator1) {
+          /* Transition: '<S221>:7' */
+          BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS =
             BaseEngineController_LS_IN_OnIdle;
 
-          /* Entry 'OnIdle': '<S265>:3' */
-          BaseEngineController_LS_B.s265_IdleState = 2U;
+          /* Entry 'OnIdle': '<S221>:3' */
+          BaseEngineController_LS_B.s221_IdleState = 2U;
         }
       }
       break;
 
      case BaseEngineController_LS_IN_OffIdle:
-      /* During 'OffIdle': '<S265>:1' */
+      /* During 'OffIdle': '<S221>:1' */
       if (((EnableRPMFalling_DataStore()) &&
-           (BaseEngineController_LS_B.s250_RelationalOperator3 ||
-            (BaseEngineController_LS_B.s250_RelationalOperator &&
-             BaseEngineController_LS_B.s250_RelationalOperator1))) ||
-          BaseEngineController_LS_B.s250_RelationalOperator5) {
-        /* Transition: '<S265>:6' */
-        BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS =
+           (BaseEngineController_LS_B.s206_RelationalOperator3 ||
+            (BaseEngineController_LS_B.s206_RelationalOperator &&
+             BaseEngineController_LS_B.s206_RelationalOperator1))) ||
+          BaseEngineController_LS_B.s206_RelationalOperator5) {
+        /* Transition: '<S221>:6' */
+        BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS =
           BaseEngineController_LS_IN_OnIdle;
 
-        /* Entry 'OnIdle': '<S265>:3' */
-        BaseEngineController_LS_B.s265_IdleState = 2U;
+        /* Entry 'OnIdle': '<S221>:3' */
+        BaseEngineController_LS_B.s221_IdleState = 2U;
       }
       break;
 
      case BaseEngineController_LS_IN_OnIdle:
-      /* During 'OnIdle': '<S265>:3' */
-      if ((!BaseEngineController_LS_B.s250_RelationalOperator3) &&
-          (BaseEngineController_LS_B.s250_LogicalOperator ||
+      /* During 'OnIdle': '<S221>:3' */
+      if ((!BaseEngineController_LS_B.s206_RelationalOperator3) &&
+          (BaseEngineController_LS_B.s206_LogicalOperator ||
            (!(EnableRPMFalling_DataStore())))) {
-        /* Transition: '<S265>:8' */
-        BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS =
+        /* Transition: '<S221>:8' */
+        BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS =
           BaseEngineController_LS_IN_OffIdle;
 
-        /* Entry 'OffIdle': '<S265>:1' */
-        BaseEngineController_LS_B.s265_IdleState = 3U;
+        /* Entry 'OffIdle': '<S221>:1' */
+        BaseEngineController_LS_B.s221_IdleState = 3U;
       }
       break;
 
      default:
-      /* Transition: '<S265>:4' */
-      BaseEngineController_LS_DWork.s265_is_c12_BaseEngineController_LS =
+      /* Transition: '<S221>:4' */
+      BaseEngineController_LS_DWork.s221_is_c12_BaseEngineController_LS =
         BaseEngineController_LS_IN_Flaring;
 
-      /* Entry 'Flaring': '<S265>:2' */
-      BaseEngineController_LS_B.s265_IdleState = 1U;
+      /* Entry 'Flaring': '<S221>:2' */
+      BaseEngineController_LS_B.s221_IdleState = 1U;
       break;
     }
   }

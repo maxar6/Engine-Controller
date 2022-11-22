@@ -59,6 +59,7 @@ typedef enum {
 extern int32_T FGND_TDC_EVENT_RunCnt;
 extern int32_T STARTUP_EVENT_RunCnt;
 extern int32_T FGND_TDC1_EVENT_RunCnt;
+extern int32_T FGND_HIRES_RunCnt;
 extern int32_T FGND_RTI_PERIODIC_RunCnt;
 extern int32_T FGND_5XRTI_PERIODIC_RunCnt;
 extern int32_T FGND_MID_TDC_EVENT_RunCnt;

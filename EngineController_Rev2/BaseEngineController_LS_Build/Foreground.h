@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2107
+ * Model version                  : 1.2185
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Sat Nov 12 21:04:35 2022
+ * C/C++ source code generated on : Mon Nov 21 23:22:06 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,16 +31,26 @@
 /* Child system includes */
 #include "BaseEngineController_LS_IdleStateMachine.h"
 
-/* Block signals for system '<S365>/Collect Average' */
+/* Block signals for system '<S404>/Collect Average' */
 typedef struct {
-  real_T s369_Product;                 /* '<S369>/Product' */
+  real_T s408_Product;                 /* '<S408>/Product' */
 } rtB_CollectAverage_BaseEngineController_LS;
 
-/* Block states (auto storage) for system '<S365>/Collect Average' */
+/* Block states (auto storage) for system '<S404>/Collect Average' */
 typedef struct {
-  real_T s369_UnitDelay1_DSTATE;       /* '<S369>/Unit Delay1' */
-  boolean_T s365_CollectAverage_MODE;  /* '<S365>/Collect Average' */
+  real_T s408_UnitDelay1_DSTATE;       /* '<S408>/Unit Delay1' */
+  boolean_T s404_CollectAverage_MODE;  /* '<S404>/Collect Average' */
 } rtDW_CollectAverage_BaseEngineController_LS;
+
+/* Block signals for system '<S344>/GetInstRPM' */
+typedef struct {
+  uint16_T s352_motohawk_encoder_instant_rpm;/* '<S352>/motohawk_encoder_instant_rpm' */
+} rtB_GetInstRPM_BaseEngineController_LS;
+
+/* Block signals for system '<S344>/SafeDivide' */
+typedef struct {
+  uint16_T s354_Product;               /* '<S354>/Product' */
+} rtB_SafeDivide_BaseEngineController_LS;
 
 /* Exported functions */
 extern void BaseEngineController_LS_CollectAverage_Init
@@ -55,6 +65,10 @@ extern void BaseEngineController_LS_CollectAverage(boolean_T rtu_0, int8_T
 extern void BaseEngineController_LS_PassThrough1_Start(real_T *rty_Out1);
 extern void BaseEngineController_LS_PassThrough1(boolean_T rtu_0, real_T rtu_1,
   real_T *rty_Out1);
+extern void BaseEngineController_LS_GetInstRPM(boolean_T rtu_0,
+  rtB_GetInstRPM_BaseEngineController_LS *localB);
+extern void BaseEngineController_LS_SafeDivide(boolean_T rtu_0, uint8_T
+  rtu_Count, uint16_T rtu_RPMSum, rtB_SafeDivide_BaseEngineController_LS *localB);
 extern void BaseEngineController_LS_IfActionSubsystem(real_T rtu_0, real_T
   *rty_Out);
 extern void BaseEngineController_LS_Foreground_Init(void);

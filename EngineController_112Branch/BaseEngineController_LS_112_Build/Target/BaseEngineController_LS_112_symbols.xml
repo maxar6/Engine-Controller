@@ -1,0 +1,2070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Symbols>
+   <MemoryRegion Name="FLASH_RCHW" SAddr="0x00040000" Size="4">
+      <Symbol Name="RCHW" Address="0x00040000" Size="4"/>
+   </MemoryRegion>
+   <MemoryRegion Name="FLASH_ENTRY" SAddr="0x00040004" Size="4">
+      <Symbol Name="s_pfnEntry" Address="0x00040004" Size="4"/>
+   </MemoryRegion>
+   <MemoryRegion Name="FLASH_CRCDEFNPTR" SAddr="0x00040008" Size="4">
+      <Symbol Name="g_pCRCBlockPtr" Address="0x00040008" Size="4"/>
+   </MemoryRegion>
+   <MemoryRegion Name="FLASH_BLOCKDEFNPTR" SAddr="0x00040010" Size="240"/>
+   <MemoryRegion Name="FLASH" SAddr="0x00040100" Size="1703680">
+      <Symbol Name="__do_global_dtors_aux" Address="0x00040100" Size="0"/>
+      <Symbol Name="call___do_global_dtors_aux" Address="0x000401C4" Size="0"/>
+      <Symbol Name="frame_dummy" Address="0x000401E0" Size="0"/>
+      <Symbol Name="call_frame_dummy" Address="0x0004024C" Size="0"/>
+      <Symbol Name="Entry" Address="0x00040268" Size="88"/>
+      <Symbol Name="Interrupt_Enable" Address="0x000402C0" Size="36"/>
+      <Symbol Name="Interrupt_Disable" Address="0x000402E4" Size="24"/>
+      <Symbol Name="Interrupt_EnableApp" Address="0x000402FC" Size="36"/>
+      <Symbol Name="Interrupt_DisableApp" Address="0x00040320" Size="24"/>
+      <Symbol Name="IRQ_RestoreExecContext" Address="0x00040338" Size="168"/>
+      <Symbol Name="IRQ_SaveUnsavedExternalIRQContext" Address="0x000403E0" Size="164"/>
+      <Symbol Name="IRQ_ExternalIRQ_NestedIRQHandler" Address="0x00040484" Size="344"/>
+      <Symbol Name="IRQ_CoreException_ExecuteHandler" Address="0x000405DC" Size="52"/>
+      <Symbol Name="IRQ_CoreException_NestedIRQHandler" Address="0x00040610" Size="304"/>
+      <Symbol Name="IRQ_PostISRHook" Address="0x00040740" Size="32"/>
+      <Symbol Name="IRQ_PreISRHook" Address="0x00040760" Size="32"/>
+      <Symbol Name="MMU_Open" Address="0x00040780" Size="136"/>
+      <Symbol Name="InternalFlash_SetFLASHBIUCR" Address="0x00040808" Size="16"/>
+      <Symbol Name="InternalFlash_Pipelining_SetCond" Address="0x00040818" Size="168"/>
+      <Symbol Name="InternalFlash_Cache_SetCond" Address="0x000408C0" Size="128"/>
+      <Symbol Name="ControlCoreOpenWithISREnabled" Address="0x00040940" Size="4"/>
+      <Symbol Name="main" Address="0x00040944" Size="48"/>
+      <Symbol Name="ControlCoreOpen" Address="0x00040974" Size="68"/>
+      <Symbol Name="ControlCore_PreOpen" Address="0x000409B8" Size="52"/>
+      <Symbol Name="SIU_PadFunction_ApplyAsInputOnly" Address="0x000409EC" Size="44"/>
+      <Symbol Name="SIU_PadFunction_ApplyAsOutputOnly" Address="0x00040A18" Size="40"/>
+      <Symbol Name="SIU_eQADC_CFIFO_Trigger_Create" Address="0x00040A40" Size="544"/>
+      <Symbol Name="SIU_Open" Address="0x00040C60" Size="264"/>
+      <Symbol Name="Tsk_Task_IsPriorityOccupied" Address="0x00040D68" Size="60"/>
+      <Symbol Name="Tsk_Task_AddToReadyList" Address="0x00040DA4" Size="48"/>
+      <Symbol Name="Tsk_Task_RemoveFromReadyList" Address="0x00040DD4" Size="48"/>
+      <Symbol Name="Tsk_Task_Reschedule" Address="0x00040E04" Size="60"/>
+      <Symbol Name="Tsk_Task_Sleep" Address="0x00040E40" Size="152"/>
+      <Symbol Name="Tsk_TaskSync_GetHighestPriorityWaitingTask" Address="0x00040ED8"
+              Size="36"/>
+      <Symbol Name="Tsk_TaskSync_RemoveFromWaitingList" Address="0x00040EFC" Size="44"/>
+      <Symbol Name="Tsk_LogKernelError" Address="0x00040F28" Size="16"/>
+      <Symbol Name="Tsk_GetStackPointerForKernelOpen" Address="0x00040F38" Size="64"/>
+      <Symbol Name="Tsk_ExecPerf_RefreshTimeSlice" Address="0x00040F78" Size="132"/>
+      <Symbol Name="Tsk_ExecPerf_RefreshPreISR" Address="0x00040FFC" Size="64"/>
+      <Symbol Name="Tsk_ExecPerf_RefreshPostISR" Address="0x0004103C" Size="44"/>
+      <Symbol Name="Tsk_ExecPerf_RefreshPostTask" Address="0x00041068" Size="40"/>
+      <Symbol Name="Tsk_ExecPerf_RefreshPreTask" Address="0x00041090" Size="16"/>
+      <Symbol Name="Tsk_Execution_IsLegalToWait" Address="0x000410A0" Size="64"/>
+      <Symbol Name="Tsk_Execution_IsInterruptContext" Address="0x000410E0" Size="16"/>
+      <Symbol Name="CriticalSection_Enter" Address="0x000410F0" Size="68"/>
+      <Symbol Name="CriticalSection_Exit" Address="0x00041134" Size="160"/>
+      <Symbol Name="Tsk_TaskStack_Create" Address="0x000411D4" Size="172"/>
+      <Symbol Name="Tsk_Task_OnTerminate" Address="0x00041280" Size="164"/>
+      <Symbol Name="Tsk_Task_Destroy" Address="0x00041324" Size="232"/>
+      <Symbol Name="Tsk_Task_Terminate" Address="0x0004140C" Size="64"/>
+      <Symbol Name="Tsk_Timer_OnTick" Address="0x0004144C" Size="292"/>
+      <Symbol Name="Tsk_Task_InitTaskControlBlock" Address="0x00041570" Size="156"/>
+      <Symbol Name="Tsk_Task_ActivateWithTaskDefn" Address="0x0004160C" Size="220"/>
+      <Symbol Name="Tsk_Idle_Task" Address="0x000416E8" Size="276"/>
+      <Symbol Name="Tsk_Task_CreateStatic" Address="0x000417FC" Size="216"/>
+      <Symbol Name="Tsk_StartMultiTaskingKernel" Address="0x000418D4" Size="196"/>
+      <Symbol Name="SyncObj_Destroy" Address="0x00041998" Size="128"/>
+      <Symbol Name="Task_Activate" Address="0x00041A18" Size="36"/>
+      <Symbol Name="Task_CreateStatic" Address="0x00041A3C" Size="124"/>
+      <Symbol Name="SyncObj_WaitOn" Address="0x00041AB8" Size="156"/>
+      <Symbol Name="Task_Sleep" Address="0x00041B54" Size="108"/>
+      <Symbol Name="Semaphore_CreateStatic" Address="0x00041BC0" Size="88"/>
+      <Symbol Name="Event_CreateStatic" Address="0x00041C18" Size="12"/>
+      <Symbol Name="Semaphore_Release" Address="0x00041C24" Size="128"/>
+      <Symbol Name="Event_Set" Address="0x00041CA4" Size="4"/>
+      <Symbol Name="TskCPU_OpenMultiTaskingKernel" Address="0x00041CA8" Size="16"/>
+      <Symbol Name="TskCPU_StartMultitasking" Address="0x00041CB8" Size="76"/>
+      <Symbol Name="TskCPU_Task_FreeStack" Address="0x00041D04" Size="16"/>
+      <Symbol Name="TskCPU_TaskStack_Init" Address="0x00041D14" Size="80"/>
+      <Symbol Name="TskCPU_SystemCallISR" Address="0x00041D64" Size="168"/>
+      <Symbol Name="TskCPU_PreTaskHook" Address="0x00041E0C" Size="32"/>
+      <Symbol Name="TskCPU_PostTaskHook" Address="0x00041E2C" Size="32"/>
+      <Symbol Name="TskSync_Semaphore_CreateStatic" Address="0x00041E4C" Size="32"/>
+      <Symbol Name="TskSync_SyncTask_CreateStatic" Address="0x00041E6C" Size="32"/>
+      <Symbol Name="TskSync_ReadyAllWaitingTasks" Address="0x00041E8C" Size="144"/>
+      <Symbol Name="TskSync_SyncTask_Destroy" Address="0x00041F1C" Size="84"/>
+      <Symbol Name="TskSync_Semaphore_Release" Address="0x00041F70" Size="136"/>
+      <Symbol Name="TskSync_Semaphore_Destroy" Address="0x00041FF8" Size="96"/>
+      <Symbol Name="TskSync_Semaphore_WaitOn" Address="0x00042058" Size="268"/>
+      <Symbol Name="Timer_Watchdog_ResetStarvation" Address="0x00042164" Size="16"/>
+      <Symbol Name="Timer_Watchdog_PeriodicRefresh" Address="0x00042174" Size="80"/>
+      <Symbol Name="Timer_Watchdog_Refresh" Address="0x000421C4" Size="24"/>
+      <Symbol Name="Timer_Watchdog_Starvation_IsExpired" Address="0x000421DC" Size="32"/>
+      <Symbol Name="Timer_Watchdog_Starvation_Get" Address="0x000421FC" Size="12"/>
+      <Symbol Name="WaitOnSpinTimer" Address="0x00042208" Size="184"/>
+      <Symbol Name="Timer_FreeRunningCounter_Get32Bits" Address="0x000422C0" Size="12"/>
+      <Symbol Name="Timer_FreeRunningCounter_Get64Bits" Address="0x000422CC" Size="68"/>
+      <Symbol Name="Timer_FreeRunningCounter_GetDiff_us" Address="0x00042310" Size="24"/>
+      <Symbol Name="Timer_FreeRunningCounter_GetDiffAndUpdate_us" Address="0x00042328"
+              Size="32"/>
+      <Symbol Name="Timer_FreeRunningCounter_GetTicksFromTime" Address="0x00042348" Size="16"/>
+      <Symbol Name="Timer_FreeRunningCounter_Get64BitTimeFromTicks" Address="0x00042358"
+              Size="44"/>
+      <Symbol Name="Timer_FreeRunningCounter_Get64BitDiffAndUpdate_us" Address="0x00042384"
+              Size="132"/>
+      <Symbol Name="Timer_Open" Address="0x00042408" Size="212"/>
+      <Symbol Name="XBar_Open" Address="0x000424DC" Size="32"/>
+      <Symbol Name="_start" Address="0x00042500" Size="428"/>
+      <Symbol Name="e200_Open" Address="0x000426AC" Size="12"/>
+      <Symbol Name="e200_FixedIntervalIRQ_RequestUse" Address="0x000426B8" Size="16"/>
+      <Symbol Name="e200_DecrementorIRQ_RequestUse" Address="0x000426C8" Size="16"/>
+      <Symbol Name="e200_BothTimerIRQ_Disable" Address="0x000426D8" Size="20"/>
+      <Symbol Name="e200_BothTimerIRQ_Enable" Address="0x000426EC" Size="32"/>
+      <Symbol Name="ECSM_IRQHandler" Address="0x0004270C" Size="60"/>
+      <Symbol Name="ECSM_ExtIRQHandler" Address="0x00042748" Size="48"/>
+      <Symbol Name="eDMA_StatusCtrl_SetEnableRequest" Address="0x00042778" Size="16"/>
+      <Symbol Name="eDMA_StatusCtrl_ClearEnableRequest" Address="0x00042788" Size="44"/>
+      <Symbol Name="eDMA_StatusCtrl_ClearInterruptEnableRequest" Address="0x000427B4"
+              Size="44"/>
+      <Symbol Name="eDMA_Configuration_SetChannelAttributes" Address="0x000427E0" Size="84"/>
+      <Symbol Name="eDMA_Open" Address="0x00042834" Size="32"/>
+      <Symbol Name="eDMA_ControlReg_Open" Address="0x00042854" Size="24"/>
+      <Symbol Name="eDMA_InterruptRequest_Set" Address="0x0004286C" Size="132"/>
+      <Symbol Name="eMIOS_ExtendError_RequestChannel" Address="0x000428F0" Size="44"/>
+      <Symbol Name="eMIOS_ChannelPtr_Get" Address="0x0004291C" Size="16"/>
+      <Symbol Name="eMIOS_InternalModulusUpCounter_Create" Address="0x0004292C" Size="124"/>
+      <Symbol Name="eMIOS_ISR" Address="0x000429A8" Size="148"/>
+      <Symbol Name="eMIOS_PWM_CreateWithoutAllocate" Address="0x00042A3C" Size="104"/>
+      <Symbol Name="eMIOS_TickTimer_ISR" Address="0x00042AA4" Size="32"/>
+      <Symbol Name="eMIOS_Open" Address="0x00042AC4" Size="360"/>
+      <Symbol Name="eQADC_Common_DisableAllQueues" Address="0x00042C2C" Size="72"/>
+      <Symbol Name="eQADC_Open" Address="0x00042C74" Size="92"/>
+      <Symbol Name="eQADC_Create_WithoutCalibrate" Address="0x00042CD0" Size="368"/>
+      <Symbol Name="eQADC_Queue_Conversion_Scaled_Result_Get" Address="0x00042E40" Size="268"/>
+      <Symbol Name="eQADC_Queue_Conversion_Result_Standard_Get" Address="0x00042F4C"
+              Size="56"/>
+      <Symbol Name="eQADC_Queue_Conversion_Result_MultipleStandard_Get" Address="0x00042F84"
+              Size="304"/>
+      <Symbol Name="eQADCCommon_eDMA_ISR" Address="0x000430B4" Size="116"/>
+      <Symbol Name="eQADC_ISR" Address="0x00043128" Size="80"/>
+      <Symbol Name="eQADCCommon_Combined_Overrun_ISR" Address="0x00043178" Size="4"/>
+      <Symbol Name="eQADCCommon_CFIFO_NonCoherency_ISR" Address="0x0004317C" Size="36"/>
+      <Symbol Name="eQADCCommon_CFIFO_Pause_ISR" Address="0x000431A0" Size="32"/>
+      <Symbol Name="eQADCCommon_CFIFO_EndOfQueue_ISR" Address="0x000431C0" Size="32"/>
+      <Symbol Name="eQADCCommon_CFIFO_Fill_ISR" Address="0x000431E0" Size="32"/>
+      <Symbol Name="eQADCCommon_RFIFO_Drain_ISR" Address="0x00043200" Size="32"/>
+      <Symbol Name="eQADC_Queue_Sw_Trig_Single_Scan_OnComplete_ISR" Address="0x00043220"
+              Size="228"/>
+      <Symbol Name="eQADC_Queue_Sw_Trig_Single_Scan_Conversion_Trigger" Address="0x00043304"
+              Size="256"/>
+      <Symbol Name="eQADC_CFIFO_eDMA_Configure" Address="0x00043404" Size="216"/>
+      <Symbol Name="eQADC_RFIFO_eDMA_Configure" Address="0x000434DC" Size="288"/>
+      <Symbol Name="T.43" Address="0x000435FC" Size="576"/>
+      <Symbol Name="eQADC_MultiQueue_Create" Address="0x0004383C" Size="136"/>
+      <Symbol Name="eQADC_Queue_Sw_Trig_Single_Scan_With_Notification_Create"
+              Address="0x000438C4"
+              Size="356"/>
+      <Symbol Name="eQADC_Create" Address="0x00043A28" Size="656"/>
+      <Symbol Name="eTPUCommon_TimeBase_SetTCR1WithFreq" Address="0x00043CB8" Size="60"/>
+      <Symbol Name="eTPUCommon_TimeBase_SetTCR2AngleMode" Address="0x00043CF4" Size="48"/>
+      <Symbol Name="eTPUCommon_Engine_Stop" Address="0x00043D24" Size="32"/>
+      <Symbol Name="eTPUCommon_Engine_Start" Address="0x00043D44" Size="20"/>
+      <Symbol Name="eTPUCommon_StacBus_ServeTCR1" Address="0x00043D58" Size="24"/>
+      <Symbol Name="eTPUCommon_eDMA_ISR" Address="0x00043D70" Size="116"/>
+      <Symbol Name="eTPU_ParameterFrame_Ofs_GetBase" Address="0x00043DE4" Size="52"/>
+      <Symbol Name="eTPU_InterruptStatus_PollWithClr" Address="0x00043E18" Size="64"/>
+      <Symbol Name="eTPU_ISR" Address="0x00043E58" Size="116"/>
+      <Symbol Name="eTPU_InterruptOverflowStatus_PollWithClr" Address="0x00043ECC" Size="64"/>
+      <Symbol Name="eTPU_InterruptCond_Disable" Address="0x00043F0C" Size="44"/>
+      <Symbol Name="eTPU_InterruptCond_EnableAfterStatusClr" Address="0x00043F38" Size="56"/>
+      <Symbol Name="eTPU_InterruptCond_Enable" Address="0x00043F70" Size="80"/>
+      <Symbol Name="eTPU_FM_Get" Address="0x00043FC0" Size="36"/>
+      <Symbol Name="eTPU_FM_Set" Address="0x00043FE4" Size="52"/>
+      <Symbol Name="eTPU_Priority_Set" Address="0x00044018" Size="64"/>
+      <Symbol Name="eTPU_HSRR_Set" Address="0x00044058" Size="92"/>
+      <Symbol Name="eTPU_CoherentRead_FromParameterFrame_24Bit" Address="0x000440B4"
+              Size="288"/>
+      <Symbol Name="eTPU_ParameterFrame_Global_8Bit_Get" Address="0x000441D4" Size="52"/>
+      <Symbol Name="eTPU_ParameterFrame_Local_8Bit_Get" Address="0x00044208" Size="108"/>
+      <Symbol Name="eTPU_ParameterFrame_Local_24Bit_Unsigned_Get" Address="0x00044274"
+              Size="116"/>
+      <Symbol Name="eTPU_ParameterFrame_Global_8Bit_Set" Address="0x000442E8" Size="64"/>
+      <Symbol Name="eTPU_ParameterFrame_Global_32Bit_Set" Address="0x00044328" Size="64"/>
+      <Symbol Name="eTPU_ParameterFrame_Local_8Bit_Set" Address="0x00044368" Size="120"/>
+      <Symbol Name="eTPU_ParameterFrame_Local_24Bit_Set" Address="0x000443E0" Size="124"/>
+      <Symbol Name="eTPU_ParameterFrame_GetBase" Address="0x0004445C" Size="36"/>
+      <Symbol Name="eTPU_ParameterFrameMirror_GetForChan" Address="0x00044480" Size="92"/>
+      <Symbol Name="eTPU_ParameterFrame_GetForChan" Address="0x000444DC" Size="92"/>
+      <Symbol Name="eTPU_ParameterFrame_Ofs_Get" Address="0x00044538" Size="108"/>
+      <Symbol Name="eTPU_Primitive_Replace" Address="0x000445A4" Size="200"/>
+      <Symbol Name="eTPU_Malloc" Address="0x0004466C" Size="200"/>
+      <Symbol Name="eTPU_Primitive_IsAvailable" Address="0x00044734" Size="76"/>
+      <Symbol Name="eTPU_Primitive_SetAll" Address="0x00044780" Size="416"/>
+      <Symbol Name="eTPU_Primitive_Set" Address="0x00044920" Size="12"/>
+      <Symbol Name="eTPUCommon_Open" Address="0x0004492C" Size="456"/>
+      <Symbol Name="FMPLL_Open" Address="0x00044AF4" Size="160"/>
+      <Symbol Name="ThreadSafeFree" Address="0x00044B94" Size="144"/>
+      <Symbol Name="ThreadSafeMalloc" Address="0x00044C24" Size="208"/>
+      <Symbol Name="GPIO_PinState_Set" Address="0x00044CF4" Size="40"/>
+      <Symbol Name="GPIO_PinState_Get" Address="0x00044D1C" Size="16"/>
+      <Symbol Name="GPIO_PadConfig_Set" Address="0x00044D2C" Size="24"/>
+      <Symbol Name="INTC_ClrSWISR" Address="0x00044D44" Size="24"/>
+      <Symbol Name="INTC_UnhandledISR" Address="0x00044D5C" Size="4"/>
+      <Symbol Name="INTC_SrcPriority_Set" Address="0x00044D60" Size="20"/>
+      <Symbol Name="INTC_Open" Address="0x00044D74" Size="112"/>
+      <Symbol Name="INTC_OpenInSwVectorMode" Address="0x00044DE4" Size="32"/>
+      <Symbol Name="L1Cache_Invalidate" Address="0x00044E04" Size="56"/>
+      <Symbol Name="L1Cache_Enable" Address="0x00044E3C" Size="28"/>
+      <Symbol Name="L1Cache_Open" Address="0x00044E58" Size="56"/>
+      <Symbol Name="ControlCore_PowerUpStatus_Query_WasWarm" Address="0x00044E90" Size="20"/>
+      <Symbol Name="eTPUProc_ExtendError_RequestChannel" Address="0x00044EA4" Size="80"/>
+      <Symbol Name="eTPUProc_TPUMaskDefn_GetPtrWithTPUChannel" Address="0x00044EF4" Size="20"/>
+      <Symbol Name="eTPUProc_TimeBase_GetTCR2Value" Address="0x00044F08" Size="32"/>
+      <Symbol Name="eTPUProc_ECR_Set" Address="0x00044F28" Size="56"/>
+      <Symbol Name="eTPUProc_StacBus_SetAsTCR2" Address="0x00044F60" Size="120"/>
+      <Symbol Name="eTPU_InterruptSrc_Get" Address="0x00044FD8" Size="20"/>
+      <Symbol Name="eTPUProc_TPUChannel_GetPtr" Address="0x00044FEC" Size="28"/>
+      <Symbol Name="eTPUProc_TPUModule_GetPtr" Address="0x00045008" Size="12"/>
+      <Symbol Name="eTPUProc_Start" Address="0x00045014" Size="64"/>
+      <Symbol Name="eTPUProc_Stop" Address="0x00045054" Size="64"/>
+      <Symbol Name="eTPUProc_TimeBase_SetTCR2AngleModeWithCPUPin" Address="0x00045094"
+              Size="96"/>
+      <Symbol Name="eTPUProc_TimeBase_SetTCR1WithFreq" Address="0x000450F4" Size="96"/>
+      <Symbol Name="eTPU_Open" Address="0x00045154" Size="104"/>
+      <Symbol Name="mh_CAN_1_CityID_Update" Address="0x000451BC" Size="24"/>
+      <Symbol Name="mh_CAN_2_CityID_Update" Address="0x000451D4" Size="24"/>
+      <Symbol Name="CloseApplication" Address="0x000451EC" Size="4"/>
+      <Symbol Name="OpenApplication" Address="0x000451F0" Size="468"/>
+      <Symbol Name="BaseEngineController_LS_112_step" Address="0x000453C4" Size="324"/>
+      <Symbol Name="BaseEngineController_LS_112_terminate" Address="0x00045508" Size="4"/>
+      <Symbol Name="BaseEngineController_LS_112_initialize" Address="0x0004550C" Size="2016"/>
+      <Symbol Name="BaseEngineController_LS_112_CCPDaqProcessing" Address="0x00045CEC"
+              Size="96"/>
+      <Symbol Name="BaseEngineController_LS_112_IdleStateMachine_Init" Address="0x00045D4C"
+              Size="36"/>
+      <Symbol Name="BaseEngineController_LS_112_IdleStateMachine" Address="0x00045D70"
+              Size="340"/>
+      <Symbol Name="EncoderStateCallback" Address="0x00045EC4" Size="4"/>
+      <Symbol Name="EncoderDiagnosticsCallback" Address="0x00045EC8" Size="88"/>
+      <Symbol Name="NullFault" Address="0x00045F20" Size="8"/>
+      <Symbol Name="IsFaultValid" Address="0x00045F28" Size="16"/>
+      <Symbol Name="IsFaultEnabled" Address="0x00045F38" Size="48"/>
+      <Symbol Name="IsFaultSuspected" Address="0x00045F68" Size="64"/>
+      <Symbol Name="IsFaultActive" Address="0x00045FA8" Size="64"/>
+      <Symbol Name="IsFaultOccurred" Address="0x00045FE8" Size="64"/>
+      <Symbol Name="RefreshFaultActionReferenceCounts" Address="0x00046028" Size="628"/>
+      <Symbol Name="AdjustFaultActionReferenceCount" Address="0x0004629C" Size="364"/>
+      <Symbol Name="OnChangeFaultSuspected" Address="0x00046408" Size="96"/>
+      <Symbol Name="OnChangeFaultActive" Address="0x00046468" Size="96"/>
+      <Symbol Name="OnChangeFaultOccurred" Address="0x000464C8" Size="84"/>
+      <Symbol Name="SetFaultSuspected" Address="0x0004651C" Size="92"/>
+      <Symbol Name="SetFaultActive" Address="0x00046578" Size="92"/>
+      <Symbol Name="SetFaultOccurred" Address="0x000465D4" Size="92"/>
+      <Symbol Name="GetLastSuspectedFault" Address="0x00046630" Size="12"/>
+      <Symbol Name="GetLastUnsuspectedFault" Address="0x0004663C" Size="12"/>
+      <Symbol Name="GetLastActiveFault" Address="0x00046648" Size="12"/>
+      <Symbol Name="GetLastInactiveFault" Address="0x00046654" Size="12"/>
+      <Symbol Name="GetLastOccurredFault" Address="0x00046660" Size="12"/>
+      <Symbol Name="GetNextFault" Address="0x0004666C" Size="44"/>
+      <Symbol Name="GetNextEnabledFault" Address="0x00046698" Size="108"/>
+      <Symbol Name="GetNextSuspectedFault" Address="0x00046704" Size="120"/>
+      <Symbol Name="GetNextActiveFault" Address="0x0004677C" Size="120"/>
+      <Symbol Name="GetNextOccurredFault" Address="0x000467F4" Size="120"/>
+      <Symbol Name="ClearFault" Address="0x0004686C" Size="128"/>
+      <Symbol Name="UpdateFault" Address="0x000468EC" Size="468"/>
+      <Symbol Name="ResetFaultXY" Address="0x00046AC0" Size="44"/>
+      <Symbol Name="GetFaultProperties" Address="0x00046AEC" Size="264"/>
+      <Symbol Name="GetFaultName" Address="0x00046BF4" Size="8"/>
+      <Symbol Name="GetActionCondForFaultAction" Address="0x00046BFC" Size="152"/>
+      <Symbol Name="GetFaultActionStatus" Address="0x00046C94" Size="44"/>
+      <Symbol Name="GlobalFaultClear" Address="0x00046CC0" Size="176"/>
+      <Symbol Name="FaultManagerPeriodicTick" Address="0x00046D70" Size="688"/>
+      <Symbol Name="BaseEngineController_LS_112_CollectAverage_Init" Address="0x00047020"
+              Size="12"/>
+      <Symbol Name="BaseEngineController_LS_112_CollectAverage_Disable" Address="0x0004702C"
+              Size="12"/>
+      <Symbol Name="BaseEngineController_LS_112_CollectAverage_Start" Address="0x00047038"
+              Size="12"/>
+      <Symbol Name="BaseEngineController_LS_112_CollectAverage" Address="0x00047044"
+              Size="212"/>
+      <Symbol Name="BaseEngineController_LS_112_PassThrough1_Start" Address="0x00047118"
+              Size="16"/>
+      <Symbol Name="BaseEngineController_LS_112_PassThrough1" Address="0x00047128" Size="16"/>
+      <Symbol Name="BaseEngineController_LS_112_SafeDivide" Address="0x00047138" Size="32"/>
+      <Symbol Name="BaseEngineController_LS_112_IfActionSubsystem" Address="0x00047158"
+              Size="8"/>
+      <Symbol Name="BaseEngineController_LS_112_Foreground_Enable" Address="0x00047160"
+              Size="56"/>
+      <Symbol Name="BaseEngineController_LS_112_Foreground_Disable" Address="0x00047198"
+              Size="308"/>
+      <Symbol Name="BaseEngineController_LS_112_GetInstRPM" Address="0x000472CC" Size="56"/>
+      <Symbol Name="BaseEngineController_LS_112_Foreground_Init" Address="0x00047304"
+              Size="1912"/>
+      <Symbol Name="BaseEngineController_LS_112_Foreground_Start" Address="0x00047A7C"
+              Size="1728"/>
+      <Symbol Name="rt_roundd_snf" Address="0x0004813C" Size="180"/>
+      <Symbol Name="BaseEngineController_LS_112_Foreground" Address="0x000481F0" Size="69044"/>
+      <Symbol Name="Trigger_Trans_INJ1" Address="0x00058FA4" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ2" Address="0x00058FCC" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ3" Address="0x00058FF4" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ4" Address="0x0005901C" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ5" Address="0x00059044" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ6" Address="0x0005906C" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ7" Address="0x00059094" Size="40"/>
+      <Symbol Name="Trigger_Trans_INJ8" Address="0x000590BC" Size="40"/>
+      <Symbol Name="mh_MakeUint32" Address="0x000590E4" Size="56"/>
+      <Symbol Name="mh_MoveMTAReverse" Address="0x0005911C" Size="4"/>
+      <Symbol Name="mh_MakeStationAddress" Address="0x00059120" Size="36"/>
+      <Symbol Name="mh_CCPReplyOK" Address="0x00059144" Size="92"/>
+      <Symbol Name="mh_ProcessCCP_Test" Address="0x000591A0" Size="120"/>
+      <Symbol Name="mh_ProcessCCP_SetSessionStatus" Address="0x00059218" Size="52"/>
+      <Symbol Name="mh_ProcessCCP_GetSessionStatus" Address="0x0005924C" Size="140"/>
+      <Symbol Name="mh_ProcessCCP_Connect" Address="0x000592D8" Size="164"/>
+      <Symbol Name="mh_ProcessCCP_SetDAQPointer" Address="0x0005937C" Size="228"/>
+      <Symbol Name="mh_ProcessCCP_GetCCPVersion" Address="0x00059460" Size="160"/>
+      <Symbol Name="mh_ProcessCCP_SelectCalPage" Address="0x00059500" Size="56"/>
+      <Symbol Name="mh_ProcessCCP_SeedCallback" Address="0x00059538" Size="124"/>
+      <Symbol Name="mh_ProcessCCP_GetSeed" Address="0x000595B4" Size="340"/>
+      <Symbol Name="mh_ProcessCCP_Unlock" Address="0x00059708" Size="284"/>
+      <Symbol Name="mh_ProcessCCP_UnSupported" Address="0x00059824" Size="44"/>
+      <Symbol Name="mh_ProcessCCP_BuildChecksum" Address="0x00059850" Size="412"/>
+      <Symbol Name="mh_ProcessCCP_GetMTAVal" Address="0x000599EC" Size="156"/>
+      <Symbol Name="mh_MTAIsCalibration" Address="0x00059A88" Size="112"/>
+      <Symbol Name="mh_MoveMTA_Seek" Address="0x00059AF8" Size="328"/>
+      <Symbol Name="mh_MoveMTAForward" Address="0x00059C40" Size="276"/>
+      <Symbol Name="mh_MoveMTA" Address="0x00059D54" Size="284"/>
+      <Symbol Name="mh_ProcessCCP_SetMTA" Address="0x00059E70" Size="240"/>
+      <Symbol Name="mh_ProcessCCP_ExchangeID" Address="0x00059F60" Size="256"/>
+      <Symbol Name="mh_MTAPostIncrement" Address="0x0005A060" Size="260"/>
+      <Symbol Name="mh_CCP_checksum" Address="0x0005A164" Size="660"/>
+      <Symbol Name="mh_ProcessCCPChecksum" Address="0x0005A3F8" Size="28"/>
+      <Symbol Name="mh_ProcessCCPDaq" Address="0x0005A414" Size="416"/>
+      <Symbol Name="mh_ProcessCCPTick" Address="0x0005A5B4" Size="268"/>
+      <Symbol Name="mh_CCPMemReadCallback" Address="0x0005A6C0" Size="324"/>
+      <Symbol Name="mh_CCP_getmem" Address="0x0005A804" Size="200"/>
+      <Symbol Name="mh_ProcessCCP_ShortUpload" Address="0x0005A8CC" Size="444"/>
+      <Symbol Name="mh_ProcessCCP_Upload" Address="0x0005AA88" Size="368"/>
+      <Symbol Name="MemWrite" Address="0x0005ABF8" Size="120"/>
+      <Symbol Name="mh_CCP_setmem_no_callback" Address="0x0005AC70" Size="92"/>
+      <Symbol Name="mh_ProcessCCP_WriteDAQ" Address="0x0005ACCC" Size="524"/>
+      <Symbol Name="mh_ProcessCCP_GetDAQSize" Address="0x0005AED8" Size="436"/>
+      <Symbol Name="mh_ProcessCCP_StartStopAll" Address="0x0005B08C" Size="312"/>
+      <Symbol Name="mh_ProcessCCP_StartStop" Address="0x0005B1C4" Size="320"/>
+      <Symbol Name="mh_InitCCP" Address="0x0005B304" Size="204"/>
+      <Symbol Name="mh_ProcessCCP_Disconnect" Address="0x0005B3D0" Size="240"/>
+      <Symbol Name="mh_CCP_setmem" Address="0x0005B4C0" Size="260"/>
+      <Symbol Name="mh_ProcessCCP_Download6" Address="0x0005B5C4" Size="312"/>
+      <Symbol Name="mh_ProcessCCP_Download" Address="0x0005B6FC" Size="388"/>
+      <Symbol Name="mh_ProcessCCP" Address="0x0005B880" Size="172"/>
+      <Symbol Name="mh_CCPMemWriteCallback" Address="0x0005B92C" Size="320"/>
+      <Symbol Name="SHUTDOWNTask_SendEvent" Address="0x0005BA6C" Size="4"/>
+      <Symbol Name="eTPU_Startup" Address="0x0005BA70" Size="44"/>
+      <Symbol Name="MotoCoder_TaskEvent_Post" Address="0x0005BA9C" Size="52"/>
+      <Symbol Name="SHUTDOWNTask_PostEvent" Address="0x0005BAD0" Size="20"/>
+      <Symbol Name="MotoCoder_TaskEventQueue_Execute" Address="0x0005BAE4" Size="136"/>
+      <Symbol Name="BGNDTask_500000" Address="0x0005BB6C" Size="48"/>
+      <Symbol Name="BGNDTask_100000" Address="0x0005BB9C" Size="48"/>
+      <Symbol Name="BGNDTask_50000" Address="0x0005BBCC" Size="68"/>
+      <Symbol Name="BGNDTask_1000000" Address="0x0005BC10" Size="72"/>
+      <Symbol Name="FGNDTask_25000" Address="0x0005BC58" Size="168"/>
+      <Symbol Name="FGNDTask_5000" Address="0x0005BD00" Size="68"/>
+      <Symbol Name="FGNDTask_100000" Address="0x0005BD44" Size="88"/>
+      <Symbol Name="ApplicationInit" Address="0x0005BD9C" Size="360"/>
+      <Symbol Name="SaveCalibration" Address="0x0005BF04" Size="128"/>
+      <Symbol Name="LoadCalibration" Address="0x0005BF84" Size="56"/>
+      <Symbol Name="OpenMemory" Address="0x0005BFBC" Size="44"/>
+      <Symbol Name="Timer_FreeRunningCounter_GetDeltaUpdateReference_us" Address="0x0005BFE8"
+              Size="120"/>
+      <Symbol Name="Timer_FreeRunningCounter_GetRawTicksFromTime" Address="0x0005C060"
+              Size="32"/>
+      <Symbol Name="Timer_FreeRunningCounter_ResetTime" Address="0x0005C080" Size="44"/>
+      <Symbol Name="ApplicationOpen" Address="0x0005C0AC" Size="260"/>
+      <Symbol Name="MainAppTask" Address="0x0005C1B0" Size="96"/>
+      <Symbol Name="Timer_FreeRunningCounter_GetTime" Address="0x0005C210" Size="168"/>
+      <Symbol Name="RandomNumber_Get" Address="0x0005C2B8" Size="92"/>
+      <Symbol Name="Module_Shutdown" Address="0x0005C314" Size="92"/>
+      <Symbol Name="CheckApplicationStatus" Address="0x0005C370" Size="600"/>
+      <Symbol Name="App_RTITimer_OnTick" Address="0x0005C5C8" Size="480"/>
+      <Symbol Name="CAN_FillMotoTronBootObj" Address="0x0005C7A8" Size="92"/>
+      <Symbol Name="CANFrame_Queue_Create" Address="0x0005C804" Size="24"/>
+      <Symbol Name="CCP1_SetIDFilter" Address="0x0005C81C" Size="20"/>
+      <Symbol Name="CAN_1_KeySuite_SetIDFilter" Address="0x0005C830" Size="20"/>
+      <Symbol Name="CAN_2_KeySuite_SetIDFilter" Address="0x0005C844" Size="20"/>
+      <Symbol Name="CAN_2_Error_Status_Get" Address="0x0005C858" Size="196"/>
+      <Symbol Name="CAN_1_Error_Status_Get" Address="0x0005C91C" Size="196"/>
+      <Symbol Name="RxSlot_9124p0001_Receive" Address="0x0005C9E0" Size="248"/>
+      <Symbol Name="RxSlot_9123p0002_Receive" Address="0x0005CAD8" Size="248"/>
+      <Symbol Name="RxSlot_9015p0001_Receive" Address="0x0005CBD0" Size="248"/>
+      <Symbol Name="RxSlot_9014p0001_Receive" Address="0x0005CCC8" Size="248"/>
+      <Symbol Name="RxSlot_9013p0001_Receive" Address="0x0005CDC0" Size="248"/>
+      <Symbol Name="CANFrame_Queue_Depth" Address="0x0005CEB8" Size="92"/>
+      <Symbol Name="CAN_2_TransmitQueueDepth" Address="0x0005CF14" Size="16"/>
+      <Symbol Name="CAN_1_TransmitQueueDepth" Address="0x0005CF24" Size="16"/>
+      <Symbol Name="CANFrame_Queue_Dequeue" Address="0x0005CF34" Size="172"/>
+      <Symbol Name="CAN_2_KeySuite_Receive" Address="0x0005CFE0" Size="208"/>
+      <Symbol Name="CAN_1_KeySuite_Receive" Address="0x0005D0B0" Size="208"/>
+      <Symbol Name="CCP1_Receive" Address="0x0005D180" Size="208"/>
+      <Symbol Name="CANFrame_Queue_Enqueue" Address="0x0005D250" Size="180"/>
+      <Symbol Name="CAN_2_ReceiveDispatch" Address="0x0005D304" Size="176"/>
+      <Symbol Name="CAN_1_ReceiveDispatch" Address="0x0005D3B4" Size="612"/>
+      <Symbol Name="CAN_Rx_Buffer_ISR" Address="0x0005D618" Size="604"/>
+      <Symbol Name="CAN_LoadTransmitBuffer" Address="0x0005D874" Size="188"/>
+      <Symbol Name="CAN_Queued_TransmitComplete" Address="0x0005D930" Size="84"/>
+      <Symbol Name="CAN_Tx_Buffer_ISR" Address="0x0005D984" Size="64"/>
+      <Symbol Name="CAN_Queued_PeriodicKick" Address="0x0005D9C4" Size="144"/>
+      <Symbol Name="CAN_Queued_Transmit" Address="0x0005DA54" Size="364"/>
+      <Symbol Name="CAN_2_Transmit" Address="0x0005DBC0" Size="88"/>
+      <Symbol Name="CAN_1_Transmit" Address="0x0005DC18" Size="88"/>
+      <Symbol Name="FLEXCAN2_B_Create" Address="0x0005DC70" Size="248"/>
+      <Symbol Name="CAN_2_Create" Address="0x0005DD68" Size="84"/>
+      <Symbol Name="FLEXCAN2_A_Create" Address="0x0005DDBC" Size="248"/>
+      <Symbol Name="CAN_1_Create" Address="0x0005DEB4" Size="124"/>
+      <Symbol Name="NonVolatile_NonVolatileStatus_Reset" Address="0x0005DF30" Size="16"/>
+      <Symbol Name="calculate_crc" Address="0x0005DF40" Size="108"/>
+      <Symbol Name="NonVolatile_CloseDataStore" Address="0x0005DFAC" Size="4"/>
+      <Symbol Name="NonVolatile_StoreNonVolatile" Address="0x0005DFB0" Size="248"/>
+      <Symbol Name="NonVolatile_RestoreDefaultNonVolatile" Address="0x0005E0A8" Size="108"/>
+      <Symbol Name="NonVolatile_OpenNonVolatile" Address="0x0005E114" Size="436"/>
+      <Symbol Name="NonVolatile_OpenDataStore" Address="0x0005E2C8" Size="132"/>
+      <Symbol Name="SPI_B_Create" Address="0x0005E34C" Size="88"/>
+      <Symbol Name="VISTA_1_Knock_IIR_Coefficient_Convert_FixedPtToReal" Address="0x0005E3A4"
+              Size="32"/>
+      <Symbol Name="VISTA_1_Knock_IIR_Coefficient_Convert_RealToFixedPt" Address="0x0005E3C4"
+              Size="68"/>
+      <Symbol Name="CNK_EncoderOnPeriodicTooth" Address="0x0005E408" Size="64"/>
+      <Symbol Name="CNK_Encoder_OnPeriodic_CircuitSpecific" Address="0x0005E448" Size="8"/>
+      <Symbol Name="CNK_Encoder_SecondarySensingOffset_Set" Address="0x0005E450" Size="4"/>
+      <Symbol Name="CNK_Encoder_EncoderPhase_Change" Address="0x0005E454" Size="4"/>
+      <Symbol Name="CNK_Encoder_DegreesInCycle_Get" Address="0x0005E458" Size="8"/>
+      <Symbol Name="CNK_Encoder_PulseScheduling_IsPossible" Address="0x0005E460" Size="12"/>
+      <Symbol Name="CNK_Encoder_IsEvent1FirstToOccur" Address="0x0005E46C" Size="272"/>
+      <Symbol Name="CNK_Encoder_GetNextArrEventToOccur" Address="0x0005E57C" Size="244"/>
+      <Symbol Name="CNK_Encoder_IsAngleBetween" Address="0x0005E670" Size="280"/>
+      <Symbol Name="CNK_Encoder_GetNextEventToOccur" Address="0x0005E788" Size="240"/>
+      <Symbol Name="CNK_Encoder_NumDegreesPerCycle_Get" Address="0x0005E878" Size="8"/>
+      <Symbol Name="CNK_Encoder_NearnessProtectedStopAngle_Get" Address="0x0005E880"
+              Size="148"/>
+      <Symbol Name="CNK_Encoder_Angle_Get" Address="0x0005E914" Size="44"/>
+      <Symbol Name="CNK_Encoder_EncoderState_Get" Address="0x0005E940" Size="12"/>
+      <Symbol Name="CNK_Encoder_EncoderError_Get" Address="0x0005E94C" Size="12"/>
+      <Symbol Name="SPI_C_Create" Address="0x0005E958" Size="88"/>
+      <Symbol Name="RS485_SerialLink_Create" Address="0x0005E9B0" Size="92"/>
+      <Symbol Name="RS485_SerialLink_MaxAllowedBaud_Get" Address="0x0005EA0C" Size="12"/>
+      <Symbol Name="RS485_SerialLink_BaudRate_Change" Address="0x0005EA18" Size="48"/>
+      <Symbol Name="RS485_SerialLink_BaudRate_Get" Address="0x0005EA48" Size="44"/>
+      <Symbol Name="RS485_SerialLink_ReadSync" Address="0x0005EA74" Size="68"/>
+      <Symbol Name="RS485_SerialLink_Transmit_WithCallbackOnComplete" Address="0x0005EAB8"
+              Size="72"/>
+      <Symbol Name="RS485_SerialLink_Transmit" Address="0x0005EB00" Size="12"/>
+      <Symbol Name="RS485_SerialLink_TxQueue_Purge" Address="0x0005EB0C" Size="44"/>
+      <Symbol Name="RS485_SerialLink_RxQueue_Purge" Address="0x0005EB38" Size="44"/>
+      <Symbol Name="RS485_SerialLink_RxQueueDepth_Get" Address="0x0005EB64" Size="44"/>
+      <Symbol Name="RS485_SerialLink_TxQueueDepth_Get" Address="0x0005EB90" Size="44"/>
+      <Symbol Name="RS485_SerialLink_ModuleId_Get" Address="0x0005EBBC" Size="8"/>
+      <Symbol Name="ContinuousScan_eQADCQueue_Create" Address="0x0005EBC4" Size="56"/>
+      <Symbol Name="AN2_AnalogInput_Get" Address="0x0005EBFC" Size="76"/>
+      <Symbol Name="AN3_AnalogInput_Get" Address="0x0005EC48" Size="76"/>
+      <Symbol Name="AN4_AnalogInput_Get" Address="0x0005EC94" Size="76"/>
+      <Symbol Name="AN5_AnalogInput_Get" Address="0x0005ECE0" Size="76"/>
+      <Symbol Name="AN6_AnalogInput_Get" Address="0x0005ED2C" Size="76"/>
+      <Symbol Name="AN15_AnalogInput_Get" Address="0x0005ED78" Size="76"/>
+      <Symbol Name="AN7_AnalogInput_Get" Address="0x0005EDC4" Size="76"/>
+      <Symbol Name="AN8_AnalogInput_Get" Address="0x0005EE10" Size="76"/>
+      <Symbol Name="AN9_AnalogInput_Get" Address="0x0005EE5C" Size="76"/>
+      <Symbol Name="AN10_AnalogInput_Get" Address="0x0005EEA8" Size="76"/>
+      <Symbol Name="AN11_AnalogInput_Get" Address="0x0005EEF4" Size="76"/>
+      <Symbol Name="AN14_AnalogInput_Get" Address="0x0005EF40" Size="76"/>
+      <Symbol Name="ECUP_AnalogInput_Get" Address="0x0005EF8C" Size="76"/>
+      <Symbol Name="H1_Imon_AnalogInput_Get" Address="0x0005EFD8" Size="76"/>
+      <Symbol Name="SPD1_FrequencyInput_TriggerOnPulseCnt_Set" Address="0x0005F024" Size="4"/>
+      <Symbol Name="SPD1_FrequencyInput_Period_Raw_Get32Bit" Address="0x0005F028" Size="56"/>
+      <Symbol Name="SPD1_FrequencyInput_Period_Raw_Get16Bit" Address="0x0005F060" Size="56"/>
+      <Symbol Name="SPD2_FrequencyInput_TriggerOnPulseCnt_Set" Address="0x0005F098" Size="4"/>
+      <Symbol Name="SPD2_FrequencyInput_Period_Raw_Get32Bit" Address="0x0005F09C" Size="56"/>
+      <Symbol Name="SPD2_FrequencyInput_Period_Raw_Get16Bit" Address="0x0005F0D4" Size="56"/>
+      <Symbol Name="SPD3_FrequencyInput_TriggerOnPulseCnt_Set" Address="0x0005F10C" Size="4"/>
+      <Symbol Name="SPD3_FrequencyInput_Period_Raw_Get32Bit" Address="0x0005F110" Size="56"/>
+      <Symbol Name="SPD3_FrequencyInput_Period_Raw_Get16Bit" Address="0x0005F148" Size="56"/>
+      <Symbol Name="LSO9_PWMOutput_PWMOutput_Create" Address="0x0005F180" Size="72"/>
+      <Symbol Name="LSO9_PWMOutput_PWMOutput_Set" Address="0x0005F1C8" Size="80"/>
+      <Symbol Name="LSO9_PWMOutput_PWMOutput_Stop" Address="0x0005F218" Size="52"/>
+      <Symbol Name="LSO10_PWMOutput_PWMOutput_Create" Address="0x0005F24C" Size="72"/>
+      <Symbol Name="LSO10_PWMOutput_PWMOutput_Set" Address="0x0005F294" Size="80"/>
+      <Symbol Name="LSO10_PWMOutput_PWMOutput_Stop" Address="0x0005F2E4" Size="52"/>
+      <Symbol Name="H1p_PWMOutput_Create" Address="0x0005F318" Size="72"/>
+      <Symbol Name="H1p_PWMOutput_Set" Address="0x0005F360" Size="80"/>
+      <Symbol Name="H1p_PWMOutput_Stop" Address="0x0005F3B0" Size="52"/>
+      <Symbol Name="H1m_PWMOutput_Create" Address="0x0005F3E4" Size="72"/>
+      <Symbol Name="H1m_PWMOutput_Set" Address="0x0005F42C" Size="80"/>
+      <Symbol Name="H1m_PWMOutput_Stop" Address="0x0005F47C" Size="52"/>
+      <Symbol Name="H1_InhibitA_PWMOutput_Create" Address="0x0005F4B0" Size="72"/>
+      <Symbol Name="H1_InhibitA_PWMOutput_Set" Address="0x0005F4F8" Size="80"/>
+      <Symbol Name="H1_InhibitA_PWMOutput_Stop" Address="0x0005F548" Size="52"/>
+      <Symbol Name="H1_InhibitB_PWMOutput_Create" Address="0x0005F57C" Size="72"/>
+      <Symbol Name="H1_InhibitB_PWMOutput_Set" Address="0x0005F5C4" Size="80"/>
+      <Symbol Name="H1_InhibitB_PWMOutput_Stop" Address="0x0005F614" Size="52"/>
+      <Symbol Name="H1p_H1m_PWMOutput_Create" Address="0x0005F648" Size="4"/>
+      <Symbol Name="H1p_H1m_PWMOutput_Enable_Set" Address="0x0005F64C" Size="88"/>
+      <Symbol Name="H1p_H1m_PWMOutput_CM_CurrentMeasurement_mA_Get" Address="0x0005F6A4"
+              Size="52"/>
+      <Symbol Name="H2p_PWMOutput_Create" Address="0x0005F6D8" Size="72"/>
+      <Symbol Name="H2p_PWMOutput_Set" Address="0x0005F720" Size="80"/>
+      <Symbol Name="H2p_PWMOutput_Stop" Address="0x0005F770" Size="52"/>
+      <Symbol Name="H2m_PWMOutput_Create" Address="0x0005F7A4" Size="72"/>
+      <Symbol Name="H2m_PWMOutput_Set" Address="0x0005F7EC" Size="80"/>
+      <Symbol Name="H2m_PWMOutput_Stop" Address="0x0005F83C" Size="52"/>
+      <Symbol Name="LSO8_PWMOutput_PWMOutput_Create" Address="0x0005F870" Size="72"/>
+      <Symbol Name="LSO8_PWMOutput_PWMOutput_Set" Address="0x0005F8B8" Size="80"/>
+      <Symbol Name="LSO8_PWMOutput_PWMOutput_Stop" Address="0x0005F908" Size="52"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueue_Create" Address="0x0005F93C" Size="56"/>
+      <Symbol Name="QADC_EST1_AnalogInput_Get" Address="0x0005F974" Size="76"/>
+      <Symbol Name="QADC_EST2_AnalogInput_Get" Address="0x0005F9C0" Size="76"/>
+      <Symbol Name="QADC_EST3_AnalogInput_Get" Address="0x0005FA0C" Size="76"/>
+      <Symbol Name="QADC_EST4_AnalogInput_Get" Address="0x0005FA58" Size="76"/>
+      <Symbol Name="QADC_EST5_AnalogInput_Get" Address="0x0005FAA4" Size="76"/>
+      <Symbol Name="QADC_EST6_AnalogInput_Get" Address="0x0005FAF0" Size="76"/>
+      <Symbol Name="QADC_EST7_AnalogInput_Get" Address="0x0005FB3C" Size="76"/>
+      <Symbol Name="QADC_EST8_AnalogInput_Get" Address="0x0005FB88" Size="76"/>
+      <Symbol Name="SPI_D_Create" Address="0x0005FBD4" Size="88"/>
+      <Symbol Name="DOut11001p0004_DiscreteOutput_Get" Address="0x0005FC2C" Size="20"/>
+      <Symbol Name="DOut11529p0004_DiscreteOutput_Get" Address="0x0005FC40" Size="20"/>
+      <Symbol Name="H2_InhibitA_DiscreteOutput_Get" Address="0x0005FC54" Size="20"/>
+      <Symbol Name="H2_InhibitB_DiscreteOutput_Get" Address="0x0005FC68" Size="20"/>
+      <Symbol Name="EST1_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FC7C"
+              Size="52"/>
+      <Symbol Name="EST2_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FCB0"
+              Size="52"/>
+      <Symbol Name="EST3_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FCE4"
+              Size="52"/>
+      <Symbol Name="EST4_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FD18"
+              Size="52"/>
+      <Symbol Name="EST5_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FD4C"
+              Size="52"/>
+      <Symbol Name="EST6_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FD80"
+              Size="52"/>
+      <Symbol Name="EST7_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FDB4"
+              Size="52"/>
+      <Symbol Name="EST8_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FDE8"
+              Size="52"/>
+      <Symbol Name="INJ1_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FE1C"
+              Size="44"/>
+      <Symbol Name="INJ2_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FE48"
+              Size="44"/>
+      <Symbol Name="INJ3_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FE74"
+              Size="44"/>
+      <Symbol Name="INJ4_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FEA0"
+              Size="44"/>
+      <Symbol Name="INJ5_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FECC"
+              Size="44"/>
+      <Symbol Name="INJ6_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FEF8"
+              Size="44"/>
+      <Symbol Name="INJ7_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FF24"
+              Size="44"/>
+      <Symbol Name="INJ8_PSPOutput_MinDisplacementForPulseScheduling_Get"
+              Address="0x0005FF50"
+              Size="44"/>
+      <Symbol Name="CNK_Encoder_OnError_Callback" Address="0x0005FF7C" Size="56"/>
+      <Symbol Name="CNK_Encoder_OnStateChanged_Callback" Address="0x0005FFB4" Size="80"/>
+      <Symbol Name="CNK_EncoderOnPeriodicTooth_Tooth_6_12_18_24_30_36_42"
+              Address="0x00060004"
+              Size="76"/>
+      <Symbol Name="CNK_EncoderOnPeriodicTooth_Tooth_3_9_15_21_27_33_39_45"
+              Address="0x00060050"
+              Size="76"/>
+      <Symbol Name="CNK_EncoderOnPeriodicTooth_Tooth_1_2_4_5_7_8_10_11_13_14_16_17_19_20_22_23_25_26_28_29_31_32_34_35_37_38_40_41_43_44_46_47"
+              Address="0x0006009C"
+              Size="48"/>
+      <Symbol Name="CNK_EncoderOnPeriodicTooth_Tooth_0" Address="0x000600CC" Size="92"/>
+      <Symbol Name="INJ8_PSPOutput_Stop" Address="0x00060128" Size="80"/>
+      <Symbol Name="INJ8_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x00060178"
+              Size="84"/>
+      <Symbol Name="INJ8_PSPOutput_OnPulseEnd_Callback" Address="0x000601CC" Size="68"/>
+      <Symbol Name="INJ8_PSPOutput_Condition_Set" Address="0x00060210" Size="56"/>
+      <Symbol Name="INJ7_PSPOutput_Stop" Address="0x00060248" Size="80"/>
+      <Symbol Name="INJ7_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x00060298"
+              Size="84"/>
+      <Symbol Name="INJ7_PSPOutput_OnPulseEnd_Callback" Address="0x000602EC" Size="68"/>
+      <Symbol Name="INJ7_PSPOutput_Condition_Set" Address="0x00060330" Size="56"/>
+      <Symbol Name="INJ6_PSPOutput_Stop" Address="0x00060368" Size="80"/>
+      <Symbol Name="INJ6_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x000603B8"
+              Size="84"/>
+      <Symbol Name="INJ6_PSPOutput_OnPulseEnd_Callback" Address="0x0006040C" Size="68"/>
+      <Symbol Name="INJ6_PSPOutput_Condition_Set" Address="0x00060450" Size="56"/>
+      <Symbol Name="INJ5_PSPOutput_Stop" Address="0x00060488" Size="80"/>
+      <Symbol Name="INJ5_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x000604D8"
+              Size="84"/>
+      <Symbol Name="INJ5_PSPOutput_OnPulseEnd_Callback" Address="0x0006052C" Size="68"/>
+      <Symbol Name="INJ5_PSPOutput_Condition_Set" Address="0x00060570" Size="56"/>
+      <Symbol Name="INJ4_PSPOutput_Stop" Address="0x000605A8" Size="80"/>
+      <Symbol Name="INJ4_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x000605F8"
+              Size="84"/>
+      <Symbol Name="INJ4_PSPOutput_OnPulseEnd_Callback" Address="0x0006064C" Size="68"/>
+      <Symbol Name="INJ4_PSPOutput_Condition_Set" Address="0x00060690" Size="56"/>
+      <Symbol Name="INJ3_PSPOutput_Stop" Address="0x000606C8" Size="80"/>
+      <Symbol Name="INJ3_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x00060718"
+              Size="84"/>
+      <Symbol Name="INJ3_PSPOutput_OnPulseEnd_Callback" Address="0x0006076C" Size="68"/>
+      <Symbol Name="INJ3_PSPOutput_Condition_Set" Address="0x000607B0" Size="56"/>
+      <Symbol Name="INJ2_PSPOutput_Stop" Address="0x000607E8" Size="80"/>
+      <Symbol Name="INJ2_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x00060838"
+              Size="84"/>
+      <Symbol Name="INJ2_PSPOutput_OnPulseEnd_Callback" Address="0x0006088C" Size="68"/>
+      <Symbol Name="INJ2_PSPOutput_Condition_Set" Address="0x000608D0" Size="56"/>
+      <Symbol Name="INJ1_PSPOutput_Stop" Address="0x00060908" Size="80"/>
+      <Symbol Name="INJ1_PSPOutput_TransientBehavior_OnEndOfPulse" Address="0x00060958"
+              Size="84"/>
+      <Symbol Name="INJ1_PSPOutput_OnPulseEnd_Callback" Address="0x000609AC" Size="68"/>
+      <Symbol Name="INJ1_PSPOutput_Condition_Set" Address="0x000609F0" Size="56"/>
+      <Symbol Name="EST8_PSPOutput_Stop" Address="0x00060A28" Size="52"/>
+      <Symbol Name="EST8_PSPOutput_Condition_Set" Address="0x00060A5C" Size="56"/>
+      <Symbol Name="EST7_PSPOutput_Stop" Address="0x00060A94" Size="52"/>
+      <Symbol Name="EST7_PSPOutput_Condition_Set" Address="0x00060AC8" Size="56"/>
+      <Symbol Name="EST6_PSPOutput_Stop" Address="0x00060B00" Size="52"/>
+      <Symbol Name="EST6_PSPOutput_Condition_Set" Address="0x00060B34" Size="56"/>
+      <Symbol Name="EST5_PSPOutput_Stop" Address="0x00060B6C" Size="52"/>
+      <Symbol Name="EST5_PSPOutput_Condition_Set" Address="0x00060BA0" Size="56"/>
+      <Symbol Name="EST4_PSPOutput_Stop" Address="0x00060BD8" Size="52"/>
+      <Symbol Name="EST4_PSPOutput_Condition_Set" Address="0x00060C0C" Size="56"/>
+      <Symbol Name="EST3_PSPOutput_Stop" Address="0x00060C44" Size="52"/>
+      <Symbol Name="EST3_PSPOutput_Condition_Set" Address="0x00060C78" Size="56"/>
+      <Symbol Name="EST2_PSPOutput_Stop" Address="0x00060CB0" Size="52"/>
+      <Symbol Name="EST2_PSPOutput_Condition_Set" Address="0x00060CE4" Size="56"/>
+      <Symbol Name="EST1_PSPOutput_Stop" Address="0x00060D1C" Size="52"/>
+      <Symbol Name="EST1_PSPOutput_Condition_Set" Address="0x00060D50" Size="56"/>
+      <Symbol Name="EST8_PSPOutput_HardStart_HardStop_Set" Address="0x00060D88" Size="160"/>
+      <Symbol Name="EST7_PSPOutput_HardStart_HardStop_Set" Address="0x00060E28" Size="160"/>
+      <Symbol Name="EST6_PSPOutput_HardStart_HardStop_Set" Address="0x00060EC8" Size="160"/>
+      <Symbol Name="EST5_PSPOutput_HardStart_HardStop_Set" Address="0x00060F68" Size="160"/>
+      <Symbol Name="EST4_PSPOutput_HardStart_HardStop_Set" Address="0x00061008" Size="160"/>
+      <Symbol Name="EST3_PSPOutput_HardStart_HardStop_Set" Address="0x000610A8" Size="160"/>
+      <Symbol Name="EST2_PSPOutput_HardStart_HardStop_Set" Address="0x00061148" Size="160"/>
+      <Symbol Name="EST1_PSPOutput_HardStart_HardStop_Set" Address="0x000611E8" Size="160"/>
+      <Symbol Name="CAMPullup_DiscreteOutput_Get" Address="0x00061288" Size="76"/>
+      <Symbol Name="SPD1Pullup_DiscreteOutput_Get" Address="0x000612D4" Size="76"/>
+      <Symbol Name="ODRC_DiscreteOutput_Get" Address="0x00061320" Size="76"/>
+      <Symbol Name="CNKPullup_DiscreteOutput_Get" Address="0x0006136C" Size="76"/>
+      <Symbol Name="MotoCoder_DiscreteOutput_UpdateAlways_Create" Address="0x000613B8"
+              Size="52"/>
+      <Symbol Name="CAMPullup_DiscreteOutput_Create" Address="0x000613EC" Size="20"/>
+      <Symbol Name="SPD1Pullup_DiscreteOutput_Create" Address="0x00061400" Size="20"/>
+      <Symbol Name="ODRC_DiscreteOutput_Create" Address="0x00061414" Size="20"/>
+      <Symbol Name="CNKPullup_DiscreteOutput_Create" Address="0x00061428" Size="20"/>
+      <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Create" Address="0x0006143C"
+              Size="56"/>
+      <Symbol Name="H2_InhibitB_DiscreteOutput_Create" Address="0x00061474" Size="32"/>
+      <Symbol Name="H2_InhibitA_DiscreteOutput_Create" Address="0x00061494" Size="32"/>
+      <Symbol Name="DOut11529p0004_DiscreteOutput_Create" Address="0x000614B4" Size="32"/>
+      <Symbol Name="DOut11001p0004_DiscreteOutput_Create" Address="0x000614D4" Size="32"/>
+      <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Stop" Address="0x000614F4"
+              Size="44"/>
+      <Symbol Name="H2_InhibitB_DiscreteOutput_Stop" Address="0x00061520" Size="28"/>
+      <Symbol Name="H2_InhibitA_DiscreteOutput_Stop" Address="0x0006153C" Size="28"/>
+      <Symbol Name="DOut11529p0004_DiscreteOutput_Stop" Address="0x00061558" Size="28"/>
+      <Symbol Name="DOut11001p0004_DiscreteOutput_Stop" Address="0x00061574" Size="28"/>
+      <Symbol Name="MotoCoder_DiscreteOutput_UpdateOnChange_Set" Address="0x00061590"
+              Size="144"/>
+      <Symbol Name="H2_InhibitB_DiscreteOutput_Set" Address="0x00061620" Size="32"/>
+      <Symbol Name="H2m_PWMOutput_PWMOutput_Stop" Address="0x00061640" Size="52"/>
+      <Symbol Name="H2m_PWMOutput_PWMOutput_Set" Address="0x00061674" Size="104"/>
+      <Symbol Name="H2_InhibitA_DiscreteOutput_Set" Address="0x000616DC" Size="32"/>
+      <Symbol Name="H2p_PWMOutput_PWMOutput_Stop" Address="0x000616FC" Size="52"/>
+      <Symbol Name="H2p_PWMOutput_PWMOutput_Set" Address="0x00061730" Size="104"/>
+      <Symbol Name="DOut11529p0004_DiscreteOutput_Set" Address="0x00061798" Size="32"/>
+      <Symbol Name="DOut11001p0004_DiscreteOutput_Set" Address="0x000617B8" Size="32"/>
+      <Symbol Name="EEPROM_1_Create" Address="0x000617D8" Size="44"/>
+      <Symbol Name="INJ8_PSPOutput_Create" Address="0x00061804" Size="64"/>
+      <Symbol Name="INJ7_PSPOutput_Create" Address="0x00061844" Size="64"/>
+      <Symbol Name="INJ6_PSPOutput_Create" Address="0x00061884" Size="64"/>
+      <Symbol Name="INJ5_PSPOutput_Create" Address="0x000618C4" Size="64"/>
+      <Symbol Name="INJ4_PSPOutput_Create" Address="0x00061904" Size="64"/>
+      <Symbol Name="INJ3_PSPOutput_Create" Address="0x00061944" Size="64"/>
+      <Symbol Name="INJ2_PSPOutput_Create" Address="0x00061984" Size="64"/>
+      <Symbol Name="INJ1_PSPOutput_Create" Address="0x000619C4" Size="64"/>
+      <Symbol Name="MC33800_INJ8_DiscreteOutput_Create" Address="0x00061A04" Size="100"/>
+      <Symbol Name="MC33800_INJ7_DiscreteOutput_Create" Address="0x00061A68" Size="100"/>
+      <Symbol Name="MC33800_INJ6_DiscreteOutput_Create" Address="0x00061ACC" Size="100"/>
+      <Symbol Name="MC33800_INJ5_DiscreteOutput_Create" Address="0x00061B30" Size="100"/>
+      <Symbol Name="MC33800_INJ4_DiscreteOutput_Create" Address="0x00061B94" Size="100"/>
+      <Symbol Name="MC33800_INJ3_DiscreteOutput_Create" Address="0x00061BF8" Size="100"/>
+      <Symbol Name="MC33800_INJ2_DiscreteOutput_Create" Address="0x00061C5C" Size="100"/>
+      <Symbol Name="MC33800_INJ1_DiscreteOutput_Create" Address="0x00061CC0" Size="100"/>
+      <Symbol Name="MC33800_LSO8_DiscreteOutput_Create" Address="0x00061D24" Size="104"/>
+      <Symbol Name="MC33800_LSO10_DiscreteOutput_Create" Address="0x00061D8C" Size="104"/>
+      <Symbol Name="MC33800_LSO9_DiscreteOutput_Create" Address="0x00061DF4" Size="104"/>
+      <Symbol Name="MC33800_MPRD_DiscreteOutput_Create" Address="0x00061E5C" Size="104"/>
+      <Symbol Name="MC33800_LSO2_DiscreteOutput_Create" Address="0x00061EC4" Size="104"/>
+      <Symbol Name="DOut10176p0004_DiscreteOutput_Create" Address="0x00061F2C" Size="112"/>
+      <Symbol Name="EST8_Diagnostic_Data_ADCValue_Get" Address="0x00061F9C" Size="52"/>
+      <Symbol Name="EST7_Diagnostic_Data_ADCValue_Get" Address="0x00061FD0" Size="52"/>
+      <Symbol Name="EST6_Diagnostic_Data_ADCValue_Get" Address="0x00062004" Size="52"/>
+      <Symbol Name="EST5_Diagnostic_Data_ADCValue_Get" Address="0x00062038" Size="52"/>
+      <Symbol Name="EST4_Diagnostic_Data_ADCValue_Get" Address="0x0006206C" Size="52"/>
+      <Symbol Name="EST3_Diagnostic_Data_ADCValue_Get" Address="0x000620A0" Size="52"/>
+      <Symbol Name="EST2_Diagnostic_Data_ADCValue_Get" Address="0x000620D4" Size="52"/>
+      <Symbol Name="EST1_Diagnostic_Data_ADCValue_Get" Address="0x00062108" Size="52"/>
+      <Symbol Name="EST8_Diagnostic_Trigger" Address="0x0006213C" Size="44"/>
+      <Symbol Name="EST7_Diagnostic_Trigger" Address="0x00062168" Size="44"/>
+      <Symbol Name="EST6_Diagnostic_Trigger" Address="0x00062194" Size="44"/>
+      <Symbol Name="EST5_Diagnostic_Trigger" Address="0x000621C0" Size="44"/>
+      <Symbol Name="EST4_Diagnostic_Trigger" Address="0x000621EC" Size="44"/>
+      <Symbol Name="EST3_Diagnostic_Trigger" Address="0x00062218" Size="44"/>
+      <Symbol Name="EST2_Diagnostic_Trigger" Address="0x00062244" Size="44"/>
+      <Symbol Name="EST1_Diagnostic_Trigger" Address="0x00062270" Size="44"/>
+      <Symbol Name="EST8_PSPOutput_Create" Address="0x0006229C" Size="100"/>
+      <Symbol Name="EST7_PSPOutput_Create" Address="0x00062300" Size="100"/>
+      <Symbol Name="EST6_PSPOutput_Create" Address="0x00062364" Size="100"/>
+      <Symbol Name="EST5_PSPOutput_Create" Address="0x000623C8" Size="100"/>
+      <Symbol Name="EST4_PSPOutput_Create" Address="0x0006242C" Size="100"/>
+      <Symbol Name="EST3_PSPOutput_Create" Address="0x00062490" Size="100"/>
+      <Symbol Name="EST2_PSPOutput_Create" Address="0x000624F4" Size="100"/>
+      <Symbol Name="EST1_PSPOutput_Create" Address="0x00062558" Size="100"/>
+      <Symbol Name="CAM_Encoder_Create" Address="0x000625BC" Size="68"/>
+      <Symbol Name="H1p_H1m_PWMOutput_Stop" Address="0x00062600" Size="84"/>
+      <Symbol Name="H1p_H1m_PWMOutput_PWMOutput_Set" Address="0x00062654" Size="260"/>
+      <Symbol Name="S_SHRC_4_Create" Address="0x00062758" Size="56"/>
+      <Symbol Name="S_SHRC_3_Create" Address="0x00062790" Size="56"/>
+      <Symbol Name="SPD3_FrequencyInput_InstantFrequencyWithDutyCycle_Get"
+              Address="0x000627C8"
+              Size="104"/>
+      <Symbol Name="SPD3_FrequencyInput_InstantFrequency_Get" Address="0x00062830" Size="52"/>
+      <Symbol Name="SPD2_FrequencyInput_InstantFrequencyWithDutyCycle_Get"
+              Address="0x00062864"
+              Size="104"/>
+      <Symbol Name="SPD2_FrequencyInput_InstantFrequency_Get" Address="0x000628CC" Size="52"/>
+      <Symbol Name="SPD1_FrequencyInput_InstantFrequencyWithDutyCycle_Get"
+              Address="0x00062900"
+              Size="104"/>
+      <Symbol Name="SPD1_FrequencyInput_InstantFrequency_Get" Address="0x00062968" Size="52"/>
+      <Symbol Name="SPD3_FrequencyInput_AverageFrequency_Get" Address="0x0006299C" Size="52"/>
+      <Symbol Name="SPD2_FrequencyInput_AverageFrequency_Get" Address="0x000629D0" Size="52"/>
+      <Symbol Name="SPD1_FrequencyInput_AverageFrequency_Get" Address="0x00062A04" Size="52"/>
+      <Symbol Name="SPD3_FrequencyInput_Create" Address="0x00062A38" Size="80"/>
+      <Symbol Name="SPD2_FrequencyInput_Create" Address="0x00062A88" Size="80"/>
+      <Symbol Name="SPD1_FrequencyInput_Create" Address="0x00062AD8" Size="80"/>
+      <Symbol Name="AN13_AnalogInput_Get" Address="0x00062B28" Size="84"/>
+      <Symbol Name="AN12_AnalogInput_Get" Address="0x00062B7C" Size="88"/>
+      <Symbol Name="XDRP_AnalogInput_Get" Address="0x00062BD4" Size="88"/>
+      <Symbol Name="DRVP_AnalogInput_Get" Address="0x00062C2C" Size="88"/>
+      <Symbol Name="MAPSensorPin_AnalogInput_Get" Address="0x00062C84" Size="88"/>
+      <Symbol Name="AN13_Create" Address="0x00062CDC" Size="64"/>
+      <Symbol Name="AN12_Create" Address="0x00062D1C" Size="68"/>
+      <Symbol Name="XDRP_Create" Address="0x00062D60" Size="68"/>
+      <Symbol Name="DRVP_Create" Address="0x00062DA4" Size="68"/>
+      <Symbol Name="MAPSensorPin_Create" Address="0x00062DE8" Size="68"/>
+      <Symbol Name="RS485_SerialLink_Notify_OnError" Address="0x00062E2C" Size="32"/>
+      <Symbol Name="RS485_SerialLink_Notify_OnIdle" Address="0x00062E4C" Size="32"/>
+      <Symbol Name="DOut10176p0004_DiscreteOutput_Stop" Address="0x00062E6C" Size="64"/>
+      <Symbol Name="IO_Stop" Address="0x00062EAC" Size="156"/>
+      <Symbol Name="DOut10176p0004_DiscreteOutput_Set" Address="0x00062F48" Size="144"/>
+      <Symbol Name="ESTOPPin_DigitalInput_Get" Address="0x00062FD8" Size="64"/>
+      <Symbol Name="ESTOPPin_DigitalInput_Create" Address="0x00063018" Size="56"/>
+      <Symbol Name="CNK_Encoder_PseudoRPM_Set" Address="0x00063050" Size="48"/>
+      <Symbol Name="CNK_Encoder_AverageRPM_Get" Address="0x00063080" Size="52"/>
+      <Symbol Name="CNK_Encoder_InstantRPM_Get" Address="0x000630B4" Size="52"/>
+      <Symbol Name="INJ8_PSPOutput_TransientBehavior_Set" Address="0x000630E8" Size="720"/>
+      <Symbol Name="INJ7_PSPOutput_TransientBehavior_Set" Address="0x000633B8" Size="720"/>
+      <Symbol Name="INJ6_PSPOutput_TransientBehavior_Set" Address="0x00063688" Size="720"/>
+      <Symbol Name="INJ5_PSPOutput_TransientBehavior_Set" Address="0x00063958" Size="720"/>
+      <Symbol Name="INJ4_PSPOutput_TransientBehavior_Set" Address="0x00063C28" Size="720"/>
+      <Symbol Name="INJ3_PSPOutput_TransientBehavior_Set" Address="0x00063EF8" Size="720"/>
+      <Symbol Name="INJ2_PSPOutput_TransientBehavior_Set" Address="0x000641C8" Size="720"/>
+      <Symbol Name="INJ1_PSPOutput_TransientBehavior_Set" Address="0x00064498" Size="720"/>
+      <Symbol Name="CNK_Encoder_SensingOffset_Set" Address="0x00064768" Size="48"/>
+      <Symbol Name="CNK_Encoder_Create" Address="0x00064798" Size="140"/>
+      <Symbol Name="OnAngle_FGNDTask_0_90_180_270_360_450_540_630" Address="0x00064824"
+              Size="36"/>
+      <Symbol Name="OnAngle_FGNDTask_0_15_30_45_60_75_90_105_120_135_150_165_180_195_210_225_240_255_270_285_300_315_330_345_360_375_390_405_420_435_450_465_480_495_510_525_540_555_570_585_600_615_630_645_660_675_690_705"
+              Address="0x00064848"
+              Size="32"/>
+      <Symbol Name="OnAngle_FGNDTask_45_135_225_315_405_495_585_675" Address="0x00064868"
+              Size="36"/>
+      <Symbol Name="OnAngle_FGNDTask_0" Address="0x0006488C" Size="32"/>
+      <Symbol Name="VISTA_1_Register_Read" Address="0x000648AC" Size="60"/>
+      <Symbol Name="VISTA_1_Register_Write" Address="0x000648E8" Size="60"/>
+      <Symbol Name="VISTA_1_Create" Address="0x00064924" Size="80"/>
+      <Symbol Name="IO_Create" Address="0x00064974" Size="392"/>
+      <Symbol Name="KeySuite_Manager_MemInit" Address="0x00064AFC" Size="8"/>
+      <Symbol Name="KeySuite_Manager_MemInitStatus" Address="0x00064B04" Size="8"/>
+      <Symbol Name="KeySuite_Manager_OnProgComplete" Address="0x00064B0C" Size="4"/>
+      <Symbol Name="KeySuite_Manager_MemClose" Address="0x00064B10" Size="8"/>
+      <Symbol Name="KeySuite_Manager_TransmitFunction_Get" Address="0x00064B18" Size="76"/>
+      <Symbol Name="KeySuite_Manager_TransmitReply" Address="0x00064B64" Size="112"/>
+      <Symbol Name="KeySuite_Manager_Protocol_Method_Get" Address="0x00064BD4" Size="68"/>
+      <Symbol Name="KeySuite_Manager_FreeReplyObject" Address="0x00064C18" Size="16"/>
+      <Symbol Name="KeySuite_Manager_ConnectionReplyObject_AllocateStatus_Get"
+              Address="0x00064C28"
+              Size="24"/>
+      <Symbol Name="KeySuite_Exception_GetFromNativeError" Address="0x00064C40" Size="140"/>
+      <Symbol Name="KeySuite_Manager_ProtocolMask_Translate" Address="0x00064CCC" Size="36"/>
+      <Symbol Name="KeySuiteSupport_CANLink_GetMyCityID" Address="0x00064CF0" Size="8"/>
+      <Symbol Name="KeySuiteSupport_CANLink_GetClientCityID" Address="0x00064CF8" Size="8"/>
+      <Symbol Name="KeySuiteSupport_CANLink_TXId_Get" Address="0x00064D00" Size="12"/>
+      <Symbol Name="KeySuiteSupport_CANLink_RXId_Get" Address="0x00064D0C" Size="12"/>
+      <Symbol Name="KeySuiteSupport_CANLink_IsTXComplete" Address="0x00064D18" Size="8"/>
+      <Symbol Name="KeySuiteSupport_ReceiptEvent_Set" Address="0x00064D20" Size="4"/>
+      <Symbol Name="KeySuiteSupport_RS485_OnIdleNotify" Address="0x00064D24" Size="4"/>
+      <Symbol Name="KeySuite_Create" Address="0x00064D28" Size="116"/>
+      <Symbol Name="KeySuite_Manager_ReceiptObj_Request" Address="0x00064D9C" Size="156"/>
+      <Symbol Name="KeySuiteSupport_Serial_ChangeBaud" Address="0x00064E38" Size="92"/>
+      <Symbol Name="KeySuiteSupport_Serial_IsBaudSupported" Address="0x00064E94" Size="108"/>
+      <Symbol Name="KeySuite_Manager_AllocateReplyObject" Address="0x00064F00" Size="188"/>
+      <Symbol Name="KeySuiteSupport_Serial_FillMotoTronBootObj" Address="0x00064FBC"
+              Size="112"/>
+      <Symbol Name="KeySuiteSupport_Serial_Transmit" Address="0x0006502C" Size="108"/>
+      <Symbol Name="KeySuite_Manager_TransmitReplyOnSerial" Address="0x00065098" Size="128"/>
+      <Symbol Name="KeySuiteSupport_CANLink_TransmitExtended" Address="0x00065118" Size="92"/>
+      <Symbol Name="KeySuite_Manager_TransmitReplyOnCAN" Address="0x00065174" Size="172"/>
+      <Symbol Name="KeySuite_Manager_MessageHandler_Execute" Address="0x00065220" Size="216"/>
+      <Symbol Name="KeySuite_Manager_OnTimerTick" Address="0x000652F8" Size="176"/>
+      <Symbol Name="KeySuite_RefreshPeriodicTimer" Address="0x000653A8" Size="80"/>
+      <Symbol Name="KeySuite_Manager_OnModuleSupportClose" Address="0x000653F8" Size="420"/>
+      <Symbol Name="KeySuite_Manager_Connection_Find" Address="0x0006559C" Size="292"/>
+      <Symbol Name="KeySuite_Manager_ResetTransport" Address="0x000656C0" Size="112"/>
+      <Symbol Name="KeySuiteSupport_RS485_OnErrorNotify" Address="0x00065730" Size="56"/>
+      <Symbol Name="KeySuite_Manager_Connection_Get" Address="0x00065768" Size="256"/>
+      <Symbol Name="KeySuite_Manager_Connection_GetFromSerial" Address="0x00065868" Size="16"/>
+      <Symbol Name="KeySuite_Manager_OnSerialReceipt" Address="0x00065878" Size="144"/>
+      <Symbol Name="KeySuite_Manager_Connection_GetFromCAN" Address="0x00065908" Size="44"/>
+      <Symbol Name="KeySuite_Manager_OnCANReceipt" Address="0x00065934" Size="168"/>
+      <Symbol Name="KeySuite_MessageHandler" Address="0x000659DC" Size="392"/>
+      <Symbol Name="KeySuite_Manager_ValidateProtocol" Address="0x00065B64" Size="256"/>
+      <Symbol Name="KeySuite_Manager_SecurityChallenge" Address="0x00065C64" Size="100"/>
+      <Symbol Name="KeySuite_Manager_Memory_Read" Address="0x00065CC8" Size="112"/>
+      <Symbol Name="KeySuite_Manager_GetTableItemPtr" Address="0x00065D38" Size="160"/>
+      <Symbol Name="KeySuite_Manager_Table_Write" Address="0x00065DD8" Size="144"/>
+      <Symbol Name="KeySuite_Manager_Table_Read" Address="0x00065E68" Size="136"/>
+      <Symbol Name="KeySuite_Manager_ValidateParameter" Address="0x00065EF0" Size="316"/>
+      <Symbol Name="KeySuite_Manager_Memory_Write" Address="0x0006602C" Size="112"/>
+      <Symbol Name="KeySuite_Manager_ChangeToProtocol" Address="0x0006609C" Size="292"/>
+      <Symbol Name="ModuleSupport_KeySuiteSupport_CloseNonProgrammingCANLinks"
+              Address="0x000661C0"
+              Size="4"/>
+      <Symbol Name="ModuleSupport_EngineeringClock_Open" Address="0x000661C4" Size="24"/>
+      <Symbol Name="ReadModuleConfig" Address="0x000661DC" Size="288"/>
+      <Symbol Name="MotoHawkModelSecondsInUseTick" Address="0x000662FC" Size="24"/>
+      <Symbol Name="rt_InitInfAndNaN" Address="0x00066314" Size="100"/>
+      <Symbol Name="rtIsInf" Address="0x00066378" Size="48"/>
+      <Symbol Name="rtIsInfF" Address="0x000663A8" Size="48"/>
+      <Symbol Name="rtIsNaN" Address="0x000663D8" Size="24"/>
+      <Symbol Name="rtIsNaNF" Address="0x000663F0" Size="24"/>
+      <Symbol Name="rt_ZCFcn" Address="0x00066408" Size="188"/>
+      <Symbol Name="GetERIRequestTablePtr" Address="0x000664C4" Size="20"/>
+      <Symbol Name="TablePrelookup_real_T" Address="0x000664D8" Size="368"/>
+      <Symbol Name="TableInterpolation2D_real_T" Address="0x00066648" Size="264"/>
+      <Symbol Name="TableInterpolation1D_real_T" Address="0x00066750" Size="80"/>
+      <Symbol Name="TableInterpolation1D_int16_T" Address="0x000667A0" Size="76"/>
+      <Symbol Name="TableInterpolation2D_int8_T" Address="0x000667EC" Size="252"/>
+      <Symbol Name="TableInterpolation1D_int8_T" Address="0x000668E8" Size="76"/>
+      <Symbol Name="TableInterpolation2D_uint8_T" Address="0x00066934" Size="232"/>
+      <Symbol Name="Trigger_BGND_BASEx10_PERIODIC_12070p0004" Address="0x00066A1C" Size="88"/>
+      <Symbol Name="Trigger_BGND_BASEx2_PERIODIC_12069p0004" Address="0x00066A74" Size="88"/>
+      <Symbol Name="Trigger_BGND_BASE_PERIODIC_11570p0004" Address="0x00066ACC" Size="1636"/>
+      <Symbol Name="Trigger_BGND_BASE_PERIODIC_12068p0004" Address="0x00067130" Size="88"/>
+      <Symbol Name="Trigger_Encoder_Fault_30" Address="0x00067188" Size="92"/>
+      <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_10085p0004" Address="0x000671E4" Size="140"/>
+      <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_12067p0004" Address="0x00067270" Size="88"/>
+      <Symbol Name="Trigger_FGND_20XRTI_PERIODIC_9951p0004" Address="0x000672C8" Size="140"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1093p0005" Address="0x00067354" Size="232"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_1094p0005" Address="0x0006743C" Size="340"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_11294p0006" Address="0x00067590" Size="2544"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_12064p0004" Address="0x00067F80" Size="88"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_5057p0001" Address="0x00067FD8" Size="11656"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_9815p0006" Address="0x0006AD60" Size="2608"/>
+      <Symbol Name="Trigger_FGND_5XRTI_PERIODIC_9816p0004" Address="0x0006B790" Size="756"/>
+      <Symbol Name="Trigger_FGND_HIRES_6521p0004" Address="0x0006BA84" Size="2260"/>
+      <Symbol Name="Trigger_FGND_MID_TDC_EVENT_12066p0004" Address="0x0006C358" Size="88"/>
+      <Symbol Name="Trigger_FGND_MID_TDC_EVENT_9721p0004" Address="0x0006C3B0" Size="96"/>
+      <Symbol Name="Trigger_FGND_RTI_PERIODIC_11578p0004" Address="0x0006C410" Size="68"/>
+      <Symbol Name="Trigger_FGND_RTI_PERIODIC_12065p0004" Address="0x0006C454" Size="88"/>
+      <Symbol Name="Trigger_FGND_TDC1_EVENT_869p0001" Address="0x0006C4AC" Size="228"/>
+      <Symbol Name="Trigger_FGND_TDC_EVENT_10780p0004" Address="0x0006C590" Size="144"/>
+      <Symbol Name="Trigger_FGND_TDC_EVENT_8437p0004" Address="0x0006C620" Size="152"/>
+      <Symbol Name="Trigger_IDLE_EVENT_11990p0004" Address="0x0006C6B8" Size="100"/>
+      <Symbol Name="Trigger_IDLE_EVENT_9p001" Address="0x0006C71C" Size="396"/>
+      <Symbol Name="Trigger_ONE_SECOND_EVENT_12071p0004" Address="0x0006C8A8" Size="88"/>
+      <Symbol Name="Trigger_STARTUP_EVENT_11965p0004" Address="0x0006C900" Size="108"/>
+      <Symbol Name="Trigger_STARTUP_EVENT_9720p0004" Address="0x0006C96C" Size="80"/>
+      <Symbol Name="exit" Address="0x0006C9BC" Size="64"/>
+      <Symbol Name="free" Address="0x0006C9FC" Size="44"/>
+      <Symbol Name="malloc" Address="0x0006CA28" Size="44"/>
+      <Symbol Name="_malloc_r" Address="0x0006CA54" Size="2224"/>
+      <Symbol Name="memcmp" Address="0x0006D304" Size="164"/>
+      <Symbol Name="memcpy" Address="0x0006D3A8" Size="256"/>
+      <Symbol Name="memset" Address="0x0006D4A8" Size="208"/>
+      <Symbol Name="__malloc_lock" Address="0x0006D578" Size="4"/>
+      <Symbol Name="__malloc_unlock" Address="0x0006D57C" Size="4"/>
+      <Symbol Name="ldexp" Address="0x0006D580" Size="224"/>
+      <Symbol Name="scalbn" Address="0x0006D660" Size="516"/>
+      <Symbol Name="_sbrk_r" Address="0x0006D864" Size="116"/>
+      <Symbol Name="__call_exitprocs" Address="0x0006D8D8" Size="456"/>
+      <Symbol Name="__errno" Address="0x0006DAA0" Size="12"/>
+      <Symbol Name="_malloc_trim_r" Address="0x0006DAAC" Size="312"/>
+      <Symbol Name="_free_r" Address="0x0006DBE4" Size="664"/>
+      <Symbol Name="copysign" Address="0x0006DE7C" Size="16"/>
+      <Symbol Name="finite" Address="0x0006DE8C" Size="16"/>
+      <Symbol Name="ceil" Address="0x0006DE9C" Size="528"/>
+      <Symbol Name="floor" Address="0x0006E0AC" Size="532"/>
+      <Symbol Name="sin" Address="0x0006E2C0" Size="312"/>
+      <Symbol Name="fmod" Address="0x0006E3F8" Size="380"/>
+      <Symbol Name="__ieee754_fmod" Address="0x0006E574" Size="872"/>
+      <Symbol Name="__ieee754_rem_pio2" Address="0x0006E8DC" Size="1728"/>
+      <Symbol Name="__kernel_cos" Address="0x0006EF9C" Size="972"/>
+      <Symbol Name="__kernel_rem_pio2" Address="0x0006F368" Size="3252"/>
+      <Symbol Name="__kernel_sin" Address="0x0007001C" Size="660"/>
+      <Symbol Name="fabs" Address="0x000702B0" Size="24"/>
+      <Symbol Name="__isnand" Address="0x000702C8" Size="44"/>
+      <Symbol Name="matherr" Address="0x000702F4" Size="8"/>
+      <Symbol Name="InternalFlash_Registered_ReadSynch" Address="0x000702FC" Size="52"/>
+      <Symbol Name="Memory_WriteSynch" Address="0x00070330" Size="220"/>
+      <Symbol Name="Memory_ReadSynch" Address="0x0007040C" Size="296"/>
+      <Symbol Name="InternalFlash_WriteSynch" Address="0x00070534" Size="140"/>
+      <Symbol Name="InternalFlash_Registered_WriteSynch" Address="0x000705C0" Size="4"/>
+      <Symbol Name="ModuleSupReg_Memory_Register" Address="0x000705C4" Size="64"/>
+      <Symbol Name="ModuleSupportReg_Memory_ReadSynch" Address="0x00070604" Size="168"/>
+      <Symbol Name="ModuleSupportReg_Memory_WriteSynch" Address="0x000706AC" Size="168"/>
+      <Symbol Name="ModuleSupportStartup_PreOpen" Address="0x00070754" Size="20"/>
+      <Symbol Name="ModuleSupportStartup_Open" Address="0x00070768" Size="40"/>
+      <Symbol Name="ModuleSupport_Close" Address="0x00070790" Size="32"/>
+      <Symbol Name="ModuleSupport_EBI_PreOpen" Address="0x000707B0" Size="4"/>
+      <Symbol Name="ModuleSupport_EBI_Open" Address="0x000707B4" Size="8"/>
+      <Symbol Name="ModuleSupport_ExternalSRAM_PreOpen" Address="0x000707BC" Size="60"/>
+      <Symbol Name="ModuleSupport_ExternalSRAM_Open" Address="0x000707F8" Size="8"/>
+      <Symbol Name="ModuleSupport_OnTick" Address="0x00070800" Size="32"/>
+      <Symbol Name="ModuleSupport_Watchdog_MPC555x_TCR_WRC_Get" Address="0x00070820" Size="8"/>
+      <Symbol Name="ModuleSupport_Watchdog_Reset" Address="0x00070828" Size="40"/>
+      <Symbol Name="ModuleSupport_PowerSupply_Shutdown" Address="0x00070850" Size="40"/>
+      <Symbol Name="ModuleSupport_PowerSupply_Close" Address="0x00070878" Size="52"/>
+      <Symbol Name="ModuleSupport_ExternalWatchdog_IsEnabled" Address="0x000708AC" Size="40"/>
+      <Symbol Name="ModuleSupport_Watchdog_Refresh" Address="0x000708D4" Size="40"/>
+      <Symbol Name="ModuleSupport_PowerSupply_Create" Address="0x000708FC" Size="40"/>
+      <Symbol Name="ModuleSupport_Reset" Address="0x00070924" Size="32"/>
+      <Symbol Name="MPC55xxFlash_BlockInfoObj_GetFromAddress" Address="0x00070944" Size="292"/>
+      <Symbol Name="MPC55xxFlash_Verify" Address="0x00070A68" Size="176"/>
+      <Symbol Name="MPC55xxFlash_Protection_Set" Address="0x00070B18" Size="504"/>
+      <Symbol Name="MPC55xxFlash_Program" Address="0x00070D10" Size="392"/>
+      <Symbol Name="MPC55xxFlash_BlankCheck" Address="0x00070E98" Size="192"/>
+      <Symbol Name="MPC55xxFlash_Erase" Address="0x00070F58" Size="264"/>
+      <Symbol Name="MPC55xxFlash_Close" Address="0x00071060" Size="68"/>
+      <Symbol Name="MPC55xxFlash_Open" Address="0x000710A4" Size="148"/>
+      <Symbol Name="Freescale_FlashInit" Address="0x00071138" Size="72"/>
+      <Symbol Name="Freescale_FlashErase" Address="0x00071180" Size="40"/>
+      <Symbol Name="Freescale_BlankCheck" Address="0x000711A8" Size="40"/>
+      <Symbol Name="Freescale_FlashProgram" Address="0x000711D0" Size="40"/>
+      <Symbol Name="Freescale_ProgramVerify" Address="0x000711F8" Size="40"/>
+      <Symbol Name="Freescale_GetLock" Address="0x00071220" Size="40"/>
+      <Symbol Name="Freescale_SetLock" Address="0x00071248" Size="40"/>
+      <Symbol Name="Freescale_RWECheck" Address="0x00071270" Size="40"/>
+      <Symbol Name="BootMailBox_MotoTronBootObj_Post" Address="0x00071298" Size="36"/>
+      <Symbol Name="MotoTronBoot_ObjBuffer_GetFromHardBoot" Address="0x000712BC" Size="148"/>
+      <Symbol Name="MotoTronBootObj_V3Buffer_GetFromHardBoot" Address="0x00071350" Size="8"/>
+      <Symbol Name="MotoTronBootObj_V4Buffer_GetFromHardBoot" Address="0x00071358" Size="8"/>
+      <Symbol Name="MotoTronBoot_Version_GetFromHardBoot" Address="0x00071360" Size="140"/>
+      <Symbol Name="eMIOS_PWM_DutyCycle_Get" Address="0x000713EC" Size="124"/>
+      <Symbol Name="eMIOS_PWM_Frequency_Get" Address="0x00071468" Size="72"/>
+      <Symbol Name="eMIOS_PWM_FrequencyDutyCycle_Set" Address="0x000714B0" Size="580"/>
+      <Symbol Name="eMIOS_PWM_Create" Address="0x000716F4" Size="152"/>
+      <Symbol Name="SCI_CombinedISR" Address="0x0007178C" Size="68"/>
+      <Symbol Name="SCI_CopyReceivedDataToDest" Address="0x000717D0" Size="324"/>
+      <Symbol Name="SCI_BaudRate_Get" Address="0x00071914" Size="48"/>
+      <Symbol Name="SCI_BaudRate_Set" Address="0x00071944" Size="164"/>
+      <Symbol Name="SCI_Transmitter_Free" Address="0x000719E8" Size="136"/>
+      <Symbol Name="SCI_TxCompleteHandler" Address="0x00071A70" Size="452"/>
+      <Symbol Name="SCI_Transmitter_Request" Address="0x00071C34" Size="184"/>
+      <Symbol Name="SCI_Transmit" Address="0x00071CEC" Size="644"/>
+      <Symbol Name="SCI_HandleISRReceiptEvent" Address="0x00071F70" Size="156"/>
+      <Symbol Name="SCI_CombinedISRHandler" Address="0x0007200C" Size="276"/>
+      <Symbol Name="SCI_Receiver_Free" Address="0x00072120" Size="40"/>
+      <Symbol Name="SCI_ReadSync" Address="0x00072148" Size="240"/>
+      <Symbol Name="SCI_RxOpen" Address="0x00072238" Size="292"/>
+      <Symbol Name="SCI_CreateModule" Address="0x0007235C" Size="572"/>
+      <Symbol Name="SCI_eDMA_TxOpen" Address="0x00072598" Size="200"/>
+      <Symbol Name="SCI_eDMA_TxCompleteHandler" Address="0x00072660" Size="52"/>
+      <Symbol Name="SCI_eDMA_RxHalfISR" Address="0x00072694" Size="64"/>
+      <Symbol Name="SCI_eDMA_TxQueueDepth_Get" Address="0x000726D4" Size="168"/>
+      <Symbol Name="SCI_eDMA_RxQueueDepth_Get" Address="0x0007277C" Size="164"/>
+      <Symbol Name="SCI_eDMA_RxQueue_Purge" Address="0x00072820" Size="140"/>
+      <Symbol Name="SCI_eDMA_TxQueue_Purge" Address="0x000728AC" Size="172"/>
+      <Symbol Name="SCI_eDMA_RxHalfISRHandler" Address="0x00072958" Size="52"/>
+      <Symbol Name="SCI_eDMA_InitiateTx" Address="0x0007298C" Size="364"/>
+      <Symbol Name="SCI_eDMA_RxOpen" Address="0x00072AF8" Size="356"/>
+      <Symbol Name="eTPU_CamEncoder_ISR" Address="0x00072C5C" Size="120"/>
+      <Symbol Name="eTPU_CamEncoder_OnPrimaryEncoderStateChange" Address="0x00072CD4"
+              Size="68"/>
+      <Symbol Name="eTPU_CamEncoder_Create" Address="0x00072D18" Size="240"/>
+      <Symbol Name="eTPU_Encoder_InstantRPM_Set" Address="0x00072E08" Size="12"/>
+      <Symbol Name="eTPU_Encoder_IsCreated" Address="0x00072E14" Size="16"/>
+      <Symbol Name="eTPU_Encoder_SensingOfs_Get" Address="0x00072E24" Size="12"/>
+      <Symbol Name="eTPU_Encoder_OnTeethObservedEntry" Address="0x00072E30" Size="4"/>
+      <Symbol Name="eTPU_Encoder_OnPartialSyncEntry" Address="0x00072E34" Size="16"/>
+      <Symbol Name="eTPU_Encoder_OnFullSyncEntry" Address="0x00072E44" Size="4"/>
+      <Symbol Name="eTPU_Encoder_Status_Get" Address="0x00072E48" Size="12"/>
+      <Symbol Name="eTPU_Encoder_Error_IssueReport" Address="0x00072E54" Size="60"/>
+      <Symbol Name="eTPU_Encoder_ToothRelativeAngle_Get" Address="0x00072E90" Size="84"/>
+      <Symbol Name="eTPU_Encoder_ToothPeriod_Native_Get" Address="0x00072EE4" Size="96"/>
+      <Symbol Name="eTPU_Encoder_Angle_GetCurrent" Address="0x00072F44" Size="108"/>
+      <Symbol Name="eTPU_Encoder_Condition_Set" Address="0x00072FB0" Size="196"/>
+      <Symbol Name="eTPU_Encoder_OnCamCreated" Address="0x00073074" Size="100"/>
+      <Symbol Name="eTPU_Encoder_CamLoss_Refresh" Address="0x000730D8" Size="128"/>
+      <Symbol Name="eTPU_Encoder_StatusReport_Issue" Address="0x00073158" Size="168"/>
+      <Symbol Name="eTPU_Encoder_ISR" Address="0x00073200" Size="1140"/>
+      <Symbol Name="eTPU_Encoder_OnZeroSpeedEntry" Address="0x00073674" Size="60"/>
+      <Symbol Name="eTPU_Encoder_SensingOfs_Set" Address="0x000736B0" Size="180"/>
+      <Symbol Name="eTPU_Encoder_AverageRPM_Get" Address="0x00073764" Size="60"/>
+      <Symbol Name="eTPU_Encoder_InstantRPM_Get" Address="0x000737A0" Size="60"/>
+      <Symbol Name="eTPU_Encoder_Mode_Set" Address="0x000737DC" Size="276"/>
+      <Symbol Name="eTPU_Encoder_Create" Address="0x000738F0" Size="424"/>
+      <Symbol Name="eTPU_Encoder_RPMVector_RetireWhenUnused" Address="0x00073A98" Size="12"/>
+      <Symbol Name="eTPU_Encoder_RPMVector_DMA_RestartWhenUnused" Address="0x00073AA4"
+              Size="4"/>
+      <Symbol Name="eTPU_Encoder_RPMVector_OnEncoderStateChangeWhenUnused"
+              Address="0x00073AA8"
+              Size="4"/>
+      <Symbol Name="eTPU_FreqIn_ISR" Address="0x00073AAC" Size="52"/>
+      <Symbol Name="eTPU_FreqIn_Period_Raw_Get16Bit" Address="0x00073AE0" Size="112"/>
+      <Symbol Name="eTPU_FreqIn_Period_Raw_Get32Bit" Address="0x00073B50" Size="40"/>
+      <Symbol Name="eTPU_FreqIn_GetInstant" Address="0x00073B78" Size="40"/>
+      <Symbol Name="eTPU_FreqIn_GetAverage" Address="0x00073BA0" Size="40"/>
+      <Symbol Name="eTPU_FreqIn_Create" Address="0x00073BC8" Size="188"/>
+      <Symbol Name="eTPU_PSP_Condition_Set" Address="0x00073C84" Size="116"/>
+      <Symbol Name="eTPU_PSP_MinAdjacentPulseSpacing_Get" Address="0x00073CF8" Size="8"/>
+      <Symbol Name="eTPU_PSP_Timing_SetHardStart_UniEncoder" Address="0x00073D00" Size="448"/>
+      <Symbol Name="eTPU_PSP_Timing_SetSoftStop_HardDur_UniEncoder" Address="0x00073EC0"
+              Size="228"/>
+      <Symbol Name="eTPU_PSP_Timing_SetSoftDur_HardStop_UniEncoder" Address="0x00073FA4"
+              Size="228"/>
+      <Symbol Name="eTPU_PSP_Timing_Set" Address="0x00074088" Size="1232"/>
+      <Symbol Name="eTPU_PSP_ISR" Address="0x00074558" Size="352"/>
+      <Symbol Name="eTPU_PSP_Condition_SetDisableNext" Address="0x000746B8" Size="116"/>
+      <Symbol Name="eTPU_PSP_Condition_SetEnableNowOnce" Address="0x0007472C" Size="156"/>
+      <Symbol Name="eTPU_PSP_Condition_SetStandard" Address="0x000747C8" Size="112"/>
+      <Symbol Name="eTPU_PSP_Create" Address="0x00074838" Size="256"/>
+      <Symbol Name="eTPU_PWM_DutyCycle_Get" Address="0x00074938" Size="64"/>
+      <Symbol Name="eTPU_PWM_Frequency_Get" Address="0x00074978" Size="64"/>
+      <Symbol Name="eTPU_PWM_FrequencyDutyCycle_Set" Address="0x000749B8" Size="112"/>
+      <Symbol Name="eTPU_PWM_Create" Address="0x00074A28" Size="212"/>
+      <Symbol Name="eTPU_Tacho_Condition_Apply" Address="0x00074AFC" Size="132"/>
+      <Symbol Name="eTPU_Tacho_OnEncoderStateChange" Address="0x00074B80" Size="148"/>
+      <Symbol Name="FlexCAN2_TXBuffer_IsFree" Address="0x00074C14" Size="40"/>
+      <Symbol Name="Load_FlexCAN2_TXBuffer" Address="0x00074C3C" Size="368"/>
+      <Symbol Name="Load_FlexCAN2_RXBuffer" Address="0x00074DAC" Size="232"/>
+      <Symbol Name="SoftReset_FlexCAN2" Address="0x00074E94" Size="64"/>
+      <Symbol Name="FlexCAN2BufferISR" Address="0x00074ED4" Size="168"/>
+      <Symbol Name="FlexCAN2_ECR_Get" Address="0x00074F7C" Size="16"/>
+      <Symbol Name="FlexCAN2SharedBufferISR" Address="0x00074F8C" Size="292"/>
+      <Symbol Name="FlexCAN2ErrorISR" Address="0x000750B0" Size="168"/>
+      <Symbol Name="Create_FlexCAN2Buffer" Address="0x00075158" Size="260"/>
+      <Symbol Name="Create_FlexCAN2Module" Address="0x0007525C" Size="412"/>
+      <Symbol Name="ConfigureFlexCAN2Pads" Address="0x000753F8" Size="68"/>
+      <Symbol Name="GetFlexCAN2INTCSourceModuleOffset" Address="0x0007543C" Size="32"/>
+      <Symbol Name="GetFlexCAN2INCSourceBufferOffset" Address="0x0007545C" Size="32"/>
+      <Symbol Name="GPIO_DigitalInput_GetAttributes" Address="0x0007547C" Size="76"/>
+      <Symbol Name="GPIO_DigitalInput_Create" Address="0x000754C8" Size="84"/>
+      <Symbol Name="GPIO_DigitalOut_State_Get" Address="0x0007551C" Size="20"/>
+      <Symbol Name="GPIO_DigitalOut_State_Set" Address="0x00075530" Size="40"/>
+      <Symbol Name="GPIO_DigitalOut_SetAttributes" Address="0x00075558" Size="8"/>
+      <Symbol Name="GPIO_DigitalOut_Create" Address="0x00075560" Size="120"/>
+      <Symbol Name="Reboot_ControlCore" Address="0x000755D8" Size="112"/>
+      <Symbol Name="Processor_Memory_ReadSynch" Address="0x00075648" Size="164"/>
+      <Symbol Name="_exit" Address="0x000756EC" Size="4"/>
+      <Symbol Name="sbrk" Address="0x000756F0" Size="116"/>
+      <Symbol Name="SWISR_IRQHandler" Address="0x00075764" Size="36"/>
+      <Symbol Name="SPI_TCDInit" Address="0x00075788" Size="336"/>
+      <Symbol Name="SPI_ConstructCommandQueue" Address="0x000758D8" Size="284"/>
+      <Symbol Name="SPI_Device_Create" Address="0x000759F4" Size="48"/>
+      <Symbol Name="SPI_Device_Destroy" Address="0x00075A24" Size="8"/>
+      <Symbol Name="SPI_Module_CombinedISR" Address="0x00075A2C" Size="48"/>
+      <Symbol Name="SPI_InitDMADefaults" Address="0x00075A5C" Size="400"/>
+      <Symbol Name="SPI_Module_Create" Address="0x00075BEC" Size="168"/>
+      <Symbol Name="SPI_TCD_Load" Address="0x00075C94" Size="328"/>
+      <Symbol Name="SPI_SendMessage" Address="0x00075DDC" Size="396"/>
+      <Symbol Name="SPI_eDMARequest_Get" Address="0x00075F68" Size="24"/>
+      <Symbol Name="MailBox_StateRelease" Address="0x00075F80" Size="76"/>
+      <Symbol Name="MailBox_FetchFrom" Address="0x00075FCC" Size="308"/>
+      <Symbol Name="MailBox_PostTo" Address="0x00076100" Size="404"/>
+      <Symbol Name="MailBox_CreateStatic" Address="0x00076294" Size="164"/>
+      <Symbol Name="BasicOut_PSP_Create" Address="0x00076338" Size="108"/>
+      <Symbol Name="BasicOut_PSP_Condition_Set" Address="0x000763A4" Size="48"/>
+      <Symbol Name="BasicOut_PSP_Timing_Set" Address="0x000763D4" Size="48"/>
+      <Symbol Name="BasicOut_PSP_EndEventISR" Address="0x00076404" Size="52"/>
+      <Symbol Name="BasicOut_DiscreteOut_State_Get" Address="0x00076438" Size="144"/>
+      <Symbol Name="BasicOut_DiscreteOut_State_Set" Address="0x000764C8" Size="84"/>
+      <Symbol Name="BasicOut_DiscreteOut_Create" Address="0x0007651C" Size="88"/>
+      <Symbol Name="CoreDD_PinState_GetForResourceState" Address="0x00076574" Size="32"/>
+      <Symbol Name="DGIn_FreqIn_ISR" Address="0x00076594" Size="52"/>
+      <Symbol Name="DGIn_FreqIn_Create" Address="0x000765C8" Size="100"/>
+      <Symbol Name="DGIn_FreqIn_GetInstant" Address="0x0007662C" Size="48"/>
+      <Symbol Name="DGIn_FreqIn_GetAverage" Address="0x0007665C" Size="48"/>
+      <Symbol Name="DGIn_DigitalInput_Create" Address="0x0007668C" Size="52"/>
+      <Symbol Name="DGIn_DigitalInput_GetAttributes" Address="0x000766C0" Size="104"/>
+      <Symbol Name="DGIn_CamEncoder_Create" Address="0x00076728" Size="92"/>
+      <Symbol Name="M95256_WriteStatus_Get" Address="0x00076784" Size="164"/>
+      <Symbol Name="M95256_Read" Address="0x00076828" Size="180"/>
+      <Symbol Name="M95256_Verify" Address="0x000768DC" Size="128"/>
+      <Symbol Name="M95256_Write" Address="0x0007695C" Size="320"/>
+      <Symbol Name="MC33800_CCD1_PinState_Set" Address="0x00076A9C" Size="148"/>
+      <Symbol Name="MC33800_CCD_DigitalOut_State_Set" Address="0x00076B30" Size="4"/>
+      <Symbol Name="MC33800_CCD_DigitalOut_SetAttributes" Address="0x00076B34" Size="8"/>
+      <Symbol Name="MC33800_CCD_DigitalOut_Create" Address="0x00076B3C" Size="8"/>
+      <Symbol Name="MC33800_CCD_Diagnostics_Configure" Address="0x00076B44" Size="172"/>
+      <Symbol Name="MC33800_CCD_DiscreteOut_Create" Address="0x00076BF0" Size="204"/>
+      <Symbol Name="MC33800_DiscreteOut_Create" Address="0x00076CBC" Size="40"/>
+      <Symbol Name="MC33800_DiscreteOut_State_Set" Address="0x00076CE4" Size="84"/>
+      <Symbol Name="MC33800_Hardware_Create" Address="0x00076D38" Size="488"/>
+      <Symbol Name="MC33800_Hardware_SPI_Message_Send" Address="0x00076F20" Size="208"/>
+      <Symbol Name="MC33800_OSS_PinState_Set" Address="0x00076FF0" Size="128"/>
+      <Symbol Name="MC33800_OSS_DigitalOut_State_Set" Address="0x00077070" Size="4"/>
+      <Symbol Name="MC33800_OSS_DigitalOut_SetAttributes" Address="0x00077074" Size="8"/>
+      <Symbol Name="MC33800_OSS_DigitalOut_Create" Address="0x0007707C" Size="8"/>
+      <Symbol Name="MC33800_OSS_DiscreteOut_Create" Address="0x00077084" Size="688"/>
+      <Symbol Name="MC33800_PWM_PinState_Set" Address="0x00077334" Size="128"/>
+      <Symbol Name="MC33800_PWM_DigitalOut_State_Set" Address="0x000773B4" Size="4"/>
+      <Symbol Name="MC33800_PWM_DigitalOut_SetAttributes" Address="0x000773B8" Size="8"/>
+      <Symbol Name="MC33800_PWM_DigitalOut_Create" Address="0x000773C0" Size="8"/>
+      <Symbol Name="MC33800_PWM_Diagnostics_Configure" Address="0x000773C8" Size="504"/>
+      <Symbol Name="MC33800_PWM_Circuit_Configure_GPO" Address="0x000775C0" Size="336"/>
+      <Symbol Name="MC33800_PWM_DiscreteOut_Create" Address="0x00077710" Size="132"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_InstantRPM_Get" Address="0x00077794" Size="48"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_AverageRPM_Get" Address="0x000777C4" Size="48"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_SensingOfs_Set" Address="0x000777F4" Size="48"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_OnStateChange" Address="0x00077824" Size="52"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_OnError" Address="0x00077858" Size="52"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_OnPeriodic" Address="0x0007788C" Size="52"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_OnSpecifiedEvent" Address="0x000778C0"
+              Size="52"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_OnPerCycleEvent" Address="0x000778F4" Size="52"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_OnRPMVectorReady" Address="0x00077928"
+              Size="52"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_InstantRPM_Set" Address="0x0007795C" Size="232"/>
+      <Symbol Name="MuxVRDGInOverride_Encoder_Create" Address="0x00077A44" Size="316"/>
+      <Symbol Name="PushPull_PSP_DiagnosticsISR" Address="0x00077B80" Size="120"/>
+      <Symbol Name="PushPull_PSP_EndEventISR" Address="0x00077BF8" Size="152"/>
+      <Symbol Name="PushPull_PSP_Diagnostics_Data_Update" Address="0x00077C90" Size="124"/>
+      <Symbol Name="PushPull_PSP_Diagnostics_Data_Get" Address="0x00077D0C" Size="108"/>
+      <Symbol Name="PushPull_PSP_Timing_Set" Address="0x00077D78" Size="40"/>
+      <Symbol Name="PushPull_PSP_Condition_Set" Address="0x00077DA0" Size="36"/>
+      <Symbol Name="PushPull_PSP_Create" Address="0x00077DC4" Size="84"/>
+      <Symbol Name="SerialEE_Read_GenericDevice" Address="0x00077E18" Size="172"/>
+      <Symbol Name="SerialEE_Message_Read_Handle" Address="0x00077EC4" Size="200"/>
+      <Symbol Name="SerialEE_ReadMailBox_Empty" Address="0x00077F8C" Size="132"/>
+      <Symbol Name="SerialEE_ReadSynch" Address="0x00078010" Size="144"/>
+      <Symbol Name="SerialEE_WriteSynch" Address="0x000780A0" Size="456"/>
+      <Symbol Name="SerialEE_Create" Address="0x00078268" Size="184"/>
+      <Symbol Name="TLE7368_Close" Address="0x00078320" Size="92"/>
+      <Symbol Name="TLE7368_Watchdog_IsEnabled" Address="0x0007837C" Size="16"/>
+      <Symbol Name="TLE7368_Create" Address="0x0007838C" Size="248"/>
+      <Symbol Name="TLE7368_Shutdown" Address="0x00078484" Size="60"/>
+      <Symbol Name="TLE7368_Watchdog_Reset" Address="0x000784C0" Size="192"/>
+      <Symbol Name="TLE7368_Watchdog_PeriodicRefresh" Address="0x00078580" Size="320"/>
+      <Symbol Name="VISTA_Register_WriteBlock" Address="0x000786C0" Size="316"/>
+      <Symbol Name="VISTA_WriteRegister" Address="0x000787FC" Size="48"/>
+      <Symbol Name="VISTA_Register_ReadBlock" Address="0x0007882C" Size="408"/>
+      <Symbol Name="VISTA_ReadRegister" Address="0x000789C4" Size="8"/>
+      <Symbol Name="VISTA_HW_Create" Address="0x000789CC" Size="464"/>
+      <Symbol Name="VISTA_ADC_GetConversion" Address="0x00078B9C" Size="148"/>
+      <Symbol Name="VISTA_ADC_CreateAttributes_Set" Address="0x00078C30" Size="200"/>
+      <Symbol Name="VISTA_ADC_Create" Address="0x00078CF8" Size="200"/>
+      <Symbol Name="VISTA_GPO_SetAttributes" Address="0x00078DC0" Size="176"/>
+      <Symbol Name="VISTA_DigitalOut_GPO_State_Set" Address="0x00078E70" Size="96"/>
+      <Symbol Name="VISTA_DigitalOut_GPO_Attributes_Set" Address="0x00078ED0" Size="8"/>
+      <Symbol Name="VISTA_GPO_Create" Address="0x00078ED8" Size="384"/>
+      <Symbol Name="VISTA_DigitalOut_GPO_Create" Address="0x00079058" Size="104"/>
+      <Symbol Name="Mux_Circuit_Channel_Get" Address="0x000790C0" Size="24"/>
+      <Symbol Name="Mux_Circuit_Channel_Set" Address="0x000790D8" Size="156"/>
+      <Symbol Name="Mux_Circuit_Create" Address="0x00079174" Size="156"/>
+      <Symbol Name="Security_GetKeyProjectProductID" Address="0x00079210" Size="44"/>
+      <Symbol Name="Security_Basic_Key_Decrypt" Address="0x0007923C" Size="28"/>
+      <Symbol Name="ComputeSecurity_Calculate" Address="0x00079258" Size="12"/>
+      <Symbol Name="ComputeSecurity_Universal_Calculate" Address="0x00079264" Size="44"/>
+      <Symbol Name="Security_ComputeSecurity" Address="0x00079290" Size="336"/>
+      <Symbol Name="ERI_Protocol_CRC_InProgress" Address="0x000793E0" Size="20"/>
+      <Symbol Name="ERI_Protocol_Memory_Request" Address="0x000793F4" Size="164"/>
+      <Symbol Name="ERI_Protocol_Memory_Free" Address="0x00079498" Size="76"/>
+      <Symbol Name="ERI_Protocol_PacketByteSize_Get" Address="0x000794E4" Size="68"/>
+      <Symbol Name="ERI_Protocol_OnSerialReceipt" Address="0x00079528" Size="64"/>
+      <Symbol Name="ERI_Protocol_OnCANReceipt" Address="0x00079568" Size="32"/>
+      <Symbol Name="ERI_Protocol_MsgHandler" Address="0x00079588" Size="132"/>
+      <Symbol Name="ERI_Protocol_CRC_Update" Address="0x0007960C" Size="328"/>
+      <Symbol Name="ERI_Protocol_OnTick" Address="0x00079754" Size="76"/>
+      <Symbol Name="ERI_Protocol_Init" Address="0x000797A0" Size="152"/>
+      <Symbol Name="ERI_Handler_XTDREQ_CRCStatus" Address="0x00079838" Size="204"/>
+      <Symbol Name="ERI_Handler_XTDREQ_CRCRequest" Address="0x00079904" Size="236"/>
+      <Symbol Name="ERI_Handler_XTDREQ_DFMInit" Address="0x000799F0" Size="124"/>
+      <Symbol Name="ERI_Handler_XTDREQ_DFMUpdate" Address="0x00079A6C" Size="124"/>
+      <Symbol Name="ERI_Handler_XTDREQ_DFMStatus" Address="0x00079AE8" Size="112"/>
+      <Symbol Name="ERI_Handler_XTDREQ_DFMAbort" Address="0x00079B58" Size="112"/>
+      <Symbol Name="ERI_Handler_ExtendedRequest" Address="0x00079BC8" Size="80"/>
+      <Symbol Name="ERI_Handler_ExtendedRequest2" Address="0x00079C18" Size="80"/>
+      <Symbol Name="ERI_Handler_XTDREQ_CRCValue" Address="0x00079C68" Size="172"/>
+      <Symbol Name="ERI_Handler_Request" Address="0x00079D14" Size="464"/>
+      <Symbol Name="ERI_Handler_XTDREQ_MapData" Address="0x00079EE4" Size="400"/>
+      <Symbol Name="ERI_Handler_XTDREQ_MapInit" Address="0x0007A074" Size="208"/>
+      <Symbol Name="ERI_Handler_Write_CallBack" Address="0x0007A144" Size="192"/>
+      <Symbol Name="ERI_Handler_Read_CallBack" Address="0x0007A204" Size="100"/>
+      <Symbol Name="Key_Protocol_PacketByteSize_Get" Address="0x0007A268" Size="92"/>
+      <Symbol Name="Key_Protocol_OnSerialReceipt" Address="0x0007A2C4" Size="64"/>
+      <Symbol Name="Key_Protocol_OnCANReceipt" Address="0x0007A304" Size="32"/>
+      <Symbol Name="Key_Protocol_MsgHandler" Address="0x0007A324" Size="208"/>
+      <Symbol Name="Key_Protocol_OnTick" Address="0x0007A3F4" Size="32"/>
+      <Symbol Name="Key_Protocol_Init" Address="0x0007A414" Size="84"/>
+      <Symbol Name="KeySuite_RefreshPacketTimeout" Address="0x0007A468" Size="56"/>
+      <Symbol Name="KeySuite_CRCAccumulateFunction_Get" Address="0x0007A4A0" Size="48"/>
+      <Symbol Name="KeySuite_CRCInitializeFunction_Get" Address="0x0007A4D0" Size="48"/>
+      <Symbol Name="KeySuite_CRCReturnValueFunction_Get" Address="0x0007A500" Size="48"/>
+      <Symbol Name="KeySuite_TableItem_GetAddress" Address="0x0007A530" Size="48"/>
+      <Symbol Name="KeySuite_NewConnection_Open" Address="0x0007A560" Size="24"/>
+      <Symbol Name="KeySuite_OnSingleFrameCANReceipt" Address="0x0007A578" Size="152"/>
+      <Symbol Name="KeySuite_Seed_Get" Address="0x0007A610" Size="156"/>
+      <Symbol Name="KeySuite_Reply_EndianTransform" Address="0x0007A6AC" Size="12"/>
+      <Symbol Name="KeySuite_OnStreamReceipt" Address="0x0007A6B8" Size="336"/>
+      <Symbol Name="KeySuite_DefaultBaud_Get" Address="0x0007A808" Size="28"/>
+      <Symbol Name="KeySuite_ForceDefaultKey" Address="0x0007A824" Size="144"/>
+      <Symbol Name="KeySuite_ProtocolMemory_Free" Address="0x0007A8B4" Size="40"/>
+      <Symbol Name="KeySuite_ProtocolMemory_Request" Address="0x0007A8DC" Size="76"/>
+      <Symbol Name="Key_Handler_KeyKey" Address="0x0007A928" Size="40"/>
+      <Symbol Name="Key_Handler_ECURevReq" Address="0x0007A950" Size="196"/>
+      <Symbol Name="Key_Handler_ReqBaud_Callback" Address="0x0007AA14" Size="52"/>
+      <Symbol Name="Key_Handler_ReqBaud" Address="0x0007AA48" Size="192"/>
+      <Symbol Name="Key_Handler_ReqSeed4Bytes" Address="0x0007AB08" Size="184"/>
+      <Symbol Name="Key_Handler_ReqSeed" Address="0x0007ABC0" Size="164"/>
+      <Symbol Name="Key_Handler_ReqAcc4Bytes" Address="0x0007AC64" Size="372"/>
+      <Symbol Name="Key_Handler_ReqAcc" Address="0x0007ADD8" Size="344"/>
+      <Symbol Name="KEY_Handler_Read_CallBack" Address="0x0007AF30" Size="96"/>
+      <Symbol Name="eTPUPrimitive_1XCam_Create" Address="0x0007AF90" Size="376"/>
+      <Symbol Name="eTPUPrimitive_Encoder_ToothPeriod_Native_Get" Address="0x0007B108"
+              Size="36"/>
+      <Symbol Name="eTPUPrimitive_Encoder_TCR2PerTooth_Get" Address="0x0007B12C" Size="36"/>
+      <Symbol Name="eTPUPrimitive_Encoder_ToothPosn_Get" Address="0x0007B150" Size="40"/>
+      <Symbol Name="eTPUPrimitive_Encoder_IgnoreTime_Set" Address="0x0007B178" Size="124"/>
+      <Symbol Name="eTPUPrimitive_Encoder_Interrupt_RequestOnTooth" Address="0x0007B1F4"
+              Size="36"/>
+      <Symbol Name="eTPUPrimitive_Encoder_Interrupt_RequestOnAllTeeth" Address="0x0007B218"
+              Size="40"/>
+      <Symbol Name="eTPUPrimitive_Encoder_Style_Apply" Address="0x0007B240" Size="388"/>
+      <Symbol Name="eTPUPrimitive_Encoder_IsCamValid" Address="0x0007B3C4" Size="40"/>
+      <Symbol Name="eTPUPrimitive_Encoder_HaveCamSync" Address="0x0007B3EC" Size="52"/>
+      <Symbol Name="eTPUPrimitive_Encoder_IsPrimarySync" Address="0x0007B420" Size="40"/>
+      <Symbol Name="eTPUPrimitive_Encoder_SharedHSRParamRAM_GetPtr" Address="0x0007B448"
+              Size="68"/>
+      <Symbol Name="eTPUPrimitive_Encoder_PeriodSumStart_Set" Address="0x0007B48C" Size="124"/>
+      <Symbol Name="eTPUPrimitive_Encoder_PollErrorWithClr" Address="0x0007B508" Size="112"/>
+      <Symbol Name="eTPUPrimitive_Encoder_ToothPeriodAddr_Get" Address="0x0007B578" Size="36"/>
+      <Symbol Name="eTPUPrimitive_Encoder_IsZeroSpeed" Address="0x0007B59C" Size="60"/>
+      <Symbol Name="eTPUPrimitive_Encoder_InstantRPM_Get" Address="0x0007B5D8" Size="140"/>
+      <Symbol Name="eTPUPrimitive_Encoder_AverageRPM_Get" Address="0x0007B664" Size="176"/>
+      <Symbol Name="eTPUPrimitive_Encoder_Activate" Address="0x0007B714" Size="60"/>
+      <Symbol Name="eTPUPrimitive_Encoder_Create" Address="0x0007B750" Size="876"/>
+      <Symbol Name="eTPUPrimitive_FreqIn_Instant_Get" Address="0x0007BABC" Size="256"/>
+      <Symbol Name="eTPUPrimitive_FreqIn_Period_Raw_Get" Address="0x0007BBBC" Size="172"/>
+      <Symbol Name="eTPUPrimitive_FreqIn_Average_Get" Address="0x0007BC68" Size="204"/>
+      <Symbol Name="eTPUPrimitive_FreqIn_Create" Address="0x0007BD34" Size="228"/>
+      <Symbol Name="eTPUPrimitive_PSP_LastDeliveredDuration_GetTCR1" Address="0x0007BE18"
+              Size="264"/>
+      <Symbol Name="eTPUPrimitive_PSP_IsPulseEnabled" Address="0x0007BF20" Size="80"/>
+      <Symbol Name="eTPUPrimitive_PSP_Prime_Request" Address="0x0007BF70" Size="116"/>
+      <Symbol Name="eTPUPrimitive_PSP_PulseTiming_Set" Address="0x0007BFE4" Size="496"/>
+      <Symbol Name="eTPUPrimitive_PSP_Cond_Set" Address="0x0007C1D4" Size="276"/>
+      <Symbol Name="eTPUPrimitive_PSP_Cond_SetNow" Address="0x0007C2E8" Size="124"/>
+      <Symbol Name="eTPUPrimitive_PSP_Create" Address="0x0007C364" Size="484"/>
+      <Symbol Name="eTPUPrimitive_PWM_DutyCycle_Set" Address="0x0007C548" Size="72"/>
+      <Symbol Name="eTPUPrimitive_PWM_DutyCycle_Get" Address="0x0007C590" Size="60"/>
+      <Symbol Name="eTPUPrimitive_PWM_Frequency_Get" Address="0x0007C5CC" Size="124"/>
+      <Symbol Name="eTPUPrimitive_PWM_Frequency_Set" Address="0x0007C648" Size="220"/>
+      <Symbol Name="eTPUPrimitive_PWM_Create" Address="0x0007C724" Size="272"/>
+      <Symbol Name="eTPUPrimitive_PWM_CreateChild" Address="0x0007C834" Size="368"/>
+      <Symbol Name="eTPUPrimitive_PWM_CreateParent" Address="0x0007C9A4" Size="128"/>
+      <Symbol Name="eTPUuCode_Constants_Calculate" Address="0x0007CA24" Size="120"/>
+      <Symbol Name="eTPUuCode_Channel_IsOnOtherEngine" Address="0x0007CA9C" Size="36"/>
+      <Symbol Name="eTPUuCode_TimeBase_OpenAsEncoderAt10MHz" Address="0x0007CAC0" Size="96"/>
+      <Symbol Name="_Z39eTPUuCode_TimeBase_OpenAsEncoderAt10MHzPK14S_ETPUMaskDefn"
+              Address="0x0007CAC0"
+              Size="96"/>
+      <Symbol Name="__fixunsdfsi" Address="0x0007CB20" Size="136"/>
+      <Symbol Name="__udivdi3" Address="0x0007CBA8" Size="1008"/>
+      <Symbol Name="__extendsfdf2" Address="0x0007CF98" Size="72"/>
+      <Symbol Name="_fpadd_parts" Address="0x0007CFE0" Size="1040"/>
+      <Symbol Name="__subdf3" Address="0x0007D3F0" Size="124"/>
+      <Symbol Name="__adddf3" Address="0x0007D46C" Size="112"/>
+      <Symbol Name="__muldf3" Address="0x0007D4DC" Size="972"/>
+      <Symbol Name="__divdf3" Address="0x0007D8A8" Size="636"/>
+      <Symbol Name="__eqdf2" Address="0x0007DB24" Size="136"/>
+      <Symbol Name="__gtdf2" Address="0x0007DBAC" Size="136"/>
+      <Symbol Name="__gedf2" Address="0x0007DC34" Size="136"/>
+      <Symbol Name="__ltdf2" Address="0x0007DCBC" Size="136"/>
+      <Symbol Name="__ledf2" Address="0x0007DD44" Size="136"/>
+      <Symbol Name="__floatsidf" Address="0x0007DDCC" Size="196"/>
+      <Symbol Name="__fixdfsi" Address="0x0007DE90" Size="224"/>
+      <Symbol Name="__make_dp" Address="0x0007DF70" Size="56"/>
+      <Symbol Name="__truncdfsf2" Address="0x0007DFA8" Size="96"/>
+      <Symbol Name="__eabi" Address="0x0007E008" Size="72"/>
+      <Symbol Name="__eabi_convert" Address="0x0007E050" Size="52"/>
+      <Symbol Name="__eabi_uconvert" Address="0x0007E084" Size="56"/>
+      <Symbol Name="__ucmpdi2" Address="0x0007E0BC" Size="48"/>
+      <Symbol Name="__unpack_f" Address="0x0007E0EC" Size="200"/>
+      <Symbol Name="__make_fp" Address="0x0007E1B4" Size="52"/>
+      <Symbol Name="__pack_d" Address="0x0007E1E8" Size="592"/>
+      <Symbol Name="__unpack_d" Address="0x0007E438" Size="252"/>
+      <Symbol Name="__fpcmp_parts_d" Address="0x0007E534" Size="268"/>
+      <Symbol Name="__lshrdi3" Address="0x0007E640" Size="56"/>
+      <Symbol Name="__ashldi3" Address="0x0007E678" Size="56"/>
+      <Symbol Name="__pack_f" Address="0x0007E6B0" Size="316"/>
+      <Symbol Name="__do_global_ctors_aux" Address="0x0007E7EC" Size="0"/>
+      <Symbol Name="call___do_global_ctors_aux" Address="0x0007E83C" Size="0"/>
+      <Symbol Name="g_INTC_IRQVectorTable" Address="0x0007F000" Size="2480"/>
+      <Symbol Name="s_pfnCoreExceptionHandlerArr" Address="0x0007FBD4" Size="8"/>
+      <Symbol Name="g_MMUTblEntryConfigArr" Address="0x0007FBDC" Size="80"/>
+      <Symbol Name="s_u8MMUTblEntryConfigArrCount" Address="0x0007FC2C" Size="1"/>
+      <Symbol Name="s_pInitPadConfigArr.12066" Address="0x0007FC30" Size="8"/>
+      <Symbol Name="s_pRegister.12052" Address="0x0007FC38" Size="8"/>
+      <Symbol Name="g_IdleTaskDefn" Address="0x0007FC40" Size="36"/>
+      <Symbol Name="g_pfEndTaskMethodsArr" Address="0x0007FC64" Size="8"/>
+      <Symbol Name="s_AppTaskParamInfo" Address="0x0007FC6C" Size="4"/>
+      <Symbol Name="s_IdleLoopCompleteEvent" Address="0x0007FC70" Size="12"/>
+      <Symbol Name="g_u16IdleStackOfsForEnd" Address="0x0007FC92" Size="2"/>
+      <Symbol Name="g_StaticSemaphoreMethods" Address="0x0007FC94" Size="8"/>
+      <Symbol Name="g_StaticSemaphoreDefn" Address="0x0007FC9C" Size="8"/>
+      <Symbol Name="g_CRCBlockInfo" Address="0x0007FCA4" Size="8"/>
+      <Symbol Name="s_eMIOSIntSourceArr" Address="0x0007FCAC" Size="24"/>
+      <Symbol Name="s_eQADCCommandQueueBuffer.12778" Address="0x0007FCC4" Size="96"/>
+      <Symbol Name="s_eDMAIntSourceArr.12844" Address="0x0007FD24" Size="24"/>
+      <Symbol Name="s_eTCR2CTLSettingArr.12719" Address="0x0007FD3C" Size="3"/>
+      <Symbol Name="s_eTPUIntSourceArr.12807" Address="0x0007FD40" Size="128"/>
+      <Symbol Name="g_ETPUModule" Address="0x0007FDC0" Size="22"/>
+      <Symbol Name="g_u8TPUChannelArr" Address="0x0007FDD8" Size="64"/>
+      <Symbol Name="MotoHawkModelName" Address="0x0007FE18" Size="80"/>
+      <Symbol Name="CompilerVersion" Address="0x0007FE68" Size="80"/>
+      <Symbol Name="MotoHawkVersionTxt" Address="0x0007FEB8" Size="50"/>
+      <Symbol Name="MatlabVersionTxt" Address="0x0007FEEC" Size="80"/>
+      <Symbol Name="MotoHawkModelGUID" Address="0x0007FF3C" Size="80"/>
+      <Symbol Name="MotoHawkBuildGUID" Address="0x0007FF8C" Size="80"/>
+      <Symbol Name="MotoHawkTokenGUID" Address="0x0007FFDC" Size="80"/>
+      <Symbol Name="BaseEngineController_LS_112_M" Address="0x0008002C" Size="4"/>
+      <Symbol Name="BaseEngineController_LS_112_ConstB" Address="0x00080030" Size="44"/>
+      <Symbol Name="BaseEngineController_LS_112_ConstP" Address="0x0008005C" Size="56"/>
+      <Symbol Name="s_pfnTransientBehavior_Arr.20877" Address="0x000800AC" Size="32"/>
+      <Symbol Name="mh_CCP1_CCPHandlerConfig" Address="0x00080198" Size="24"/>
+      <Symbol Name="g_SHUTDOWNTask_MailBox" Address="0x000801B0" Size="16"/>
+      <Symbol Name="Flash_Memory" Address="0x000801C0" Size="36"/>
+      <Symbol Name="g_ApplicationInterruptTask_MailBox" Address="0x000801E4" Size="16"/>
+      <Symbol Name="g_ApplicationInterruptTask" Address="0x000801F4" Size="36"/>
+      <Symbol Name="g_SHUTDOWNTask" Address="0x00080218" Size="36"/>
+      <Symbol Name="g_FGNDTask_MailBox" Address="0x0008023C" Size="16"/>
+      <Symbol Name="g_FGNDTask" Address="0x0008024C" Size="36"/>
+      <Symbol Name="g_BGNDTask_MailBox" Address="0x00080270" Size="16"/>
+      <Symbol Name="g_BGNDTask" Address="0x00080280" Size="36"/>
+      <Symbol Name="g_bEnableControlledShutdown" Address="0x000802A4" Size="1"/>
+      <Symbol Name="g_bEnableWatchdog" Address="0x000802A5" Size="1"/>
+      <Symbol Name="MotoCoderVersionTxt" Address="0x000802A8" Size="7"/>
+      <Symbol Name="g_eQADC_ISRArr" Address="0x000802B0" Size="248"/>
+      <Symbol Name="g_eQADC_eDMAISRArr" Address="0x000803A8" Size="96"/>
+      <Symbol Name="g_eQADC_ISRObj" Address="0x00080408" Size="8"/>
+      <Symbol Name="g_uInterruptStackSizeInBytes" Address="0x00080410" Size="2"/>
+      <Symbol Name="g_u8NumTasksSupported" Address="0x00080412" Size="1"/>
+      <Symbol Name="g_uRTIPeriodInMicroSecs" Address="0x00080414" Size="2"/>
+      <Symbol Name="g_u32ExecutionStarvationTime_us" Address="0x00080418" Size="4"/>
+      <Symbol Name="g_AppTask" Address="0x0008041C" Size="36"/>
+      <Symbol Name="g_BGNDTask_MailBoxFetchSemaphore" Address="0x00080440" Size="12"/>
+      <Symbol Name="g_FGNDTask_MailBoxFetchSemaphore" Address="0x0008044C" Size="12"/>
+      <Symbol Name="g_SHUTDOWNTask_MailBoxFetchSemaphore" Address="0x00080458" Size="12"/>
+      <Symbol Name="g_ApplicationInterruptTask_MailBoxFetchSemaphore" Address="0x00080464"
+              Size="12"/>
+      <Symbol Name="g_eTPUFilterPreScale" Address="0x00080470" Size="1"/>
+      <Symbol Name="g_eTPUDigitalFilterCtrl" Address="0x00080471" Size="1"/>
+      <Symbol Name="g_eTPUTCRCLKFilter" Address="0x00080472" Size="1"/>
+      <Symbol Name="g_bIsAppUsingETPU" Address="0x00080473" Size="1"/>
+      <Symbol Name="g_eTPU_ISRArr" Address="0x00080474" Size="512"/>
+      <Symbol Name="g_eTPU_ISRObj" Address="0x00080674" Size="8"/>
+      <Symbol Name="g_SCIModuleDefnArr" Address="0x0008067C" Size="8"/>
+      <Symbol Name="g_eMIOSTickTimerChannel" Address="0x00080684" Size="1"/>
+      <Symbol Name="g_eMIOSTickTimerISRPriority" Address="0x00080685" Size="1"/>
+      <Symbol Name="g_eTickTimerMode" Address="0x00080686" Size="1"/>
+      <Symbol Name="g_eMIOS_ISRArr" Address="0x00080688" Size="192"/>
+      <Symbol Name="g_FlexCANBufferConfig_CAN_Tx_Buffer_ISR" Address="0x00080798" Size="4"/>
+      <Symbol Name="g_FlexCANBufferConfig_CAN_Rx_Buffer_ISR" Address="0x0008079C" Size="4"/>
+      <Symbol Name="g_FLEXCAN2_A_ConfigObj" Address="0x000807A0" Size="264"/>
+      <Symbol Name="g_FLEXCAN2_B_ConfigObj" Address="0x000808A8" Size="264"/>
+      <Symbol Name="g_FlexCAN2RuntimeConfigObj" Address="0x000809B0" Size="12"/>
+      <Symbol Name="C.0.19609" Address="0x000809BC" Size="5"/>
+      <Symbol Name="SPI_B" Address="0x000809C4" Size="12"/>
+      <Symbol Name="s_pfnMotoCoder_EncoderToothDispatchArr.19761" Address="0x000809D0"
+              Size="192"/>
+      <Symbol Name="CNK_CPUEncoder" Address="0x00080A90" Size="80"/>
+      <Symbol Name="C.5.20077" Address="0x00080AE0" Size="5"/>
+      <Symbol Name="SPI_C" Address="0x00080AE8" Size="12"/>
+      <Symbol Name="RS485" Address="0x00080AF4" Size="20"/>
+      <Symbol Name="ContinuousScan_eQADCQueue" Address="0x00080B08" Size="36"/>
+      <Symbol Name="SPD1_CPUFreqIn" Address="0x00080B2C" Size="28"/>
+      <Symbol Name="SPD2_CPUFreqIn" Address="0x00080B48" Size="28"/>
+      <Symbol Name="SPD3_CPUFreqIn" Address="0x00080B64" Size="28"/>
+      <Symbol Name="LSO9_PWMOutput" Address="0x00080B80" Size="24"/>
+      <Symbol Name="LSO10_PWMOutput" Address="0x00080B98" Size="24"/>
+      <Symbol Name="H1p" Address="0x00080BB0" Size="24"/>
+      <Symbol Name="H1m" Address="0x00080BC8" Size="24"/>
+      <Symbol Name="H1_InhibitA" Address="0x00080BE0" Size="24"/>
+      <Symbol Name="H1_InhibitB" Address="0x00080BF8" Size="24"/>
+      <Symbol Name="H2p" Address="0x00080C10" Size="24"/>
+      <Symbol Name="H2m" Address="0x00080C28" Size="24"/>
+      <Symbol Name="LSO8_PWMOutput" Address="0x00080C40" Size="24"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueue" Address="0x00080C58" Size="36"/>
+      <Symbol Name="C.17.21403" Address="0x00080C7C" Size="5"/>
+      <Symbol Name="SPI_D" Address="0x00080C84" Size="12"/>
+      <Symbol Name="EST1_CPUPSP_Methods" Address="0x00080C90" Size="28"/>
+      <Symbol Name="EST1_CPUPSP" Address="0x00080CAC" Size="44"/>
+      <Symbol Name="EST2_CPUPSP_Methods" Address="0x00080CD8" Size="28"/>
+      <Symbol Name="EST2_CPUPSP" Address="0x00080CF4" Size="44"/>
+      <Symbol Name="EST3_CPUPSP_Methods" Address="0x00080D20" Size="28"/>
+      <Symbol Name="EST3_CPUPSP" Address="0x00080D3C" Size="44"/>
+      <Symbol Name="EST4_CPUPSP_Methods" Address="0x00080D68" Size="28"/>
+      <Symbol Name="EST4_CPUPSP" Address="0x00080D84" Size="44"/>
+      <Symbol Name="EST5_CPUPSP_Methods" Address="0x00080DB0" Size="28"/>
+      <Symbol Name="EST5_CPUPSP" Address="0x00080DCC" Size="44"/>
+      <Symbol Name="EST6_CPUPSP_Methods" Address="0x00080DF8" Size="28"/>
+      <Symbol Name="EST6_CPUPSP" Address="0x00080E14" Size="44"/>
+      <Symbol Name="EST7_CPUPSP_Methods" Address="0x00080E40" Size="28"/>
+      <Symbol Name="EST7_CPUPSP" Address="0x00080E5C" Size="44"/>
+      <Symbol Name="EST8_CPUPSP_Methods" Address="0x00080E88" Size="28"/>
+      <Symbol Name="EST8_CPUPSP" Address="0x00080EA4" Size="44"/>
+      <Symbol Name="INJ1_CPUPSP" Address="0x00080ED0" Size="44"/>
+      <Symbol Name="INJ2_CPUPSP" Address="0x00080EFC" Size="44"/>
+      <Symbol Name="INJ3_CPUPSP" Address="0x00080F28" Size="44"/>
+      <Symbol Name="INJ4_CPUPSP" Address="0x00080F54" Size="44"/>
+      <Symbol Name="INJ5_CPUPSP" Address="0x00080F80" Size="44"/>
+      <Symbol Name="INJ6_CPUPSP" Address="0x00080FAC" Size="44"/>
+      <Symbol Name="INJ7_CPUPSP" Address="0x00080FD8" Size="44"/>
+      <Symbol Name="INJ8_CPUPSP" Address="0x00081004" Size="44"/>
+      <Symbol Name="INJ8" Address="0x00081030" Size="16"/>
+      <Symbol Name="INJ7" Address="0x00081040" Size="16"/>
+      <Symbol Name="INJ6" Address="0x00081050" Size="16"/>
+      <Symbol Name="INJ5" Address="0x00081060" Size="16"/>
+      <Symbol Name="INJ4" Address="0x00081070" Size="16"/>
+      <Symbol Name="INJ3" Address="0x00081080" Size="16"/>
+      <Symbol Name="INJ2" Address="0x00081090" Size="16"/>
+      <Symbol Name="INJ1" Address="0x000810A0" Size="16"/>
+      <Symbol Name="EST8" Address="0x000810B0" Size="32"/>
+      <Symbol Name="EST7" Address="0x000810D0" Size="32"/>
+      <Symbol Name="EST6" Address="0x000810F0" Size="32"/>
+      <Symbol Name="EST5" Address="0x00081110" Size="32"/>
+      <Symbol Name="EST4" Address="0x00081130" Size="32"/>
+      <Symbol Name="EST3" Address="0x00081150" Size="32"/>
+      <Symbol Name="EST2" Address="0x00081170" Size="32"/>
+      <Symbol Name="EST1" Address="0x00081190" Size="32"/>
+      <Symbol Name="CAMPullup" Address="0x000811B0" Size="12"/>
+      <Symbol Name="SPD1Pullup" Address="0x000811BC" Size="12"/>
+      <Symbol Name="ODRC" Address="0x000811C8" Size="12"/>
+      <Symbol Name="CNKPullup" Address="0x000811D4" Size="12"/>
+      <Symbol Name="H2_InhibitB" Address="0x000811E0" Size="12"/>
+      <Symbol Name="H2_InhibitA" Address="0x000811EC" Size="12"/>
+      <Symbol Name="DOut11529p0004" Address="0x000811F8" Size="12"/>
+      <Symbol Name="DOut11001p0004" Address="0x00081204" Size="12"/>
+      <Symbol Name="EEPROM_1" Address="0x00081210" Size="52"/>
+      <Symbol Name="MC33800_INJ8" Address="0x00081244" Size="24"/>
+      <Symbol Name="MC33800_INJ7" Address="0x0008125C" Size="24"/>
+      <Symbol Name="MC33800_INJ6" Address="0x00081274" Size="24"/>
+      <Symbol Name="MC33800_INJ5" Address="0x0008128C" Size="24"/>
+      <Symbol Name="MC33800_INJ4" Address="0x000812A4" Size="24"/>
+      <Symbol Name="MC33800_INJ3" Address="0x000812BC" Size="24"/>
+      <Symbol Name="MC33800_INJ2" Address="0x000812D4" Size="24"/>
+      <Symbol Name="MC33800_INJ1" Address="0x000812EC" Size="24"/>
+      <Symbol Name="MC33800_LSO8" Address="0x00081304" Size="24"/>
+      <Symbol Name="MC33800_LSO10" Address="0x0008131C" Size="24"/>
+      <Symbol Name="MC33800_LSO9" Address="0x00081334" Size="24"/>
+      <Symbol Name="MC33800_MPRD" Address="0x0008134C" Size="24"/>
+      <Symbol Name="MC33800_LSO2" Address="0x00081364" Size="24"/>
+      <Symbol Name="DOut10176p0004" Address="0x0008137C" Size="24"/>
+      <Symbol Name="CAM" Address="0x00081394" Size="8"/>
+      <Symbol Name="S_SHRC_4" Address="0x0008139C" Size="12"/>
+      <Symbol Name="S_SHRC_3" Address="0x000813A8" Size="12"/>
+      <Symbol Name="SPD3" Address="0x000813B4" Size="12"/>
+      <Symbol Name="SPD2" Address="0x000813C0" Size="12"/>
+      <Symbol Name="SPD1" Address="0x000813CC" Size="12"/>
+      <Symbol Name="VISTA_1" Address="0x000813D8" Size="12"/>
+      <Symbol Name="ESTOPPin" Address="0x000813E4" Size="8"/>
+      <Symbol Name="CNK" Address="0x000813EC" Size="48"/>
+      <Symbol Name="SPI_BMethods" Address="0x0008141C" Size="8"/>
+      <Symbol Name="VISTA_1DeviceMethods" Address="0x00081424" Size="12"/>
+      <Symbol Name="VISTA_1DeviceAttrib" Address="0x00081430" Size="6"/>
+      <Symbol Name="VISTA_1Device" Address="0x00081438" Size="16"/>
+      <Symbol Name="VISTA_1DevicePLLUnlockedMethods" Address="0x00081448" Size="12"/>
+      <Symbol Name="VISTA_1DevicePLLUnlockedAttrib" Address="0x00081454" Size="6"/>
+      <Symbol Name="VISTA_1DevicePLLUnlocked" Address="0x0008145C" Size="16"/>
+      <Symbol Name="CNK_Override_Methods" Address="0x0008146C" Size="20"/>
+      <Symbol Name="CNK_OverridePWM" Address="0x00081480" Size="24"/>
+      <Symbol Name="CNK_MuxSelect0_VISTAOut_Methods" Address="0x00081498" Size="16"/>
+      <Symbol Name="CNK_MuxSelect0_VISTADigitalOut" Address="0x000814A8" Size="12"/>
+      <Symbol Name="CNK_MuxSelect0" Address="0x000814B4" Size="12"/>
+      <Symbol Name="CNK_MuxSelect1_VISTAOut_Methods" Address="0x000814C0" Size="16"/>
+      <Symbol Name="CNK_MuxSelect1_VISTADigitalOut" Address="0x000814D0" Size="12"/>
+      <Symbol Name="CNK_MuxSelect1" Address="0x000814DC" Size="12"/>
+      <Symbol Name="CNK_MuxSelectArr" Address="0x000814E8" Size="8"/>
+      <Symbol Name="CNK_Mux" Address="0x000814F0" Size="12"/>
+      <Symbol Name="CNK_Encoder_Methods" Address="0x000814FC" Size="80"/>
+      <Symbol Name="ESTOPPin_CPUDGIn_Methods" Address="0x0008154C" Size="8"/>
+      <Symbol Name="ESTOPPin_CPUDigitalIn" Address="0x00081554" Size="12"/>
+      <Symbol Name="SPI_CMethods" Address="0x00081560" Size="8"/>
+      <Symbol Name="S_SHRC_3SPIDeviceMethods" Address="0x00081568" Size="12"/>
+      <Symbol Name="S_SHRC_3SPIDeviceAttrib" Address="0x00081574" Size="6"/>
+      <Symbol Name="S_SHRC_3SPIDevice" Address="0x0008157C" Size="16"/>
+      <Symbol Name="DOut10176p0004_MC33800_Methods" Address="0x0008158C" Size="16"/>
+      <Symbol Name="DOut10176p0004_MC33800DigitalOut" Address="0x0008159C" Size="12"/>
+      <Symbol Name="MC33800_LSO2_MC33800_Methods" Address="0x000815A8" Size="16"/>
+      <Symbol Name="MC33800_LSO2_MC33800DigitalOut" Address="0x000815B8" Size="12"/>
+      <Symbol Name="MC33800_MPRD_MC33800_Methods" Address="0x000815C4" Size="16"/>
+      <Symbol Name="MC33800_MPRD_MC33800DigitalOut" Address="0x000815D4" Size="12"/>
+      <Symbol Name="RS485_RxObjReadAccessSyncObj" Address="0x000815E0" Size="12"/>
+      <Symbol Name="RS485_RxObjDataReceivedEvent" Address="0x000815EC" Size="12"/>
+      <Symbol Name="RS485_RxObj" Address="0x000815F8" Size="20"/>
+      <Symbol Name="RS485_TxObj" Address="0x0008160C" Size="16"/>
+      <Symbol Name="RS485MethodsPrivateMethods" Address="0x0008161C" Size="48"/>
+      <Symbol Name="RS485Methods" Address="0x0008164C" Size="40"/>
+      <Symbol Name="g_eQADCCommandQueueBuffer5" Address="0x00081674" Size="56"/>
+      <Symbol Name="ContinuousScan_eQADCQueue_QueueMethod" Address="0x000816AC" Size="28"/>
+      <Symbol Name="ContinuousScan_eQADCQueueCommandQueueDefn" Address="0x000816C8" Size="12"/>
+      <Symbol Name="ContinuousScan_eQADCQueueResultQueueDefn" Address="0x000816D4" Size="8"/>
+      <Symbol Name="SPD1_CPUFreqIn_Methods" Address="0x000816DC" Size="20"/>
+      <Symbol Name="SPD2_CPUFreqIn_Methods" Address="0x000816F0" Size="20"/>
+      <Symbol Name="SPD3_CPUFreqIn_Methods" Address="0x00081704" Size="20"/>
+      <Symbol Name="S_SHRC_4SPIDeviceMethods" Address="0x00081718" Size="12"/>
+      <Symbol Name="S_SHRC_4SPIDeviceAttrib" Address="0x00081724" Size="6"/>
+      <Symbol Name="S_SHRC_4SPIDevice" Address="0x0008172C" Size="16"/>
+      <Symbol Name="MC33800_LSO9_MC33800_Methods" Address="0x0008173C" Size="16"/>
+      <Symbol Name="MC33800_LSO9_MC33800DigitalOut" Address="0x0008174C" Size="12"/>
+      <Symbol Name="LSO9_PWMOutput_Methods" Address="0x00081758" Size="20"/>
+      <Symbol Name="MC33800_LSO10_MC33800_Methods" Address="0x0008176C" Size="16"/>
+      <Symbol Name="MC33800_LSO10_MC33800DigitalOut" Address="0x0008177C" Size="12"/>
+      <Symbol Name="LSO10_PWMOutput_Methods" Address="0x00081788" Size="20"/>
+      <Symbol Name="H1p_Methods" Address="0x0008179C" Size="20"/>
+      <Symbol Name="H1m_Methods" Address="0x000817B0" Size="20"/>
+      <Symbol Name="H1_InhibitA_Methods" Address="0x000817C4" Size="20"/>
+      <Symbol Name="H1_InhibitB_Methods" Address="0x000817D8" Size="20"/>
+      <Symbol Name="H2p_Methods" Address="0x000817EC" Size="20"/>
+      <Symbol Name="H2m_Methods" Address="0x00081800" Size="20"/>
+      <Symbol Name="MC33800_LSO8_MC33800_Methods" Address="0x00081814" Size="16"/>
+      <Symbol Name="MC33800_LSO8_MC33800DigitalOut" Address="0x00081824" Size="12"/>
+      <Symbol Name="LSO8_PWMOutput_Methods" Address="0x00081830" Size="20"/>
+      <Symbol Name="CAM_CPUCamEncoder_Methods" Address="0x00081844" Size="8"/>
+      <Symbol Name="CAM_CPUCamEncoder" Address="0x0008184C" Size="28"/>
+      <Symbol Name="g_eQADCCommandQueueBuffer1" Address="0x00081868" Size="32"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueue_QueueMethod" Address="0x00081888" Size="28"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueue_QueueDefn" Address="0x000818A4" Size="12"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueueCommandQueueDefn" Address="0x000818B0" Size="12"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueueResultQueueDefn" Address="0x000818BC" Size="8"/>
+      <Symbol Name="EST1_CPUPSP_ProcessorObj" Address="0x000818C4" Size="4"/>
+      <Symbol Name="EST1_Ctrl" Address="0x000818C8" Size="16"/>
+      <Symbol Name="EST1_Disable_CPUOut_Methods" Address="0x000818D8" Size="16"/>
+      <Symbol Name="EST1_Disable_CPUDigitalOut" Address="0x000818E8" Size="12"/>
+      <Symbol Name="EST1_Disable" Address="0x000818F4" Size="12"/>
+      <Symbol Name="EST2_CPUPSP_ProcessorObj" Address="0x00081900" Size="4"/>
+      <Symbol Name="EST2_Ctrl" Address="0x00081904" Size="16"/>
+      <Symbol Name="EST2_Disable_CPUOut_Methods" Address="0x00081914" Size="16"/>
+      <Symbol Name="EST2_Disable_CPUDigitalOut" Address="0x00081924" Size="12"/>
+      <Symbol Name="EST2_Disable" Address="0x00081930" Size="12"/>
+      <Symbol Name="EST3_CPUPSP_ProcessorObj" Address="0x0008193C" Size="4"/>
+      <Symbol Name="EST3_Ctrl" Address="0x00081940" Size="16"/>
+      <Symbol Name="EST3_Disable_CPUOut_Methods" Address="0x00081950" Size="16"/>
+      <Symbol Name="EST3_Disable_CPUDigitalOut" Address="0x00081960" Size="12"/>
+      <Symbol Name="EST3_Disable" Address="0x0008196C" Size="12"/>
+      <Symbol Name="EST4_CPUPSP_ProcessorObj" Address="0x00081978" Size="4"/>
+      <Symbol Name="EST4_Ctrl" Address="0x0008197C" Size="16"/>
+      <Symbol Name="EST4_Disable_CPUOut_Methods" Address="0x0008198C" Size="16"/>
+      <Symbol Name="EST4_Disable_CPUDigitalOut" Address="0x0008199C" Size="12"/>
+      <Symbol Name="EST4_Disable" Address="0x000819A8" Size="12"/>
+      <Symbol Name="EST5_CPUPSP_ProcessorObj" Address="0x000819B4" Size="4"/>
+      <Symbol Name="EST5_Ctrl" Address="0x000819B8" Size="16"/>
+      <Symbol Name="EST5_Disable_CPUOut_Methods" Address="0x000819C8" Size="16"/>
+      <Symbol Name="EST5_Disable_CPUDigitalOut" Address="0x000819D8" Size="12"/>
+      <Symbol Name="EST5_Disable" Address="0x000819E4" Size="12"/>
+      <Symbol Name="EST6_CPUPSP_ProcessorObj" Address="0x000819F0" Size="4"/>
+      <Symbol Name="EST6_Ctrl" Address="0x000819F4" Size="16"/>
+      <Symbol Name="EST6_Disable_CPUOut_Methods" Address="0x00081A04" Size="16"/>
+      <Symbol Name="EST6_Disable_CPUDigitalOut" Address="0x00081A14" Size="12"/>
+      <Symbol Name="EST6_Disable" Address="0x00081A20" Size="12"/>
+      <Symbol Name="EST7_CPUPSP_ProcessorObj" Address="0x00081A2C" Size="4"/>
+      <Symbol Name="EST7_Ctrl" Address="0x00081A30" Size="16"/>
+      <Symbol Name="EST7_Disable_CPUOut_Methods" Address="0x00081A40" Size="16"/>
+      <Symbol Name="EST7_Disable_CPUDigitalOut" Address="0x00081A50" Size="12"/>
+      <Symbol Name="EST7_Disable" Address="0x00081A5C" Size="12"/>
+      <Symbol Name="EST8_CPUPSP_ProcessorObj" Address="0x00081A68" Size="4"/>
+      <Symbol Name="EST8_Ctrl" Address="0x00081A6C" Size="16"/>
+      <Symbol Name="EST8_Disable_CPUOut_Methods" Address="0x00081A7C" Size="16"/>
+      <Symbol Name="EST8_Disable_CPUDigitalOut" Address="0x00081A8C" Size="12"/>
+      <Symbol Name="EST8_Disable" Address="0x00081A98" Size="12"/>
+      <Symbol Name="MC33800_INJ1_MC33800_Methods" Address="0x00081AA4" Size="16"/>
+      <Symbol Name="MC33800_INJ1_MC33800DigitalOut" Address="0x00081AB4" Size="12"/>
+      <Symbol Name="INJ1_CPUPSP_Methods" Address="0x00081AC0" Size="28"/>
+      <Symbol Name="INJ1_CPUPSP_ProcessorObj" Address="0x00081ADC" Size="4"/>
+      <Symbol Name="MC33800_INJ2_MC33800_Methods" Address="0x00081AE0" Size="16"/>
+      <Symbol Name="MC33800_INJ2_MC33800DigitalOut" Address="0x00081AF0" Size="12"/>
+      <Symbol Name="INJ2_CPUPSP_Methods" Address="0x00081AFC" Size="28"/>
+      <Symbol Name="INJ2_CPUPSP_ProcessorObj" Address="0x00081B18" Size="4"/>
+      <Symbol Name="MC33800_INJ3_MC33800_Methods" Address="0x00081B1C" Size="16"/>
+      <Symbol Name="MC33800_INJ3_MC33800DigitalOut" Address="0x00081B2C" Size="12"/>
+      <Symbol Name="INJ3_CPUPSP_Methods" Address="0x00081B38" Size="28"/>
+      <Symbol Name="INJ3_CPUPSP_ProcessorObj" Address="0x00081B54" Size="4"/>
+      <Symbol Name="MC33800_INJ4_MC33800_Methods" Address="0x00081B58" Size="16"/>
+      <Symbol Name="MC33800_INJ4_MC33800DigitalOut" Address="0x00081B68" Size="12"/>
+      <Symbol Name="INJ4_CPUPSP_Methods" Address="0x00081B74" Size="28"/>
+      <Symbol Name="INJ4_CPUPSP_ProcessorObj" Address="0x00081B90" Size="4"/>
+      <Symbol Name="MC33800_INJ5_MC33800_Methods" Address="0x00081B94" Size="16"/>
+      <Symbol Name="MC33800_INJ5_MC33800DigitalOut" Address="0x00081BA4" Size="12"/>
+      <Symbol Name="INJ5_CPUPSP_Methods" Address="0x00081BB0" Size="28"/>
+      <Symbol Name="INJ5_CPUPSP_ProcessorObj" Address="0x00081BCC" Size="4"/>
+      <Symbol Name="MC33800_INJ6_MC33800_Methods" Address="0x00081BD0" Size="16"/>
+      <Symbol Name="MC33800_INJ6_MC33800DigitalOut" Address="0x00081BE0" Size="12"/>
+      <Symbol Name="INJ6_CPUPSP_Methods" Address="0x00081BEC" Size="28"/>
+      <Symbol Name="INJ6_CPUPSP_ProcessorObj" Address="0x00081C08" Size="4"/>
+      <Symbol Name="MC33800_INJ7_MC33800_Methods" Address="0x00081C0C" Size="16"/>
+      <Symbol Name="MC33800_INJ7_MC33800DigitalOut" Address="0x00081C1C" Size="12"/>
+      <Symbol Name="INJ7_CPUPSP_Methods" Address="0x00081C28" Size="28"/>
+      <Symbol Name="INJ7_CPUPSP_ProcessorObj" Address="0x00081C44" Size="4"/>
+      <Symbol Name="MC33800_INJ8_MC33800_Methods" Address="0x00081C48" Size="16"/>
+      <Symbol Name="MC33800_INJ8_MC33800DigitalOut" Address="0x00081C58" Size="12"/>
+      <Symbol Name="INJ8_CPUPSP_Methods" Address="0x00081C64" Size="28"/>
+      <Symbol Name="INJ8_CPUPSP_ProcessorObj" Address="0x00081C80" Size="4"/>
+      <Symbol Name="SPI_DMethods" Address="0x00081C84" Size="8"/>
+      <Symbol Name="EEPROM_1SPIDeviceMethods" Address="0x00081C8C" Size="12"/>
+      <Symbol Name="EEPROM_1SPIDeviceAttrib" Address="0x00081C98" Size="6"/>
+      <Symbol Name="EEPROM_1SPIDevice" Address="0x00081CA0" Size="16"/>
+      <Symbol Name="EEPROM_1_Memory" Address="0x00081CB0" Size="36"/>
+      <Symbol Name="EEPROM_1_AccessSemaphore" Address="0x00081CD4" Size="12"/>
+      <Symbol Name="EEPROM_1_Methods" Address="0x00081CE0" Size="16"/>
+      <Symbol Name="DOut11001p0004_CPUOut_Methods" Address="0x00081CF0" Size="16"/>
+      <Symbol Name="DOut11001p0004_CPUDigitalOut" Address="0x00081D00" Size="12"/>
+      <Symbol Name="DOut11529p0004_CPUOut_Methods" Address="0x00081D0C" Size="16"/>
+      <Symbol Name="DOut11529p0004_CPUDigitalOut" Address="0x00081D1C" Size="12"/>
+      <Symbol Name="H2_InhibitA_CPUOut_Methods" Address="0x00081D28" Size="16"/>
+      <Symbol Name="H2_InhibitA_CPUDigitalOut" Address="0x00081D38" Size="12"/>
+      <Symbol Name="H2_InhibitB_CPUOut_Methods" Address="0x00081D44" Size="16"/>
+      <Symbol Name="H2_InhibitB_CPUDigitalOut" Address="0x00081D54" Size="12"/>
+      <Symbol Name="CNKPullup_VISTAOut_Methods" Address="0x00081D60" Size="16"/>
+      <Symbol Name="CNKPullup_VISTADigitalOut" Address="0x00081D70" Size="12"/>
+      <Symbol Name="ODRC_CPUOut_Methods" Address="0x00081D7C" Size="16"/>
+      <Symbol Name="ODRC_CPUDigitalOut" Address="0x00081D8C" Size="12"/>
+      <Symbol Name="SPD1Pullup_VISTAOut_Methods" Address="0x00081D98" Size="16"/>
+      <Symbol Name="SPD1Pullup_VISTADigitalOut" Address="0x00081DA8" Size="12"/>
+      <Symbol Name="CAMPullup_VISTAOut_Methods" Address="0x00081DB4" Size="16"/>
+      <Symbol Name="CAMPullup_VISTADigitalOut" Address="0x00081DC4" Size="12"/>
+      <Symbol Name="g_KeySuiteProtocolInstanceInfo" Address="0x00081E24" Size="64"/>
+      <Symbol Name="CSWTCH.46" Address="0x00081E64" Size="9"/>
+      <Symbol Name="g_u32KeyProtocolPacketTimeout_ms" Address="0x00081E70" Size="4"/>
+      <Symbol Name="g_u32ERIProtocolPacketTimeout_ms" Address="0x00081E74" Size="4"/>
+      <Symbol Name="g_KeyProtocolOnCAN" Address="0x00081E78" Size="28"/>
+      <Symbol Name="g_ERIProtocolOnCAN" Address="0x00081E94" Size="28"/>
+      <Symbol Name="g_KeyProtocolOnSerial" Address="0x00081EB0" Size="28"/>
+      <Symbol Name="g_ERIProtocolOnSerial" Address="0x00081ECC" Size="28"/>
+      <Symbol Name="g_ProtocolManagerDefn" Address="0x00081EE8" Size="112"/>
+      <Symbol Name="s_szBadString" Address="0x00081F70" Size="4"/>
+      <Symbol Name="g_eProjectID" Address="0x00081F74" Size="1"/>
+      <Symbol Name="g_u4ProductID" Address="0x00081F78" Size="4"/>
+      <Symbol Name="SwIdTxt" Address="0x00081F7C" Size="13"/>
+      <Symbol Name="SwRevisionTxt" Address="0x00081F8C" Size="50"/>
+      <Symbol Name="FriendlyName" Address="0x00081FC0" Size="33"/>
+      <Symbol Name="Table0Rev_cu1" Address="0x00081FE1" Size="1"/>
+      <Symbol Name="Table1Rev_cu1" Address="0x00081FE2" Size="1"/>
+      <Symbol Name="Table2Rev_cu1" Address="0x00081FE3" Size="1"/>
+      <Symbol Name="Table3Rev_cu1" Address="0x00081FE4" Size="1"/>
+      <Symbol Name="Table4Rev_cu1" Address="0x00081FE5" Size="1"/>
+      <Symbol Name="Table5Rev_cu1" Address="0x00081FE6" Size="1"/>
+      <Symbol Name="Table6Rev_cu1" Address="0x00081FE7" Size="1"/>
+      <Symbol Name="Table7Rev_cu1" Address="0x00081FE8" Size="1"/>
+      <Symbol Name="eventMatrix.1897" Address="0x00081FEC" Size="16"/>
+      <Symbol Name="CSWTCH.4" Address="0x00081FFC" Size="3"/>
+      <Symbol Name="EriRequestTableList" Address="0x00082000" Size="64"/>
+      <Symbol Name="Table0" Address="0x00082040" Size="272"/>
+      <Symbol Name="Table1" Address="0x00082150" Size="12344"/>
+      <Symbol Name="Table2" Address="0x00085188" Size="8"/>
+      <Symbol Name="Table3" Address="0x00085190" Size="8"/>
+      <Symbol Name="Table4" Address="0x00085198" Size="8"/>
+      <Symbol Name="Table5" Address="0x000851A0" Size="8"/>
+      <Symbol Name="Table6" Address="0x000851A8" Size="8"/>
+      <Symbol Name="Table7" Address="0x000851B0" Size="8"/>
+      <Symbol Name="pfnHardStart_HardStop_Arr.18217" Address="0x000851B8" Size="32"/>
+      <Symbol Name="Zero" Address="0x000851E8" Size="16"/>
+      <Symbol Name="npio2_hw" Address="0x000851F8" Size="128"/>
+      <Symbol Name="two_over_pi" Address="0x00085278" Size="264"/>
+      <Symbol Name="init_jk" Address="0x00085380" Size="16"/>
+      <Symbol Name="PIo2" Address="0x00085390" Size="64"/>
+      <Symbol Name="ApplicationCompatibilityArr" Address="0x000853D0" Size="6"/>
+      <Symbol Name="g_ModuleInitRegisterConfigArr" Address="0x000853D8" Size="12"/>
+      <Symbol Name="g_ModuleInitPadConfigArr" Address="0x000853E4" Size="4"/>
+      <Symbol Name="g_eFMPLLMFD" Address="0x000853E8" Size="1"/>
+      <Symbol Name="g_eFMPLLRFD" Address="0x000853E9" Size="1"/>
+      <Symbol Name="g_eFMPLLPrediv" Address="0x000853EA" Size="1"/>
+      <Symbol Name="g_uSystemClockTicksPerMicroSec" Address="0x000853EC" Size="2"/>
+      <Symbol Name="g_uSystemClockFreqInHz" Address="0x000853F0" Size="4"/>
+      <Symbol Name="s_u32ExtSRAM_BR" Address="0x000853F4" Size="4"/>
+      <Symbol Name="s_u32ExtSRAM_OR" Address="0x000853F8" Size="4"/>
+      <Symbol Name="s_pEBI_BR" Address="0x000853FC" Size="4"/>
+      <Symbol Name="s_pEBI_OR" Address="0x00085400" Size="4"/>
+      <Symbol Name="TLE7368_WDI" Address="0x00085404" Size="12"/>
+      <Symbol Name="TLE7368_WDI_CPUDigitalOut" Address="0x00085410" Size="12"/>
+      <Symbol Name="TLE7368_WDI_CPUOut_Methods" Address="0x0008541C" Size="16"/>
+      <Symbol Name="TLE7368" Address="0x0008542C" Size="16"/>
+      <Symbol Name="TLE7368_PWR_HOLD_CPUOut_Methods" Address="0x0008543C" Size="16"/>
+      <Symbol Name="TLE7368_PWR_HOLD_CPUDigitalOut" Address="0x0008544C" Size="12"/>
+      <Symbol Name="TLE7368_PWR_HOLD" Address="0x00085458" Size="12"/>
+      <Symbol Name="g_ModuleSupportMMUConfigArr" Address="0x00085464" Size="32"/>
+      <Symbol Name="g_u8ModuleSupportNumMMUEntries" Address="0x00085484" Size="1"/>
+      <Symbol Name="g_InitPadConfigArr" Address="0x00085485" Size="264"/>
+      <Symbol Name="g_InitRegisterConfigArr" Address="0x00085590" Size="60"/>
+      <Symbol Name="C.0.12228" Address="0x000855CC" Size="12"/>
+      <Symbol Name="s_u8BlockSizeArr.12205" Address="0x000855D8" Size="28"/>
+      <Symbol Name="s_u8BlockIndexArr.12206" Address="0x000855F4" Size="28"/>
+      <Symbol Name="s_SSDConfig_Init" Address="0x00085610" Size="40"/>
+      <Symbol Name="GetLock_C" Address="0x00085638" Size="224"/>
+      <Symbol Name="ProgramVerify_C" Address="0x00085718" Size="368"/>
+      <Symbol Name="RWECheck_C" Address="0x00085888" Size="96"/>
+      <Symbol Name="SetLock_C" Address="0x000858E8" Size="256"/>
+      <Symbol Name="BlankCheck_C" Address="0x000859E8" Size="332"/>
+      <Symbol Name="FlashErase_C" Address="0x00085B34" Size="484"/>
+      <Symbol Name="FlashInit_C" Address="0x00085D18" Size="408"/>
+      <Symbol Name="FlashProgram_C" Address="0x00085EB0" Size="564"/>
+      <Symbol Name="g_eSCITCDDefaultsArr" Address="0x000860E4" Size="64"/>
+      <Symbol Name="s_pfnOnStatusChangeArr.12892" Address="0x00086124" Size="20"/>
+      <Symbol Name="s_pfnSetETPUPSPConditionArr.13122" Address="0x00086138" Size="16"/>
+      <Symbol Name="uTxPCRNumberArr.12234" Address="0x00086148" Size="3"/>
+      <Symbol Name="uRxPCRNumberArr.12235" Address="0x0008614C" Size="3"/>
+      <Symbol Name="s_SPI_RXTransfer_8Bit" Address="0x00086150" Size="4"/>
+      <Symbol Name="s_SPI_RXTransfer_16Bit" Address="0x00086154" Size="4"/>
+      <Symbol Name="s_SPI_TXTransfer" Address="0x00086158" Size="4"/>
+      <Symbol Name="g_SPIDMARequestArr" Address="0x0008615C" Size="8"/>
+      <Symbol Name="g_SCITCDConfigInfoObj" Address="0x00086164" Size="48"/>
+      <Symbol Name="s_OutputPinStateTransformArr" Address="0x00086194" Size="8"/>
+      <Symbol Name="MPC5xxTestCode_Key" Address="0x0008619C" Size="24"/>
+      <Symbol Name="SecurityTokenOwner" Address="0x000861B4" Size="9"/>
+      <Symbol Name="LicenseType" Address="0x000861C0" Size="11"/>
+      <Symbol Name="LicenseRestriction" Address="0x000861CC" Size="105"/>
+      <Symbol Name="SecurityBasicKeyDecryptionInfo" Address="0x00086238" Size="8"/>
+      <Symbol Name="Security_Basic_Key_DecryptionObj" Address="0x00086240" Size="8"/>
+      <Symbol Name="MPC5xxTestCode_AccessArr" Address="0x00086248" Size="48"/>
+      <Symbol Name="DefaultSecurity_KeyArr" Address="0x00086278" Size="4"/>
+      <Symbol Name="DefaultSecurity_Security" Address="0x0008627C" Size="8"/>
+      <Symbol Name="g_Protocol_ERI_Rev" Address="0x00086284" Size="1"/>
+      <Symbol Name="s_pfnERIXTD2HandlerArr.3431" Address="0x00086288" Size="40"/>
+      <Symbol Name="s_pfnERIXTDHandlerArr.3416" Address="0x000862B0" Size="36"/>
+      <Symbol Name="g_Protocol_Key_Rev" Address="0x000862D4" Size="1"/>
+      <Symbol Name="g_Protocol_MotProg_Rev" Address="0x000862D5" Size="1"/>
+      <Symbol Name="_ZL12s_u32MaskArr" Address="0x000862D8" Size="16384"/>
+      <Symbol Name="g_TPUMaskDefn_EngineBasic" Address="0x0008A2D8" Size="282"/>
+      <Symbol Name="_ZL13s_MaskMethods" Address="0x0008A3F2" Size="4"/>
+      <Symbol Name="_ZL13s_FuncCodeArr" Address="0x0008A3F6" Size="80"/>
+      <Symbol Name="_ZL22s_u8GlobalInitImageArr" Address="0x0008A448" Size="24"/>
+      <Symbol Name="_ZL24s_GlobalInitImageDefnArr" Address="0x0008A460" Size="60"/>
+      <Symbol Name="s_EncoderPrimitiveDefn_yNMX_CamSync" Address="0x0008A49C" Size="2"/>
+      <Symbol Name="s_EncoderPrimitiveDefn_NX" Address="0x0008A49E" Size="2"/>
+      <Symbol Name="s_EncoderPrimitiveDefn_GM24Xe" Address="0x0008A4A0" Size="2"/>
+      <Symbol Name="s_EncoderPrimitiveDefn_yNMX" Address="0x0008A4A2" Size="2"/>
+      <Symbol Name="s_CtrlModeBitsArr.4391" Address="0x0008A4A4" Size="4"/>
+      <Symbol Name="__thenan_df" Address="0x0008A4A8" Size="24"/>
+      <Symbol Name="__JCR_LIST__" Address="0x0008A514" Size="0"/>
+      <Symbol Name="__JCR_END__" Address="0x0008A514" Size="0"/>
+      <Symbol Name="NonVolatileDefault" Address="0x0008A564" Size="2280"/>
+      <Symbol Name="g_szIdleTaskName" Address="0x0008AE4C" Size="10"/>
+      <Symbol Name="CRCTableArr" Address="0x0008AE58" Size="16"/>
+   </MemoryRegion>
+   <MemoryRegion Name="FLASH_CALIBRATION" SAddr="0x001E0000" Size="131008">
+      <Symbol Name="ConstantStorage" Address="0x001E0000" Size="29392"/>
+   </MemoryRegion>
+   <MemoryRegion Name="EXTERNAL RAM" SAddr="0x3ff80000" Size="393216"/>
+   <MemoryRegion Name="RAM_CALIBRATION" SAddr="0x3ffe0000" Size="131008">
+      <Symbol Name="ConstantWork" Address="0x3FFE0000" Size="29392"/>
+   </MemoryRegion>
+   <MemoryRegion Name="INTERNAL RAM" SAddr="0x40000000" Size="65520">
+      <Symbol Name="CCP1_DynamicID" Address="0x40000000" Size="4"/>
+      <Symbol Name="CCP1_DynamicIDMask" Address="0x40000004" Size="4"/>
+      <Symbol Name="CAN_1_KeySuite_DynamicIDMask" Address="0x40000008" Size="4"/>
+      <Symbol Name="CAN_2_KeySuite_DynamicIDMask" Address="0x4000000C" Size="4"/>
+      <Symbol Name="VolatileWork" Address="0x40000010" Size="15"/>
+      <Symbol Name="AnalogInput_VISTA_1_AD7" Address="0x40000020" Size="12"/>
+      <Symbol Name="AnalogInput_VISTA_1_AD6" Address="0x4000002C" Size="12"/>
+      <Symbol Name="AnalogInput_VISTA_1_AD1" Address="0x40000038" Size="12"/>
+      <Symbol Name="AnalogInput_VISTA_1_AD0" Address="0x40000044" Size="12"/>
+      <Symbol Name="AnalogInput_VISTA_1_AD4" Address="0x40000050" Size="12"/>
+      <Symbol Name="impure_data" Address="0x40000060" Size="1024"/>
+      <Symbol Name="__malloc_av_" Address="0x40000460" Size="1032"/>
+      <Symbol Name="_impure_ptr" Address="0x4000086C" Size="4"/>
+      <Symbol Name="_global_impure_ptr" Address="0x40000870" Size="4"/>
+      <Symbol Name="__malloc_trim_threshold" Address="0x40000874" Size="4"/>
+      <Symbol Name="__malloc_sbrk_base" Address="0x40000878" Size="4"/>
+      <Symbol Name="__fdlib_version" Address="0x4000087C" Size="4"/>
+      <Symbol Name="g_u8ISRNestingCnt" Address="0x40000880" Size="1"/>
+      <Symbol Name="g_u8CriticalSectionCnt" Address="0x40000881" Size="1"/>
+      <Symbol Name="g_u8TaskKernelErrorCnt" Address="0x40000882" Size="1"/>
+      <Symbol Name="g_u16InterruptStackMinBytesFree" Address="0x40000884" Size="2"/>
+      <Symbol Name="g_pStartOfInterruptStack" Address="0x40000888" Size="4"/>
+      <Symbol Name="g_pEndOfInterruptStack" Address="0x4000088C" Size="4"/>
+      <Symbol Name="g_uReadyListMask" Address="0x40000890" Size="4"/>
+      <Symbol Name="g_u16ExecPerfCnt" Address="0x40000894" Size="2"/>
+      <Symbol Name="g_eLastISRType" Address="0x40000896" Size="1"/>
+      <Symbol Name="g_pCurrentTaskDefn" Address="0x40000898" Size="4"/>
+      <Symbol Name="g_pHighestPriorityTaskDefn" Address="0x4000089C" Size="4"/>
+      <Symbol Name="g_IdleTaskTCB" Address="0x400008A0" Size="36"/>
+      <Symbol Name="g_ISRExecPerfArr" Address="0x400008C4" Size="44"/>
+      <Symbol Name="g_pDestroyTaskStack" Address="0x400008F0" Size="4"/>
+      <Symbol Name="s_TimeBaseExceptionUse" Address="0x400008F4" Size="1"/>
+      <Symbol Name="g_pfnECSM_IRQHandler" Address="0x400008F8" Size="4"/>
+      <Symbol Name="g_pfnECSM_ExtIRQHandler" Address="0x400008FC" Size="4"/>
+      <Symbol Name="g_ECSMpThisArr" Address="0x40000900" Size="4"/>
+      <Symbol Name="g_u32EMIOSChannelAlloc" Address="0x40000904" Size="4"/>
+      <Symbol Name="g_u32EMIOSChannelOwnsFlag" Address="0x40000908" Size="4"/>
+      <Symbol Name="g_u8_eMIOS_INTERNAL_CLK_TIME_PER_TICK_ns" Address="0x4000090C" Size="1"/>
+      <Symbol Name="g_u8_eMIOS_INTERNAL_CLK_TICKS_PER_US" Address="0x4000090D" Size="1"/>
+      <Symbol Name="g_u32_eMIOS_INTERNAL_CLK_FREQx100" Address="0x40000910" Size="4"/>
+      <Symbol Name="g_u32ETPUChannelOwnsFlagArr" Address="0x40000914" Size="8"/>
+      <Symbol Name="g_pTPUMaskDefn" Address="0x4000091C" Size="4"/>
+      <Symbol Name="g_u32ETPUChannelsArr" Address="0x40000920" Size="8"/>
+      <Symbol Name="__malloc_top_pad" Address="0x40000928" Size="4"/>
+      <Symbol Name="__malloc_max_sbrked_mem" Address="0x4000092C" Size="4"/>
+      <Symbol Name="__malloc_max_total_mem" Address="0x40000930" Size="4"/>
+      <Symbol Name="errno" Address="0x40000934" Size="4"/>
+      <Symbol Name="g_pSPIDeviceDefnArr" Address="0x40000938" Size="16"/>
+      <Symbol Name="g_pfnSPIModuleISR" Address="0x40000948" Size="4"/>
+      <Symbol Name="completed.3758" Address="0x4000094C" Size="1"/>
+      <Symbol Name="dtor_idx.3760" Address="0x40000950" Size="4"/>
+      <Symbol Name="object.3787" Address="0x40000954" Size="24"/>
+      <Symbol Name="s_IdleLoopCompleteEventECB" Address="0x4000096C" Size="12"/>
+      <Symbol Name="s_u32StarvationTimer_us" Address="0x40000978" Size="4"/>
+      <Symbol Name="s_u8HasISR" Address="0x4000097C" Size="1"/>
+      <Symbol Name="s_u8HasTimestamp" Address="0x4000097D" Size="1"/>
+      <Symbol Name="s_ADCModuleCreate" Address="0x4000097E" Size="1"/>
+      <Symbol Name="s_ADCModule_PreScaler" Address="0x4000097F" Size="1"/>
+      <Symbol Name="g_u32PeakHeapBytesUsed" Address="0x40000980" Size="4"/>
+      <Symbol Name="g_u32BytesOnHeap" Address="0x40000984" Size="4"/>
+      <Symbol Name="BaseEngineController_LS_112_DWork" Address="0x40000988" Size="1200"/>
+      <Symbol Name="BaseEngineController_LS_112_M_" Address="0x40000E38" Size="16"/>
+      <Symbol Name="BaseEngineController_LS_112_B" Address="0x40000E48" Size="1696"/>
+      <Symbol Name="BaseEngineController_LS_112_PrevZCSigState" Address="0x400014E8"
+              Size="13"/>
+      <Symbol Name="motohawk_encoder_fault" Address="0x400014F5" Size="1"/>
+      <Symbol Name="fault_action_marquee_state.16944" Address="0x400014F8" Size="15"/>
+      <Symbol Name="LastTxtime32.20343" Address="0x40001508" Size="4"/>
+      <Symbol Name="LastTxtime32.20363" Address="0x4000150C" Size="4"/>
+      <Symbol Name="LastTxtime32.20390" Address="0x40001510" Size="4"/>
+      <Symbol Name="LastTxtime32.20492" Address="0x40001514" Size="4"/>
+      <Symbol Name="LastTxtime32.20524" Address="0x40001518" Size="4"/>
+      <Symbol Name="LastTxtime32.20543" Address="0x4000151C" Size="4"/>
+      <Symbol Name="LastTxtime32.20565" Address="0x40001520" Size="4"/>
+      <Symbol Name="LastTxtime32.20589" Address="0x40001524" Size="4"/>
+      <Symbol Name="LastTxtime32.20618" Address="0x40001528" Size="4"/>
+      <Symbol Name="LastTxtime32.20649" Address="0x4000152C" Size="4"/>
+      <Symbol Name="LastTxtime32.20673" Address="0x40001530" Size="4"/>
+      <Symbol Name="mh_CCP1_CCPHandlerConfigPrescalers" Address="0x40001534" Size="20"/>
+      <Symbol Name="mh_CCP1_CCPHandlerConfigFrameReady" Address="0x40001548" Size="10"/>
+      <Symbol Name="mh_CCP1_CCPHandlerInstance" Address="0x40001554" Size="116"/>
+      <Symbol Name="g_bAppOpen" Address="0x400015C8" Size="1"/>
+      <Symbol Name="g_Timer_FreeRunningCounter_TimeAtReset" Address="0x400015D0" Size="8"/>
+      <Symbol Name="g_bWasPowerUpStatusWarm" Address="0x400015D8" Size="1"/>
+      <Symbol Name="Timer_CurrentTime.20909" Address="0x400015E0" Size="8"/>
+      <Symbol Name="u4LastRandomNumber" Address="0x400015E8" Size="4"/>
+      <Symbol Name="g_AppTaskTCB" Address="0x400015EC" Size="36"/>
+      <Symbol Name="g_ApplicationInterruptTaskTCB" Address="0x40001610" Size="36"/>
+      <Symbol Name="g_BGNDTaskTCB" Address="0x40001634" Size="36"/>
+      <Symbol Name="g_SHUTDOWNTaskTCB" Address="0x40001658" Size="36"/>
+      <Symbol Name="g_FGNDTaskTCB" Address="0x4000167C" Size="36"/>
+      <Symbol Name="g_u16CPUIdlePcnt" Address="0x400016A0" Size="2"/>
+      <Symbol Name="RTICounter_25000" Address="0x400016A4" Size="4"/>
+      <Symbol Name="RTICounter_50000" Address="0x400016A8" Size="4"/>
+      <Symbol Name="RTICounter_100000" Address="0x400016AC" Size="4"/>
+      <Symbol Name="RTICounter_500000" Address="0x400016B0" Size="4"/>
+      <Symbol Name="RTICounter_1000000" Address="0x400016B4" Size="4"/>
+      <Symbol Name="g_pTaskDefnPriorityArr" Address="0x400016B8" Size="24"/>
+      <Symbol Name="g_InterruptStack" Address="0x400016D0" Size="1280"/>
+      <Symbol Name="g_AppTaskStack" Address="0x40001BD0" Size="1024"/>
+      <Symbol Name="g_BGNDTask_MailBoxFetchSemaphoreECB" Address="0x40001FD0" Size="12"/>
+      <Symbol Name="g_BGNDTask_MailBoxRuntime" Address="0x40001FDC" Size="16"/>
+      <Symbol Name="g_BGNDTaskStack" Address="0x40001FEC" Size="1024"/>
+      <Symbol Name="g_FGNDTask_MailBoxFetchSemaphoreECB" Address="0x400023EC" Size="12"/>
+      <Symbol Name="g_FGNDTask_MailBoxRuntime" Address="0x400023F8" Size="16"/>
+      <Symbol Name="g_FGNDTaskStack" Address="0x40002408" Size="4096"/>
+      <Symbol Name="g_SHUTDOWNTask_MailBoxFetchSemaphoreECB" Address="0x40003408" Size="12"/>
+      <Symbol Name="g_SHUTDOWNTask_MailBoxRuntime" Address="0x40003414" Size="16"/>
+      <Symbol Name="g_SHUTDOWNTaskStack" Address="0x40003424" Size="1024"/>
+      <Symbol Name="g_ApplicationInterruptTask_MailBoxFetchSemaphoreECB" Address="0x40003824"
+              Size="12"/>
+      <Symbol Name="g_ApplicationInterruptTask_MailBoxRuntime" Address="0x40003830" Size="16"/>
+      <Symbol Name="g_ApplicationInterruptTaskStack" Address="0x40003840" Size="1024"/>
+      <Symbol Name="CAN_1_KeySuite_DynamicID" Address="0x40003C40" Size="4"/>
+      <Symbol Name="CAN_2_KeySuite_DynamicID" Address="0x40003C44" Size="4"/>
+      <Symbol Name="RxSlot_9124p0001_ReceiveFrameValid" Address="0x40003C48" Size="1"/>
+      <Symbol Name="RxSlot_9124p0001_ReceiveFrame" Address="0x40003C4C" Size="16"/>
+      <Symbol Name="RxSlot_9123p0002_ReceiveFrameValid" Address="0x40003C5C" Size="1"/>
+      <Symbol Name="RxSlot_9123p0002_ReceiveFrame" Address="0x40003C60" Size="16"/>
+      <Symbol Name="RxSlot_9015p0001_ReceiveFrameValid" Address="0x40003C70" Size="1"/>
+      <Symbol Name="RxSlot_9015p0001_ReceiveFrame" Address="0x40003C74" Size="16"/>
+      <Symbol Name="RxSlot_9014p0001_ReceiveFrameValid" Address="0x40003C84" Size="1"/>
+      <Symbol Name="RxSlot_9014p0001_ReceiveFrame" Address="0x40003C88" Size="16"/>
+      <Symbol Name="RxSlot_9013p0001_ReceiveFrameValid" Address="0x40003C98" Size="1"/>
+      <Symbol Name="RxSlot_9013p0001_ReceiveFrame" Address="0x40003C9C" Size="16"/>
+      <Symbol Name="FLEXCAN2_B_TransmitQueue" Address="0x40003CAC" Size="16"/>
+      <Symbol Name="FLEXCAN2_A_TransmitQueue" Address="0x40003CBC" Size="16"/>
+      <Symbol Name="CAN_2_KeySuite_ReceiveQueue" Address="0x40003CCC" Size="16"/>
+      <Symbol Name="CAN_1_KeySuite_ReceiveQueue" Address="0x40003CDC" Size="16"/>
+      <Symbol Name="CCP1_ReceiveQueue" Address="0x40003CEC" Size="16"/>
+      <Symbol Name="FLEXCAN2_B_ReceiveQueue" Address="0x40003CFC" Size="16"/>
+      <Symbol Name="FLEXCAN2_A_ReceiveQueue" Address="0x40003D0C" Size="16"/>
+      <Symbol Name="FLEXCAN2_B_TransmitQueueFrames" Address="0x40003D1C" Size="256"/>
+      <Symbol Name="FLEXCAN2_B_ReceiveQueueFrames" Address="0x40003E1C" Size="256"/>
+      <Symbol Name="CAN_2_KeySuite_ReceiveQueueFrames" Address="0x40003F1C" Size="64"/>
+      <Symbol Name="FLEXCAN2_A_TransmitQueueFrames" Address="0x40003F5C" Size="256"/>
+      <Symbol Name="FLEXCAN2_A_ReceiveQueueFrames" Address="0x4000405C" Size="256"/>
+      <Symbol Name="CCP1_ReceiveQueueFrames" Address="0x4000415C" Size="64"/>
+      <Symbol Name="CAN_1_KeySuite_ReceiveQueueFrames" Address="0x4000419C" Size="64"/>
+      <Symbol Name="NonVolatile_NonVolatileStatus" Address="0x400041DC" Size="1"/>
+      <Symbol Name="NonVolatile_NonVolatileCRC" Address="0x400041E0" Size="4"/>
+      <Symbol Name="VolatileWork_BSS" Address="0x400041E4" Size="1636"/>
+      <Symbol Name="Debug_LoadCalibrationError" Address="0x40004848" Size="2"/>
+      <Symbol Name="Debug_SaveCalibrationError" Address="0x4000484A" Size="2"/>
+      <Symbol Name="Debug_CAN_1_TransmitOverrun" Address="0x4000484C" Size="2"/>
+      <Symbol Name="Debug_CAN_2_TransmitOverrun" Address="0x4000484E" Size="2"/>
+      <Symbol Name="s_CNK_bIsPulseSchedulingPossible" Address="0x40004850" Size="1"/>
+      <Symbol Name="s_eCNKEncoderState" Address="0x40004851" Size="1"/>
+      <Symbol Name="s_eCNKEncoderError" Address="0x40004852" Size="1"/>
+      <Symbol Name="DOut11001p0004_State" Address="0x40004853" Size="1"/>
+      <Symbol Name="DOut11529p0004_State" Address="0x40004854" Size="1"/>
+      <Symbol Name="H2_InhibitA_State" Address="0x40004855" Size="1"/>
+      <Symbol Name="H2_InhibitB_State" Address="0x40004856" Size="1"/>
+      <Symbol Name="INJ8_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x40004857" Size="1"/>
+      <Symbol Name="INJ7_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x40004858" Size="1"/>
+      <Symbol Name="INJ6_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x40004859" Size="1"/>
+      <Symbol Name="INJ5_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x4000485A" Size="1"/>
+      <Symbol Name="INJ4_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x4000485B" Size="1"/>
+      <Symbol Name="INJ3_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x4000485C" Size="1"/>
+      <Symbol Name="INJ2_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x4000485D" Size="1"/>
+      <Symbol Name="INJ1_PSPOutput_ApplyTransientCondOnEndPrim" Address="0x4000485E" Size="1"/>
+      <Symbol Name="EST8_PSPOutput_PrevCondition" Address="0x40004860" Size="1"/>
+      <Symbol Name="EST7_PSPOutput_PrevCondition" Address="0x40004864" Size="1"/>
+      <Symbol Name="EST6_PSPOutput_PrevCondition" Address="0x40004868" Size="1"/>
+      <Symbol Name="EST5_PSPOutput_PrevCondition" Address="0x4000486C" Size="1"/>
+      <Symbol Name="EST4_PSPOutput_PrevCondition" Address="0x40004870" Size="1"/>
+      <Symbol Name="EST3_PSPOutput_PrevCondition" Address="0x40004874" Size="1"/>
+      <Symbol Name="EST2_PSPOutput_PrevCondition" Address="0x40004878" Size="1"/>
+      <Symbol Name="EST1_PSPOutput_PrevCondition" Address="0x4000487C" Size="1"/>
+      <Symbol Name="DOut10176p0004_State" Address="0x4000487D" Size="1"/>
+      <Symbol Name="INJ8_PSPOutput_PrevCondition" Address="0x40004880" Size="2"/>
+      <Symbol Name="INJ7_PSPOutput_PrevCondition" Address="0x40004884" Size="2"/>
+      <Symbol Name="INJ6_PSPOutput_PrevCondition" Address="0x40004888" Size="2"/>
+      <Symbol Name="INJ5_PSPOutput_PrevCondition" Address="0x4000488C" Size="2"/>
+      <Symbol Name="INJ4_PSPOutput_PrevCondition" Address="0x40004890" Size="2"/>
+      <Symbol Name="INJ3_PSPOutput_PrevCondition" Address="0x40004894" Size="2"/>
+      <Symbol Name="INJ2_PSPOutput_PrevCondition" Address="0x40004898" Size="2"/>
+      <Symbol Name="INJ1_PSPOutput_PrevCondition" Address="0x4000489C" Size="2"/>
+      <Symbol Name="VISTA_1Runtime" Address="0x4000489E" Size="1"/>
+      <Symbol Name="CNK_OverridePWM_Runtime" Address="0x4000489F" Size="1"/>
+      <Symbol Name="CNK_MuxRuntime" Address="0x400048A0" Size="1"/>
+      <Symbol Name="CNK_CPUEncoder_EncoderRuntime_ETPU" Address="0x400048A4" Size="20"/>
+      <Symbol Name="CNK_CctRuntime" Address="0x400048B8" Size="1"/>
+      <Symbol Name="S_SHRC_3Runtime" Address="0x400048BC" Size="56"/>
+      <Symbol Name="RS485_RxObjReadAccessSyncObjECB" Address="0x400048F4" Size="12"/>
+      <Symbol Name="RS485_RxObjDataReceivedEventECB" Address="0x40004900" Size="12"/>
+      <Symbol Name="g_RS485_RxObjRXQueue" Address="0x4000490C" Size="18"/>
+      <Symbol Name="g_RS485_RxObjRuntimeObj" Address="0x4000491E" Size="4"/>
+      <Symbol Name="g_RS485_TxObjTXDataQueue" Address="0x40004922" Size="8"/>
+      <Symbol Name="g_RS485_TxObjTXQueueEntryArr" Address="0x4000492C" Size="12"/>
+      <Symbol Name="g_RS485_TxObjRuntimeObj" Address="0x40004938" Size="8"/>
+      <Symbol Name="RS485Runtime" Address="0x40004940" Size="8"/>
+      <Symbol Name="g_eQADCResultQueueBuffer5" Address="0x40004948" Size="28"/>
+      <Symbol Name="S_SHRC_4Runtime" Address="0x40004964" Size="56"/>
+      <Symbol Name="LSO9_PWMOutput_Runtime" Address="0x4000499C" Size="1"/>
+      <Symbol Name="LSO10_PWMOutput_Runtime" Address="0x4000499D" Size="1"/>
+      <Symbol Name="H1p_Runtime" Address="0x4000499E" Size="1"/>
+      <Symbol Name="H1m_Runtime" Address="0x4000499F" Size="1"/>
+      <Symbol Name="H1_InhibitA_Runtime" Address="0x400049A0" Size="1"/>
+      <Symbol Name="H1_InhibitB_Runtime" Address="0x400049A1" Size="1"/>
+      <Symbol Name="H2p_Runtime" Address="0x400049A2" Size="1"/>
+      <Symbol Name="H2m_Runtime" Address="0x400049A3" Size="1"/>
+      <Symbol Name="LSO8_PWMOutput_Runtime" Address="0x400049A4" Size="1"/>
+      <Symbol Name="CAM_CPUCamEncoder_CamEncoderRuntime_ETPU" Address="0x400049A5" Size="1"/>
+      <Symbol Name="g_eQADCResultQueueBuffer1" Address="0x400049A6" Size="16"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueue_QueueEntries" Address="0x400049B8" Size="120"/>
+      <Symbol Name="ESTDiagnostics_eQADCQueue_Queue" Address="0x40004A30" Size="12"/>
+      <Symbol Name="EST1_CPUPSP_Runtime_ETPU" Address="0x40004A3C" Size="8"/>
+      <Symbol Name="EST1_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004A44" Size="16"/>
+      <Symbol Name="EST1Runtimedata" Address="0x40004A54" Size="4"/>
+      <Symbol Name="EST2_CPUPSP_Runtime_ETPU" Address="0x40004A58" Size="8"/>
+      <Symbol Name="EST2_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004A60" Size="16"/>
+      <Symbol Name="EST2Runtimedata" Address="0x40004A70" Size="4"/>
+      <Symbol Name="EST3_CPUPSP_Runtime_ETPU" Address="0x40004A74" Size="8"/>
+      <Symbol Name="EST3_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004A7C" Size="16"/>
+      <Symbol Name="EST3Runtimedata" Address="0x40004A8C" Size="4"/>
+      <Symbol Name="EST4_CPUPSP_Runtime_ETPU" Address="0x40004A90" Size="8"/>
+      <Symbol Name="EST4_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004A98" Size="16"/>
+      <Symbol Name="EST4Runtimedata" Address="0x40004AA8" Size="4"/>
+      <Symbol Name="EST5_CPUPSP_Runtime_ETPU" Address="0x40004AAC" Size="8"/>
+      <Symbol Name="EST5_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004AB4" Size="16"/>
+      <Symbol Name="EST5Runtimedata" Address="0x40004AC4" Size="4"/>
+      <Symbol Name="EST6_CPUPSP_Runtime_ETPU" Address="0x40004AC8" Size="8"/>
+      <Symbol Name="EST6_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004AD0" Size="16"/>
+      <Symbol Name="EST6Runtimedata" Address="0x40004AE0" Size="4"/>
+      <Symbol Name="EST7_CPUPSP_Runtime_ETPU" Address="0x40004AE4" Size="8"/>
+      <Symbol Name="EST7_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004AEC" Size="16"/>
+      <Symbol Name="EST7Runtimedata" Address="0x40004AFC" Size="4"/>
+      <Symbol Name="EST8_CPUPSP_Runtime_ETPU" Address="0x40004B00" Size="8"/>
+      <Symbol Name="EST8_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004B08" Size="16"/>
+      <Symbol Name="EST8Runtimedata" Address="0x40004B18" Size="4"/>
+      <Symbol Name="INJ1_CPUPSP_Runtime_ETPU" Address="0x40004B1C" Size="8"/>
+      <Symbol Name="INJ1_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004B24" Size="32"/>
+      <Symbol Name="INJ2_CPUPSP_Runtime_ETPU" Address="0x40004B44" Size="8"/>
+      <Symbol Name="INJ2_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004B4C" Size="32"/>
+      <Symbol Name="INJ3_CPUPSP_Runtime_ETPU" Address="0x40004B6C" Size="8"/>
+      <Symbol Name="INJ3_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004B74" Size="32"/>
+      <Symbol Name="INJ4_CPUPSP_Runtime_ETPU" Address="0x40004B94" Size="8"/>
+      <Symbol Name="INJ4_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004B9C" Size="32"/>
+      <Symbol Name="INJ5_CPUPSP_Runtime_ETPU" Address="0x40004BBC" Size="8"/>
+      <Symbol Name="INJ5_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004BC4" Size="32"/>
+      <Symbol Name="INJ6_CPUPSP_Runtime_ETPU" Address="0x40004BE4" Size="8"/>
+      <Symbol Name="INJ6_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004BEC" Size="32"/>
+      <Symbol Name="INJ7_CPUPSP_Runtime_ETPU" Address="0x40004C0C" Size="8"/>
+      <Symbol Name="INJ7_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004C14" Size="32"/>
+      <Symbol Name="INJ8_CPUPSP_Runtime_ETPU" Address="0x40004C34" Size="8"/>
+      <Symbol Name="INJ8_CPUPSP_RuntimePulse_ETPUArr" Address="0x40004C3C" Size="32"/>
+      <Symbol Name="EEPROM_1_AccessSemaphoreECB" Address="0x40004C5C" Size="12"/>
+      <Symbol Name="EEPROM_1_PageBuffer" Address="0x40004C68" Size="32"/>
+      <Symbol Name="g_ConnectionArr" Address="0x40004C88" Size="120"/>
+      <Symbol Name="KeySuite_LastTickVaue.16949" Address="0x40004D00" Size="4"/>
+      <Symbol Name="s_u8MotoTronBootObjVersion" Address="0x40004D04" Size="1"/>
+      <Symbol Name="s_pMotoTronBootObj" Address="0x40004D08" Size="4"/>
+      <Symbol Name="s_ERIProtocolSpecificDataArr" Address="0x40004D0C" Size="36"/>
+      <Symbol Name="g_pszSerialNumber" Address="0x40004D30" Size="4"/>
+      <Symbol Name="g_pszPartNumber" Address="0x40004D34" Size="4"/>
+      <Symbol Name="g_pszModelNumber" Address="0x40004D38" Size="4"/>
+      <Symbol Name="g_eEcuHwMaj" Address="0x40004D3C" Size="1"/>
+      <Symbol Name="g_u8EcuHwMin" Address="0x40004D3D" Size="1"/>
+      <Symbol Name="g_u8Capability" Address="0x40004D3E" Size="1"/>
+      <Symbol Name="g_u8BootVerMaj" Address="0x40004D3F" Size="1"/>
+      <Symbol Name="g_u8BootVerMin" Address="0x40004D40" Size="1"/>
+      <Symbol Name="rtInfF" Address="0x40004D44" Size="4"/>
+      <Symbol Name="rtNaNF" Address="0x40004D48" Size="4"/>
+      <Symbol Name="rtMinusInfF" Address="0x40004D4C" Size="4"/>
+      <Symbol Name="rtInf" Address="0x40004D50" Size="4"/>
+      <Symbol Name="rtNaN" Address="0x40004D54" Size="4"/>
+      <Symbol Name="rtMinusInf" Address="0x40004D58" Size="4"/>
+      <Symbol Name="__malloc_current_mallinfo" Address="0x40004D5C" Size="40"/>
+      <Symbol Name="s_pMemoryDeviceDefnArr" Address="0x40004D84" Size="8"/>
+      <Symbol Name="g_TLE7368_RuntimeObj" Address="0x40004D8C" Size="20"/>
+      <Symbol Name="s_bFlashAvailable" Address="0x40004DA0" Size="1"/>
+      <Symbol Name="s_ssdConfig" Address="0x40004DA4" Size="40"/>
+      <Symbol Name="g_pHeadPSPList" Address="0x40004DCC" Size="4"/>
+      <Symbol Name="g_pHeadTachoList" Address="0x40004DD0" Size="4"/>
+      <Symbol Name="heap_ptr.2391" Address="0x40004DD4" Size="4"/>
+      <Symbol Name="_ZL15s_MaskConstants" Address="0x40004DD8" Size="17"/>
+      <Symbol Name="_ZL13s_MaskRuntime" Address="0x40004DE9" Size="2"/>
+      <Symbol Name="NonVolatileWork" Address="0x40004DEC" Size="2280"/>
+      <Symbol Name="g_IdleTaskStack" Address="0x400056D8" Size="492"/>
+   </MemoryRegion>
+   <MemoryRegion Name="RAM_BOOTMAILBOX" SAddr="1073807344" Size="16">
+      <Symbol Name="g_BootMailBox" Address="0x4000FFF0" Size="16"/>
+   </MemoryRegion>
+   <MemoryRegion Name="SERIAL_EE" SAddr="0xFF000000" Size="32768">
+      <Symbol Name="NonVolatileStorage" Address="0xFF000000" Size="2280"/>
+      <Symbol Name="NonVolatileEEStatus" Address="0xFF0008E8" Size="2"/>
+      <Symbol Name="IsFirstApplicationBoot" Address="0xFF0008EA" Size="1"/>
+   </MemoryRegion>
+</Symbols>

@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2186"
+    ComputedModelVersion    "1.2196"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,33 +26,33 @@ Model {
   InitFcn		  "try, eval([bdroot '_setup']); catch, eval('model_setup', ''); end"
   UserBdParams		  "MotoHawkBuildVersion;MotoHawkBuildStats;MotoHawkModelSavedName;MotoHawkModelGUID;MotoHawkModelOpenT"
   "ime;MotoHawkModelElapsedTime;MotoHawkBuildGUID;MotoHawkBuildInfo;RegisteredStructs"
-  MotoHawkBuildVersion	  "034"
+  MotoHawkBuildVersion	  "036"
   MotoHawkBuildStats	  "struct('TotalFLASH',{373552},'TotalEEPROM',{1254},'TotalRAM',{26040},'AppFLASH',{154160},'AppE"
-  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{47},'BuildErrorCount',{104},'OSRAM',{4962},'Stac"
+  "EPROM',{1080},'AppRAM',{7766},'HeapRAM',{4096},'BuildSuccessCount',{49},'BuildErrorCount',{105},'OSRAM',{4962},'Stac"
   "kRAM',{9216},'FgndTimeStackSize',{4096},'FgndAngleStackSize',{1024},'BgndStackSize',{2048},'IdleStackSize',{1024},'I"
   "nterruptStackSize',{1024},'RTWBlockIOSize',{2192},'RTWDWorkSize',{1776},'RTWPrevZCSize',{0},'VolatileSize',{1668},'N"
   "onVolatileSize',{1080},'ConstantSize',{18616},'NonVolatileFormatID',{32179})"
   MotoHawkModelSavedName  "BaseEngineController_LS"
   MotoHawkModelGUID	  "12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9"
-  MotoHawkModelOpenTime	  "2022 11 21 0 16 20.825 "
-  MotoHawkModelElapsedTime "-3851962080.076"
-  MotoHawkBuildGUID	  "251c5932-aac3-4286-ab-76-eb-8d-f3-21-a0"
+  MotoHawkModelOpenTime	  "2022 11 22 18 27 53.229 "
+  MotoHawkModelElapsedTime "-3850683180.426"
+  MotoHawkBuildGUID	  "3b91d7a9-613a-4ee2-a1-72-29-d3-f7-86-d2"
   MotoHawkBuildInfo	  "struct('model_name',{'BaseEngineController_LS'},'motohawk_version',{'2011a_sp0.184'},'motohawk_"
-  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'033'},'module_type',{'ECU555-80'},'layout"
+  "component_version',{'0.0.7'},'matlab_version',{'7.12.0'},'build_version',{'035'},'module_type',{'ECU555-80'},'layout"
   "_type',{'DEV'},'processor_family',{'PPC'},'processor_type',{'MPC555'},'toolchain_vendor',{'gcc-powerpc-eabi'},'toolc"
   "hain_version',{'4.4.0'},'component',{0},'archive_file',{'PCM.a'},'enable_build',{1},'fptype',{0},'flash_size',{36864"
   "0},'ee_size',{8192},'ram_size',{26624},'decram_size',{0},'module_memory_def',{'MPC555_ModMemoryDef_8KEE_Dev'},'eri_t"
   "able0_rev',{9},'max_eri_table_size',{65535},'use_debug_vardecs',{1},'use_info_vardecs',{1},'fgnd_base_period_ms',{5}"
   ",'bgnd_base_period_ms',{50},'root_build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Engine-Controller\\EngineControl"
   "ler_Rev2'},'build_dir',{'C:\\Users\\maxar\\Documents\\GitHub\\Engine-Controller\\EngineController_Rev2\\BaseEngineCo"
-  "ntroller_LS_Build'},'dll_name',{'BaseEngin_033'},'srz_name',{'BaseEngineController_LS_033'},'fgnd_stack_size',{4096}"
+  "ntroller_LS_Build'},'dll_name',{'BaseEngin_035'},'srz_name',{'BaseEngineController_LS_035'},'fgnd_stack_size',{4096}"
   ",'fgnd_angle_stack_size',{0},'bgnd_stack_size',{1024},'idle_stack_size',{1024},'irq_stack_size',{1280},'heap_size',{"
   "2048},'heap_margin',{409},'install_dll_dir',{'c:\\ecufiles\\tdbdll'},'install_srz_dir',{'C:\\ECUFiles\\Programs\\'},"
   "'app_int_stack_size',{1024},'shutdown_stack_size',{1024},'mingw_dir',{'C:\\PROGRA~2\\Woodward\\DEVELO~1\\TOOLCH~1\\G"
   "CC\\win32-pe\\4_4_0\\'},'motohawk_dir',{'C:\\PROGRA~2\\Woodward\\MCS\\MotoHawk\\2011A_~1.184'},'toolchain_dir',{'C:\\"
   "Program Files (x86)\\Woodward\\DevelopmentTools\\Toolchains\\GCC\\powerpc-eabi\\4_4_0\\'},'matlab_root',{'E:\\MATLAB"
-  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'251c5932-aac3-4286-ab-76-eb-8d-f3-"
-  "21-a0'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
+  "\\2011a'},'model_guid',{'12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9'},'build_guid',{'3b91d7a9-613a-4ee2-a1-72-29-d3-f7-"
+  "86-d2'},'token_guid',{'DD8AD11F95A6FC42BFF9AC780840E4B4'})"
   RegisteredStructs	  "struct('Name',{'FreezeFrame','FreezeFrames'},'Data',{struct('Name',{int32(0)},'Code',{int32(0)}"
   ",'Var1',{int32(0)},'Var2',{int32(0)},'Var3',{int32(0)},'Var4',{int32(0)},'Var5',{int32(0)},'Var6',{int32(0)},'Var7',"
   "{int32(0)},'Var8',{int32(0)},'Var9',{int32(0)},'Var10',{int32(0)}),struct('Name',{int32(0)},'Code',{int32(0)},'Var1'"
@@ -84,9 +84,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "maxar"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Nov 21 23:23:34 2022"
-  RTWModifiedTimeStamp	  590890995
-  ModelVersionFormat	  "1.%<AutoIncrement:2186>"
+  LastModifiedDate	  "Sun Nov 27 15:44:12 2022"
+  RTWModifiedTimeStamp	  591043829
+  ModelVersionFormat	  "1.%<AutoIncrement:2196>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -2138,8 +2138,8 @@ Model {
   }
   System {
     Name		    "BaseEngineController_LS"
-    Location		    [417, 83, 2133, 1027]
-    Open		    on
+    Location		    [338, 83, 1918, 1027]
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    336
     ScreenColor		    "white"
@@ -2387,7 +2387,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "IDLE_EVENT"
-	  function_name		  "Trigger_IDLE_EVENT_19p0012"
+	  function_name		  "Trigger_IDLE_EVENT_9p001"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  off
@@ -2500,7 +2500,7 @@ Model {
 	    Location		    [260, 83, 1918, 1027]
 	    Open		    off
 	    ModelBrowserVisibility  on
-	    ModelBrowserWidth	    200
+	    ModelBrowserWidth	    375
 	    ScreenColor		    "white"
 	    PaperOrientation	    "landscape"
 	    PaperPositionMode	    "auto"
@@ -2510,12 +2510,12 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "144"
-	    SIDHighWatermark	    "7524"
+	    SIDHighWatermark	    "7586"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Sensors"
 	      SID		      "914:513"
-	      Position		      [45, 98, 75, 112]
+	      Position		      [45, 73, 75, 87]
 	      BackgroundColor	      "orange"
 	      IconDisplay	      "Port number"
 	    }
@@ -5022,8 +5022,8 @@ Model {
 		    Frame		    "on"
 		    DisplayStringWithTags   "Model Info:\nAuthor: Suhre, Poorman\n%<Created>\n%<ModifiedDate>\nVersion: %<ModelVersi"
 		    "on>\nMotoTron Confidential\nand Propietary\n"
-		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nMon Nov 21 23:20:55 202"
-		    "2\\nVersion: 1.2185\\nMotoTron Confidential\\nand Propietary\\n"
+		    MaskDisplayString	    "Model Info:\\nAuthor: Suhre, Poorman\\nMon May 16 15:00:08 2005\\nSun Nov 27 15:41:30 202"
+		    "2\\nVersion: 1.2195\\nMotoTron Confidential\\nand Propietary\\n"
 		    HorizontalTextAlignment "Center"
 		    LeftAlignmentValue	    "0.5"
 		    SourceBlockDiagram	    "BaseEngineController_LS"
@@ -13919,7 +13919,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_TDC1_EVENT"
-		    function_name	    "Trigger_FGND_TDC1_EVENT_10311p001"
+		    function_name	    "Trigger_FGND_TDC1_EVENT_869p0001"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -17000,7 +17000,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		  SourceType		  "MotoHawk Function Trigger"
 		  trigger		  "FGND_5XRTI_PERIODIC"
-		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_11486p001"
+		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_1093p0005"
 		  priority_order	  "1"
 		  inherited		  on
 		  run_disabled		  off
@@ -17022,7 +17022,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		  SourceType		  "MotoHawk Function Trigger"
 		  trigger		  "FGND_5XRTI_PERIODIC"
-		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_11487p0009"
+		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_1094p0005"
 		  priority_order	  "1"
 		  inherited		  on
 		  run_disabled		  off
@@ -17495,7 +17495,7 @@ Model {
 		    MaskHideContents	    off
 		    System {
 		    Name		    "CrankFueling"
-		    Location		    [202, 83, 1918, 1027]
+		    Location		    [338, 83, 1918, 1027]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    200
@@ -17512,7 +17512,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "RPMIdx"
 		    SID			    "914:3948"
-		    Position		    [315, 598, 345, 612]
+		    Position		    [315, 603, 345, 617]
 		    BackgroundColor	    "lightBlue"
 		    IconDisplay		    "Port number"
 		    }
@@ -17520,7 +17520,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "ECTIdx"
 		    SID			    "914:3949"
-		    Position		    [315, 568, 345, 582]
+		    Position		    [315, 573, 345, 587]
 		    BackgroundColor	    "lightBlue"
 		    Port		    "2"
 		    IconDisplay		    "Port number"
@@ -17547,7 +17547,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "IATIdx"
 		    SID			    "914:2874"
-		    Position		    [310, 653, 340, 667]
+		    Position		    [310, 648, 340, 662]
 		    BackgroundColor	    "lightBlue"
 		    Port		    "5"
 		    IconDisplay		    "Port number"
@@ -17556,60 +17556,276 @@ Model {
 		    BlockType		    Inport
 		    Name		    "OXYIdx"
 		    SID			    "914:2875"
-		    Position		    [310, 718, 340, 732]
+		    Position		    [310, 708, 340, 722]
 		    BackgroundColor	    "lightBlue"
 		    Port		    "6"
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
-		    BlockType		    Sum
-		    Name		    "Add"
-		    SID			    "914:3952"
-		    Ports		    [2, 1]
-		    Position		    [710, 317, 740, 348]
-		    ShowName		    off
-		    InputSameDT		    off
-		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
 		    BlockType		    Constant
 		    Name		    "ClearFloodFueling"
 		    SID			    "914:3953"
-		    Position		    [545, 415, 575, 445]
+		    Position		    [630, 415, 660, 445]
 		    Value		    "0"
 		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
 		    SampleTime		    "-1"
 		    }
 		    Block {
-		    BlockType		    Constant
-		    Name		    "ClearFloodFueling1"
-		    SID			    "914:3954"
-		    Position		    [650, 285, 680, 315]
-		    ShowName		    off
-		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
-		    SampleTime		    "-1"
+		    BlockType		    SubSystem
+		    Name		    "FuelPulse"
+		    SID			    "914:7541"
+		    Ports		    [1, 1]
+		    Position		    [505, 209, 690, 271]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "FuelPulse"
+		    Location		    [433, 403, 931, 703]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "CrankECT05Idx"
+		    SID			    "914:7544"
+		    Position		    [250, 138, 280, 152]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "CompareTo"
+		    SID			    "914:7585"
+		    Ports		    [1, 1]
+		    Position		    [335, 236, 395, 254]
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    LibraryVersion	    "1.490"
+		    SourceBlock		    "motohawk_control_primitives_lib/CompareTo"
+		    SourceType		    "Equals"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    op			    "=="
+		    val			    "1"
 		    }
 		    Block {
 		    BlockType		    Constant
-		    Name		    "ClearFloodFueling3"
-		    SID			    "914:3955"
-		    Position		    [390, 272, 415, 298]
-		    ShowName		    off
+		    Name		    "Constant"
+		    SID			    "914:7552"
+		    Position		    [535, 330, 565, 360]
 		    Value		    "0"
-		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
-		    SampleTime		    "-1"
 		    }
 		    Block {
-		    BlockType		    Gain
-		    Name		    "Gain"
-		    SID			    "914:3960"
-		    Position		    [525, 341, 570, 369]
-		    ShowName		    off
-		    Gain		    ".01"
-		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
-		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "914:7551"
+		    Position		    [640, 96, 695, 394]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "WritePulseState"
+		    SID			    "914:7580"
+		    Ports		    [0, 0, 1]
+		    Position		    [405, 324, 505, 366]
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "WritePulseState"
+		    Location		    [338, 83, 1918, 1027]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "914:7581"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "914:7582"
+		    Position		    [185, 170, 215, 200]
+		    Value		    "2"
+		    OutDataTypeStr	    "uint8"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_write"
+		    SID			    "914:7583"
+		    Ports		    [1]
+		    Position		    [290, 155, 425, 215]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_write"
+		    SourceType		    "MotoHawk Data Write"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Write entire data structure at once"
+		    sz_vec		    "9"
+		    sz_row		    "2"
+		    sz_col		    "9"
+		    typ			    "uint8"
+		    nam			    "'FuelPulseState'"
+		    checkNull		    on
+		    write_read_only	    off
+		    struct_inst_name	    "''"
+		    struct_name		    "'MyStruct'"
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "motohawk_data_write"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_read"
+		    SID			    "914:7584"
+		    Ports		    [0, 1]
+		    Position		    [140, 215, 275, 275]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "uint8"
+		    nam			    "'FuelPulseState'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_interpolation_1d"
+		    SID			    "914:7548"
+		    Ports		    [1, 1]
+		    Position		    [335, 107, 505, 183]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d"
+		    SourceType		    "MotoHawk Interpolation (1-D)"
+		    nam			    "'CrankPulse'"
+		    table_data		    "[0,0,0,0,0]"
+		    show_more		    off
+		    data_type		    "Inherit from 'Table Data'"
+		    storage		    "NonAdaptive"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    use_help		    off
+		    help		    "''"
+		    units		    "''"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_links		    off
+		    prelookup_block	    "''"
+		    output_name		    "''"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FPC"
+		    SID			    "914:7543"
+		    Position		    [765, 238, 795, 252]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "CrankECT05Idx"
+		    SrcPort		    1
+		    DstBlock		    "motohawk_interpolation_1d"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "FPC"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_interpolation_1d"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    DstBlock		    "CompareTo"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "CompareTo"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "WritePulseState"
+		    DstPort		    enable
+		    }
+		    }
+		    }
 		    }
 		    Block {
 		    BlockType		    MultiPortSwitch
@@ -17625,35 +17841,11 @@ Model {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    MultiPortSwitch
-		    Name		    "Multiport\nSwitch2"
-		    SID			    "914:3962"
-		    Ports		    [3, 1]
-		    Position		    [465, 233, 495, 337]
-		    ShowName		    off
-		    DataPortOrder	    "Zero-based contiguous"
-		    Inputs		    "2"
-		    zeroidx		    on
-		    InputSameDT		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
 		    BlockType		    Product
 		    Name		    "Product"
 		    SID			    "914:3963"
 		    Ports		    [2, 1]
-		    Position		    [795, 320, 825, 375]
-		    ShowName		    off
-		    InputSameDT		    off
-		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Product
-		    Name		    "Product1"
-		    SID			    "914:3964"
-		    Ports		    [2, 1]
-		    Position		    [600, 300, 630, 375]
+		    Position		    [880, 320, 910, 375]
 		    ShowName		    off
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -17664,7 +17856,7 @@ Model {
 		    Name		    "Product2"
 		    SID			    "914:2881"
 		    Ports		    [3, 1]
-		    Position		    [630, 573, 660, 687]
+		    Position		    [715, 565, 745, 745]
 		    Inputs		    "3"
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -17675,29 +17867,140 @@ Model {
 		    Name		    "Relational\nOperator"
 		    SID			    "914:3965"
 		    Ports		    [2, 1]
-		    Position		    [545, 482, 575, 538]
+		    Position		    [630, 482, 660, 538]
 		    ShowName		    off
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    SID			    "914:7586"
+		    Ports		    [2, 1]
+		    Position		    [935, 230, 955, 250]
+		    ShowName		    off
+		    IconShape		    "round"
+		    Inputs		    "|++"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
 		    BlockType		    Switch
 		    Name		    "Switch"
 		    SID			    "914:3966"
-		    Position		    [690, 390, 715, 630]
+		    Position		    [775, 390, 800, 630]
 		    BackgroundColor	    "red"
 		    Threshold		    ".5"
 		    InputSameDT		    off
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "TPSEnrichment"
+		    SID			    "914:7529"
+		    Ports		    [2, 1]
+		    Position		    [505, 293, 690, 377]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "TPSEnrichment"
+		    Location		    [433, 403, 931, 703]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "AirControlSource"
+		    SID			    "914:7530"
+		    Position		    [280, 278, 310, 292]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "TPSPos"
+		    SID			    "914:7539"
+		    Position		    [280, 383, 310, 397]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add"
+		    SID			    "914:7532"
+		    Ports		    [2, 1]
+		    Position		    [785, 352, 815, 383]
+		    ShowName		    off
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "ClearFloodFueling1"
+		    SID			    "914:7533"
+		    Position		    [725, 320, 755, 350]
+		    ShowName		    off
+		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
+		    SampleTime		    "-1"
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain"
+		    SID			    "914:7535"
+		    Position		    [600, 376, 645, 404]
+		    ShowName		    off
+		    Gain		    ".01"
+		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    MultiPortSwitch
+		    Name		    "Multiport\nSwitch2"
+		    SID			    "914:7536"
+		    Ports		    [3, 1]
+		    Position		    [540, 268, 570, 372]
+		    ShowName		    off
+		    DataPortOrder	    "Zero-based contiguous"
+		    Inputs		    "2"
+		    zeroidx		    on
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    SID			    "914:7537"
+		    Ports		    [2, 1]
+		    Position		    [675, 335, 705, 410]
+		    ShowName		    off
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration1"
-		    SID			    "914:3967"
+		    SID			    "914:7538"
 		    Ports		    [0, 1]
-		    Position		    [265, 300, 415, 340]
+		    Position		    [340, 335, 490, 375]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
 		    SourceType		    "MotoHawk Calibration"
-		    nam			    "'OpenThrottleFPCScalar'"
+		    nam			    "'OpenThrottleFPCScalar_TPS'"
 		    val			    "1"
 		    storage		    "Calibration"
 		    show_more		    on
@@ -17730,9 +18033,114 @@ Model {
 		    Block {
 		    BlockType		    Reference
 		    Name		    "motohawk_calibration2"
+		    SID			    "914:7540"
+		    Ports		    [0, 1]
+		    Position		    [340, 300, 490, 340]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'OpenThrottleFPCScalar_ETC'"
+		    val			    "1"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "Inherit from 'Default Value'"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Number"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    on
+		    help		    "'Crank FPC is scaled up with throttle opening for mechanical throttle systems, this parameter sets th"
+		    "e gain for this relationship.  CrankFPC=CrankFPC*(1+TPS/100*FPCScalar).'"
+		    units		    "'Mult'"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    on
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FuelMult"
+		    SID			    "914:7531"
+		    Position		    [865, 363, 895, 377]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "AirControlSource"
+		    SrcPort		    1
+		    DstBlock		    "Multiport\nSwitch2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Add"
+		    SrcPort		    1
+		    DstBlock		    "FuelMult"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    DstBlock		    "Add"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "ClearFloodFueling1"
+		    SrcPort		    1
+		    Points		    [5, 0; 0, 25]
+		    DstBlock		    "Add"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Multiport\nSwitch2"
+		    SrcPort		    1
+		    Points		    [40, 0; 0, 35]
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration1"
+		    SrcPort		    1
+		    DstBlock		    "Multiport\nSwitch2"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration2"
+		    SrcPort		    1
+		    DstBlock		    "Multiport\nSwitch2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "TPSPos"
+		    SrcPort		    1
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration2"
 		    SID			    "914:3968"
 		    Ports		    [0, 1]
-		    Position		    [360, 505, 510, 545]
+		    Position		    [445, 505, 595, 545]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -17771,7 +18179,7 @@ Model {
 		    Name		    "motohawk_data_read1"
 		    SID			    "914:3969"
 		    Ports		    [0, 1]
-		    Position		    [65, 220, 200, 280]
+		    Position		    [65, 285, 200, 345]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
@@ -17793,7 +18201,7 @@ Model {
 		    Name		    "motohawk_interpolation_1d"
 		    SID			    "914:2879"
 		    Ports		    [1, 1]
-		    Position		    [440, 633, 585, 687]
+		    Position		    [525, 628, 670, 682]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d"
@@ -17828,7 +18236,7 @@ Model {
 		    Name		    "motohawk_interpolation_1d1"
 		    SID			    "914:2880"
 		    Ports		    [1, 1]
-		    Position		    [440, 698, 585, 752]
+		    Position		    [525, 688, 670, 742]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_1d"
@@ -17863,7 +18271,7 @@ Model {
 		    Name		    "motohawk_interpolation_2d"
 		    SID			    "914:3970"
 		    Ports		    [2, 1]
-		    Position		    [440, 562, 580, 618]
+		    Position		    [525, 567, 665, 623]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Lookup Tables/motohawk_interpolation_2d"
@@ -17898,7 +18306,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "FPC"
 		    SID			    "914:3971"
-		    Position		    [875, 343, 905, 357]
+		    Position		    [1005, 233, 1035, 247]
 		    BackgroundColor	    "orange"
 		    IconDisplay		    "Port number"
 		    }
@@ -17923,46 +18331,22 @@ Model {
 		    Line {
 		    SrcBlock		    "ECTIdx"
 		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
 		    DstBlock		    "motohawk_interpolation_2d"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -340]
+		    DstBlock		    "FuelPulse"
+		    DstPort		    1
+		    }
 		    }
 		    Line {
 		    SrcBlock		    "RPMIdx"
 		    SrcPort		    1
 		    DstBlock		    "motohawk_interpolation_2d"
 		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Add"
-		    SrcPort		    1
-		    DstBlock		    "Product"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Product1"
-		    SrcPort		    1
-		    DstBlock		    "Add"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "ClearFloodFueling1"
-		    SrcPort		    1
-		    Points		    [5, 0; 0, 25]
-		    DstBlock		    "Add"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "Gain"
-		    SrcPort		    1
-		    DstBlock		    "Product1"
-		    DstPort		    2
-		    }
-		    Line {
-		    SrcBlock		    "Product"
-		    SrcPort		    1
-		    Points		    [0, 0]
-		    DstBlock		    "FPC"
-		    DstPort		    1
 		    }
 		    Line {
 		    SrcBlock		    "Switch"
@@ -17974,29 +18358,29 @@ Model {
 		    Line {
 		    SrcBlock		    "motohawk_data_read1"
 		    SrcPort		    1
-		    Points		    [0, 0; 30, 0]
+		    Points		    [30, 0]
 		    Branch {
-		    Points		    [0, 225]
+		    Points		    [0, 160]
 		    DstBlock		    "Multiport\nSwitch1"
 		    DstPort		    1
 		    }
 		    Branch {
-		    DstBlock		    "Multiport\nSwitch2"
+		    DstBlock		    "TPSEnrichment"
 		    DstPort		    1
 		    }
 		    }
 		    Line {
 		    SrcBlock		    "Multiport\nSwitch1"
 		    SrcPort		    1
-		    Points		    [0, 0; 65, 0]
+		    Points		    [45, 0]
 		    Branch {
 		    DstBlock		    "Relational\nOperator"
 		    DstPort		    1
 		    }
 		    Branch {
 		    Points		    [0, -140]
-		    DstBlock		    "Gain"
-		    DstPort		    1
+		    DstBlock		    "TPSEnrichment"
+		    DstPort		    2
 		    }
 		    }
 		    Line {
@@ -18011,26 +18395,6 @@ Model {
 		    Points		    [0, 0]
 		    DstBlock		    "Multiport\nSwitch1"
 		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "Multiport\nSwitch2"
-		    SrcPort		    1
-		    Points		    [40, 0; 0, 35]
-		    DstBlock		    "Product1"
-		    DstPort		    1
-		    }
-		    Line {
-		    SrcBlock		    "motohawk_calibration1"
-		    SrcPort		    1
-		    DstBlock		    "Multiport\nSwitch2"
-		    DstPort		    3
-		    }
-		    Line {
-		    SrcBlock		    "ClearFloodFueling3"
-		    SrcPort		    1
-		    Points		    [0, 0]
-		    DstBlock		    "Multiport\nSwitch2"
-		    DstPort		    2
 		    }
 		    Line {
 		    SrcBlock		    "IATIdx"
@@ -18053,23 +18417,46 @@ Model {
 		    Line {
 		    SrcBlock		    "motohawk_interpolation_1d"
 		    SrcPort		    1
-		    Points		    [10, 0; 0, -30]
 		    DstBlock		    "Product2"
 		    DstPort		    2
 		    }
 		    Line {
 		    SrcBlock		    "motohawk_interpolation_1d1"
 		    SrcPort		    1
-		    Points		    [10, 0; 0, -55]
 		    DstBlock		    "Product2"
 		    DstPort		    3
 		    }
 		    Line {
 		    SrcBlock		    "Product2"
 		    SrcPort		    1
-		    Points		    [5, 0; 0, -40]
+		    Points		    [5, 0; 0, -70]
 		    DstBlock		    "Switch"
 		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "TPSEnrichment"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FuelPulse"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "FPC"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
 		    }
 		    }
 		    }
@@ -19102,7 +19489,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "Actuators"
 		    SID			    "914:3994"
-		    Position		    [1055, 823, 1085, 837]
+		    Position		    [1055, 808, 1085, 822]
 		    BackgroundColor	    "lightBlue"
 		    IconDisplay		    "Port number"
 		    }
@@ -19331,7 +19718,6 @@ Model {
 		    Line {
 		    SrcBlock		    "Bus\nCreator2"
 		    SrcPort		    1
-		    Points		    [0, 10]
 		    DstBlock		    "Actuators"
 		    DstPort		    1
 		    }
@@ -21312,7 +21698,7 @@ Model {
 		  MaskIconUnits		  "autoscale"
 		  System {
 		    Name		    "Run"
-		    Location		    [202, 83, 1901, 1027]
+		    Location		    [447, 83, 1901, 1027]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    438
@@ -21324,7 +21710,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "125"
+		    ZoomFactor		    "97"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Inputs"
@@ -29704,7 +30090,7 @@ Model {
 		    }
 		    System {
 		    Name		    "DesEquivRatioMod"
-		    Location		    [366, 83, 1901, 1010]
+		    Location		    [447, 83, 1918, 1010]
 		    Open		    off
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    280
@@ -29716,7 +30102,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "81"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "DesEquivRatio_In"
@@ -60477,7 +60863,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_5XRTI_PERIODIC"
-		    function_name	    "Trigger_FGND_5XRTI_PERIODIC_30560p0005"
+		    function_name	    "Trigger_FGND_5XRTI_PERIODIC_5057p0001"
 		    priority_order	    "1"
 		    inherited		    on
 		    run_disabled	    off
@@ -63819,7 +64205,7 @@ Model {
 		    System {
 		    Name		    "Stall Throttle"
 		    Location		    [344, 75, 1918, 1019]
-		    Open		    off
+		    Open		    on
 		    ModelBrowserVisibility  on
 		    ModelBrowserWidth	    289
 		    ScreenColor		    "white"
@@ -64326,68 +64712,6 @@ Model {
 		    mototune_group	    "motohawk_vardec_path(gcb)"
 		    }
 		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe1"
-		    SID			    "914:5980"
-		    Ports		    [1]
-		    Position		    [1100, 527, 1250, 553]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'ETCStallAppOvrReq'"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "''"
-		    units		    "'%'"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
-		    BlockType		    Reference
-		    Name		    "motohawk_probe2"
-		    SID			    "914:5981"
-		    Ports		    [1]
-		    Position		    [1100, 492, 1250, 518]
-		    ShowName		    off
-		    LibraryVersion	    "MotoHawk 0.2.3"
-		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
-		    SourceType		    "MotoHawk Probe"
-		    nam			    "'ETCStallIceBreakReq'"
-		    show_more		    on
-		    name_source		    "Use Parameter"
-		    read_level		    "1"
-		    view_as		    "Number"
-		    enum_struct		    "{'Disabled', 'Enabled'}"
-		    vector_style	    "Wide Row"
-		    use_help_units	    on
-		    help		    "''"
-		    units		    "'%'"
-		    use_header_enum	    off
-		    row_header_enum	    "{}"
-		    col_header_enum	    "{}"
-		    use_precision	    off
-		    precision		    "''"
-		    gain		    "1"
-		    offset		    "0"
-		    exp			    "1"
-		    use_mototune_group	    off
-		    mototune_group	    "motohawk_vardec_path(gcb)"
-		    }
-		    Block {
 		    BlockType		    Outport
 		    Name		    "ETC %"
 		    SID			    "914:5958"
@@ -64488,30 +64812,16 @@ Model {
 		    Line {
 		    SrcBlock		    "Product1"
 		    SrcPort		    1
-		    Points		    [65, 0; 0, 80; 115, 0]
-		    Branch {
+		    Points		    [65, 0; 0, 80]
 		    DstBlock		    "Switch"
 		    DstPort		    1
-		    }
-		    Branch {
-		    Points		    [0, -60]
-		    DstBlock		    "motohawk_probe1"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    SrcBlock		    "Ice Break"
 		    SrcPort		    1
-		    Points		    [190, 0; 0, 355]
-		    Branch {
-		    Points		    [0, 125]
+		    Points		    [190, 0; 0, 480]
 		    DstBlock		    "Switch"
 		    DstPort		    3
-		    }
-		    Branch {
-		    DstBlock		    "motohawk_probe2"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    SrcBlock		    "Switch"
@@ -75787,7 +76097,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_HIRES"
-		    function_name	    "Trigger_FGND_HIRES_33246p001"
+		    function_name	    "Trigger_FGND_HIRES_6521p0004"
 		    priority_order	    "1"
 		    inherited		    on
 		    run_disabled	    off
@@ -84105,7 +84415,7 @@ Model {
 		  Name			  "AirCalcs"
 		  SID			  "914:5036"
 		  Ports			  [4, 1]
-		  Position		  [405, 583, 585, 737]
+		  Position		  [405, 586, 590, 729]
 		  BackgroundColor	  "gray"
 		  MinAlgLoopOccurrences	  off
 		  PropExecContextOutsideSubsystem off
@@ -84135,7 +84445,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "70"
+		    ZoomFactor		    "89"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "RawIndexes"
@@ -84166,7 +84476,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "RawProcessed"
 		    SID			    "914:5496"
-		    Position		    [590, 843, 620, 857]
+		    Position		    [590, 858, 620, 872]
 		    BackgroundColor	    "lightBlue"
 		    Port		    "4"
 		    IconDisplay		    "Port number"
@@ -84459,10 +84769,10 @@ Model {
 		    BlockType		    BusSelector
 		    Name		    "Bus\nSelector6"
 		    SID			    "914:5498"
-		    Ports		    [1, 2]
-		    Position		    [675, 821, 680, 879]
+		    Ports		    [1, 3]
+		    Position		    [675, 819, 680, 911]
 		    ShowName		    off
-		    OutputSignals	    "TimeSinceRun,EngineState"
+		    OutputSignals	    "TimeSinceRun,EngineState,O2Delagged.O2BankADelagged"
 		    Port {
 		    PortNumber		    1
 		    Name		    "<TimeSinceRun>"
@@ -84472,6 +84782,33 @@ Model {
 		    Port {
 		    PortNumber		    2
 		    Name		    "<EngineState>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "<O2BankADelagged>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector7"
+		    SID			    "914:7527"
+		    Ports		    [1, 2]
+		    Position		    [670, 939, 675, 1001]
+		    ShowName		    off
+		    OutputSignals	    "CAN.O2_BUS.BANK1.DataValidState,CAN.O2_BUS.BANK2.DataValidState"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<DataValidState>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<DataValidState>"
 		    RTWStorageClass	    "Auto"
 		    DataLoggingNameMode	    "SignalName"
 		    }
@@ -85471,8 +85808,8 @@ Model {
 		    "e revolution. For example, for a four-stroke, eight cylinder engine the value would be 4.\"   \n   VardecSig:6C "
 		    "*/                                                                                               \n             "
 		    "                                                                                                    "
-		    Ports		    [12, 1]
-		    Position		    [775, 513, 1010, 887]
+		    Ports		    [16, 1]
+		    Position		    [780, 505, 1020, 1015]
 		    BackgroundColor	    "gray"
 		    AncestorBlock	    "motohawk_engine_lib/Speed Density - MAP Referenced - Adaptive"
 		    LibraryVersion	    "*1.622"
@@ -85518,7 +85855,7 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "96"
-		    SIDHighWatermark	    "117"
+		    SIDHighWatermark	    "143"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "BARO [kPa]"
@@ -85562,7 +85899,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "MAF_Sensor [g/s]"
 		    SID			    "914:2883:5"
-		    Position		    [1235, 498, 1265, 512]
+		    Position		    [875, 673, 905, 687]
 		    BackgroundColor	    "orange"
 		    FontName		    "Arial"
 		    Port		    "5"
@@ -85639,11 +85976,51 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
+		    BlockType		    Inport
+		    Name		    "ActualAFR"
+		    SID			    "914:2883:128"
+		    Position		    [1045, 748, 1075, 762]
+		    BackgroundColor	    "orange"
+		    FontName		    "Arial"
+		    Port		    "13"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "TargetAFR"
+		    SID			    "914:2883:129"
+		    Position		    [1045, 723, 1075, 737]
+		    BackgroundColor	    "orange"
+		    FontName		    "Arial"
+		    Port		    "14"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "O2DR_A"
+		    SID			    "914:2883:142"
+		    Position		    [1030, 438, 1060, 452]
+		    BackgroundColor	    "orange"
+		    FontName		    "Arial"
+		    Port		    "15"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "O2DR_B"
+		    SID			    "914:2883:143"
+		    Position		    [1030, 463, 1060, 477]
+		    BackgroundColor	    "orange"
+		    FontName		    "Arial"
+		    Port		    "16"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
 		    BlockType		    SubSystem
 		    Name		    "Adapt VolEff Map"
 		    SID			    "914:2883:100"
 		    Ports		    [3, 0, 1]
-		    Position		    [1415, 483, 1520, 617]
+		    Position		    [1415, 664, 1520, 816]
 		    ZOrder		    -6
 		    BackgroundColor	    "magenta"
 		    MinAlgLoopOccurrences   off
@@ -85670,7 +86047,7 @@ Model {
 		    ZoomFactor		    "125"
 		    Block {
 		    BlockType		    Inport
-		    Name		    "MAFSens"
+		    Name		    "Target"
 		    SID			    "914:2883:101"
 		    Position		    [25, 138, 55, 152]
 		    ZOrder		    -1
@@ -85679,7 +86056,7 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Inport
-		    Name		    "MAFSpdDensity"
+		    Name		    "Measured"
 		    SID			    "914:2883:102"
 		    Position		    [25, 188, 55, 202]
 		    ZOrder		    -2
@@ -85691,7 +86068,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "VE"
 		    SID			    "914:2883:103"
-		    Position		    [20, 213, 50, 227]
+		    Position		    [75, 213, 105, 227]
 		    ZOrder		    -3
 		    BackgroundColor	    "orange"
 		    Port		    "3"
@@ -85926,13 +86303,13 @@ Model {
 		    DstPort		    3
 		    }
 		    Line {
-		    SrcBlock		    "MAFSens"
+		    SrcBlock		    "Target"
 		    SrcPort		    1
 		    DstBlock		    "Add"
 		    DstPort		    1
 		    }
 		    Line {
-		    SrcBlock		    "MAFSpdDensity"
+		    SrcBlock		    "Measured"
 		    SrcPort		    1
 		    Points		    [30, 0]
 		    Branch {
@@ -86175,12 +86552,12 @@ Model {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator"
 		    SID			    "914:2883:95"
-		    Ports		    [6, 1]
-		    Position		    [1375, 105, 1405, 430]
+		    Ports		    [7, 1]
+		    Position		    [1375, 104, 1405, 486]
 		    ZOrder		    -10
 		    BackgroundColor	    "yellow"
 		    ShowName		    off
-		    Inputs		    "6"
+		    Inputs		    "7"
 		    }
 		    Block {
 		    BlockType		    Logic
@@ -86209,7 +86586,7 @@ Model {
 		    Name		    "Multiport\nSwitch"
 		    SID			    "914:2883:48"
 		    Ports		    [3, 1]
-		    Position		    [1355, 697, 1385, 743]
+		    Position		    [1050, 882, 1080, 928]
 		    BackgroundColor	    "red"
 		    ShowName		    off
 		    DataPortOrder	    "Zero-based contiguous"
@@ -86294,6 +86671,194 @@ Model {
 		    vardecs		    "motohawk_sfun_data_def_vardecs"
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "O2DataReady"
+		    SID			    "914:2883:131"
+		    Ports		    [2, 1]
+		    Position		    [1095, 431, 1275, 484]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "O2DataReady"
+		    Location		    [447, 83, 1918, 1027]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "SensorDataValid_BankA"
+		    SID			    "914:2883:132"
+		    Position		    [120, 83, 150, 97]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "SensorDataValid_BankB"
+		    SID			    "914:2883:140"
+		    Position		    [120, 153, 150, 167]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "914:2883:138"
+		    Position		    [475, 490, 505, 520]
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator"
+		    SID			    "914:2883:141"
+		    Ports		    [2, 1]
+		    Position		    [365, 54, 395, 196]
+		    AllPortsSameDT	    off
+		    OutDataTypeStr	    "boolean"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "914:2883:135"
+		    Position		    [580, 351, 630, 539]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    "914:2883:139"
+		    Position		    [440, 161, 490, 349]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_read"
+		    SID			    "914:2883:134"
+		    Ports		    [0, 1]
+		    Position		    [370, 415, 505, 475]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "boolean"
+		    nam			    "'VEAdpatSource'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_read1"
+		    SID			    "914:2883:136"
+		    Ports		    [0, 1]
+		    Position		    [260, 225, 395, 285]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "boolean"
+		    nam			    "'BankB_Enbl'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Enable"
+		    SID			    "914:2883:133"
+		    Position		    [680, 438, 710, 452]
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "Enable"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    Points		    [35, 0; 0, 130]
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read1"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, 70]
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "SensorDataValid_BankB"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "SensorDataValid_BankA"
+		    SrcPort		    1
+		    Points		    [85, 0]
+		    Branch {
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 225]
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    }
+		    }
+		    }
+		    Block {
 		    BlockType		    RelationalOperator
 		    Name		    "Relational\nOperator1"
 		    SID			    "914:2883:96"
@@ -86334,6 +86899,189 @@ Model {
 		    BackgroundColor	    "lightBlue"
 		    Value		    "60"
 		    OutDataTypeStr	    "Inherit: Inherit via back propagation"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "VE Adapt Source"
+		    SID			    "914:2883:118"
+		    Ports		    [4, 2]
+		    Position		    [1130, 667, 1240, 768]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "VE Adapt Source"
+		    Location		    [433, 403, 931, 703]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "MAF"
+		    SID			    "914:2883:119"
+		    Position		    [440, 233, 470, 247]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "VEMAF"
+		    SID			    "914:2883:122"
+		    Position		    [440, 533, 470, 547]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "TargetAFR"
+		    SID			    "914:2883:123"
+		    Position		    [435, 403, 465, 417]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "ActualAFR"
+		    SID			    "914:2883:124"
+		    Position		    [440, 703, 470, 717]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "914:2883:125"
+		    Position		    [540, 195, 595, 455]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    SID			    "914:2883:127"
+		    Position		    [540, 495, 595, 755]
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_calibration"
+		    SID			    "914:2883:126"
+		    Ports		    [0, 1]
+		    Position		    [320, 305, 470, 345]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
+		    SourceType		    "MotoHawk Calibration"
+		    nam			    "'VEAdpatSource'"
+		    val			    "0"
+		    storage		    "Calibration"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    data_type		    "boolean"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Enumeration"
+		    enum_struct		    "{'MAF', 'O2'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Target"
+		    SID			    "914:2883:120"
+		    Position		    [640, 318, 670, 332]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Measured"
+		    SID			    "914:2883:121"
+		    Position		    [625, 618, 655, 632]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "Target"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    DstBlock		    "Measured"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_calibration"
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 300]
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "MAF"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "VEMAF"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "TargetAFR"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "ActualAFR"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    }
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -86380,7 +87128,7 @@ Model {
 		    Name		    "motohawk_calibration1"
 		    SID			    "914:2883:54"
 		    Ports		    [0, 1]
-		    Position		    [1085, 685, 1235, 725]
+		    Position		    [780, 870, 930, 910]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_calibration"
@@ -86787,7 +87535,7 @@ Model {
 		    Name		    "motohawk_probe3"
 		    SID			    "914:2883:60"
 		    Ports		    [1]
-		    Position		    [1445, 672, 1520, 698]
+		    Position		    [1140, 857, 1215, 883]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -86818,7 +87566,7 @@ Model {
 		    Name		    "motohawk_probe4"
 		    SID			    "914:2883:113"
 		    Ports		    [1]
-		    Position		    [1505, 257, 1610, 283]
+		    Position		    [1505, 282, 1610, 308]
 		    ZOrder		    -24
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
@@ -86850,7 +87598,7 @@ Model {
 		    Name		    "motohawk_probe5"
 		    SID			    "914:2883:116"
 		    Ports		    [1]
-		    Position		    [825, 557, 915, 583]
+		    Position		    [825, 747, 915, 773]
 		    ShowName		    off
 		    LibraryVersion	    "MotoHawk 0.2.3"
 		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
@@ -86911,7 +87659,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "MAF [g/s]"
 		    SID			    "914:2883:63"
-		    Position		    [1470, 713, 1500, 727]
+		    Position		    [1165, 898, 1195, 912]
 		    BackgroundColor	    "lightBlue"
 		    IconDisplay		    "Port number"
 		    }
@@ -86932,20 +87680,6 @@ Model {
 		    }
 		    Branch {
 		    DstBlock		    "MAF [g/s]"
-		    DstPort		    1
-		    }
-		    }
-		    Line {
-		    SrcBlock		    "MAF_Sensor [g/s]"
-		    SrcPort		    1
-		    Points		    [35, 0]
-		    Branch {
-		    Points		    [0, 230]
-		    DstBlock		    "Multiport\nSwitch"
-		    DstPort		    3
-		    }
-		    Branch {
-		    DstBlock		    "Adapt VolEff Map"
 		    DstPort		    1
 		    }
 		    }
@@ -86986,14 +87720,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Branch {
-		    Points		    [0, 245; 565, 0]
+		    Points		    [0, 400; 240, 0]
 		    Branch {
-		    Points		    [0, 170]
-		    DstBlock		    "Multiport\nSwitch"
+		    DstBlock		    "VE Adapt Source"
 		    DstPort		    2
 		    }
 		    Branch {
-		    DstBlock		    "Adapt VolEff Map"
+		    Points		    [0, 200]
+		    DstBlock		    "Multiport\nSwitch"
 		    DstPort		    2
 		    }
 		    }
@@ -87231,8 +87965,9 @@ Model {
 		    DstPort		    1
 		    }
 		    Branch {
-		    Points		    [0, 300; 110, 0]
+		    Points		    [0, 490; 110, 0]
 		    Branch {
+		    Points		    [605, 0]
 		    DstBlock		    "Adapt VolEff Map"
 		    DstPort		    3
 		    }
@@ -87242,6 +87977,62 @@ Model {
 		    DstPort		    1
 		    }
 		    }
+		    }
+		    Line {
+		    SrcBlock		    "VE Adapt Source"
+		    SrcPort		    2
+		    DstBlock		    "Adapt VolEff Map"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "VE Adapt Source"
+		    SrcPort		    1
+		    DstBlock		    "Adapt VolEff Map"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "MAF_Sensor [g/s]"
+		    SrcPort		    1
+		    Points		    [70, 0]
+		    Branch {
+		    DstBlock		    "VE Adapt Source"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 240]
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "TargetAFR"
+		    SrcPort		    1
+		    DstBlock		    "VE Adapt Source"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "ActualAFR"
+		    SrcPort		    1
+		    DstBlock		    "VE Adapt Source"
+		    DstPort		    4
+		    }
+		    Line {
+		    SrcBlock		    "O2DataReady"
+		    SrcPort		    1
+		    DstBlock		    "Logical\nOperator"
+		    DstPort		    7
+		    }
+		    Line {
+		    SrcBlock		    "O2DR_A"
+		    SrcPort		    1
+		    DstBlock		    "O2DataReady"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "O2DR_B"
+		    SrcPort		    1
+		    DstBlock		    "O2DataReady"
+		    DstPort		    2
 		    }
 		    Annotation {
 		    Name		    "mdot = rho V A = rho Q = (p/RT) (ve Vcyl) (Neng Ncyl / 60 NRPC )"
@@ -87287,6 +88078,28 @@ Model {
 		    exp			    "1"
 		    use_mototune_group	    on
 		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_read"
+		    SID			    "914:7528"
+		    Ports		    [0, 1]
+		    Position		    [395, 904, 580, 946]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "double"
+		    nam			    "'DFCODesEquivRatio'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
 		    }
 		    Block {
 		    BlockType		    Reference
@@ -87478,8 +88291,15 @@ Model {
 		    }
 		    Branch {
 		    Points		    [0, 195]
+		    Branch {
 		    DstBlock		    "Bus\nSelector4"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 165]
+		    DstBlock		    "Bus\nSelector7"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    }
@@ -87542,7 +88362,7 @@ Model {
 		    Labels		    [-1, 0]
 		    SrcBlock		    "Speed Density - MAP Referenced - Adaptive"
 		    SrcPort		    1
-		    Points		    [0, -80]
+		    Points		    [0, -140]
 		    DstBlock		    "Bus\nCreator1"
 		    DstPort		    2
 		    }
@@ -87684,6 +88504,36 @@ Model {
 		    SrcPort		    1
 		    DstBlock		    "Logical\nOperator"
 		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<O2BankADelagged>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector6"
+		    SrcPort		    3
+		    DstBlock		    "Speed Density - MAP Referenced - Adaptive"
+		    DstPort		    13
+		    }
+		    Line {
+		    Name		    "<DataValidState>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector7"
+		    SrcPort		    2
+		    DstBlock		    "Speed Density - MAP Referenced - Adaptive"
+		    DstPort		    16
+		    }
+		    Line {
+		    Name		    "<DataValidState>"
+		    Labels		    [0, 0; 0, 0]
+		    SrcBlock		    "Bus\nSelector7"
+		    SrcPort		    1
+		    DstBlock		    "Speed Density - MAP Referenced - Adaptive"
+		    DstPort		    15
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    DstBlock		    "Speed Density - MAP Referenced - Adaptive"
+		    DstPort		    14
 		    }
 		  }
 		}
@@ -96590,6 +97440,178 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "FuelPulseState"
+		    SID			    "914:7556"
+		    Ports		    [1]
+		    Position		    [795, 242, 930, 298]
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "FuelPulseState"
+		    Location		    [433, 403, 931, 703]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "EngineState"
+		    SID			    "914:7557"
+		    Position		    [110, 103, 140, 117]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "CompareTo"
+		    SID			    "914:7561"
+		    Ports		    [1, 1]
+		    Position		    [190, 101, 250, 119]
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    LibraryVersion	    "1.490"
+		    SourceBlock		    "motohawk_control_primitives_lib/CompareTo"
+		    SourceType		    "Equals"
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    op			    "=="
+		    val			    "2"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Rising Edge"
+		    SID			    "914:7562"
+		    Ports		    [1, 1]
+		    Position		    [305, 94, 365, 126]
+		    BackgroundColor	    "[0.815686, 0.976471, 0.674510]"
+		    LibraryVersion	    "1.490"
+		    SourceBlock		    "motohawk_control_primitives_lib/Rising Edge"
+		    SourceType		    ""
+		    ShowPortLabels	    "FromPortIcon"
+		    SystemSampleTime	    "-1"
+		    FunctionWithSeparateData off
+		    RTWMemSecFuncInitTerm   "Inherit from model"
+		    RTWMemSecFuncExecute    "Inherit from model"
+		    RTWMemSecDataConstants  "Inherit from model"
+		    RTWMemSecDataInternal   "Inherit from model"
+		    RTWMemSecDataParameters "Inherit from model"
+		    GeneratePreprocessorConditionals off
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "WritePulseState"
+		    SID			    "914:7563"
+		    Ports		    [0, 0, 1]
+		    Position		    [390, 169, 490, 211]
+		    TreatAsAtomicUnit	    on
+		    MinAlgLoopOccurrences   off
+		    PropExecContextOutsideSubsystem off
+		    RTWSystemCode	    "Auto"
+		    FunctionWithSeparateData off
+		    Opaque		    off
+		    RequestExecContextInheritance off
+		    MaskHideContents	    off
+		    System {
+		    Name		    "WritePulseState"
+		    Location		    [421, 301, 919, 601]
+		    Open		    off
+		    ModelBrowserVisibility  on
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    SID			    "914:7565"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "914:7568"
+		    Position		    [185, 170, 215, 200]
+		    OutDataTypeStr	    "uint8"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_write"
+		    SID			    "914:7567"
+		    Ports		    [1]
+		    Position		    [290, 155, 425, 215]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_write"
+		    SourceType		    "MotoHawk Data Write"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Write entire data structure at once"
+		    sz_vec		    "9"
+		    sz_row		    "2"
+		    sz_col		    "9"
+		    typ			    "uint8"
+		    nam			    "'FuelPulseState'"
+		    checkNull		    on
+		    write_read_only	    off
+		    struct_inst_name	    "''"
+		    struct_name		    "'MyStruct'"
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "motohawk_data_write"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "EngineState"
+		    SrcPort		    1
+		    DstBlock		    "CompareTo"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "CompareTo"
+		    SrcPort		    1
+		    DstBlock		    "Rising Edge"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Rising Edge"
+		    SrcPort		    1
+		    Points		    [70, 0]
+		    DstBlock		    "WritePulseState"
+		    DstPort		    enable
+		    }
+		    }
+		    }
+		    Block {
 		    BlockType		    Logic
 		    Name		    "Logical\nOperator1"
 		    SID			    "914:5260"
@@ -97102,6 +98124,74 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "motohawk_data_def1"
+		    SID			    "914:7553"
+		    Ports		    []
+		    Position		    [180, 90, 315, 150]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_def"
+		    SourceType		    "MotoHawk Data Definition"
+		    nam			    "'FuelPulseState'"
+		    container_nam	    "''"
+		    data		    "0"
+		    typ			    "uint8"
+		    struct_nam		    "'MyStruct'"
+		    storage		    "Volatile"
+		    outputRef		    off
+		    use_vardec		    off
+		    window		    "Display"
+		    read_level		    "1"
+		    write_level		    "1"
+		    ovr_cals		    on
+		    view_as		    "Enumeration"
+		    enum_struct		    "{'Disabled', 'Enabled'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "'' "
+		    use_header_enum	    off
+		    row_header_enum	    "''"
+		    col_header_enum	    "''"
+		    use_min_max		    off
+		    min_val		    "-inf"
+		    max_val		    "inf"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    eval_name		    "MyData"
+		    data_stores		    "motohawk_sfun_data_def_data_stores"
+		    struct_instances	    "motohawk_sfun_data_def_struct_instances"
+		    vardecs		    "motohawk_sfun_data_def_vardecs"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "motohawk_data_read"
+		    SID			    "914:7554"
+		    Ports		    [0, 1]
+		    Position		    [355, 90, 490, 150]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Data Storage Blocks/motohawk_data_read"
+		    SourceType		    "MotoHawk Data Read"
+		    source		    "Lookup By Name"
+		    structure		    "Scalar"
+		    operation		    "Read scalar from location by index"
+		    sz_vec		    "4"
+		    sz_row		    "2"
+		    sz_col		    "3"
+		    typ			    "uint8"
+		    nam			    "'FuelPulseState'"
+		    checkNull		    on
+		    struct_inst_name	    "'MyData'"
+		    struct_nam		    "'MyStruct'"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "motohawk_data_write"
 		    SID			    "914:5287"
 		    Ports		    [1]
@@ -97156,6 +98246,37 @@ Model {
 		    }
 		    Block {
 		    BlockType		    Reference
+		    Name		    "motohawk_probe1"
+		    SID			    "914:7555"
+		    Ports		    [1]
+		    Position		    [530, 107, 680, 133]
+		    ShowName		    off
+		    LibraryVersion	    "MotoHawk 0.2.3"
+		    SourceBlock		    "MotoHawk_lib/Calibration & Probing Blocks/motohawk_probe"
+		    SourceType		    "MotoHawk Probe"
+		    nam			    "'FuelPulseStatePrb'"
+		    show_more		    on
+		    name_source		    "Use Parameter"
+		    read_level		    "1"
+		    view_as		    "Enumeration"
+		    enum_struct		    "{'NotReady', 'Ready', 'Completed'}"
+		    vector_style	    "Wide Row"
+		    use_help_units	    off
+		    help		    "''"
+		    units		    "''"
+		    use_header_enum	    off
+		    row_header_enum	    "{}"
+		    col_header_enum	    "{}"
+		    use_precision	    off
+		    precision		    "''"
+		    gain		    "1"
+		    offset		    "0"
+		    exp			    "1"
+		    use_mototune_group	    off
+		    mototune_group	    "motohawk_vardec_path(gcb)"
+		    }
+		    Block {
+		    BlockType		    Reference
 		    Name		    "motohawk_probe2"
 		    SID			    "914:5289"
 		    Ports		    [1]
@@ -97200,7 +98321,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_TDC_EVENT"
-		    function_name	    "Trigger_FGND_TDC_EVENT_3098p0051"
+		    function_name	    "Trigger_FGND_TDC_EVENT_8437p0004"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -97308,8 +98429,15 @@ Model {
 		    }
 		    Branch {
 		    Points		    [0, -65]
+		    Branch {
 		    DstBlock		    "motohawk_data_write"
 		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -85]
+		    DstBlock		    "FuelPulseState"
+		    DstPort		    1
+		    }
 		    }
 		    }
 		    Line {
@@ -97378,6 +98506,12 @@ Model {
 		    Points		    [15, 0; 0, -20]
 		    DstBlock		    "Relational\nOperator3"
 		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "motohawk_data_read"
+		    SrcPort		    1
+		    DstBlock		    "motohawk_probe1"
+		    DstPort		    1
 		    }
 		    Annotation {
 		    Name		    "States:\n1 - Stall\n2 - Crank\n3 - Run"
@@ -102178,13 +103312,13 @@ Model {
 		  Branch {
 		    Points		    [0, 185]
 		    Branch {
-		    Points		    [0, 105]
+		    Points		    [0, 95]
 		    Branch {
 		    DstBlock		    "AirCalcs"
 		    DstPort		    4
 		    }
 		    Branch {
-		    Points		    [0, 195]
+		    Points		    [0, 205]
 		    Branch {
 		    DstBlock		    "Virtual Indexes"
 		    DstPort		    2
@@ -102216,7 +103350,7 @@ Model {
 		    DstPort		    3
 		  }
 		  Branch {
-		    Points		    [0, 55]
+		    Points		    [0, 60]
 		    DstBlock		    "AirCalcs"
 		    DstPort		    1
 		  }
@@ -102231,7 +103365,7 @@ Model {
 		  Labels		  [0, 0]
 		  SrcBlock		  "AirCalcs"
 		  SrcPort		  1
-		  Points		  [245, 0]
+		  Points		  [240, 0]
 		  Branch {
 		    Labels		    [1, 0]
 		    DstBlock		    "Bus\nCreator"
@@ -102256,7 +103390,7 @@ Model {
 		  }
 		  Branch {
 		    Labels		    [2, 0]
-		    Points		    [0, 70; -425, 0; 0, -165]
+		    Points		    [0, 70; -425, 0; 0, -170]
 		    DstBlock		    "AirCalcs"
 		    DstPort		    3
 		  }
@@ -102314,6 +103448,7 @@ Model {
 	    Line {
 	      SrcBlock		      "Sensors"
 	      SrcPort		      1
+	      Points		      [35, 0]
 	      DstBlock		      "VirtualSensors"
 	      DstPort		      1
 	    }
@@ -111336,7 +112471,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "STARTUP_EVENT"
-		    function_name	    "Trigger_STARTUP_EVENT_4486p0011"
+		    function_name	    "Trigger_STARTUP_EVENT_9720p0004"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -111358,7 +112493,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_MID_TDC_EVENT"
-		    function_name	    "Trigger_FGND_MID_TDC_EVENT_4487p0011"
+		    function_name	    "Trigger_FGND_MID_TDC_EVENT_9721p0004"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -112700,7 +113835,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		  SourceType		  "MotoHawk Function Trigger"
 		  trigger		  "FGND_5XRTI_PERIODIC"
-		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_4581p0013"
+		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_9815p0006"
 		  priority_order	  "1"
 		  inherited		  on
 		  run_disabled		  off
@@ -112722,7 +113857,7 @@ Model {
 		  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		  SourceType		  "MotoHawk Function Trigger"
 		  trigger		  "FGND_5XRTI_PERIODIC"
-		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_4582p0011"
+		  function_name		  "Trigger_FGND_5XRTI_PERIODIC_9816p0004"
 		  priority_order	  "1"
 		  inherited		  on
 		  run_disabled		  off
@@ -114422,7 +115557,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_20XRTI_PERIODIC"
-		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_4717p0011"
+		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_9951p0004"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -116064,7 +117199,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_20XRTI_PERIODIC"
-		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_4851p0011"
+		    function_name	    "Trigger_FGND_20XRTI_PERIODIC_10085p0004"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -123397,7 +124532,7 @@ Model {
 		    SourceBlock		    "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 		    SourceType		    "MotoHawk Function Trigger"
 		    trigger		    "FGND_TDC_EVENT"
-		    function_name	    "Trigger_FGND_TDC_EVENT_5546p0017"
+		    function_name	    "Trigger_FGND_TDC_EVENT_10780p0004"
 		    priority_order	    "0"
 		    inherited		    on
 		    run_disabled	    off
@@ -130308,7 +131443,7 @@ Model {
 	      SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	      SourceType	      "MotoHawk Function Trigger"
 	      trigger		      "FGND_5XRTI_PERIODIC"
-	      function_name	      "Trigger_FGND_5XRTI_PERIODIC_6074p0017"
+	      function_name	      "Trigger_FGND_5XRTI_PERIODIC_11294p0006"
 	      priority_order	      "1"
 	      inherited		      on
 	      run_disabled	      off
@@ -133136,7 +134271,7 @@ Model {
 	  SourceBlock		  "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
 	  SourceType		  "MotoHawk Function Trigger"
 	  trigger		  "BGND_BASE_PERIODIC"
-	  function_name		  "Trigger_BGND_BASE_PERIODIC_6350p0016"
+	  function_name		  "Trigger_BGND_BASE_PERIODIC_11570p0004"
 	  priority_order	  "255"
 	  inherited		  on
 	  run_disabled		  on
@@ -133282,7 +134417,7 @@ Model {
       SourceBlock	      "MotoHawk_lib/Trigger Blocks/motohawk_trigger"
       SourceType	      "MotoHawk Function Trigger"
       trigger		      "FGND_RTI_PERIODIC"
-      function_name	      "Trigger_FGND_RTI_PERIODIC_6358p0016"
+      function_name	      "Trigger_FGND_RTI_PERIODIC_11578p0004"
       priority_order	      "0"
       inherited		      off
       run_disabled	      off
@@ -134280,14 +135415,19 @@ Stateflow {
   chart {
     id			    16
     name		    "Foreground/Control/Controller/Stall/Stall Throttle/Ice Break"
-    windowPosition	    [0 30 1440 722.25]
-    viewLimits		    [157.474 754.494 56.306 349.686]
+    windowPosition	    [18.75 30 1440 722.25]
+    viewLimits		    [139.926 737.628 63.537 357.252]
     zoomFactor		    0.428
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 17 0 0]
     firstTransition	    20
     viewObj		    16
     machine		    1
+    subviewS {
+      x1		      139.926
+      y1		      63.537
+      zoomFactor	      0.428
+    }
     ssIdHighWaterMark	    16
     decomposition	    CLUSTER_CHART
     firstData		    24
@@ -134334,7 +135474,7 @@ Stateflow {
   }
   transition {
     id			    20
-    labelPosition	    [183.368 120.141 7.371 14.08]
+    labelPosition	    [183.368 120.141 7.379 14.096]
     fontSize		    12
     src {
       intersection	      [0 0 1 0 197.7678 111.75 0 0]
@@ -134355,7 +135495,7 @@ Stateflow {
   transition {
     id			    21
     labelString		    "[timeSinceKeyOn < enblTime]"
-    labelPosition	    [291.625 151.234 155.753 14.08]
+    labelPosition	    [291.625 151.234 155.931 14.096]
     fontSize		    12
     src {
       id		      17
@@ -134378,7 +135518,7 @@ Stateflow {
   transition {
     id			    22
     labelString		    "after(hldTime,sec)"
-    labelPosition	    [513.87 229.406 94.541 14.08]
+    labelPosition	    [513.87 229.406 94.649 14.096]
     fontSize		    12
     src {
       id		      18
@@ -134401,7 +135541,7 @@ Stateflow {
   transition {
     id			    23
     labelString		    "[timeSinceKeyOn > enblTime]"
-    labelPosition	    [268.039 224.799 155.753 14.08]
+    labelPosition	    [268.039 224.799 155.931 14.096]
     fontSize		    12
     src {
       id		      19

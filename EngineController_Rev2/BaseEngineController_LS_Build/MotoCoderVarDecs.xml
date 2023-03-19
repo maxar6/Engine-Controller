@@ -839,7 +839,7 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
-      <name>OpenThrottleFPCScalar</name>
+      <name>OpenThrottleFPCScalar_TPS</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
       <offset>0</offset>
@@ -851,8 +851,28 @@
       <units>Mult</units>
       <ctype>const Constant_T</ctype>
       <help>Crank FPC is scaled up with throttle opening for mechanical throttle systems, this parameter sets the gain for this relationship.  CrankFPC=CrankFPC*(1+TPS/100*FPCScalar).</help>
-      <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling</group>
-      <struct>ConstantWork.OpenThrottleFPCScalar</struct>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|TPSEnrichment</group>
+      <struct>ConstantWork.OpenThrottleFPCScalar_TPS</struct>
+      <class>var</class>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
+   </VarDec>
+   <VarDec>
+      <name>OpenThrottleFPCScalar_ETC</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <units>Mult</units>
+      <ctype>const Constant_T</ctype>
+      <help>Crank FPC is scaled up with throttle opening for mechanical throttle systems, this parameter sets the gain for this relationship.  CrankFPC=CrankFPC*(1+TPS/100*FPCScalar).</help>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|TPSEnrichment</group>
+      <struct>ConstantWork.OpenThrottleFPCScalar_ETC</struct>
       <class>var</class>
       <storage>FLASH</storage>
       <update>BACKGND</update>
@@ -14444,6 +14464,29 @@
       <type>real32</type>
    </VarDec>
    <VarDec>
+      <name>VEAdpatSource</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1</max>
+      <min>0</min>
+      <format>1.0</format>
+      <mask>0x000000FF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive|VE Adapt Source</group>
+      <struct>ConstantWork.VEAdpatSource</struct>
+      <storage>FLASH</storage>
+      <update>BACKGND</update>
+      <type>uint8</type>
+      <class>enum</class>
+      <enum>
+         <item name="MAF" value="0"/>
+         <item name="O2" value="1"/>
+         <default>Unknown</default>
+      </enum>
+   </VarDec>
+   <VarDec>
       <name>VEAdaptTemp</name>
       <access>RW RW RW RW</access>
       <gain>1</gain>
@@ -19283,6 +19326,45 @@
       <storage>RAM</storage>
       <update>BACKGND</update>
       <type>uint16</type>
+   </VarDec>
+   <VarDec>
+      <name>CrankPulseTbl</name>
+      <access>RW RW RW RW</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>const Constant_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|FuelPulse</group>
+      <struct>ConstantWork.CrankPulseTbl</struct>
+      <class>interpolation_1d</class>
+      <storage>FLASH</storage>
+      <update>REMOTE</update>
+      <type>real32</type>
+      <len>5</len>
+      <output>CrankPulse</output>
+      <prelookup>CrankECT05IdxArr</prelookup>
+   </VarDec>
+   <VarDec>
+      <name>CrankPulse</name>
+      <access>RO RO RO RO</access>
+      <gain>1</gain>
+      <offset>0</offset>
+      <exp>1</exp>
+      <max>1.0E17</max>
+      <min>-1.0E17</min>
+      <format>4.2</format>
+      <mask>0xFFFFFFFF</mask>
+      <ctype>Volatile_BSS_T</ctype>
+      <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|FuelPulse</group>
+      <struct>VolatileWork_BSS.CrankPulse</struct>
+      <class>var</class>
+      <storage>RAM</storage>
+      <update>BACKGND</update>
+      <type>real32</type>
    </VarDec>
    <VarDec>
       <name>CrankRPM05IdxArr</name>
@@ -28486,7 +28568,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut4942p0011</help>
+      <help>Digital output pin selection for DOut10176p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.ACPin</struct>
       <storage>FLASH</storage>
@@ -29791,7 +29873,7 @@
       <format>5.0</format>
       <mask>0x0000FFFF</mask>
       <ctype>const Constant_T</ctype>
-      <help>Digital output pin selection for DOut5781p0015</help>
+      <help>Digital output pin selection for DOut11001p0004</help>
       <group>System | I/O Pins | Outputs Config</group>
       <struct>ConstantWork.FuelPumpPin</struct>
       <storage>FLASH</storage>

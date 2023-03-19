@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Application>
+	<GUID>643353ad-4f7e-4dfd-b4-60-e2-b1-03-a9-6b</GUID>
+	<Name>BaseEngineController_LS_112</Name>
+	<Author>maxar</Author>
+	<Copyright>2022 Woodward.</Copyright>
+	<CreateDate>22-Nov-2022</CreateDate>
+	<MemoryLayout>DEV</MemoryLayout>
+	<Module>ECM-5554-112-0904-xD</Module>
+	<OS>
+		<EnableControlledShutdown>1</EnableControlledShutdown>
+		<EnableWatchdog>1</EnableWatchdog>
+		<ExecutionStarvationTime>500000</ExecutionStarvationTime>
+		<ExecutionStarvationTimeMargin>50000</ExecutionStarvationTimeMargin>
+	</OS>
+	<Tasks>
+		<Task type="interrupt">
+			<Name>InterruptTask</Name>
+			<StackSize>1280</StackSize>
+			<StackMargin>153</StackMargin>
+			<Tick>5000</Tick>
+			<FloatingPoint>0</FloatingPoint>
+		</Task>
+		<Task>
+			<Name>ApplicationInterruptTask</Name>
+			<StackSize>1024</StackSize>
+			<StackMargin>102</StackMargin>
+			<Priority>500</Priority>
+			<FloatingPoint>1</FloatingPoint>
+		</Task>
+		<Task type="main">
+			<Name>MainAppTask</Name>
+			<StackSize>1024</StackSize>
+			<StackMargin>102</StackMargin>
+			<Priority>0</Priority>
+			<FloatingPoint>1</FloatingPoint>
+		</Task>
+		<Task type="periodic" ref="InterruptTask">
+			<Name>BGNDTask</Name>
+			<StackSize>1024</StackSize>
+			<StackMargin>204</StackMargin>
+			<Priority>100</Priority>
+			<FloatingPoint>1</FloatingPoint>
+			<Multiplier>10</Multiplier>
+		</Task>
+		<Task type="shutdown">
+			<Name>SHUTDOWNTask</Name>
+			<StackSize>1024</StackSize>
+			<StackMargin>102</StackMargin>
+			<Priority>400</Priority>
+			<FloatingPoint>1</FloatingPoint>
+		</Task>
+		<Task type="periodic" ref="InterruptTask">
+			<StackSize>4096</StackSize>
+			<StackMargin>307</StackMargin>
+			<Priority>200</Priority>
+			<Multiplier>1</Multiplier>
+			<Name>FGNDTask</Name>
+			<FloatingPoint>1</FloatingPoint>
+		</Task>
+	</Tasks>
+	<Triggers>
+		<Trigger type="startup">
+			<Name>OpenApplication</Name>
+			<Task ref="MainAppTask"/>
+			<Order>-10000</Order>
+			<Function>OpenApplication</Function>
+			<PausePoint>true</PausePoint>
+		</Trigger>
+		<Trigger type="periodic">
+			<Name>MotoHawkModelSecondsInUseTick</Name>
+			<Task ref="BGNDTask"/>
+			<Order>999</Order>
+			<Function>MotoHawkModelSecondsInUseTick</Function>
+			<Period>1000000</Period>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="shutdown">
+			<Name>CloseApplication</Name>
+			<Order>0</Order>
+			<Function>CloseApplication</Function>
+		</Trigger>
+		<Trigger type="startup">
+			<Name>STARTUP_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>0</Order>
+			<Function>Trigger_STARTUP_EVENT_11965p0004</Function>
+			<PausePoint>true</PausePoint>
+		</Trigger>
+		<Trigger type="idle">
+			<Name>IDLE_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>255</Order>
+			<Function>Trigger_IDLE_EVENT_11990p0004</Function>
+			<AppMonitorStop>false</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_12064p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>1</Multiplier>
+			<Name>FGND_RTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_RTI_PERIODIC_12065p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>20</Multiplier>
+			<Name>FGND_20XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_FGND_20XRTI_PERIODIC_12067p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>1</Multiplier>
+			<Name>BGND_BASE_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASE_PERIODIC_12068p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>2</Multiplier>
+			<Name>BGND_BASEx2_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASEx2_PERIODIC_12069p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>10</Multiplier>
+			<Name>BGND_BASEx10_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASEx10_PERIODIC_12070p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Period>1000000</Period>
+			<Name>ONE_SECOND_EVENT</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_ONE_SECOND_EVENT_12071p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="idle">
+			<Name>IDLE_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>255</Order>
+			<Function>Trigger_IDLE_EVENT_9p001</Function>
+			<AppMonitorStop>false</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>1</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_1093p0005</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>1</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_1094p0005</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>1</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_5057p0001</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="startup">
+			<Name>STARTUP_EVENT</Name>
+			<Task ref="MainAppTask"/>
+			<Order>0</Order>
+			<Function>Trigger_STARTUP_EVENT_9720p0004</Function>
+			<PausePoint>true</PausePoint>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>1</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_9815p0006</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>1</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_9816p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>20</Multiplier>
+			<Name>FGND_20XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>0</Order>
+			<Function>Trigger_FGND_20XRTI_PERIODIC_9951p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>20</Multiplier>
+			<Name>FGND_20XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>0</Order>
+			<Function>Trigger_FGND_20XRTI_PERIODIC_10085p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>5</Multiplier>
+			<Name>FGND_5XRTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>1</Order>
+			<Function>Trigger_FGND_5XRTI_PERIODIC_11294p0006</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>1</Multiplier>
+			<Name>BGND_BASE_PERIODIC</Name>
+			<Task ref="BGNDTask"/>
+			<Order>255</Order>
+			<Function>Trigger_BGND_BASE_PERIODIC_11570p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+		<Trigger type="periodic">
+			<Multiplier>1</Multiplier>
+			<Name>FGND_RTI_PERIODIC</Name>
+			<Task ref="FGNDTask"/>
+			<Order>0</Order>
+			<Function>Trigger_FGND_RTI_PERIODIC_11578p0004</Function>
+			<AppMonitorStop>true</AppMonitorStop>
+		</Trigger>
+	</Triggers>
+	<Memory>
+		<Logical>
+			<Name>Heap</Name>
+			<Size>2048</Size>
+			<HeapMargin>409</HeapMargin>
+		</Logical>
+	</Memory>
+	<Types/>
+	<IO>
+		<CrankEncoder>
+			<Name>CNK</Name>
+			<ModuleResource>CNK</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/EngineSpeed/motohawk_encoder_def</AppLink>
+			<TeethTillActive>6</TeethTillActive>
+			<TeethAfterCam>-1</TeethAfterCam>
+			<DegCAPerCycle>720</DegCAPerCycle>
+			<PullupState>on</PullupState>
+			<GetAngle>1</GetAngle>
+			<Style>GM24Xe</Style>
+			<Teeth>24</Teeth>
+			<MissingTeeth>0</MissingTeeth>
+			<Interface>DG</Interface>
+			<SyncEdge>rise</SyncEdge>
+			<RevsPerCycle>2</RevsPerCycle>
+			<UseCalibrations>true</UseCalibrations>
+			<GroupString>BaseEngineController_LS_112|Foreground|Inputs|EngineSpeed</GroupString>
+			<WriteAccess>1</WriteAccess>
+			<ReadAccess>1</ReadAccess>
+			<MaxCylinders>8</MaxCylinders>
+			<NumCylinders>8</NumCylinders>
+			<TDCAngles>0 270 630 540 450 360 180 90</TDCAngles>
+			<CamDelay>0</CamDelay>
+			<IgnoreDelay>100</IgnoreDelay>
+			<IsCnkAlignedWithCam>false</IsCnkAlignedWithCam>
+			<OnError>
+				<Trigger type="async">
+					<Name>EncoderDiagnosticsCallback</Name>
+					<Task ref="ApplicationInterruptTask"/>
+				</Trigger>
+			</OnError>
+			<OnStateChanged>
+				<Trigger type="async">
+					<Name>EncoderStateCallback</Name>
+					<Task ref="ApplicationInterruptTask"/>
+				</Trigger>
+			</OnStateChanged>
+			<OnAngle>
+				<Trigger type="async">
+					<Name>FGND_MID_TDC_EVENT</Name>
+					<Task ref="FGNDTask"/>
+					<Order>255</Order>
+					<Function>Trigger_FGND_MID_TDC_EVENT_12066p0004</Function>
+					<Angles>MID_TDC</Angles>
+				</Trigger>
+				<Trigger type="async">
+					<Name>FGND_TDC1_EVENT</Name>
+					<Task ref="FGNDTask"/>
+					<Order>0</Order>
+					<Function>Trigger_FGND_TDC1_EVENT_869p0001</Function>
+					<Angles>0</Angles>
+				</Trigger>
+				<Trigger type="async">
+					<Name>FGND_HIRES</Name>
+					<Task ref="FGNDTask"/>
+					<Order>1</Order>
+					<Function>Trigger_FGND_HIRES_6521p0004</Function>
+					<Angles>TOOTH</Angles>
+				</Trigger>
+				<Trigger type="async">
+					<Name>FGND_TDC_EVENT</Name>
+					<Task ref="FGNDTask"/>
+					<Order>0</Order>
+					<Function>Trigger_FGND_TDC_EVENT_8437p0004</Function>
+					<Angles>TDC</Angles>
+				</Trigger>
+				<Trigger type="async">
+					<Name>FGND_MID_TDC_EVENT</Name>
+					<Task ref="FGNDTask"/>
+					<Order>0</Order>
+					<Function>Trigger_FGND_MID_TDC_EVENT_9721p0004</Function>
+					<Angles>MID_TDC</Angles>
+				</Trigger>
+				<Trigger type="async">
+					<Name>FGND_TDC_EVENT</Name>
+					<Task ref="FGNDTask"/>
+					<Order>0</Order>
+					<Function>Trigger_FGND_TDC_EVENT_10780p0004</Function>
+					<Angles>TDC</Angles>
+				</Trigger>
+			</OnAngle>
+		</CrankEncoder>
+		<DigitalInput>
+			<Name>ESTOPPin</Name>
+			<ModuleResource>ESTOP</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_din</AppLink>
+		</DigitalInput>
+		<DiscreteOutput>
+			<Name>DOut10176p0004</Name>
+			<ModuleResource>LSO1</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/AC Control/motohawk_dout</AppLink>
+		</DiscreteOutput>
+		<DiscreteOutput>
+			<Name>DOut11001p0004</Name>
+			<ModuleResource>LSO2</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/FuelPump/motohawk_dout</AppLink>
+		</DiscreteOutput>
+		<DiscreteOutput>
+			<Name>DOut11529p0004</Name>
+			<ModuleResource>MPRD</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Main Power Relay/Main Power Relay/motohawk_dout</AppLink>
+		</DiscreteOutput>
+		<SerialLink>
+			<Name>RS485</Name>
+			<ModuleResource>RS485</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/motohawk_serial_def</AppLink>
+		</SerialLink>
+		<AnalogInput>
+			<Name>AN2</Name>
+			<ModuleResource>AN2</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_ain5</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN3</Name>
+			<ModuleResource>AN3</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_ain6</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>MAPSensorPin</Name>
+			<ModuleResource>AN19</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/Once at Startup/motohawk_ain</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN4</Name>
+			<ModuleResource>AN4</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain1</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>DRVP</Name>
+			<ModuleResource>DRVP</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain14</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN5</Name>
+			<ModuleResource>AN5</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain2</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>XDRP</Name>
+			<ModuleResource>XDRP</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain3</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN6</Name>
+			<ModuleResource>AN6</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain4</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN15</Name>
+			<ModuleResource>AN15</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Fuel Level/motohawk_ain</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN7</Name>
+			<ModuleResource>AN7</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN8</Name>
+			<ModuleResource>AN8</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain1</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN9</Name>
+			<ModuleResource>AN9</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain2</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN10</Name>
+			<ModuleResource>AN10</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain3</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN11</Name>
+			<ModuleResource>AN11</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain1</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN12</Name>
+			<ModuleResource>AN12</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain2</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN13</Name>
+			<ModuleResource>AN13</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain6</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>AN14</Name>
+			<ModuleResource>AN14</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain9</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<AnalogInput>
+			<Name>ECUP</Name>
+			<ModuleResource>ECUP</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Main Power Relay/Main Power Relay/motohawk_ain5</AppLink>
+			<DataType>uint16</DataType>
+			<scaling>10</scaling>
+		</AnalogInput>
+		<FrequencyInput>
+			<Name>SPD1</Name>
+			<ModuleResource>SPD1</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_frequency_in1</AppLink>
+			<SyncEdge>fall</SyncEdge>
+			<Interface>DG</Interface>
+			<MaxPeriod>100000</MaxPeriod>
+			<CapturePulseWidth>TRUE</CapturePulseWidth>
+		</FrequencyInput>
+		<FrequencyInput>
+			<Name>SPD2</Name>
+			<ModuleResource>SPD2</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_frequency_in2</AppLink>
+			<SyncEdge>fall</SyncEdge>
+			<Interface>DG</Interface>
+			<MaxPeriod>100000</MaxPeriod>
+			<CapturePulseWidth>TRUE</CapturePulseWidth>
+		</FrequencyInput>
+		<FrequencyInput>
+			<Name>SPD3</Name>
+			<ModuleResource>SPD3</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_frequency_in</AppLink>
+			<SyncEdge>rise</SyncEdge>
+			<Interface>DG</Interface>
+			<MaxPeriod>100000</MaxPeriod>
+			<CapturePulseWidth>FALSE</CapturePulseWidth>
+		</FrequencyInput>
+		<PWMOutput>
+			<Name>LSO9_PWMOutput</Name>
+			<ModuleResource>LSO9</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/FAN Control/motohawk_pwm</AppLink>
+			<MinimumFrequency>2.00</MinimumFrequency>
+		</PWMOutput>
+		<PWMOutput>
+			<Name>LSO10_PWMOutput</Name>
+			<ModuleResource>LSO10</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/FAN Control/motohawk_pwm1</AppLink>
+			<MinimumFrequency>2.00</MinimumFrequency>
+		</PWMOutput>
+		<PWMOutput>
+			<Name>H1p_H1m_PWMOutput</Name>
+			<ModuleResource>H1+</ModuleResource>
+			<ModuleResource>H1-</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/HBridge/motohawk_pwm1</AppLink>
+			<MinimumFrequency>64.00</MinimumFrequency>
+		</PWMOutput>
+		<CurrentMeasurement>
+			<Name>H1p_H1m_PWMOutput_CM</Name>
+			<ModuleResource>H1+</ModuleResource>
+			<ModuleResource>H1-</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/HBridge/motohawk_pwm1</AppLink>
+			<Units>mA</Units>
+		</CurrentMeasurement>
+		<PWMOutput>
+			<Name>H2p_PWMOutput</Name>
+			<ModuleResource>H2+</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/IAC-Control/motohawk_pwm</AppLink>
+			<MinimumFrequency>2.00</MinimumFrequency>
+		</PWMOutput>
+		<PWMOutput>
+			<Name>H2m_PWMOutput</Name>
+			<ModuleResource>H2-</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/IAC-Control/motohawk_pwm1</AppLink>
+			<MinimumFrequency>2.00</MinimumFrequency>
+		</PWMOutput>
+		<PWMOutput>
+			<Name>LSO8_PWMOutput</Name>
+			<ModuleResource>LSO8</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Outputs/WASTEGATE-Control/motohawk_pwm</AppLink>
+			<MinimumFrequency>2.00</MinimumFrequency>
+		</PWMOutput>
+		<CamEncoder>
+			<Name>CAM</Name>
+			<ModuleResource>CAM</ModuleResource>
+			<AppLink>BaseEngineController_LS_112/Foreground/Inputs/EngineSpeed/motohawk_encoder_def</AppLink>
+			<Style>HalfMoon</Style>
+			<Interface>DG</Interface>
+			<SyncEdge>rise</SyncEdge>
+			<PullupState>on</PullupState>
+		</CamEncoder>
+		<PSPOutput>
+			<Name>EST1</Name>
+			<ModuleResource>EST1</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST2</Name>
+			<ModuleResource>EST2</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST3</Name>
+			<ModuleResource>EST3</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST4</Name>
+			<ModuleResource>EST4</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST5</Name>
+			<ModuleResource>EST5</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST6</Name>
+			<ModuleResource>EST6</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST7</Name>
+			<ModuleResource>EST7</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>EST8</Name>
+			<ModuleResource>EST8</ModuleResource>
+			<NumPulses>1</NumPulses>
+			<Mode>HardStart_HardStop</Mode>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ1</Name>
+			<ModuleResource>INJ1</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ1</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ2</Name>
+			<ModuleResource>INJ2</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ2</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ3</Name>
+			<ModuleResource>INJ3</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ3</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ4</Name>
+			<ModuleResource>INJ4</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ4</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ5</Name>
+			<ModuleResource>INJ5</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ5</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ6</Name>
+			<ModuleResource>INJ6</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ6</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ7</Name>
+			<ModuleResource>INJ7</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ7</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<PSPOutput>
+			<Name>INJ8</Name>
+			<ModuleResource>INJ8</ModuleResource>
+			<Mode>TransientPSP_Behavior</Mode>
+			<NumPulses>2</NumPulses>
+			<OnPulseEnd>
+				<Trigger type="async">
+					<Order>0</Order>
+					<Function>Trigger_Trans_INJ8</Function>
+				</Trigger>
+			</OnPulseEnd>
+		</PSPOutput>
+		<CAN>
+			<Name>CAN_1</Name>
+			<ModuleResource>CAN_1</ModuleResource>
+			<BaudRate>500000</BaudRate>
+			<Transmit>
+				<QueueSize>16</QueueSize>
+			</Transmit>
+			<Receive>
+				<Dispatcher>
+					<QueueSize>16</QueueSize>
+					<Task ref="ApplicationInterruptTask"/>
+				</Dispatcher>
+				<Slot>
+					<Name>RxSlot_9013p0001</Name>
+					<ID>
+						<Type>Extended</Type>
+						<Value>655362</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>RxSlot_9014p0001</Name>
+					<ID>
+						<Type>Extended</Type>
+						<Value>655360</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>RxSlot_9015p0001</Name>
+					<ID>
+						<Type>Extended</Type>
+						<Value>655361</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>RxSlot_9123p0002</Name>
+					<ID>
+						<Type>Extended</Type>
+						<Value>384</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>RxSlot_9124p0001</Name>
+					<ID>
+						<Type>Extended</Type>
+						<Value>385</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Size>8</Size>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>1</QueueSize>
+				</Slot>
+				<Slot>
+					<Name>CCP1</Name>
+					<ID dynamic="true">
+						<Type>Extended</Type>
+						<Value>418316849</Value>
+						<Mask>536870911</Mask>
+					</ID>
+					<Payload>
+						<Value>0 0 0 0 0 0 0 0</Value>
+						<Mask>0 0 0 0 0 0 0 0</Mask>
+					</Payload>
+					<QueueSize>4</QueueSize>
+				</Slot>
+			</Receive>
+			<AppLink>BaseEngineController_LS_112/CAN Definition</AppLink>
+		</CAN>
+		<CAN>
+			<Name>CAN_2</Name>
+			<ModuleResource>CAN_2</ModuleResource>
+			<BaudRate>500000</BaudRate>
+			<Transmit>
+				<QueueSize>16</QueueSize>
+			</Transmit>
+			<Receive>
+				<Dispatcher>
+					<QueueSize>16</QueueSize>
+					<Task ref="ApplicationInterruptTask"/>
+				</Dispatcher>
+			</Receive>
+			<AppLink>BaseEngineController_LS_112/CAN Definition1</AppLink>
+		</CAN>
+	</IO>
+	<AppMonitor>
+		<Enabled>1</Enabled>
+		<PausePoint>Do Not Pause On Startup</PausePoint>
+	</AppMonitor>
+	<ToolInterface>
+		<KeySuite>
+			<Serial ref="RS485"/>
+			<CAN ref="CAN_1">
+				<CityID adjust="true" adjust_function="mh_CAN_1_CityID_Update" adjust_name="CAN_1_CityID">11</CityID>
+			</CAN>
+			<CAN ref="CAN_2">
+				<CityID adjust="true" adjust_function="mh_CAN_2_CityID_Update" adjust_name="CAN_2_CityID">11</CityID>
+			</CAN>
+			<MaxConnections>3</MaxConnections>
+			<ReservedERIConnections>3</ReservedERIConnections>
+		</KeySuite>
+		<VarDecs>
+			<TableDatabase>
+				<MaxTableSize>65535</MaxTableSize>
+				<Table0Revision>9</Table0Revision>
+				<HeaderFile>CommonInclude.h</HeaderFile>
+				<HeaderFile>BaseEngineController_LS_112.h</HeaderFile>
+				<Include name="*" location="1,0"/>
+			</TableDatabase>
+			<ProjectID>6</ProjectID>
+			<ProductID>1</ProductID>
+			<SwIdTxt>BaseEngin_034</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_LS_112_034</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_LS_112_034_000</CalIdTxt>
+		</VarDecs>
+		<DatabaseBuild>
+			<Toolchain>
+				<Vendor>gcc-win32-pe</Vendor>
+				<Product>win32-pe</Product>
+				<Version>4.4.0</Version>
+				<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\win32-pe\4_4_0\</InstallDirectory>
+			</Toolchain>
+		</DatabaseBuild>
+	</ToolInterface>
+	<Build>
+		<Toolchain>
+			<Vendor>gcc-powerpc-eabispe</Vendor>
+			<Product>powerpc-eabispe</Product>
+			<Version>4.4.0</Version>
+			<ArchiveExtension>a</ArchiveExtension>
+			<InstallDirectory>C:\Program Files (x86)\Woodward\DevelopmentTools\Toolchains\GCC\powerpc-eabispe\4_4_0\</InstallDirectory>
+		</Toolchain>
+		<Directory>.</Directory>
+		<Target>
+			<Directory>.\Target</Directory>
+		</Target>
+		<Source>
+			<File>Application.c</File>
+			<File>BaseEngineController_LS_112_IdleStateMachine.c</File>
+			<File>BaseEngineController_LS_112_data.c</File>
+			<File>EncoderCallback.c</File>
+			<File>FaultManager.c</File>
+			<File>Foreground.c</File>
+			<File>InjectorSequenceCallback_34.c</File>
+			<File>MotoHawk_DataStores.c</File>
+			<File>TableLookupFunctions.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_11570p0004.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_12068p0004.c</File>
+			<File>Trigger_BGND_BASEx10_PERIODIC_12070p0004.c</File>
+			<File>Trigger_BGND_BASEx2_PERIODIC_12069p0004.c</File>
+			<File>Trigger_Encoder_Fault_30.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_10085p0004.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_12067p0004.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_9951p0004.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_1093p0005.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_1094p0005.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_11294p0006.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_12064p0004.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_5057p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_9815p0006.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_9816p0004.c</File>
+			<File>Trigger_FGND_HIRES_6521p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_12066p0004.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_9721p0004.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_11578p0004.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_12065p0004.c</File>
+			<File>Trigger_FGND_TDC1_EVENT_869p0001.c</File>
+			<File>Trigger_FGND_TDC_EVENT_10780p0004.c</File>
+			<File>Trigger_FGND_TDC_EVENT_8437p0004.c</File>
+			<File>Trigger_IDLE_EVENT_11990p0004.c</File>
+			<File>Trigger_IDLE_EVENT_9p001.c</File>
+			<File>Trigger_ONE_SECOND_EVENT_12071p0004.c</File>
+			<File>Trigger_STARTUP_EVENT_11965p0004.c</File>
+			<File>Trigger_STARTUP_EVENT_9720p0004.c</File>
+			<File>VarDecs.c</File>
+			<File>mh_ccp_protocol.c</File>
+			<File>mh_ccp_protocol_CCP1.c</File>
+			<File>rt_zcfcn.c</File>
+			<File>rt_nonfinite.c</File>
+			<File>BaseEngineController_LS_112.c</File>
+		</Source>
+		<Header>
+			<Directory>.</Directory>
+		</Header>
+		<Header>
+			<Directory>C:\ProgramData\MotoHawk\2011a_sp0_184\Toolchains\7_12_0\rtw_lib_single\API</Directory>
+			<Directory>C:\ProgramData\MotoHawk\2011a_sp0_184\Toolchains\7_12_0\rtw_lib_single\API\MPC5554</Directory>
+		</Header>
+		<Compiler>
+			<Define name="REAL_T" value="float"/>
+			<Define name="TIME_T" value="float"/>
+			<GenerateListFiles>false</GenerateListFiles>
+		</Compiler>
+		<BuildStats>
+			<Symbol>BaseEngineController_LS_112_M</Symbol>
+			<Symbol>BaseEngineController_LS_112_B</Symbol>
+			<Symbol>BaseEngineController_LS_112_DWork</Symbol>
+			<Symbol>BaseEngineController_LS_112_PrevZC</Symbol>
+			<Symbol>BaseEngineController_LS_112_M_</Symbol>
+			<Symbol>VolatileWork</Symbol>
+			<Symbol>ConstantWork</Symbol>
+			<Symbol>NonVolatileWork</Symbol>
+			<Symbol>NonVolatileDefault</Symbol>
+			<Symbol>FgndTimeStack</Symbol>
+			<Symbol>FgndAngleStack</Symbol>
+			<Symbol>BgndStack</Symbol>
+			<Symbol>IdleStack</Symbol>
+			<Symbol>InterruptStack</Symbol>
+			<Symbol>Heap</Symbol>
+			<Symbol>Stack</Symbol>
+			<Symbol>BaseEngineController_LS_112_Foreground</Symbol>
+		</BuildStats>
+		<Command>
+			<Order>-10000</Order>
+			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
+		</Command>
+	</Build>
+	<Signature>132bcfa1-7caf-4911-aa-76-92-ea-a0-42-c3</Signature>
+</Application>

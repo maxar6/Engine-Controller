@@ -1,0 +1,3879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IOMerge>
+   <Object name="ApplicationVector">
+      <ISR merge="unique">
+         <Name>ETPU_A16_J1</Name>
+         <Object>INJ1</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A17_H4</Name>
+         <Object>INJ2</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A18_H3</Name>
+         <Object>INJ3</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A19_H2</Name>
+         <Object>INJ4</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A20_H1</Name>
+         <Object>INJ5</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A21_G4</Name>
+         <Object>INJ6</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A22_G2</Name>
+         <Object>INJ7</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name>ETPU_A23_G1</Name>
+         <Object>INJ8</Object>
+         <CPUType>CPU</CPUType>
+      </ISR>
+      <ISR merge="unique">
+         <Name/>
+         <Object/>
+         <CPUType>CPU</CPUType>
+      </ISR>
+   </Object>
+   <SPI name="SPI_B">
+      <Index>DSPI_B</Index>
+      <Master>true</Master>
+      <ContinuousClock>false</ContinuousClock>
+      <ActiveLowChipSelects>0</ActiveLowChipSelects>
+      <CPUType>CPU</CPUType>
+      <CPUResource/>
+      <HandlerPriority>1</HandlerPriority>
+      <Name>SPI_B</Name>
+   </SPI>
+   <VISTA name="VISTA_1">
+      <SPIBus>SPI_B</SPIBus>
+      <SPIChipSelect>0</SPIChipSelect>
+      <Instance>0</Instance>
+      <SCKFrequency>8000000</SCKFrequency>
+      <SCKAssert>high</SCKAssert>
+      <SCKEdge>rise</SCKEdge>
+      <Name>VISTA_1</Name>
+   </VISTA>
+   <Object name="VISTA_1_GPO_VISTA_PWM0_GPIO0" claim="CNKPullup"/>
+   <DiscreteOutput_BasicOut name="CNKPullup">
+      <CPUName>VISTA_1</CPUName>
+      <CPUType>VISTA</CPUType>
+      <CPUResource>GPO_VISTA_PWM0_GPIO0</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>true</Invert>
+      <InitialState>on</InitialState>
+      <Invariant>true</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Name>CNKPullup</Name>
+   </DiscreteOutput_BasicOut>
+   <Object name="GPO_VISTA_PWM4_GPIO4" claim="CNK"/>
+   <Object name="GPO_VISTA_PWM5_GPIO5" claim="CNK"/>
+   <eTPUChannel name="eTPUChannel_A26" claim="MuxVRDGInOverride_OverrideChannel_CNK">
+      <Name>CNK</Name>
+      <Channel>A26</Channel>
+      <Behavior>PWMOutput&gt;</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="MuxVRDGInOverride_OverrideChannel_CNK">
+      <Name>CNK</Name>
+      <Channel>A26</Channel>
+      <Behavior>PWMOutput&gt;</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <eTPUChannel name="eTPUChannel_A0" claim="MuxVRDGInOverride_InputChannel_CNK">
+      <Name>CNK</Name>
+      <Channel>A0</Channel>
+      <Behavior>CrankEncoder</Behavior>
+      <EncoderStyle>GM24Xe</EncoderStyle>
+   </eTPUChannel>
+   <eTPU name="eTPU" instantiate="true">
+      <ISR merge="unique">
+         <Name>CNK</Name>
+         <Behavior>CrankEncoder</Behavior>
+         <Channel>A0</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>SPD1</Name>
+         <Behavior>FrequencyInput</Behavior>
+         <Channel>A14</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>SPD2</Name>
+         <Behavior>FrequencyInput</Behavior>
+         <Channel>A1</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>SPD3</Name>
+         <Behavior>FrequencyInput</Behavior>
+         <Channel>A13</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>CAM</Name>
+         <Behavior>CamEncoder</Behavior>
+         <Channel>A15</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST1</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A11</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST2</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A4</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST3</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A5</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST4</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A6</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST5</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A7</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST6</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A8</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST7</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A9</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>EST8</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A10</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ1</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A16</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ2</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A17</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ3</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A18</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ4</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A19</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ5</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A20</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ6</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A21</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ7</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A22</Channel>
+      </ISR>
+      <ISR merge="unique">
+         <Name>INJ8</Name>
+         <Behavior>PSPOutput</Behavior>
+         <Channel>A23</Channel>
+      </ISR>
+      <Name>eTPU</Name>
+   </eTPU>
+   <eTPUChannel_WithISR name="MuxVRDGInOverride_InputChannel_CNK">
+      <Name>CNK</Name>
+      <Channel>A0</Channel>
+      <Behavior>CrankEncoder</Behavior>
+      <EncoderStyle>GM24Xe</EncoderStyle>
+   </eTPUChannel_WithISR>
+   <Object name="CrankEncoder_Callbacks">
+      <OnError merge="add">
+         <Trigger type="async">
+            <Name>EncoderDiagnosticsCallback</Name>
+            <Task ref="ApplicationInterruptTask"/>
+         </Trigger>
+      </OnError>
+      <OnStateChanged merge="add">
+         <Trigger type="async">
+            <Name>EncoderStateCallback</Name>
+            <Task ref="ApplicationInterruptTask"/>
+         </Trigger>
+      </OnStateChanged>
+   </Object>
+   <CrankEncoder_MuxVRDGInOverride name="MuxVRDGInOverride_CNK" claim="CNK">
+      <Interface>DG</Interface>
+      <SyncEdge>rise</SyncEdge>
+      <VRMuxChan>0</VRMuxChan>
+      <DGMuxChan>1</DGMuxChan>
+      <OverrideMuxChan>2</OverrideMuxChan>
+      <FilteredVRMuxChan>3</FilteredVRMuxChan>
+      <HandlerPriority>14</HandlerPriority>
+      <InputChannel>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUResource>ETPU_TCRCLKA_N4</CPUResource>
+         <CPUPinType>ETPU</CPUPinType>
+         <Invert>false</Invert>
+      </InputChannel>
+      <MuxChannel0>
+         <CPUName>VISTA_1</CPUName>
+         <CPUType>VISTA</CPUType>
+         <CPUResource>GPO_VISTA_PWM4_GPIO4</CPUResource>
+         <CPUPinType>GPIO</CPUPinType>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <Invariant>true</Invariant>
+         <InitialState/>
+         <Depends name="VISTA_1"/>
+      </MuxChannel0>
+      <MuxChannel1>
+         <CPUName>VISTA_1</CPUName>
+         <CPUType>VISTA</CPUType>
+         <CPUResource>GPO_VISTA_PWM5_GPIO5</CPUResource>
+         <CPUPinType>GPIO</CPUPinType>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <Invariant>true</Invariant>
+         <InitialState/>
+         <Depends name="VISTA_1"/>
+      </MuxChannel1>
+      <OverrideChannel>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUResource>ETPU_A26_F3</CPUResource>
+         <CPUPinType>ETPU</CPUPinType>
+      </OverrideChannel>
+      <VRZeroCrossingEdge>fall</VRZeroCrossingEdge>
+      <DGInvert>false</DGInvert>
+      <Behavior>CrankEncoder</Behavior>
+      <ModuleResource>CNK</ModuleResource>
+      <DeviceDriver>MuxVRDGInOverride</DeviceDriver>
+      <PullupState>on</PullupState>
+      <Style>GM24Xe</Style>
+      <Teeth>24</Teeth>
+      <MissingTeeth>0</MissingTeeth>
+      <RevsPerCycle>2</RevsPerCycle>
+      <CamDelay>0</CamDelay>
+      <TeethTillActive>6</TeethTillActive>
+      <MaxCylinders>8</MaxCylinders>
+      <NumCylinders>8</NumCylinders>
+      <TDCAngles>0 270 630 540 450 360 180 90</TDCAngles>
+      <Name>CNK</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/EngineSpeed/motohawk_encoder_def</AppLink>
+      <TeethAfterCam>-1</TeethAfterCam>
+      <DegCAPerCycle>720</DegCAPerCycle>
+      <GetAngle>1</GetAngle>
+      <UseCalibrations>true</UseCalibrations>
+      <GroupString>BaseEngineController_LS_112|Foreground|Inputs|EngineSpeed</GroupString>
+      <WriteAccess>1</WriteAccess>
+      <ReadAccess>1</ReadAccess>
+      <IgnoreDelay>100</IgnoreDelay>
+      <IsCnkAlignedWithCam>false</IsCnkAlignedWithCam>
+      <OnError>
+         <Trigger type="async">
+            <Name>EncoderDiagnosticsCallback</Name>
+            <Task ref="ApplicationInterruptTask"/>
+         </Trigger>
+      </OnError>
+      <OnStateChanged>
+         <Trigger type="async">
+            <Name>EncoderStateCallback</Name>
+            <Task ref="ApplicationInterruptTask"/>
+         </Trigger>
+      </OnStateChanged>
+      <OnAngle>
+         <Trigger type="async">
+            <Name>FGND_MID_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>255</Order>
+            <Function>Trigger_FGND_MID_TDC_EVENT_12066p0004</Function>
+            <Angles>MID_TDC</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_TDC1_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_TDC1_EVENT_869p0001</Function>
+            <Angles>0</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_HIRES</Name>
+            <Task ref="FGNDTask"/>
+            <Order>1</Order>
+            <Function>Trigger_FGND_HIRES_6521p0004</Function>
+            <Angles>TOOTH</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_TDC_EVENT_8437p0004</Function>
+            <Angles>TDC</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_MID_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_MID_TDC_EVENT_9721p0004</Function>
+            <Angles>MID_TDC</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_TDC_EVENT_10780p0004</Function>
+            <Angles>TDC</Angles>
+         </Trigger>
+      </OnAngle>
+      <DisableOnStop>true</DisableOnStop>
+   </CrankEncoder_MuxVRDGInOverride>
+   <Object name="CPUCore_0_GPIO_180_AE15" claim="DGIn_ESTOP"/>
+   <DigitalInput_DGIn_GPIO name="CPUCore_0_GPIO_180_AE15_DigitalInput_DGIn">
+      <Channel>180</Channel>
+      <Name>ESTOPPin</Name>
+      <Behavior>DigitalInput</Behavior>
+   </DigitalInput_DGIn_GPIO>
+   <DigitalInput_DGIn name="DGIn_ESTOP" claim="ESTOPPin">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>GPIO_180_AE15</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Invert>true</Invert>
+      <Channel>180</Channel>
+      <Behavior>DigitalInput</Behavior>
+      <ModuleResource>ESTOP</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <Name>ESTOPPin</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_din</AppLink>
+      <DisableOnStop>true</DisableOnStop>
+   </DigitalInput_DGIn>
+   <SPI name="SPI_C">
+      <Index>DSPI_C</Index>
+      <Master>true</Master>
+      <ContinuousClock>false</ContinuousClock>
+      <ActiveLowChipSelects>0 1 2</ActiveLowChipSelects>
+      <CPUType>CPU</CPUType>
+      <CPUResource/>
+      <HandlerPriority>1</HandlerPriority>
+      <Name>SPI_C</Name>
+   </SPI>
+   <Object name="AB25" claim="ODRC"/>
+   <Object name="CPUCore_0_GPIO_208_AB25" claim="ODRC"/>
+   <DiscreteOutput_BasicOut name="ODRC">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>GPIO_208_AB25</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>low</Assert>
+      <Invert>false</Invert>
+      <InitialState>on</InitialState>
+      <Invariant>true</Invariant>
+      <UseUpdateOnlyOnChange>false</UseUpdateOnlyOnChange>
+      <Channel>208</Channel>
+      <PinId>AB25</PinId>
+      <Name>ODRC</Name>
+   </DiscreteOutput_BasicOut>
+   <MC33800 name="S_SHRC_3">
+      <CacheDelay>20000</CacheDelay>
+      <SCKFrequency>1000000</SCKFrequency>
+      <SPIDeviceDataBufferSize>1</SPIDeviceDataBufferSize>
+      <SPIBus>SPI_C</SPIBus>
+      <SPIChipSelect>0</SPIChipSelect>
+      <Instance>0</Instance>
+      <Name>S_SHRC_3</Name>
+   </MC33800>
+   <Object name="S_SHRC_3_MC33800_CCD1" claim="MC33800_LSO1"/>
+   <Object name="FaultStatus_MC33800_LSO1">
+      <RuntimeObjectName>DOut10176p0004</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_LSO1" claim="DOut10176p0004">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_CCD1</MC33800Pin>
+      <MC33800SubModule>CCD</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>false</Invariant>
+      <UseParallelInput>false</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO1</ModuleResource>
+      <DeviceDriver>MC33800</DeviceDriver>
+      <Name>DOut10176p0004</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/AC Control/motohawk_dout</AppLink>
+      <DisableOnStop>true</DisableOnStop>
+   </DiscreteOutput_MC33800>
+   <Object name="S_SHRC_3_MC33800_OUT3" claim="MC33800_LSO2"/>
+   <Object name="FaultStatus_MC33800_LSO2">
+      <RuntimeObjectName>MC33800_LSO2</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_LSO2">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_OUT3</MC33800Pin>
+      <MC33800SubModule>OSS</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>true</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO2</ModuleResource>
+      <Name>MC33800_LSO2</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_GPIO_138_F1" claim="BasicOut_LSO2"/>
+   <DiscreteOutput_BasicOut name="BasicOut_LSO2" claim="DOut11001p0004">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>GPIO_138_F1</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>false</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Channel>138</Channel>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO2</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>DOut11001p0004</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/FuelPump/motohawk_dout</AppLink>
+      <DisableOnStop>true</DisableOnStop>
+   </DiscreteOutput_BasicOut>
+   <Object name="S_SHRC_3_MC33800_OUT7" claim="MC33800_MPRD"/>
+   <Object name="FaultStatus_MC33800_MPRD">
+      <RuntimeObjectName>MC33800_MPRD</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_MPRD">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_OUT7</MC33800Pin>
+      <MC33800SubModule>OSS</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>true</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>MPRD</ModuleResource>
+      <Name>MC33800_MPRD</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_GPIO_198_AE20" claim="BasicOut_MPRD"/>
+   <DiscreteOutput_BasicOut name="BasicOut_MPRD" claim="DOut11529p0004">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>GPIO_198_AE20</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>false</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Channel>198</Channel>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>MPRD</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>DOut11529p0004</Name>
+      <AppLink>BaseEngineController_LS_112/Main Power Relay/Main Power Relay/motohawk_dout</AppLink>
+      <DisableOnStop>true</DisableOnStop>
+   </DiscreteOutput_BasicOut>
+   <Object name="RS485_Callbacks" instantiate="true">
+      <OnIdle merge="add"/>
+      <OnError merge="add"/>
+      <OnTxComplete merge="add"/>
+      <OnCharReceipt merge="add"/>
+      <OnTxQueueEmpty merge="add"/>
+      <OnIdle merge="add">
+         <Trigger type="async">
+            <Name>KeySuiteSupport_RS485_OnIdleNotify</Name>
+            <Order>0</Order>
+         </Trigger>
+      </OnIdle>
+      <OnError merge="add">
+         <Trigger type="async">
+            <Name>KeySuiteSupport_RS485_OnErrorNotify</Name>
+            <Order>0</Order>
+         </Trigger>
+      </OnError>
+   </Object>
+   <eSCI name="eSCI" instantiate="true">
+      <ISR merge="add">
+         <Name>RS485</Name>
+         <Channel>A</Channel>
+      </ISR>
+      <Name>eSCI</Name>
+   </eSCI>
+   <eSCIChannel name="ESCI_A" claim="RS485">
+      <Name>RS485</Name>
+      <Channel>A</Channel>
+   </eSCIChannel>
+   <SerialLink_Serial name="Serial_RS485" claim="RS485">
+      <BaudRate>9600</BaudRate>
+      <PhysicalLayer>
+         <NumBitsInChar>8</NumBitsInChar>
+         <Parity>none</Parity>
+      </PhysicalLayer>
+      <Transmit>
+         <NumSupportedQueuedChars>8</NumSupportedQueuedChars>
+         <NumSupportedQueuedEntries>1</NumSupportedQueuedEntries>
+      </Transmit>
+      <Receive>
+         <NumSupportedQueuedChars>8</NumSupportedQueuedChars>
+      </Receive>
+      <HandlerPriority>7</HandlerPriority>
+      <EnableRX>true</EnableRX>
+      <EnableTX>true</EnableTX>
+      <Channel>A</Channel>
+      <MaxAllowedBaudRate>115200</MaxAllowedBaudRate>
+      <IsFullDuplex>false</IsFullDuplex>
+      <Behavior>SerialLink</Behavior>
+      <ModuleResource>RS485</ModuleResource>
+      <DeviceDriver>Serial</DeviceDriver>
+      <Name>RS485</Name>
+      <AppLink>BaseEngineController_LS_112/motohawk_serial_def</AppLink>
+      <DisableOnStop>true</DisableOnStop>
+   </SerialLink_Serial>
+   <eQADCModule name="eQADC_A_B">
+      <ConversionTimePreScalar>ADC_CR_CLK_PS_12</ConversionTimePreScalar>
+      <TimeStampPreScalar>ADC_TB_CLK_PS_1</TimeStampPreScalar>
+      <MinConversionTime_ns>2400</MinConversionTime_ns>
+      <Name>eQADC_A_B</Name>
+   </eQADCModule>
+   <eQADCQueue name="ContinuousScan_eQADCQueue">
+      <Name>ContinuousScan_eQADCQueue</Name>
+      <UseTimeStamp>false</UseTimeStamp>
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <QueueType>ContinuousScan</QueueType>
+      <eQADCBuffer>eQADC_BN_ADC1</eQADCBuffer>
+      <InterruptPriority>INTCPRIORITY_NONE</InterruptPriority>
+      <eQADCModule>eQADC_A_B</eQADCModule>
+      <QueueIndex>5</QueueIndex>
+      <AnalogInput name="QADC_AN2" merge="unique"/>
+      <AnalogInput name="QADC_AN3" merge="unique"/>
+      <AnalogInput name="QADC_AN4" merge="unique"/>
+      <AnalogInput name="QADC_AN5" merge="unique"/>
+      <AnalogInput name="QADC_AN6" merge="unique"/>
+      <AnalogInput name="QADC_AN15" merge="unique"/>
+      <AnalogInput name="QADC_AN7" merge="unique"/>
+      <AnalogInput name="QADC_AN8" merge="unique"/>
+      <AnalogInput name="QADC_AN9" merge="unique"/>
+      <AnalogInput name="QADC_AN10" merge="unique"/>
+      <AnalogInput name="QADC_AN11" merge="unique"/>
+      <AnalogInput name="QADC_AN14" merge="unique"/>
+      <AnalogInput name="QADC_ECUP" merge="unique"/>
+      <AnalogInput name="H1_Imon" merge="unique"/>
+   </eQADCQueue>
+   <AnalogInput_QADC name="QADC_AN2" claim="AN2">
+      <CPUResource>ADC_AN36_B3</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN2</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN2</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_ain5</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN3" claim="AN3">
+      <CPUResource>ADC_AN11_A4</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN3</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN3</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_ain6</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_VISTA name="VISTA_AN19" claim="MAPSensorPin">
+      <VISTAInstance>VISTA_1</VISTAInstance>
+      <ADCPin>AD4</ADCPin>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN19</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>MAPSensorPin</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/Once at Startup/motohawk_ain</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_VISTA>
+   <AnalogInput_QADC name="QADC_AN4" claim="AN4">
+      <CPUResource>ADC_AN19_B5</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN4</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN4</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain1</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_VISTA name="VISTA_DRVP" claim="DRVP">
+      <VISTAInstance>VISTA_1</VISTAInstance>
+      <ADCPin>AD0</ADCPin>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>DRVP</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>DRVP</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain14</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_VISTA>
+   <AnalogInput_QADC name="QADC_AN5" claim="AN5">
+      <CPUResource>ADC_AN24_D11</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN5</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN5</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain2</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_VISTA name="VISTA_XDRP" claim="XDRP">
+      <VISTAInstance>VISTA_1</VISTAInstance>
+      <ADCPin>AD1</ADCPin>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>XDRP</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>XDRP</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain3</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_VISTA>
+   <AnalogInput_QADC name="QADC_AN6" claim="AN6">
+      <CPUResource>ADC_AN28_A12</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN6</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN6</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain4</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN15" claim="AN15">
+      <CPUResource>ADC_AN16_A6</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN15</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN15</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Fuel Level/motohawk_ain</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN7" claim="AN7">
+      <CPUResource>ADC_AN31_B12</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN7</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN7</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN8" claim="AN8">
+      <CPUResource>ADC_AN15_A15</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN8</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN8</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain1</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN9" claim="AN9">
+      <CPUResource>ADC_AN29_D12</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN9</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN9</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain2</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN10" claim="AN10">
+      <CPUResource>ADC_AN35_A13</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN10</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN10</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain3</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_AN11" claim="AN11">
+      <CPUResource>ADC_AN32_B13</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN11</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN11</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain1</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_VISTA name="VISTA_AN12" claim="AN12">
+      <VISTAInstance>VISTA_1</VISTAInstance>
+      <ADCPin>AD6</ADCPin>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN12</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>AN12</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain2</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_VISTA>
+   <AnalogInput_VISTA name="VISTA_AN13" claim="AN13">
+      <VISTAInstance>VISTA_1</VISTAInstance>
+      <ADCPin>AD7</ADCPin>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN13</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>AN13</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain6</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_VISTA>
+   <AnalogInput_QADC name="QADC_AN14" claim="AN14">
+      <CPUResource>ADC_AN39_B4</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN14</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN14</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain9</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <AnalogInput_QADC name="QADC_ECUP" claim="ECUP">
+      <CPUResource>ADC_AN5_A8</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>ECUP</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>ECUP</Name>
+      <AppLink>BaseEngineController_LS_112/Main Power Relay/Main Power Relay/motohawk_ain5</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+      <DisableOnStop>true</DisableOnStop>
+   </AnalogInput_QADC>
+   <Object name="VISTA_1_GPO_VISTA_PWM2_GPIO2" claim="SPD1Pullup"/>
+   <DiscreteOutput_BasicOut name="SPD1Pullup">
+      <CPUName>VISTA_1</CPUName>
+      <CPUType>VISTA</CPUType>
+      <CPUResource>GPO_VISTA_PWM2_GPIO2</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>true</Invert>
+      <InitialState>on</InitialState>
+      <Invariant>true</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Name>SPD1Pullup</Name>
+   </DiscreteOutput_BasicOut>
+   <Object name="CPUCore_0_ETPU_A14_J3" claim="DGIn_SPD1"/>
+   <eTPUChannel name="eTPUChannel_A14" claim="FrequencyInput_DGIn_ETPU_A14">
+      <Name>SPD1</Name>
+      <Channel>A14</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="FrequencyInput_DGIn_ETPU_A14">
+      <Name>SPD1</Name>
+      <Channel>A14</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <FrequencyInput_DGIn_ETPU name="CPUCore_0_ETPU_A14_J3_FrequencyInput_DGIn">
+      <Channel>A14</Channel>
+      <Name>SPD1</Name>
+      <Behavior>FrequencyInput</Behavior>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A14_J3</CPUResource>
+   </FrequencyInput_DGIn_ETPU>
+   <FrequencyInput_DGIn name="DGIn_SPD1" claim="SPD1">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A14_J3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Invert>false</Invert>
+      <SyncEdge>fall</SyncEdge>
+      <MaxPeriod>100000</MaxPeriod>
+      <HandlerPriority>1</HandlerPriority>
+      <Channel>A14</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <ModuleResource>SPD1</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <PullupState>on</PullupState>
+      <Name>SPD1</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_frequency_in1</AppLink>
+      <Interface>DG</Interface>
+      <CapturePulseWidth>TRUE</CapturePulseWidth>
+      <DisableOnStop>true</DisableOnStop>
+   </FrequencyInput_DGIn>
+   <Object name="CPUCore_0_ETPU_A1_M4" claim="DGIn_SPD2"/>
+   <eTPUChannel name="eTPUChannel_A1" claim="FrequencyInput_DGIn_ETPU_A1">
+      <Name>SPD2</Name>
+      <Channel>A1</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="FrequencyInput_DGIn_ETPU_A1">
+      <Name>SPD2</Name>
+      <Channel>A1</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <FrequencyInput_DGIn_ETPU name="CPUCore_0_ETPU_A1_M4_FrequencyInput_DGIn">
+      <Channel>A1</Channel>
+      <Name>SPD2</Name>
+      <Behavior>FrequencyInput</Behavior>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A1_M4</CPUResource>
+   </FrequencyInput_DGIn_ETPU>
+   <FrequencyInput_DGIn name="DGIn_SPD2" claim="SPD2">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A1_M4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Invert>false</Invert>
+      <SyncEdge>fall</SyncEdge>
+      <MaxPeriod>100000</MaxPeriod>
+      <HandlerPriority>1</HandlerPriority>
+      <Channel>A1</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <ModuleResource>SPD2</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <Name>SPD2</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_frequency_in2</AppLink>
+      <Interface>DG</Interface>
+      <CapturePulseWidth>TRUE</CapturePulseWidth>
+      <DisableOnStop>true</DisableOnStop>
+   </FrequencyInput_DGIn>
+   <Object name="CPUCore_0_ETPU_A13_J4" claim="DGIn_SPD3"/>
+   <eTPUChannel name="eTPUChannel_A13" claim="FrequencyInput_DGIn_ETPU_A13">
+      <Name>SPD3</Name>
+      <Channel>A13</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="FrequencyInput_DGIn_ETPU_A13">
+      <Name>SPD3</Name>
+      <Channel>A13</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <FrequencyInput_DGIn_ETPU name="CPUCore_0_ETPU_A13_J4_FrequencyInput_DGIn">
+      <Channel>A13</Channel>
+      <Name>SPD3</Name>
+      <Behavior>FrequencyInput</Behavior>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A13_J4</CPUResource>
+   </FrequencyInput_DGIn_ETPU>
+   <FrequencyInput_DGIn name="DGIn_SPD3" claim="SPD3">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A13_J4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Invert>false</Invert>
+      <SyncEdge>rise</SyncEdge>
+      <MaxPeriod>100000</MaxPeriod>
+      <HandlerPriority>1</HandlerPriority>
+      <Channel>A13</Channel>
+      <Behavior>FrequencyInput</Behavior>
+      <ModuleResource>SPD3</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <Name>SPD3</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_frequency_in</AppLink>
+      <Interface>DG</Interface>
+      <CapturePulseWidth>FALSE</CapturePulseWidth>
+      <DisableOnStop>true</DisableOnStop>
+   </FrequencyInput_DGIn>
+   <MC33800 name="S_SHRC_4">
+      <CacheDelay>20000</CacheDelay>
+      <SCKFrequency>1000000</SCKFrequency>
+      <SPIDeviceDataBufferSize>1</SPIDeviceDataBufferSize>
+      <SPIBus>SPI_C</SPIBus>
+      <SPIChipSelect>1</SPIChipSelect>
+      <Instance>1</Instance>
+      <Name>S_SHRC_4</Name>
+   </MC33800>
+   <Object name="S_SHRC_4_MC33800_OUT5" claim="MC33800_LSO9"/>
+   <Object name="FaultStatus_MC33800_LSO9">
+      <RuntimeObjectName>MC33800_LSO9</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_LSO9">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_OUT5</MC33800Pin>
+      <MC33800SubModule>OSS</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>true</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO9</ModuleResource>
+      <Name>MC33800_LSO9</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_B12_J24" claim="BasicOut_LSO9"/>
+   <Object name="FaultStatus_BasicOut_LSO9">
+      <RuntimeObjectName>LSO9_PWMOutput</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B12" claim="PWMOutput_BasicOut_ETPU_B12">
+      <Name>LSO9_PWMOutput</Name>
+      <Channel>B12</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B12">
+      <Name>LSO9_PWMOutput</Name>
+      <Channel>B12</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B12_J24_PWMOutput_BasicOut">
+      <Channel>B12</Channel>
+      <Name>LSO9_PWMOutput</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_LSO9" claim="LSO9_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B12_J24</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Channel>B12</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>LSO9</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>LSO9_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/FAN Control/motohawk_pwm</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+      <DisableOnStop>true</DisableOnStop>
+   </PWMOutput_BasicOut>
+   <Object name="S_SHRC_4_MC33800_OUT7" claim="MC33800_LSO10"/>
+   <Object name="FaultStatus_MC33800_LSO10">
+      <RuntimeObjectName>MC33800_LSO10</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_LSO10">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_OUT7</MC33800Pin>
+      <MC33800SubModule>OSS</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>true</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO10</ModuleResource>
+      <Name>MC33800_LSO10</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_B11_J25" claim="BasicOut_LSO10"/>
+   <Object name="FaultStatus_BasicOut_LSO10">
+      <RuntimeObjectName>LSO10_PWMOutput</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B11" claim="PWMOutput_BasicOut_ETPU_B11">
+      <Name>LSO10_PWMOutput</Name>
+      <Channel>B11</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B11">
+      <Name>LSO10_PWMOutput</Name>
+      <Channel>B11</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B11_J25_PWMOutput_BasicOut">
+      <Channel>B11</Channel>
+      <Name>LSO10_PWMOutput</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_LSO10" claim="LSO10_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B11_J25</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Channel>B11</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>LSO10</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>LSO10_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/FAN Control/motohawk_pwm1</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+      <DisableOnStop>true</DisableOnStop>
+   </PWMOutput_BasicOut>
+   <Object name="CPUCore_0_ETPU_B9_J26" claim="BasicOut_H1+"/>
+   <Object name="FaultStatus_BasicOut_H1p">
+      <RuntimeObjectName>H1p</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B9" claim="PWMOutput_BasicOut_ETPU_B9">
+      <Name>H1p</Name>
+      <Channel>B9</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B9">
+      <Name>H1p</Name>
+      <Channel>B9</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B9_J26_PWMOutput_BasicOut">
+      <Channel>B9</Channel>
+      <Name>H1p</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_H1+" claim="H1p_H1m_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B9_J26</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Channel>B9</Channel>
+      <PinId>J26</PinId>
+      <DisableOnStop>true</DisableOnStop>
+      <Name>H1p</Name>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H1p</ModuleResource>
+      <MinimumFrequency>64.00</MinimumFrequency>
+      <NumberOfChildren>0</NumberOfChildren>
+   </PWMOutput_BasicOut>
+   <Object name="CPUCore_0_ETPU_B10_K23" claim="BasicOut_H1-"/>
+   <Object name="FaultStatus_BasicOut_H1m">
+      <RuntimeObjectName>H1m</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B10" claim="PWMOutput_BasicOut_ETPU_B10">
+      <Name>H1m</Name>
+      <Channel>B10</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B10">
+      <Name>H1m</Name>
+      <Channel>B10</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B10_K23_PWMOutput_BasicOut">
+      <Channel>B10</Channel>
+      <Name>H1m</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_H1-" claim="H1p_H1m_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B10_K23</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Channel>B10</Channel>
+      <PinId>K23</PinId>
+      <DisableOnStop>true</DisableOnStop>
+      <Name>H1m</Name>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H1m</ModuleResource>
+      <MinimumFrequency>64.00</MinimumFrequency>
+      <ParentName/>
+   </PWMOutput_BasicOut>
+   <Object name="CPUCore_0_ETPU_B16_D16" claim="BasicOut_H1_InhibitA"/>
+   <Object name="FaultStatus_BasicOut_H1_InhibitA">
+      <RuntimeObjectName>H1_InhibitA</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B16" claim="PWMOutput_BasicOut_ETPU_B16">
+      <Name>H1_InhibitA</Name>
+      <Channel>B16</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B16">
+      <Name>H1_InhibitA</Name>
+      <Channel>B16</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B16_D16_PWMOutput_BasicOut">
+      <Channel>B16</Channel>
+      <Name>H1_InhibitA</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_H1_InhibitA" claim="H1p_H1m_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B16_D16</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Name>H1_InhibitA</Name>
+      <Behavior>PWMOutput</Behavior>
+      <Channel>B16</Channel>
+      <PinId>D16</PinId>
+      <DisableOnStop>true</DisableOnStop>
+      <ModuleResource>H1_InhibitA</ModuleResource>
+      <MinimumFrequency>64.00</MinimumFrequency>
+      <ParentName/>
+   </PWMOutput_BasicOut>
+   <Object name="CPUCore_0_ETPU_B17_D17" claim="BasicOut_H1_InhibitB"/>
+   <Object name="FaultStatus_BasicOut_H1_InhibitB">
+      <RuntimeObjectName>H1_InhibitB</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B17" claim="PWMOutput_BasicOut_ETPU_B17">
+      <Name>H1_InhibitB</Name>
+      <Channel>B17</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B17">
+      <Name>H1_InhibitB</Name>
+      <Channel>B17</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B17_D17_PWMOutput_BasicOut">
+      <Channel>B17</Channel>
+      <Name>H1_InhibitB</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_H1_InhibitB" claim="H1p_H1m_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B17_D17</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Name>H1_InhibitB</Name>
+      <Behavior>PWMOutput</Behavior>
+      <Channel>B17</Channel>
+      <PinId>D17</PinId>
+      <DisableOnStop>true</DisableOnStop>
+      <ModuleResource>H1_InhibitB</ModuleResource>
+      <MinimumFrequency>64.00</MinimumFrequency>
+      <ParentName/>
+   </PWMOutput_BasicOut>
+   <PWMOutput_GenericDualInputHBridge name="GenericDualInputHBridge_H1+_H1-" claim="H1p_H1m_PWMOutput">
+      <ControlMode>PWM_PWM</ControlMode>
+      <InputA ref="H1p">
+         <BrakeState>ON</BrakeState>
+      </InputA>
+      <InputB ref="H1m">
+         <BrakeState>ON</BrakeState>
+      </InputB>
+      <EnableInputA ref="H1_InhibitA"/>
+      <EnableInputB ref="H1_InhibitB"/>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H1+</ModuleResource>
+      <ModuleResource>H1-</ModuleResource>
+      <DeviceDriver>GenericDualInputHBridge</DeviceDriver>
+      <SignedDutyCycle>true</SignedDutyCycle>
+      <Name>H1p_H1m_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/HBridge/motohawk_pwm1</AppLink>
+      <MinimumFrequency>64.00</MinimumFrequency>
+      <DisableOnStop>true</DisableOnStop>
+   </PWMOutput_GenericDualInputHBridge>
+   <AnalogInput_QADC name="H1_Imon" claim="CurrentMeasurement_AnalogCurrentMeasurement_H1+_H1-">
+      <CPUResource>ADC_AN3_C8</CPUResource>
+      <QueueName>ContinuousScan_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>H1_Imon</Name>
+   </AnalogInput_QADC>
+   <CurrentMeasurement_AnalogCurrentMeasurement name="CurrentMeasurement_AnalogCurrentMeasurement_H1+_H1-"
+                                                claim="H1p_H1m_PWMOutput_CM_CurrentMeasurement">
+      <Type>Analog</Type>
+      <Conversion>
+         <Trigger>Inherited</Trigger>
+         <Transform>
+            <Type>Fixed_Point</Type>
+            <Units>mA</Units>
+            <Mult>30</Mult>
+            <Div>1</Div>
+            <Offset>0</Offset>
+         </Transform>
+      </Conversion>
+      <Behavior>CurrentMeasurement</Behavior>
+      <ModuleResource>H1+</ModuleResource>
+      <ModuleResource>H1-</ModuleResource>
+      <DeviceDriver>AnalogCurrentMeasurement</DeviceDriver>
+      <AnalogResource>H1_Imon</AnalogResource>
+      <Name>H1p_H1m_PWMOutput_CM</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/HBridge/motohawk_pwm1</AppLink>
+      <Units>mA</Units>
+   </CurrentMeasurement_AnalogCurrentMeasurement>
+   <Object name="CPUCore_0_ETPU_B4_L24" claim="BasicOut_H2+"/>
+   <Object name="FaultStatus_BasicOut_H2p">
+      <RuntimeObjectName>H2p</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B4" claim="PWMOutput_BasicOut_ETPU_B4">
+      <Name>H2p</Name>
+      <Channel>B4</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B4">
+      <Name>H2p</Name>
+      <Channel>B4</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B4_L24_PWMOutput_BasicOut">
+      <Channel>B4</Channel>
+      <Name>H2p</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_H2+" claim="H2p_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B4_L24</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Channel>B4</Channel>
+      <PinId>L24</PinId>
+      <DisableOnStop>true</DisableOnStop>
+      <Name>H2p</Name>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H2p</ModuleResource>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput_BasicOut>
+   <Object name="CPUCore_0_GPIO_153_L23" claim="BasicOut_H2_InhibitA"/>
+   <DiscreteOutput_BasicOut name="BasicOut_H2_InhibitA" claim="H2p_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>GPIO_153_L23</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>false</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Name>H2_InhibitA</Name>
+      <Behavior>DiscreteOutput</Behavior>
+      <Channel>153</Channel>
+      <PinId>L23</PinId>
+      <DisableOnStop>true</DisableOnStop>
+   </DiscreteOutput_BasicOut>
+   <PWMOutput_DiscreteEnable name="DiscreteEnable_H2+" claim="H2p_PWMOutput">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H2+</ModuleResource>
+      <DeviceDriver>DiscreteEnable</DeviceDriver>
+      <SignedDutyCycle>false</SignedDutyCycle>
+      <PWMResource ref="H2p"/>
+      <DiscreteResource ref="H2_InhibitA"/>
+      <Name>H2p_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/IAC-Control/motohawk_pwm</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+      <DisableOnStop>true</DisableOnStop>
+   </PWMOutput_DiscreteEnable>
+   <Object name="CPUCore_0_ETPU_B5_K26" claim="BasicOut_H2-"/>
+   <Object name="FaultStatus_BasicOut_H2m">
+      <RuntimeObjectName>H2m</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eTPUChannel name="eTPUChannel_B5" claim="PWMOutput_BasicOut_ETPU_B5">
+      <Name>H2m</Name>
+      <Channel>B5</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithoutISR name="PWMOutput_BasicOut_ETPU_B5">
+      <Name>H2m</Name>
+      <Channel>B5</Channel>
+      <Behavior>PWMOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithoutISR>
+   <PWMOutput_BasicOut_ETPU name="CPUCore_0_ETPU_B5_K26_PWMOutput_BasicOut">
+      <Channel>B5</Channel>
+      <Name>H2m</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_ETPU>
+   <PWMOutput_BasicOut name="BasicOut_H2-" claim="H2m_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_B5_K26</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <Channel>B5</Channel>
+      <PinId>K26</PinId>
+      <DisableOnStop>true</DisableOnStop>
+      <Name>H2m</Name>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H2m</ModuleResource>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput_BasicOut>
+   <Object name="CPUCore_0_GPIO_154_K25" claim="BasicOut_H2_InhibitB"/>
+   <DiscreteOutput_BasicOut name="BasicOut_H2_InhibitB" claim="H2m_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>GPIO_154_K25</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>false</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Name>H2_InhibitB</Name>
+      <Behavior>DiscreteOutput</Behavior>
+      <Channel>154</Channel>
+      <PinId>K25</PinId>
+      <DisableOnStop>true</DisableOnStop>
+   </DiscreteOutput_BasicOut>
+   <PWMOutput_DiscreteEnable name="DiscreteEnable_H2-" claim="H2m_PWMOutput">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H2-</ModuleResource>
+      <DeviceDriver>DiscreteEnable</DeviceDriver>
+      <SignedDutyCycle>false</SignedDutyCycle>
+      <PWMResource ref="H2m"/>
+      <DiscreteResource ref="H2_InhibitB"/>
+      <Name>H2m_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/IAC-Control/motohawk_pwm1</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+      <DisableOnStop>true</DisableOnStop>
+   </PWMOutput_DiscreteEnable>
+   <Object name="S_SHRC_4_MC33800_OUT3" claim="MC33800_LSO8"/>
+   <Object name="FaultStatus_MC33800_LSO8">
+      <RuntimeObjectName>MC33800_LSO8</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_LSO8">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_OUT3</MC33800Pin>
+      <MC33800SubModule>OSS</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>true</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO8</ModuleResource>
+      <Name>MC33800_LSO8</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_EMIOS_23_AE21" claim="BasicOut_LSO8"/>
+   <Object name="FaultStatus_BasicOut_LSO8">
+      <RuntimeObjectName>LSO8_PWMOutput</RuntimeObjectName>
+      <ResourceBehavior>PWMOutput</ResourceBehavior>
+   </Object>
+   <eMIOSChannel name="eMIOSChannel_23" claim="PWMOutput_BasicOut_EMIOS_23">
+      <Name>LSO8_PWMOutput</Name>
+      <Channel>23</Channel>
+      <Behavior>PWMOutput</Behavior>
+   </eMIOSChannel>
+   <eMIOSChannel_WithoutISR name="PWMOutput_BasicOut_EMIOS_23">
+      <Name>LSO8_PWMOutput</Name>
+      <Channel>23</Channel>
+      <Behavior>PWMOutput</Behavior>
+   </eMIOSChannel_WithoutISR>
+   <PWMOutput_BasicOut_EMIOS name="CPUCore_0_EMIOS_23_AE21_PWMOutput_BasicOut">
+      <Channel>23</Channel>
+      <Name>LSO8_PWMOutput</Name>
+      <Behavior>PWMOutput</Behavior>
+   </PWMOutput_BasicOut_EMIOS>
+   <PWMOutput_BasicOut name="BasicOut_LSO8" claim="LSO8_PWMOutput">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>EMIOS_23_AE21</CPUResource>
+      <CPUPinType>EMIOS</CPUPinType>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialDutyCycle/>
+      <InitialFrequency/>
+      <Invariant>false</Invariant>
+      <PinId>AE21</PinId>
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>LSO8</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>LSO8_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/WASTEGATE-Control/motohawk_pwm</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+      <DisableOnStop>true</DisableOnStop>
+      <Channel>23</Channel>
+   </PWMOutput_BasicOut>
+   <Object name="VISTA_1_GPO_VISTA_PWM1_GPIO1" claim="CAMPullup"/>
+   <DiscreteOutput_BasicOut name="CAMPullup">
+      <CPUName>VISTA_1</CPUName>
+      <CPUType>VISTA</CPUType>
+      <CPUResource>GPO_VISTA_PWM1_GPIO1</CPUResource>
+      <CPUPinType>GPIO</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>true</Invert>
+      <InitialState>on</InitialState>
+      <Invariant>true</Invariant>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Name>CAMPullup</Name>
+   </DiscreteOutput_BasicOut>
+   <Object name="CPUCore_0_ETPU_A15_J2" claim="DGIn_CAM"/>
+   <eTPUChannel name="eTPUChannel_A15" claim="CamEncoder_DGIn_ETPU_A15">
+      <Name>CAM</Name>
+      <Channel>A15</Channel>
+      <Behavior>CamEncoder</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="CamEncoder_DGIn_ETPU_A15">
+      <Name>CAM</Name>
+      <Channel>A15</Channel>
+      <Behavior>CamEncoder</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <CamEncoder_DGIn_ETPU name="CPUCore_0_ETPU_A15_J2_CamEncoder_DGIn">
+      <Channel>A15</Channel>
+      <Name>CAM</Name>
+      <Behavior>CamEncoder</Behavior>
+   </CamEncoder_DGIn_ETPU>
+   <CamEncoder_DGIn name="DGIn_CAM" claim="CAM">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A15_J2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Invert>false</Invert>
+      <Channel>A15</Channel>
+      <Interface>DG</Interface>
+      <Behavior>CamEncoder</Behavior>
+      <ModuleResource>CAM</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <Style>HalfMoon</Style>
+      <SyncEdge>rise</SyncEdge>
+      <PullupState>on</PullupState>
+      <Name>CAM</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/EngineSpeed/motohawk_encoder_def</AppLink>
+      <DisableOnStop>true</DisableOnStop>
+   </CamEncoder_DGIn>
+   <eQADCQueue name="ESTDiagnostics_eQADCQueue">
+      <Name>ESTDiagnostics_eQADCQueue</Name>
+      <UseTimeStamp>false</UseTimeStamp>
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <QueueType>SingleScan</QueueType>
+      <eQADCBuffer>eQADC_BN_ADC1</eQADCBuffer>
+      <InterruptPriority>INTCPRIORITY_10</InterruptPriority>
+      <eQADCModule>eQADC_A_B</eQADCModule>
+      <QueueIndex>1</QueueIndex>
+      <AnalogInput name="QADC_EST1" merge="unique"/>
+      <AnalogInput name="QADC_EST2" merge="unique"/>
+      <AnalogInput name="QADC_EST3" merge="unique"/>
+      <AnalogInput name="QADC_EST4" merge="unique"/>
+      <AnalogInput name="QADC_EST5" merge="unique"/>
+      <AnalogInput name="QADC_EST6" merge="unique"/>
+      <AnalogInput name="QADC_EST7" merge="unique"/>
+      <AnalogInput name="QADC_EST8" merge="unique"/>
+   </eQADCQueue>
+   <AnalogInput_QADC name="QADC_EST1" claim="PushPull_EST1">
+      <CPUResource>ADC_AN23_A10</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST1</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A11_K2" claim="PushPull_EST1"/>
+   <eTPUChannel name="eTPUChannel_A11" claim="PSPOutput_PushPull_ETPU_A11">
+      <Name>EST1</Name>
+      <Channel>A11</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A11">
+      <Name>EST1</Name>
+      <Channel>A11</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A11_K2_PSPOutput_PushPull">
+      <Channel>A11</Channel>
+      <Name>EST1</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST1_PSPOutput_Accessor" claim="PushPull_EST1">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A11_K2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_191_AC18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>191</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST1</Name>
+         <CPUResource>ADC_AN23_A10</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A11</Channel>
+      <PinId>K2</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST1</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST1</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST1" claim="EST1">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A11_K2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_191_AC18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>191</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST1</Name>
+         <CPUResource>ADC_AN23_A10</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A11</Channel>
+      <PinId>K2</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST1</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST1</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST2" claim="PushPull_EST2">
+      <CPUResource>ADC_AN22_B10</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST2</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A4_M1" claim="PushPull_EST2"/>
+   <eTPUChannel name="eTPUChannel_A4" claim="PSPOutput_PushPull_ETPU_A4">
+      <Name>EST2</Name>
+      <Channel>A4</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A4">
+      <Name>EST2</Name>
+      <Channel>A4</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A4_M1_PSPOutput_PushPull">
+      <Channel>A4</Channel>
+      <Name>EST2</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST2_PSPOutput_Accessor" claim="PushPull_EST2">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A4_M1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_194_AD18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>194</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST2</Name>
+         <CPUResource>ADC_AN22_B10</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A4</Channel>
+      <PinId>M1</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST2</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST2</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST2" claim="EST2">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A4_M1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_194_AD18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>194</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST2</Name>
+         <CPUResource>ADC_AN22_B10</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A4</Channel>
+      <PinId>M1</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST2</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST2</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST3" claim="PushPull_EST3">
+      <CPUResource>ADC_AN25_C11</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST3</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A5_L4" claim="PushPull_EST3"/>
+   <eTPUChannel name="eTPUChannel_A5" claim="PSPOutput_PushPull_ETPU_A5">
+      <Name>EST3</Name>
+      <Channel>A5</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A5">
+      <Name>EST3</Name>
+      <Channel>A5</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A5_L4_PSPOutput_PushPull">
+      <Channel>A5</Channel>
+      <Name>EST3</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST3_PSPOutput_Accessor" claim="PushPull_EST3">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A5_L4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_192_AE18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>192</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST3</Name>
+         <CPUResource>ADC_AN25_C11</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A5</Channel>
+      <PinId>L4</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST3</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST3</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST3" claim="EST3">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A5_L4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_192_AE18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>192</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST3</Name>
+         <CPUResource>ADC_AN25_C11</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A5</Channel>
+      <PinId>L4</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST3</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST3</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST4" claim="PushPull_EST4">
+      <CPUResource>ADC_AN26_B11</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST4</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A6_L3" claim="PushPull_EST4"/>
+   <eTPUChannel name="eTPUChannel_A6" claim="PSPOutput_PushPull_ETPU_A6">
+      <Name>EST4</Name>
+      <Channel>A6</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A6">
+      <Name>EST4</Name>
+      <Channel>A6</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A6_L3_PSPOutput_PushPull">
+      <Channel>A6</Channel>
+      <Name>EST4</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST4_PSPOutput_Accessor" claim="PushPull_EST4">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A6_L3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_190_AF18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>190</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST4</Name>
+         <CPUResource>ADC_AN26_B11</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A6</Channel>
+      <PinId>L3</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST4</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST4</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST4" claim="EST4">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A6_L3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_190_AF18</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>190</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST4</Name>
+         <CPUResource>ADC_AN26_B11</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A6</Channel>
+      <PinId>L3</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST4</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST4</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST5" claim="PushPull_EST5">
+      <CPUResource>ADC_AN27_A11</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST5</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A7_L2" claim="PushPull_EST5"/>
+   <eTPUChannel name="eTPUChannel_A7" claim="PSPOutput_PushPull_ETPU_A7">
+      <Name>EST5</Name>
+      <Channel>A7</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A7">
+      <Name>EST5</Name>
+      <Channel>A7</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A7_L2_PSPOutput_PushPull">
+      <Channel>A7</Channel>
+      <Name>EST5</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST5_PSPOutput_Accessor" claim="PushPull_EST5">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A7_L2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_200_AC19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>200</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST5</Name>
+         <CPUResource>ADC_AN27_A11</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A7</Channel>
+      <PinId>L2</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST5</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST5</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST5" claim="EST5">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A7_L2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_200_AC19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>200</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST5</Name>
+         <CPUResource>ADC_AN27_A11</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A7</Channel>
+      <PinId>L2</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST5</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST5</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST6" claim="PushPull_EST6">
+      <CPUResource>ADC_AN6_D10</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST6</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A8_L1" claim="PushPull_EST6"/>
+   <eTPUChannel name="eTPUChannel_A8" claim="PSPOutput_PushPull_ETPU_A8">
+      <Name>EST6</Name>
+      <Channel>A8</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A8">
+      <Name>EST6</Name>
+      <Channel>A8</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A8_L1_PSPOutput_PushPull">
+      <Channel>A8</Channel>
+      <Name>EST6</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST6_PSPOutput_Accessor" claim="PushPull_EST6">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A8_L1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_196_AD19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>196</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST6</Name>
+         <CPUResource>ADC_AN6_D10</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A8</Channel>
+      <PinId>L1</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST6</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST6</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST6" claim="EST6">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A8_L1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_196_AD19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>196</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST6</Name>
+         <CPUResource>ADC_AN6_D10</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A8</Channel>
+      <PinId>L1</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST6</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST6</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST7" claim="PushPull_EST7">
+      <CPUResource>ADC_AN2_D9</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST7</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A9_K4" claim="PushPull_EST7"/>
+   <eTPUChannel name="eTPUChannel_A9" claim="PSPOutput_PushPull_ETPU_A9">
+      <Name>EST7</Name>
+      <Channel>A9</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A9">
+      <Name>EST7</Name>
+      <Channel>A9</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A9_K4_PSPOutput_PushPull">
+      <Channel>A9</Channel>
+      <Name>EST7</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST7_PSPOutput_Accessor" claim="PushPull_EST7">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A9_K4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_195_AE19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>195</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST7</Name>
+         <CPUResource>ADC_AN2_D9</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A9</Channel>
+      <PinId>K4</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST7</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST7</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST7" claim="EST7">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A9_K4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_195_AE19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>195</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST7</Name>
+         <CPUResource>ADC_AN2_D9</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A9</Channel>
+      <PinId>K4</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST7</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST7</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <AnalogInput_QADC name="QADC_EST8" claim="PushPull_EST8">
+      <CPUResource>ADC_AN7_C9</CPUResource>
+      <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      <CalibrateResult>true</CalibrateResult>
+      <ADCMaxValue>1023</ADCMaxValue>
+      <Name>QADC_EST8</Name>
+   </AnalogInput_QADC>
+   <Object name="CPUCore_0_ETPU_A10_K3" claim="PushPull_EST8"/>
+   <eTPUChannel name="eTPUChannel_A10" claim="PSPOutput_PushPull_ETPU_A10">
+      <Name>EST8</Name>
+      <Channel>A10</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_PushPull_ETPU_A10">
+      <Name>EST8</Name>
+      <Channel>A10</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_PushPull_ETPU name="CPUCore_0_ETPU_A10_K3_PSPOutput_PushPull">
+      <Channel>A10</Channel>
+      <Name>EST8</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_PushPull_ETPU>
+   <PSPOutput_Common_Accessor name="EST8_PSPOutput_Accessor" claim="PushPull_EST8">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A10_K3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_193_AF19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>193</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST8</Name>
+         <CPUResource>ADC_AN7_C9</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A10</Channel>
+      <PinId>K3</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST8</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST8</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_PushPull name="PushPull_EST8" claim="EST8">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A10_K3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>1</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>HardStart_HardStop</Mode>
+      <Disable>
+         <CPUResource>GPIO_193_AF19</CPUResource>
+         <CPUName>CPUCore_0</CPUName>
+         <CPUType>CPU</CPUType>
+         <CPUPinType>GPIO</CPUPinType>
+         <Channel>193</Channel>
+         <Assert>high</Assert>
+         <Invert>false</Invert>
+         <InitialState>off</InitialState>
+         <Invariant>false</Invariant>
+      </Disable>
+      <UpperThreshold>275</UpperThreshold>
+      <LowerThreshold>20</LowerThreshold>
+      <Feedback>
+         <Name>QADC_EST8</Name>
+         <CPUResource>ADC_AN7_C9</CPUResource>
+         <QueueName>ESTDiagnostics_eQADCQueue</QueueName>
+      </Feedback>
+      <Channel>A10</Channel>
+      <PinId>K3</PinId>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST8</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST8</Name>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_PushPull>
+   <Object name="S_SHRC_3_MC33800_PWM1" claim="MC33800_INJ1"/>
+   <Object name="FaultStatus_MC33800_INJ1">
+      <RuntimeObjectName>MC33800_INJ1</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ1">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_PWM1</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ1</ModuleResource>
+      <Name>MC33800_INJ1</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A16_J1" claim="BasicOut_INJ1"/>
+   <eTPUChannel name="eTPUChannel_A16" claim="PSPOutput_BasicOut_ETPU_A16">
+      <Name>INJ1</Name>
+      <Channel>A16</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A16">
+      <Name>INJ1</Name>
+      <Channel>A16</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A16_J1_PSPOutput_BasicOut">
+      <Channel>A16</Channel>
+      <Name>INJ1</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ1_PSPOutput_Accessor" claim="BasicOut_INJ1">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A16_J1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A16</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ1</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ1</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ1</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ1" claim="INJ1">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A16_J1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A16</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ1</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ1</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ1</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_3_MC33800_PWM2" claim="MC33800_INJ2"/>
+   <Object name="FaultStatus_MC33800_INJ2">
+      <RuntimeObjectName>MC33800_INJ2</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ2">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_PWM2</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ2</ModuleResource>
+      <Name>MC33800_INJ2</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A17_H4" claim="BasicOut_INJ2"/>
+   <eTPUChannel name="eTPUChannel_A17" claim="PSPOutput_BasicOut_ETPU_A17">
+      <Name>INJ2</Name>
+      <Channel>A17</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A17">
+      <Name>INJ2</Name>
+      <Channel>A17</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A17_H4_PSPOutput_BasicOut">
+      <Channel>A17</Channel>
+      <Name>INJ2</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ2_PSPOutput_Accessor" claim="BasicOut_INJ2">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A17_H4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A17</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ2</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ2</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ2</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ2" claim="INJ2">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A17_H4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A17</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ2</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ2</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ2</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_3_MC33800_PWM3" claim="MC33800_INJ3"/>
+   <Object name="FaultStatus_MC33800_INJ3">
+      <RuntimeObjectName>MC33800_INJ3</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ3">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_PWM3</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ3</ModuleResource>
+      <Name>MC33800_INJ3</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A18_H3" claim="BasicOut_INJ3"/>
+   <eTPUChannel name="eTPUChannel_A18" claim="PSPOutput_BasicOut_ETPU_A18">
+      <Name>INJ3</Name>
+      <Channel>A18</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A18">
+      <Name>INJ3</Name>
+      <Channel>A18</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A18_H3_PSPOutput_BasicOut">
+      <Channel>A18</Channel>
+      <Name>INJ3</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ3_PSPOutput_Accessor" claim="BasicOut_INJ3">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A18_H3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A18</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ3</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ3</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ3</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ3" claim="INJ3">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A18_H3</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A18</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ3</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ3</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ3</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_3_MC33800_PWM4" claim="MC33800_INJ4"/>
+   <Object name="FaultStatus_MC33800_INJ4">
+      <RuntimeObjectName>MC33800_INJ4</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ4">
+      <MC33800Instance>S_SHRC_3</MC33800Instance>
+      <MC33800Pin>MC33800_PWM4</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ4</ModuleResource>
+      <Name>MC33800_INJ4</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A19_H2" claim="BasicOut_INJ4"/>
+   <eTPUChannel name="eTPUChannel_A19" claim="PSPOutput_BasicOut_ETPU_A19">
+      <Name>INJ4</Name>
+      <Channel>A19</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A19">
+      <Name>INJ4</Name>
+      <Channel>A19</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A19_H2_PSPOutput_BasicOut">
+      <Channel>A19</Channel>
+      <Name>INJ4</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ4_PSPOutput_Accessor" claim="BasicOut_INJ4">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A19_H2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A19</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ4</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ4</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ4</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ4" claim="INJ4">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A19_H2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A19</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ4</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ4</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ4</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_4_MC33800_PWM1" claim="MC33800_INJ5"/>
+   <Object name="FaultStatus_MC33800_INJ5">
+      <RuntimeObjectName>MC33800_INJ5</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ5">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_PWM1</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ5</ModuleResource>
+      <Name>MC33800_INJ5</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A20_H1" claim="BasicOut_INJ5"/>
+   <eTPUChannel name="eTPUChannel_A20" claim="PSPOutput_BasicOut_ETPU_A20">
+      <Name>INJ5</Name>
+      <Channel>A20</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A20">
+      <Name>INJ5</Name>
+      <Channel>A20</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A20_H1_PSPOutput_BasicOut">
+      <Channel>A20</Channel>
+      <Name>INJ5</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ5_PSPOutput_Accessor" claim="BasicOut_INJ5">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A20_H1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A20</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ5</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ5</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ5</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ5" claim="INJ5">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A20_H1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A20</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ5</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ5</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ5</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_4_MC33800_PWM2" claim="MC33800_INJ6"/>
+   <Object name="FaultStatus_MC33800_INJ6">
+      <RuntimeObjectName>MC33800_INJ6</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ6">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_PWM2</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ6</ModuleResource>
+      <Name>MC33800_INJ6</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A21_G4" claim="BasicOut_INJ6"/>
+   <eTPUChannel name="eTPUChannel_A21" claim="PSPOutput_BasicOut_ETPU_A21">
+      <Name>INJ6</Name>
+      <Channel>A21</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A21">
+      <Name>INJ6</Name>
+      <Channel>A21</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A21_G4_PSPOutput_BasicOut">
+      <Channel>A21</Channel>
+      <Name>INJ6</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ6_PSPOutput_Accessor" claim="BasicOut_INJ6">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A21_G4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A21</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ6</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ6</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ6</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ6" claim="INJ6">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A21_G4</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A21</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ6</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ6</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ6</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_4_MC33800_PWM3" claim="MC33800_INJ7"/>
+   <Object name="FaultStatus_MC33800_INJ7">
+      <RuntimeObjectName>MC33800_INJ7</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ7">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_PWM3</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ7</ModuleResource>
+      <Name>MC33800_INJ7</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A22_G2" claim="BasicOut_INJ7"/>
+   <eTPUChannel name="eTPUChannel_A22" claim="PSPOutput_BasicOut_ETPU_A22">
+      <Name>INJ7</Name>
+      <Channel>A22</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A22">
+      <Name>INJ7</Name>
+      <Channel>A22</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A22_G2_PSPOutput_BasicOut">
+      <Channel>A22</Channel>
+      <Name>INJ7</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ7_PSPOutput_Accessor" claim="BasicOut_INJ7">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A22_G2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A22</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ7</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ7</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ7</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ7" claim="INJ7">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A22_G2</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A22</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ7</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ7</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ7</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="S_SHRC_4_MC33800_PWM4" claim="MC33800_INJ8"/>
+   <Object name="FaultStatus_MC33800_INJ8">
+      <RuntimeObjectName>MC33800_INJ8</RuntimeObjectName>
+      <ResourceBehavior>DiscreteOutput</ResourceBehavior>
+   </Object>
+   <DiscreteOutput_MC33800 name="MC33800_INJ8">
+      <MC33800Instance>S_SHRC_4</MC33800Instance>
+      <MC33800Pin>MC33800_PWM4</MC33800Pin>
+      <MC33800SubModule>PWM</MC33800SubModule>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Assert>low</Assert>
+      <Invert>true</Invert>
+      <InitialState>off</InitialState>
+      <Invariant>true</Invariant>
+      <UseParallelInput>true</UseParallelInput>
+      <UseParallelOutput>false</UseParallelOutput>
+      <UseUpdateOnlyOnChange>true</UseUpdateOnlyOnChange>
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>INJ8</ModuleResource>
+      <Name>MC33800_INJ8</Name>
+   </DiscreteOutput_MC33800>
+   <Object name="CPUCore_0_ETPU_A23_G1" claim="BasicOut_INJ8"/>
+   <eTPUChannel name="eTPUChannel_A23" claim="PSPOutput_BasicOut_ETPU_A23">
+      <Name>INJ8</Name>
+      <Channel>A23</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel>
+   <eTPUChannel_WithISR name="PSPOutput_BasicOut_ETPU_A23">
+      <Name>INJ8</Name>
+      <Channel>A23</Channel>
+      <Behavior>PSPOutput</Behavior>
+      <EncoderStyle/>
+   </eTPUChannel_WithISR>
+   <PSPOutput_BasicOut_ETPU name="CPUCore_0_ETPU_A23_G1_PSPOutput_BasicOut">
+      <Channel>A23</Channel>
+      <Name>INJ8</Name>
+      <Behavior>PSPOutput</Behavior>
+   </PSPOutput_BasicOut_ETPU>
+   <PSPOutput_Common_Accessor name="INJ8_PSPOutput_Accessor" claim="BasicOut_INJ8">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A23_G1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A23</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ8</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ8</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ8</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_Common_Accessor>
+   <PSPOutput_BasicOut name="BasicOut_INJ8" claim="INJ8">
+      <CPUName>CPUCore_0</CPUName>
+      <CPUType>CPU</CPUType>
+      <CPUResource>ETPU_A23_G1</CPUResource>
+      <CPUPinType>ETPU</CPUPinType>
+      <Assert>high</Assert>
+      <Invert>false</Invert>
+      <Invariant>false</Invariant>
+      <NumPulses>2</NumPulses>
+      <HandlerPriority>1</HandlerPriority>
+      <Mode>TransientPSP_Behavior</Mode>
+      <Channel>A23</Channel>
+      <ShortFaultTimer>120</ShortFaultTimer>
+      <VoltageThreshold>2000</VoltageThreshold>
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ8</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ8</Name>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ8</Function>
+         </Trigger>
+      </OnPulseEnd>
+      <DisableOnStop>true</DisableOnStop>
+   </PSPOutput_BasicOut>
+   <Object name="FLEXCAN2_A" claim="CAN_1"/>
+   <Object name="FLEXCAN2_B" claim="CAN_2"/>
+   <eMIOS name="eMIOS" instantiate="true">
+      <ISR merge="add">
+         <Name>eMIOS_TickTimer</Name>
+         <Behavior>TickTimer</Behavior>
+         <Channel>1</Channel>
+      </ISR>
+      <Name>eMIOS</Name>
+   </eMIOS>
+   <SPI name="SPI_D">
+      <Index>DSPI_D</Index>
+      <Master>true</Master>
+      <ContinuousClock>false</ContinuousClock>
+      <ActiveLowChipSelects>0 2</ActiveLowChipSelects>
+      <CPUType>CPU</CPUType>
+      <CPUResource/>
+      <HandlerPriority>1</HandlerPriority>
+      <Name>SPI_D</Name>
+   </SPI>
+   <SerialEEPROM name="EEPROM_1" instantiate="true">
+      <MemoryAddress>0xFF000000</MemoryAddress>
+      <MemorySize>32768</MemorySize>
+      <SPIBus>SPI_D</SPIBus>
+      <SPIChipSelect>0</SPIChipSelect>
+      <SCKFrequency>2000000</SCKFrequency>
+      <Instance>0</Instance>
+      <Name>EEPROM_1</Name>
+   </SerialEEPROM>
+   <eMIOSChannel name="eMIOSChannel_1" claim="TickTimerISR">
+      <Name>eMIOS_TickTimer</Name>
+      <Channel>1</Channel>
+      <Behavior>TickTimer</Behavior>
+   </eMIOSChannel>
+   <eMIOSChannel_WithISR name="TickTimerISR">
+      <Name>eMIOS_TickTimer</Name>
+      <Channel>1</Channel>
+      <Behavior>TickTimer</Behavior>
+   </eMIOSChannel_WithISR>
+   <eMIOS_TickTimer name="eMIOS_TickTimer">
+      <Name>TickTimer</Name>
+      <Behavior>TickTimer</Behavior>
+      <Channel>1</Channel>
+   </eMIOS_TickTimer>
+   <Object name="TickTimer" instantiate="true"/>
+   <CrankEncoder root="true">
+      <Behavior>CrankEncoder</Behavior>
+      <ModuleResource>CNK</ModuleResource>
+      <DeviceDriver>MuxVRDGInOverride</DeviceDriver>
+      <PullupState>on</PullupState>
+      <Style>GM24Xe</Style>
+      <Teeth>24</Teeth>
+      <MissingTeeth>0</MissingTeeth>
+      <RevsPerCycle>2</RevsPerCycle>
+      <CamDelay>0</CamDelay>
+      <TeethTillActive>6</TeethTillActive>
+      <MaxCylinders>8</MaxCylinders>
+      <NumCylinders>8</NumCylinders>
+      <TDCAngles>0 270 630 540 450 360 180 90</TDCAngles>
+      <Name>CNK</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/EngineSpeed/motohawk_encoder_def</AppLink>
+      <TeethAfterCam>-1</TeethAfterCam>
+      <DegCAPerCycle>720</DegCAPerCycle>
+      <GetAngle>1</GetAngle>
+      <Interface>DG</Interface>
+      <SyncEdge>rise</SyncEdge>
+      <UseCalibrations>true</UseCalibrations>
+      <GroupString>BaseEngineController_LS_112|Foreground|Inputs|EngineSpeed</GroupString>
+      <WriteAccess>1</WriteAccess>
+      <ReadAccess>1</ReadAccess>
+      <IgnoreDelay>100</IgnoreDelay>
+      <IsCnkAlignedWithCam>false</IsCnkAlignedWithCam>
+      <OnError>
+         <Trigger type="async">
+            <Name>EncoderDiagnosticsCallback</Name>
+            <Task ref="ApplicationInterruptTask"/>
+         </Trigger>
+      </OnError>
+      <OnStateChanged>
+         <Trigger type="async">
+            <Name>EncoderStateCallback</Name>
+            <Task ref="ApplicationInterruptTask"/>
+         </Trigger>
+      </OnStateChanged>
+      <OnAngle>
+         <Trigger type="async">
+            <Name>FGND_MID_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>255</Order>
+            <Function>Trigger_FGND_MID_TDC_EVENT_12066p0004</Function>
+            <Angles>MID_TDC</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_TDC1_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_TDC1_EVENT_869p0001</Function>
+            <Angles>0</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_HIRES</Name>
+            <Task ref="FGNDTask"/>
+            <Order>1</Order>
+            <Function>Trigger_FGND_HIRES_6521p0004</Function>
+            <Angles>TOOTH</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_TDC_EVENT_8437p0004</Function>
+            <Angles>TDC</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_MID_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_MID_TDC_EVENT_9721p0004</Function>
+            <Angles>MID_TDC</Angles>
+         </Trigger>
+         <Trigger type="async">
+            <Name>FGND_TDC_EVENT</Name>
+            <Task ref="FGNDTask"/>
+            <Order>0</Order>
+            <Function>Trigger_FGND_TDC_EVENT_10780p0004</Function>
+            <Angles>TDC</Angles>
+         </Trigger>
+      </OnAngle>
+   </CrankEncoder>
+   <DigitalInput root="true">
+      <Behavior>DigitalInput</Behavior>
+      <ModuleResource>ESTOP</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <Name>ESTOPPin</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_din</AppLink>
+   </DigitalInput>
+   <DiscreteOutput root="true">
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO1</ModuleResource>
+      <DeviceDriver>MC33800</DeviceDriver>
+      <Name>DOut10176p0004</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/AC Control/motohawk_dout</AppLink>
+   </DiscreteOutput>
+   <DiscreteOutput root="true">
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>LSO2</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>DOut11001p0004</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/FuelPump/motohawk_dout</AppLink>
+   </DiscreteOutput>
+   <DiscreteOutput root="true">
+      <Behavior>DiscreteOutput</Behavior>
+      <ModuleResource>MPRD</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>DOut11529p0004</Name>
+      <AppLink>BaseEngineController_LS_112/Main Power Relay/Main Power Relay/motohawk_dout</AppLink>
+   </DiscreteOutput>
+   <SerialLink root="true">
+      <Behavior>SerialLink</Behavior>
+      <ModuleResource>RS485</ModuleResource>
+      <DeviceDriver>Serial</DeviceDriver>
+      <BaudRate>9600</BaudRate>
+      <PhysicalLayer>
+         <NumBitsInChar>8</NumBitsInChar>
+         <Parity>none</Parity>
+      </PhysicalLayer>
+      <Transmit>
+         <NumSupportedQueuedChars>8</NumSupportedQueuedChars>
+         <NumSupportedQueuedEntries>1</NumSupportedQueuedEntries>
+      </Transmit>
+      <Receive>
+         <NumSupportedQueuedChars>8</NumSupportedQueuedChars>
+      </Receive>
+      <HandlerPriority>7</HandlerPriority>
+      <Name>RS485</Name>
+      <AppLink>BaseEngineController_LS_112/motohawk_serial_def</AppLink>
+   </SerialLink>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN2</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN2</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_ain5</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN3</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN3</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_ain6</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN19</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>MAPSensorPin</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/MAP_Crank_Synchronous/Once at Startup/motohawk_ain</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN4</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN4</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain1</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>DRVP</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>DRVP</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain14</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN5</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN5</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain2</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>XDRP</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>XDRP</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain3</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN6</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN6</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_ain4</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN15</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN15</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Fuel Level/motohawk_ain</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN7</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN7</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN8</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN8</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain1</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN9</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN9</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain2</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN10</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN10</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/NonLinearSensors/Temp Sensors/motohawk_ain3</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN11</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN11</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain1</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN12</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>AN12</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain2</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN13</ModuleResource>
+      <DeviceDriver>VISTA</DeviceDriver>
+      <Name>AN13</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain6</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>AN14</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>AN14</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/PotentiometerSensors/motohawk_ain9</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <AnalogInput root="true">
+      <Behavior>AnalogInput</Behavior>
+      <ModuleResource>ECUP</ModuleResource>
+      <DeviceDriver>QADC</DeviceDriver>
+      <Name>ECUP</Name>
+      <AppLink>BaseEngineController_LS_112/Main Power Relay/Main Power Relay/motohawk_ain5</AppLink>
+      <DataType>uint16</DataType>
+      <scaling>10</scaling>
+   </AnalogInput>
+   <FrequencyInput root="true">
+      <Behavior>FrequencyInput</Behavior>
+      <ModuleResource>SPD1</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <PullupState>on</PullupState>
+      <SyncEdge>fall</SyncEdge>
+      <Name>SPD1</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_frequency_in1</AppLink>
+      <Interface>DG</Interface>
+      <MaxPeriod>100000</MaxPeriod>
+      <CapturePulseWidth>TRUE</CapturePulseWidth>
+   </FrequencyInput>
+   <FrequencyInput root="true">
+      <Behavior>FrequencyInput</Behavior>
+      <ModuleResource>SPD2</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <SyncEdge>fall</SyncEdge>
+      <Name>SPD2</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/Digital/motohawk_frequency_in2</AppLink>
+      <Interface>DG</Interface>
+      <MaxPeriod>100000</MaxPeriod>
+      <CapturePulseWidth>TRUE</CapturePulseWidth>
+   </FrequencyInput>
+   <FrequencyInput root="true">
+      <Behavior>FrequencyInput</Behavior>
+      <ModuleResource>SPD3</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <SyncEdge>rise</SyncEdge>
+      <Name>SPD3</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/LinearSensors/motohawk_frequency_in</AppLink>
+      <Interface>DG</Interface>
+      <MaxPeriod>100000</MaxPeriod>
+      <CapturePulseWidth>FALSE</CapturePulseWidth>
+   </FrequencyInput>
+   <PWMOutput root="true">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>LSO9</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>LSO9_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/FAN Control/motohawk_pwm</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput>
+   <PWMOutput root="true">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>LSO10</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>LSO10_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/FAN Control/motohawk_pwm1</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput>
+   <PWMOutput root="true">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H1+</ModuleResource>
+      <ModuleResource>H1-</ModuleResource>
+      <DeviceDriver>GenericDualInputHBridge</DeviceDriver>
+      <SignedDutyCycle>true</SignedDutyCycle>
+      <Name>H1p_H1m_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/HBridge/motohawk_pwm1</AppLink>
+      <MinimumFrequency>64.00</MinimumFrequency>
+   </PWMOutput>
+   <CurrentMeasurement root="true">
+      <Behavior>CurrentMeasurement</Behavior>
+      <ModuleResource>H1+</ModuleResource>
+      <ModuleResource>H1-</ModuleResource>
+      <DeviceDriver>AnalogCurrentMeasurement</DeviceDriver>
+      <Type>Analog</Type>
+      <AnalogResource>H1_Imon</AnalogResource>
+      <Conversion>
+         <Trigger>Inherited</Trigger>
+         <Transform>
+            <Type>Fixed_Point</Type>
+            <Units>mA</Units>
+            <Mult>30</Mult>
+            <Div>1</Div>
+            <Offset>0</Offset>
+         </Transform>
+      </Conversion>
+      <Name>H1p_H1m_PWMOutput_CM</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/HBridge/motohawk_pwm1</AppLink>
+      <Units>mA</Units>
+   </CurrentMeasurement>
+   <PWMOutput root="true">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H2+</ModuleResource>
+      <DeviceDriver>DiscreteEnable</DeviceDriver>
+      <SignedDutyCycle>false</SignedDutyCycle>
+      <PWMResource ref="H2p"/>
+      <DiscreteResource ref="H2_InhibitA"/>
+      <Name>H2p_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/IAC-Control/motohawk_pwm</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput>
+   <PWMOutput root="true">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>H2-</ModuleResource>
+      <DeviceDriver>DiscreteEnable</DeviceDriver>
+      <SignedDutyCycle>false</SignedDutyCycle>
+      <PWMResource ref="H2m"/>
+      <DiscreteResource ref="H2_InhibitB"/>
+      <Name>H2m_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/IAC-Control/motohawk_pwm1</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput>
+   <PWMOutput root="true">
+      <Behavior>PWMOutput</Behavior>
+      <ModuleResource>LSO8</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>LSO8_PWMOutput</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Outputs/WASTEGATE-Control/motohawk_pwm</AppLink>
+      <MinimumFrequency>2.00</MinimumFrequency>
+   </PWMOutput>
+   <CamEncoder root="true">
+      <Behavior>CamEncoder</Behavior>
+      <ModuleResource>CAM</ModuleResource>
+      <DeviceDriver>DGIn</DeviceDriver>
+      <Style>HalfMoon</Style>
+      <SyncEdge>rise</SyncEdge>
+      <PullupState>on</PullupState>
+      <Name>CAM</Name>
+      <AppLink>BaseEngineController_LS_112/Foreground/Inputs/EngineSpeed/motohawk_encoder_def</AppLink>
+      <Interface>DG</Interface>
+   </CamEncoder>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST1</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST1</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST2</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST2</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST3</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST3</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST4</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST4</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST5</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST5</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST6</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST6</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST7</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST7</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>EST8</ModuleResource>
+      <DeviceDriver>PushPull</DeviceDriver>
+      <Name>EST8</Name>
+      <NumPulses>1</NumPulses>
+      <Mode>HardStart_HardStop</Mode>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ1</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ1</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ1</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ2</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ2</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ2</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ3</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ3</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ3</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ4</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ4</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ4</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ5</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ5</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ5</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ6</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ6</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ6</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ7</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ7</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ7</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <PSPOutput root="true">
+      <Behavior>PSPOutput</Behavior>
+      <ModuleResource>INJ8</ModuleResource>
+      <DeviceDriver>BasicOut</DeviceDriver>
+      <Name>INJ8</Name>
+      <Mode>TransientPSP_Behavior</Mode>
+      <NumPulses>2</NumPulses>
+      <OnPulseEnd>
+         <Trigger type="async">
+            <Order>0</Order>
+            <Function>Trigger_Trans_INJ8</Function>
+         </Trigger>
+      </OnPulseEnd>
+   </PSPOutput>
+   <CAN root="true">
+      <Behavior>CAN</Behavior>
+      <ModuleResource>CAN_1</ModuleResource>
+      <DeviceDriver>FlexCAN</DeviceDriver>
+      <CPUResource>FLEXCAN2_A</CPUResource>
+      <Name>CAN_1</Name>
+      <BaudRate>500000</BaudRate>
+      <Transmit>
+         <QueueSize>16</QueueSize>
+      </Transmit>
+      <Receive>
+         <Dispatcher>
+            <QueueSize>16</QueueSize>
+            <Task ref="ApplicationInterruptTask"/>
+         </Dispatcher>
+         <Slot>
+            <Name>RxSlot_9013p0001</Name>
+            <ID>
+               <Type>Extended</Type>
+               <Value>655362</Value>
+               <Mask>536870911</Mask>
+            </ID>
+            <Payload>
+               <Size>8</Size>
+               <Value>0 0 0 0 0 0 0 0</Value>
+               <Mask>0 0 0 0 0 0 0 0</Mask>
+            </Payload>
+            <QueueSize>1</QueueSize>
+         </Slot>
+         <Slot>
+            <Name>RxSlot_9014p0001</Name>
+            <ID>
+               <Type>Extended</Type>
+               <Value>655360</Value>
+               <Mask>536870911</Mask>
+            </ID>
+            <Payload>
+               <Size>8</Size>
+               <Value>0 0 0 0 0 0 0 0</Value>
+               <Mask>0 0 0 0 0 0 0 0</Mask>
+            </Payload>
+            <QueueSize>1</QueueSize>
+         </Slot>
+         <Slot>
+            <Name>RxSlot_9015p0001</Name>
+            <ID>
+               <Type>Extended</Type>
+               <Value>655361</Value>
+               <Mask>536870911</Mask>
+            </ID>
+            <Payload>
+               <Size>8</Size>
+               <Value>0 0 0 0 0 0 0 0</Value>
+               <Mask>0 0 0 0 0 0 0 0</Mask>
+            </Payload>
+            <QueueSize>1</QueueSize>
+         </Slot>
+         <Slot>
+            <Name>RxSlot_9123p0002</Name>
+            <ID>
+               <Type>Extended</Type>
+               <Value>384</Value>
+               <Mask>536870911</Mask>
+            </ID>
+            <Payload>
+               <Size>8</Size>
+               <Value>0 0 0 0 0 0 0 0</Value>
+               <Mask>0 0 0 0 0 0 0 0</Mask>
+            </Payload>
+            <QueueSize>1</QueueSize>
+         </Slot>
+         <Slot>
+            <Name>RxSlot_9124p0001</Name>
+            <ID>
+               <Type>Extended</Type>
+               <Value>385</Value>
+               <Mask>536870911</Mask>
+            </ID>
+            <Payload>
+               <Size>8</Size>
+               <Value>0 0 0 0 0 0 0 0</Value>
+               <Mask>0 0 0 0 0 0 0 0</Mask>
+            </Payload>
+            <QueueSize>1</QueueSize>
+         </Slot>
+         <Slot>
+            <Name>CCP1</Name>
+            <ID dynamic="true">
+               <Type>Extended</Type>
+               <Value>418316849</Value>
+               <Mask>536870911</Mask>
+            </ID>
+            <Payload>
+               <Value>0 0 0 0 0 0 0 0</Value>
+               <Mask>0 0 0 0 0 0 0 0</Mask>
+            </Payload>
+            <QueueSize>4</QueueSize>
+         </Slot>
+      </Receive>
+      <AppLink>BaseEngineController_LS_112/CAN Definition</AppLink>
+   </CAN>
+   <CAN root="true">
+      <Behavior>CAN</Behavior>
+      <ModuleResource>CAN_2</ModuleResource>
+      <DeviceDriver>FlexCAN</DeviceDriver>
+      <CPUResource>FLEXCAN2_B</CPUResource>
+      <Name>CAN_2</Name>
+      <BaudRate>500000</BaudRate>
+      <Transmit>
+         <QueueSize>16</QueueSize>
+      </Transmit>
+      <Receive>
+         <Dispatcher>
+            <QueueSize>16</QueueSize>
+            <Task ref="ApplicationInterruptTask"/>
+         </Dispatcher>
+      </Receive>
+      <AppLink>BaseEngineController_LS_112/CAN Definition1</AppLink>
+   </CAN>
+</IOMerge>

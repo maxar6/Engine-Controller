@@ -1,0 +1,306 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2011a_sp0.184      ###
+###    MATLAB version: 7.12.0.635 (R2011a)###
+###        22-Nov-2022 13:55:17           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECM-5554-112-0904-xD (DEV)
+DEV Executable:  BaseEngineController_LS_112_034.srz
+MotoTune DLL:    BaseEngin_034.dll
+ 
+Project GUID:    643353ad-4f7e-4dfd-b4-60-e2-b1-03-a9-6b
+Build GUID:      93cf328e-1180-4013-ba-c8-e0-53-f6-c0-39
+ 
+### Starting build procedure for model: BaseEngineController_LS_112
+### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build
+{Warning: The initial output of Outport
+'<a href="matlab:open_and_hilite_system ('BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap/EncoderAngle')">BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap/EncoderAngle</a>' is set to [] which might
+cause unexpected initialization. If you want output port 1 of Subsystem
+'<a href="matlab:open_and_hilite_system ('BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap')">BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap</a>' to have the same initial value as the
+Outport source, '<a href="matlab:open_and_hilite_system ('BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap/Constant')">BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap/Constant</a>', please
+explicitly set this initial output value on
+'<a href="matlab:open_and_hilite_system ('BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap/EncoderAngle')">BaseEngineController_LS_112/Foreground/Control/Diagnostics/MISFIRE/MisfireDiagSub/MisfireDiagFunc/StoreRPMData/EncoderAngleArb/EncoderAngle_wExtrap/EncoderAngle</a>'. To turn off this warning
+message, uncheck the Data Validity option "Check undefined subsystem initial output" in the Diagnostics page of the Configuration Parameters dialog} 
+### Invoking Target Language Compiler on BaseEngineController_LS_112.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_motocoder_ert_rtw.tlc
+### Loading TLC function libraries
+.......................
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.....................................
+Warning:  Calibratable I/O for DigitalInput NOT supported in MotoCoder yet
+...............................................................................
+...............................................................................
+...........
+### Caching model source code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+....................{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+{Warning: The 'tokenize' option for regexprep is now the default behavior.} 
+...........................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.........................................................................
+Warning:  Calibratable I/O NOT supported for AnalogInput in MotoCoder yet
+...............................................................................
+.........................................................................
+Warning:  Calibratable I/O for DigitalInput NOT supported in MotoCoder yet
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.................................................................
+### Writing source file BaseEngineController_LS_112.c
+### Writing header file BaseEngineController_LS_112_private.h
+.
+### Writing header file BaseEngineController_LS_112.h
+### Writing header file BaseEngineController_LS_112_types.h
+.
+### Writing source file BaseEngineController_LS_112_IdleStateMachine.c
+### Writing source file Foreground.c
+### Writing header file Foreground.h
+.
+### Writing header file rtwtypes.h
+### Writing header file rt_zcfcn.h
+.
+### Writing source file rt_zcfcn.c
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing header file BaseEngineController_LS_112_IdleStateMachine.h
+.
+### Writing source file BaseEngineController_LS_112_data.c
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+......................................................
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_motocoder_ert_rtw.tmf
+### BaseEngineController_LS_112.mk which is generated from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_motocoder_ert_rtw.tmf is up to date
+### Building BaseEngineController_LS_112: "C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_rtw_success.bat"
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of build procedure for model: BaseEngineController_LS_112
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.12.4 ###
+Module: ECM-5554-112-0904-xD
+Module File: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/Modules/ECM-5554-112-0904-xD.xml
+Module Family: ComponentControlCore
+Module Family Directory: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/ModuleFamilies/ComponentControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Parsing VarDecs in Source Code 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\TDB/ParsedVardecs.xml 
+### Generating MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/maxar/Documents/GitHub/Engine-Controller/EngineController_112Branch/BaseEngineController_LS_112_Build/BaseEngineController_LS_112.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+   [delete] Deleting directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Obj'. 
+   [delete] Deleting directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Target'. 
+ 
+BaseEngineController_LS_112: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Target'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Obj'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\BaseEngineController_LS_112.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\BaseEngineController_LS_112_data.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\BaseEngineController_LS_112_IdleStateMachine.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\EncoderCallback.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Foreground.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\InjectorSequenceCallback_34.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c: In function 'mh_MTAIsCalibration': 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c:688: warning: unused variable 'access' 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c: In function 'mh_CCP_setmem': 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c:945: warning: unused variable 'BytesToWrite' 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c: In function 'mh_ProcessCCP_WriteDAQ': 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol.c:1414: warning: unused variable 'i' 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\mh_ccp_protocol_CCP1.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_Debug.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_IO.c 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_IO.c: In function 'H2m_PWMOutput_PWMOutput_Set': 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_IO.c:2887: warning: control reaches end of non-void function 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_IO.c: In function 'H2p_PWMOutput_PWMOutput_Set': 
+  [gcc-cpp] C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_IO.c:2822: warning: control reaches end of non-void function 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_KeySuite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_ModuleSupport_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_ModuleSupport_EngineeringClock.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_ModuleSupport_INTC.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_Services_CRC.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoCoder_ToolInterface.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\rt_zcfcn.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_BGND_BASEx10_PERIODIC_12070p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_BGND_BASEx2_PERIODIC_12069p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_BGND_BASE_PERIODIC_11570p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_BGND_BASE_PERIODIC_12068p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_Encoder_Fault_30.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_20XRTI_PERIODIC_10085p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_20XRTI_PERIODIC_12067p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_20XRTI_PERIODIC_9951p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_1093p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_1094p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_11294p0006.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_12064p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_5057p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_9815p0006.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_5XRTI_PERIODIC_9816p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_HIRES_6521p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_MID_TDC_EVENT_12066p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_MID_TDC_EVENT_9721p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_RTI_PERIODIC_11578p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_RTI_PERIODIC_12065p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_TDC1_EVENT_869p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_TDC_EVENT_10780p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_FGND_TDC_EVENT_8437p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_IDLE_EVENT_11990p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_IDLE_EVENT_9p001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_ONE_SECOND_EVENT_12071p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_STARTUP_EVENT_11965p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\Trigger_STARTUP_EVENT_9720p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_112Branch\BaseEngineController_LS_112_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking BaseEngineController_LS_112.elf 
+ 
+application: 
+ 
+[gcc-objcopy] Generating BaseEngineController_LS_112.run from BaseEngineController_LS_112.elf 
+ 
+BUILD SUCCEEDED - 0 non-fatal error(s), 10 warning(s) 
+ 
+Total time: 23.9 seconds. 
+ 
+### Generating Symbol file and Processing Map file 
+Project format is MPC55xx 
+Toolchain format is GCC 
+Transforming range 0x00040000-0x002FFFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x00082000 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00040008 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.cals' aliased to '.flashcals' ... 
+    Adding RAM[0x3FFE0000], ROM[0x001E0000], Length[0x000072D0] 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x40004DEC], ROM[0x0008A564], Length[0x000008E8] 
+Complete. 
+Writing file sr://Target\BaseEngineController_LS_112.sr... 
+Encrypting 'sr://Target\BaseEngineController_LS_112.sr' into 'srz://Target\BaseEngineController_LS_112.srz' ... 
+Done. 
+### Copy BaseEngin_034.dll and BaseEngineController_LS_112_034.srz 
+### Dumping DLL to XML 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH_RCHW:                                   4 bytes  100% of      4
+	FLASH_ENTRY:                                  4 bytes  100% of      4
+	FLASH_CRCDEFNPTR:                             4 bytes  100% of      4
+	FLASH:                                   302959 bytes   18% of  1664K
+	    BaseEngineController_LS_112_M:            4 bytes    0% of  1664K
+	    NonVolatileDefault:                    2280 bytes    0% of  1664K
+	    BaseEngineController_LS_112_Foreground:69044 bytes    4% of  1664K
+	FLASH_CALIBRATION:                        29392 bytes   22% of 131008
+	RAM_CALIBRATION:                          29392 bytes   22% of 131008
+	    ConstantWork:                         29392 bytes   22% of 131008
+	INTERNAL RAM:                             22602 bytes   34% of  65520
+	    BaseEngineController_LS_112_B:         1696 bytes    3% of  65520
+	    BaseEngineController_LS_112_DWork:     1200 bytes    2% of  65520
+	    BaseEngineController_LS_112_M_:          16 bytes    0% of  65520
+	    VolatileWork:                            15 bytes    0% of  65520
+	    NonVolatileWork:                       2280 bytes    3% of  65520
+	RAM_BOOTMAILBOX:                             16 bytes  100% of     16
+	SERIAL_EE:                                 2283 bytes    7% of  32768
+
+### Generating ASAP2 file 
+### Installing ASAP2 file in c:\ecufiles\tdbdll 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 3 minutes, 4.3 seconds  (184.3 seconds)
+{Warning: Block diagram 'BaseEngineController_LS_112' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.  The diagram has been saved but
+may not contain what you intended.} 
+{Warning: Block diagram 'BaseEngineController_LS_112' contains one or more parameterized library links.  To find the parameterized links use the Model Advisor.  The diagram has been saved
+but may not behave as you intended.} 
+ 
+#############################################################################
+###
+### Target Module: ECM-5554-112-0904-xD
+### Created Development Executable: BaseEngineController_LS_112_034.srz
+### Created MotoTune DLL: BaseEngin_034.dll
+###
+### Successful MotoHawk Build for model: BaseEngineController_LS_112
+###
+#############################################################################
+ 

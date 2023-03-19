@@ -375,15 +375,25 @@
                <Default>320.0 200.0 120.0 110.0 50.0 ;300.0 180.0 129.0 110.0 50.0 ;250.0 160.0 120.0 100.0 60.0 ;200.0 130.0 120.0 80.0 60.0 ;150.0 140.0 130.0 90.0 60.0 </Default>
                <Name>CrankFPCMap</Name>
              </DataStore>
-            <DataStore ref="Constant">
+            <DataStore ref="Volatile">
                <DataType>real32</DataType>
-               <Default>1.0</Default>
-               <Name>OpenThrottleFPCScalar</Name>
+               <Default>0.0</Default>
+               <Name>CrankPulse</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
-               <Default>80.0</Default>
-               <Name>ClearFloodThreshold</Name>
+               <Default>0.0 0.0 0.0 0.0 0.0 </Default>
+               <Name>CrankPulseTbl</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>OpenThrottleFPCScalar_TPS</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>1.0</Default>
+               <Name>OpenThrottleFPCScalar_ETC</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -394,6 +404,11 @@
                <DataType>uint16</DataType>
                <Default>0U</Default>
                <Name>CrankECT05Idx</Name>
+             </DataStore>
+            <DataStore ref="Constant">
+               <DataType>real32</DataType>
+               <Default>80.0</Default>
+               <Name>ClearFloodThreshold</Name>
              </DataStore>
             <DataStore ref="Volatile">
                <DataType>real32</DataType>
@@ -5626,6 +5641,11 @@
                <Name>BaroLearnTmr</Name>
              </DataStore>
             <DataStore ref="Constant">
+               <DataType>boolean</DataType>
+               <Default>0</Default>
+               <Name>VEAdpatSource</Name>
+             </DataStore>
+            <DataStore ref="Constant">
                <DataType>real32</DataType>
                <Default>60.0</Default>
                <Name>VEAdaptTemp</Name>
@@ -5664,6 +5684,11 @@
                <DataType>uint8</DataType>
                <Default>0U</Default>
                <Name>EngineState</Name>
+             </DataStore>
+            <DataStore ref="Volatile">
+               <DataType>uint8</DataType>
+               <Default>0U</Default>
+               <Name>FuelPulseState</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>real32</DataType>
@@ -6238,7 +6263,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut6309p0016</Name>
+               <Name>init_resource_DOut11529p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -6338,7 +6363,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut4942p0011</Name>
+               <Name>init_resource_DOut10176p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -6623,7 +6648,7 @@
             <DataStore ref="Volatile">
                <DataType>int16</DataType>
                <Default>0</Default>
-               <Name>init_resource_DOut5781p0015</Name>
+               <Name>init_resource_DOut11001p0004</Name>
              </DataStore>
             <DataStore ref="Constant">
                <DataType>int16</DataType>
@@ -12424,66 +12449,48 @@
                 </Enum>
                 
                 <Enum>
+                    <Name>VarDecEnum_28</Name>
+                    <Item name="MAF" value="0" symbol="VARDECENUM_28_MAF"/>
+                    <Item name="O2" value="1" symbol="VARDECENUM_28_O2"/>
+                </Enum>
+                
+                <Enum>
                     <Name>VarDecEnum_3</Name>
                     <Item name="Off" value="0" symbol="VARDECENUM_3_OFF"/>
                     <Item name="On" value="1" symbol="VARDECENUM_3_ON"/>
                 </Enum>
                 
                 <Enum>
-                    <Name>VarDecEnum_34</Name>
-                    <Item name="Rising Edge" value="0" symbol="VARDECENUM_34_RISINGEDGE"/>
-                    <Item name="Falling Edge" value="1" symbol="VARDECENUM_34_FALLINGEDGE"/>
-                </Enum>
-                
-                <Enum>
-                    <Name>VarDecEnum_35</Name>
-                    <Item name="Weak Pullup" value="0" symbol="VARDECENUM_35_WEAKPULLUP"/>
-                    <Item name="Strong Pullup" value="1" symbol="VARDECENUM_35_STRONGPULLUP"/>
-                </Enum>
-                
-                <Enum>
                     <Name>VarDecEnum_36</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_36_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_36_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_36_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_36_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_36_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_36_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_36_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_36_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_36_EST8"/>
+                    <Item name="Rising Edge" value="0" symbol="VARDECENUM_36_RISINGEDGE"/>
+                    <Item name="Falling Edge" value="1" symbol="VARDECENUM_36_FALLINGEDGE"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_37</Name>
-                    <Item name="Standard (Coil per cylinder)" value="0" symbol="VARDECENUM_37_STANDARDOPENPARENCOILPERCYLINDERCLOSEPAREN"/>
-                    <Item name="Banked (Fire on both phases until CAM sync)" value="1" symbol="VARDECENUM_37_BANKEDOPENPARENFIREONBOTHPHASESUNTILCAMSYNCCLOSEPAREN"/>
-                    <Item name="Batch (Wasted spark)" value="2" symbol="VARDECENUM_37_BATCHOPENPARENWASTEDSPARKCLOSEPAREN"/>
-                    <Item name="Muxed (Distributed)" value="3" symbol="VARDECENUM_37_MUXEDOPENPARENDISTRIBUTEDCLOSEPAREN"/>
+                    <Item name="Weak Pullup" value="0" symbol="VARDECENUM_37_WEAKPULLUP"/>
+                    <Item name="Strong Pullup" value="1" symbol="VARDECENUM_37_STRONGPULLUP"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_38</Name>
                     <Item name="(None)" value="-1" symbol="VARDECENUM_38_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_38_FINJ1"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_38_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_38_AINJ5"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_38_AINJ6"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_38_FINJ2"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_38_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_38_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_38_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_38_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_38_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_38_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_38_AINJ3"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_38_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_38_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_38_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_38_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_38_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_38_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_38_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_38_EST8"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_39</Name>
-                    <Item name="Standard (Injector per cylinder)" value="0" symbol="VARDECENUM_39_STANDARDOPENPARENINJECTORPERCYLINDERCLOSEPAREN"/>
-                    <Item name="Batch (Fire half fuel on half of the injectors every rev)" value="1" symbol="VARDECENUM_39_BATCHOPENPARENFIREHALFFUELONHALFOFTHEINJECTORSEVERYREVCLOSEPAREN"/>
-                    <Item name=" Wasted (Fire half fuel on all injectors every rev)" value="2" symbol="VARDECENUM_39_WASTEDOPENPARENFIREHALFFUELONALLINJECTORSEVERYREVCLOSEPAREN"/>
+                    <Item name="Standard (Coil per cylinder)" value="0" symbol="VARDECENUM_39_STANDARDOPENPARENCOILPERCYLINDERCLOSEPAREN"/>
+                    <Item name="Banked (Fire on both phases until CAM sync)" value="1" symbol="VARDECENUM_39_BANKEDOPENPARENFIREONBOTHPHASESUNTILCAMSYNCCLOSEPAREN"/>
+                    <Item name="Batch (Wasted spark)" value="2" symbol="VARDECENUM_39_BATCHOPENPARENWASTEDSPARKCLOSEPAREN"/>
+                    <Item name="Muxed (Distributed)" value="3" symbol="VARDECENUM_39_MUXEDOPENPARENDISTRIBUTEDCLOSEPAREN"/>
                 </Enum>
                 
                 <Enum>
@@ -12494,123 +12501,135 @@
                 
                 <Enum>
                     <Name>VarDecEnum_40</Name>
-                    <Item name="Standard" value="0" symbol="VARDECENUM_40_STANDARD"/>
-                    <Item name="Transient" value="1" symbol="VARDECENUM_40_TRANSIENT"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_40_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_40_FINJ1"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_40_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_40_AINJ5"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_40_AINJ6"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_40_FINJ2"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_40_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_40_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_40_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_40_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_40_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_40_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_40_AINJ3"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_41</Name>
+                    <Item name="Standard (Injector per cylinder)" value="0" symbol="VARDECENUM_41_STANDARDOPENPARENINJECTORPERCYLINDERCLOSEPAREN"/>
+                    <Item name="Batch (Fire half fuel on half of the injectors every rev)" value="1" symbol="VARDECENUM_41_BATCHOPENPARENFIREHALFFUELONHALFOFTHEINJECTORSEVERYREVCLOSEPAREN"/>
+                    <Item name=" Wasted (Fire half fuel on all injectors every rev)" value="2" symbol="VARDECENUM_41_WASTEDOPENPARENFIREHALFFUELONALLINJECTORSEVERYREVCLOSEPAREN"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_42</Name>
-                    <Item name="CutThrottle" value="0" symbol="VARDECENUM_42_CUTTHROTTLE"/>
-                    <Item name="DFCODisable" value="1" symbol="VARDECENUM_42_DFCODISABLE"/>
-                    <Item name="EngineShutdown" value="10" symbol="VARDECENUM_42_ENGINESHUTDOWN"/>
-                    <Item name="HardRevLimit" value="11" symbol="VARDECENUM_42_HARDREVLIMIT"/>
-                    <Item name="MIL_LED" value="12" symbol="VARDECENUM_42_MIL_LED"/>
-                    <Item name="MediumRevLimit" value="13" symbol="VARDECENUM_42_MEDIUMREVLIMIT"/>
-                    <Item name="SoftRevLimit" value="14" symbol="VARDECENUM_42_SOFTREVLIMIT"/>
-                    <Item name="DelayedEngineShutdown" value="2" symbol="VARDECENUM_42_DELAYEDENGINESHUTDOWN"/>
-                    <Item name="DisableAC" value="3" symbol="VARDECENUM_42_DISABLEAC"/>
-                    <Item name="DisableFanRun" value="4" symbol="VARDECENUM_42_DISABLEFANRUN"/>
-                    <Item name="DisableFanStall" value="5" symbol="VARDECENUM_42_DISABLEFANSTALL"/>
-                    <Item name="DisableO2Ctrl" value="6" symbol="VARDECENUM_42_DISABLEO2CTRL"/>
-                    <Item name="DisableVEAdapt" value="7" symbol="VARDECENUM_42_DISABLEVEADAPT"/>
-                    <Item name="DisableWastegate" value="8" symbol="VARDECENUM_42_DISABLEWASTEGATE"/>
-                    <Item name="EngineProtectLED" value="9" symbol="VARDECENUM_42_ENGINEPROTECTLED"/>
-                </Enum>
-                
-                <Enum>
-                    <Name>VarDecEnum_43</Name>
-                    <Item name="-" value="0" symbol="VARDECENUM_43_DASH"/>
+                    <Item name="Standard" value="0" symbol="VARDECENUM_42_STANDARD"/>
+                    <Item name="Transient" value="1" symbol="VARDECENUM_42_TRANSIENT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_44</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_44_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="ECUP" value="53" symbol="VARDECENUM_44_ECUP"/>
-                    <Item name="AN7M" value="62" symbol="VARDECENUM_44_AN7M"/>
-                    <Item name="AN8M" value="63" symbol="VARDECENUM_44_AN8M"/>
-                    <Item name="AN9M" value="64" symbol="VARDECENUM_44_AN9M"/>
-                    <Item name="AN10M" value="65" symbol="VARDECENUM_44_AN10M"/>
-                    <Item name="AN11M" value="66" symbol="VARDECENUM_44_AN11M"/>
-                    <Item name="AN12M" value="67" symbol="VARDECENUM_44_AN12M"/>
-                    <Item name="AN13M" value="68" symbol="VARDECENUM_44_AN13M"/>
-                    <Item name="AN14M" value="69" symbol="VARDECENUM_44_AN14M"/>
-                    <Item name="AN15M" value="70" symbol="VARDECENUM_44_AN15M"/>
-                    <Item name="AN16M" value="71" symbol="VARDECENUM_44_AN16M"/>
-                    <Item name="DRVP" value="54" symbol="VARDECENUM_44_DRVP"/>
-                    <Item name="AN17M" value="72" symbol="VARDECENUM_44_AN17M"/>
-                    <Item name="AN18M" value="73" symbol="VARDECENUM_44_AN18M"/>
-                    <Item name="AN19M" value="74" symbol="VARDECENUM_44_AN19M"/>
-                    <Item name="O2A" value="90" symbol="VARDECENUM_44_O2A"/>
-                    <Item name="O2B" value="91" symbol="VARDECENUM_44_O2B"/>
-                    <Item name="XDRP_B" value="92" symbol="VARDECENUM_44_XDRP_B"/>
-                    <Item name="XDRP" value="55" symbol="VARDECENUM_44_XDRP"/>
-                    <Item name="AN1M" value="56" symbol="VARDECENUM_44_AN1M"/>
-                    <Item name="AN2M" value="57" symbol="VARDECENUM_44_AN2M"/>
-                    <Item name="AN3M" value="58" symbol="VARDECENUM_44_AN3M"/>
-                    <Item name="AN4M" value="59" symbol="VARDECENUM_44_AN4M"/>
-                    <Item name="AN5M" value="60" symbol="VARDECENUM_44_AN5M"/>
-                    <Item name="AN6M" value="61" symbol="VARDECENUM_44_AN6M"/>
+                    <Item name="CutThrottle" value="0" symbol="VARDECENUM_44_CUTTHROTTLE"/>
+                    <Item name="DFCODisable" value="1" symbol="VARDECENUM_44_DFCODISABLE"/>
+                    <Item name="EngineShutdown" value="10" symbol="VARDECENUM_44_ENGINESHUTDOWN"/>
+                    <Item name="HardRevLimit" value="11" symbol="VARDECENUM_44_HARDREVLIMIT"/>
+                    <Item name="MIL_LED" value="12" symbol="VARDECENUM_44_MIL_LED"/>
+                    <Item name="MediumRevLimit" value="13" symbol="VARDECENUM_44_MEDIUMREVLIMIT"/>
+                    <Item name="SoftRevLimit" value="14" symbol="VARDECENUM_44_SOFTREVLIMIT"/>
+                    <Item name="DelayedEngineShutdown" value="2" symbol="VARDECENUM_44_DELAYEDENGINESHUTDOWN"/>
+                    <Item name="DisableAC" value="3" symbol="VARDECENUM_44_DISABLEAC"/>
+                    <Item name="DisableFanRun" value="4" symbol="VARDECENUM_44_DISABLEFANRUN"/>
+                    <Item name="DisableFanStall" value="5" symbol="VARDECENUM_44_DISABLEFANSTALL"/>
+                    <Item name="DisableO2Ctrl" value="6" symbol="VARDECENUM_44_DISABLEO2CTRL"/>
+                    <Item name="DisableVEAdapt" value="7" symbol="VARDECENUM_44_DISABLEVEADAPT"/>
+                    <Item name="DisableWastegate" value="8" symbol="VARDECENUM_44_DISABLEWASTEGATE"/>
+                    <Item name="EngineProtectLED" value="9" symbol="VARDECENUM_44_ENGINEPROTECTLED"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_45</Name>
-                    <Item name="5V" value="0" symbol="VARDECENUM_45_5V"/>
-                    <Item name="2.7V" value="1" symbol="VARDECENUM_45_2POINT7V"/>
+                    <Item name="-" value="0" symbol="VARDECENUM_45_DASH"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_46</Name>
                     <Item name="(None)" value="-1" symbol="VARDECENUM_46_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FUELP" value="0" symbol="VARDECENUM_46_FUELP"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_46_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_46_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_46_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_46_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_46_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_46_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_46_AINJ3"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_46_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_46_AINJ5"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_46_AINJ6"/>
-                    <Item name="HSOL1" value="2" symbol="VARDECENUM_46_HSOL1"/>
-                    <Item name="TACH" value="24" symbol="VARDECENUM_46_TACH"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_46_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_46_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_46_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_46_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_46_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_46_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_46_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_46_EST8"/>
-                    <Item name="MPRD" value="52" symbol="VARDECENUM_46_MPRD"/>
-                    <Item name="HSOL2" value="3" symbol="VARDECENUM_46_HSOL2"/>
-                    <Item name="HSOL3" value="4" symbol="VARDECENUM_46_HSOL3"/>
-                    <Item name="HSOL4" value="5" symbol="VARDECENUM_46_HSOL4"/>
-                    <Item name="START" value="6" symbol="VARDECENUM_46_START"/>
-                    <Item name="OILP" value="11" symbol="VARDECENUM_46_OILP"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_46_FINJ1"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_46_FINJ2"/>
+                    <Item name="ECUP" value="53" symbol="VARDECENUM_46_ECUP"/>
+                    <Item name="AN7M" value="62" symbol="VARDECENUM_46_AN7M"/>
+                    <Item name="AN8M" value="63" symbol="VARDECENUM_46_AN8M"/>
+                    <Item name="AN9M" value="64" symbol="VARDECENUM_46_AN9M"/>
+                    <Item name="AN10M" value="65" symbol="VARDECENUM_46_AN10M"/>
+                    <Item name="AN11M" value="66" symbol="VARDECENUM_46_AN11M"/>
+                    <Item name="AN12M" value="67" symbol="VARDECENUM_46_AN12M"/>
+                    <Item name="AN13M" value="68" symbol="VARDECENUM_46_AN13M"/>
+                    <Item name="AN14M" value="69" symbol="VARDECENUM_46_AN14M"/>
+                    <Item name="AN15M" value="70" symbol="VARDECENUM_46_AN15M"/>
+                    <Item name="AN16M" value="71" symbol="VARDECENUM_46_AN16M"/>
+                    <Item name="DRVP" value="54" symbol="VARDECENUM_46_DRVP"/>
+                    <Item name="AN17M" value="72" symbol="VARDECENUM_46_AN17M"/>
+                    <Item name="AN18M" value="73" symbol="VARDECENUM_46_AN18M"/>
+                    <Item name="AN19M" value="74" symbol="VARDECENUM_46_AN19M"/>
+                    <Item name="O2A" value="90" symbol="VARDECENUM_46_O2A"/>
+                    <Item name="O2B" value="91" symbol="VARDECENUM_46_O2B"/>
+                    <Item name="XDRP_B" value="92" symbol="VARDECENUM_46_XDRP_B"/>
+                    <Item name="XDRP" value="55" symbol="VARDECENUM_46_XDRP"/>
+                    <Item name="AN1M" value="56" symbol="VARDECENUM_46_AN1M"/>
+                    <Item name="AN2M" value="57" symbol="VARDECENUM_46_AN2M"/>
+                    <Item name="AN3M" value="58" symbol="VARDECENUM_46_AN3M"/>
+                    <Item name="AN4M" value="59" symbol="VARDECENUM_46_AN4M"/>
+                    <Item name="AN5M" value="60" symbol="VARDECENUM_46_AN5M"/>
+                    <Item name="AN6M" value="61" symbol="VARDECENUM_46_AN6M"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_47</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_47_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="DG1M" value="93" symbol="VARDECENUM_47_DG1M"/>
-                    <Item name="DG2M" value="94" symbol="VARDECENUM_47_DG2M"/>
-                    <Item name="DG4M" value="96" symbol="VARDECENUM_47_DG4M"/>
-                    <Item name="CNK" value="100" symbol="VARDECENUM_47_CNK"/>
+                    <Item name="5V" value="0" symbol="VARDECENUM_47_5V"/>
+                    <Item name="2.7V" value="1" symbol="VARDECENUM_47_2POINT7V"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_48</Name>
-                    <Item name="No Alias Protect" value="0" symbol="VARDECENUM_48_NOALIASPROTECT"/>
-                    <Item name="Use Alias Protect" value="1" symbol="VARDECENUM_48_USEALIASPROTECT"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_48_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FUELP" value="0" symbol="VARDECENUM_48_FUELP"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_48_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_48_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_48_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_48_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_48_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_48_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_48_AINJ3"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_48_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_48_AINJ5"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_48_AINJ6"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_48_HSOL1"/>
+                    <Item name="TACH" value="24" symbol="VARDECENUM_48_TACH"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_48_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_48_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_48_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_48_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_48_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_48_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_48_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_48_EST8"/>
+                    <Item name="MPRD" value="52" symbol="VARDECENUM_48_MPRD"/>
+                    <Item name="HSOL2" value="3" symbol="VARDECENUM_48_HSOL2"/>
+                    <Item name="HSOL3" value="4" symbol="VARDECENUM_48_HSOL3"/>
+                    <Item name="HSOL4" value="5" symbol="VARDECENUM_48_HSOL4"/>
+                    <Item name="START" value="6" symbol="VARDECENUM_48_START"/>
+                    <Item name="OILP" value="11" symbol="VARDECENUM_48_OILP"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_48_FINJ1"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_48_FINJ2"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_49</Name>
-                    <Item name="Digital Input" value="0" symbol="VARDECENUM_49_DIGITALINPUT"/>
-                    <Item name="VR Input" value="1" symbol="VARDECENUM_49_VRINPUT"/>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_49_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="DG1M" value="93" symbol="VARDECENUM_49_DG1M"/>
+                    <Item name="DG2M" value="94" symbol="VARDECENUM_49_DG2M"/>
+                    <Item name="DG4M" value="96" symbol="VARDECENUM_49_DG4M"/>
+                    <Item name="CNK" value="100" symbol="VARDECENUM_49_CNK"/>
                 </Enum>
                 
                 <Enum>
@@ -12621,66 +12640,78 @@
                 
                 <Enum>
                     <Name>VarDecEnum_50</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_50_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="FUELP" value="0" symbol="VARDECENUM_50_FUELP"/>
-                    <Item name="FINJ2" value="13" symbol="VARDECENUM_50_FINJ2"/>
-                    <Item name="FINJ3" value="14" symbol="VARDECENUM_50_FINJ3"/>
-                    <Item name="FINJ4" value="15" symbol="VARDECENUM_50_FINJ4"/>
-                    <Item name="FINJ5" value="16" symbol="VARDECENUM_50_FINJ5"/>
-                    <Item name="FINJ6" value="17" symbol="VARDECENUM_50_FINJ6"/>
-                    <Item name="AINJ1" value="18" symbol="VARDECENUM_50_AINJ1"/>
-                    <Item name="AINJ2" value="19" symbol="VARDECENUM_50_AINJ2"/>
-                    <Item name="AINJ3" value="20" symbol="VARDECENUM_50_AINJ3"/>
-                    <Item name="AINJ4" value="21" symbol="VARDECENUM_50_AINJ4"/>
-                    <Item name="AINJ5" value="22" symbol="VARDECENUM_50_AINJ5"/>
-                    <Item name="ETC" value="1" symbol="VARDECENUM_50_ETC"/>
-                    <Item name="AINJ6" value="23" symbol="VARDECENUM_50_AINJ6"/>
-                    <Item name="TACH" value="24" symbol="VARDECENUM_50_TACH"/>
-                    <Item name="EST 1" value="36" symbol="VARDECENUM_50_EST1"/>
-                    <Item name="EST 2" value="37" symbol="VARDECENUM_50_EST2"/>
-                    <Item name="EST 3" value="38" symbol="VARDECENUM_50_EST3"/>
-                    <Item name="EST 4" value="39" symbol="VARDECENUM_50_EST4"/>
-                    <Item name="EST 5" value="40" symbol="VARDECENUM_50_EST5"/>
-                    <Item name="EST 6" value="41" symbol="VARDECENUM_50_EST6"/>
-                    <Item name="EST 7" value="42" symbol="VARDECENUM_50_EST7"/>
-                    <Item name="EST 8" value="43" symbol="VARDECENUM_50_EST8"/>
-                    <Item name="HSOL1" value="2" symbol="VARDECENUM_50_HSOL1"/>
-                    <Item name="HSOL2" value="3" symbol="VARDECENUM_50_HSOL2"/>
-                    <Item name="HSOL3" value="4" symbol="VARDECENUM_50_HSOL3"/>
-                    <Item name="HSOL4" value="5" symbol="VARDECENUM_50_HSOL4"/>
-                    <Item name="START" value="6" symbol="VARDECENUM_50_START"/>
-                    <Item name="OILP" value="11" symbol="VARDECENUM_50_OILP"/>
-                    <Item name="FINJ1" value="12" symbol="VARDECENUM_50_FINJ1"/>
+                    <Item name="No Alias Protect" value="0" symbol="VARDECENUM_50_NOALIASPROTECT"/>
+                    <Item name="Use Alias Protect" value="1" symbol="VARDECENUM_50_USEALIASPROTECT"/>
                 </Enum>
                 
                 <Enum>
                     <Name>VarDecEnum_51</Name>
-                    <Item name="(None)" value="-1" symbol="VARDECENUM_51_OPENPARENNONECLOSEPAREN"/>
-                    <Item name="AN1M" value="56" symbol="VARDECENUM_51_AN1M"/>
-                    <Item name="AN10M" value="65" symbol="VARDECENUM_51_AN10M"/>
-                    <Item name="AN11M" value="66" symbol="VARDECENUM_51_AN11M"/>
-                    <Item name="AN12M" value="67" symbol="VARDECENUM_51_AN12M"/>
-                    <Item name="AN13M" value="68" symbol="VARDECENUM_51_AN13M"/>
-                    <Item name="AN14M" value="69" symbol="VARDECENUM_51_AN14M"/>
-                    <Item name="AN15M" value="70" symbol="VARDECENUM_51_AN15M"/>
-                    <Item name="AN16M" value="71" symbol="VARDECENUM_51_AN16M"/>
-                    <Item name="AN17M" value="72" symbol="VARDECENUM_51_AN17M"/>
-                    <Item name="AN18M" value="73" symbol="VARDECENUM_51_AN18M"/>
-                    <Item name="AN19M" value="74" symbol="VARDECENUM_51_AN19M"/>
-                    <Item name="AN2M" value="57" symbol="VARDECENUM_51_AN2M"/>
-                    <Item name="O2A" value="90" symbol="VARDECENUM_51_O2A"/>
-                    <Item name="O2B" value="91" symbol="VARDECENUM_51_O2B"/>
-                    <Item name="DG1M" value="93" symbol="VARDECENUM_51_DG1M"/>
-                    <Item name="DG2M" value="94" symbol="VARDECENUM_51_DG2M"/>
-                    <Item name="DG4M" value="96" symbol="VARDECENUM_51_DG4M"/>
-                    <Item name="ESTOP" value="97" symbol="VARDECENUM_51_ESTOP"/>
-                    <Item name="AN3M" value="58" symbol="VARDECENUM_51_AN3M"/>
-                    <Item name="AN4M" value="59" symbol="VARDECENUM_51_AN4M"/>
-                    <Item name="AN5M" value="60" symbol="VARDECENUM_51_AN5M"/>
-                    <Item name="AN6M" value="61" symbol="VARDECENUM_51_AN6M"/>
-                    <Item name="AN7M" value="62" symbol="VARDECENUM_51_AN7M"/>
-                    <Item name="AN8M" value="63" symbol="VARDECENUM_51_AN8M"/>
-                    <Item name="AN9M" value="64" symbol="VARDECENUM_51_AN9M"/>
+                    <Item name="Digital Input" value="0" symbol="VARDECENUM_51_DIGITALINPUT"/>
+                    <Item name="VR Input" value="1" symbol="VARDECENUM_51_VRINPUT"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_52</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_52_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="FUELP" value="0" symbol="VARDECENUM_52_FUELP"/>
+                    <Item name="FINJ2" value="13" symbol="VARDECENUM_52_FINJ2"/>
+                    <Item name="FINJ3" value="14" symbol="VARDECENUM_52_FINJ3"/>
+                    <Item name="FINJ4" value="15" symbol="VARDECENUM_52_FINJ4"/>
+                    <Item name="FINJ5" value="16" symbol="VARDECENUM_52_FINJ5"/>
+                    <Item name="FINJ6" value="17" symbol="VARDECENUM_52_FINJ6"/>
+                    <Item name="AINJ1" value="18" symbol="VARDECENUM_52_AINJ1"/>
+                    <Item name="AINJ2" value="19" symbol="VARDECENUM_52_AINJ2"/>
+                    <Item name="AINJ3" value="20" symbol="VARDECENUM_52_AINJ3"/>
+                    <Item name="AINJ4" value="21" symbol="VARDECENUM_52_AINJ4"/>
+                    <Item name="AINJ5" value="22" symbol="VARDECENUM_52_AINJ5"/>
+                    <Item name="ETC" value="1" symbol="VARDECENUM_52_ETC"/>
+                    <Item name="AINJ6" value="23" symbol="VARDECENUM_52_AINJ6"/>
+                    <Item name="TACH" value="24" symbol="VARDECENUM_52_TACH"/>
+                    <Item name="EST 1" value="36" symbol="VARDECENUM_52_EST1"/>
+                    <Item name="EST 2" value="37" symbol="VARDECENUM_52_EST2"/>
+                    <Item name="EST 3" value="38" symbol="VARDECENUM_52_EST3"/>
+                    <Item name="EST 4" value="39" symbol="VARDECENUM_52_EST4"/>
+                    <Item name="EST 5" value="40" symbol="VARDECENUM_52_EST5"/>
+                    <Item name="EST 6" value="41" symbol="VARDECENUM_52_EST6"/>
+                    <Item name="EST 7" value="42" symbol="VARDECENUM_52_EST7"/>
+                    <Item name="EST 8" value="43" symbol="VARDECENUM_52_EST8"/>
+                    <Item name="HSOL1" value="2" symbol="VARDECENUM_52_HSOL1"/>
+                    <Item name="HSOL2" value="3" symbol="VARDECENUM_52_HSOL2"/>
+                    <Item name="HSOL3" value="4" symbol="VARDECENUM_52_HSOL3"/>
+                    <Item name="HSOL4" value="5" symbol="VARDECENUM_52_HSOL4"/>
+                    <Item name="START" value="6" symbol="VARDECENUM_52_START"/>
+                    <Item name="OILP" value="11" symbol="VARDECENUM_52_OILP"/>
+                    <Item name="FINJ1" value="12" symbol="VARDECENUM_52_FINJ1"/>
+                </Enum>
+                
+                <Enum>
+                    <Name>VarDecEnum_53</Name>
+                    <Item name="(None)" value="-1" symbol="VARDECENUM_53_OPENPARENNONECLOSEPAREN"/>
+                    <Item name="AN1M" value="56" symbol="VARDECENUM_53_AN1M"/>
+                    <Item name="AN10M" value="65" symbol="VARDECENUM_53_AN10M"/>
+                    <Item name="AN11M" value="66" symbol="VARDECENUM_53_AN11M"/>
+                    <Item name="AN12M" value="67" symbol="VARDECENUM_53_AN12M"/>
+                    <Item name="AN13M" value="68" symbol="VARDECENUM_53_AN13M"/>
+                    <Item name="AN14M" value="69" symbol="VARDECENUM_53_AN14M"/>
+                    <Item name="AN15M" value="70" symbol="VARDECENUM_53_AN15M"/>
+                    <Item name="AN16M" value="71" symbol="VARDECENUM_53_AN16M"/>
+                    <Item name="AN17M" value="72" symbol="VARDECENUM_53_AN17M"/>
+                    <Item name="AN18M" value="73" symbol="VARDECENUM_53_AN18M"/>
+                    <Item name="AN19M" value="74" symbol="VARDECENUM_53_AN19M"/>
+                    <Item name="AN2M" value="57" symbol="VARDECENUM_53_AN2M"/>
+                    <Item name="O2A" value="90" symbol="VARDECENUM_53_O2A"/>
+                    <Item name="O2B" value="91" symbol="VARDECENUM_53_O2B"/>
+                    <Item name="DG1M" value="93" symbol="VARDECENUM_53_DG1M"/>
+                    <Item name="DG2M" value="94" symbol="VARDECENUM_53_DG2M"/>
+                    <Item name="DG4M" value="96" symbol="VARDECENUM_53_DG4M"/>
+                    <Item name="ESTOP" value="97" symbol="VARDECENUM_53_ESTOP"/>
+                    <Item name="AN3M" value="58" symbol="VARDECENUM_53_AN3M"/>
+                    <Item name="AN4M" value="59" symbol="VARDECENUM_53_AN4M"/>
+                    <Item name="AN5M" value="60" symbol="VARDECENUM_53_AN5M"/>
+                    <Item name="AN6M" value="61" symbol="VARDECENUM_53_AN6M"/>
+                    <Item name="AN7M" value="62" symbol="VARDECENUM_53_AN7M"/>
+                    <Item name="AN8M" value="63" symbol="VARDECENUM_53_AN8M"/>
+                    <Item name="AN9M" value="64" symbol="VARDECENUM_53_AN9M"/>
                 </Enum>
                 
                 <Enum>
@@ -13398,17 +13429,34 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
-			    <DataStoreVarDec ref="OpenThrottleFPCScalar">
+			    <DataStoreVarDec ref="OpenThrottleFPCScalar_TPS">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
         		                <exp>1.0</exp>
         		                <format>4.2</format>
         		                <gain>1.0</gain>
-        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling</group>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|TPSEnrichment</group>
         		                <help>Crank FPC is scaled up with throttle opening for mechanical throttle systems, this parameter sets the gain for this relationship.  CrankFPC=CrankFPC*(1+TPS/100*FPCScalar).</help>
         		                <max>100000000000000000.000000</max>
         		                <min>-100000000000000000.000000</min>
-        		                <name>OpenThrottleFPCScalar</name>
+        		                <name>OpenThrottleFPCScalar_TPS</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <units>Mult</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="OpenThrottleFPCScalar_ETC">
+        		                <access>RW RW RW RW</access>
+        		                <class>VAR</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|TPSEnrichment</group>
+        		                <help>Crank FPC is scaled up with throttle opening for mechanical throttle systems, this parameter sets the gain for this relationship.  CrankFPC=CrankFPC*(1+TPS/100*FPCScalar).</help>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>OpenThrottleFPCScalar_ETC</name>
         		                <offset>0.0</offset>
         		                <storage>FLASH</storage>
         		                <units>Mult</units>
@@ -24214,6 +24262,22 @@
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="VEAdpatSource">
+        		                <access>RW RW RW RW</access>
+        		                <class>ENUM</class>
+        		                <enum_name>VarDecEnum_28</enum_name>
+        		                <exp>1.0</exp>
+        		                <format>1.0</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|VirtualSensors|AirCalcs|Speed Density - MAP Referenced - Adaptive|VE Adapt Source</group>
+        		                <max>1.000000</max>
+        		                <min>0.000000</min>
+        		                <name>VEAdpatSource</name>
+        		                <offset>0.0</offset>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
 			    <DataStoreVarDec ref="VEAdaptTemp">
         		                <access>RW RW RW RW</access>
         		                <class>VAR</class>
@@ -24639,7 +24703,7 @@
 			    <DataStoreVarDec ref="EncoderSyncEdge">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -24656,7 +24720,7 @@
 			    <DataStoreVarDec ref="EncoderCamSyncEdge">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -24673,7 +24737,7 @@
 			    <DataStoreVarDec ref="EncoderCrankPullup">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_35</enum_name>
+        		                <enum_name>VarDecEnum_37</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -24690,7 +24754,7 @@
 			    <DataStoreVarDec ref="EncoderCamPullup">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_35</enum_name>
+        		                <enum_name>VarDecEnum_37</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -27802,7 +27866,7 @@
 			    <DataStoreVarDec ref="EST_InitialPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_36</enum_name>
+        		                <enum_name>VarDecEnum_38</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -27819,7 +27883,7 @@
 			    <DataStoreVarDec ref="EST_SequenceType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_37</enum_name>
+        		                <enum_name>VarDecEnum_39</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -28255,6 +28319,39 @@
         		                <offset>0</offset>
         		                <storage>RAM</storage>
         		                <units>idx.frac</units>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CrankPulseTbl">
+        		                <access>RW RW RW RW</access>
+        		                <class>interpolation_1d</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|FuelPulse</group>
+        		                <len>5</len>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>CrankPulseTbl</name>
+        		                <offset>0.0</offset>
+        		                <output>CrankPulse</output>
+        		                <prelookup>CrankECT05IdxArr</prelookup>
+        		                <storage>FLASH</storage>
+        		                <update>BACKGND</update>
+        		                <vector_style>wide</vector_style>
+			    </DataStoreVarDec>
+			    <DataStoreVarDec ref="CrankPulse">
+        		                <access>RO RO RO RO</access>
+        		                <class>var</class>
+        		                <exp>1.0</exp>
+        		                <format>4.2</format>
+        		                <gain>1.0</gain>
+        		                <group>BaseEngineController_LS|Foreground|Control|Controller|Crank|CrankFueling|FuelPulse</group>
+        		                <max>100000000000000000.000000</max>
+        		                <min>-100000000000000000.000000</min>
+        		                <name>CrankPulse</name>
+        		                <offset>0.0</offset>
+        		                <storage>RAM</storage>
         		                <update>BACKGND</update>
         		                <vector_style>wide</vector_style>
 			    </DataStoreVarDec>
@@ -32286,7 +32383,7 @@
 			    <DataStoreVarDec ref="INJ_InitialPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_38</enum_name>
+        		                <enum_name>VarDecEnum_40</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32303,7 +32400,7 @@
 			    <DataStoreVarDec ref="INJ_SequenceType">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_39</enum_name>
+        		                <enum_name>VarDecEnum_41</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32320,7 +32417,7 @@
 			    <DataStoreVarDec ref="INJ_Behavior">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_40</enum_name>
+        		                <enum_name>VarDecEnum_42</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32762,7 +32859,7 @@
         		                <access>RO RO RO RO</access>
         		                <class>ENUMARR</class>
                                 <col_header>
-                                    <enum_name>VarDecEnum_42</enum_name>
+                                    <enum_name>VarDecEnum_44</enum_name>
                                 </col_header>
         		                <enum_name>Faults</enum_name>
         		                <format>3.0</format>
@@ -32772,7 +32869,7 @@
         		                <min>0.000000</min>
         		                <name>FaultActionReason</name>
                                 <row_header>
-                                    <enum_name>VarDecEnum_43</enum_name>
+                                    <enum_name>VarDecEnum_45</enum_name>
                                 </row_header>
         		                <storage>RAM</storage>
         		                <update>BACKGND</update>
@@ -32781,7 +32878,7 @@
 			    <DataStoreVarDec ref="MAPSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32798,7 +32895,7 @@
 			    <DataStoreVarDec ref="MAPSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32815,7 +32912,7 @@
 			    <DataStoreVarDec ref="ECTSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32832,7 +32929,7 @@
 			    <DataStoreVarDec ref="ECTSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32849,7 +32946,7 @@
 			    <DataStoreVarDec ref="IATSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32866,7 +32963,7 @@
 			    <DataStoreVarDec ref="IATSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32883,7 +32980,7 @@
 			    <DataStoreVarDec ref="EVAPSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32900,7 +32997,7 @@
 			    <DataStoreVarDec ref="EVAPSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32917,7 +33014,7 @@
 			    <DataStoreVarDec ref="CATSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32934,7 +33031,7 @@
 			    <DataStoreVarDec ref="CATSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32951,7 +33048,7 @@
 			    <DataStoreVarDec ref="FuelLvlSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -32968,7 +33065,7 @@
 			    <DataStoreVarDec ref="FuelLvlSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -32985,12 +33082,12 @@
 			    <DataStoreVarDec ref="ACPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_46</enum_name>
+        		                <enum_name>VarDecEnum_48</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut4942p0011</help>
+        		                <help>Digital output pin selection for DOut10176p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>ACPin</name>
@@ -33002,7 +33099,7 @@
 			    <DataStoreVarDec ref="APP2AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33019,7 +33116,7 @@
 			    <DataStoreVarDec ref="APP2AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33036,7 +33133,7 @@
 			    <DataStoreVarDec ref="APP1AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33053,7 +33150,7 @@
 			    <DataStoreVarDec ref="APP1AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33070,7 +33167,7 @@
 			    <DataStoreVarDec ref="ACPresPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33087,7 +33184,7 @@
 			    <DataStoreVarDec ref="ACPresPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33104,7 +33201,7 @@
 			    <DataStoreVarDec ref="ACSwPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33121,7 +33218,7 @@
 			    <DataStoreVarDec ref="ACSwPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33138,7 +33235,7 @@
 			    <DataStoreVarDec ref="TPS1AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33155,7 +33252,7 @@
 			    <DataStoreVarDec ref="TPS1AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33172,7 +33269,7 @@
 			    <DataStoreVarDec ref="TPS2AnalogInput">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33189,7 +33286,7 @@
 			    <DataStoreVarDec ref="TPS2AnalogInput_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33206,7 +33303,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_47</enum_name>
+        		                <enum_name>VarDecEnum_49</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33223,7 +33320,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33240,7 +33337,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_48</enum_name>
+        		                <enum_name>VarDecEnum_50</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33274,7 +33371,7 @@
 			    <DataStoreVarDec ref="FuelSensorPin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_49</enum_name>
+        		                <enum_name>VarDecEnum_51</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33291,7 +33388,7 @@
 			    <DataStoreVarDec ref="VSPD_Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_47</enum_name>
+        		                <enum_name>VarDecEnum_49</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33308,7 +33405,7 @@
 			    <DataStoreVarDec ref="VSPD_Pin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33325,7 +33422,7 @@
 			    <DataStoreVarDec ref="VSPD_Pin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_48</enum_name>
+        		                <enum_name>VarDecEnum_50</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33359,7 +33456,7 @@
 			    <DataStoreVarDec ref="VSPD_Pin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_49</enum_name>
+        		                <enum_name>VarDecEnum_51</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33376,7 +33473,7 @@
 			    <DataStoreVarDec ref="SysVoltage">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33393,7 +33490,7 @@
 			    <DataStoreVarDec ref="SysVoltage_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33410,7 +33507,7 @@
 			    <DataStoreVarDec ref="MAF_Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_47</enum_name>
+        		                <enum_name>VarDecEnum_49</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33427,7 +33524,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_EdgeDetect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_34</enum_name>
+        		                <enum_name>VarDecEnum_36</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33444,7 +33541,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_AliasProtect">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_48</enum_name>
+        		                <enum_name>VarDecEnum_50</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33478,7 +33575,7 @@
 			    <DataStoreVarDec ref="MAF_Pin_Interface">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_49</enum_name>
+        		                <enum_name>VarDecEnum_51</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33495,7 +33592,7 @@
 			    <DataStoreVarDec ref="ClutchSw_Pin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33512,7 +33609,7 @@
 			    <DataStoreVarDec ref="ClutchSw_Pin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33529,7 +33626,7 @@
 			    <DataStoreVarDec ref="ScramblePin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33546,7 +33643,7 @@
 			    <DataStoreVarDec ref="ScramblePin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33563,7 +33660,7 @@
 			    <DataStoreVarDec ref="FuelPresPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33580,7 +33677,7 @@
 			    <DataStoreVarDec ref="FuelPresPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33597,7 +33694,7 @@
 			    <DataStoreVarDec ref="OilPresPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33614,7 +33711,7 @@
 			    <DataStoreVarDec ref="OilPresPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33631,7 +33728,7 @@
 			    <DataStoreVarDec ref="FAN1Pin_PWM">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_50</enum_name>
+        		                <enum_name>VarDecEnum_52</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33648,7 +33745,7 @@
 			    <DataStoreVarDec ref="FAN2Pin_PWM">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_50</enum_name>
+        		                <enum_name>VarDecEnum_52</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33665,12 +33762,12 @@
 			    <DataStoreVarDec ref="FuelPumpPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_46</enum_name>
+        		                <enum_name>VarDecEnum_48</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
         		                <group>System | I/O Pins | Outputs Config</group>
-        		                <help>Digital output pin selection for DOut5781p0015</help>
+        		                <help>Digital output pin selection for DOut11001p0004</help>
         		                <max>32767.000000</max>
         		                <min>-32768.000000</min>
         		                <name>FuelPumpPin</name>
@@ -33682,7 +33779,7 @@
 			    <DataStoreVarDec ref="ESTOPPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_51</enum_name>
+        		                <enum_name>VarDecEnum_53</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33699,7 +33796,7 @@
 			    <DataStoreVarDec ref="ETCPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_50</enum_name>
+        		                <enum_name>VarDecEnum_52</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33716,7 +33813,7 @@
 			    <DataStoreVarDec ref="IAC_PPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_50</enum_name>
+        		                <enum_name>VarDecEnum_52</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33733,7 +33830,7 @@
 			    <DataStoreVarDec ref="IAC_SPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_50</enum_name>
+        		                <enum_name>VarDecEnum_52</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33750,7 +33847,7 @@
 			    <DataStoreVarDec ref="WASTEGATE">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_50</enum_name>
+        		                <enum_name>VarDecEnum_52</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33767,7 +33864,7 @@
 			    <DataStoreVarDec ref="SensVoltSensorPin">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_44</enum_name>
+        		                <enum_name>VarDecEnum_46</enum_name>
         		                <exp>1</exp>
         		                <format>5.0</format>
         		                <gain>1</gain>
@@ -33784,7 +33881,7 @@
 			    <DataStoreVarDec ref="SensVoltSensorPin_ref">
         		                <access>RW RW RW RW</access>
         		                <class>ENUM</class>
-        		                <enum_name>VarDecEnum_45</enum_name>
+        		                <enum_name>VarDecEnum_47</enum_name>
         		                <exp>1</exp>
         		                <format>3.0</format>
         		                <gain>1</gain>
@@ -33881,17 +33978,17 @@
                 <Command>
                     <Description>Dumping DLL to XML</Description>
                     <Order>10000</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_033.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_033.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\motohawk_dumpdll.exe" -xml  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_035.dll" > "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_035.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Generating ASAP2 file</Description>
                     <Order>10001</Order>
-                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_033.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_033.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
+                    <Execute>@"C:\PROGRA~2\Woodward\MCS\MotoHawk\2011A_~1.184\Bin\ASAP2.exe" -m  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_035.xml" -o  "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_035.a2l" -u VirtualCalSpace -asap1b "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\mh_asap1b_ccp_CCP1.xml"</Execute>
                 </Command>
                 <Command>
                     <Description>Installing ASAP2 file in c:\ecufiles\tdbdll</Description>
                     <Order>10002</Order>
-                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_033.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
+                    <Execute>@copy "C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_Rev2\BaseEngineController_LS_Build\TDB\BaseEngin_035.a2l" "c:\ecufiles\tdbdll" > NUL</Execute>
                 </Command>
         </Add>
     

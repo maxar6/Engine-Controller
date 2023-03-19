@@ -3,10 +3,10 @@
  *
  * Code generated for Simulink model 'BaseEngineController_LS'.
  *
- * Model version                  : 1.2185
+ * Model version                  : 1.2195
  * Simulink Coder version         : 8.0 (R2011a) 09-Mar-2011
  * TLC version                    : 8.0 (Feb  3 2011)
- * C/C++ source code generated on : Mon Nov 21 23:22:06 2022
+ * C/C++ source code generated on : Sun Nov 27 15:42:41 2022
  *
  * Target selection: motohawk_ert_rtw.tlc
  * Embedded hardware selection: Specified
@@ -31,25 +31,25 @@
 /* Child system includes */
 #include "BaseEngineController_LS_IdleStateMachine.h"
 
-/* Block signals for system '<S404>/Collect Average' */
+/* Block signals for system '<S408>/Collect Average' */
 typedef struct {
-  real_T s408_Product;                 /* '<S408>/Product' */
+  real_T s412_Product;                 /* '<S412>/Product' */
 } rtB_CollectAverage_BaseEngineController_LS;
 
-/* Block states (auto storage) for system '<S404>/Collect Average' */
+/* Block states (auto storage) for system '<S408>/Collect Average' */
 typedef struct {
-  real_T s408_UnitDelay1_DSTATE;       /* '<S408>/Unit Delay1' */
-  boolean_T s404_CollectAverage_MODE;  /* '<S404>/Collect Average' */
+  real_T s412_UnitDelay1_DSTATE;       /* '<S412>/Unit Delay1' */
+  boolean_T s408_CollectAverage_MODE;  /* '<S408>/Collect Average' */
 } rtDW_CollectAverage_BaseEngineController_LS;
 
-/* Block signals for system '<S344>/GetInstRPM' */
+/* Block signals for system '<S348>/GetInstRPM' */
 typedef struct {
-  uint16_T s352_motohawk_encoder_instant_rpm;/* '<S352>/motohawk_encoder_instant_rpm' */
+  uint16_T s356_motohawk_encoder_instant_rpm;/* '<S356>/motohawk_encoder_instant_rpm' */
 } rtB_GetInstRPM_BaseEngineController_LS;
 
-/* Block signals for system '<S344>/SafeDivide' */
+/* Block signals for system '<S348>/SafeDivide' */
 typedef struct {
-  uint16_T s354_Product;               /* '<S354>/Product' */
+  uint16_T s358_Product;               /* '<S358>/Product' */
 } rtB_SafeDivide_BaseEngineController_LS;
 
 /* Exported functions */

@@ -1,0 +1,288 @@
+ 
+#############################################
+###                                       ###
+###  Starting MotoHawk Build              ###
+###  MotoHawk version: 2011a_sp0.184      ###
+###    MATLAB version: 7.12.0.635 (R2011a)###
+###        22-Nov-2022 13:20:54           ###
+###                                       ###
+#############################################
+ 
+Target Module:   ECU565-128 (DEV)
+DEV Executable:  BaseEngineController_LS_128_034.srz
+MotoTune DLL:    BaseEngin_034.dll
+ 
+Project GUID:    a749ec14-8a37-4ecf-bb-ef-07-f5-29-2a-95
+Build GUID:      70e4bce9-a719-451e-bc-76-a9-56-b2-7d-46
+ 
+### Starting build procedure for model: BaseEngineController_LS_128
+### Generating code into build folder: C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build
+### Invoking Target Language Compiler on BaseEngineController_LS_128.rtw
+### Using System Target File: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tlc
+### Loading TLC function libraries
+.......................
+### Initial pass through model to cache user defined code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+....................................................
+### Caching model source code
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+......................................................................
+### Writing source file BaseEngineController_LS_128.c
+.
+### Writing header file BaseEngineController_LS_128_private.h
+### Writing header file BaseEngineController_LS_128.h
+.
+### Writing header file BaseEngineController_LS_128_types.h
+### Writing source file BaseEngineController_LS_128_IdleStateMachine.c
+.
+### Writing source file Foreground.c
+### Writing header file Foreground.h
+.
+### Writing header file rtwtypes.h
+### Writing header file rt_zcfcn.h
+.
+### Writing source file rt_zcfcn.c
+### Writing header file rt_nonfinite.h
+.
+### Writing source file rt_nonfinite.c
+### Writing header file BaseEngineController_LS_128_IdleStateMachine.h
+.
+### Writing source file BaseEngineController_LS_128_data.c
+### TLC code generation complete.
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...................................................................### Creating project marker file: rtw_proj.tmw
+.
+### Processing Template Makefile: C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### Creating BaseEngineController_LS_128.mk from C:\Program Files (x86)\Woodward\MCS\MotoHawk\2011a_sp0.184\Blocks\Build\motohawk_ert_rtw.tmf
+### Building BaseEngineController_LS_128: .\BaseEngineController_LS_128.bat
+### Created Code and Build Scripts.  Ready to Build ### 
+### Successful completion of build procedure for model: BaseEngineController_LS_128
+Creating Application Descriptor...
+...Finished Application Descriptor
+### Starting MotoCoder v0.12.4 ###
+Module: ClassicModule-MPC565
+Module File: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/Modules/ClassicModule-MPC565.xml
+Module Family: ClassicControlCore
+Module Family Directory: file:///C:/Program%20Files%20(x86)/Woodward/MCS/MotoHawk/2011a_sp0.184/MotoCoder/ModuleFamilies/ClassicControlCore
+Application Configuration File: .\MotoHawk_Extensions.xml
+### Generating MotoTune DLL 
+Parser mode is C Source Code 
+Searching for files to parse 
+Writing Vardec Library C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\TDB/ParsedVardecs.xml 
+### Completed MotoTune DLL 
+### Compiling and Linking 
+Buildfile: file:///C:/Users/maxar/Documents/GitHub/Engine-Controller/EngineController_128Branch/BaseEngineController_LS_128_Build/BaseEngineController_LS_128.build 
+Target framework: Microsoft .NET Framework 3.5 
+Target(s) specified: rebuild  
+ 
+ 
+rebuild: 
+ 
+ 
+clean: 
+ 
+ 
+all: 
+ 
+ 
+init: 
+ 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Target'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Build\Obj'. 
+    [mkdir] Creating directory 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Archive'. 
+     [copy] Copying 4 files to 'C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Archive'. 
+ 
+compile: 
+ 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Application.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\ApplicationSecurity.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\AppMonitor.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\BaseEngineController_LS_128.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\BaseEngineController_LS_128_data.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\BaseEngineController_LS_128_IdleStateMachine.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\CANReceiveDispatcher.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\EncoderCallback.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\FaultManager.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Foreground.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\InjectorSequenceCallback_41.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\IOCallbacks.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\mh_ccp_protocol.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\mh_ccp_protocol_CCP1.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\MotoCoder_DataStore.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\MotoCoder_Timer.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\MotoHawk_CAN.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\MotoHawk_DataStores.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\MotoHawk_IO.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\rt_nonfinite.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\rt_zcfcn.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\TableLookupFunctions.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_BGND_BASEx10_PERIODIC_12070p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_BGND_BASEx2_PERIODIC_12069p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_BGND_BASE_PERIODIC_11570p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_BGND_BASE_PERIODIC_12068p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_CAN_RX_BusCAN_1_Buf14.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_Encoder_Fault_31.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_20XRTI_PERIODIC_10085p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_20XRTI_PERIODIC_12067p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_20XRTI_PERIODIC_9951p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_1093p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_1094p0005.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_11294p0006.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_12064p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_5057p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_9815p0006.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_5XRTI_PERIODIC_9816p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_HIRES_12345p0009.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_HIRES_6521p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_MID_TDC_EVENT_12066p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_MID_TDC_EVENT_9721p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_RTI_PERIODIC_11578p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_RTI_PERIODIC_12065p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_TDC1_EVENT_869p0001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_TDC_EVENT_10780p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_FGND_TDC_EVENT_8437p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_IDLE_EVENT_11990p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_IDLE_EVENT_9p001.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_ONE_SECOND_EVENT_12071p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_STARTUP_EVENT_11965p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\Trigger_STARTUP_EVENT_9720p0004.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\VarDecs.c 
+  [gcc-cpp] Compiling C:\Users\maxar\Documents\GitHub\Engine-Controller\EngineController_128Branch\BaseEngineController_LS_128_Build\TDB\TableDB.c 
+ 
+link: 
+ 
+   [gcc-ld] Linking BaseEngineController_LS_128.elf 
+ 
+s-records: 
+ 
+[gcc-objcopy] Generating BaseEngineController_LS_128.run from BaseEngineController_LS_128.elf 
+ 
+BUILD SUCCEEDED 
+ 
+Total time: 17.6 seconds. 
+ 
+### Call MotoConvert 
+Project format is MPC5xx 
+Toolchain format is GCC 
+Transforming range 0x00400000-0x0041FFFF into 64 byte pages... 
+Transforming range 0x00000000-0x000FFFFF into 64 byte pages... 
+Searching for Table Database address 'EriRequestTableList'...Found at 0x0005EFFB 
+Searching for CRC Table address 'g_pCRCBlockPtr' ...Found at 0x00010000 
+Calculating Application defined CRC's...OK. 
+Searching for initialised section '.fixed_ramcals' aliased to '.fixed_romcals' ... 
+Searching for initialised section '.ramcals' aliased to '.romcals' ... 
+    Adding RAM[0x003F8288], ROM[0x000686E0], Length[0x000008E8] 
+Searching for initialised section '.sdata' aliased to '.romsdata' ... 
+    Adding RAM[0x003F7000], ROM[0x00068FF8], Length[0x00000019] 
+Searching for initialised section '.data' aliased to '.romdata' ... 
+    Ignoring zero length section at RAM[0x003F8288], ROM[0x00069014] 
+Complete. 
+Writing file sr://BaseEngineController_LS_128.sr... 
+Encrypting 'sr://BaseEngineController_LS_128.sr' into 'srz://.\Target\BaseEngineController_LS_128_034.srz' ... 
+Done. 
+### Creating Build Statistics 
+Memory Summary:
+	FLASH:                                   361574 bytes   37% of 982784
+	    BaseEngineController_LS_128_M:            4 bytes    0% of 982784
+	    NonVolatileDefault:                    2280 bytes    0% of 982784
+	    BaseEngineController_LS_128_Foreground:69180 bytes    7% of 982784
+	DECRAM:                                    4096 bytes  100% of   4096
+	    FgndTimeStack:                         4096 bytes  100% of   4096
+	INTERNAL_RAM:                             10244 bytes   28% of  36720
+	    NonVolatileWork:                       2280 bytes    6% of  36720
+	    BgndStack:                             1024 bytes    3% of  36720
+	    IdleStack:                             1024 bytes    3% of  36720
+	    InterruptStack:                        1280 bytes    3% of  36720
+	EXTENDED_RAM:                              7573 bytes    1% of  1024K
+	    BaseEngineController_LS_128_B:         1700 bytes    0% of  1024K
+	    BaseEngineController_LS_128_DWork:     1200 bytes    0% of  1024K
+	    BaseEngineController_LS_128_M_:          16 bytes    0% of  1024K
+	    VolatileWork:                            15 bytes    0% of  1024K
+	CAL_SPACE:                                29616 bytes   45% of  65536
+	    ConstantWork:                         29460 bytes   45% of  65536
+	EEPROM_SPACE:                              2283 bytes   28% of   8192
+
+### Copy BaseEngin_034.dll and BaseEngineController_LS_128_034.srz 
+### Dumping DLL to XML 
+### Generating ASAP2 file 
+### Installing ASAP2 file in c:\ecufiles\tdbdll 
+### Successful Build with MotoCoder 
+Elapsed Build Time: 3 minutes, 16.9 seconds  (196.9 seconds)
+{Warning: Block diagram 'BaseEngineController_LS_128' contains disabled library links.  Use Model Advisor to find the disabled links in non-library models.  The diagram has been saved but
+may not contain what you intended.} 
+{Warning: Block diagram 'BaseEngineController_LS_128' contains one or more parameterized library links.  To find the parameterized links use the Model Advisor.  The diagram has been saved
+but may not behave as you intended.} 
+ 
+#############################################################################
+###
+### Target Module: ECU565-128
+### Created Development Executable: BaseEngineController_LS_128_034.srz
+### Created MotoTune DLL: BaseEngin_034.dll
+###
+### Successful MotoHawk Build for model: BaseEngineController_LS_128
+###
+#############################################################################
+ 

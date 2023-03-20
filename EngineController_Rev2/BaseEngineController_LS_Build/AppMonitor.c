@@ -23,6 +23,11 @@ Calconst E_ApplicationInitStatus ApplicationPausePoint __SECTION_CALS_RODATA__ =
    Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
 Calconst uint2 FgndTimeStackMargin __SECTION_CALS_RODATA__ = 512;
 
+/* Name: FgndAngleStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
+   Min:0 Max:1024.0 Format:5.0 UpdateID:REMOTE Struct:FgndAngleStackMargin
+   Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
+Calconst uint2 FgndAngleStackMargin __SECTION_CALS_RODATA__ = 256;
+
 /* Name: BgndStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
    Min:0 Max:1024.0 Format:5.0 UpdateID:REMOTE Struct:BgndStackMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
@@ -34,12 +39,12 @@ Calconst uint2 BgndStackMargin __SECTION_CALS_RODATA__ = 256;
 Calconst uint2 IdleStackMargin __SECTION_CALS_RODATA__ = 256;
 
 /* Name: InterruptStackMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:1280.0 Format:5.0 UpdateID:REMOTE Struct:InterruptStackMargin
+   Min:0 Max:1152.0 Format:5.0 UpdateID:REMOTE Struct:InterruptStackMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available stack space drops below this threshold, the application performs a safety stop" */
 Calconst uint2 InterruptStackMargin __SECTION_CALS_RODATA__ = 128;
 
 /* Name: HeapMargin CType:uint2 ClassID:VAR StorageID:FLASH Access:RW4+RW3+RO2+RO1 TypeID:UINT2 Gain:1
-   Min:0 Max:2048.0 Format:5.0 UpdateID:REMOTE Struct:HeapMargin
+   Min:0 Max:4480.0 Format:5.0 UpdateID:REMOTE Struct:HeapMargin
    Group:"System | Debug | Application Monitor Config" Help:"When the available heap drops below this threshold, the application performs a safety stop" */
 Calconst uint2 HeapMargin __SECTION_CALS_RODATA__ = 256;
 
@@ -219,7 +224,7 @@ void CheckApplicationStatus(void)
         stopApplication = 1;
         ApplicationStopReason = (AppAssertBase_ + 6);
         ApplicationStopReasonBlock = (AppAssertBase_ + 6);
-      } else if (g_u4PeakHeapBytesUsed > (2048 - HeapMargin)) {
+      } else if (g_u4PeakHeapBytesUsed > (4480 - HeapMargin)) {
         stopApplication = 1;
         ApplicationStopReason = (AppAssertBase_ + 4);
         ApplicationStopReasonBlock = (AppAssertBase_ + 4);
@@ -245,7 +250,7 @@ void CheckApplicationStatus(void)
   if (stopApplication) {
     ApplicationStatus = APPLICATION_STOP;
 
-    /* S-Function Block: <S493>/motohawk_encoder_pseudo */
+    /* S-Function Block: <S472>/motohawk_encoder_pseudo */
     {
       /* Turn off Pseudo-Encoder on Stop */
       S_EncoderResourceAttributes EncoderAttribsObj;
@@ -266,21 +271,21 @@ void CheckApplicationStatus(void)
               index), 1, SEQ_DISABLED);
           }
 
-          (&BaseEngineController_LS_DWork.s808_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s744_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 1) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_LS_DWork.s808_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s744_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         } else if ((INJ_SequenceType_DataStore()) == 2) {
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         0, SEQ_DISABLED);
           SetSeqOutCond((E_ModuleResource) ((INJ_InitialPin_DataStore()) + index),
                         1, SEQ_DISABLED);
-          (&BaseEngineController_LS_DWork.s808_InjectorSequence_DWORK1[0])[index]
+          (&BaseEngineController_LS_DWork.s744_InjectorSequence_DWORK1[0])[index]
             = SEQ_DISABLED;
         }
       }
@@ -326,24 +331,6 @@ void CheckApplicationStatus(void)
       /* Turn off PWM output */
       extern void ETCPin_PWMOutput_PWMOutput_Stop(void);
       ETCPin_PWMOutput_PWMOutput_Stop();
-    }
-
-    {
-      /* Turn off PWM output */
-      extern void IAC_PPin_PWMOutput_PWMOutput_Stop(void);
-      IAC_PPin_PWMOutput_PWMOutput_Stop();
-    }
-
-    {
-      /* Turn off PWM output */
-      extern void IAC_SPin_PWMOutput_PWMOutput_Stop(void);
-      IAC_SPin_PWMOutput_PWMOutput_Stop();
-    }
-
-    {
-      /* Turn off PWM output */
-      extern void WASTEGATE_PWMOutput_PWMOutput_Stop(void);
-      WASTEGATE_PWMOutput_PWMOutput_Stop();
     }
   } else {
     boolean_T zeroSeen = 0;

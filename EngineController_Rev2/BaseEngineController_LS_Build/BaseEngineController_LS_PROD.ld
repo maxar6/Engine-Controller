@@ -269,7 +269,7 @@ SECTIONS
     {
         PROVIDE (__heap_start = .);
         PROVIDE (__ghsbegin_heap = .);
-        . += 2048;
+        . += 4480;
         PROVIDE (__ghsend_heap = .);
         PROVIDE (__heap_end = .);
     } > INTERNAL_RAM

@@ -311,13 +311,12 @@ typedef enum {
   VarDecEnum_44_5 = 5,                 /* EnumTxt:"DisableFanStall" */
   VarDecEnum_44_6 = 6,                 /* EnumTxt:"DisableO2Ctrl" */
   VarDecEnum_44_7 = 7,                 /* EnumTxt:"DisableVEAdapt" */
-  VarDecEnum_44_8 = 8,                 /* EnumTxt:"DisableWastegate" */
-  VarDecEnum_44_9 = 9,                 /* EnumTxt:"EngineProtectLED" */
-  VarDecEnum_44_10 = 10,               /* EnumTxt:"EngineShutdown" */
-  VarDecEnum_44_11 = 11,               /* EnumTxt:"HardRevLimit" */
-  VarDecEnum_44_12 = 12,               /* EnumTxt:"MIL_LED" */
-  VarDecEnum_44_13 = 13,               /* EnumTxt:"MediumRevLimit" */
-  VarDecEnum_44_14 = 14,               /* EnumTxt:"SoftRevLimit" */
+  VarDecEnum_44_8 = 8,                 /* EnumTxt:"EngineProtectLED" */
+  VarDecEnum_44_9 = 9,                 /* EnumTxt:"EngineShutdown" */
+  VarDecEnum_44_10 = 10,               /* EnumTxt:"HardRevLimit" */
+  VarDecEnum_44_11 = 11,               /* EnumTxt:"MIL_LED" */
+  VarDecEnum_44_12 = 12,               /* EnumTxt:"MediumRevLimit" */
+  VarDecEnum_44_13 = 13,               /* EnumTxt:"SoftRevLimit" */
 } VarDecEnum_44;
 
 /* Name: VarDecEnum_45 ClassID:ENUMDEC EnumDflt:"Unknown" */

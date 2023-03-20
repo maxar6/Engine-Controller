@@ -3,8 +3,8 @@
 	<GUID>12a6a62d-313f-46e5-b8-3a-e7-49-fb-00-a9</GUID>
 	<Name>BaseEngineController_LS</Name>
 	<Author>maxar</Author>
-	<Copyright>2022 Woodward.</Copyright>
-	<CreateDate>27-Nov-2022</CreateDate>
+	<Copyright>2023 Woodward.</Copyright>
+	<CreateDate>19-Mar-2023</CreateDate>
 	<MemoryLayout>DEV</MemoryLayout>
 	<Module>ClassicModule-MPC555</Module>
 	<Memory/>
@@ -25,9 +25,9 @@
 			</TableDatabase>
 			<ProjectID>6</ProjectID>
 			<ProductID>1</ProductID>
-			<SwIdTxt>BaseEngin_035</SwIdTxt>
-			<SwRevisionTxt>BaseEngineController_LS_035</SwRevisionTxt>
-			<CalIdTxt>BaseEngineController_LS_035_000</CalIdTxt>
+			<SwIdTxt>BaseEngin_042</SwIdTxt>
+			<SwRevisionTxt>BaseEngineController_LS_042</SwRevisionTxt>
+			<CalIdTxt>BaseEngineController_LS_042_000</CalIdTxt>
 		</VarDecs>
 		<DatabaseBuild>
 			<Toolchain>
@@ -38,10 +38,10 @@
 			</Toolchain>
 		</DatabaseBuild>
 		<Command>
-			<Description>Copy BaseEngin_035.dll and BaseEngineController_LS_035.srz</Description>
+			<Description>Copy BaseEngin_042.dll and BaseEngineController_LS_042.srz</Description>
 			<Order>99</Order>
-			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_035.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
-			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_035.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
+			<Execute>@if exist c:\ecufiles\tdbdll\*.* copy /Y .\TDB\BaseEngin_042.dll c:\ecufiles\tdbdll &gt; NUL</Execute>
+			<Execute>@if exist C:\ECUFiles\Programs\\*.* copy /Y .\Target\BaseEngineController_LS_042.srz C:\ECUFiles\Programs\ &gt; NUL</Execute>
 		</Command>
 	</ToolInterface>
 	<Build>
@@ -72,36 +72,36 @@
 			<File>MotoHawk_DataStores.c</File>
 			<File>MotoHawk_IO.c</File>
 			<File>TableLookupFunctions.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_11570p0004.c</File>
-			<File>Trigger_BGND_BASE_PERIODIC_21497p0002.c</File>
-			<File>Trigger_BGND_BASEx10_PERIODIC_21499p0002.c</File>
-			<File>Trigger_BGND_BASEx2_PERIODIC_21498p0002.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_12031p0005.c</File>
+			<File>Trigger_BGND_BASE_PERIODIC_12601p0001.c</File>
+			<File>Trigger_BGND_BASEx10_PERIODIC_12603p0001.c</File>
+			<File>Trigger_BGND_BASEx2_PERIODIC_12602p0001.c</File>
 			<File>Trigger_CAN_RX_BusCAN_1_Buf14.c</File>
 			<File>Trigger_Encoder_Fault_33.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_10085p0004.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_21496p0002.c</File>
-			<File>Trigger_FGND_20XRTI_PERIODIC_9951p0004.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_1093p0005.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_1094p0005.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_11294p0006.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_21493p0002.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_5057p0001.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_9815p0006.c</File>
-			<File>Trigger_FGND_5XRTI_PERIODIC_9816p0004.c</File>
-			<File>Trigger_FGND_HIRES_23571p0001.c</File>
-			<File>Trigger_FGND_HIRES_6521p0004.c</File>
-			<File>Trigger_FGND_MID_TDC_EVENT_21495p0002.c</File>
-			<File>Trigger_FGND_MID_TDC_EVENT_9721p0004.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_11578p0004.c</File>
-			<File>Trigger_FGND_RTI_PERIODIC_21494p0002.c</File>
-			<File>Trigger_FGND_TDC1_EVENT_869p0001.c</File>
-			<File>Trigger_FGND_TDC_EVENT_10780p0004.c</File>
-			<File>Trigger_FGND_TDC_EVENT_8437p0004.c</File>
-			<File>Trigger_IDLE_EVENT_21418p0002.c</File>
-			<File>Trigger_IDLE_EVENT_9p001.c</File>
-			<File>Trigger_ONE_SECOND_EVENT_21500p0002.c</File>
-			<File>Trigger_STARTUP_EVENT_21393p0002.c</File>
-			<File>Trigger_STARTUP_EVENT_9720p0004.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_12600p0001.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_9388p0006.c</File>
+			<File>Trigger_FGND_20XRTI_PERIODIC_9522p0006.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_10731p0011.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_11691p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_11692p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_12597p0001.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_4424p0009.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_9252p0009.c</File>
+			<File>Trigger_FGND_5XRTI_PERIODIC_9253p0006.c</File>
+			<File>Trigger_FGND_HIRES_17967p0001.c</File>
+			<File>Trigger_FGND_HIRES_5882p001.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_12599p0001.c</File>
+			<File>Trigger_FGND_MID_TDC_EVENT_9158p0006.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_12039p0005.c</File>
+			<File>Trigger_FGND_RTI_PERIODIC_12598p0001.c</File>
+			<File>Trigger_FGND_TDC1_EVENT_11111p0007.c</File>
+			<File>Trigger_FGND_TDC_EVENT_10217p0009.c</File>
+			<File>Trigger_FGND_TDC_EVENT_7871p001.c</File>
+			<File>Trigger_IDLE_EVENT_11p0013.c</File>
+			<File>Trigger_IDLE_EVENT_12528p0001.c</File>
+			<File>Trigger_ONE_SECOND_EVENT_12604p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_12503p0001.c</File>
+			<File>Trigger_STARTUP_EVENT_9157p0006.c</File>
 			<File>VarDecs.c</File>
 			<File>mh_ccp_protocol.c</File>
 			<File>mh_ccp_protocol_CCP1.c</File>
@@ -127,7 +127,7 @@
 		</Command>
 		<Command>
 			<Description>Call MotoConvert</Description>
-			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_035.srz</Execute>
+			<Execute>@"%MOTOCODER_DIR%\bin\MotoConvert.exe" -project=MPC5xx -map=.\Target\BaseEngineController_LS.map -srec=.\Target\BaseEngineController_LS.run -tdbver=1 -tdb=EriRequestTableList -crctable=g_pCRCBlockPtr -InitialisedRAM=.fixed_ramcals,.fixed_romcals -InitialisedRAM=.ramcals,.romcals -InitialisedRAM=.sdata,.romsdata -out=BaseEngineController_LS.sr -TransformBetween=0x00400000-0x0041FFFF -TransformBetween=0x00000000-0x0006FFFF -toolchain=GCC -InitialisedRAM=.data,.romdata -encrypt=.\Target\BaseEngineController_LS_042.srz</Execute>
 			<Order>55</Order>
 		</Command>
 		<Compiler>
@@ -161,5 +161,5 @@
 			<Execute>@if exist .\rtwtypes.h del /Q /F .\rtwtypes.h &gt; NUL</Execute>
 		</Command>
 	</Build>
-	<Signature>d6412731-cb15-4dba-85-f9-7c-0a-d5-70-4c</Signature>
+	<Signature>60e8f860-3ff6-438c-a8-ca-38-bf-aa-f8-2a</Signature>
 </Application>
